@@ -5,3 +5,35 @@
 % Copyright 2019 %
 
 % Change History File %
+
+% Environment Definition
+\newenvironment{changelog}
+{ 
+    \begin{center}
+    \begin{longtable}{|m{2cm}|l|m{10cm}|}
+    \hline
+    \multicolumn{3}{|c|}{Historial de Cambios}\\ \hline 
+    \multicolumn{3}{|l|}{Proyecto: \proyecto} \\ 
+    \multicolumn{3}{|l|}{Fecha: \fecha} \\ \hline
+    Cambio No. & Tipo de cambio & Descripcion del cambio\\ \hline 
+    \endfirsthead
+    \multicolumn{3}{|l|}{\textit{Continuación de la pág. anterior}} \\ \hline
+    Cambio No. & Tipo de cambio & Descripcion del cambio\\ \hline 
+    \endhead
+    \hline \multicolumn{3}{|l|}{\textit{Continúa en la pág. siguiente}} \\ \hline
+    \endfoot
+    \hline
+    \endlastfoot
+}
+{
+    \end{longtable}
+    \end{center}
+}
+
+% Change history Page %
+\begin{changelog}
+% Put all the changes that the PMP has suffered %
+    % Example %
+    % P001 & Prueba & Prueba de tabla \\ \hline %
+
+\end{changelog}
