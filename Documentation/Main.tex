@@ -15,7 +15,11 @@
 \usepackage{graphicx}
 \usepackage{emptypage}
 \usepackage{geometry}
-\usepackage{biblatex}
+\usepackage{csquotes}
+\usepackage{ragged2e}
+\usepackage[style=IEEE]{biblatex}
+
+\addbibresource{References.bib}
 
 % Declaration of global commands
 \newcommand{\blankpage}
@@ -26,58 +30,111 @@
     \newpage
 }
 
+\newcommand{\DNI}{77396804-X}
+\newcommand{\autor}{Alejandro Muñoz Del Álamo}
+\newcommand{\director}{D. Pablo García Sánchez}
+\newcommand{\proyecto}{Título del proyecto }
+\newcommand{\tipo}{Grado} % Grado / Máster %
+\newcommand{\titulo}{Ingeniería Informática}
+\newcommand{\titulacion}{\tipo en \titulo}
+\newcommand{\dia}{día \textvisiblespace}
+\newcommand{\mes}{mes \textvisiblespace}
+\newcommand{\anno}{año}
+\newcommand{\fecha}{\mes \anno}
+\newcommand{\Fecha}{\dia de \mes de \anno}
+
+% Environment Definition %
+\newenvironment{portada}
+{
+    \newgeometry{left=2cm,right=2cm,top=2cm,bottom=1cm}
+    \includegraphics[width=7cm, keepaspectratio]{Images/UCA.jpg}  \\ \vspace{1cm}
+    \begin{center}
+}
+{
+    \end{center}
+    \restoregeometry 
+}
+
 \begin{document}
-% Import Title  
-% \input{Title.tex}
 
-% Import Signature
-% \input{Signature.tex}
+    % Title Page  %
+    \begin{titlepage} % Portada del documento %
+        \newgeometry{left=2cm,right=2cm,top=2cm,bottom=1cm}
+        \includegraphics[width=7cm, keepaspectratio]{Images/UCA.jpg}  \\ \vspace{1cm}
+        \begin{center}
+            \Large \MakeUppercase{Trabajo de Fin de Grado} \\ \vspace{1cm}
+            \Large \MakeUppercase{\titulacion} \\ \vspace{6cm}
+            \LARGE \MakeUppercase{\textbf{\proyecto}} \\ \vspace{7cm}
+            \Large \MakeUppercase{Autor: \autor} \\ \vspace{0.5cm}
+            Puerto Real, \fecha
+        \end{center}
+        \restoregeometry
+    \end{titlepage} % Fin de portada
 
-% Import Change History
-% \input{Changehistory.tex}
+    \blankpage
 
-% Import Preface
-% \input{Preface.tex}
+        % Second Title Page %
+    \begin{portada}
+        \Large \MakeUppercase{Trabajo de Fin de Grado} \\ \vspace{1cm}
+        \Large \MakeUppercase{\titulacion} \\ \vspace{6cm}
+        \LARGE \MakeUppercase{\textbf{\proyecto}} \\ \vspace{7cm}
+        \Large \MakeUppercase{Director: \director} \\
+        \Large \MakeUppercase{Autor: \autor} \\ \vspace{0.5cm}
+        Puerto Real, \fecha  
+    \end{portada}
 
-% Import Table of Contents
-% \tableofcontents
-
-% Import List of Figures
-% \listoffigures
-
-% Import List of Tables
-% \listoftables
-
-% Import Project Overview
-% \input{Overview.tex}
-
-% Import References
-% \input{References.bib}
-
-% Import Definitions
-% \input{Definitions.tex}
-
-% Import Project Context
-% \input{Context.tex}
-
-% Import Project Planning
-% \input{Planning.tex}
-
-% Import Project Assessment And Control
-% \input{Control.tex}
-
-% Import Product Delivery
-% \input{Delivery.tex}
-
-% Import Supporting Process Plans
-% \input{Support.tex}
-
-% Import Additional Plans
-% \input{Additional.tex}
-
-% Import Annexes
-% \input{Annexes.tex}
-
-% Import Index
-% \input{Index.tex}
+    \blankpage
+    
+    
+    % Import Signature
+    \input{Signature.tex}
+    
+    % Import Change History
+    % \input{Changehistory.tex}
+    
+    % Import Preface
+    % \input{Preface.tex}
+    
+    % Import Table of Contents
+    % \tableofcontents
+    
+    % Import List of Figures
+    % \listoffigures
+    
+    % Import List of Tables
+    % \listoftables
+    
+    % Import Project Overview
+    % \input{Overview.tex}
+    
+    % Import References
+    % \input{References.bib}
+    
+    % Import Definitions
+    % \input{Definitions.tex}
+    
+    % Import Project Context
+    % \input{Context.tex}
+    
+    % Import Project Planning
+    % \input{Planning.tex}
+    
+    % Import Project Assessment And Control
+    % \input{Control.tex}
+    
+    % Import Product Delivery
+    % \input{Delivery.tex}
+    
+    % Import Supporting Process Plans
+    % \input{Support.tex}
+    
+    % Import Additional Plans
+    % \input{Additional.tex}
+    
+    % Import Annexes
+    % \input{Annexes.tex}
+    
+    % Import Index
+    % \input{Index.tex}
+    
 \end{document}
