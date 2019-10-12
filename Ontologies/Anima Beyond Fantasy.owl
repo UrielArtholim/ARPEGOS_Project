@@ -1408,8 +1408,7 @@ No todos los seres vivos se ven sometidos a las habilidades de convocatoria. Est
     </rdf:Description>
     <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Desventaja">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Las desventajas funcionan de una manera similar a las ventajas, pero en lugar de gastar Puntos de Creación para obtenerlas, al elegirlas te proporcionan nuevos puntos para adquirir más ventajas. De este modo se nivelan los beneficios y los inconvenientes: cuantas más ventajas tengas, mayores serán sin duda tus problemas. Puedes elegir hasta tres desventajas para un personaje, aunque no
-es obligatorio hacerlo. Cualquier ventaja o desventaja, salvo que se diga
-expresamente lo contrario, sólo puede adquirirse en una ocasión.</rdfs:comment>
+es obligatorio hacerlo. Cualquier ventaja o desventaja, salvo que se diga expresamente lo contrario, sólo puede adquirirse en una ocasión.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Desventaja_Comun">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Esta es la lista de desventajas que puedes elegir para tu personaje. El beneficio indica la cantidad de Puntos de Creación que obtendrás adquiriendo cada una de ellas. Recuerda que no has de elegir más de tres desventajas.</rdfs:comment>
@@ -1503,8 +1502,7 @@ No todas las personas son capaces de controlar el poder de las almas. Hacerlo no
     </rdf:Description>
     <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Organizacion">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gaïa es una tierra llena de sociedades, órdenes y grupos que ejercen una gran
-influencia en su desarrollo. Algunas de ellas son secretas y se mueven en las
-sombras, mientras que otras son grandes agrupaciones conocidas por todos.</rdfs:comment>
+influencia en su desarrollo. Algunas de ellas son secretas y se mueven en las sombras, mientras que otras son grandes agrupaciones conocidas por todos.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Personaje">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Individuo de ficción único, dotado de habilidades y características, que forma parte del universo del juego.</rdfs:comment>
@@ -1549,8 +1547,7 @@ De cualquier modo, si los jugadores lo desean, hay diferentes razas que se puede
     </rdf:Description>
     <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tipo_Ataque">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">En primer lugar debemos saber que, cuando un arma se utiliza para atacar, lo
-hace empleando un tipo de ataque concreto. Existen siete clases distintas: Filo,
-Contundente, Penetrante, Calor, Frío, Electricidad y Energía.</rdfs:comment>
+hace empleando un tipo de ataque concreto. Existen siete clases distintas: Filo, Contundente, Penetrante, Calor, Frío, Electricidad y Energía.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tipo_Municion">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Variedad de proyectil que se utiliza para un tipo de arma concreto.</rdfs:comment>
