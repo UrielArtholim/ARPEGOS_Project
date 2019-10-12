@@ -1,0 +1,1591 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="urn:absolute:project_arpg/games/anima_beyond_fantasy#"
+     xml:base="urn:absolute:project_arpg/games/anima_beyond_fantasy"
+     xmlns:abf="urn:absolute:project_arpg/games/anima_beyond_fantasy#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ontología de Anima: Beyond Fantasy. Esta ontología contiene la información de los siguientes libros:
+
+    - Core Exxet</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#comment -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#comment">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Indica el arquetipo al que pertenece. Existen seis posibilidades: luchador, místico, psíquico, acechador, domine y sin categoría. Como mínimo cada categoría pertenece a un arquetipo, pero también es posible que esté incluida dentro de dos a la vez. A estas categorías se las denomina “mixtas”.</rdfs:comment>
+        <rdfs:range rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arquetipo"/>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Arcano -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arcano">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Invocacion"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Arcano_Invertido -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arcano_Invertido">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arcano"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Arcano_Puro -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arcano_Puro">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arcano"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Armaduras -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Armaduras">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Equipamiento"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Armas -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Armas">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Armas_Y_Escudos"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Armas_Y_Escudos -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Armas_Y_Escudos">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Equipamiento"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Arquetipo -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arquetipo"/>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Arte_Marcial -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arte_Marcial"/>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Arte_Marcial_Avanzada -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arte_Marcial_Avanzada">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arte_Marcial"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Arte_Marcial_Basica -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arte_Marcial_Basica">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arte_Marcial"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Arte_Y_Decoracion -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arte_Y_Decoracion">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Equipamiento"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Camisola -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Camisola">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Clase_Armadura"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Caracteristica -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Caracteristica"/>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Caracteristica_Primaria -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Caracteristica_Primaria">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Caracteristica"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Caracteristica_Secundaria -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Caracteristica_Secundaria">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Caracteristica"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Categoria -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Categoria"/>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Clase_Armadura -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Clase_Armadura"/>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Clase_Social -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Clase_Social"/>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Comida_Y_Bebida -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Comida_Y_Bebida">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Equipamiento"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Completa -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Completa">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Clase_Armadura"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Conjuro -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Conjuro">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Magia"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Conjuro_Libre_Acceso -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Conjuro_Libre_Acceso">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Conjuro"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Conjuro_Via -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Conjuro_Via">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Conjuro"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Convocacion -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Convocacion"/>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Desventaja -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Desventaja"/>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Desventaja_Comun -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Desventaja_Comun">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Desventaja"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Desventaja_Mistica -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Desventaja_Mistica">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Desventaja"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Desventaja_Psiquica -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Desventaja_Psiquica">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Desventaja"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Equipamiento -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Equipamiento"/>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Escudos -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Escudos">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Armas_Y_Escudos"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Especial -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Especial"/>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Especial_Armas -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Especial_Armas">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Especial"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad"/>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Atletica -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Atletica">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Secundaria"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Combate -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Combate">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Primaria"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Creativa -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Creativa">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Secundaria"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Intelectual -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Intelectual">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Secundaria"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Ki -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Ki">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ki"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Mistica -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Mistica">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Primaria"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Perceptiva -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Perceptiva">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Secundaria"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Primaria -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Primaria">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Psiquica -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Psiquica">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Primaria"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Secundaria -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Secundaria">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Social -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Social">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Secundaria"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Subterfugio -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Subterfugio">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Secundaria"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Vigor -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Vigor">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Secundaria"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Invocacion -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Invocacion"/>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Ki -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ki"/>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Magia -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Magia"/>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Municion_Arcos -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Municion_Arcos">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tipo_Municion"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Municion_Ballesta -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Municion_Ballesta">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tipo_Municion"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Municion_Cerbatana -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Municion_Cerbatana">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tipo_Municion"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Municion_Honda -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Municion_Honda">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tipo_Municion"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Municion_Polvora -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Municion_Polvora">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tipo_Municion"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Organizacion -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Organizacion"/>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Personaje -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Personaje"/>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Personaje_Jugador -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Personaje_Jugador">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Personaje"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Personaje_No_Jugador -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Personaje_No_Jugador">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Personaje"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Peto -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Peto">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Clase_Armadura"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Rango_Armas -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Rango_Armas"/>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Raza -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Raza"/>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Raza_Nephilim -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Raza_Nephilim">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Raza"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Raza_Pura -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Raza_Pura">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Raza"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Armas -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Armas"/>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Armas_Arquetipicas -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Armas_Arquetipicas">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Armas"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Armas_Generales -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Armas_Generales">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Armas"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Estilo -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Estilo">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Armas"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Mistica -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Mistica">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Armas"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Psiquica -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Psiquica">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Armas"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Tecnicas_Dominio -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Tecnicas_Dominio">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ki"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Tecnica_Dominio -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tecnica_Dominio">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ki"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Tipo_Ataque -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tipo_Ataque"/>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Tipo_Municion -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tipo_Municion"/>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Tipologia_Armas -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tipologia_Armas"/>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Transporte -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Transporte">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Equipamiento"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Utiles_Varios -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Utiles_Varios">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Equipamiento"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Venenos -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Venenos">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Equipamiento"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Ventaja -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ventaja"/>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Ventaja_Comun -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ventaja_Comun">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ventaja"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Ventaja_Mistica -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ventaja_Mistica">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ventaja"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Ventaja_Psiquica -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ventaja_Psiquica">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ventaja"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Vestimenta -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vestimenta">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Equipamiento"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Via -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Via">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Magia"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Vivienda -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vivienda">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Equipamiento"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Yelmo -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Yelmo">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Clase_Armadura"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Acumulacion_Ki -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Acumulacion_Ki">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ki"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Es la capacidad que tiene un sujeto para concentrar y usar a mayor velocidad sus puntos de Ki.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Arcano -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arcano">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Arcano_Invertido -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arcano_Invertido">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Arcano_Puro -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arcano_Puro">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Armaduras -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Armaduras">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Armas -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Armas">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Armas_Y_Escudos -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Armas_Y_Escudos">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Arquetipo -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arquetipo">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Arte_Marcial -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arte_Marcial">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Arte_Marcial_Avanzada -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arte_Marcial_Avanzada">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Arte_Marcial_Basica -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arte_Marcial_Basica">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Arte_Y_Decoracion -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arte_Y_Decoracion">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Caracteristica_Primaria -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Caracteristica_Primaria">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Caracteristica_Secundaria -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Caracteristica_Secundaria">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Característica -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Característica">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Elemento que define capacidades de un personaje.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Categoria -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Categoria">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Clase_Armadura -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Clase_Armadura">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Clase_Social -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Clase_Social">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Comida_Y_Bebida -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Comida_Y_Bebida">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Conjuro -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Conjuro">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Conjuro_Libre_Acceso -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Conjuro_Libre_Acceso">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Conjuro_Via -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Conjuro_Via">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Conocimiento_Marcial -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Conocimiento_Marcial">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ki"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El Conocimiento Marcial, al que llamaremos CM a partir de ahora, es la
+capacidad de aprendizaje que tienen los personajes para despertar sus dominios del Ki. Los puntos de CM son distintos de los Puntos de Desarrollo, ya que únicamente sirven para adquirir conocimientos de los Dominios. Con el CM se pueden aprender habilidades del Ki y Técnicas especiales, no comprar puntos de Ki o de acumulación adicionales.
+
+Los personajes adquieren puntos de CM por el simple hecho de pertenecer a una categoría. Cada categoría posee una cantidad de CM en primer nivel, y consiguen nuevos cada vez que suben de nivel. También pueden obtenerse con la ventaja de Maestro marcial, o dominando algunas artes marciales.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Convocacion -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Convocacion">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Desventaja -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Desventaja">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Desventaja_Comun -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Desventaja_Comun">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Desventaja_Mistica -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Desventaja_Mistica">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Desventaja_Psiquica -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Desventaja_Psiquica">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Equipamiento -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Equipamiento">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Escudos -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Escudos">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Especial -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Especial">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Especial_Armas -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Especial_Armas">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Atletica -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Atletica">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Combate -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Combate">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Creativa -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Creativa">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Intelectual -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Intelectual">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Mistica -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Mistica">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Perceptiva -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Perceptiva">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Primaria -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Primaria">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Psiquica -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Psiquica">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Secundaria -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Secundaria">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Social -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Social">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Subterfugio -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Subterfugio">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Vigor -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Vigor">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Invocacion -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Invocacion">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Ki -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ki">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Magia -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Magia">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Municion_Arcos -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Municion_Arcos">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Municion_Ballesta -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Municion_Ballesta">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Municion_Cerbatana -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Municion_Cerbatana">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Municion_Honda -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Municion_Honda">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Municion_Polvora -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Municion_Polvora">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Organizacion -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Organizacion">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Personaje -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Personaje">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Personaje_Jugador -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Personaje_Jugador">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Personaje_No_Jugador -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Personaje_No_Jugador">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Puntos_Ki -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Puntos_Ki">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ki"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Los puntos de Ki miden el potencial de la energía interna del personaje. Cuantos más posea, habrá conseguido despertar una mayor cantidad de poder. Estos puntos dependen de algunas de las características primarias: Fuerza, Destreza, Agilidad, Constitución, Poder y Voluntad. Para calcular cuánto Ki tiene un personaje, debemos fijarnos en el valor de sus características. Cada punto que el personaje tenga en uno de esos seis atributos que no supere el 10, proporciona uno de Ki. Por tanto, si posee Fuerza 7, tiene 7 puntos de Ki gracias su Fuerza. Aquellos que sobrepasen el 10, otorgan el doble de puntos; alguien con Destreza 13 tendría 16 de Ki. Para saber cuantos puntos de Ki tiene en total un personaje, se ha de sumar los puntos que haya obtenido en todas sus características. A esa suma se la llama reserva de Ki</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Rango_Armas -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Rango_Armas">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Raza -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Raza">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Raza_Nephilim -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Raza_Nephilim">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Raza_Pura -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Raza_Pura">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Armas -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Armas">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Armas_Arquetipicas -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Armas_Arquetipicas">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Armas_Generales -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Armas_Generales">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Estilo -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Estilo">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Mistica -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Mistica">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Psiquica -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Psiquica">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Tipo_Ataque -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tipo_Ataque">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Tipo_Municion -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tipo_Municion">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Tipologia_Armas -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tipologia_Armas">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Transporte -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Transporte">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Utiles_Varios -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Utiles_Varios">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Venenos -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Venenos">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Ventaja -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ventaja">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Vestimenta -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vestimenta">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Via -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Via">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Vivienda -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vivienda">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arcano">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Realmente, los Arcanos no poseen una forma física real ni intervienen de ningún modo en el mundo. No son ni dioses ni potencias, sino manifestaciones de las pasiones y los espíritus del hombre. Son personificaciones que fueron formadas por las almas que regresaban al flujo y que ahora se nutren de la propia energía de la realidad. Los Arcanos se encuentran estancados en el flujo hasta que son llamados al mundo y, por tanto, sus apariciones tienen una duración temporal muy limitada. Aunque a veces parece incluso que se presentan físicamente en el mundo, tan sólo utilizan el poder que les ha brindado el invocador para modificar la realidad y crear manifestaciones. Sus verdaderas esencias permanecen siempre en el corazón del mundo espiritual y, por tanto, sus avatares no pueden ser atacados de ningún modo; son tan reales como una ilusión. Cuando son invocados por primera vez, ofrecen pactos a quienes los hayan llamado para congraciarse y aceptarlos. A cambio de la realización del pacto, los Arcanos se unen existencialmente a esos individuos y les permiten invocar sus poderes posteriormente.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arcano_Invertido">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Arcano basado en los aspectos negativos de la realidad.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arcano_Puro">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Arcano basado en los aspectos positivos de la realidad.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Armaduras">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Un personaje puede equiparse con una armadura para evitar sufrir daño si entra en combate o cae en una trampa. Estas protecciones son un conjunto de piezas o ropajes que tienen como objetivo disminuir la potencia de los impactos recibidos.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Armas">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cuando un personaje combate, suele utilizar generalmente algún tipo de arma en lugar de sólo sus puños y piernas. Las armas son objetos creados con el fin de esgrimirse, de algún modo, como un medio de ataque y defensa efectivo. Un arma puede ser considerada prácticamente cualquier cosa, desde una mera rama de árbol hasta el más sofisticado arcabuz.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Armas_Y_Escudos">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cuando un personaje combate, suele utilizar generalmente algún tipo de arma en lugar de sólo sus puños y piernas. Las armas son objetos creados con el fin de esgrimirse, de algún modo, como un medio de ataque y defensa efectivo. Un arma puede ser considerada prácticamente cualquier cosa, desde una mera rama de árbol hasta el más sofisticado arcabuz.
+
+Los escudos tienen un funcionamiento diferente al del resto de las armas. Aunque pueden utilizarse perfectamente para atacar contundentemente, son objetos principalmente de protección, puesto que otorgan un bono a la habilidad defensiva del personaje.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arquetipo">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Los arquetipos son prototipos, modelos ideales que recogen unos conceptos
+determinados sobre la categoría que vamos a elegir.Existen seis arquetipos, que a su vez engloban diversas categorías.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arte_Marcial">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">En Ánima, un personaje que lucha sólo con su cuerpo puede aprender a dominar artes marciales. Cualquiera de estos estilos le permite utilizar su habilidad de ataque y parada, sin ningún penalizador, cuando combata desarmado. En cierta manera, son equivalentes a una tabla de armas con las manos desnudas, aunque además proporcionan ventajas adicionales a sus practicantes. Que un personaje adquiera un arte marcial, supone mucho más que simplemente conocer un estilo. Muchos individuos aprenden a utilizarlas, pero eso no significa que realmente sepan controlar sus ventajas. Si un personaje en Ánima conoce un arte marcial, simboliza que es un verdadero maestro que ha conseguido dominarla perfectamente.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arte_Marcial_Avanzada">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Las artes marciales avanzadas son los estilos de combate más complejos. Se basan en los conocimientos que han sido desarrollados por las anteriores, incrementando el nivel de sus técnicas considerablemente. Por naturaleza, para poder aprender un arte marcial superior es necesario dominar alguno de los estilos en los que se basa.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arte_Marcial_Basica">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Son las artes marciales más simples que puede adquirir un personaje.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arte_Y_Decoracion">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Elementos de arte y decoración que podemos obtener.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Caracteristica_Primaria">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lo más elemental en la creación de un personaje será determinar sus características primarias, que son las que definirán sus capacidades básicas. Puesto que no hay dos individuos iguales, cada personaje tiene también unas características diferentes tratando de representar la diversidad de sujetos que pueblan el mundo. En Ánima existen ocho características primarias distintas: Fuerza, Destreza, Agilidad, Constitución, Inteligencia, Voluntad, Poder y Percepción. Las cuatro primeras miden las capacidades físicas del personaje, mientras que las cuatro siguientes representan sus capacidades psíquicas, espirituales y perceptivas. A estas características se les debe atribuir un número para medir el grado de habilidad que se posee en cada campo concreto. Las características de un ser humano están comprendidas entre 1 y 10, aunque en algunos casos realmente excepcionales, pueden llegar a superarse dichas cifras.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Caracteristica_Secundaria">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Una vez que ya tenemos las ocho características principales y sus bonos, debemos calcular dos características secundarias que aún nos faltan, la Apariencia y el Tamaño.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Categoria">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ahora que ya conocemos los arquetipos de los personajes ha llegado el momento del elegir su categoría. Tener una categoría no significa que alguien se dedique a una profesión concreta en sentido estricto. Un ladrón no tiene por qué ganarse necesariamente la vida robando, al igual que un asesino no tiene que dedicarse sólo a matar gente. Las categorías te indicarán cuáles son los costes de desarrollo de tu personaje, sus límites en la distribución de puntos y alguna de sus habilidades especiales.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Clase_Armadura">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Las armaduras no protegen necesariamente todo el cuerpo de un personaje. Sin contar los yelmos, existen tres variedades dependiendo de la zona que protejan: petos, camisolas y completas. Los primeros sólo protegen el pecho y la espalda del personaje. Las camisolas también se extienden por los brazos, aunque dejan desprotegidas las piernas. Por último, las completas resguardan todo el cuerpo excepto la cabeza, de la que se ocupan sólo los yelmos. La segunda diferenciación se basa en la dureza. Las armaduras duras son rígidas, mientras que las blandas son móviles y se adaptan a los movimientos de los personajes.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Clase_Social">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Normalmente, los personajes comenzarán la partida con una cantidad de dinero inicial para realizar pequeños gastos y poder equiparse. Cada jugador puede justificar como desee el origen de este dinero: una herencia, su propio trabajo o un casual golpe de suerte. Quienes posean habilidades de combate pueden comenzar adicionalmente con el arma básica que saben utilizar, o en su defecto, con alguna armadura de escaso valor. Para determinar los fondos iniciales de un personaje, debe atenderse a su clase social. Su origen indica la cantidad de la que inicialmente se dispone.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Comida_Y_Bebida">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Elementos de comida y bebida que podemos obtener.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Conjuro">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Los conjuros son el elemento esencial en la magia, ya que representan el verdadero poder de los brujos. El número de conjuros que conoce un personaje indica cuántas habilidades místicas posee, y los efectos que puede provocar.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Conjuro_Libre_Acceso">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Los conjuros de Libre Acceso son sortilegios genéricos que, sin pertenecer a una vía determinada, pueden ser aprendidos por los magos mientras estudian magia. Se basan en la idea de que no todos los magos desarrollan exactamente las mismas bases místicas, y cada uno investiga los hechizos que más apropiados le parecen. Por tanto, la elección de conjuros de Libre Acceso permite a los personajes con habilidades mágicas personalizar sus poderes, evitando que todos los brujos de una determinada vía sean iguales.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Conjuro_Via">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Conjuro perteneciente a una de las vías de la magia.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Convocacion">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La principal función de los poderes de convocatoria es la de invocar a criaturas y fuerzas sobrenaturales que, mediante pactos o dominación, ejecuten la voluntad de quienes los llaman.
+
+Las habilidades mágicas no dependen exclusivamente del Don y de los conjuros. Algunos individuos son capaces de controlar la esencia de los seres sobrenaturales que existen en el flujo de almas, atrayéndolos al mundo material. Para hacerlo, los invocadores utilizan su propia alma y sincronizan con ella la esencia de los seres con los que desean contactar. Sincronizar de este modo es un proceso muy complejo y muy a menudo son necesarios elaborados rituales y ceremonias. Sin embargo, algunos convocadores desarrollan tanto poder y un control tan elevado, que pueden forzar a las criaturas a venir a nuestro mundo simplemente pronunciando su nombre.
+
+No todos los seres vivos se ven sometidos a las habilidades de convocatoria. Estos poderes sólo permiten interactuar con las criaturas cuya presencia se encuentra sometida al flujo de almas. La mayoría de criaturas que pueblan el mundo, como los humanos, los animales e incluso algunas razas sobrenaturales, no están atados al flujo de almas y no son afectados por la influencia de los invocadores. En realidad su presencia está mucho más ligada al mundo físico que al espiritual. A pesar de que la convocatoria es una habilidad sobrenatural, los individuos que utilizan sus poderes no requieren necesariamente el Don de la magia. En realidad, únicamente necesitan tener un alma lo suficientemente fuerte para forzar a los seres sobrenaturales a cumplir su voluntad, y los conocimientos para hacerlo.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Desventaja">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Las desventajas funcionan de una manera similar a las ventajas, pero en lugar de gastar Puntos de Creación para obtenerlas, al elegirlas te proporcionan nuevos puntos para adquirir más ventajas. De este modo se nivelan los beneficios y los inconvenientes: cuantas más ventajas tengas, mayores serán sin duda tus problemas. Puedes elegir hasta tres desventajas para un personaje, aunque no
+es obligatorio hacerlo. Cualquier ventaja o desventaja, salvo que se diga
+expresamente lo contrario, sólo puede adquirirse en una ocasión.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Desventaja_Comun">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Esta es la lista de desventajas que puedes elegir para tu personaje. El beneficio indica la cantidad de Puntos de Creación que obtendrás adquiriendo cada una de ellas. Recuerda que no has de elegir más de tres desventajas.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Desventaja_Mistica">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sólo quienes tengan el Don podrán elegir desventajas de esta lista. Los Puntos de Creación que consigas con ellas sólo podrán utilizarse para comprar ventajas mágicas para personajes con el Don. De todas formas, recuerda que el total de desventajas no puede ser mayor de tres, por lo que si ya has elegido tres generales, no podrás elegir ninguna de aquí.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Desventaja_Psiquica">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sólo los personajes con capacidades psíquicas podrán elegir desventajas de esta lista. Los Puntos de Creación que consigas con ellas, únicamente podrán utilizarse para comprar ventajas mentales para psíquicos. De todas formas, recuerda que el total de desventajas no puede ser mayor de tres, por lo que si ya has elegido tres generales, no podrás elegir ninguna de aquí.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Equipamiento">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ahora que tu personaje ya tiene todas sus habilidades, ha llegado el momento de elegir su equipamiento. Por muchas pericias que tenga, de muy poco le pueden servir sin las cosas adecuadas. Conforme prospere y mejore, irá solicitando consecuentemente mejores artilugios, de acorde a sus necesidades.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Escudos">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Salvo en el caso de la rodela, los escudos medios y corporales obligan a usar una mano para llevarlos, pero al contrario de lo que ocurre con otras armas, emplearlos con la zurda no provoca ningún negativo a la habilidad de parada (aunque sí a la de ataque). Estos objetos, al igual que las armaduras, tienen una restricción directa sobre la iniciativa, que se resta del turno final como un penalizador especial. Emplear un escudo de modo defensivo no se considera equivalente a usar un arma adicional. Si quiere utilizarse para atacar como segunda arma, quien lo enarbola no puede usar durante ese turno su bono a la defensa.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Especial">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Elementos específicos que permiten ampliar el abanico de posibilidades de los juegadores de Anima: Beyond Fantasy.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Especial_Armas">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reglas especiales que siguen algunas armas.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Las habilidades son los conocimientos y pericias de nuestro personaje, que nos indican en qué campos está versado y hasta qué grado.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Atletica">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Son las habilidades que dependen de la movilidad del personaje, de su equilibrio y de su agilidad.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Combate">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Son las que permiten al personaje desarrollar todas las habilidades relacionadas con la lucha.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Creativa">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Son todas las habilidades referentes a la capacidad artística e inventiva de los personajes.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Intelectual">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Las habilidades intelectuales son las que dependen principalmente del conocimiento, la sabiduría y el raciocinio de los personajes.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Mistica">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La habilidad sobrenatural agrupa todas las pericias de carácter místico del personaje. Son las que utilizan las categorías dotadas de poderes sobrenaturales, como los magos, los invocadores o los ilusionistas.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Perceptiva">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">En este grupo se reúnen todas las habilidades perceptivas del personaje. Son las pericias que le permitirán explotar al máximo sus cinco sentidos y analizar la información obtenida.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Primaria">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Son llamadas así ya que representan las habilidades básicas o principales de los personajes en el ejercicio de sus categorías. A su vez, las habilidades primarias están divididas en tres campos distintos: la habilidad de combate, la habilidad psíquica y la habilidad sobrenatural.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Psiquica">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Recoge todo lo relacionado con el campo de los poderes psíquicos y su uso.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Secundaria">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Naturalmente, un personaje es mucho más complejo que lo bien que lucha o lanza conjuros. Sin duda sabe hacer una gran cantidad de cosas más y posee muchas habilidades y conocimientos que lo diferencian del resto. Tómate a ti mismo como ejemplo: sabes leer, tienes nociones matemáticas y varias aficiones más, desde cazar hasta navegar en canoa. Estas capacidades también las tiene tu personaje, que a partir de ahora llamaremos habilidades secundarias. Cada habilidad secundaria se encuentra incluida dentro de un campo en concreto y ligada a una característica determinada.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Social">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Es el grupo de habilidades que reflejan la capacidad del personaje para interactuar con otros individuos e influir de algún modo en ellos.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Subterfugio">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Es el campo en el que se reúnen aquellas pericias basadas en el disimulo y en la capacidad de actuar sin que los demás puedan percatarse.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Vigor">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Son las habilidades que recogen aquellas pericias basadas en el esfuerzo corporal, el aguante físico y la resistencia mental.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Invocacion">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Los personajes tienen a su disposición la capacidad de contactar con entidades de enorme poder y solicitar su ayuda temporalmente. Semejantes seres son inmunes a las habilidades de convocatoria naturales, pero intervienen de manera limitada en el mundo, brindando parte de su poder a quienes los llaman. En cierta manera son equivalentes a poderosos hechizos, pero en lugar de ser realizados por el invocador, son las propias entidades quienes los ejecutan.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ki">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El Ki es una fuerza que está presente en cualquier forma de vida. Cuando el alma penetra en un ser vivo en el momento de su nacimiento, impregna todo su ser y se hace uno con él. Aunque todas las cosas tienen espíritu, sólo los seres que están propiamente vivos funden completamente su esencia en cuerpo y alma. Si una piedra se rompe en dos, su alma se divide en dos partes. Si el cuerpo de un ser vivo muere, su espíritu se separa del cuerpo. Cuando un alma se afianza en sus carcasas terrenales impregna toda su esencia, creando la energía física a la que llamamos Ki. Dicha fuerza depende exclusivamente de la fusión entre cuerpo y espíritu, y de esta manera recorre internamente a todos los seres vivos. Esto no significa que sólo los seres orgánicos puedan utilizar el Ki, puesto que otras criaturas elementales sin una forma física material también son capaces de desarrollar estas habilidades. Para poder hacer uso de ellas, basta sencillamente con que un alma se funda realmente con una carcasa a la que pueda llamar cuerpo. Algunos explican la energía física de las personas como una fuente de calor viva. Por eso, los seres que han perdido su alma pero permanecen en este mundo, como los no muertos, desprenden un intenso frío espiritual.
+
+Aunque el Ki está presente en cualquier ser vivo, no todo el mundo llega realmente a ser consciente de ello. Sólo los pocos que son capaces de percibir su propia energía y la despiertan, controlan estas increíbles capacidades. Al hacerlo rompen la fina línea entre la carne y el alma, por lo que pueden emplear sus poderes espirituales mientras permanecen aún en sus cuerpos. El término “Dominio” proviene de la capacidad que tienen esas personas para controlar su energía y sacar el máximo provecho de ella, realizando acciones físicas que ningún otro mortal podría lograr.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Magia">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La magia influye en todo lo vivo y lo muerto, en todo lo real e irreal, puede serlo todo o no ser nada, pero siempre estuvo y estará ahí, con nosotros. Está formada por la energía espiritual del mundo. Su propia naturaleza se encuentra ligada al flujo de almas, aunque sería más correcto decir que es una faceta de él: nace de los espíritus al igual que la propia realidad. En cierto modo es la sombra de la existencia, una fuerza que no responde a las reglas de la física ni de la lógica, pero que altera el mundo a su antojo.
+
+El poder de la magia no es uniforme. Al mezclarse con las almas, se nutre de su esencia y toma distintos matices según los elementos o las emociones con los que se ponga en contacto. De este modo, se divide en diversas tipologías cuando pasa a través de un brujo o se encuentra en un lugar cargado de fuertes sentimientos. Los conjuros oscuros por ejemplo, que se sustentan de las emociones negativas, toman su poder de la magia que ha estado en contacto con ira, rabia u odio.
+
+No todas las personas son capaces de controlar el poder de las almas. Hacerlo no resulta fácil ni siquiera para los propios espíritus sobrenaturales. Sin embargo, algunos sujetos nacen con la capacidad de sentir la magia, dejarla fluir por su cuerpo y encauzar su energía mediante conjuros. Estos individuos son brujos, aquellos que han nacido con el don de alterar la realidad a su antojo. Los brujos son una luz en las tinieblas para la magia, núcleos en torno a los cuales se acumula su poder. Actúan como portales para que esta se manifieste en el mundo físico: la magia se reúne a su alrededor, penetra en ellos y crece en sus almas hasta que se exterioriza mediante un conjuro. En realidad, los hechizos no son nada más que una manera de controlar la existencia y alterar sus reglas. Los brujos utilizan su energía sobrenatural para tejer sortilegios que se enmarañan en la propia esencia de la realidad. Las gesticulaciones y los versos son palabras que los magos susurran al alma del mundo para canalizar mejor sus energías, pero no son necesarios para alterar la realidad. A un brujo le basta su propia voluntad para manejar la magia y lanzar un conjuro, aunque al utilizar los rituales puede aumentar considerablemente su poder. Cada hechicero conoce sus propias fórmulas para modificar la existencia. Un mago crea sus sortilegios utilizando los conocimientos y medios que tiene a su alcance, porque la ejecución de la magia puede ser muy diferente de una persona a otra.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Municion_Arcos">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Variedad de proyectil que se utiliza para arcos.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Municion_Ballesta">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Variedad de proyectil que se utiliza para ballestas.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Municion_Cerbatana">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Variedad de proyectil que se utiliza para cerbatanas.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Municion_Honda">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Variedad de proyectil que se utiliza para hondas.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Municion_Polvora">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Variedad de proyectil que se utiliza para armas de pólvora.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Organizacion">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gaïa es una tierra llena de sociedades, órdenes y grupos que ejercen una gran
+influencia en su desarrollo. Algunas de ellas son secretas y se mueven en las
+sombras, mientras que otras son grandes agrupaciones conocidas por todos.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Personaje">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Individuo de ficción único, dotado de habilidades y características, que forma parte del universo del juego.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Personaje_Jugador">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Personaje interpretado por un jugador durante una partida.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Personaje_No_Jugador">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Personaje interpretado por el Director de Juego.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Rango_Armas">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Distancia a la que puede golpear un arma.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Raza">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cuando hablamos de raza no nos referimos a su etnia, como oriental, caucásico o negro, sino a una verdadera especie sobrenatural con características distintas a la nuestra. Sin embargo, al contrario que en muchos otros sistemas de rol, el mundo de Ánima es esencialmente humano, por lo que las partidas deberían basarse en grupos compuestos únicamente por miembros de nuestra raza. 
+
+De cualquier modo, si los jugadores lo desean, hay diferentes razas que se pueden adoptar. Cada una de ellas tiene una serie de características sobrenaturales que otorgan al personaje habilidades especiales</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Raza_Nephilim">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Los Nephilim son las almas de seres sobrenaturales reencarnadas en humanos. No recuerdan nada de su anterior existencia, aunque su esencia mística les otorga, de manera limitada, algunas de las habilidades y poderes que tenían. Aun sin ser conscientes del origen de sus capacidades, las controlan como algo innato en ellos. Muy a menudo tienen extraños sueños o pesadillas en los que ven fragmentos de sus vidas anteriores, los cuales quedaron grabados con fuerza en su esencia. Existen diversos tipos de Nephilim. Al igual que había multitud de razas sobrenaturales en la antigüedad, hay muchas clases de Nephilim dependiendo del origen del alma que se haya reencarnado. Cada etnia tiene sus propias características especiales y también sus desventajas. Habitualmente estos poderes son meramente anímicos, pero en ocasiones influyen en sus cuerpos otorgándoles además algunas características físicas excepcionales. También a veces la influencia que ejercen sus almas hace que los Nephilim de una misma raza tengan pautas de conductas similares.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Raza_Pura">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Comunidad de seres definida por afinidades raciales, lingüísticas, culturales, sobrenaturales, etc.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Armas">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Un individuo no tiene por qué verse obligado a dominar el uso de una única arma, sino que con la práctica es capaz de aprender a utilizar igualmente otras muchas con la misma habilidad. Las tablas de armas permiten a un personaje eliminar los penalizadores por blandir armas distintas a la que escogió inicialmente, e incluso en ocasiones, emplear su habilidad de combate lanzando conjuros o poderes psíquicos.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Armas_Arquetipicas">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Estas tablas recogen una serie de armas, que utilizan ciertas profesiones tradicionales con gran maestría. Si lo deseas, puedes componer las tuyas propias, siempre que consideres que el grupo elegido guarda la suficiente relación con una profesión o figura arquetípica.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Armas_Generales">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Las tablas de armas generales permiten a un personaje eliminar los penalizadores por blandir armas distintas a la que escogió inicialmente</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Estilo">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Estas tablas permiten al personaje potenciar su habilidad marcial, disminuyendo los penalizadores que se aplican al realizar algunas maniobras específicas de ataque.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Mistica">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Esta tabla permite al usuario utilizar sus habilidades de combate como Proyección Mágica.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Psiquica">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Esta tabla permite al usuario utilizar sus habilidades de combate como Proyección Psíquica.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tipo_Ataque">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">En primer lugar debemos saber que, cuando un arma se utiliza para atacar, lo
+hace empleando un tipo de ataque concreto. Existen siete clases distintas: Filo,
+Contundente, Penetrante, Calor, Frío, Electricidad y Energía.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tipo_Municion">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Variedad de proyectil que se utiliza para un tipo de arma concreto.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tipologia_Armas">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Categoría en la que se clasifican las armas.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Transporte">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tipos de transporte que podemos adquirir.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Utiles_Varios">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Elementos de utilidad que podemos adquirir.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Venenos">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tipos de veneno que podemos adquirir.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ventaja">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Como cada ser vivo que puebla el mundo, los personajes en Ánima tienen una serie de peculiaridades que no pueden únicamente reflejarse en sus características, habilidades y conocimientos. Estas peculiaridades se hallan inherentemente unidas a su propia esencia o naturaleza. No se aprenden ni se mejoran: se nace con ellas o nunca se tendrán. ¿Es mi personaje ambidiestro o tiene habilidades mágicas? ¿Ha nacido con dotes psíquicas o quizás se cura lentamente?. Responder a estas preguntas no puede quedar únicamente al azar o al arbitrio de los deseos de cada jugador. 
+
+Al contrario que las habilidades, las ventajas no se adquieren con PD, sino con los Puntos de Creación. Todo jugador tiene tres Puntos de Creación para adquirir las ventajas que elija y crea más apropiadas. El coste de las ventajas indica cuántos Puntos de Creación debes gastar para obtenerla. Algunas ventajas tienen un coste variable, lo que significa que según la cantidad de Puntos de Creación que gastes en ella, otorgará mayores beneficios.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vestimenta">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tipos de prenda que podemos obtener.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Via">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Los conjuros se encuentran divididos en vías de magia. Cada vía recoge el conocimiento sobre un aspecto distinto de la existencia y representa una manera de influir en ella. Existen once vías separadas en dos tipos diferentes: menores y mayores. Las mayores son las cinco vías que controlan los aspectos más fundamentales de la realidad: Luz, Oscuridad, Creación, Destrucción y Nigromancia. Las menores son las seis vías que controlan los elementos básicos, las almas y la ilusión: Fuego, Aire, Tierra, Agua, Esencia e Ilusión.
+
+El conocimiento en vía que puede alcanzar un brujo está únicamente delimitado por su nivel de magia, que representa la sabiduría que el mago posee sobre hechicería, e indica cuántos conjuros podrá comprender. Un personaje puede aumentar su nivel en una sola vía o dividirlo entre tantas como quiera.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vivienda">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tipos de vivienda que podemos adquirir.</rdfs:comment>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
