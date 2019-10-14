@@ -204,30 +204,6 @@
     
 
 
-    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Conjuro -->
-
-    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Conjuro">
-        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Magia"/>
-    </owl:Class>
-    
-
-
-    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Conjuro_Libre_Acceso -->
-
-    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Conjuro_Libre_Acceso">
-        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Conjuro"/>
-    </owl:Class>
-    
-
-
-    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Conjuro_Via -->
-
-    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Conjuro_Via">
-        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Conjuro"/>
-    </owl:Class>
-    
-
-
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Convocación -->
 
     <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Convocación">
@@ -442,6 +418,14 @@
 
     <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ki">
         <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Combate"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Libre_Acceso -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libre_Acceso">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Magia"/>
     </owl:Class>
     
 
@@ -698,18 +682,98 @@
     
 
 
-    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Via -->
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Vivienda -->
 
-    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Via">
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vivienda">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Equipamiento"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Agua -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Agua">
         <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Magia"/>
     </owl:Class>
     
 
 
-    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Vivienda -->
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Aire -->
 
-    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vivienda">
-        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Equipamiento"/>
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Aire">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Magia"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Creación -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Creación">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Magia"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Destrucción -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Destrucción">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Magia"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Esencia -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Esencia">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Magia"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Fuego -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Fuego">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Magia"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Ilusión -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Ilusión">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Magia"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Luz -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Luz">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Magia"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Nigromancia -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Nigromancia">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Magia"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Oscuridad -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Oscuridad">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Magia"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Tierra -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Tierra">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Magia"/>
     </owl:Class>
     
 
@@ -771,6 +835,15 @@ El ACT también se basa en la característica de Poder.</rdfs:comment>
 Efectos: El personaje aplicará un penalizador acumulativo de –10 por cada día que transcurra sin satisfacer su vicio.
 
 Beneficio: 1</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Afinidad_a_una_disciplina_psíquica -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Afinidad_a_una_disciplina_psíquica">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Psiquica"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Los personajes no poseen originalmente ninguna disciplina psíquica. Para tener acceso a los poderes de una, es necesario invertir un CV. Al hacerlo, el personaje consigue una afinidad hacia esa disciplina en concreto y, a partir de ese momento, puede dominar cualquiera de sus poderes invirtiendo nuevos CV. No hay límite en el número de disciplinas que puede adquirir mediante esta habilidad.  Esta habilidad consume permanentemente un CV libre.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -1157,9 +1230,9 @@ Beneficio: 1</rdfs:comment>
     
 
 
-    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Baja_nobleza -->
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Baja_Nobleza -->
 
-    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Baja_nobleza">
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Baja_Nobleza">
         <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Clase_Social"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Estrato social al que pertenecen personajes que ostentan títulos nobiliarios, pero no poseen rentas para sostener un modo de vida compatible con tal condición (que es vivir sin trabajar).</rdfs:comment>
     </owl:NamedIndividual>
@@ -1192,6 +1265,31 @@ Beneficio: 2</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#CV">
         <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Psiquica"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Los Consumos de Voluntad, a los que llamaremos CV a partir de ahora, son otro elemento fundamental para el uso de los poderes mentales. Los CV indican en qué invierten los personajes sus energías psíquicas y lo que tratan de potenciar más. En cierta manera, son una especie de comodín que permite al mentalista adquirir ventajas muy distintas, desde dominar nuevas disciplinas a incrementar temporalmente su potencial. Todos los personajes comienzan en primer nivel con un CV, pero pueden aumentar esta cantidad invirtiendo PD o subiendo de nivel.
+
+Algunas de las ventajas que proporcionan los CV los consumen
+permanentemente, de manera que desaparecen y no pueden volver a ser usados. Otros usos, por el contrario, sólo proporcionan ventajas temporales, pero el CV no se consume completamente y el personaje lo recupera transcurrido un tiempo.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#CV_Libre -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#CV_Libre">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Psiquica"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Los CV que no se invierten permanentemente en alguna de las habilidades anteriores se llaman libres. Los CV libres tienen diversas funciones, desde evitar perder puntos de Cansancio si el personaje obtiene un resultado de fatiga, a otorgar durante un asalto habilidades especiales a los psíquicos. Estos usos no consumen completamente el CV libre como ocurre en los casos anteriores, sino que lo gastan sólo temporalmente. Los CV libres usados de esta manera se recuperan a un ritmo de uno por hora. Si, por ejemplo, un personaje usa 3 CV libres para potenciar temporalmente sus habilidades o los pierde por fatiga, tardará tres horas en recuperarlos todos. El gasto de CV libres es una acción pasiva.
+
+ Sus diversas funciones son las siguientes:
+
+ - Mejorar la Proyección Psíquica: Cada CV que se gaste con esta finalidad, otorga un bono de +10 a la habilidad de Proyección Psíquica del personaje al utilizar un poder determinado. No pueden gastarse más de 5 CV para mejorar la Proyección Psíquica.
+
+ - Mejorar el potencial psíquico: El personaje puede gastar sus CV para mejorar el potencial psíquico de un poder determinado. Cada CV libre que se use con esta finalidad, otorga un bono de +20 al potencial del poder elegido durante ese turno. Un personaje puede gastarse hasta 5 CV libres para potenciar un poder determinado.
+
+ - Eliminar la fatiga: Si alguien declara, antes de calcular el potencial psíquico de un poder, que va a invertir un CV en eliminar la fatiga, no perderá puntos de Cansancio ese asalto por usarlo. No importa lo elevado que sea el nivel de fracaso, esa habilidad mental no fatiga al personaje.
+
+ - Acceso temporal a un poder: Existe la posibilidad de que, en un momento determinado, un personaje necesite utilizar un poder psíquico que no tenga dominado, y no desee gastar en él un CV permanentemente. Invirtiendo temporalmente un CV, el psíquico puede utilizar durante ese asalto una habilidad mental que no tiene dominada, pero que pertenece a una disciplina a la que es afín. Los poderes adquiridos temporalmente no pueden ser mantenidos con innatos.
+
+ - Incrementar un innato: El personaje puede utilizar sus CV libres para incrementar el valor de un poder mantenido innatamente. Para hacerlo, debe de gastar los CV que quiere usar en el momento en que deja activo el poder. Cada CV que invierta con esta finalidad, aumenta 20 puntos su potencial psíquico sólo para calcular el valor con el que lo mantiene. Un psíquico puede gastar hasta 5 CV con este fin. Al contrario de lo que ocurre como regla general, el personaje no recupera los CV que invierta con esta finalidad mientras mantenga el poder innato incrementado. Una vez que deje de usarlo, comenzará a recuperarlos a su ritmo natural.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -1574,10 +1672,27 @@ Beneficio: 1</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Disciplina_Psíquica -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Disciplina_Psíquica">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Dominar -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Dominar">
         <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Mistica"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Dominar_un_nuevo_poder_mental -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Dominar_un_nuevo_poder_mental">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Psiquica"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Una vez que el personaje tiene afinidad con una disciplina psíquica, puede dominar sus poderes. Si quiere utilizar una habilidad determinada de una disciplina hacia la que es afín, primero debe dominarla invirtiendo de manera permanente un nuevo CV. Pueden adquirirse tantos poderes como el personaje necesite. La única limitación es que, para dominar uno de segundo nivel, es necesario controlar previamente uno de primero, al igual que para dominar uno de tercer nivel se necesita antes uno de segundo. Así, si un personaje es afín hacia la disciplina de Piroquinesis y tiene tres CV sin gastar, puede dominar los poderes de Crear Fuego (primer nivel), Inmunidad al Fuego (segundo nivel) y Nova (tercer nivel), gastando los tres.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -2494,6 +2609,7 @@ proyección mágica no aplica ninguno de los penalizadores de combate ni para at
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Proyección_Psíquica">
         <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Psiquica"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La Proyección Psíquica es la habilidad de las personas dotadas de disciplinas mentales para enfocar y controlar sus poderes sobre un objetivo. En cierto modo, sería correcto decir que es equivalente a la Proyección Mágica del psíquico. De la misma manera que ocurre con el mago, la Proyección Psíquica no mide su “puntería”, sino el control que tiene sobre sus poderes para llevar a cabo acciones con ellos. El psíquico utiliza su Proyección para atacar y defenderse.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -3409,6 +3525,14 @@ Beneficio: 1</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Luz -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Luz">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Warlock -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Warlock">
@@ -3608,15 +3732,6 @@ determinados sobre la categoría que vamos a elegir.Existen seis arquetipos, que
     <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Comida_Y_Bebida">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Elementos de comida y bebida que podemos obtener.</rdfs:comment>
     </rdf:Description>
-    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Conjuro">
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Los conjuros son el elemento esencial en la magia, ya que representan el verdadero poder de los brujos. El número de conjuros que conoce un personaje indica cuántas habilidades místicas posee, y los efectos que puede provocar.</rdfs:comment>
-    </rdf:Description>
-    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Conjuro_Libre_Acceso">
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Los conjuros de Libre Acceso son sortilegios genéricos que, sin pertenecer a una vía determinada, pueden ser aprendidos por los magos mientras estudian magia. Se basan en la idea de que no todos los magos desarrollan exactamente las mismas bases místicas, y cada uno investiga los hechizos que más apropiados le parecen. Por tanto, la elección de conjuros de Libre Acceso permite a los personajes con habilidades mágicas personalizar sus poderes, evitando que todos los brujos de una determinada vía sean iguales.</rdfs:comment>
-    </rdf:Description>
-    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Conjuro_Via">
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Conjuro perteneciente a una de las vías de la magia.</rdfs:comment>
-    </rdf:Description>
     <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Convocación">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La principal función de los poderes de convocatoria es la de invocar a criaturas y fuerzas sobrenaturales que, mediante pactos o dominación, ejecuten la voluntad de quienes los llaman.
 
@@ -3789,11 +3904,6 @@ Al contrario que las habilidades, las ventajas no se adquieren con PD, sino con 
     </rdf:Description>
     <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vestimenta">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tipos de prenda que podemos obtener.</rdfs:comment>
-    </rdf:Description>
-    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Via">
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Los conjuros se encuentran divididos en vías de magia. Cada vía recoge el conocimiento sobre un aspecto distinto de la existencia y representa una manera de influir en ella. Existen once vías separadas en dos tipos diferentes: menores y mayores. Las mayores son las cinco vías que controlan los aspectos más fundamentales de la realidad: Luz, Oscuridad, Creación, Destrucción y Nigromancia. Las menores son las seis vías que controlan los elementos básicos, las almas y la ilusión: Fuego, Aire, Tierra, Agua, Esencia e Ilusión.
-
-El conocimiento en vía que puede alcanzar un brujo está únicamente delimitado por su nivel de magia, que representa la sabiduría que el mago posee sobre hechicería, e indica cuántos conjuros podrá comprender. Un personaje puede aumentar su nivel en una sola vía o dividirlo entre tantas como quiera.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vivienda">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tipos de vivienda que podemos adquirir.</rdfs:comment>
