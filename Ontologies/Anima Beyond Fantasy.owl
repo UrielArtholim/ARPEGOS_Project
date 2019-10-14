@@ -102,7 +102,9 @@
 
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Arte_Marcial -->
 
-    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arte_Marcial"/>
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arte_Marcial">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Combate"/>
+    </owl:Class>
     
 
 
@@ -229,7 +231,7 @@
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Convocación -->
 
     <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Convocación">
-        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Mística"/>
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Mistica"/>
     </owl:Class>
     
 
@@ -438,14 +440,16 @@
 
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Ki -->
 
-    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ki"/>
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ki">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Combate"/>
+    </owl:Class>
     
 
 
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Magia -->
 
     <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Magia">
-        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Mística"/>
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Mistica"/>
     </owl:Class>
     
 
@@ -490,12 +494,6 @@
     
 
 
-    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Mística -->
-
-    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Mística"/>
-    
-
-
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Organizacion -->
 
     <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Organizacion"/>
@@ -534,7 +532,9 @@
 
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Rango_Armas -->
 
-    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Rango_Armas"/>
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Rango_Armas">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arma"/>
+    </owl:Class>
     
 
 
@@ -560,9 +560,17 @@
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Sexo -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Sexo"/>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Armas -->
 
-    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Armas"/>
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Armas">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Combate"/>
+    </owl:Class>
     
 
 
@@ -585,22 +593,6 @@
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Estilo -->
 
     <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Estilo">
-        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Armas"/>
-    </owl:Class>
-    
-
-
-    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Mistica -->
-
-    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Mistica">
-        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Armas"/>
-    </owl:Class>
-    
-
-
-    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Psiquica -->
-
-    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Psiquica">
         <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Armas"/>
     </owl:Class>
     
@@ -630,13 +622,17 @@
 
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Tipo_Municion -->
 
-    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tipo_Municion"/>
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tipo_Municion">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arma"/>
+    </owl:Class>
     
 
 
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Tipologia_Armas -->
 
-    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tipologia_Armas"/>
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tipologia_Armas">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arma"/>
+    </owl:Class>
     
 
 
@@ -755,10 +751,10 @@
     
 
 
-    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Acumulacion_Turno -->
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Acumulación_Turno -->
 
-    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Acumulacion_Turno">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Mística"/>
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Acumulación_Turno">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Mistica"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ACT es la abreviación de “ACumulación por Turno”, y representa la velocidad con la que un hechicero puede disponer de su poder. Cuanto más elevada sea su acumulación, el brujo podrá concentrar más rápido sus energías y realizar conjuros más poderosos en menos tiempo. Todas las personas tienen ACT y Zeon, aunque sólo quienes posean el Don son capaces de desarrollarlos.
 
 El ACT también se basa en la característica de Poder.</rdfs:comment>
@@ -1153,6 +1149,14 @@ Beneficio: 1</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Atar -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Atar">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Mistica"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Baja_nobleza -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Baja_nobleza">
@@ -1180,6 +1184,14 @@ Beneficio: 1</rdfs:comment>
 Efectos: El hechicero requiere obligatoriamente emplear componentes materiales para lanzar hechizos. Cada conjuro requerirá un componente distinto determinado por el Director de Juego, según su origen y los conocimientos del brujo.
 
 Beneficio: 2</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#CV -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#CV">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Psiquica"/>
     </owl:NamedIndividual>
     
 
@@ -1381,6 +1393,14 @@ Beneficio: 2</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Convocar -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Convocar">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Mistica"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Debilidad_física -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Debilidad_física">
@@ -1403,6 +1423,14 @@ Beneficio: 1</rdfs:comment>
 Efectos: El Director de Juego deberá interpretar el alcance de esta desventaja. En un grupo, alguien desafortunado será siempre el que caiga en la trampa aleatoria y el primero al que ataquen cuando el azar decida quién recibe el primer impacto.
 
 Beneficio: 1</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Desconvocar -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Desconvocar">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Mistica"/>
     </owl:NamedIndividual>
     
 
@@ -1542,6 +1570,14 @@ Beneficio: 1</rdfs:comment>
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Dificultad_Zen">
         <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Dificultad"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Son actos que de por sí rompen totalmente la lógica de aquello que llamamos realidad, como recorrer más de mil metros por debajo de un segundo o saltarlos verticalmente sin preparación. Al igual que la Inhumanidad, la mera habilidad no permite realizar acciones de Zen, por lo que el personaje tendrá que poseer sobrenaturalmente la capacidad de hacerlas.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Dominar -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Dominar">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Mistica"/>
     </owl:NamedIndividual>
     
 
@@ -1826,6 +1862,15 @@ Bono: Ninguno.</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Ataque -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Ataque">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Combate"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mide la pericia de un individuo para alcanzar a su oponente, eludir su guardia y causarle daño. Depende de la Destreza.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Atletica -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Atletica">
@@ -1858,6 +1903,15 @@ Bono: Ninguno.</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Esquiva -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Esquiva">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Combate"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Es la capacidad que tiene el personaje de apartarse de la trayectoria de un ataque. Depende de la Agilidad.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Intelectual -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Intelectual">
@@ -1866,10 +1920,27 @@ Bono: Ninguno.</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Llevar_Armadura -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Llevar_Armadura">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Combate"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Mistica -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Mistica">
         <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Parada -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Parada">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Combate"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Es la habilidad de defensa que permite al personaje bloquear ataques. Depende de la Destreza.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -1961,6 +2032,14 @@ Bono: +20 al turno cuando se utilicen artes marciales, y +10 a la habilidad de a
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Hechicero_Mentalista">
         <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Categoría"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El potencial de los hechiceros mentalistas es enorme. Los personajes con esta categoría están dedicados a controlar la combinación de las excepcionales habilidades de las que están dotados: la magia y las matrices psíquicas. Aunque su resistencia y sus conocimientos secundarios pueden ser escasos a causa de su extrema dedicación, con la capacidad de lanzar conjuros y apoyándose en sus disciplinas psíquicas hay muy pocas cosas que no estén a su alcance.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Hombre -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Hombre">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Sexo"/>
     </owl:NamedIndividual>
     
 
@@ -2226,6 +2305,14 @@ Beneficio: 1</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Mujer -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Mujer">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Sexo"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Municion_Arcos -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Municion_Arcos">
@@ -2399,6 +2486,14 @@ Beneficio: 1</rdfs:comment>
 
 Los magos pueden utilizar esta habilidad para atacar y defenderse con sus conjuros del mismo modo que los luchadores usan su ataque y su defensa. La
 proyección mágica no aplica ninguno de los penalizadores de combate ni para atacar ni para defender: un mago puede lanzar, sin negativos, tantos conjuros de ataque o anímicos como le permita el Zeon que tenga acumulado, al igual que la habilidad de sus escudos no se resiente por recibir golpes adicionales. Los únicos penalizadores que sufren los hechiceros a esta habilidad son los negativos a toda acción y la ceguera.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Proyección_Psíquica -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Proyección_Psíquica">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Psiquica"/>
     </owl:NamedIndividual>
     
 
@@ -2650,6 +2745,45 @@ Beneficio: 1</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Arma_Distinta_y_Desarmado -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Arma_Distinta_y_Desarmado">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Armas_Generales"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El personaje domina el uso de dos armas distintas.
+
+Efectos: Otorga la capacidad de usar un arma de un tipo que no conoce el personaje.
+
+Coste: 20 PD</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Arma_Mixta -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Arma_Mixta">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Armas_Generales"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El personaje domina el uso de dos armas con algunas similitudes.
+
+Efectos: Otorga la capacidad de usar un arma mixta que tiene, por lo menos, un mismo tipo en común con otra que el personaje ya conoce.
+
+Coste: 15 PD</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Arma_Similar -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Arma_Similar">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Armas_Generales"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El personaje domina el empleo de dos armas parecidas.
+
+Efectos: Otorga la capacidad de usar un arma adicional del mismo tipo que una que el personaje ya conoce.
+
+Coste: 10 PD</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Armas -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Armas">
@@ -2666,10 +2800,114 @@ Beneficio: 1</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Armas_Arquetípicas -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Armas_Arquetípicas">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Armas_Generales"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Armas_Generales -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Armas_Generales">
         <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Arquetipo_Aborigen -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Arquetipo_Aborigen">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Armas_Arquetipicas"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Arquetipo_Asesino -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Arquetipo_Asesino">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Armas_Arquetipicas"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Arquetipo_Bandido -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Arquetipo_Bandido">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Armas_Arquetipicas"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Arquetipo_Bárbaro -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Arquetipo_Bárbaro">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Armas_Arquetipicas"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Arquetipo_Caballero -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Arquetipo_Caballero">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Armas_Arquetipicas"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Arquetipo_Cazador -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Arquetipo_Cazador">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Armas_Arquetipicas"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Arquetipo_Duelista -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Arquetipo_Duelista">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Armas_Arquetipicas"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Arquetipo_Gladiador -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Arquetipo_Gladiador">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Armas_Arquetipicas"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Arquetipo_Ninja -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Arquetipo_Ninja">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Armas_Arquetipicas"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Arquetipo_Nómada -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Arquetipo_Nómada">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Armas_Arquetipicas"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Arquetipo_Pirata -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Arquetipo_Pirata">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Armas_Arquetipicas"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Arquetipo_Soldado -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Arquetipo_Soldado">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Armas_Arquetipicas"/>
     </owl:NamedIndividual>
     
 
@@ -2682,18 +2920,94 @@ Beneficio: 1</rdfs:comment>
     
 
 
-    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Mistica -->
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Improvisadas -->
 
-    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Mistica">
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Improvisadas">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Armas_Generales"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El luchador es muy hábil usando las cosas que hay a su alrededor en combate.
+
+Efectos: Esta tabla permite utilizar cualquier tipo de objeto común como arma improvisada.
+
+Coste: 50 PD</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Lanzamiento -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Lanzamiento">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Armas_Generales"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El personaje es capaz de utilizar su puntería lanzando cualquier tipo de arma u objeto.
+
+Efectos: Adquiere la pericia de lanzar toda clase de artefactos con la misma habilidad de ataque. Téngase presente que no le permite usar físicamente las armas con la regla de Lanzable, sino sólo arrojarlas.
+
+Coste: 50 PD</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Mística -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Mística">
         <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Psiquica -->
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Proyección_Mágica_Ataque -->
 
-    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Psiquica">
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Proyección_Mágica_Ataque">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Mistica"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Proyección_Mágica_Defensa -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Proyección_Mágica_Defensa">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Mistica"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Proyección_Psíquica -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Proyección_Psíquica">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Psiquica"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Proyectiles -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Proyectiles">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Armas_Generales"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El personaje es capaz de utilizar su puntería con todas las armas de disparo.
+
+Efectos: Adquiere la pericia de usar cualquier arma de disparo con la misma habilidad de ataque.
+
+Coste: 50 PD</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Psíquica -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Psíquica">
         <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Tipología_Arma -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Tipología_Arma">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Armas_Generales"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El personaje ha conseguido dominar el estilo de uso de una determinada clase de armas, pudiendo utilizar indistintamente cualquiera de ellas.
+
+Efectos: Permite utilizar una determinada tipología de armas sin aplicar ningún penalizador a su habilidad marcial. Deben de elegirse las de una clase concreta, ya sea pura o mixta. Si por ejemplo el personaje domina el uso de las espadas, podrá manejar cualquiera de ellas sin negativos, pero no así un mandoble, al ser un arma de tipología mixta.
+
+Coste: 50 PD</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -3051,7 +3365,7 @@ Beneficio: 1</rdfs:comment>
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Zeon -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Zeon">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Mística"/>
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Mistica"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El Zeon es la energía mística que controlan los hechiceros. Es la cantidad de poder del que disponen, los “puntos de magia” que pueden invertir en la realización de conjuros. La propia palabra Zeon significa “Maravillas de Dios”, aunque es sólo uno de tantos nombres que recibe, como Maná o Erzvayu.
 
 El Zeon base se calcula de la misma forma que los puntos de vida, pero en este caso utilizando la característica de Poder en lugar de la de Constitución.</rdfs:comment>
@@ -3308,12 +3622,6 @@ De cualquier modo, si los jugadores lo desean, hay diferentes razas que se puede
     </rdf:Description>
     <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Estilo">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Estas tablas permiten al personaje potenciar su habilidad marcial, disminuyendo los penalizadores que se aplican al realizar algunas maniobras específicas de ataque.</rdfs:comment>
-    </rdf:Description>
-    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Mistica">
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Esta tabla permite al usuario utilizar sus habilidades de combate como Proyección Mágica.</rdfs:comment>
-    </rdf:Description>
-    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Psiquica">
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Esta tabla permite al usuario utilizar sus habilidades de combate como Proyección Psíquica.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tipo_Ataque">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">En primer lugar debemos saber que, cuando un arma se utiliza para atacar, lo
