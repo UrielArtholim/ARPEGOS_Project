@@ -1,0 +1,6 @@
+Problemas del proyecto
+    - Ontología vs Base de Datos
+        1: Imposible asignar definición a las clases de la ontología.
+            -> Solución: Crear clase abstracta, y crear un individuo por clase, con la definición correspondiente
+
+        2: 
