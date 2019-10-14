@@ -226,9 +226,11 @@
     
 
 
-    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Convocacion -->
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Convocación -->
 
-    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Convocacion"/>
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Convocación">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Mística"/>
+    </owl:Class>
     
 
 
@@ -265,6 +267,12 @@
     <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Desventaja_Psiquica">
         <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Desventaja"/>
     </owl:Class>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Dificultad -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Dificultad"/>
     
 
 
@@ -422,7 +430,9 @@
 
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Invocacion -->
 
-    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Invocacion"/>
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Invocacion">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Convocación"/>
+    </owl:Class>
     
 
 
@@ -434,7 +444,9 @@
 
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Magia -->
 
-    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Magia"/>
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Magia">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Mística"/>
+    </owl:Class>
     
 
 
@@ -475,6 +487,12 @@
     <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Municion_Polvora">
         <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tipo_Municion"/>
     </owl:Class>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Mística -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Mística"/>
     
 
 
@@ -737,6 +755,30 @@
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Acumulacion_Turno -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Acumulacion_Turno">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Mística"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ACT es la abreviación de “ACumulación por Turno”, y representa la velocidad con la que un hechicero puede disponer de su poder. Cuanto más elevada sea su acumulación, el brujo podrá concentrar más rápido sus energías y realizar conjuros más poderosos en menos tiempo. Todas las personas tienen ACT y Zeon, aunque sólo quienes posean el Don son capaces de desarrollarlos.
+
+El ACT también se basa en la característica de Poder.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Adicción_o_vicio_grave -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Adicción_o_vicio_grave">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Desventaja_Comun"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Representa que se tiene una necesidad imperiosa de realizar algún tipo de acción concreta o de consumir una sustancia específica a diario. Un personaje con esta desventaja hará lo que sea necesario para conseguir satisfacer su vicio, puesto que en caso contrario empezará a sentirse muy nervioso y a entrar en crisis.
+
+Efectos: El personaje aplicará un penalizador acumulativo de –10 por cada día que transcurra sin satisfacer su vicio.
+
+Beneficio: 1</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Agilidad -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Agilidad">
@@ -763,11 +805,52 @@ Bono: +10 a la habilidad de esquiva o parada sin armas.</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Alergia_grave -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Alergia_grave">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Desventaja_Comun"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El personaje tiene algún tipo de alergia hacia algo, tan grave que, por el mero contacto o inhalación, recibirá una terrible reacción alérgica que perdurará durante horas. Algunos ejemplos de alergias habituales son hacia el metal, al polen, o incluso hacia la luz solar.
+
+Efectos: Los negativos a toda acción por entrar en contacto con dicha sustancia variarán entre un –40 y un –80, dependiendo de la gravedad o del tiempo que se haya permanecido en contacto con dicho elemento.
+
+Beneficio: 1</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Apariencia -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Apariencia">
         <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Característica_Secundaria"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La Apariencia refleja la belleza y se calcula siempre después de que se tengan sus características principales. El Director de Juego deberá decidir si se calcula lanzado un D10 como las otras características o permite al jugador elegirla libremente. Al contrario que los otros atributos, la Apariencia no podrá superar el diez, ya que esta cifra representa una belleza tan grande que el personaje resultará atractivo para cualquiera, sin importar gustos o preferencias personales.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Aprendizaje_Lento_1 -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Aprendizaje_Lento_1">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Desventaja_Comun"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La habilidad de aprendizaje del personaje es mucho más limitada que la de un individuo normal. No significa que sea menos inteligente que el resto, sino que no aprende tanto de sus errores ni saca realmente todo el provecho que puede de sus éxitos.
+
+Efectos: El personaje tiene un penalizador de 4 puntos de experiencia a los
+otorgados por el Director de Juego al finalizar la sesión.
+
+Beneficio: 1</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Aprendizaje_Lento_2 -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Aprendizaje_Lento_2">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Desventaja_Comun"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La habilidad de aprendizaje del personaje es mucho más limitada que la de un individuo normal. No significa que sea menos inteligente que el resto, sino que no aprende tanto de sus errores ni saca realmente todo el provecho que puede de sus éxitos.
+
+Efectos: El personaje tiene un penalizador de 8 puntos de experiencia a los
+otorgados por el Director de Juego al finalizar la sesión.
+
+Beneficio: 2</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -800,6 +883,22 @@ Bono: +10 a la habilidad de esquiva o parada sin armas.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arma">
         <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Arma_exclusiva -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arma_exclusiva">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Desventaja_Comun"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Esta desventaja representa que el personaje está acostumbrado a luchar exclusivamente con un arma concreta y su habilidad empleando cualquier otra,
+incluso del mismo tipo, será mucho menor. 
+
+Efectos: El personaje aplicará un penalizador de –30 a su habilidad de combate con cualquier arma distinta a la suya. 
+
+Limitación: Esta desventaja sólo puede ser adquirida por los arquetipos de Luchador, Acechador, Domine o Sin Categoría.
+
+Beneficio: 1</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -1039,11 +1138,48 @@ Bono: Los mencionados en la descripción de las ventajas.</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Aspecto_desagradable -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Aspecto_desagradable">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Desventaja_Comun"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El personaje tiene terribles deformaciones que vuelven su aspecto muy desagradable a la vista.
+
+Efectos: Reduce la apariencia del personaje a 2.
+
+Limitación: El personaje tiene que tener como mínimo un 7 en apariencia. Esta característica debe de haber sido generada mediante una tirada, no elegida libremente por el jugador.
+
+Beneficio: 1</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Baja_nobleza -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Baja_nobleza">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Clase_Social"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Estrato social al que pertenecen personajes que ostentan títulos nobiliarios, pero no poseen rentas para sostener un modo de vida compatible con tal condición (que es vivir sin trabajar).</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Blanda -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Blanda">
         <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Dureza"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Las armaduras blandas son móviles y se adaptan a los movimientos de los personajes.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Brujería -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Brujería">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Desventaja_Mistica"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La magia practicada por el hechicero tiene un carácter tribal y chamánico, en cuyos principios basa la esencia misma de su energía. Sus poderes sobrenaturales están terriblemente atados al mundo material, por lo que necesitará ciertos componentes para canalizarlos y realizar conjuros.
+
+Efectos: El hechicero requiere obligatoriamente emplear componentes materiales para lanzar hechizos. Cada conjuro requerirá un componente distinto determinado por el Director de Juego, según su origen y los conocimientos del brujo.
+
+Beneficio: 2</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -1110,6 +1246,46 @@ Bono: +10 a la habilidad de esquiva.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Categoría">
         <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Ciego -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ciego">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Desventaja_Comun"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Por alguna razón el personaje está privado del sentido de la vista, o lo que es lo mismo, está completamente ciego.
+
+Efectos: El personaje no podrá usar ninguna habilidad que requiera ver. Aplicará en todo momento el penalizador de cegado.
+
+Beneficio: 2</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Clase_Alta -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Clase_Alta">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Clase_Social"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Se aplica al grupo de personas con más riqueza y poder, opuesta por definición a la clase baja, definida por el nivel, su sociedad y carencias.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Clase_Baja -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Clase_Baja">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Clase_Social"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La clase baja o clase popular es la clase socioeconómica con mayor nivel de pobreza y, frecuentemente, su vida esta caracterizada por carencias y limitaciones respecto al acceso a muchos bienes económicos y a la educación formal, por lo que sus miembros son vulnerables a problemas sociales como el consumo de drogas, pandillas, violencia intrafamiliar y embarazos adolescentes, además de participar en actos criminales como hurtos, asesinatos, violaciones y microtráfico de drogas.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Clase_Media -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Clase_Media">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Clase_Social"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Estrato social que no se encuentra en el umbral de pobreza, pero que tampoco alcanza a pertenecer a la clase alta.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -1184,10 +1360,49 @@ Los personajes adquieren puntos de CM por el simple hecho de pertenecer a una ca
     
 
 
-    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Convocacion -->
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Consumición_psíquica -->
 
-    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Convocacion">
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Consumición_psíquica">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Desventaja_Psiquica"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cuando los poderes del psíquico no funcionan, la reacción adversa causa una seria repercusión en su cuerpo, provocando daños internos.
+
+Efectos: Si un psíquico sufre un fracaso psíquico, pierde automáticamente los mismos puntos de vida que la cantidad por la que no alcanzó el potencial mínimo requerido.
+
+Beneficio: 2</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Convocación -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Convocación">
         <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Debilidad_física -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Debilidad_física">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Desventaja_Comun"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El personaje es excepcionalmente débil ante los daños físicos, por lo que cada vez que recibe una herida crítica tiene serias posibilidades de morir o sufrir daños irreversibles.
+
+Efectos: La RF del personaje queda reducida a la mitad.
+
+Beneficio: 1</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Desafortunado -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Desafortunado">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Desventaja_Comun"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La desgracia acompaña al personaje allí donde va. Esté donde esté, siempre le pasarán cosas terribles por mucho que se esfuerce por evitarlo. 
+
+Efectos: El Director de Juego deberá interpretar el alcance de esta desventaja. En un grupo, alguien desafortunado será siempre el que caiga en la trampa aleatoria y el primero al que ataquen cuando el azar decida quién recibe el primer impacto.
+
+Beneficio: 1</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -1229,6 +1444,104 @@ Los personajes adquieren puntos de CM por el simple hecho de pertenecer a una ca
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Desventaja_Psiquica">
         <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Dificultad -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Dificultad">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Dificultad_Absurdo -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Dificultad_Absurdo">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Dificultad"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Como su nombre indica, son cosas que están más allá de las posibilidades de una persona normal. Únicamente los grandes campeones o los superdotados podrían llegar a realizarlas con habitualidad, aunque no sin cierto esfuerzo. Algunos ejemplos serían hacer acrobacias olímpicas en la pértiga o realizar operaciones matemáticas como una calculadora mecánica</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Dificultad_Casi_Imposible -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Dificultad_Casi_Imposible">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Dificultad"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Incluso los mejores encontrarán mucha dificultad en estas acciones casi imposibles, y la mayoría de veces estarán condenadas al fracaso. Son actos que sólo un gran campeón o el héroe de la película consiguen en el momento crítico, como correr por un puente que se derrumba apoyándose en las piedras que están cayendo y realizar un increíble salto final.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Dificultad_Difícil -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Dificultad_Difícil">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Dificultad"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Son aquellas acciones que resultan muy problemáticas para una persona normal. Requieren una gran dosis de habilidad o una suerte desigual para realizarlas. Son actividades complejas por naturaleza, como subir por una pared escarpada sin ayuda o realizar malabares circenses.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Dificultad_Fácil -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Dificultad_Fácil">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Dificultad"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Las acciones fáciles son cosas que todos estamos acostumbrados a realizar, como abrir una cerradura oxidada sin problemas o recordar un simple tarareo. Incluso si no se sabe nada de la materia, un par de intentos fallidos bastarán para conseguirlo finalmente. El problema es si tiene que salirte bien a la primera, y debes abrir esa puerta oxidada antes de que ellos te alcancen...</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Dificultad_Imposible -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Dificultad_Imposible">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Dificultad"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Realizar una acción imposible es algo que nadie pensaría que se puede hacer. Son actos que bordean aquello que llamamos realidad pero que, por increíble o milagroso que parezca, son físicamente posibles. Un experto necesitará tener el momento más brillante de su carrera para conseguir algo imposible, como correr los cien metros por debajo de 8 segundos con cota de mallas o esquivar una bala no por suerte, sino viéndola venir y calculando su trayectoria.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Dificultad_Inhumano -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Dificultad_Inhumano">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Dificultad"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sencillamente es algo que en nuestro mundo, en la realidad, no se puede físicamente realizar. Son cosas que van en contra de la lógica de una manera limitada, como levantar una camioneta a pulso, subir a un tercer piso de un salto o correr entre una lluvia de balas de alta velocidad esquivándolas sin problemas. La misma habilidad por tirada no basta para alcanzar algo así a la hora de realizar estas proezas. Es necesario que los personajes tengan acceso a realizar acciones inhumanas para alcanzar esta dificultad.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Dificultad_Media -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Dificultad_Media">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Dificultad"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Es un nivel de dificultad mayor. Son cosas que la mera suerte no siempre te permite hacer y sólo alguien que tenga conocimientos en la materia podrá realizar comúnmente, como forzar una cerradura simple o curar una molesta gripe.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Dificultad_Muy_Difícil -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Dificultad_Muy_Difícil">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Dificultad"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Para realizar acciones muy difíciles se requiere una enorme habilidad. Es el límite de dificultad que pueden alcanzar las personas normales. Sólo los mejores expertos podrán realizarlas sin problemas, y siempre dejando boquiabiertos a quienes les observen. Algunos ejemplos serían caminar por la cuerda floja o realizar un salto mortal en el trapecio.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Dificultad_Rutinario -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Dificultad_Rutinario">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Dificultad"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Son acciones normales, que todos realizamos a la primera sin ni siquiera tener la necesidad de saber hacerlas, como bajar de un salto las escaleras o escuchar una explosión. Por regla general, el Director de Juego nunca pedirá a un jugador practicar controles de habilidad de esta dificultad, salvo en circunstancias muy determinadas.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Dificultad_Zen -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Dificultad_Zen">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Dificultad"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Son actos que de por sí rompen totalmente la lógica de aquello que llamamos realidad, como recorrer más de mil metros por debajo de un segundo o saltarlos verticalmente sin preparación. Al igual que la Inhumanidad, la mera habilidad no permite realizar acciones de Zen, por lo que el personaje tendrá que poseer sobrenaturalmente la capacidad de hacerlas.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -1285,6 +1598,19 @@ Bono: +20 a la habilidad de ataque sin armas y +10 al turno cuando se utilicen a
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Enfermedad_grave -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Enfermedad_grave">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Desventaja_Comun"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El personaje sufre algún tipo de enfermedad degenerativa que acabará matándole. Suele quedarle una media de poco más de un año de vida al empezar la partida, pero el periodo de tiempo puede ser menor o mayor si el Director de Juego lo necesita para encajar con los límites temporales de su campaña. Al contrario de lo que pueda parecer, un personaje con esta desventaja no sólo es perfectamente jugable, sino que precisamente puede tener como objetivo adicional encontrar algún medio para curarse.
+
+Efectos: El personaje aplicará un penalizador acumulativo de –10 a toda acción por cada mes que transcurra. El Director de Juego determinará una fecha en secreto, llegada la cual morirá.
+
+Beneficio: 2</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Enuth -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Enuth">
@@ -1334,6 +1660,19 @@ Bono: +20 a la habilidad de esquiva y parada sin armas.</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Exhausto -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Exhausto">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Desventaja_Comun"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Un personaje con esta desventaja es muy vulnerable a los efectos del Cansancio. No solo se cansa con mayor facilidad que los demás, sino que sufre especialmente los efectos de la fatiga.
+
+Efectos: Dobla los penalizadores a la acción provocados por la fatiga y resta un punto el Cansancio base del personaje.
+
+Beneficio: 1</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Explorador -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Explorador">
@@ -1343,11 +1682,78 @@ Bono: +20 a la habilidad de esquiva y parada sin armas.</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Extenuación_mágica -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Extenuación_mágica">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Desventaja_Mistica"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La tensión de la magia provoca una intensa fatiga en el hechicero cuando maneja grandes energías místicas. Los magos se agotarán si realizan conjuros de gran poder, pudiendo llegar incluso a desfallecer si fuerzan demasiado sus habilidades.
+
+Efectos: El mago perderá un punto de Cansancio al lanzar un conjuro con un potencial superior a 100, dos si es mayor a 300 y tres si lo es de 500.
+
+Beneficio: 1</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Extenuación_psíquica -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Extenuación_psíquica">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Desventaja_Psiquica"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El uso de sus poderes psíquicos causa sobre el personaje una gran repercusión física, dejándole terriblemente agotado incluso al emplear habilidades psíquicas de bajo nivel.
+
+Efectos: El personaje pierde el doble de puntos de Cansancio de lo que indique su fatiga psíquica
+
+Límitación: Esta desventaja no puede cogerse en combinación con Resistencia a la fatiga psíquica.
+
+Beneficio: 1</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Extremidad_atrofiada -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Extremidad_atrofiada">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Desventaja_Comun"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El personaje tiene un serio problema controlando uno de sus miembros. Esta extremidad le tiembla terriblemente en todo momento o deja de responderle en la situación en la que más lo requiera. 
+
+Efectos: El personaje aplica un penalizador de –80 a todas las acciones físicas que requieran el uso del miembro atrofiado.
+
+Beneficio: 1</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Fobia_grave -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Fobia_grave">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Desventaja_Comun"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El personaje siente un terrible temor hacia algo, que le obliga a comportarse de manera irracional en su presencia. Algunos buenos ejemplos de fobias conocidas serían la hidrofobia, el miedo al agua, la hemofobia, el miedo a la sangre o la claustrofobia, el miedo a los espacios cerrados. Naturalmente, una fobia hacia un elemento demasiado concreto no debería permitirse y quedará a discreción del Director de Juego su fijación exacta. 
+
+Efectos: El personaje aplicará el estado de miedo siempre que se encuentre con el objeto de su fobia.
+
+Beneficio: 1</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Fuerza -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Fuerza">
         <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Característica_Primaria"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La Fuerza evalúa la capacidad del esfuerzo físico del personaje, su musculatura y su vigor. Es la característica que permite levantar grandes pesos, causar mayor daño al golpear o romper objetos.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Fácil_posesión -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Fácil_posesión">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Desventaja_Comun"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aunque su voluntad sea fuerte, el personaje es muy propenso a ser dominado por cualquier entidad con la capacidad de afectar a su mente o alterar su personalidad.
+
+Efectos: El personaje aplica un negativo de –50 a cualquier RP o RM que realice contra algún tipo de dominio o posesión capaz de modificar su conducta.
+
+Beneficio: 1</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -1431,6 +1837,14 @@ Bono: Ninguno.</rdfs:comment>
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Combate -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Combate">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Convocación -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Convocación">
         <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
     </owl:NamedIndividual>
     
@@ -1628,6 +2042,45 @@ Bono: +10 variable.</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Lazo_existencial -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Lazo_existencial">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Desventaja_Mistica"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Los poderes del mago están atados a las mismas raíces de las vías de magia, por lo que su capacidad de desarrollar o especificar sus propios conjuros le resulta prácticamente imposible. El hechicero obtiene tan sólo conocimientos de sus vías, de las que ni siquiera podrá investigar sus propios sortilegios.
+
+Efectos: El mago no podrá elegir los conjuros de Libre Acceso de sus vías de magia y será incapaz de acceder a conjuros elegidos libremente.
+
+Beneficio: 1</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Lenta_curación -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Lenta_curación">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Desventaja_Comun"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Por alguna causa, la capacidad regenerativa del cuerpo del personaje está terriblemente mermada y este se recupera de las heridas que sufre con gran dificultad, incluso mediante medios sobrenaturales.
+
+Efectos: El personaje recupera sólo la mitad de puntos de vida de cualquier cantidad que debiera recobrar, ya sea mediante regeneración normal o medios místicos.
+
+Beneficio: 1</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Lenta_recuperación_de_magia -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Lenta_recuperación_de_magia">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Desventaja_Mistica"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La magia encuentra problemas para filtrarse a través de la esencia del hechicero, por lo que este tendrá serias dificultades para recuperar el poder que haya utilizado.
+
+Efectos: La regeneración zeónica del personaje se reduce a la mitad.
+
+Beneficio: 1</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Luchador -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Luchador">
@@ -1650,6 +2103,56 @@ Bono: +10 variable.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Magia">
         <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Magia_Innata -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Magia_Innata">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Magia"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El control de la magia de algunos hechiceros es tan elevado que pueden manejar las energías sobrenaturales ambientales sin la necesidad de utilizar su propio poder. De este modo, un brujo es capaz de lanzar hechizos sin tener que invertir sus puntos de Zeon. A este tipo de conjuros se les denomina innatos. Dependiendo de su ACT Final, el mago podrá lanzar sortilegios de distinto valor zeónico sin gastar en ello puntos de magia. Los conjuros funcionan con completa normalidad y con el valor zeónico indicado. Para lanzar un conjuro innato, el personaje no puede utilizar ningún otro hechizo durante ese asalto, ni tampoco acumular magia. En caso de que el conjuro innato tenga mantenimiento, el brujo podrá hacer que permanezca activo sin gastar tampoco puntos de magia, pero mientras sea así no podrá lanzar ningún otro conjuro innato. Dado que los hechizos innatos se basan en dominar la magia ambiental, el Director de Juego tiene en sus manos la posibilidad de recortar su valor si existe muy poca en el entorno, o viceversa.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Magia_atada_a_acción -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Magia_atada_a_acción">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Desventaja_Mistica"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El control que posee el personaje de los poderes del flujo de almas es caprichoso y sólo responde ante él mientras realiza una acción determinada. Si, por ejemplo, su magia está atada al baile, sus conjuros sólo serán lanzados mientras dance, o si lo están a la lucha, mientras está combatiendo. En algunos casos, es también posible que los poderes mágicos funcionen únicamente en situaciones o condiciones determinadas, como ser de día o estar con los pies en el suelo.
+
+Efectos: Sólo es posible usar magia si se realiza la acción o se cumple la condición determinada por la desventaja. En el caso de que la acción sea una habilidad secundaria, el mago deberá superar un control contra Difícil (DIF) para lanzar sus conjuros.
+
+Beneficio: 1</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Magia_estanca -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Magia_estanca">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Desventaja_Mistica"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La magia no fluye de un modo natural a través del cuerpo y alma del personaje. Existe algún tipo de bloqueo que le impide canalizar los poderes del ambiente y su propia alma tampoco regenera magia. Cuando consume su poder, el brujo jamás lo recupera por sí mismo. El único método a su alcance será alimentarse de las energías místicas de otros seres mágicos u objetos.
+
+Efectos: El personaje carece de regeneración zeónica, por lo que no recuperará naturalmente los puntos de Zeon que consuma. Sólo podrá volver a conseguir magia drenándola de objetos que lo permitan o de seres vivos con el Don.
+
+Limitación: Esta desventaja no puede combinarse a la de lenta recuperación de magia.
+
+Beneficio: 2</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Mala_suerte -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Mala_suerte">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Desventaja_Comun"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El personaje tiene muy mala suerte a la hora de hacer lo que se propone y suele fracasar estrepitosamente mucho más de lo que le gustaría. 
+
+Efectos: La cifra requerida para pifiar aumenta en dos puntos. En las habilidades normales pifiará con un resultado de 5 y, si es maestro, lo hará con 4.
+
+Beneficio: 1</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -1680,6 +2183,19 @@ Bono: +10 a la habilidad de ataque sin armas.</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Miopía -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Miopía">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Desventaja_Comun"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La vista del personaje esta afectada por un problema que no le deja ver bien. Para él, muchas cosas permanecerán borrosas y tendrá dificultades incluso para leer, por lo que necesitará la ayuda de algún instrumento para suplir su carencia.
+
+Efectos: Aplicará un negativo de –50 a cualquier tirada de la habilidad Advertir o Buscar en la que se emplee la vista y un –3 a cualquier control de Percepción que la requiera. Este penalizador también se aplicará a la puntería. Si consigue unas gafas, el negativo penalizador se reduciría como el Director de Juego considere conveniente.
+
+Beneficio: 1</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Moai_Thai -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Moai_Thai">
@@ -1693,6 +2209,19 @@ Requisitos: Proezas de fuerza 40.
 Conocimiento marcial: +10
 
 Bono: Ninguno.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Mudo -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Mudo">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Desventaja_Comun"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">De alguna manera, el personaje está privado de la capacidad física de hablar.
+
+Efectos: El personaje no puede hablar.
+
+Beneficio: 1</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -1751,6 +2280,32 @@ Bono: Ninguno.</rdfs:comment>
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Novel">
         <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Categoría"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Los noveles representan el arquetipo de Sin categoría, o lo que es lo mismo, alguien que no se encuentra dentro de ninguno de los arquetipos que se han explicado hasta el momento. Puede ser cualquier tipo de persona que no tenga una verdadera especialización. Desde campesinos a bardos, pasando por nobles y bufones, el novel es la categoría estándar de Ánima, a la que podrá acceder cualquiera. El novel tiene buenas habilidades en todos los campos, desde la magia al combate, aunque no se especializa en ninguno. Además, le resulta excepcionalmente fácil cambiar posteriormente de categoría a la de cualquier otro arquetipo. En muchas ocasiones, cuando un jugador no tenga realmente decidido qué hacer con su personaje, puede empezar como novel y realizar después un cambio de categoría, cuando finalmente encuentre la apropiada.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Obligación_Oral -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Obligación_Oral">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Desventaja_Mistica"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Los vocablos místicos son un elemento fundamental en la magia del personaje. Sólo puede realizar conjuros si es capaz de entonar sus ensalmos.
+
+Efectos: El personaje debe de tener la capacidad de hablar para acumular magia y realizar sus conjuros.
+
+Beneficio: 1</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Obligación_somática -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Obligación_somática">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Desventaja_Mistica"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La gesticulación es necesaria para que el personaje teja la magia. Si no tiene libertad completa de movimientos, será incapaz de manejar sus poderes y, por ello, no podrá emplear su poder.
+
+Efectos: El personaje debe moverse libremente para acumular magia y realizar sus conjuros.
+
+Beneficio: 1</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -1823,6 +2378,31 @@ Bono: Ninguno.</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Poder_único -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Poder_único">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Desventaja_Psiquica"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Los poderes psíquicos del personaje no le permiten utilizar varias habilidades al unísono. Mientras emplea una, se centra tanto que pierde la capacidad de proyectar otras, salvo las que estuviese manteniendo inconscientemente.
+
+Efectos: El psíquico sólo podrá utilizar un único poder psíquico por asalto. Ello no le impide seguir usando otros mantenidos, siempre que los originara en asaltos anteriores.
+
+Beneficio: 1</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Proyección_Mágica -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Proyección_Mágica">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Mistica"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La proyección mágica es la habilidad que poseen los brujos para ejecutar y dirigir sus conjuros sobre la realidad. Miden desde la puntería con que lanzan una bola de fuego, al complejo acto que les permite manifestar sus poderes correctamente sobre el alma de una persona. Cada vez que un personaje pretenda utilizar un conjuro, debe realizar un control de proyección mágica para saber si es capaz de enfocar su poder correctamente o falla en su ejecución.
+
+Los magos pueden utilizar esta habilidad para atacar y defenderse con sus conjuros del mismo modo que los luchadores usan su ataque y su defensa. La
+proyección mágica no aplica ninguno de los penalizadores de combate ni para atacar ni para defender: un mago puede lanzar, sin negativos, tantos conjuros de ataque o anímicos como le permita el Zeon que tenga acumulado, al igual que la habilidad de sus escudos no se resiente por recibir golpes adicionales. Los únicos penalizadores que sufren los hechiceros a esta habilidad son los negativos a toda acción y la ceguera.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Psíquico -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Psíquico">
@@ -1870,6 +2450,60 @@ Bono: Ninguno.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Raza_Pura">
         <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Reacción_Lenta_1 -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Reacción_Lenta_1">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Desventaja_Comun"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Los reflejos del personaje están poco preparados para responder con velocidad a los acontecimientos.
+
+Efectos: El personaje aplicará un penalizador especial de –30 a su turno.
+
+Beneficio: 1</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Reacción_Lenta_2 -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Reacción_Lenta_2">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Desventaja_Comun"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Los reflejos del personaje están poco preparados para responder con velocidad a los acontecimientos.
+
+Efectos: El personaje aplicará un penalizador especial de –50 a su turno.
+
+Beneficio: 2</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Reducir_dos_puntos_a_una_característica -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Reducir_dos_puntos_a_una_característica">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Desventaja_Comun"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Uno de los atributos del personaje ha sido desarrollado menos de lo que potencialmente debía.
+
+Efectos: Reduce en dos puntos una de las características básicas.
+
+Limitación: Esta desventaja sólo puede adquirirse en una ocasión. No es posible disminuir una característica por debajo de 3.
+
+Beneficio: 1</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Salud_enfermiza -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Salud_enfermiza">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Desventaja_Comun"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El personaje tiene una salud terriblemente débil y es propenso a enfermar con facilidad.
+
+Efectos: La RE del personaje queda reducida a la mitad.
+
+Beneficio: 1</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -1968,11 +2602,50 @@ Bono: +10 a la habilidad de ataque sin armas.</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Sin_concentración -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Sin_concentración">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Desventaja_Psiquica"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Los poderes del personaje no dependen en absoluto de su capacidad de concentración, ya que son demasiado inconstantes como para que este pueda prepararse para potenciar sus habilidades.
+
+Efectos: Un psíquico con esta desventaja no podrá aplicar bonificadores a su potencial psíquico concentrándose.
+
+Beneficio: 1</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Sombra -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Sombra">
         <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Categoría"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Las sombras son luchadores que se mueven en la oscuridad y aprovechan a su favor el entorno. Aunque sus habilidades de combate son excelentes, prefieren acabar con sus enemigos sin darles la oportunidad de responder a sus ataques. Para ello, emplean el subterfugio para sorprenderles, o usan otras tácticas más complejas. Incluso si es descubierta, una sombra es capaz de seguir luchando con sus enemigos en igualdad de oportunidades, aunque su resistencia tiende a ser menor que la de otros luchadores. Generalmente ágiles y veloces, prefieren esquivar los ataques en lugar de afrontarlos.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Sordo -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Sordo">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Desventaja_Comun"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Como su nombre indica, el personaje está completamente sordo, es decir, carece de capacidad auditiva.
+
+Efectos: El personaje no podrá emplear ninguna habilidad que requiera el uso del oído.
+
+Beneficio: 1</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Sueño_profundo -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Sueño_profundo">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Desventaja_Comun"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Representa una terrible desventaja para alguien cuya vida puede estar en peligro incluso mientras duerme. El personaje tiene un sueño muy profundo y resulta muy difícil que se despierte. Aguantará sin despertarse incluso un contacto físico ligero, y cuando finalmente lo haga permanecerá aturdido durante varios minutos.
+
+Efectos: El personaje aplicará un penalizador de –200 a cualquier tirada de percepción mientras duerme. Durante los diez asaltos posteriores a su despertar, aplicará un penalizador de –40 a toda acción.
+
+Beneficio: 1</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -2238,6 +2911,63 @@ Bono: +20 a la habilidad de esquiva y parada sin armas.</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Vulnerabilidad_a_la_magia -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vulnerabilidad_a_la_magia">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Desventaja_Comun"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Esta desventaja representa que el personaje es muy propenso a verse afectado por las energías mágicas.
+
+Efectos: La RM del personaje queda reducida a la mitad.
+
+Beneficio: 1</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Vulnerabilidad_a_los_venenos -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vulnerabilidad_a_los_venenos">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Desventaja_Comun"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El cuerpo del personaje no es capaz de soportar los venenos, puesto que sus defensas biológicas no están preparadas para combatir ningún tipo de sustancia nociva.
+
+Efectos: La RV del personaje queda reducida a la mitad.
+
+Beneficio: 1</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Vulnerable_al_calor -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vulnerable_al_calor">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Desventaja_Comun"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El calor afecta terriblemente al personaje causándole muchos problemas físicos. Su cuerpo se ve seriamente perjudicado si se pone en contacto con algo muy caliente, al igual que si visita lugares con temperaturas extremas, como volcanes.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Vulnerable_al_dolor -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vulnerable_al_dolor">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Desventaja_Comun"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El personaje no es capaz de resistir el dolor físico, que le aterra y perjudica excepcionalmente.
+
+Efectos: Dobla cualquier penalizador causado por el dolor, ya sea producido por críticos o efectos místicos.
+
+Beneficio: 1</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Vulnerable_al_frío -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vulnerable_al_frío">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Desventaja_Comun"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El frío afecta terriblemente al personaje causándole muchos problemas físicos. Su cuerpo se ve seriamente perjudicado si se pone en contacto con algo muy frío, al igual que si visita lugares con temperaturas extremas, como zonas heladas.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Warlock -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Warlock">
@@ -2314,6 +3044,17 @@ Bono: +20 a la habilidad de esquiva y parada sin armas.</rdfs:comment>
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Yelmo_Frentón">
         <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Yelmo"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Es una placa de metal que detiene los impactos recibidos frontalmente.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Zeon -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Zeon">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Mística"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El Zeon es la energía mística que controlan los hechiceros. Es la cantidad de poder del que disponen, los “puntos de magia” que pueden invertir en la realización de conjuros. La propia palabra Zeon significa “Maravillas de Dios”, aunque es sólo uno de tantos nombres que recibe, como Maná o Erzvayu.
+
+El Zeon base se calcula de la misma forma que los puntos de vida, pero en este caso utilizando la característica de Poder en lugar de la de Constitución.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -2422,7 +3163,7 @@ determinados sobre la categoría que vamos a elegir.Existen seis arquetipos, que
     <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Conjuro_Via">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Conjuro perteneciente a una de las vías de la magia.</rdfs:comment>
     </rdf:Description>
-    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Convocacion">
+    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Convocación">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La principal función de los poderes de convocatoria es la de invocar a criaturas y fuerzas sobrenaturales que, mediante pactos o dominación, ejecuten la voluntad de quienes los llaman.
 
 Las habilidades mágicas no dependen exclusivamente del Don y de los conjuros. Algunos individuos son capaces de controlar la esencia de los seres sobrenaturales que existen en el flujo de almas, atrayéndolos al mundo material. Para hacerlo, los invocadores utilizan su propia alma y sincronizan con ella la esencia de los seres con los que desean contactar. Sincronizar de este modo es un proceso muy complejo y muy a menudo son necesarios elaborados rituales y ceremonias. Sin embargo, algunos convocadores desarrollan tanto poder y un control tan elevado, que pueden forzar a las criaturas a venir a nuestro mundo simplemente pronunciando su nombre.
@@ -2441,6 +3182,9 @@ es obligatorio hacerlo. Cualquier ventaja o desventaja, salvo que se diga expres
     </rdf:Description>
     <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Desventaja_Psiquica">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sólo los personajes con capacidades psíquicas podrán elegir desventajas de esta lista. Los Puntos de Creación que consigas con ellas, únicamente podrán utilizarse para comprar ventajas mentales para psíquicos. De todas formas, recuerda que el total de desventajas no puede ser mayor de tres, por lo que si ya has elegido tres generales, no podrás elegir ninguna de aquí.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Dificultad">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La puntuación final de una habilidad es la capacidad que tiene un personaje de realizar una acción con éxito. Cuanto más elevada sea, mayores probabilidades tiene de utilizarla correctamente en una situación determinada. Lo primero que debe hacerse será determinar la dificultad de la acción. El Director de Juego fijará el nivel de dificultad, o lo que es lo mismo, la cantidad que se debe superar para tener éxito. En Ánima hay diez niveles de dificultad posibles y cada uno de ellos requiere superar una cifra distinta. Cada vez que un personaje necesita realizar una acción de una dificultad determinada, lo denominaremos control de habilidad.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Equipamiento">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ahora que tu personaje ya tiene todas sus habilidades, ha llegado el momento de elegir su equipamiento. Por muchas pericias que tenga, de muy poco le pueden servir sin las cosas adecuadas. Conforme prospere y mejore, irá solicitando consecuentemente mejores artilugios, de acorde a sus necesidades.</rdfs:comment>
