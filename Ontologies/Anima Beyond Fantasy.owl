@@ -2159,6 +2159,118 @@ Bono: +20 al turno cuando se utilicen artes marciales, y +10 a la habilidad de a
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#III_La_Emperatriz -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#III_La_Emperatriz">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arcano_Puro"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El Arcano conocido como La Emperatriz es el aspecto femenino de la creación. Representa la inteligencia, la creatividad y la maternalidad. Es el poder de la madre, que le permite proteger a quienes lo necesiten.
+
+Pacto: La Emperatriz elige a alguien débil muy cercano al invocador que necesite ser protegido. De este modo, le pide que se ocupe de que esa persona no sufra ningún mal a lo largo del resto de su vida, a cambio de sellar el pacto. La Emperatriz retirará su poder en el caso de que el personaje fracase en su cometido.
+
+Dificultad: 150 
+Coste: 200
+H. Ataque: NA 
+H. Defensa: NA
+Acción: Pasiva.
+Efecto: Aumenta en +20 todas las Resistencias del invocador o del individuo al que este designe, más 10 adicionales por cada 10 puntos que superase la dificultad requerida.
+
+Duración: Un asalto por cada 10 puntos que supere la dificultad requerida. 
+
+Apariencia habitual: Aparece comúnmente como una mujer hermosa, ataviada con ropas reales y una corona. Abraza al sujeto designado por el invocador y deja sobre este una leve aureola luminosa.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#II_La_Suma_Sacerdotisa -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#II_La_Suma_Sacerdotisa">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arcano_Puro"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La Sacerdotisa es el Arcano que representa la sabiduría, la intuición y la memoria. En cualquier religión ostenta todo poder que se pueda considerar como divino, y protege las cosas sagradas. 
+
+Pacto: Como encarnación de la sabiduría, La Suma Sacerdotisa impondrá un acertijo o enigma al invocador, que este deberá resolver sin ningún tipo de ayuda externa.
+
+Dificultad: 140 
+Coste: 150
+H. Ataque: NA 
+H. Defensa: 160
+Acción: Pasiva.
+Efecto: Crea un escudo de energía que protege al invocador frente a cualquier tipo de ataque, utilizando la habilidad de La Sacerdotisa. El escudo está basado en luz y resiste 800 puntos de daño antes de ser roto, pero tiene 100 puntos de resistencia adicional por cada 10 que el invocador supere la dificultad requerida.
+
+Duración: Un asalto por cada 10 puntos que supere la dificultad requerida.
+
+Apariencia habitual: La Sacerdotisa se manifiesta como una joven excepcionalmente hermosa que irradia luz. Viste siempre de un modo religioso, dependiendo de las creencias del invocador. Su escudo suele manifestarse como seis pares de alas blancas que arropan al invocador protegiéndole de todo daño, tras lo cual se deshacen en plumas.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#IV_El_Emperador -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#IV_El_Emperador">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arcano_Puro"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El Emperador es el aspecto masculino de la creación y representa el poder natural. Es el señor justo, una fuerza estable que usa su poderío cuando es necesario y siempre en la medida proporcionada.
+
+Pacto: El invocador debe de convertirse en un cabecilla o líder al que un grupo numeroso de personas siga por su propia voluntad.
+
+Dificultad: 160 
+Coste: 200
+H. Ataque: 120 H. 
+Defensa: NA
+Acción: Activa.
+Efecto: Al ser invocado, El Emperador forma un guerrero que ataca físicamente a su adversario. El golpe tiene un daño base de 60 puntos y ataca en la TA de Filo, Contundente o Penetrante, según decida el invocador. El Emperador llama a un guerrero adicional, que realiza un nuevo ataque ese mismo asalto por cada 10 puntos que el invocador consiga superar la dificultad requerida. Todos los luchadores desaparecen tras realizar su acometida.
+
+Duración: Instantáneo.
+
+Apariencia habitual: Su apariencia es la de un rey o un monarca con corona y centro de mando. Al ser invocado aparece sentado sobre un gran trono, suspendido sobre el invocador, y con un gesto imperativo manifiesta alrededor del objetivo una serie de guerreros, que atacan inmediatamente y desaparecen.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#IX_El_Ermitaño -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#IX_El_Ermitaño">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arcano_Puro"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A este Arcano suele atribuírsele la idea de la meditación y la austeridad. Se le relaciona normalmente con la paz y la tranquilidad, al igual que se le atribuyen las acciones que rechazan completamente el camino violento.
+
+Pacto: Solicitará al invocador que intervenga en una situación específica de la que le informará. El personaje deberá evitar un conflicto, solucionándolo de una manera pacífica.
+
+Dificultad: 220 
+Coste: 400
+H. Ataque: NA 
+H. Defensa: NA
+Acción: Pasiva.
+Efecto: Permite al invocador defenderse de cualquier tipo de ataque como si fuera una criatura con acumulación de daño. El personaje debe de negar temporalmente sus otras habilidades de defensa para poder hacer uso de esta habilidad. Otorga una base de 1.000 puntos de vida adicionales al personaje para protegerse de los ataques, con una TA 6. Estos puntos serán los primero que pierda, tras lo cual el daño se restará directamente de los del personaje. Los PV aumentan a un ritmo de 100 puntos adicionales más por cada 10 por los que el invocador supere la dificultad requerida.
+
+Duración: Un asalto por cada 10 puntos que supere la dificultad requerida.
+
+Apariencia habitual: La forma más habitual de El Ermitaño es la de un anciano de aspecto apacible, con una lámpara en una mano y un libro en la otra. La invocación se manifiesta en el cuerpo del convocador rodeándolo como un escudo. Cuando recibe un ataque y sufre daños, se va quebrando como una imagen de cristal, revelando cada vez más partes de su protegido. Si pierde todos sus puntos de vida estalla en cientos de pedazos dejando indefenso al invocador. Si su tiempo se acaba sin haber sido roto, desaparece entre un vendaval de hojas de papel que brotan de su libro.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#I_El_Hierofante -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#I_El_Hierofante">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arcano_Puro"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">También conocido como El Mago, El Hierofante es el primero de todos los Arcanos. Representa el inicio y la voluntad de comenzar las cosas, aunque generalmente también se le atribuye todo lo relacionado con los campos de
+la habilidad. Es el Arcano que domina los poderes sobrenaturales.
+
+Pacto: El Hierofante suele exigir a los personajes que alcancen la maestría en
+una habilidad. Puede dejarlo a decisión del convocador, pero a veces indica cuál es la que debe de lograrse.
+
+Dificultad: 130 
+Coste: 100
+H. Ataque: 120 
+H. Defensa: 120
+Acción: Pasiva (variable).
+Efecto: Al invocarlo, El Hierofante puede ejecutar cualquier conjuro de libre acceso que no sea superior a nivel 50. Los conjuros son lanzados con su valor su base, sin sumar ningún añadido. Aunque se trata de una invocación pasiva por naturaleza, si al invocársele utiliza un conjuro activo, el personaje deberá esperar a tener la acción en el asalto para utilizarlo. 
+
+Duración: Instantáneo, pero el conjuro lanzado se mantiene un asalto por cada 10 puntos que se supere la dificultad (solo en el caso de que el hechizo tenga mantenimiento).
+
+Apariencia habitual: Suele encarnarse bajo la forma de un brujo de mediana edad, con un báculo y un anillo. Aparece junto al invocador, imitándolo, y realiza el conjuro seleccionado como si fuera un hechicero normal.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Ilusionista -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ilusionista">
@@ -3402,6 +3514,94 @@ Bono: Ninguno.</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#VIII_La_Fuerza -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#VIII_La_Fuerza">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arcano_Puro"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El Arcano de La Fuerza representa la fortaleza y el dominio, aunque a un nivel más básico se le atribuye el concepto del poder puro.
+
+Pacto: La Fuerza pedirá una prueba de poder al personaje, exigiéndole que se enfrente con sus propios medios a una entidad que traerá con tal fin. Normalmente suele elegir algún elemental mayor, aunque no suele traer a seres de nivel superior a seis.
+
+Dificultad: 200 
+Coste: 350
+H. Ataque: 200 H. 
+Defensa: NA
+Acción: Activa.
+Efecto: Realiza un ataque físico utilizando la habilidad del Arcano. El ataque se realiza en la TA de energía, con un daño base de 100 más 10 puntos adicionales por cada 10 sobre la dificultad requerida que consiga el invocador.
+
+Duración: Instantáneo.
+
+Apariencia habitual: Se manifiesta como un colosal titán de musculatura perfecta, aunque otras veces toma el aspecto de una bestia metálica. Aparece abriendo una brecha en la realidad ante el invocador y carga sobre su adversario, tras lo cual desaparece tal como llegó.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#VII_El_Carro -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#VII_El_Carro">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arcano_Puro"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El Carro simboliza el movimiento y la capacidad de evitar todo lo que es perjudicial. Este Arcano tiene control sobre el espacio material y posiblemente también sobre el tiempo.
+
+Pacto: Al manifestarse, El Carro pedirá que el invocador inicie un viaje hasta un lugar determinado. Este sitio se tratará siempre de un lugar muy lejano que el personaje nunca haya visitado.
+
+Dificultad: 190 
+Coste: 300
+H. Ataque: NA 
+H. Defensa: 200
+Acción: Pasiva.
+Efecto: El Carro transporta al invocador, permitiéndole defenderse de cualquier ataque. A efectos de juego, utiliza su habilidad de defensa como si fuera la esquiva de quien le ha llamado. El Carro nunca sufre penalizadores por el área de los ataques; no importa cuál sea su alcance, el Arcano traslada al invocador hasta fuera del área de peligro.
+
+Duración: Un asalto por cada 10 puntos que supere la dificultad requerida.
+
+Apariencia habitual: El Carro nunca se manifiesta bajo una apariencia humanoide, sino como algún tipo de navío o trasporte sobrenatural. Al ser invocado arropa al invocador, moviéndose con él y evitando los ataques que vayan dirigidos contra este.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#VI_Los_Enamorados -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#VI_Los_Enamorados">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arcano_Puro"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Este Arcano es la representación de los sentimientos y del libre albedrío de los hombres. Posee el poder de todas las emociones positivas básicas de los seres vivos.
+
+Pacto: El invocador ha de encontrar a una persona con la que quiera compartir el resto de su vida y a la que ame por encima de todas las cosas.
+
+Dificultad: 180 
+Coste: 250
+H. Ataque: NA 
+H. Defensa: NA
+Acción: Pasiva.
+Efecto: Mientras se encuentren activos Los Enamorados, cualquier individuo que inicie una acción ofensiva contra el invocador deberá superar automaticamente una RM o una RP contra 140, o no será capaz de ejecutar su ataque. La Resistencia debe realizarse cada asalto en el que se declare una nueva acción ofensiva sobre el personaje. Los afectados podrán seguir actuando libremente, pero no atacarle o causarle ningún otro perjuicio directamente. Es equivalente a un efecto automático cuya condición es declarar un ataque sobre el invocador.
+
+Duración: Un asalto por cada 10 puntos que supere la dificultad requerida.
+
+Apariencia habitual: Se manifiesta como una pareja de ángeles, uno masculino y otro femenino, excepcionalmente hermosos. Cada uno tiene una sola ala y ambos pueden volar gracias a estar cogidos al otro. Al ser invocados no suelen materializarse físicamente, pero modifican el aspecto del invocador, volviéndolo un ser de belleza irresistible ante los ojos del observador. Cada individuo lo ve de un modo distinto, pero manteniendo generalmente su apariencia e individualidad.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#V_El_Sumo_Sacerdote -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#V_El_Sumo_Sacerdote">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arcano_Puro"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Es el Arcano que representa todo lo sagrado y santificado de cualquier religión, que ilumina al hombre destruyendo la ignorancia y lo pagano.
+
+Pacto: El personaje debe de expiar todos sus pecados pasados o recibir el perdón por ellos.
+
+Dificultad: 170 
+Coste: 250
+H. Ataque: 160 
+H. Defensa: NA
+Acción: Activa.
+Efecto: El Sumo Sacerdote utiliza su habilidad de ataque para lanzar una descarga de energía sobre un blanco determinado, que se encuentre a la vista del invocador. A términos de juego, el ataque se considera equivalente a un conjuro de Ataque. Actúa en la TA de energía y tiene un daño base de 100, aunque causa el doble de daño contra las criaturas ligadas a la oscuridad o de naturaleza maligna. Al contrario que otras invocaciones, no es necesario que actúe de manera instantánea, ya que puede permanecer junto al invocador durante el tiempo que dure la invocación. Tras realizar su ataque, desaparece.
+
+Duración: Un minuto por cada 10 puntos que supere la dificultad requerida.
+
+Apariencia habitual: El Sumo Sacerdote aparece como un anciano con ropajes de un eclesiástico de alto rango de la iglesia en la que cree el invocador. Hace un gesto de bendición y, entre coros y cánticos religiosos, crea una inmensa cruz que dispara una descarga de energía sagrada.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Velez -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Velez">
@@ -3525,9 +3725,89 @@ Beneficio: 1</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Agua -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Agua">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Aire -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Aire">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Creación -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Creación">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Destrucción -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Destrucción">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Esencia -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Esencia">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Fuego -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Fuego">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Ilusión -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Ilusión">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Luz -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Luz">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Nigromancia -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Nigromancia">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Oscuridad -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Oscuridad">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Tierra -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Tierra">
         <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
     </owl:NamedIndividual>
     
@@ -3538,6 +3818,275 @@ Beneficio: 1</rdfs:comment>
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Warlock">
         <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Categoría"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Un warlock es un mago guerrero que desarrolla tanto sus habilidades marciales como las místicas. Igual que los hechiceros, dominan la habilidad sobrenatural más pura de todas, la capacidad de realizar conjuros con los que modificar la propia realidad. Aunque puede centrarse principalmente sobre un solo campo, un warlock es perfectamente capaz de convertirse en un maestro que controle por igual el uso de las armas en combate y de las artes sobrenaturales. Sin embargo, haciéndolo, pueden dejar desatendidas otras habilidades importantes.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#XIII_La_Muerte -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#XIII_La_Muerte">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arcano_Puro"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">No hay nada más contrario al fin de la vida que el Arcano que responde al nombre de La Muerte. Su personificación es la de la renovación y la limpieza, una fuerza regenerativa que transforma las cosas.
+
+Pacto: Este Arcano suele solicitar al personaje que pase a través de la experiencia de encontrarse al borde de la muerte y que sea capaz de sobreponerse por sí mismo. Para ello, el invocador debe de entrar en el estado de entre la vida y la muerte y conseguir pasar el control necesario para superarlo, sin la intervención de terceros.
+
+Dificultad: 300 
+Coste: 600
+H. Ataque: NA 
+H. Defensa: NA
+Acción: Activa.
+Efecto: Al manifestarse La Muerte, cura completamente al invocador o al sujeto designado por este, anulando cualquier negativo o efecto perjudicial que se encontrase activo sobre él. Incluso si el penalizador es de carácter físico, como la carencia de un miembro, La Muerte regenera todo tipo de daño. De igual forma cualquier conjuro, poder psíquico o efecto
+sobrenatural perjudicial, queda automáticamente anulado por el poder de La Muerte.
+
+Duración: Instantáneo.
+
+Apariencia habitual: Se encarna como una mujer que cambia continuamente, de joven a niña o a anciana en apenas unos segundos. Está
+ataviada con un manto raído compuesto solo por oscuridad, en la que sólo pueden verse su rostro y sus manos. Al invocarla aparece entre pedazos de
+capa rota y atraviesa al personaje, regenerándolo completamente.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#XII_El_Colgado -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#XII_El_Colgado">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arcano_Puro"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Al contrario de lo que muchos pueden pensar por su titulo, El Colgado es el Arcano que encarna a los héroes. Su simbología es el sacrificio y la expiación, el poder de quienes lo dan todo por aquello en lo que creen sin importarles las consecuencias.
+
+Pacto: El personaje debe de arriesgar su vida por alguien o algo de un modo heroico. Ten en cuenta que es necesario que la acción ponga realmente su vida en peligro y que el personaje tenga verdaderas posibilidades de morir para que El Colgado otorgue su poder.
+
+Dificultad: 280 
+Coste: 550
+H. Ataque: 240+ 
+H. Defensa: NA
+Acción: Activa.
+Efecto: El Colgado utiliza su habilidad de ataque para lanzar una descarga de energía sobre un blanco determinado. A efectos de juego se considera equivalente a un conjuro de Ataque. Su habilidad ofensiva aumenta 5 puntos adicionales por cada 10 por los que el invocador supere la dificultad requerida. El daño base del ataque es de cuatro veces los puntos de vida que el invocador sacrifique en el momento de realizar la invocación. Es decir, si gasta 50 PV, el daño base será de 200. El daño sufrido mediante este método puede recuperarse de manera convencional.
+
+Duración: Instantáneo.
+
+Apariencia habitual: El Colgado aparece como un hombre de mediana edad con marcas de sogas en pies y manos. Su aspecto general puede variar, pero comúnmente es un caballero con una armadura vieja y oxidada. El Colgado tiende las manos hacia el invocador y sobre ellas recoge la sangre sacrificada por este. Este proceso no requiere que el personaje haga nada, ya que se abren temporalmente estigmas en su cuerpo de modo sobrenatural y la sangre vuela hasta las manos del Arcano. Una vez que ha recibido la sangre, El Colgado la moldea dándole la forma de una lanza carmesí con cadenas sobrenaturales y la arroja contra su adversario.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#XIV_La_Templanza -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#XIV_La_Templanza">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arcano_Puro"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El equilibrio perfecto y la completa armonía son la representación de este Arcano. Tiene la capacidad de hacer que los demás alcancen su verdadero potencial.
+
+Pacto: Suele pedir a los personajes que alcancen un determinado nivel de poder. A efectos de juego, La Templanza exige que el personaje llegue a un nivel entre 6 y 8 antes de conceder su poder. Como mínimo, el personaje siempre deberá subir uno desde que se le propone el pacto para que ella lo selle.
+
+Dificultad: 320 
+Coste: 650
+H. Ataque: NA 
+H. Defensa: NA
+Acción: Activa.
+Efecto: La Templanza potencia los efectos de las otras invocaciones, añadiendo automáticamente 100 puntos al valor por el que se haya superado la dificultad requerida en cualquier invocación, incluso en los Arcanos inversos.
+
+Duración: Un día por cada 10 puntos que supere la dificultad requerida.
+
+Apariencia habitual: Su forma más común es la de un ángel sin ningún sexo determinado. Se manifiesta entre formas geométricas y otorga su bendición al invocador, tras lo cual desaparece. Al personaje suele quedarle alguna marca especial como signo de que las habilidades de la invocación permanecen activas.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#XIX_El_Sol -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#XIX_El_Sol">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arcano_Puro"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El Sol es la fuente de toda energía que existe en el mundo, incluyendo la de la propia vida. Es el origen que crea y destruye las cosas. 
+Pacto: Exige que el personaje sea capaz de afrontar la descomunal energía destructora de este Arcano y permanecer con vida. Sólo así El Sol se asegura de que el invocador ha alcanzado un punto en el que es capaz de controlar su poder. Por tanto, cuando aparece, El Sol someterá al invocador a su ataque, y sólo si es capaz de sobrevivir sellará el pacto.
+
+Dificultad: 420 
+Coste: 900
+H. Ataque: 300 
+H. Defensa: NA
+Acción: Activa.
+Efecto: Esta invocación utiliza su habilidad de ataque para lanzar una descarga de calor sobre uno o varios blancos. Tiene un daño base de 300, más 10 puntos adicionales por cada 10 por los que el invocador supere la dificultad requerida. Ataca en la TA de calor. Su área de alcance máxima es de 100 metros. Es posible seleccionar blancos en el interior del ataque.
+
+Duración: Instantáneo.
+
+Apariencia habitual: Comúnmente, toma la forma de un sol arcaico como el que aparece en grabados antiguos. Al ser invocado, los cielos se abren y, desde ellos, descienden columnas de fuego que arrasan únicamente lo que el invocador decida.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#XI_La_Justicia -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#XI_La_Justicia">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arcano_Puro"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La Justicia es el primero de los Arcanos superiores. Representa exactamente lo que dice su nombre, todo lo que es justo. Es la legalidad en sentido estricto, la balanza que trata de equilibrar todas las cosas. 
+
+Pacto: El personaje debe de realizar un juicio en una situación difícil que se le presente, e impedir una acción injusta. En muchas ocasiones, La Justicia propondrá de un modo directo al convocador que intervenga en un caso concreto que ella misma haya decidido.
+
+Dificultad: 260 
+Coste: 500
+H. Ataque: Variable 
+H. Defensa: 240
+Acción: Pasiva.
+Efecto: La Justicia devuelve hacia el agresor un ataque que sufra el invocador durante ese asalto. En un principio sólo puede devolver uno, pero tiene la capacidad de realizar una defensa adicional (y, por tanto, una nueva devolución) por cada 10 puntos por el que el invocador supere la dificultad requerida. Para devolver el golpe, La Justicia debe de conseguir un contraataque utilizando su habilidad de defensa, sin aplicar ningún penalizador por ataques adicionales o modificadores de combate. A efectos de juego se considera que la defensa de La Justicia es un escudo mágico. Los ataques son devueltos con la misma habilidad final y el daño con los que fueron lanzados. Los efectos esotéricos también son reflejados mediante esta habilidad. También devuelve ataques en área. Por desgracia, si no es capaz de detener la agresión, no proporciona ningún tipo de protección al invocador y no disminuye en absoluto la habilidad de ataque del atacante. Así pues, quién la use sólo contará con su tirada de defensa natural para protegerse, sin sumar ningún tipo de habilidad. Es “lo justo”.
+
+Duración: Instantáneo.
+
+Apariencia habitual: La Justicia aparece siempre como una guerrera, armada con una espada y una balanza. Se forma en el aire entre runas y se interpone entre el atacante y el invocador. Crea uno o varios espejos ante ella que se tragan cualquier ataque y lo reflectan contra su lanzador.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#XVIII_La_Luna -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#XVIII_La_Luna">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arcano_Puro"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La Luna es la intuición y la imaginación. Representa todo aquello que está en la mente de los hombres y que estos pueden idear. Es el poder de los sueños capaz de hacerse realidad.
+
+Pacto: El personaje debe de proponer un enigma a La Luna que esta no sea capaz de resolver o vencerla en un juego de ingenio. El Director de Juego debe de tener en cuenta lo que representa el Arcano y la enorme dificultad que ello entraña.
+
+Dificultad: 400 
+Coste: 850
+H. Ataque: 350 
+H. Defensa: NA
+Acción: Activa.
+Efecto: La Luna afecta a cualquier individuo que se encuentre en un área de 100 metros alrededor del invocador, y que no sea capaz de superar una RM contra 160. A efectos de juego, esta invocación se considera igual que un conjuro de tipo Anímico. Los sujetos que no superen la Resistencia quedarán a merced de la voluntad del invocador, sometiéndolos al estado que desee o transformándolos en cualquier cosa que imagine. La única limitación de esta habilidad es que no puede matar a los sujetos afectados, aunque sí podría facilitar considerablemente la tarea.
+
+Duración: Un asalto por cada 10 puntos que supere la dificultad requerida.
+
+Apariencia habitual: Su encarnación es una fascinante mujer vestida completamente de blanco, junto a la que caminan centenares de criaturas fantásticas que nunca existieron, surgidas de la imaginación y los sueños del hombre. Al llamarla todo se oscurece levemente, mientras el invocador comienza a brillar, rodeado por las intangibles criaturas de fantasía que acompañaban a la Luna.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#XVII_La_Estrella -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#XVII_La_Estrella">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arcano_Puro"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La Estrella es el mayor de los dones del hombre: la esperanza. Su poder
+permite realizar lo imposible y hace que las personas sigan intentando lo que
+desean. Es el Arcano con el poder más defensivo de todos.
+
+Pacto: El personaje debe de erigir un símbolo que cree esperanza a un pueblo o etnia.
+
+Dificultad: 380 
+Coste: 800
+H. Ataque: NA 
+H. Defensa: 350+
+Acción: Pasiva.
+Efecto: Crea una barrera de energía que protege al invocador frente a cualquier tipo de ataque, utilizando la habilidad de defensa de La Estrella. A efectos de juego se considera como un escudo mágico. Su habilidad aumenta 10 puntos adicionales por cada 10 por los que el invocador supere la dificultad requerida. El escudo resiste cualquier cantidad de daño y no puede ser roto, dispersado o destruido de ningún modo.
+
+Duración: 5 asaltos por cada 10 puntos que supere la dificultad requerida.
+
+Apariencia habitual: Cuando se manifiesta por primera vez, aparece con una estrella fugaz que cae a la tierra y se convierte en una joven de larga melena dorada y una falda que no parece acabar nunca. Al llamarla no es habitual que se vuelva a manifestar, y simplemente forma una columna de luz que ilumina desde el cielo al invocador, incluso a través de lugares cerrados. La columna es una barrera infranqueable que no puede romperse.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#XVI_La_Torre -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#XVI_La_Torre">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arcano_Puro"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El poder de este Arcano es el más terrible de todos. Al contrario de lo que ocurre con el resto, La Torre no tiene ningún inverso, ya que es a la vez los dos aspectos de la existencia: el positivo y el negativo. Es la entidad que trae consigo la destrucción de toda realidad, el Arcano que representa el destino truncado, el mal en las raíces del mundo.
+
+Pacto: La Torre sólo mantiene su pacto con un individuo a la vez. Por tanto, cuando es invocada, susurra al oído de quien la ha llamado el nombre del actual poseedor de la invocación, exigiendo que acabe con él para alcanzar su poder. Una vez que este ha muerto, La Torre sella el pacto con su asesino. Por tanto, desde el mismo momento en el que un nuevo invocador hace un pacto con ella, sabe que algún día llegará otro para acabar con él y obtener su poder. Si muere por otra mano o por algún tipo de accidente, La Torre firma instantáneamente el pacto con el primer invocador que la llame.
+
+Dificultad: 360 
+Coste: 750
+H. Ataque: 320 
+H. Defensa: NA
+Acción: Activa.
+Efecto:La Torre efectúa un ataque equivalente a un conjuro tipo Anímico. Si consigue causar daño, el afectado deberá superar una RM contra 160 o perderá temporalmente todas sus capacidades sobrenaturales, mágicas, psíquicas y habilidades del Ki. En el caso de las razas sobrenaturales, no podrán tampoco hacer uso de ninguno de sus poderes especiales.
+
+Duración: Un día por cada 10 puntos que supere la dificultad requerida.
+
+Apariencia habitual: La Torre Caída no tiene forma física y nunca se manifiesta. Sólo habla mediante susurros apenas perceptibles y, cuando aparece, suele traer consigo pequeños desastres naturales, como terremotos de escasa magnitud o tormentas. Al ser invocada no se la ve realmente, pero puede sentirse cómo algo frío y terrible se acerca al mundo. Aquellos que puedan ver lo sobrenatural se darán cuenta de que una
+fuerza se acerca hacia ellos, pero no verán ninguna forma concreta.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#XV_El_Diablo -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#XV_El_Diablo">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arcano_Puro"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El Diablo es el Arcano que representa la pasión y la energía, el poder de hacer las cosas con las propias capacidades de uno.
+
+Pacto: El Diablo pedirá al personaje que evite que un determinado invocador consiga lograr un pacto con uno de los Arcanos Invertidos. Habitualmente, El Diablo elegirá al antagonista e informará al personaje sobre él.
+
+Dificultad: 340 
+Coste: 700
+H. Ataque: 300 
+H. Defensa: 300
+Acción: Activa.
+Efecto: Mientras El Diablo permanezca activo, el personaje podrá utilizar su habilidad ofensiva y defensiva para protegerse y atacar. La habilidad de defensa será considerada como una parada sobrenatural o una esquiva, según desee el propio invocador, mientras que el ataque tendrá un daño base de 80 puntos y atacará en Filo, Contundente o Penetrante. En cierta manera, El Diablo se funde con el personaje concediendole sus poderes. Por tanto, si uno de sus ataques es contraatacado, el golpe se dirige contra el invocador, no contra El Diablo.
+
+Duración: 5 asaltos por cada 10 puntos que supere la dificultad requerida.
+
+Apariencia habitual: Siempre toma la forma de un miembro del sexo opuesto al invocador, con una belleza salvaje. Aparece ante él en una explosión de fuego azulado o verdoso y se convierte en su sombra. Cuando lucha, se une al invocador alterando temporalmente su aspecto.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#XXI_El_Mundo -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#XXI_El_Mundo">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arcano_Puro"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El Mundo es el poder supremo entre todos los Arcanos. Representa la perfección absoluta, la gloria completa. Es el mundo perfecto en el que nada puede salir mal ni nada puede alterar los acontecimientos. En cierto modo, se le atribuye el poder divino inalterable.
+
+Pacto: Dado que es representa la perfección, para que El Mundo otorgue su poder a un individuo, este debe de haber logrado todos los objetivos que se había marcado en la vida. Por tanto, esta petición dependerá de lo que cada individuo se había fijado como meta individualmente.
+
+Dificultad: 460 
+Coste: 1.000
+H. Ataque: NA 
+H. Defensa: NA
+Acción: Activa.
+Efecto: El Mundo permite al invocador ser absolutamente inmune a cualquier tipo de daño, desventaja o efecto perjudicial para él. Podría recibir decenas de golpes o los conjuros más destructivos y ni siquiera tendría que molestarse en detenerlos o lanzar una Resistencia. Además, consigue un éxito automático en cualquier control de habilidad que intente en acciones enfrentadas directamente contra otro individuo que no impliquen conocimiento. No obstante, esta invocación no tiene ningún efecto sobre las acciones de entidades que posean un Gnosis superior a 40, aunque sí protege contra otros Arcanos. 
+
+Duración: Un minuto por cada 10 puntos que supere la dificultad requerida.
+
+Apariencia habitual: El Mundo no se manifiesta bajo una forma material. Al ser llamado, modifica el entorno del invocador convirtiéndolo en un paraíso, en el que pueden verse ángeles y oírse coros arcaicos.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#XX_El_Juicio -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#XX_El_Juicio">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arcano_Puro"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Salvo El Mundo, ningún Arcano es tan antiguo como El Juicio. Es el encargado de juzgar las cosas y ejecutar las sentencias. Algunos mantienen que es el principio de la eternidad y el destino.
+
+Pacto: Comúnmente, este Arcano pregunta al invocador si desea someterse a su juicio y, si acepta, juzga todos los actos que este ha realizado a lo largo de su vida hasta ese momento. En realidad no valora si lo que ha hecho es bueno o malo, sino si la existencia del personaje en el mundo ha merecido realmente la pena y ha influido en gran medida en los acontecimientos del destino. Si su juicio es favorable, otorga su poder al invocador, pero si no lo es, el pacto fracasa y este debe superar automáticamente una RM contra 160 o desaparecerá de la existencia.
+
+Dificultad: 440 
+Coste: 950
+H. Ataque: NA 
+H. Defensa: NA
+Acción: Activa.
+Efecto: Al ser invocado, El Juicio deshace cualquier acontecimiento que haya ocurrido hasta una distancia máxima de un kilómetro del invocador. En realidad no hay ningún cambio temporal, sino que modifica la realidad tal como está en ese momento, transformándola en lo que era en el instante deseado por el invocador. Las personas heridas se recobrarán, e incluso los muertos volverán a la vida si han sido asesinados en el periodo retrocedido. No es posible designar únicamente un suceso determinado en la zona, sino todo lo que hubiera acontecido. El cambio es completo, pero los individuos afectados serán conscientes y recordarán todo lo que ha pasado hasta entonces. Pueden retrocederse hasta un máximo de 1 minuto, más otro adicional por cada 10 puntos por los que el invocador supere la dificultad requerida. La única limitación de esta invocación es que no puede deshacer las acciones de criaturas con un Gnosis superior a 40.
+
+Duración: Instantáneo.
+
+Apariencia habitual: En las raras ocasiones en la que se manifiesta, toma la forma de un anciano a través del cual puede verse el universo. Al invocar su poder, todo parece que se mueva hacia atrás a cámara rápida.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#X_La_Rueda -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#X_La_Rueda">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arcano_Puro"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ningún otro Arcano es tan caótico e imprevisible como La Rueda. Simboliza el azar y la suerte, un cambio positivo que nadie sabe con seguridad cómo va a llegar ni lo que puede traer consigo. Tiene mucha influencia sobre los otros Arcanos, ya que es el punto de equilibrio entre ellos.
+
+Pacto: Si La Rueda acepta o no al invocador, es algo que decide completamente al azar. Lo hace usando la suerte, lanzando una moneda a cara o cruz o mediante un dado a par o impar.
+
+Dificultad: 240 
+Coste: 450
+H. Ataque: Variable 
+H. Defensa: Variable
+Acción: Pasiva (Variable).
+Efecto: Al ser llamada, La Rueda no confiere ninguna habilidad por sí misma, sino que a su vez invoca a otro Arcano al azar. La diferencia por la que el invocador haya conseguido superar la dificultad requerida por La Rueda, contará los como puntos por los que se haya superado la invocación correspondiente. El Arcano copiado por La Rueda no tiene por qué tener ningún lazo con el invocador. Aunque es pasiva por naturaleza, si al invocarla encarna a un Arcano activo, el personaje deberá esperar a tener la acción para hacerla funcionar.
+
+Duración: Variable.
+
+Apariencia habitual: La apariencia de La Rueda es completamente imprevisible. Aunque su rostro y forma son siempre los mismos, los de una niña pequeña de edad indefinida, cada vez que se manifiesta puede tener una forma o vestimenta distinta. Al ser llamada, aparece en un pequeño remolino disfrazada como la invocación a la que recurre. Si por ejemplo se manifiesta como El Emperador, aparece como una niña sentada en un trono y llama a sus guerreros.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -3629,6 +4178,28 @@ El Zeon base se calcula de la misma forma que los puntos de vida, pero en este c
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Índice_Peso">
         <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Capacidad_Física"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Indica cuánto peso puede levantar un personaje. Es equivalente a la característica de Fuerza.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#0_El_Loco -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#0_El_Loco">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arcano_Puro"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El loco es a la vez el Arcano más débil y poderoso de todos, ya que representa el principio y el fin de todas las cosas. No tiene ninguna motivación en concreto y es una entidad completamente inocente. Tiene una enorme influencia sobre el resto de los Arcanos, tanto puros como invertidos. 
+
+Pacto: El Loco pedirá a los invocadores que inicien y cumplan un pacto con otro Arcano.
+
+Dificultad: 120 
+Coste: 100
+H. Ataque: NA 
+H. Defensa: NA
+Acción: Activa.
+Efecto: El Loco elimina cualquier bonificador o penalizador que pudiera sufrir el invocador al realizar cualquier invocación posterior, ya sea mediante rituales o algún efecto sobrenatural. A efectos de juego, un personaje contará únicamente con su propia habilidad para realizar invocaciones, sin importar cuánto tiempo invierta. Hay que tener en cuenta que este poder sólo afecta a la habilidad de convocar de un personaje cuando realiza invocaciones.
+
+Duración: Una hora por cada 10 puntos que supere la dificultad requerida.
+
+Apariencia habitual: El Loco suele manifestarse como una joven vagabunda vestida como un bufón. Al ser convocada, danza alrededor del invocador y desaparece.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -3907,6 +4478,39 @@ Al contrario que las habilidades, las ventajas no se adquieren con PD, sino con 
     </rdf:Description>
     <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vivienda">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tipos de vivienda que podemos adquirir.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Agua">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El elemento del agua recoge dentro de sí muchos conceptos distintos. Es la vía que controla los líquidos y la pureza de las cosas. También representa el poder del hielo y el de las bajas temperaturas. Su poder es muy equilibrado ofensiva y defensivamente. La vía opuesta a Agua es Fuego.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Aire">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Es la vía de lo etéreo y lo incorpóreo. Recoge los conjuros de velocidad y movimiento. Con su poder se puede alterar el espacio y transportar cuerpos de un lugar a otro. También es la vía que controla el clima y la electricidad. La vía opuesta a Aire es Tierra.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Creación">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El poder de la creación es la capacidad mágica de componer y alterar la realidad que rodea a los hechiceros. Sus conjuros engloban el cambio, la curación y la creación de cosas. Es una magia marcadamente defensiva. La vía opuesta a Creación es Destrucción.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Destrucción">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Esta vía permite utilizar el poder del flujo de almas para destruir la propia realidad. Sus conjuros afectan tanto al mundo material como al espiritual. Su poder es por naturaleza muy ofensivo. Su vía opuesta es Creación.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Esencia">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La Esencia controla la vida y las almas. Esta vía tiene el poder sobre los espíritus y los seres naturales que pertenecen al mundo. Es también la vía de la naturaleza y los conjuros de origen druídicos. La vía opuesta a Esencia es Ilusión.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Fuego">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La primera de las cuatro vías elementales menores tiene el control sobre las altas temperaturas. Sus conjuros crean calor, fuego y arrasan grandes cantidades de terreno. También reúne conjuros de sacrificio, que permiten consumir ciertos aspectos de un individuo para potenciar a cambio otros. Es una vía muy ofensiva. La vía opuesta a Fuego es Agua.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Ilusión">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El poder de esta vía permite al hechicero controlar el engaño y la ilusión. Sus conjuros pueden alterar la realidad, y con ella la percepción de las personas. La vía opuesta a Ilusión es Esencia.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Luz">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Esta vía es la que permite a los hechiceros controlar uno de los dos elementos superiores, la luz pura. Es la que controla las emociones positivas del hombre, como el amor, la tranquilidad o el placer. También domina el conocimiento y la detección. Su poder ofensivo y defensivo está muy equilibrado. La vía opuesta a Luz es Oscuridad.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Nigromancia">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La nigromancia es una perversión de la magia como tal. Mientras que el resto de vías se alimenta de las energías de la red de almas, la nigromancia las arranca de allí. Sus conjuros destruyen la esencia de la vida, estancando y pervirtiendo las almas que utiliza. Su poder permite devolver la vida a los muertos, destruir las almas y drenar la vida y la esencia de otros seres. La Nigromancia se opone al resto de las vías de magia.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Oscuridad">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La oscuridad no controla la ausencia de luz, sino el puro poder de las tinieblas. Domina todas las emociones negativas como el miedo, la ira y el odio. Es también el poder de los secretos, entre los que se incluyen los conjuros de ocultación y ofuscación. Al igual que la Luz, su poder está muy equilibrado. La vía opuesta a Oscuridad es Luz.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Tierra">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La Tierra es el poder del planeta, la piedra y los minerales. Es la magia más material de todas y controla las leyes de la física, como la gravedad y el magnetismo. Su influencia sobre los espíritus y lo inmaterial es muy limitada. Los conjuros de piedra recogen la magia relacionada con la resistencia, la dureza y la lentitud. La vía opuesta a Tierra es Aire.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Yelmo">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Los yelmos o cascos se utilizan sólo para proteger la cabeza. La TA que ofrecen se emplea únicamente cuando un golpe va dirigido directamente contra ella. Usar un yelmo junto con otra armadura no se considera una combinación, ya que ambas protegen zonas completamente diferentes, aunque sí se suman sus requerimientos y penalizadores. La desventaja de los yelmos se basa en que, al cubrir ojos y oídos, disminuye la capacidad perceptiva del personaje y causa penalizadores a sus habilidades de Advertir y Buscar.</rdfs:comment>
