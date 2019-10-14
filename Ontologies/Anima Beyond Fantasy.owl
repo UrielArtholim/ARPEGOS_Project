@@ -70,18 +70,18 @@
     
 
 
-    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Armaduras -->
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Arma -->
 
-    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Armaduras">
-        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Equipamiento"/>
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arma">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Armas_Y_Escudos"/>
     </owl:Class>
     
 
 
-    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Armas -->
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Armadura -->
 
-    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Armas">
-        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Armas_Y_Escudos"/>
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Armadura">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Equipamiento"/>
     </owl:Class>
     
 
@@ -174,7 +174,9 @@
 
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Clase_Armadura -->
 
-    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Clase_Armadura"/>
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Clase_Armadura">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Armadura"/>
+    </owl:Class>
     
 
 
@@ -266,15 +268,23 @@
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Dureza -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Dureza">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Armadura"/>
+    </owl:Class>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Equipamiento -->
 
     <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Equipamiento"/>
     
 
 
-    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Escudos -->
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Escudo -->
 
-    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Escudos">
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Escudo">
         <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Armas_Y_Escudos"/>
     </owl:Class>
     
@@ -786,18 +796,171 @@ Bono: +10 a la habilidad de esquiva o parada sin armas.</rdfs:comment>
     
 
 
-    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Armaduras -->
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Arma -->
 
-    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Armaduras">
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arma">
         <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Armas -->
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Armadura -->
 
-    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Armas">
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Armadura">
         <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Armadura_Acolchada -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Armadura_Acolchada">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Camisola"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Es una protección simple, compuesta por multitud de capas acolchadas que amortiguan los golpes.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Armadura_Anillas -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Armadura_Anillas">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Camisola"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chaquetón hecho con anillas metálicas, entrelazadas entre sí y cosidas posteriormente sobre una capa de cuero o tela dura que las sostiene.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Armadura_Campaña_pesada -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Armadura_Campaña_pesada">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Completa"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Es la armadura más pesada y completa de todas. Incluso las articulaciones están rematadas con gruesas capas de metal que, a pesar de dificultar el movimiento, protegen por completo toda la anatomía.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Armadura_Completa -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Armadura_Completa">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Completa"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Son verdaderas obras de arte metálicas, que suelen ser forjadas por encargo. Las piezas que las componen recubren todo el cuerpo, con uniones de cuero en cada juntura y rematadas después con placas de metal. Por desgracia, su peso es excesivo y permiten una escasa movilidad.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Armadura_Completa_de_cuero -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Armadura_Completa_de_cuero">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Completa"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Versión de la armadura de cuero que también protege las piernas. Las articulaciones están hechas de tela.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Armadura_Completa_pesada -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Armadura_Completa_pesada">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Completa"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Versión de la anterior, en la que las placas metálicas tienen el doble o el triple de grosor. Aunque requiere mucha más potencia y práctica para utilizarse, la defensa que ofrece es muy superior.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Armadura_Cota_de_cuero -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Armadura_Cota_de_cuero">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Camisola"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Armaduras confeccionadas con un cuero de gran grosor, que ha sido tratado con aceites para darle mayor resistencia.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Armadura_Cuero_endurecido -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Armadura_Cuero_endurecido">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Peto"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Es una coraza de cuero tratada con aceites y ungüentos hasta volverla completamente sólida.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Armadura_Cuero_tachonado -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Armadura_Cuero_tachonado">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Peto"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Se trata de una armadura de cuero blando, remachada con pequeños fragmentos de metal. Es muy útil, pero difícil de llevar.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Armadura_Escamas -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Armadura_Escamas">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Completa"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Parecida a la anterior, es una armadura de cuero recubierta de escamas metálicas similares a las de un pez.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Armadura_Gabardina -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Armadura_Gabardina">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Completa"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Es una gabardina hecha de un cuero tratado igual que en el caso anterior, pero que posee capas acolchadas que le dan mayor consistencia.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Armadura_Mallas -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Armadura_Mallas">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Completa"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Posiblemente la armadura más adelantada de su época. Está compuesta por finas anillas de metal entrelazadas o cosidas las unas a las otras, permitiendo una enorme protección, al igual que gran movilidad.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Armadura_Peto -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Armadura_Peto">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Peto"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Blindaje de metal, que se coloca sobre el pecho y la espalda.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Armadura_Piel -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Armadura_Piel">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Camisola"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Protecciones compuestas por capas de pieles animales. Al contrario que otras armaduras blandas, es pesada y difícil de usar.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Armadura_Piezas -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Armadura_Piezas">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Completa"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Armadura compuesta por diversas piezas de metal que protegen las partes más vitales del cuerpo. Normalmente se encuentran cosidas sobre un traje de cuero o piel, aunque otras veces se hace mediante junturas.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Armadura_Placas -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Armadura_Placas">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Completa"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Protección pesada, compuesta por una combinación de placas metálicas sobre junturas articuladas. Tiene menos piezas que una completa, pero también cubre por entero.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Armadura_Semicompleta -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Armadura_Semicompleta">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Completa"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Es una compleja coraza de metal, compuesta de decenas de partes perfectamente forjadas y preparadas para encajar las unas en las otras. Es más ligera que una completa, ya que sacrifica protección a cambio de movilidad.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -876,6 +1039,15 @@ Bono: Los mencionados en la descripción de las ventajas.</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Blanda -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Blanda">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Dureza"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Las armaduras blandas son móviles y se adaptan a los movimientos de los personajes.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Cansancio -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Cansancio">
@@ -937,14 +1109,6 @@ Bono: +10 a la habilidad de esquiva.</rdfs:comment>
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Categoría -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Categoría">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Clase_Armadura -->
-
-    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Clase_Armadura">
         <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
     </owl:NamedIndividual>
     
@@ -1095,6 +1259,15 @@ Bono: +20 a la habilidad de ataque sin armas.</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Dura -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Dura">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Dureza"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Las armaduras duras son rígidas y dificultan el movimiento de los presonajes que las utilizan.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Emp -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Emp">
@@ -1137,9 +1310,9 @@ Bono: +20 a la habilidad de esquiva y parada sin armas.</rdfs:comment>
     
 
 
-    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Escudos -->
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Escudo -->
 
-    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Escudos">
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Escudo">
         <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
     </owl:NamedIndividual>
     
@@ -2074,6 +2247,77 @@ Bono: +20 a la habilidad de esquiva y parada sin armas.</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Yelmo -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Yelmo">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Yelmo_Anilla -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Yelmo_Anilla">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Yelmo"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Es una anilla metálica que recorre la cabeza del personaje, protegiéndole de los golpes laterales y en la frente.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Yelmo_Capucha_de_cuero -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Yelmo_Capucha_de_cuero">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Yelmo"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Capucha de cuero tratado con aceites, que cubre toda la cabeza salvo la cara.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Yelmo_Capucha_de_mallas -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Yelmo_Capucha_de_mallas">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Yelmo"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Idéntica a la capucha de cuero, pero fabricada con anillas o fibras de metal tejidas. En el interior está recubierta de tela para evitar dañar la piel.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Yelmo_Completo_abierto -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Yelmo_Completo_abierto">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Yelmo"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yelmo completo salvo en la parte de la cara.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Yelmo_Completo_cerrado -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Yelmo_Completo_cerrado">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Yelmo"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yelmo que cubre toda la cabeza. Habitualmente, tiene una parte delantera móvil que puede levantarse.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Yelmo_Coronilla -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Yelmo_Coronilla">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Yelmo"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Casco metálico que protege la parte superior de la cabeza.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Yelmo_Frentón -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Yelmo_Frentón">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Yelmo"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Es una placa de metal que detiene los impactos recibidos frontalmente.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Índice_Peso -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Índice_Peso">
@@ -2100,11 +2344,13 @@ Bono: +20 a la habilidad de esquiva y parada sin armas.</rdfs:comment>
     <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arcano_Puro">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Arcano basado en los aspectos positivos de la realidad.</rdfs:comment>
     </rdf:Description>
-    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Armaduras">
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Un personaje puede equiparse con una armadura para evitar sufrir daño si entra en combate o cae en una trampa. Estas protecciones son un conjunto de piezas o ropajes que tienen como objetivo disminuir la potencia de los impactos recibidos.</rdfs:comment>
-    </rdf:Description>
-    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Armas">
+    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arma">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cuando un personaje combate, suele utilizar generalmente algún tipo de arma en lugar de sólo sus puños y piernas. Las armas son objetos creados con el fin de esgrimirse, de algún modo, como un medio de ataque y defensa efectivo. Un arma puede ser considerada prácticamente cualquier cosa, desde una mera rama de árbol hasta el más sofisticado arcabuz.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Armadura">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Un personaje puede equiparse con una armadura para evitar sufrir daño si entra en combate o cae en una trampa. Estas protecciones son un conjunto de piezas o ropajes que tienen como objetivo disminuir la potencia de los impactos recibidos.
+
+Las armaduras no protegen necesariamente todo el cuerpo de un personaje. Sin contar los yelmos, existen tres variedades dependiendo de la zona que protejan: petos, camisolas y completas. Los primeros sólo protegen el pecho y la espalda del personaje. Las camisolas también se extienden por los brazos, aunque dejan desprotegidas las piernas. Por último, las completas resguardan todo el cuerpo excepto la cabeza, de la que se ocupan sólo los yelmos. La segunda diferenciación se basa en la dureza. Las armaduras duras son rígidas, mientras que las blandas son móviles y se adaptan a los movimientos de los personajes.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Armas_Y_Escudos">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cuando un personaje combate, suele utilizar generalmente algún tipo de arma en lugar de sólo sus puños y piernas. Las armas son objetos creados con el fin de esgrimirse, de algún modo, como un medio de ataque y defensa efectivo. Un arma puede ser considerada prácticamente cualquier cosa, desde una mera rama de árbol hasta el más sofisticado arcabuz.
@@ -2161,9 +2407,6 @@ determinados sobre la categoría que vamos a elegir.Existen seis arquetipos, que
     <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Categoría">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ahora que ya conocemos los arquetipos de los personajes ha llegado el momento del elegir su categoría. Tener una categoría no significa que alguien se dedique a una profesión concreta en sentido estricto. Un ladrón no tiene por qué ganarse necesariamente la vida robando, al igual que un asesino no tiene que dedicarse sólo a matar gente. Las categorías te indicarán cuáles son los costes de desarrollo de tu personaje, sus límites en la distribución de puntos y alguna de sus habilidades especiales.</rdfs:comment>
     </rdf:Description>
-    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Clase_Armadura">
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Las armaduras no protegen necesariamente todo el cuerpo de un personaje. Sin contar los yelmos, existen tres variedades dependiendo de la zona que protejan: petos, camisolas y completas. Los primeros sólo protegen el pecho y la espalda del personaje. Las camisolas también se extienden por los brazos, aunque dejan desprotegidas las piernas. Por último, las completas resguardan todo el cuerpo excepto la cabeza, de la que se ocupan sólo los yelmos. La segunda diferenciación se basa en la dureza. Las armaduras duras son rígidas, mientras que las blandas son móviles y se adaptan a los movimientos de los personajes.</rdfs:comment>
-    </rdf:Description>
     <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Clase_Social">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Normalmente, los personajes comenzarán la partida con una cantidad de dinero inicial para realizar pequeños gastos y poder equiparse. Cada jugador puede justificar como desee el origen de este dinero: una herencia, su propio trabajo o un casual golpe de suerte. Quienes posean habilidades de combate pueden comenzar adicionalmente con el arma básica que saben utilizar, o en su defecto, con alguna armadura de escaso valor. Para determinar los fondos iniciales de un personaje, debe atenderse a su clase social. Su origen indica la cantidad de la que inicialmente se dispone.</rdfs:comment>
     </rdf:Description>
@@ -2202,7 +2445,7 @@ es obligatorio hacerlo. Cualquier ventaja o desventaja, salvo que se diga expres
     <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Equipamiento">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ahora que tu personaje ya tiene todas sus habilidades, ha llegado el momento de elegir su equipamiento. Por muchas pericias que tenga, de muy poco le pueden servir sin las cosas adecuadas. Conforme prospere y mejore, irá solicitando consecuentemente mejores artilugios, de acorde a sus necesidades.</rdfs:comment>
     </rdf:Description>
-    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Escudos">
+    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Escudo">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Salvo en el caso de la rodela, los escudos medios y corporales obligan a usar una mano para llevarlos, pero al contrario de lo que ocurre con otras armas, emplearlos con la zurda no provoca ningún negativo a la habilidad de parada (aunque sí a la de ataque). Estos objetos, al igual que las armaduras, tienen una restricción directa sobre la iniciativa, que se resta del turno final como un penalizador especial. Emplear un escudo de modo defensivo no se considera equivalente a usar un arma adicional. Si quiere utilizarse para atacar como segunda arma, quien lo enarbola no puede usar durante ese turno su bono a la defensa.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Especial">
@@ -2362,6 +2605,9 @@ El conocimiento en vía que puede alcanzar un brujo está únicamente delimitado
     </rdf:Description>
     <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vivienda">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tipos de vivienda que podemos adquirir.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Yelmo">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Los yelmos o cascos se utilizan sólo para proteger la cabeza. La TA que ofrecen se emplea únicamente cuando un golpe va dirigido directamente contra ella. Usar un yelmo junto con otra armadura no se considera una combinación, ya que ambas protegen zonas completamente diferentes, aunque sí se suman sus requerimientos y penalizadores. La desventaja de los yelmos se basa en que, al cubrir ojos y oídos, disminuye la capacidad perceptiva del personaje y causa penalizadores a sus habilidades de Advertir y Buscar.</rdfs:comment>
     </rdf:Description>
 </rdf:RDF>
 
