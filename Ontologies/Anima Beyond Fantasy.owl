@@ -2820,6 +2820,11 @@ Coste: 10 PD</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Arquetipo_Aborigen">
         <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Armas_Arquetipicas"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Es el equipamiento de combate que tradicionalmente usan los indígenas de tribus poco sofisticadas.
+
+Efectos: Otorga pericia en las siguientes armas: Jabalina, Lanza, Escudo Corporal, Arco y Cerbatana.
+
+Coste: 50 PD</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -2828,6 +2833,11 @@ Coste: 10 PD</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Arquetipo_Asesino">
         <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Armas_Arquetipicas"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Luchadores oscuros que utilizan armas precisas, mortales y fáciles de ocultar.
+
+Efectos: Otorga pericia en las siguientes armas: Espada Corta, Ballesta de Mano, Garrote, Cerbatana y Estilete.
+
+Coste: 50 PD</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -2836,6 +2846,11 @@ Coste: 10 PD</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Arquetipo_Bandido">
         <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Armas_Arquetipicas"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Guerreros especializados en robos y asaltos, que empuñan armas simples pero amenazadoras.
+
+Efectos: Otorga pericia en las siguientes armas: Daga, Ballesta, Espada Corta, Maza y Garrote.
+
+Coste: 50 PD</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -2844,6 +2859,11 @@ Coste: 10 PD</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Arquetipo_Bárbaro">
         <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Armas_Arquetipicas"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Son aquellos individuos que basan su estilo de combate en utilizar las armas más grandes y potentes.
+
+Efectos: Otorga pericia en las siguientes armas: Hacha de Guerra, Hacha a dos manos, Mandoble, Espada Bastarda y Maza a Dos Manos.
+
+Coste: 50 PD</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -2852,6 +2872,11 @@ Coste: 10 PD</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Arquetipo_Caballero">
         <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Armas_Arquetipicas"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Guerreros ortodoxos, que luchan tanto a caballo como con a pie.
+
+Efectos: Otorga pericia en las siguientes armas: Espada Larga, Lanza de Caballería, Maza, Espada Bastarda y Escudo Medio.
+
+Coste: 50 PD</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -2860,6 +2885,11 @@ Coste: 10 PD</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Arquetipo_Cazador">
         <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Armas_Arquetipicas"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Luchadores expertos en el subterfugio, que aprovechan armas de proyectiles y poco pesadas.
+
+Efectos: Otorga pericia en las siguientes armas: Jabalina, Arco, Espada Corta, Lanza y Boleadoras.
+
+Coste: 50 PD</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -2868,6 +2898,11 @@ Coste: 10 PD</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Arquetipo_Duelista">
         <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Armas_Arquetipicas"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Esta tabla es usada por espadachines y maestros de esgrima.
+
+Efectos: Otorga pericia en las siguientes armas: Estoque, Florete, Daga de Parada, Sable y Espada Larga.
+
+Coste: 50 PD</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -2876,6 +2911,11 @@ Coste: 10 PD</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Arquetipo_Gladiador">
         <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Armas_Arquetipicas"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Son armas exóticas y vistosas que utilizan los luchadores de circos y espectáculos.
+
+Efectos: Otorga pericia en las siguientes armas: Espada Corta, Red de Gladiador, Rodela, Tridente y Látigo.
+
+Coste: 50 PD</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -2884,6 +2924,11 @@ Coste: 10 PD</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Arquetipo_Ninja">
         <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Armas_Arquetipicas"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Asesinos orientales, maestros en el uso de armas exóticas.
+
+Efectos: Otorga pericia en las siguientes armas: Katana, Tanto, Garras, Shuriken y Kusari Gama.
+
+Coste: 50 PD</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -2892,6 +2937,11 @@ Coste: 10 PD</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Arquetipo_Nómada">
         <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Armas_Arquetipicas"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Son guerreros criados en el desierto y especializados en el uso de armas arábigas.
+
+Efectos: Otorga pericia en las siguientes armas: Daga, Turcus, Arco Largo, Cimitarra y Lanza.
+
+Coste: 50 PD</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -2900,6 +2950,11 @@ Coste: 10 PD</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Arquetipo_Pirata">
         <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Armas_Arquetipicas"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reune armas empleadas principalmente por marinos, que pasan su vida entre barcos.
+
+Efectos: Otorga pericia en las siguientes armas: Arpón, Red de Gladiador, Garfio, Sable y Hacha de mano.
+
+Coste: 50 PD</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -2908,6 +2963,11 @@ Coste: 10 PD</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Arquetipo_Soldado">
         <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Armas_Arquetipicas"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Son las armas tradicionales que se les enseña a usar a los guerreros regulares de cualquier ejército.
+
+Efectos: Otorga pericia en las siguientes armas: Ballesta, Espada Larga, Alabarda, Lanza y Escudo Medio.
+
+Coste: 50 PD</rdfs:comment>
     </owl:NamedIndividual>
     
 
