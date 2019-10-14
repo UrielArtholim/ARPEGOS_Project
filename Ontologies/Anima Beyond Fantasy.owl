@@ -697,11 +697,37 @@
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Acechador -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Acechador">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arquetipo"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Es el arquetipo de aquellas categorías que emplean el subterfugio y el ingenio para lograr sus objetivos, evitando el enfrentamiento directo. Su especialidad es el campo de las habilidades secundarias físicas.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Acumulacion_Ki -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Acumulacion_Ki">
         <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ki"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Es la capacidad que tiene un sujeto para concentrar y usar a mayor velocidad sus puntos de Ki.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Aikido -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Aikido">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arte_Marcial_Basica"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El Aikido es un arte marcial que permite defenderse de los ataques empleando la fuerza de los antagonistas contra ellos mismos. Sus practicantes apresan o rompen fácilmente los brazos y piernas de sus enemigos con escasos movimientos. Según su filosofía, es la propia violencia de los adversarios lo único que puede acabar con ellos.
+
+Ventajas: El daño del Aikido es de 10 más el bono de Fuerza de su usuario, pero al realizar un contraataque, añade el doble del bono de Fuerza de su contrincante (con un bono mínimo de +5). Ataca en Contundentes y permite sujetar a sus adversarios fácilmente, por lo que no aplica penalizadores al realizar una maniobra de Presa durante un contraataque.
+
+Requisitos: Trucos de manos 40.
+
+Conocimiento marcial: +10
+
+Bono: +10 a la habilidad de esquiva o parada sin armas.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -794,6 +820,40 @@
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Asakusen -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Asakusen">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arte_Marcial_Avanzada"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aunque la palabra Asakusen se utiliza en la actualidad para designar cualquier estilo de lucha que se emplea para matar, en realidad es una de las artes marciales más complejas del mundo, prohibida hace siglos por su naturaleza mortal. Con el paso del tiempo, fue derivando en distintos estilos que crearon las escuelas de Kung Fu, las cuales no son más que un reducto del verdadero Asakusen.
+
+Ventajas: El Asakusen hace que el bono variable de +10 del Kung Fu se aplique a la vez en todos los campos, es decir, un +10 a la habilidad de esquiva, ataque, parada, turno y daño cuando se utilicen artes marciales. Aun así, el personaje puede seguir añadiendo un +10 especial a una de ellas, del modo que se explica en el Kung Fu.
+
+Requisitos: Kung Fu, más de 160 en la habilidad de ataque y defensa sin armas del personaje.
+
+Conocimiento marcial: +10
+
+Bono: Los mencionados en la descripción de las ventajas.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Capoeira -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Capoeira">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arte_Marcial_Basica"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El Capoeira es un sistema de combate de apariencia caótica que emplea amplios movimientos acrobáticos de pierna, similares a una danza.
+
+Ventajas: Los movimientos de Capoeira son tan desbocados que, cuando el personaje realice una maniobra de Ataque en área, se considerará que está utilizando un arma grande y podrá afectar a cinco adversarios. Causa un daño de 20 más el bono de Fuerza, y ataca en Contundentes.
+
+Requisitos: Baile 40.
+
+Conocimiento marcial: +10
+
+Bono: +10 a la habilidad de esquiva.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Caracteristica_Primaria -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Caracteristica_Primaria">
@@ -878,9 +938,9 @@
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Conocimiento_Marcial -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Conocimiento_Marcial">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arte_Marcial"/>
         <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ki"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El Conocimiento Marcial, al que llamaremos CM a partir de ahora, es la
-capacidad de aprendizaje que tienen los personajes para despertar sus dominios del Ki. Los puntos de CM son distintos de los Puntos de Desarrollo, ya que únicamente sirven para adquirir conocimientos de los Dominios. Con el CM se pueden aprender habilidades del Ki y Técnicas especiales, no comprar puntos de Ki o de acumulación adicionales.
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El Conocimiento Marcial, al que llamaremos CM a partir de ahora, es la capacidad de aprendizaje que tienen los personajes para despertar sus dominios del Ki. Los puntos de CM son distintos de los Puntos de Desarrollo, ya que únicamente sirven para adquirir conocimientos de los Dominios. Con el CM se pueden aprender habilidades del Ki y Técnicas especiales, no comprar puntos de Ki o de acumulación adicionales.
 
 Los personajes adquieren puntos de CM por el simple hecho de pertenecer a una categoría. Cada categoría posee una cantidad de CM en primer nivel, y consiguen nuevos cada vez que suben de nivel. También pueden obtenerse con la ventaja de Maestro marcial, o dominando algunas artes marciales.</rdfs:comment>
     </owl:NamedIndividual>
@@ -927,6 +987,66 @@ Los personajes adquieren puntos de CM por el simple hecho de pertenecer a una ca
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Domine -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Domine">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arquetipo"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Son aquellas personas que han dedicado su vida a profundizar en el uso de su energía espiritual, pudiendo realizar las acciones más sorprendentes. Dominan las habilidades del Ki.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Dumah -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Dumah">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arte_Marcial_Avanzada"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dumah es conocido como “el arte del viento”, un estilo marcial que recibe su nombre por enseñar a sus practicantes a usar sus manos y piernas como si se tratasen de armas de filo. Se trata de una práctica tribal, que suele transmitirse únicamente entre miembros de una misma familia.
+
+Ventajas: Un personaje que emplee este arte marcial añade un bono de +10 al daño final del estilo empleado, y puede optar entre Filo o Penetrantes a la hora de atacar a su oponente. La magnitud de sus cortes es tal que reduce dos puntos la TA de cualquier armadura defensora. Del mismo modo, también añade un +10 a la rotura de sus ataques.
+
+Requisitos: Kempo o Capoeira, Extrusión de presencia.
+
+Conocimiento marcial: +10
+
+Bono: +20 a la habilidad de ataque sin armas.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Emp -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Emp">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arte_Marcial_Avanzada"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Emp es una depurada técnica de lucha que prepara a sus usuarios para combatir contra enemigos armados. Con rápidos y vertiginosos movimientos en espiral, un maestro de Emp es capaz de adelantarse a su adversario e inutilizarlo en apenas un par de movimientos.
+
+Ventajas: El estilo permite a sus usuarios realizar la maniobra Desarmar sin aplicar ningún penalizador a su habilidad, añadiendo un bonificador de +3 al valor de su característica en los controles enfrentados.
+
+Requisitos: Kempo o Tae Kwon Do, maestría en ataque sin armas.
+
+Conocimiento marcial: +10
+
+Bono: +20 a la habilidad de ataque sin armas y +10 al turno cuando se utilicen artes marciales.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Enuth -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Enuth">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arte_Marcial_Avanzada"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Conocido como “el arte del sueño”, Enuth fue creado en el período de la guerra que enfrentó a los Sylvain con los Duk´zarist. Una facción de elfos, seguidores de la filosofía de C´iel de no matar, creó el Enuth con el fin de poder enfrentarse a los Duk´zarist sin necesidad de tener que acabar con sus vidas. Debido a la increíble resistencia de los Duk´zarist, el estilo llegó a perfeccionarse hasta extremos increíbles para igualar el poder combativo de sus antagonistas.
+
+Ventajas: Permite aplicar un bonificador de +20 a las tiradas para calcular el Nivel de Crítico, cuando el personaje ejecute un golpe con el objetivo de dejar inconsciente. Puede, además, reducir libremente el daño producido hasta la cantidad que el atacante decida, incluso después de que ambos luchadores hayan lanzado los dados.
+
+Requisitos: Sambo o Shotokan, más de 160 en la habilidad de ataque y defensa sin armas.
+
+Conocimiento marcial: +10
+
+Bono: +20 a la habilidad de esquiva y parada sin armas.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Equipamiento -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Equipamiento">
@@ -955,6 +1075,23 @@ Los personajes adquieren puntos de CM por el simple hecho de pertenecer a una ca
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Especial_Armas">
         <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Grappling -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Grappling">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arte_Marcial_Basica"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El Grappling es un arte que consiste en agarrar y apresar a tu oponente. Su entrenamiento se especializa en caídas, golpes, patadas, estrangulamientos y proyecciones. El objetivo de este estilo es rebajar la distancia entre el luchador y su contendiente para así poder llevarlo al suelo, donde es mucho más fácil acabar con él.
+
+Ventajas: El Grappling permite ejecutar las maniobras de combate Presa y Derribo sin ningún tipo de penalizador. Da una base de daño de 20 más el bono de Fuerza, y ataca en Contundentes.
+
+Requisitos: Proezas de fuerza 40.
+
+Conocimiento marcial: +10
+
+Bono: Ninguno.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -1063,10 +1200,44 @@ Los personajes adquieren puntos de CM por el simple hecho de pertenecer a una ca
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Hakyoukuken -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Hakyoukuken">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arte_Marcial_Avanzada"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Muchos consideran el Hakyoukuken el arte marcial más perfecto que jamás ha existido. De hecho, su origen ni siquiera es humano, por lo que su verdadera procedencia sigue siendo un misterio. Un practicante de Hakyoukuken domina la tensión de cada músculo de su cuerpo y proyecta sus golpes con una potencia devastadora, destrozando literalmente a sus adversarios desde dentro. Su estilo enseña además a adelantarse a cualquier golpe: si no hay atacante, no hay necesidad de defensa.
+
+Ventajas: El Hakyoukuken añade un bono de +20 al daño final del arte marcial empleado. La mayor parte de armaduras no ofrecen protección contra sus ataques, por lo que restan –2 a su TA si son blandas. Al destrozar internamente a sus enemigos, se añade un +20 a las tiradas para calcular el nivel del crítico de un ataque con este arte marcial. Esta última habilidad sólo sirve contra seres orgánicos.
+
+Requisitos: Shotokan o Moai Thai, Uso de la energía necesaria, Maestría en ataque sin armas.
+
+Conocimiento marcial: +10
+
+Bono: +20 al turno cuando se utilicen artes marciales, y +10 a la habilidad de ataque sin armas.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Invocacion -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Invocacion">
         <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Kempo -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Kempo">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arte_Marcial_Basica"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Es una disciplina de combate libre que emplea combinaciones de golpes. Su estilo consiste en atacar rápidamente al adversario, esperando encontrar fallos en su guardia gracias a la acumulación de impactos.
+
+Ventajas: Los rápidos encadenamientos de golpes permiten al maestro de Kempo realizar los ataques adicionales con un penalizador de –10 a su habilidad, en lugar del –25 habitual. Da una base de daño 20 más el bono de Fuerza, y ataca en Contundentes.
+
+Requisitos: Ninguno.
+
+Conocimiento marcial: +10
+
+Bono: Ninguno.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -1079,10 +1250,70 @@ Los personajes adquieren puntos de CM por el simple hecho de pertenecer a una ca
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Kung_Fu -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Kung_Fu">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arte_Marcial_Basica"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El Kung Fu es una de las artes marciales desarrolladas por los grandes maestros orientales. Toma su inspiración de los animales, imitando sus movimientos y adaptándolos para el combate. Es un arte capaz de acomodarse a cada situación según convenga, ya que sus técnicas son muy variadas y sus practicantes están preparados para modificar su estilo con enorme facilidad.
+
+Ventajas: Un maestro de Kung Fu puede elegir aplicar un bono de +10 entre sus habilidades de ataque, parada, esquiva, daño o turno, según le convenga cada asalto. Debe decidir dónde empleará el bono antes de que se inicie el cálculo de la iniciativa. En el caso de que lo utilice para mejorar la habilidad de ataque, parada o esquiva, no se considera como un bono innato por categoría, por lo que puede aumentarlas por encima de +50. El Kung Fu da una base de daño de 20 más el bono de Fuerza, y ataca en Contundentes.
+
+Requisitos: Acrobacias 40, Trucos de manos 40 y Estilo 20.
+
+Conocimiento marcial: +10
+
+Bono: +10 variable.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Luchador -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Luchador">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arquetipo"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reúne las categorías especializadas en la lucha. Es el arquetipo de aquellos que se han dedicado a perfeccionar sus habilidades primarias de combate.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Magia -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Magia">
         <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Melkaiah -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Melkaiah">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arte_Marcial_Avanzada"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Se trata de un extraño sistema de lucha que maximiza la fuerza y habilidad de sus practicantes hasta niveles inhumanos. Su estilo se basa en agarres, lanzamientos y derribos de increíble efectividad. Se dice que, mientras un luchador que conozca el arte de Melkaiah tenga los pies en el suelo, no podrá ser derrotado por medios convencionales.
+
+Ventajas: Este arte marcial otorga un bonificador de +3 a los controles de Fuerza o Destreza al ejecutar maniobras de Derribo y Presa.
+
+Requisitos: Grappling o Sambo, Inhumanidad, más de 160 en la habilidad de ataque y defensa sin armas.
+
+Conocimiento marcial: +10
+
+Bono: +10 a la habilidad de ataque sin armas.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Moai_Thai -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Moai_Thai">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arte_Marcial_Basica"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El Moai Thai maximiza el uso de la fuerza de quienes lo practican. Al luchar, saca provecho de las partes más duras del cuerpo, como los codos y las rodillas. Sus maestros buscan las partes débiles de sus rivales, como articulaciones y costillas.
+
+Ventajas: Tiene un daño base de 20 más el triple del bono de Fuerza de su usuario. Ataca en Contundentes.
+
+Requisitos: Proezas de fuerza 40.
+
+Conocimiento marcial: +10
+
+Bono: Ninguno.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -1127,6 +1358,15 @@ Los personajes adquieren puntos de CM por el simple hecho de pertenecer a una ca
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Místico -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Místico">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arquetipo"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Este arquetipo recoge aquellas categorías que se han adentrado en el mundo de lo sobrenatural. Son los personajes con la capacidad de invocar criaturas místicas o moldear la realidad con sus conjuros. Su especialidad son las habilidades primarias sobrenaturales.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Organizacion -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Organizacion">
@@ -1155,6 +1395,15 @@ Los personajes adquieren puntos de CM por el simple hecho de pertenecer a una ca
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Personaje_No_Jugador">
         <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Psíquico -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Psíquico">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arquetipo"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Engloba a los personajes que no sólo están dotados de poderes psíquicos, sino que se han dedicado a perfeccionarlos haciendo de ellos un arte. Dominan especialmente el campo de las habilidades primarias psíquicas.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -1196,6 +1445,100 @@ Los personajes adquieren puntos de CM por el simple hecho de pertenecer a una ca
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Raza_Pura">
         <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Sambo -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Sambo">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arte_Marcial_Basica"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La denominación de Sambo proviene de Samooborona Biez Orousia, que significa defensa personal sin armas. Es un estilo de combate muy preciso y defensivo, desarrollado para entrenar a algunas órdenes militares.
+
+Ventajas: Los practicantes de Sambo pueden reducir a la mitad los penalizadores de las siguientes maniobras de combate: Presa, Ataque en área, Derribo y Desarmar. Otorga una base de daño de 20 más el bono de Fuerza del personaje (redondeando en grupos de 10 hacía arriba), y ataca en Contundentes.
+
+Requisitos: Ninguno.
+
+Conocimiento marcial: +10
+
+Bono: +10 a la habilidad de parada sin armas.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Selene -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Selene">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arte_Marcial_Avanzada"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Según el mito, Selene fue el primer arte marcial reconocido como tal. Era practicado únicamente por mujeres y tradicionalmente no se permite a ningún hombre descubrir sus secretos. Selene proyecta la propia fuerza de los atacantes sobre ellos mismos, lanzándolos por los aires como simples muñecos de trapo. A pesar de su enorme complejidad, visualmente Selene utiliza tan pocos movimientos que incluso puede dar la sensación de que quien la usa ni siquiera se está moviendo.
+
+Ventajas: Por su capacidad de aprovechar su habilidad defensiva, una maestra de Selene dobla el bono del contraataque si utiliza su Acción Respuesta para atacar a su contrincante usando este arte marcial.
+
+Requisitos: Aikido, maestría en esquiva o parada sin armas.
+
+Conocimiento marcial: +10
+
+Bono: +20 a la habilidad de esquiva y parada sin armas.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Seraphite -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Seraphite">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arte_Marcial_Avanzada"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Según cuenta la tradición, Seraphite es un estilo que se desarrolló para cazar demonios. Se trata de un arte que emplea movimientos muy arriesgados e inusuales que ponen en peligro a su practicante, pero que a cambio multiplica la efectividad de sus ataques. En la actualidad, es conocido por algunas secciones de la Iglesia, principalmente miembros de la Inquisición.
+
+Ventajas: Un personaje que emplee Seraphite añade un bono de +10 al daño final del estilo básico empleado. Si lo desea, puede además aumentar temporalmente su habilidad de ataque en +20, a cambio de sufrir un penalizador de -30 a su defensa. Esta última capacidad debe declararse antes de calcular la iniciativa.
+
+Requisitos: Shotokan o Kempo, Extrusión de presencia, más de 180 en la habilidad de ataque sin armas.
+
+Conocimiento marcial: +10
+
+Bono: +20 a la habilidad de ataque sin armas.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Shephon -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Shephon">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arte_Marcial_Avanzada"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shephon es, probablemente, el sistema de defensa más perfecto que existe. Se inspira en la corriente del agua, ya que dejando fluir sus movimientos con libertad, un maestro de este estilo es capaz de evitar virtualmente cualquier ataque desviando su trayectoria.
+
+Ventajas: Cuando el personaje declare entrar en modalidad de Defensa total, aumenta el bonificador de dicha maniobra hasta +60.
+
+Requisitos: Aikido y Kung Fu, Control del Ki, Maestría en la habilidad de defensa del personaje.
+
+Conocimiento marcial: +10
+
+Bono: +20 a la habilidad de esquiva y parada sin armas.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Shotokan -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Shotokan">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arte_Marcial_Basica"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El Shotokan es un arte marcial en el que se emplean fuertes golpes tanto con los puños como con las piernas. Su estilo consiste en aprovechar los puntos débiles en la defensa de un adversario para derrotarlo con un solo movimiento. Es un arte marcial muy ofensivo capaz de causar un enorme daño.
+
+Ventajas: Tiene un daño base de 30 más el bono de Fuerza de su usuario. Ataca en Contundentes.
+
+Requisitos: Ninguno.
+
+Conocimiento marcial: +10
+
+Bono: +10 a la habilidad de ataque sin armas.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Sin_Categoria -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Sin_Categoria">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arquetipo"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Este arquetipo es muy especial, ya que representa a todos aquellos personajes que no se han especializado en nada concreto durante su aprendizaje y, por tanto, no tienen ninguna preferencia específica. Dentro de este arquetipo pueden englobarse multitud de prototipos, desde la gente común y mundana, como posaderos o campesinos, a cualquier aprendiz que trata de decantarse por una profesión más adelante.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -1248,6 +1591,41 @@ Los personajes adquieren puntos de CM por el simple hecho de pertenecer a una ca
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Tae_Kwon_Do -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tae_Kwon_Do">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arte_Marcial_Basica"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El Tae Kwon Do es un sistema de combate ideal para combinar el uso del cuerpo con armas. Es un arte marcial que se basa principalmente
+en eficaces ataques de pierna, dirigidos con potencia y habilidad.
+
+Ventajas: Otorga una base de daño de 20 más el bono de Fuerza (redondeando en grupos de 10 hacía arriba). Permite realizar un ataque adicional con las piernas una vez que el personaje haya agotado todos sus otros ataques. Este ataque sufre tan sólo un penalizador de –20 a su habilidad, actuando de igual manera que lo hacen las armas adicionales. Puede realizarse incluso tras haber utilizado algún arma. Ataca en Contundentes.
+
+Requisitos: Ninguno.
+
+Conocimiento marcial: +10
+
+Bono: Ninguno.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Tai_Chi -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tai_Chi">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arte_Marcial_Basica"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Más que un arte marcial, el Tai Chi es una filosofía. Emplea todas las partes del cuerpo usando movimientos fluidos y elegantes, tanto que no parece un verdadero sistema de combate.
+
+Ventajas: El Tai Chi otorga una base de daño de 20 más el doble del bono de Poder (redondeando en grupos de 10 hacía arriba), en representación del uso de la energía interna. Puesto que el Ki sólo lo utiliza como potenciador, ataca en Contundentes y no en energía.
+
+Requisitos: Uso del Ki.
+
+Conocimiento marcial: +30
+
+Bono: Ninguno.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Tipo_Ataque -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tipo_Ataque">
@@ -1284,6 +1662,23 @@ Los personajes adquieren puntos de CM por el simple hecho de pertenecer a una ca
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Utiles_Varios">
         <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Velez -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Velez">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arte_Marcial_Avanzada"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Para dominar Velez es necesario que sus practicantes controlen su energía interna y sepan canalizarla. Este estilo concentra toda la potencia espiritual del artista marcial cuando golpea, permitiéndole crear un flujo de poder capaz de atravesar incluso la materia física. Sin duda es una de las artes marciales más espectaculares y raras del mundo, aunque los pocos que conocen sus secretos son reacios a transmitirlos.
+
+Ventajas: Velez permite a los personajes golpear en la TA de Energía. No obstante, los ataques realizados con este arte marcial pueden seguir parándose con normalidad, dado que no son intangibles. 
+
+Requisitos: Tai Chi o Kung Fu, Extrusión de presencia.
+
+Conocimiento marcial: +20
+
+Bono: +20 a la habilidad de esquiva y parada sin armas.</rdfs:comment>
     </owl:NamedIndividual>
     
 
