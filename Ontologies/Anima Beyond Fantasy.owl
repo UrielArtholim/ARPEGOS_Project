@@ -2181,6 +2181,28 @@ Apariencia habitual: Aparece comúnmente como una mujer hermosa, ataviada con ro
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#III_La_Emperatriz_Invertida -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#III_La_Emperatriz_Invertida">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arcano_Invertido"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La Emperatriz invertida encarna el aspecto oscuro de la mujer. Representa la esterilidad y la falta de imaginación que repite las cosas, preocupándose sólo por un vago sentimiento de vanidad. Es lo estéril, de cuyo vientre no brota vida o fruto alguno. Es la madre cuyos hijos nacen muertos.
+
+Pacto: El invocador debe destruir cualquier obra que haya creado y matar a su descendencia, en el caso de que la tenga.
+
+Dificultad: 150 
+Coste: 200
+H. Ataque: 160 
+H. Defensa: NA
+Acción: Activa.
+Efecto: Esta invocación efectúa un ataque en Energía utilizando su habilidad. A efectos de juego, se utiliza como un conjuro de tipo Anímico. Si consigue afectar al individuo, este deberá superar una Resistencia Mágica contra 120 o se verá obligado, en los asaltos consecutivos, a repetir la misma acción concreta que realice en el asalto en el que se invoca a La Emperatriz. El afectado podrá seguir realizando acciones de carácter pasivo. La dificultad de la Resistencia aumenta 5 puntos por cada 10 por los que el invocador supere la dificultad requerida.
+
+Duración: Un asalto por cada 10 puntos que supere la dificultad requerida.
+
+Apariencia habitual: La Emperatriz oscura viste como una reina tan engalanada como es posible. A pesar de que siempre es excepcionalmente hermosa, tiene una apariencia enfermiza y frágil. La Emperatriz repite otra vez los mismos gestos y susurra continuamente el nombre de la víctima.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#II_La_Suma_Sacerdotisa -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#II_La_Suma_Sacerdotisa">
@@ -2199,6 +2221,28 @@ Efecto: Crea un escudo de energía que protege al invocador frente a cualquier t
 Duración: Un asalto por cada 10 puntos que supere la dificultad requerida.
 
 Apariencia habitual: La Sacerdotisa se manifiesta como una joven excepcionalmente hermosa que irradia luz. Viste siempre de un modo religioso, dependiendo de las creencias del invocador. Su escudo suele manifestarse como seis pares de alas blancas que arropan al invocador protegiéndole de todo daño, tras lo cual se deshacen en plumas.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#II_La_Suma_Sacerdotisa_Invertida -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#II_La_Suma_Sacerdotisa_Invertida">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arcano_Invertido"/>
+        <rdfs:comment>La inversión de La Sacerdotisa representa la ignorancia, la falta de fe y las intenciones ocultas. Es el poder que destruye aquello que desconoce, por el miedo que le provoca lo que no entiende.
+
+Pacto: Exige que se destruya algún objeto o criatura de origen sobrenatural. Suele dejar la elección a discreción del invocador.
+
+Dificultad: 140 
+Coste: 150
+H. Ataque: 160 
+H. Defensa: NA
+Acción: Activa.
+Efecto: Provoca un ataque de energía oscura en área, con un radio de 20 metros, usando la habilidad ofensiva de la Suma Sacerdotisa. A efectos de juego, esta invocación se considera como un conjuro de Ataque con un daño base de 80 puntos. El área se incrementa 10 metros por cada 10 puntos que el invocador supere la dificultad requerida. No es posible designar blancos en el interior del área.
+
+Duración: Instantáneo.
+
+Apariencia habitual: Una mujer ataviada con un traje religioso teñido de negro, que lleva el rostro oculto tras un velo. Al invocarla se convierte en oscuridad y de ella brota una legión de cuervos sobrenaturales, que destrozan todo lo que se encuentran a su paso.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -2225,6 +2269,28 @@ Apariencia habitual: Su apariencia es la de un rey o un monarca con corona y cen
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#IV_El_Emperador_Invertido -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#IV_El_Emperador_Invertido">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arcano_Invertido"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El reflejo oscuro de El Emperador es la tiranía y el despotismo. Utiliza su poder para dominar la voluntad de los que estén por debajo de él y los somete a sus designios. Aunque también es un aspecto masculino de la creación, su poder es corrupto e innatural.
+
+Pacto: Debe someter por la fuerza o la intimidación a varias personas que se consideraban sus iguales o, por lo menos, libres e independientes. Deben quedar reducidas a la esclavitud, obedeciendo sin rechistar las órdenes del invocador.
+
+Dificultad: 160 
+Coste: 200
+H. Ataque: 180 
+H. Defensa: NA
+Acción: Activa.
+Efecto: Este Arcano efectúa un ataque en Energía utilizando su habilidad. A efectos de juego, esta invocación se utiliza como un conjuro de tipo Anímico. Si consigue afectar al individuo, este deberá superar una RM o RP contra 140 o se someterá al dominio absoluto del invocador, al que obedecerá ciegamente. Si recibe una orden que va completamente en contra de su comportamiento o personalidad, tendrá derecho a una nueva tirada de Resistencia.
+
+Duración: Cinco asaltos de dominación por cada 10 puntos que supere la dificultad requerida.
+
+Apariencia habitual: El Emperador no suele manifestarse en una forma física, aunque en las ocasiones en las que lo hace, toma la apariencia de un tirano vestido con ropas imperiales, sentado sobre un trono sostenido por esclavos de todas las razas. Su verdadero poder se encuentra en su voz, ya que al hablar, el sujeto al que se dirige no puede resistirse a obedecer sus órdenes. Habitualmente al invocársele sólo se le escucha, aunque en ocasiones también se manifiesta, haciendo que sus esclavos abran una brecha en la realidad.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#IX_El_Ermitaño -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#IX_El_Ermitaño">
@@ -2243,6 +2309,28 @@ Efecto: Permite al invocador defenderse de cualquier tipo de ataque como si fuer
 Duración: Un asalto por cada 10 puntos que supere la dificultad requerida.
 
 Apariencia habitual: La forma más habitual de El Ermitaño es la de un anciano de aspecto apacible, con una lámpara en una mano y un libro en la otra. La invocación se manifiesta en el cuerpo del convocador rodeándolo como un escudo. Cuando recibe un ataque y sufre daños, se va quebrando como una imagen de cristal, revelando cada vez más partes de su protegido. Si pierde todos sus puntos de vida estalla en cientos de pedazos dejando indefenso al invocador. Si su tiempo se acaba sin haber sido roto, desaparece entre un vendaval de hojas de papel que brotan de su libro.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#IX_El_Ermitaño_Invertido -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#IX_El_Ermitaño_Invertido">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arcano_Invertido"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El Ermitaño invertido encarna la soledad y el aislamiento el hombre. De su poder derivan, muchas veces, la pasividad y la vida monótona.
+
+Pacto: El invocador debe apartarse del mundo y permanecer solo durante un mínimo de un año, sin encontrarse con ningún otro ser vivo.
+
+Dificultad: 240 
+Coste: 400
+H. Ataque: NA 
+H. Defensa: NA
+Acción: Activa.
+Efecto: El Ermitaño efectúa un ataque en Energía utilizando su habilidad. A efectos de juego, se considera equivalente a un conjuro de tipo Anímico. El individuo al que afecte deberá superar una RM contra 140, o será encerrado durante un minuto por cada punto por el que no supere la Resistencia. La dificultad de la Resistencia aumenta 5 puntos por cada 10 que el invocador supere la dificultad requerida. El encierro aparta al individuo del plano físico, enviándolo a un lugar vacío de la Vigilia. Tras el periodo de aislamiento, el afectado reaparece en el mismo sitio donde desapareció.
+
+Duración: Instantáneo.
+
+Apariencia habitual: Suele encarnarse como un anciano esquelético que se cubre únicamente con su larga barba. Al ser invocado crea una cúpula de energía alrededor del objetivo y lo envuelve con ella. Si es afectado, el sujeto encerrado acaba generalmente en una montaña solitaria y tormentosa, sin nada vivo a su alrededor. En otras ocasiones es enjaulado en una cueva sin fondo, o rodeado de tinieblas.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -2267,6 +2355,29 @@ Efecto: Al invocarlo, El Hierofante puede ejecutar cualquier conjuro de libre ac
 Duración: Instantáneo, pero el conjuro lanzado se mantiene un asalto por cada 10 puntos que se supere la dificultad (solo en el caso de que el hechizo tenga mantenimiento).
 
 Apariencia habitual: Suele encarnarse bajo la forma de un brujo de mediana edad, con un báculo y un anillo. Aparece junto al invocador, imitándolo, y realiza el conjuro seleccionado como si fuera un hechicero normal.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#I_El_Hierofante_Invertido -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#I_El_Hierofante_Invertido">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arcano_Invertido"/>
+        <rdfs:comment>El Mago oscuro representa el poder sobrenatural usado sin control ni cuidado, ignorando las consecuencias que puede acarrear su uso.
+
+Pacto: El Hierofante pedirá al invocador que convoque a una determinada criatura, de la que dará limitada información. Sin embargo, exigirá que la deje en libertad en el mundo a su libre albedrío, sin que ejerza sobre ella ningún tipo
+de control.
+
+Dificultad: 130 
+Coste: 100
+H. Ataque: 140 
+H. Defensa: NA
+Acción: Activa.
+Efecto: La invocación de El Hierofante invertido realiza una descarga de energía oscura utilizando su habilidad ofensiva. A efectos de juego, se considera como un conjuro de Ataque. Produce un daño base de 100. Al contrario que otras invocaciones, no es necesario que actúe de manera instantánea, ya que puede permanecer junto al personaje durante el tiempo que dure su estancia en el mundo.
+
+Duración: Un asalto por cada 10 puntos que supere la dificultad requerida.
+
+Apariencia habitual: El Hierofante se manifiesta junto al invocador en la forma de un hechicero oscuro o una bestia macabra. Hace los gestos como si realizara un conjuro, o en forma bestial lanza su aliento sobrenatural.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -3536,6 +3647,28 @@ Apariencia habitual: Se manifiesta como un colosal titán de musculatura perfect
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#VIII_La_Fuerza_Invertida -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#VIII_La_Fuerza_Invertida">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arcano_Invertido"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La visión retorcida de La Fuerza es la violencia y el poder desencadenado. Una potencia perversa que aumenta hasta destruirlo todo.
+
+Pacto: La Fuerza oscura obliga al invocador a iniciar acciones violentas contra otros individuos. Incluso sin ser convocada, susurrará al personaje el momento en el que tienen que iniciar una lucha y contra quién. El Arcano informará cuando crea estar satisfecho y el personaje puede sellar el pacto.
+
+Dificultad: 200 
+Coste: 350
+H. Ataque: 220 
+H. Defensa: NA
+Acción: Activa.
+Efecto: Realiza un ataque físico cada asalto que permanece en el mundo, utilizando la habilidad ofensiva del Arcano. El ataque es Contundente y produce un daño base de 100 puntos. Cada vez que La Fuerza realice una agresión y no consigue producir daño a su adversario, aumenta 20 puntos acumulativos a la base del daño que provoca. Así que si, por ejemplo, no logra producir daño durante dos asaltos, en el tercero tendría ya una base de 140 puntos. La Fuerza debe de verse obligada a atacar todos los asaltos sobre un ser vivo o animado, ya que en caso contrario se volverá en contra del propio invocador, atacándole a él. 
+
+Duración: Un asalto por cada 10 puntos que supere la dificultad requerida.
+
+Apariencia habitual: Toma la apariencia de una colosal bestia salvaje encadenada, que quiebra sus cadenas y embiste al adversario del invocador.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#VII_El_Carro -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#VII_El_Carro">
@@ -3554,6 +3687,28 @@ Efecto: El Carro transporta al invocador, permitiéndole defenderse de cualquier
 Duración: Un asalto por cada 10 puntos que supere la dificultad requerida.
 
 Apariencia habitual: El Carro nunca se manifiesta bajo una apariencia humanoide, sino como algún tipo de navío o trasporte sobrenatural. Al ser invocado arropa al invocador, moviéndose con él y evitando los ataques que vayan dirigidos contra este.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#VII_El_Carro_invertido -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#VII_El_Carro_invertido">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arcano_Invertido"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Simboliza el caos y el movimiento que carece de un objetivo concreto. Es la falta de dirección que vaga por el mundo sin un rumbo fijo. 
+
+Pacto: Si el invocador acepta el pacto, El Carro invertido lo transportará a él y a quienes lo acompañen hasta un lugar al azar, a miles de kilómetros de su ubicación actual, en el que nunca hayan estado antes. Si el personaje consigue regresar al punto de partida y vuelve a invocar a El Carro oscuro con éxito, el pacto quedará sellado.
+
+Dificultad: 190 
+Coste: 300
+H. Ataque: 220 
+H. Defensa: NA
+Acción: Activa.
+Efecto: Efectúa un ataque en Energía utilizando su habilidad. A términos de juego, este ataque se considera equivalente a un conjuro de tipo Anímico. Si consigue afectar al sujeto, este deberá superar una RM contra 160 o será transportado automáticamente a un lugar al azar, a una distancia de 100 kilómetros de su ubicación actual. La distancia del traslado aumenta 100 kilómetros adicionales por cada 10 puntos que el invocador supere la dificultad requerida. El lanzador no tiene control del lugar al que envía al individuo que sufre este ataque ni constancia de dónde acaba. El invocador puede utilizar esta habilidad también sobre sí mismo.
+
+Duración: Instantáneo.
+
+Apariencia habitual: La forma que suele elegir El Carro oscuro es el de una brecha en la propia realidad. En ocasiones, parece una enorme boca de vacío que se traga instantáneamente al invocador o al individuo designado, haciéndole desaparecer de inmediato</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -3580,6 +3735,29 @@ Apariencia habitual: Se manifiesta como una pareja de ángeles, uno masculino y 
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#VI_Los_Enamorados_Invertidos -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#VI_Los_Enamorados_Invertidos">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arcano_Invertido"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Los amantes oscuros son la encarnación de los sentimientos obsesivos que lo consumen todo y a todos. Son las relaciones destinadas al fracaso y el amor que acaba corrompiéndose.
+
+Pacto: Para que Los Enamorados invertidos realicen el pacto, el personaje debe de sacrificar y destruir aquello que más quiere en su vida, ya sea un objeto
+o una persona.
+
+Dificultad: 180 
+Coste: 250
+H. Ataque: 200 
+H. Defensa: NA
+Acción: Activa.
+Efecto: Los Enamorados oscuros efectúan un ataque en Energía utilizando su habilidad. A efectos de juego, esta invocación se utiliza como un conjuro de tipo Anímico. Si consiguen afectar al individuo, este deberá superar una Resistencia Mágica contra 120, o perderá la misma cantidad de puntos de vida y puntos de Zeon por la que falló la Resistencia. La dificultad de la Resistencia aumenta 5 puntos por cada 10 que el invocador supere la dificultad requerida. El invocador absorbe el daño provocado, recuperando los mismos puntos de vida y de magia que haya causado el ataque. Para que la victima de esta habilidad se recupere, el invocador debe de perder primero una cantidad de PV equivalentes a los que absorbió o gastar Zeon.
+
+Duración: Instantáneo.
+
+Apariencia habitual: Aparece como el espectro de una mujer voluptuosa o un hombre deseable carentes de ojos y que, por sus cuentas vacías, lloran continuamente sangre. Al ser invocados, vuelan hacia el objetivo y se abrazan a él, consumiendo su vida con besos y caricias falsas.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#V_El_Sumo_Sacerdote -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#V_El_Sumo_Sacerdote">
@@ -3598,6 +3776,28 @@ Efecto: El Sumo Sacerdote utiliza su habilidad de ataque para lanzar una descarg
 Duración: Un minuto por cada 10 puntos que supere la dificultad requerida.
 
 Apariencia habitual: El Sumo Sacerdote aparece como un anciano con ropajes de un eclesiástico de alto rango de la iglesia en la que cree el invocador. Hace un gesto de bendición y, entre coros y cánticos religiosos, crea una inmensa cruz que dispara una descarga de energía sagrada.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#V_El_Sumo_Sacerdote_Invertido -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#V_El_Sumo_Sacerdote_Invertido">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arcano_Invertido"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El Sumo Sacerdote invertido personifica el paganismo y los falsos profetas. Utiliza la fe del hombre para controlarlo y mantenerlo encadenado a sus creencias. Es el protector de las mentiras y de los dogmas falsos.
+
+Pacto: El invocador debe iniciar una secta de la que se convertirá el cabecilla. La religión no tiene que tener ninguna finalidad real, salvo el hecho de engañar a sus adeptos y encadenarlos a ella.
+
+Dificultad: 170 
+Coste: 250
+H. Ataque: NA 
+H. Defensa: 180
+Acción: Pasiva.
+Efecto: Crea un escudo de energía que protege al invocador frente a cualquier tipo de ataque, utilizando la habilidad defensiva del Sumo Sacerdote. A efectos de juego se considera como un escudo mágico, basado en Oscuridad, y que resiste 1.000 puntos de daño antes de ser roto. Además, tiene 100 puntos de resistencia adicionales por cada 10 puntos que el invocador supere la dificultad requerida.
+
+Duración: Instantáneo.
+
+Apariencia habitual: Su forma es la de un anciano decrépito engalanado como un sacerdote de alto rango. Lleva encima decenas de objetos paganos y libros de falsas profecías. Al ser invocado no aparece materialmente, pero forma una pantalla con las páginas de libros de profecías erróneas y dogmas falsos, que vuelan a su alrededor del personaje.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -3847,6 +4047,28 @@ capa rota y atraviesa al personaje, regenerándolo completamente.</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#XIII_La_Muerte_Invertida -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#XIII_La_Muerte_Invertida">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arcano_Invertido"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La Muerte invertida encarna precisamente lo que su nombre indica, el fin de la vida. Es el concepto de la muerte como final, pero no como algo liberador, sino como aniquilación de toda existencia.
+
+Pacto: Exige al convocador que provoque la muerte de un numeroso grupo de personas, sin que en realidad tenga una verdadera razón para realizar semejante masacre. El número de victimas dependerá del poder del personaje, aunque generalmente nunca es inferior a cincuenta individuos.
+
+Dificultad: 300 
+Coste: 600
+H. Ataque: 240+ 
+H. Defensa: NA
+Acción: Activa.
+Efecto: La Muerte utiliza su habilidad para realizar un ataque de energía sobre un individuo que se encuentre a distancia de combate cuerpo a cuerpo con el invocador. A términos de juego, se considera equivalente a un conjuro de tipo Anímico, pero puede ser percibido incluso por individuos que no sean capaces de ver lo sobrenatural. Su habilidad de ataque aumenta 10 puntos adicionales por cada 10 puntos por los que el invocador supere la dificultad requerida. El afectado deberá superar una RM contra 140 o morirá de manera instantánea.
+
+Duración: Instantáneo.
+
+Apariencia habitual: La Muerte oscura suele tomar la apariencia de La Parca, un esqueleto recubierto por andrajos negros que lleva una enorme guadaña, unas tijeras o una hoz. Aparece de la sombra del invocador, cortando la realidad con su arma y atacando al individuo designado. Si lo alcanza, no deja rastro de daño físico en su cuerpo, pero cae fulminado instantáneamente sin vida.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#XII_El_Colgado -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#XII_El_Colgado">
@@ -3865,6 +4087,28 @@ Efecto: El Colgado utiliza su habilidad de ataque para lanzar una descarga de en
 Duración: Instantáneo.
 
 Apariencia habitual: El Colgado aparece como un hombre de mediana edad con marcas de sogas en pies y manos. Su aspecto general puede variar, pero comúnmente es un caballero con una armadura vieja y oxidada. El Colgado tiende las manos hacia el invocador y sobre ellas recoge la sangre sacrificada por este. Este proceso no requiere que el personaje haga nada, ya que se abren temporalmente estigmas en su cuerpo de modo sobrenatural y la sangre vuela hasta las manos del Arcano. Una vez que ha recibido la sangre, El Colgado la moldea dándole la forma de una lanza carmesí con cadenas sobrenaturales y la arroja contra su adversario.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#XII_El_Colgado_Invertido -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#XII_El_Colgado_Invertido">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arcano_Invertido"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El Colgado oscuro es la representación del sufrimiento eterno de los hombres, un dolor tanto físico como espiritual carente de sentido y que nos desgarra el alma.
+
+Pacto: El personaje debe de aceptar sentir en su cuerpo un sufrimiento descomunal que le somete continuamente al estado de Dolor Intenso, es decir, de –80 a toda acción. El invocador puede librarse del dolor si lo desea, pero en tal caso el pacto fracasa. Para superarlo, debe de encontrar a un individuo que acepte voluntariamente padecerlo por él. Una vez aceptado, ese sufrimiento se transmite y permanece con el aceptante durante el resto de su vida hasta el momento de su muerte.
+
+Dificultad: 280 
+Coste: 550
+H. Ataque: 260 
+H. Defensa: NA
+Acción: Activa.
+Efecto: El Colgado utiliza su habilidad para realizar un ataque sobrenatural sobre cualquier blanco que se encuentre a una distancia máxima de 50 metros de radio. Los sujetos afectados deberán superar una Resistencia Mágica contra 140 o sufrirán un penalizador a toda acción, equivalente a la cantidad por la que no superaron la Resistencia. La dificultad de la Resistencia aumenta 5 puntos por cada 10 que el invocador supere la dificultad requerida. Los penalizadores se pierden a un ritmo de 10 puntos por hora, salvo si el nivel de fracaso es superior a 80, en cuyo caso perduran de por vida.
+
+Duración: Instantáneo.
+
+Apariencia habitual: Suele ser una mujer llena de llagas abiertas y que cuelga bocabajo, sujeta por afiladas cadenas.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -3891,6 +4135,28 @@ Apariencia habitual: Su forma más común es la de un ángel sin ningún sexo de
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#XIV_La_Templanza_Invertida -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#XIV_La_Templanza_Invertida">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arcano_Invertido"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La cara oscura de La Templanza es una potencia desarmonizadora y caótica. Es el desequilibrio de las cosas, una fuerza que dispersa las emociones y poderes del hombre.
+
+Pacto: El personaje debe de aceptar que La Templanza le haga perder parte de su poder para aceptar el pacto. A efectos de juego, el personaje sufre la pérdida de dos niveles de experiencia, retomando la ficha que tenia dos niveles atrás.
+
+Dificultad: 320 
+Coste: 650
+H. Ataque: NA 
+H. Defensa: 280
+Acción: Pasiva.
+Efecto: La Templanza oscura crea un escudo de energía que protege al invocador frente a cualquier tipo de ataque, utilizando su habilidad de defensa. El escudo resiste un daño de 500 puntos antes de ser roto, pero solo es afectado por daños sobrenaturales. Si se trata de un ataque realizado con habilidades especiales, como poderes mágicos, psíquicos o técnicas de Ki, y es detenido con éxito, el atacante deberá superar automáticamente una RM contra 160 o perderá temporalmente la capacidad de utilizar el poder empleado. Es decir, en el caso de que se utilice un conjuro de Bola de Fuego contra el invocador, el hechicero dejará de poder usar magia temporalmente.
+
+Duración: El escudo es instantáneo, pero la habilidad permanece dispersa y sin poder ser utilizada durante un día por cada 10 puntos que el invocador supere la dificultad requerida.
+
+Apariencia habitual: La Templanza oscura toma la apariencia de un ángel femenino con alas negras de enorme belleza. Al ser invocada, recubre al invocador con sus alas oscuras protegiéndole de cualquier tipo de ataque. Si este consigue romper las alas, se deshacen en sangre, pero en caso contrario se crea un remolino de plumas negras que se clavan en el cuerpo del atacante y le roban su esencia.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#XIX_El_Sol -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#XIX_El_Sol">
@@ -3908,6 +4174,28 @@ Efecto: Esta invocación utiliza su habilidad de ataque para lanzar una descarga
 Duración: Instantáneo.
 
 Apariencia habitual: Comúnmente, toma la forma de un sol arcaico como el que aparece en grabados antiguos. Al ser invocado, los cielos se abren y, desde ellos, descienden columnas de fuego que arrasan únicamente lo que el invocador decida.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#XIX_El_Sol_Invertido -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#XIX_El_Sol_Invertido">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arcano_Invertido"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El Sol negro es la fuente de la energía que consume el mundo. Es el poder que lo devora todo, incluso a sí mismo.
+
+Pacto: El Sol negro suele pedir un pacto atroz. A partir del momento en el que lo acepte, el invocador empieza a perder un punto de vida por cada asalto, que no puede recuperarse por ningún método natural o sobrenatural. Sin embargo, cada ser vivo con una presencia 20 o superior que mate él o una de sus criaturas subyugadas, le hará recuperar uno de sus PV. Si consigue sobrevivir de este modo durante un día, el pacto quedará sellado y la maldición desaparecerá.
+
+Dificultad: 420 
+Coste: 900
+H. Ataque: 350 
+H. Defensa: NA
+Acción: Activa.
+Efecto: Esta invocación utiliza su habilidad de ataque para lanzar una descarga de calor sobre un blanco determinado. Tiene un daño base de 300 y actúa en la TA de calor. El Sol tiene un área máxima de 500 metros, más 500 metros adicionales por cada 10 puntos por los que el invocador supere la dificultad requerida. No es posible seleccionar blancos en el interior del ataque.
+
+Duración: Instantáneo.
+
+Apariencia habitual: También toma la forma del sol arcaico pero con colores oscuros. Al ser invocado, parte los cielos en dos y hace descender un enorme meteoro de fuego, que estalla arrasándolo todo salvo al propio invocador.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -3934,6 +4222,28 @@ Apariencia habitual: La Justicia aparece siempre como una guerrera, armada con u
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#XI_La_Justicia_Invertida -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#XI_La_Justicia_Invertida">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arcano_Invertido"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Como el primero de los Arcanos oscuros superiores, el poder de La Justicia invertida es enorme. Representa la injusticia y el desequilibrio que trae consigo el caos y la anarquía.
+
+Pacto: La Justicia invertida pide que el invocador realice uno o varios actos injustos determinados, que ella misma decidirá. Las consecuencias de dichas acciones deben de acarrear un caos masivo en el lugar donde se producen.
+
+Dificultad: 260 
+Coste: 500
+H. Ataque: 240 
+H. Defensa: NA
+Acción: Activa.
+Efecto: La Justicia desequilibra el poder de los contendientes, favoreciendo al invocador. Al ser llamada, utiliza su habilidad para efectuar un ataque sobrenatural sobre un individuo. A efectos de juego, se considera equivalente a un conjuro de tipo Anímico. Si el blanco es afectado, deberá superar una Resistencia Mágica contra 140 o de lo contrario drenará completamente uno de los tres grupos de habilidades primarias del personaje; habilidades de combate, sobrenaturales o psíquicas. El afectado perderá temporalmente todos sus poderes, que serán transmitidos al invocador, quien podrá disponer de ellos como si fueran suyos. Si, por ejemplo, se invoca La Justicia invertida contra un hechicero, el Arcano oscuro puede absorber todos sus poderes mágicos y transmitírselos completamente al invocador. El Zeon, el Ki y los CV gastados permanecen perdidos cuando los recupera su verdadero propietario, pero no así las habilidades físicas empleadas, como el Cansancio y el daño.
+
+Duración: Los poderes permanecen drenados un minuto por cada 10 puntos que supere la dificultad requerida.
+
+Apariencia habitual: Toma la apariencia de una mujer hermosa, con los ojos vendados por un pañuelo agujereado que le permite ver. Lleva en sus manos una balanza desequilibrada por un montón de monedas y una espada espectral. Al ser invocada, lanza su espada sobre el objetivo atravesando su cuerpo sin dañarlo, pero robando parte de su esencia y transmitiéndola al invocador.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#XVIII_La_Luna -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#XVIII_La_Luna">
@@ -3952,6 +4262,28 @@ Efecto: La Luna afecta a cualquier individuo que se encuentre en un área de 100
 Duración: Un asalto por cada 10 puntos que supere la dificultad requerida.
 
 Apariencia habitual: Su encarnación es una fascinante mujer vestida completamente de blanco, junto a la que caminan centenares de criaturas fantásticas que nunca existieron, surgidas de la imaginación y los sueños del hombre. Al llamarla todo se oscurece levemente, mientras el invocador comienza a brillar, rodeado por las intangibles criaturas de fantasía que acompañaban a la Luna.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#XVIII_La_Luna_Invertida -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#XVIII_La_Luna_Invertida">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arcano_Invertido"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La Luna es la mentira y la ilusión. Representa el poder de los sueños, que confunde el espíritu del hombre. A un nivel más profundo, también es el Arcano que encarna el miedo.
+
+Pacto: El invocador debe de erigir una gran mentira, capaz de engañar a un pueblo o una nación entera.
+
+Dificultad: 400 
+Coste: 850
+H. Ataque: NA 
+H. Defensa: 350
+Acción: Activa.
+Efecto: La Luna usa su habilidad de defensa para transportar al invocador a salvo de los ataques. A efectos de juego, utiliza su habilidad como si se tratase de la esquiva del invocador. Adicionalmente, cada vez que es atacado y consigue una defensa con éxito, La Luna crea una imagen ilusoria adicional del invocador. Descubrir cuál es el verdadero invocador entre las imágenes ficticias requiere superar una dificultad de Inhumano en Buscar o en Detección de Ki.
+
+Duración: Un asalto por cada 10 puntos que supere la dificultad requerida.
+
+Apariencia habitual: La señora de las mentiras suele manifestarse con muchas apariencias, pero las más habituales son las de una preciosa arlequín. Al invocarla, todo se vuelve oscuridad, y cuando es atacado, la imagen del invocador se quiebra como si fuese de cristal, y de sus fragmentos reaparece junto a una nueva copia suya.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -3980,6 +4312,28 @@ Apariencia habitual: Cuando se manifiesta por primera vez, aparece con una estre
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#XVII_La_Estrella_Invertida -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#XVII_La_Estrella_Invertida">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arcano_Invertido"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">También conocida como Cielo Oscuro, La Estrella negra es el Arcano que personifica la tristeza y la desesperación. Es el poder que niega incluso la esperaza a los hombres, sumiéndolos completamente en la oscuridad absoluta. Es el Arcano más despiadado de todos.
+
+Pacto: El personaje debe de destruir las esperanzas de un país o etnia, haciendo que miles de personas caigan en la desesperación.
+
+Dificultad: 380 
+Coste: 800
+H. Ataque: 320 
+H. Defensa: NA
+Acción: Activo.
+Efecto: La Estrella proyecta una descarga de energía oscura con su habilidad de ataque. A efectos de juego, esta invocación se considera como un conjuro de Ataque. Cada asalto posterior que se mantenga, La Estrella negra puede volver a realizar una descarga adicional sobre cualquier sujeto que el invocador elija. Provoca un daño base de 200 puntos. Los daños producidos por La Estrella negra nunca llegan a curarse por medios naturales, y sólo se recuperan usando poderes místicos.
+
+Duración: 5 asaltos por cada 10 puntos que supere la dificultad requerida.
+
+Apariencia habitual: La Estrella negra tiene exactamente la misma apariencia que La Estrella, pero con el pelo plateado y ropajes negros. Al invocarla, los cielos se oscurecen completamente y desciende con el aspecto de una estrella sin luz. Permanece sobre el invocador, formando con sus manos destellos oscuros y lanzándolas como si fueran conjuros.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#XVI_La_Torre -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#XVI_La_Torre">
@@ -3999,6 +4353,29 @@ Duración: Un día por cada 10 puntos que supere la dificultad requerida.
 
 Apariencia habitual: La Torre Caída no tiene forma física y nunca se manifiesta. Sólo habla mediante susurros apenas perceptibles y, cuando aparece, suele traer consigo pequeños desastres naturales, como terremotos de escasa magnitud o tormentas. Al ser invocada no se la ve realmente, pero puede sentirse cómo algo frío y terrible se acerca al mundo. Aquellos que puedan ver lo sobrenatural se darán cuenta de que una
 fuerza se acerca hacia ellos, pero no verán ninguna forma concreta.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#XVI_La_Torre_Invertida -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#XVI_La_Torre_Invertida">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arcano_Invertido"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">En su faceta más oscura, La Torre es mucho más que la mera destrucción. Representa el fin de todo desde sus inicios, el terrible destino que no se puede evitar de ningún modo y que terminará arrastrándolo todo a su paso.
+
+Pacto: El pacto de La Torre invertida es el mismo que el puro, pero en este caso, pide que acabe con aquel que posee la invocación oscura.
+
+Dificultad: 340 
+Coste: 750
+H. Ataque: 300 
+H. Defensa: NA
+Acción: Activa.
+Efecto: La Torre efectúa un ataque en la TA de energía utilizando su habilidad. A términos de juego, esta invocación se considera como un conjuro de tipo Anímico. Si consigue causar daño, el afectado se verá obligado a superar trece Resistencias Mágicas distintas, todas contra 120, para evitar los efectos negativos posibles descritos en el Capítulo 14; Negativos a toda acción, Miedo hacia el adversario, Terror hacia el adversario, Dolor, Debilidad, Paralización completa, Ira, Ceguera, Sordera, Mudez, Fascinación, Daño e Inconciencia. El afectado deberá pasar dos Resistencias adicionales, una contra venenos y otra contra una enfermedad degenerativa, ambas de nivel 60. El valor de las Resistencias aumenta 5 puntos por cada 10 que el invocador supere la dificultad requerida por La Torre. Ninguno de estos efectos puede ser evitado completamente, ya que el poder de La Torre es el destino ineludible. En el caso de que el sujeto afectado consiga superar alguna de las Resistencias, esta regresa inmediatamente contra el invocador, que deberá realizar a su vez el control. Si este a su vez consigue
+pasarlo, vuelve a rebotar contra el afectado, iniciando de nuevo el círculo hasta que uno de los dos fracase. Si el ataque original del Arcano no consigue alcanzar a su adversario, no es necesario realizar ninguna Resistencia.
+
+Duración: Instantánea.
+
+Apariencia habitual: La misma que La Torre pura, ya que en realidad son la misma entidad.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -4025,6 +4402,28 @@ Apariencia habitual: Siempre toma la forma de un miembro del sexo opuesto al inv
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#XV_El_Diablo_Invertido -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#XV_El_Diablo_Invertido">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arcano_Invertido"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El Diablo es el poder del mal desencadenado, la oscuridad natural que se oculta en el corazón de todos los hombres. Es una entidad oscura y maligna que representa todo lo que se ha considerado maldito.
+
+Pacto: El Diablo exige al personaje que realice un acto de pura y sincera maldad. Nunca aconseja o incita, ya que deja que sea el propio corazón del invocador el que le lleve a decidir la atrocidad a cometer.
+
+Dificultad: 340 
+Coste: 700
+H. Ataque: 300 
+H. Defensa: NA
+Acción: Activa.
+Efecto: El Diablo obliga a un sujeto a superar una RM contra 140 como si se tratase de un conjuro Anímico. En el caso de que no supere la Resistencia, el individuo será poseído por el poder de El Diablo y atacará a sus compañeros o amigos, empezando por aquel al que más aprecie o quiera. El personaje utilizará la habilidad de ataque de El Diablo, pero no se defenderá, dejando que sus compañeros le maten. En el caso de que el sujeto poseído muera, este Arcano saltará sobre su asesino como un conjuro automático cuya condición es matar al endemoniado, obligándole a superar a su vez la RM contra 140, o todo volverá a comenzar. En el momento en que un sujeto supere la RM, El Diablo se desvanecerá incluso si la duración de la invocación aún no ha expirado.
+
+Duración: El Diablo permanece en este mundo poseyendo personas durante diez asaltos por cada 10 puntos que supere la dificultad requerida.
+
+Apariencia habitual: La apariencia habitual de El Diablo es la forma del mal. Tradicionalmente toma la figura del demonio bíblico, o en su defecto, de la concepción del mal que tenga el invocador. Aparece ensombreciendo el mundo acompañado de cantos obscenos.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#XXI_El_Mundo -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#XXI_El_Mundo">
@@ -4043,6 +4442,28 @@ Efecto: El Mundo permite al invocador ser absolutamente inmune a cualquier tipo 
 Duración: Un minuto por cada 10 puntos que supere la dificultad requerida.
 
 Apariencia habitual: El Mundo no se manifiesta bajo una forma material. Al ser llamado, modifica el entorno del invocador convirtiéndolo en un paraíso, en el que pueden verse ángeles y oírse coros arcaicos.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#XXI_El_Mundo_Invertido -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#XXI_El_Mundo_Invertido">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arcano_Invertido"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El último Arcano oscuro es el mayor de todos los inversos, el poder más terrible y aterrador de todos ellos. Representa la realidad imperfecta, el fracaso absoluto que no puede ser reparado. Es el mundo de las tinieblas, el inverso de una moneda en la que el bien y el mal forman parte de la misma cara. 
+
+Pacto: El Mundo invertido sólo otorga su poder a una persona que haya fracasado en absolutamente todo lo que se ha propuesto en la vida y haya perdido todo lo que tenía. Sólo en el momento en que al personaje no le quede absolutamente nada, ni siquiera una razón para vivir, podrá conseguir este poder. Por interpretación, sólo si un personaje desesperado intenta convocar a El Mundo invertido y también fracasa, será cuando realmente aparezca y selle el pacto.
+
+Dificultad: 460 
+Coste: 1.000
+H. Ataque: NA 
+H. Defensa: NA
+Acción: Activa.
+Efecto: El Mundo oscuro pervierte el la realidad alrededor del invocador, con un límite máximo de un kilómetro de radio, más otro adicional por cada 10 puntos por los que este supere la dificultad requerida. Cualquier sujeto que se encuentre en el interior de El Mundo oscuro obtiene automáticamente una Pifia cada vez que lanza los dados, sin importar cuál fuese el resultado obtenido. Esta invocación no tiene ningún efecto sobre las acciones de entidades que posean un Gnosis superior a 45, aunque sí sobre otros Arcanos, que no tendrán poder dentro en su área de acción. En el caso de que se encuentre ante un sujeto protegido por El Mundo puro, ambos se anulan de inmediato.
+
+Duración: Un minuto por cada 10 puntos que supere la dificultad requerida.
+
+Apariencia habitual: Este Arcano modifica la realidad que se encuentra alrededor del invocador, creando una imagen macabra y oscura del mundo real hecha de metal, carne y sangre. Al igual que El Mundo, suele estar acompañado de coros, pero estos están formados por gritos de dolor y llantos de bebés. Generalralmente, cualquier persona que se encuentre en su interior durante un tiempo prolongado suele acabar perdiendo completamente el juicio.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -4069,6 +4490,28 @@ Apariencia habitual: En las raras ocasiones en la que se manifiesta, toma la for
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#XX_El_Juicio_Invertido -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#XX_El_Juicio_Invertido">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arcano_Invertido"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Es el Arcano que representa el castigo y la condena. Es el juicio oscuro del que nada ni nadie puede salir victorioso. Algunos mantienen que es el principio de la nada, opuesto a la eternidad.
+
+Pacto: El Juicio invertido trae ante el personaje a su mayor enemigo o la persona que más le odie, y le pedirá que dicte una sentencia sobre qué condena debería sufrir el invocador. Si este la acepta voluntariamente, El Juicio invertido la ejecutará al mismo tiempo que firma el pacto. Si el invocador se niega a sufrirla, el pacto fracasa.
+
+Dificultad: 440 
+Coste: 950
+H. Ataque: NA 
+H. Defensa: NA
+Acción: Activa
+Efecto: Al ser invocado, El Juicio oscuro rebaja automáticamente a cero el Gnosis de cualquier entidad que se encuentre en un radio de un kilómetro del invocador, salvo la suya propia. Las entidades con 45 o más no se verán afectados por esta habilidad. Los poderes sobrenaturales que requieran Gnosis, desaparecerán mientras se encuentren dentro del área. Es un efecto Automático, que requiere únicamente encontrarse en el área designada.
+
+Duración: Un minuto por cada 10 puntos que supere la dificultad requerida.
+
+Apariencia habitual: Su forma es la de una brecha en la realidad de la que no brota ni luz ni oscuridad. Al ser invocada, la apertura empieza a extenderse por todas partes a gran velocidad, como si estuviese intentando devorar el mundo entero.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#X_La_Rueda -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#X_La_Rueda">
@@ -4087,6 +4530,28 @@ Efecto: Al ser llamada, La Rueda no confiere ninguna habilidad por sí misma, si
 Duración: Variable.
 
 Apariencia habitual: La apariencia de La Rueda es completamente imprevisible. Aunque su rostro y forma son siempre los mismos, los de una niña pequeña de edad indefinida, cada vez que se manifiesta puede tener una forma o vestimenta distinta. Al ser llamada, aparece en un pequeño remolino disfrazada como la invocación a la que recurre. Si por ejemplo se manifiesta como El Emperador, aparece como una niña sentada en un trono y llama a sus guerreros.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#X_La_Rueda_Invertida -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#X_La_Rueda_Invertida">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arcano_Invertido"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Este Arcano representa la involución y el cambio negativo de las cosas. Es la suerte adversa que condena al hombre a fracasar de un modo imprevisto.
+
+Pacto: Para aceptar el pacto con La Rueda invertida, el invocador debe romper uno de los pactos que ya haya conseguido sellar con otra invocación. Cual se rompe debe decidirse al azar. Es necesario que tenga un mínimo de cuatro invocaciones para que sea posible hacerlo.
+
+Dificultad: 240 
+Coste: 450
+H. Ataque: 240 
+H. Defensa: NA
+Acción: Activa.
+Efecto: La Rueda utiliza su habilidad para realizar un ataque sobrenatural en área, sobre cualquier individuo que se encuentre a un radio de 100 metros del invocador. Aquellos afectados por el ataque deberán superar una RM contra 120 o perderán un nivel de experiencia, más otro adicional por cada 40 puntos por los que fracasen el control. Quienes sufran su poder empezarán a olvidar cosas y verán sus habilidades enormemente mermadas para siempre. La dificultad de la Resistencia aumenta 5 puntos por cada 10 que el invocador supere la dificultad requerida.
+
+Duración: Instantáneo.
+
+Apariencia habitual: Frecuentemente aparece bajo la forma de un simple gato negro.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -4200,6 +4665,28 @@ Efecto: El Loco elimina cualquier bonificador o penalizador que pudiera sufrir e
 Duración: Una hora por cada 10 puntos que supere la dificultad requerida.
 
 Apariencia habitual: El Loco suele manifestarse como una joven vagabunda vestida como un bufón. Al ser convocada, danza alrededor del invocador y desaparece.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#0_El_Loco_Invertido -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#0_El_Loco_Invertido">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arcano_Invertido"/>
+        <rdfs:comment>El reflejo de El Loco tiene un significado similar al de su gemelo, pero mucho más oscuro. Representa la inconsciencia y el absurdo, todo aquello que carece de sentido como tal. Su poder influye al de otros Arcanos, debilitándolos y haciéndoles perder su conexión con el mundo.
+
+Pacto: Pedirá al Invocador que solicite un pacto con un Arcano y que fracase a la hora de sellarlo.
+
+Dificultad: 120 
+Coste: 100
+H. Ataque: NA 
+H. Defensa: NA
+Acción: Activa.
+Efecto: El Loco provoca que cualquier invocación que se realice en su presencia sufra un penalizador de –50 a su habilidad final, pudiendo incluso impedir que se lograse. Hay que tener en cuenta que este poder sólo afecta a la habilidad de convocar de un personaje cuando realiza invocaciones.
+
+Duración: Un minuto por cada 10 puntos que supere la dificultad requerida.
+
+Apariencia habitual: Toma la forma de un vagabundo deforme con un hatillo a su espalda. Aparece alrededor del invocador y se marcha por el lugar más ilógico posible, como debajo de una piedra.</rdfs:comment>
     </owl:NamedIndividual>
     
 
