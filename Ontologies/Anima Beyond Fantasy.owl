@@ -46,6 +46,14 @@
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Acción_Conjuro -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Acción_Conjuro">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Magia"/>
+    </owl:Class>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Arcano -->
 
     <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arcano">
@@ -296,6 +304,14 @@
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Grado_Conjuro -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Grado_Conjuro">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Magia"/>
+    </owl:Class>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad -->
 
     <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad"/>
@@ -425,6 +441,94 @@
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Libre_Acceso -->
 
     <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libre_Acceso">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Magia"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Agua -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Agua">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Magia"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Aire -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Aire">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Magia"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Creación -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Creación">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Magia"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Destrucción -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Destrucción">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Magia"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Esencia -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Esencia">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Magia"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Fuego -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Fuego">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Magia"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Ilusión -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Ilusión">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Magia"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Luz -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Luz">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Magia"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Nigromancia -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Nigromancia">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Magia"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Oscuridad -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Oscuridad">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Magia"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Tierra -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Tierra">
         <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Magia"/>
     </owl:Class>
     
@@ -604,6 +708,14 @@
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Tipo_Conjuro -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tipo_Conjuro">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Magia"/>
+    </owl:Class>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Tipo_Municion -->
 
     <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tipo_Municion">
@@ -690,89 +802,9 @@
     
 
 
-    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Agua -->
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Mágica -->
 
-    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Agua">
-        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Magia"/>
-    </owl:Class>
-    
-
-
-    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Aire -->
-
-    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Aire">
-        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Magia"/>
-    </owl:Class>
-    
-
-
-    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Creación -->
-
-    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Creación">
-        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Magia"/>
-    </owl:Class>
-    
-
-
-    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Destrucción -->
-
-    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Destrucción">
-        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Magia"/>
-    </owl:Class>
-    
-
-
-    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Esencia -->
-
-    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Esencia">
-        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Magia"/>
-    </owl:Class>
-    
-
-
-    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Fuego -->
-
-    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Fuego">
-        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Magia"/>
-    </owl:Class>
-    
-
-
-    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Ilusión -->
-
-    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Ilusión">
-        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Magia"/>
-    </owl:Class>
-    
-
-
-    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Luz -->
-
-    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Luz">
-        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Magia"/>
-    </owl:Class>
-    
-
-
-    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Nigromancia -->
-
-    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Nigromancia">
-        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Magia"/>
-    </owl:Class>
-    
-
-
-    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Oscuridad -->
-
-    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Oscuridad">
-        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Magia"/>
-    </owl:Class>
-    
-
-
-    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Tierra -->
-
-    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Tierra">
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Mágica">
         <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Magia"/>
     </owl:Class>
     
@@ -857,6 +889,15 @@ Beneficio: 1</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Agua -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Agua">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Mágica"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El elemento del agua recoge dentro de sí muchos conceptos distintos. Es la vía que controla los líquidos y la pureza de las cosas. También representa el poder del hielo y el de las bajas temperaturas. Su poder es muy equilibrado ofensiva y defensivamente. La vía opuesta a Agua es Fuego.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Aikido -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Aikido">
@@ -870,6 +911,15 @@ Requisitos: Trucos de manos 40.
 Conocimiento marcial: +10
 
 Bono: +10 a la habilidad de esquiva o parada sin armas.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Aire -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Aire">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Mágica"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Es la vía de lo etéreo y lo incorpóreo. Recoge los conjuros de velocidad y movimiento. Con su poder se puede alterar el espacio y transportar cuerpos de un lugar a otro. También es la vía que controla el clima y la electricidad. La vía opuesta a Aire es Tierra.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -1433,10 +1483,82 @@ Beneficio: 2</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Conjuro_Activo -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Conjuro_Activo">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Acción_Conjuro"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Conjuro_Anímico -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Conjuro_Anímico">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tipo_Conjuro"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Conjuro_Arcano -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Conjuro_Arcano">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Grado_Conjuro"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Conjuro_Automático -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Conjuro_Automático">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tipo_Conjuro"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Conjuro_Avanzado -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Conjuro_Avanzado">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Grado_Conjuro"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Conjuro_Base -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Conjuro_Base">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Grado_Conjuro"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Conjuro_Efecto -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Conjuro_Efecto">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tipo_Conjuro"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Conjuro_Intermedio -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Conjuro_Intermedio">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Grado_Conjuro"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Conjuro_Libre_Acceso -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Conjuro_Libre_Acceso">
         <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Conjuro_Pasivo -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Conjuro_Pasivo">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Acción_Conjuro"/>
     </owl:NamedIndividual>
     
 
@@ -1499,6 +1621,23 @@ Beneficio: 2</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Creación -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Creación">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Mágica"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El poder de la creación es la capacidad mágica de componer y alterar la realidad que rodea a los hechiceros. Sus conjuros engloban el cambio, la curación y la creación de cosas. Es una magia marcadamente defensiva. La vía opuesta a Creación es Destrucción.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Crear_Luz -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Crear_Luz">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Luz"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Debilidad_física -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Debilidad_física">
@@ -1538,6 +1677,15 @@ Beneficio: 1</rdfs:comment>
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Destreza">
         <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Característica_Primaria"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Determina la habilidad manual del personaje, su velocidad de movimientos y su puntería. Junto a la Agilidad, también representa su velocidad de reacción, es decir, la capacidad de responder tan deprisa como pueda ante una situación de peligro, amenaza o necesidad.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Destrucción -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Destrucción">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Mágica"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Esta vía permite utilizar el poder del flujo de almas para destruir la propia realidad. Sus conjuros afectan tanto al mundo material como al espiritual. Su poder es por naturaleza muy ofensivo. Su vía opuesta es Creación.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -1795,6 +1943,15 @@ Bono: +20 a la habilidad de esquiva y parada sin armas.</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Esencia -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Esencia">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Mágica"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La Esencia controla la vida y las almas. Esta vía tiene el poder sobre los espíritus y los seres naturales que pertenecen al mundo. Es también la vía de la naturaleza y los conjuros de origen druídicos. La vía opuesta a Esencia es Ilusión.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Especial -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Especial">
@@ -1883,6 +2040,15 @@ Beneficio: 1</rdfs:comment>
 Efectos: El personaje aplicará el estado de miedo siempre que se encuentre con el objeto de su fobia.
 
 Beneficio: 1</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Fuego -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Fuego">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Mágica"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La primera de las cuatro vías elementales menores tiene el control sobre las altas temperaturas. Sus conjuros crean calor, fuego y arrasan grandes cantidades de terreno. También reúne conjuros de sacrificio, que permiten consumir ciertos aspectos de un individuo para potenciar a cambio otros. Es una vía muy ofensiva. La vía opuesta a Fuego es Agua.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -2159,6 +2325,14 @@ Bono: +20 al turno cuando se utilicen artes marciales, y +10 a la habilidad de a
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Humano -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Humano">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Raza_Pura"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#III_La_Emperatriz -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#III_La_Emperatriz">
@@ -2391,11 +2565,28 @@ Apariencia habitual: El Hierofante se manifiesta junto al invocador en la forma 
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Ilusión -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ilusión">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Mágica"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El poder de esta vía permite al hechicero controlar el engaño y la ilusión. Sus conjuros pueden alterar la realidad, y con ella la percepción de las personas. La vía opuesta a Ilusión es Esencia.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Inteligencia -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Inteligencia">
         <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Característica_Primaria"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La Inteligencia abarca los campos del razonamiento, el aprendizaje y la memoria del personaje. Esta es la característica de la que dependen los conocimientos intelectuales y lógicos, al igual que su capacidad para comprender y desarrollar conjuros.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Inteligencia_Requerida -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Inteligencia_Requerida">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Magia"/>
     </owl:NamedIndividual>
     
 
@@ -2498,11 +2689,108 @@ Beneficio: 1</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Agua -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Agua">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Aire -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Aire">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Creación -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Creación">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Destrucción -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Destrucción">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Esencia -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Esencia">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Fuego -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Fuego">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Ilusión -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Ilusión">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Luz -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Luz">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Nigromancia -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Nigromancia">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Oscuridad -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Oscuridad">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Tierra -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Tierra">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Luchador -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Luchador">
         <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arquetipo"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reúne las categorías especializadas en la lucha. Es el arquetipo de aquellos que se han dedicado a perfeccionar sus habilidades primarias de combate.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Luz -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Luz">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Mágica"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Esta vía es la que permite a los hechiceros controlar uno de los dos elementos superiores, la luz pura. Es la que controla las emociones positivas del hombre, como el amor, la tranquilidad o el placer. También domina el conocimiento y la detección. Su poder ofensivo y defensivo está muy equilibrado. La vía opuesta a Luz es Oscuridad.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -2570,6 +2858,14 @@ Beneficio: 2</rdfs:comment>
 Efectos: La cifra requerida para pifiar aumenta en dos puntos. En las habilidades normales pifiará con un resultado de 5 y, si es maestro, lo hará con 4.
 
 Beneficio: 1</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Mantenimiento -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Mantenimiento">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Magia"/>
     </owl:NamedIndividual>
     
 
@@ -2700,6 +2996,131 @@ Beneficio: 1</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Nephilim_Daimah -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Nephilim_Daimah">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Raza_Nephilim"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Los Daimah son la última de las razas que han dado nacimiento a los Nephilim y, con la posible excepción de los elfos, su número es el más abundante de todos. Su esencia está ligada a la naturaleza y no son pocos quienes los consideran espíritus del bosque.
+
+Físicamente poseen algunas pequeñas diferencias con respecto a una persona normal, aunque ninguna de ellas es realmente inhumana. En primer lugar, sus ojos tienen la pupila ligeramente rasgada como un animal. Normalmente esta alteración es muy pequeña, pero otras veces llegan a estarlo tanto que pueden confundirse con los de un gato o un zorro. Tienen el pelo muy revuelto y les crece muy deprisa, en especial a las mujeres. Los hombres tienen mucho vello por las patillas, aunque si se lo afeitan una vez nunca les vuelve a salir. Como los elfos, tienen las orejas ligeramente puntiagudas, con la característica de que les sale un poco de pelo al final. Su constitución no es demasiado robusta y resulta habitual que sean de escasa
+estatura. Su periodo de vida es igual que el de cualquier humano normal.
+
+Habitualmente, todos los Nephilim Daimah se comportan de una manera bastante jovial y divertida. Afrontan la vida con una sonrisa sin demasiadas preocupaciones y se enfadan muy raramente. No soportan la inactividad y siempre están buscado algo ameno que hacer para no aburrirse. Son extremadamente curiosos y les encanta entrometerse y fisgonear en cualquier cosa que consideren interesante. Por desgracia, también son muy descuidados, por lo que acaban metiéndose en problemas ajenos de los que no les resulta fácil salir. Les cuesta mantener la atención y no tardan en perder el interés por lo que están haciendo cuando la situación ya no les divierte. Detestan los planes retorcidos y prefieren afrontar los acontecimientos sin ninguna preparación, confiando en que la suerte los sacará de cualquier apuro. Son exploradores por naturaleza y, aunque sus lugares favoritos son los bosques, están siempre deseando encontrar nuevas comarcas y experimentar diversas emociones. Les gusta la compañía y cuando se encariñan con alguien se pegan a esa persona todo el tiempo, tratando de convertirse en su centro de atención. Una cosa curiosa y divertida es su extraña afición por utilizar adornos que les den apariencia animal, en especial las mujeres, que se ponen diademas adornadas con orejas de gato, o dejan colgar en sus ropas tiras de tela para simular colas. Probablemente se debe a que, en su interior, sienten cierto apego a tales detalles.
+
+Los sueños sobre su vida pasada son muy escasos, aunque su naturaleza curiosa hace que se interesen durante algún tiempo en ellos hasta que encuentran algo mejor a lo que dedicar sus atenciones.
+
+Sus poderes se manifiestan principalmente a nivel espiritual, especialmente en bosques y lugares donde la naturaleza esté muy presente. La lista de sus habilidades es la siguiente:
+
+• Sentir el bosque: Aunque no puede hablar con las plantas, el alma del Daimah es capaz de percibir los sentimientos de la naturaleza. Son capaces de notar las sensaciones de los animales y las plantas, detectando si tienen miedo, se sienten tranquilos o les ocurre algo extraño.
+
+• Movimiento por los bosques: El Nephilim reconoce la naturaleza como su hogar y esta también a él. A pesar de lo espeso del follaje o de lo cerrado de la vegetación, un Daimah no tiene penalizadores al movimiento por moverse en este entorno.
+
+• Ver la esencia: Los ojos de los Daimah les permiten ver el alma de los seres vivos, pudiendo identificar de inmediato los lazos elementales o anímicos de cualquier tipo de ser. Esta habilidad se considera un poder innato de detección, pero un individuo puede resistirse naturalmente si supera una RM contra 140. 
+
+• Pequeño tamaño: Los Nephilim Daimah no suelen ser personas altas o pesadas, por lo que restan un punto de su característica de Tamaño.
+
+• Naturaleza curativa: Al encontrarse en el interior de un bosque, el alma de Daimah nutre a su cuerpo de la esencia de la vida que hay a su alrededor. Mientras esté en una espesa zona boscosa o selvática, el Nephilim suma tres puntos a su nivel de Regeneración. 
+
+• Alma inmortal: El conflicto entre los recuerdos del alma Nephilim y su aprendizaje provoca un penalizador de -2 puntos a la experiencia que otorgue el Director de Juego al finalizar cada sesión.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Nephilim_Ebudan -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Nephilim_Ebudan">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Raza_Nephilim"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ebudan significa “seguidor del destino” y es el nombre que recibían los miembros de una raza de seres casi celestiales que cayeron de los cielos perdiendo sus alas. Las leyendas cuentan que tenían la habilidad de percibir las alteraciones en el flujo de almas, y su cuerpo estaba lleno de tatuajes místicos, los Marduk, con los que intentaban prever acontecimientos futuros. Se dice que cada uno tenía una finalidad distinta en su vida, a la que llamaban Sue´ Aman y que trataban de cumplir por encima de todas las cosas.
+
+Los Nephilim Ebudan son los menos numerosos de todos. Poseen algunas habilidades sobrenaturales muy limitadas, aunque latentes en su interior esconden poderes mucho mayores. Físicamente tienen una constitución humana normal, pero tienden a ser ligeramente corpulentos. Sus ojos son profundos y suelen tener el pelo muy claro, incluso a veces completamente blanco. Desde el momento en el que vienen al mundo, poseen algún símbolo extraño en su cuerpo como reflejo del Marduk que tenían en su vida anterior, aunque es generalmente confundido con una simple marca de nacimiento. A lo largo de la adolescencia aparecen algunos tatuajes más, aunque son muy escasos y normalmente en partes no visibles a simple vista.
+
+La personalidad de los Nephilim Ebudan está fuertemente condicionada por sus almas. En ellos aún persiste el objetivo que se marcaron en su vida anterior. Ningún Ebudan que lograra cumplir su Sue´ Aman se convirtió en Nephilim, por lo que todos tienen aún que realizarlo. Sus sueños están siempre relacionados con su Sue´ Aman, en los que ven con claridad cuál es el propósito que se fijaron. Tienen infancias tranquilas, pero al llegar a la adolescencia padecen su primer sueño, que a partir de ese momento se convierte en una obsesión. Normalmente, casi todos los Nephilim tratan de cumplirlo, aunque algunos dan esa visión por imposible y prefieren vivir con los pies en la tierra. Son personas muy serenas y espirituales, pero no les gusta entablar lazos afectivos con nadie. 
+
+Los poderes de los Ebudan son distintos dependiendo de si han logrado cumplir o no su Sue´ Aman. Mientras no lo consiga, el Nephilim posee únicamente algunas habilidades anímicas. Por el contrario, en el momento en el que logran dicho objetivo su poder se manifiesta completamente, obteniendo grandes ventajas adicionales.  Normalmente será el Director de Juego quien fije el Sue´ Aman del personaje, aunque también es posible que acuerden entre ambos su finalidad. 
+
+La lista de sus poderes es la siguiente:
+
+• Or´inie: El símbolo místico con el que nacen los Nephilim Ebudan se llama Or´inie y funciona como una salvaguarda que le protege de cualquier cosa que afecte su Sue´ Aman. El Nephilim puede aplicar un bonificador de +30 a cualquier Resistencia contra efectos de dominio, control emocional u olvido que puedan impedirle realizar el Sue´ Aman. Una vez conseguido, esta habilidad desaparece completamente.
+
+• Alas de Serafín: En el momento en el que logran su objetivo, el Nephilim recupera parte de su esencia perdida revelándose bajo la forma de dos alas luminosas. Aunque de su cuerpo no brotan alas físicas, puede manifestar a voluntad un par de alas de energía con las que es capaz de surcar los cielos. El personaje puede exteriorizarlas u ocultarlas a voluntad, aunque hacerlo requiere un asalto completo. Las alas le otorgan la capacidad de surcar los cielos a un Tipo de Vuelo 12. Esta habilidad únicamente se manifiesta después de que el personaje haya logrado el Sue´ Aman.
+
+• Esencia celestial: Cuando consigue el destino que se había fijado, su esencia espiritual se extiende por todo su cuerpo, impidiéndole sufrir heridas físicas naturales. A efectos de juego, el Nephilim se vuelve invulnerable a cualquier ataque natural que no sea capaz de dañar energía.
+
+• Alma inmortal: El conflicto entre los recuerdos del alma Nephilim y su aprendizaje provoca al personaje un penalizador de -3 puntos a la experiencia que otorgue el Director de Juego al finalizar cada sesión.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Nephilim_Jayán -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Nephilim_Jayán">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Raza_Nephilim"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">En la antigua lengua, Jayán significa “gigante”. Era una raza de seres de gran tamaño con apariencia humanoide, que no tenían lazos hacia ningún elemento en concreto. Se dice que poseían cuernos y un tercer ojo en la frente con el que eran capaces de ver espíritus. El número de Nephilim que ha nacido a partir de ellos es bastante considerable, aunque no tan grande como el de los Sylvain o el de los Daimah. Según parece, son ligeramente más numerosos en el Nuevo Continente, pero no hay ningún motivo concreto para ello. Sus almas son simples pero poderosas, e influyen en sus cuerpos principalmente a nivel físico. Aunque tienen origen místico, los efectos sobrenaturales y los conjuros les afectan con facilidad.
+
+La principal característica que han heredado de sus antiguas vidas es su enorme tamaño, que usualmente llega a superar el metro ochenta en el caso de las mujeres y los dos metros en el de los hombres. Suelen tener siempre una complexión fuerte y una musculatura muy desarrollada. Sus pieles tienden a ser morenas, incluso en aquellos Nephilim que crecen en lugares donde no toman normalmente el sol. Los rostros de los Jayán tienen rasgos duros y bien definidos, con pelo espeso y de color habitualmente castaño. Su esperanza de vida es la misma que la humana, aunque su cuerpo madura muy rápidamente y, con apenas 15 años, pueden haber alcanzado ya todo su tamaño. A pesar de que no es nada común y los casos han sido excepcionales, algunos de ellos han desarrollado pequeñas deformaciones en sus cráneos que han formado cuernos en sus frentes. Estas prolongaciones surgen a partir de los 10 años de edad, y el crecimiento es un proceso largo y doloroso.
+
+El eco de sus almas en su personalidad les vuelve unas personas firmes y decididas, pero con una enorme propensión a perder los nervios y actuar de un modo violento. Les gusta especialmente hacer las cosas manualmente y sacar provecho de su fortaleza. Cuando empiezan algo es muy difícil hacerles desistir de sus objetivos, y llegan hasta el final afrontando todas las consecuencias. Sienten un gran aprecio por sus compañeros y no temen decir abiertamente lo que piensan en cada situación. Actúan generalmente en grupo y nunca rechazan la ayuda que se les brinda si realmente la necesitan. No soportan la inactividad y, si no tienen nada que hacer, buscan algo en lo que puedan invertir su tiempo. Aunque carecen del tercer ojo que caracterizaba a los Jayán, a veces pueden ver el mundo de los espíritus y sentir cosas del más allá, lo que a menudo les inquieta. Resulta muy poco frecuente que los Jayán sueñen con fragmentos de su vida pasada, e incluso cuando lo hacen, no es habitual que actúen en consecuencia. 
+
+Como ya se ha dicho, la influencia de sus almas se manifiesta principalmente en su físico, pero conservan parte del poder sobrenatural que le confería su tercer ojo. Sus habilidades son las siguientes:
+
+• Gigantes: Los Nephilim Jayán tienen normalmente una gran altura y complexión. Por tanto, suman dos puntos a su característica de Tamaño y no pueden elegir la ventaja Tamaño desigual para disminuirlo.
+
+• Aguante al cansancio: Los Jayán se agotan menos que otros hombres con su misma constitución y aumentan un punto el valor máximo de su Cansancio.
+
+• Resistencia al daño: El alma Jayán vuelve al cuerpo mucho más resistente al shock producido por el daño, así que aplica un bonificador de +15 a su Resistencia Física (RF).
+
+• Fuerza descomunal: El alma influye en el desarrollo de la musculatura del cuerpo en el que se encuentra, aumentando un punto el atributo de Fuerza
+del personaje. Adicionalmente, no es posible utilizar la desventaja de Reducir dos puntos una característica para rebajar la Fuerza del Nephilim.
+
+• Visión espiritual: El ojo que los Jayán tenían en su frente confiere a los Nephilim la capacidad de ver parcialmente a los espíritus. Para hacerlo, el personaje debe cerrar los ojos y de un modo inconsciente podrá “mirar” a los seres espirituales, aunque no será capaz de ver nada en el mundo material. Esta habilidad no permite al personaje ver conjuros, efectos místicos o matrices psíquicas, sino tan sólo almas invisibles al ojo humano.
+
+• Debilidad contra la magia: Los conjuros y los efectos místicos son especialmente poderosos contra los Nephilim Jayán, que sufren un penalizador de -10 a su Resistencia Mágica (RM).
+
+• Alma inmortal: El conflicto entre los recuerdos del alma Nephilim y el aprendizaje del personaje provoca un penalizador de -3 puntos a la experiencia que otorgue el Director de Juego al finalizar cada sesión.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Nephilim_Sylvain -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Nephilim_Sylvain">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Raza_Nephilim"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Los Nephilim de origen élfico son los más numerosos, puesto que pertenecían a una de las dos razas dominantes de la antigüedad. Su esencia está directamente vinculada a la luz y a la magia mucho más que la de otros seres. Por esta razón, en muchas ocasiones, el Nephilim nace también con el Don y tiene grandes facilidades para desarrollar conjuros.
+
+Los Nephilim Sylvain suelen ser personas hermosas y con rasgos finos. Su pelo y ojos acostumbran a tener tonalidades claras: rubio o castaño en el caso del cabello, y las pupilas azules o verdes. Su característica facial más extravagante se encuentra en sus orejas, que, sólo a veces, resultan ligeramente puntiagudas. No suelen ser demasiado altos y no sufren nunca sobrepeso, por mucho que coman o beban. Tienden a vivir un poco más que el humano medio, superando normalmente el siglo de edad, aunque conservan intactas sus capacidades físicas hasta alcanzar los ochenta años.
+
+En muchas ocasiones su esencia influye en su personalidad humana, haciéndoles individuos reflexivos y pacientes. Se interesan mucho por las cosas que consideran hermosas, las artes y los campos del conocimiento. No se enemistan con nadie con facilidad, pero en los casos en los que lo hacen, sus enemigos se enfrentan a personas que no sienten remordimientos. Inicialmente desarrollan un antagonismo natural hacia la oscuridad y lo que representa, aunque al contrario que los verdaderos elfos, su naturaleza humana les hace capaces de acostumbrarse a ella. Sienten un rechazo hacia cualquier Nephilim Duk´zarist con el que se encuentren, a pesar de que en algunos casos han llegado a colaborar.
+
+Sueñan con su vida anterior mucho más que el resto de los Nephilim, lo que les hace sentir que están fuera de lugar. Por esta causa, muy a menudo emprenden viajes para intentar descubrir sus orígenes o cualquier cosa que
+pueda llenar el vacío que sienten en su interior. La naturaleza de su alma tiene serias repercusiones en sus habilidades y les otorga capacidades sorprendentes, tanto física como espiritualmente. 
+
+Todos los jugadores que elijan como raza un Nephilim Sylvain gozan de las siguientes ventajas y desventajas:
+
+• Resistencias excepcionales: Como reflejo de su anterior condición, los Nephilim élficos poseen Resistencias excepcionalmente desarrolladas contra la magia, las habilidades psíquicas y las enfermedades. Por esta causa, pueden aplicar un bonificador de +10 a su Resistencia Mágica (RM) y Psíquica (RP), un +20 a su Resistencia contra Enfermedades (RE) y un +5 a sus Resistencias Físicas y contra Venenos (RF y RV, respectivamente). Un Nephilim no puede elegir las desventajas de: Salud enfermiza, Enfermedad grave incurable y Vulnerabilidad a la magia.
+
+• Desequilibrio hacia la Luz: Todos los Nephilim élficos poseen un desequilibrio natural hacia la luz. Esta habilidad les otorga una Resistencia especial de +10 contra cualquier efecto basado en dicho elemento. Adicionalmente, esta afinidad les impide elegir la ventaja de Desequilibrio
+Mágico hacia la Oscuridad.
+
+• Curación Rápida: Poseen una increíble capacidad para recuperarse de cualquier herida física que sufran, por lo que suman un punto a su nivel de Regeneración natural.
+
+• Presentir lo oscuro y lo luminoso: Tienen la capacidad de sentir la presencia de cualquier otro Nephilim Sylvain o Duk´zarist que se encuentre en su presencia, aunque no será capaz de identificarlo como tal. De un modo sobrenatural, perciben la esencia oscura o luminosa que desprenden sus almas. Esta habilidad no les permite reconocer a un individuo que se halle oculto por un conjuro o mediante una habilidad del Ki.
+
+• Necesidades Limitadas: Aunque no del modo en el que lo hacían los elfos, requieren comer y dormir mucho menos que los seres humanos. Sus necesidades se reducen a la mitad de las de una persona normal. Eso no significa que no tengan hambre por comer de una manera escasa, sino que, en la práctica, no requieren tantos alimentos para sobrevivir.
+
+• Alma inmortal: Como todos los Nephilim, el alma del elfo se encuentra en una pugna constante entre lo que aprende y sus antiguos recuerdos. Por esta causa, sufren un penalizador de -4 puntos a la experiencia que otorgue el Director de Juego al finalizar cada sesión.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Nigromancia -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Nigromancia">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Mágica"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La nigromancia es una perversión de la magia como tal. Mientras que el resto de vías se alimenta de las energías de la red de almas, la nigromancia las arranca de allí. Sus conjuros destruyen la esencia de la vida, estancando y pervirtiendo las almas que utiliza. Su poder permite devolver la vida a los muertos, destruir las almas y drenar la vida y la esencia de otros seres. La Nigromancia se opone al resto de las vías de magia.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Novel -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Novel">
@@ -2739,6 +3160,15 @@ Beneficio: 1</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Organizacion">
         <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Oscuridad -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Oscuridad">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Mágica"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La oscuridad no controla la ausencia de luz, sino el puro poder de las tinieblas. Domina todas las emociones negativas como el miedo, la ira y el odio. Es también el poder de los secretos, entre los que se incluyen los conjuros de ocultación y ofuscación. Al igual que la Luz, su poder está muy equilibrado. La vía opuesta a Oscuridad es Luz.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -2989,6 +3419,14 @@ Requisitos: Shotokan o Kempo, Extrusión de presencia, más de 180 en la habilid
 Conocimiento marcial: +10
 
 Bono: +20 a la habilidad de ataque sin armas.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Sexo -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Sexo">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
     </owl:NamedIndividual>
     
 
@@ -3540,6 +3978,15 @@ Bono: Ninguno.</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Tierra -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tierra">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Mágica"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La Tierra es el poder del planeta, la piedra y los minerales. Es la magia más material de todas y controla las leyes de la física, como la gravedad y el magnetismo. Su influencia sobre los espíritus y lo inmaterial es muy limitada. Los conjuros de piedra recogen la magia relacionada con la resistencia, la dureza y la lentitud. La vía opuesta a Tierra es Aire.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Tipo_Ataque -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tipo_Ataque">
@@ -3921,94 +4368,6 @@ Beneficio: 1</rdfs:comment>
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vulnerable_al_frío">
         <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Desventaja_Comun"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El frío afecta terriblemente al personaje causándole muchos problemas físicos. Su cuerpo se ve seriamente perjudicado si se pone en contacto con algo muy frío, al igual que si visita lugares con temperaturas extremas, como zonas heladas.</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Agua -->
-
-    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Agua">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Aire -->
-
-    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Aire">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Creación -->
-
-    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Creación">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Destrucción -->
-
-    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Destrucción">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Esencia -->
-
-    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Esencia">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Fuego -->
-
-    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Fuego">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Ilusión -->
-
-    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Ilusión">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Luz -->
-
-    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Luz">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Nigromancia -->
-
-    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Nigromancia">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Oscuridad -->
-
-    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Oscuridad">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Tierra -->
-
-    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Tierra">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
     </owl:NamedIndividual>
     
 
@@ -4691,6 +5050,78 @@ Apariencia habitual: Toma la forma de un vagabundo deforme con un hatillo a su e
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Nephilim_D&apos;Anjayni -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Nephilim_D&apos;Anjayni">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Raza_Nephilim"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Los D´Anjayni eran una raza que se movía en la sombra de la historia, observando los acontecimientos del mundo y recopilando sucesos. Su mayor característica era pasar desapercibidos, habilidad que también han heredado sus almas. Los pocos que los conocen los llaman “los hombres grises” por su capacidad de actuar sin que nadie se percate de su presencia. El número de Nephilim que ha heredado espíritus D´Anjayni es muy escaso, casi tan exiguo como el de los Duk´zarist. Sus habilidades son exclusivamente anímicas y la influencia del alma en sus cuerpos es apenas perceptible.
+
+Los niños y niñas que nacen con almas de D´Anjayni son quizás los menos afortunados de todos. Crecen marginados por los demás, ya que sus compañeros se olvidan de ellos a la hora de jugar y sólo sus amigos más íntimos los recuerdan.
+
+Su apariencia no es realmente diferente de la de cualquier ser humano normal, aunque nunca destacan por ser personas excepcionalmente hermosas ni grotescas. Quizás su única característica relevante es precisamente esa: la falta de peculiaridades que puedan llamar la atención. Alcanzan edades mayores a las de cualquier persona normal, superando por norma el siglo de edad, aunque su desarrollo durante la infancia es completamente natural.
+
+La repercusión de sus almas en su personalidad es bastante grande. Suelen comportarse de un modo tranquilo y sereno, evitando si es posible cualquier comportamiento violento. Son personas muy observadoras y meticulosas, más aficionadas a vigilar lo que pasa que a participar activamente en los acontecimientos. Normalmente se fijan objetivos a largo plazo y, desde ese momento, todo lo que hacen está encaminado a conseguir lo que se han propuesto. No les importa el tiempo que necesiten para lograrlo y pieza a pieza van preparándose el terreno. Les gusta estar muy bien informados antes de actuar, aunque a veces llegan a ser tan reflexivos que rayan la pasividad. Sin embargo, a la hora de entrar en acción no dudan en utilizar cualquier medio a su alcance, incluso la violencia. Son bastante individualistas y no les gusta ir en grupo, aunque lo hacen si las circunstancias les obligan. Generalmente se encariñan poco con las personas, debido a la poca atención que reciben de estas. Suelen abandonar a una edad temprana sus hogares para emprender el camino en solitario. Tienen a menudo sueños de su vida anterior, pero suelen ser caóticos y carentes de sentido. Lo más normal es que tengan siempre la misma visión, un momento especialmente importante que se repite una y otra vez.
+
+Su nombre tiene para ellos una importancia fundamental, dado que en
+parte sus poderes están unidos a él. Por costumbre viajan usando seudónimos
+de cualquier tipo y sólo revelan sus verdaderos nombres a las personas que son importantes para ellos. 
+
+Sus almas les otorgan extrañas habilidades místicas que aprenden gradualmente a controlar:
+
+• Indetectabilidad: Los Nephilim D´Anjayni tienen la capacidad mística de resistirse a ser detectados mediante medios sobrenaturales, ya sean de carácter mágico, psíquico o de Ki. Por ello, todos los D´Anjayni aplican un bonificador de +30 a cualquiera de sus Resistencias contra efectos de detección. Además, aprenden de manera innata la habilidad de Ocultación del Ki, que desarrollan aplicando también un bono de +30.
+
+• Olvido: Sin lugar a dudas, esta es su característica más singular. Si lo desean, pueden pasar desapercibidos allí donde vayan, y la gente que los vea olvidará cómo eran exactamente. Son capaces incluso de mantener una conversación con uno o varios individuos, haciendo después que estos no sólo no recuerden su aspecto, sino tampoco el tema del que han hablado con ellos. A términos de juego, cualquiera que vea o hable con el personaje deberá superar una Resistencia Mágica (RM) contra 100, u olvidará su apariencia y la conversación que han mantenido. Esta habilidad se considera equivalente a un efecto místico automático cuya condición consiste, simplemente, en encontrarse con el personaje y que este se marche sin haberle dicho su nombre. No esposible percatarse del funcionamiento de esta habilidad, ni siquiera para alguien con la capacidad de ver magia. Los afectados no se darán cuenta de que lo ocurrido es innatural, sino que pensarán simplemente que son incapaces de acordarse o que no se han fijado bien. Un hechicero deberá superar un control de Valoración mágica contra una dificultad de Imposible para percatarse del uso de esta habilidad. El olvido deja de tener efecto en cualquier momento en el que el D´Anjayni se presenta con su verdadero nombre durante la conversación, o se encuentra con individuos que saben exactamente quién es.
+
+• Susurros silenciosos: Es francamente difícil escuchar las palabras del Nephilim si no van dirigidas a ti. Todo aquel que intente escucharlas aplicará un -60 a sus controles si no es su receptor. 
+
+• Pasar sin dejar rastro: Mientras un D´Anjayni vaya descalzo, sus pies dejan muy pocas huellas. Su rastro se borra a medida que camina, por lo que si alguien intenta rastrearles, aplicará un -40 a su habilidad.
+
+• Apariencia común: Aunque pueden ser más o menos agraciados, un Nephilim D´Anjayni no es nunca excepcionalmente hermoso ni feo. Por tanto, no podrán tener nunca una apariencia inferior a 3 o superior a 7.
+
+• Alma inmortal: El conflicto entre los recuerdos del alma Nephilim y su aprendizaje provoca un penalizador de -3 puntos a la experiencia que otorgue el Director de Juego.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Nephilim_Duk&apos;Zarist -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Nephilim_Duk&apos;Zarist">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Raza_Nephilim"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Los Nephilim Duk´zarist son también llamados las almas de las sombras, ya que pertenecían a una raza ligada naturalmente a las tinieblas. A pesar de ser también una de la las dos etnias dominantes, su número es realmente escaso ya que en vida eran muy pocos. Como los elfos, su esencia es marcadamente sobrenatural y la magia esta muy ligada a ellos, en especial hacia las mujeres.
+
+Son siempre personas muy agraciadas físicamente. Tienden a ser altos y raramente miden menos de uno ochenta los hombres y uno setenta las mujeres. Tienen una complexión perfecta y tampoco engordan nunca. Se caracterizan por ser muy pálidos y por tener el pelo de colores oscuros o con tonos muy claros, como negro o gris ceniza. Sus ojos son claros y tienen una tonalidad ligeramente rojiza cuando la luz se refleja en ellos. No son más longevos que los humanos normales, pero mantienen todas sus habilidades físicas hasta bien entrados los noventa, momento a partir del cual empiezan a envejecer muy rápidamente.
+
+El alma Duk´zarist se refleja mucho más en su personalidad que en los otros Nephilim. Inconscientemente, aún siguen sirviéndose del código de conducta que seguían en vida. Son excepcionalmente competitivos en cualquier campo, tanto en los intelectuales como en los físicos, aunque tienden a desarrollar más estos últimos. Se sienten muy atraídos por la fuerza y admiran normalmente a cualquier individuo que se pueda considerar poderoso por sí mismo, aunque eso sólo aumenta sus deseos de superarle. Es muy difícil que admitan que no son capaces de hacer algo, y para que pidan ayuda deben de encontrarse en una situación muy desesperada. Aunque no les gusta la soledad, son individualistas a la hora de actuar. Sienten devoción por aquellos a los que realmente aprecian, pero nunca muestran de una manera abierta sus emociones. Son maquinadores y manipuladores pero a la vez también muy impacientes, lo que les provoca un enorme conflicto a la hora de decidir entre actuar inmediatamente o esperar a un momento más propicio.
+
+Como a los Sylvain, los sueños sobre su anterior existencia los asaltan comúnmente y, aunque no llegan a perturbarles del mismo modo que a estos, sí siembran al menos inquietud en ellos.
+
+El descomunal poder que poseen las almas de los Duk´zarist se manifiesta con fuerza en sus cuerpos humanos, confiriéndoles habilidades tanto físicas como anímicas:
+
+• Resistencias excepcionales: El alma de los Duk´zarist influye en su cuerpo humano a lo largo de su desarrollo, aumentando enormemente todas sus Resistencias. Esta habilidad actúa de manera diferente en hombres y mujeres. Las almas masculinas aplican un bonificador de +15 a todas sus Resistencias (RM, RP, RV y RE) salvo la Resistencia Física (RF), donde poseen un +20. Por el contrario, las femeninas tienen un +15 a todas sus Resistencias (RF, RP, RV y RE) salvo la Mágica, donde tienen un +20 (RM).
+
+• Desequilibrio hacia la Oscuridad: Las almas Duk´zarist tienen un desequilibrio hacia la oscuridad. Esta habilidad les otorga una Resistencia especial de +10 contra cualquier efecto basado en dicho elemento. Adicionalmente, esta afinidad les impide elegir la ventaja de Desequilibrio Mágico hacia la Luz.
+
+• Aguante a la Muerte: Cuando entran en el estado de entre la vida y la muerte, no necesitan superar el control de Resistencia Física para sobrevivir, ya que su alma se afianza tanto al cuerpo que superan automáticamente estos controles.
+
+• Curación Rápida: También tienen la capacidad de recuperarse con velocidad de cualquier herida física que sufran, por lo que suman un punto a su nivel de Regeneración natural.
+
+• Necesidades Limitadas: Necesitan descansar mucho menos que ninguna otra raza, por lo que disminuyen sus necesidades de sueño y comida hasta una tercera parte que la de cualquier otro ser humano, sin sufrir ningún tipo de negativo.
+
+• Presentir lo oscuro y lo luminoso: Tienen exactamente la misma capacidad que los élficos.
+
+• Visión nocturna: Sus ojos están mucho más acostumbrados a la oscuridad que la de ningún otro ser humano. A efectos de juego, esta capacidad no está tan desarrollada como la que se adquiere mediante un Punto de Creación, pero permite disminuir a la mitad cualquier penalizador que el Nephilim sufra a su percepción por causa de la oscuridad natural.
+
+• Devoción al Fuego: Los poderes psíquicos de los Duk´zarist están ligados por naturaleza al fuego. Si desarrolla sus habilidades mentales, tiene la obligación de adquirir como primera disciplina la Piroquinesis.
+
+• Cuerpos perfectos: La esencia de los Duk´zarist impide que el cuerpo desarrolle ningún tipo de malformación natural. El Nephilim no puede elegir ninguna de las siguientes desventajas: Miembro atrofiado, Salud enfermiza, Vulnerabilidad a los venenos, Miopía, Debilidad física, Enfermedad grave, Mudo, Ciego o Sordo.
+
+• Alergia al metal: La única debilidad de los Duk´zarist en vida era su vulnerabilidad a los metales, especialmente hacia el hierro y las aleaciones que lo contenían. Un Duk´zarist podía llegar incluso a morir por el simple contacto con el metal, y las espadas les hacían mucho más daño por su material que por el filo en sí. Aunque de un modo extremadamente limitado, los Nephilim han heredado parte de esta desventaja que aun ahora les afecta. Si pone su piel en contacto con un metal que contenga una aleación de hierro, deberá superar un control usando su presencia base contra una dificultad de 60, o sufrirá una reacción adversa que le produce un negativo a la acción equivalente a la cantidad por la que falló la tirada. Si el metal es hierro puro, la tirada es contra 80.Estos negativos desaparecen a un ritmo de 10 puntos por minuto. Un Nephilim Duk´zarist puede utilizar ropas y guantes para evitar estos efectos.
+
+• Alma inmortal: De igual manera que el alma Duk´zarist está mucho más presente en sus formas físicas que en otros Nephilim, la pugna entre lo que aprenden y sus antiguos recuerdos es muy fuerte en ellos. Por ello, sufren un penalizador de -5 puntos a la experiencia que otorgue el Director de Juego al finalizar cada sesión.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Estilo_Batto_Jutsu/Iai_Jutsu -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Estilo_Batto_Jutsu/Iai_Jutsu">
@@ -4875,6 +5306,39 @@ es obligatorio hacerlo. Cualquier ventaja o desventaja, salvo que se diga expres
 
 Aunque el Ki está presente en cualquier ser vivo, no todo el mundo llega realmente a ser consciente de ello. Sólo los pocos que son capaces de percibir su propia energía y la despiertan, controlan estas increíbles capacidades. Al hacerlo rompen la fina línea entre la carne y el alma, por lo que pueden emplear sus poderes espirituales mientras permanecen aún en sus cuerpos. El término “Dominio” proviene de la capacidad que tienen esas personas para controlar su energía y sacar el máximo provecho de ella, realizando acciones físicas que ningún otro mortal podría lograr.</rdfs:comment>
     </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Agua">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Libro que contiene los conjuros de la vía mágica de Agua.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Aire">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Libro que contiene los conjuros de la vía mágica de Aire.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Creación">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Libro que contiene los conjuros de la vía mágica de Creación.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Destrucción">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Libro que contiene los conjuros de la vía mágica de Destrucción.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Esencia">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Libro que contiene los conjuros de la vía mágica de Esencia.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Fuego">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Libro que contiene los conjuros de la vía mágica de Fuego.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Ilusión">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Libro que contiene los conjuros de la vía mágica de Ilusión.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Luz">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Libro que contiene los conjuros de la vía mágica de Luz.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Nigromancia">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Libro que contiene los conjuros de la vía mágica de Nigromancia.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Oscuridad">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Libro que contiene los conjuros de la vía mágica de Oscuridad.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Tierra">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Libro que contiene los conjuros de la vía mágica de Tierra.</rdfs:comment>
+    </rdf:Description>
     <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Magia">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La magia influye en todo lo vivo y lo muerto, en todo lo real e irreal, puede serlo todo o no ser nada, pero siempre estuvo y estará ahí, con nosotros. Está formada por la energía espiritual del mundo. Su propia naturaleza se encuentra ligada al flujo de almas, aunque sería más correcto decir que es una faceta de él: nace de los espíritus al igual que la propia realidad. En cierto modo es la sombra de la existencia, una fuerza que no responde a las reglas de la física ni de la lógica, pero que altera el mundo a su antojo.
 
@@ -4924,6 +5388,9 @@ De cualquier modo, si los jugadores lo desean, hay diferentes razas que se puede
     <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Raza_Pura">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Comunidad de seres definida por afinidades raciales, lingüísticas, culturales, sobrenaturales, etc.</rdfs:comment>
     </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Sexo">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Condición orgánica, masculina o femenina, de los animales y las plantas.</rdfs:comment>
+    </rdf:Description>
     <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Armas">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Un individuo no tiene por qué verse obligado a dominar el uso de una única arma, sino que con la práctica es capaz de aprender a utilizar igualmente otras muchas con la misma habilidad. Las tablas de armas permiten a un personaje eliminar los penalizadores por blandir armas distintas a la que escogió inicialmente, e incluso en ocasiones, emplear su habilidad de combate lanzando conjuros o poderes psíquicos.</rdfs:comment>
     </rdf:Description>
@@ -4965,39 +5432,6 @@ Al contrario que las habilidades, las ventajas no se adquieren con PD, sino con 
     </rdf:Description>
     <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vivienda">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tipos de vivienda que podemos adquirir.</rdfs:comment>
-    </rdf:Description>
-    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Agua">
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El elemento del agua recoge dentro de sí muchos conceptos distintos. Es la vía que controla los líquidos y la pureza de las cosas. También representa el poder del hielo y el de las bajas temperaturas. Su poder es muy equilibrado ofensiva y defensivamente. La vía opuesta a Agua es Fuego.</rdfs:comment>
-    </rdf:Description>
-    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Aire">
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Es la vía de lo etéreo y lo incorpóreo. Recoge los conjuros de velocidad y movimiento. Con su poder se puede alterar el espacio y transportar cuerpos de un lugar a otro. También es la vía que controla el clima y la electricidad. La vía opuesta a Aire es Tierra.</rdfs:comment>
-    </rdf:Description>
-    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Creación">
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El poder de la creación es la capacidad mágica de componer y alterar la realidad que rodea a los hechiceros. Sus conjuros engloban el cambio, la curación y la creación de cosas. Es una magia marcadamente defensiva. La vía opuesta a Creación es Destrucción.</rdfs:comment>
-    </rdf:Description>
-    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Destrucción">
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Esta vía permite utilizar el poder del flujo de almas para destruir la propia realidad. Sus conjuros afectan tanto al mundo material como al espiritual. Su poder es por naturaleza muy ofensivo. Su vía opuesta es Creación.</rdfs:comment>
-    </rdf:Description>
-    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Esencia">
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La Esencia controla la vida y las almas. Esta vía tiene el poder sobre los espíritus y los seres naturales que pertenecen al mundo. Es también la vía de la naturaleza y los conjuros de origen druídicos. La vía opuesta a Esencia es Ilusión.</rdfs:comment>
-    </rdf:Description>
-    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Fuego">
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La primera de las cuatro vías elementales menores tiene el control sobre las altas temperaturas. Sus conjuros crean calor, fuego y arrasan grandes cantidades de terreno. También reúne conjuros de sacrificio, que permiten consumir ciertos aspectos de un individuo para potenciar a cambio otros. Es una vía muy ofensiva. La vía opuesta a Fuego es Agua.</rdfs:comment>
-    </rdf:Description>
-    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Ilusión">
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El poder de esta vía permite al hechicero controlar el engaño y la ilusión. Sus conjuros pueden alterar la realidad, y con ella la percepción de las personas. La vía opuesta a Ilusión es Esencia.</rdfs:comment>
-    </rdf:Description>
-    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Luz">
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Esta vía es la que permite a los hechiceros controlar uno de los dos elementos superiores, la luz pura. Es la que controla las emociones positivas del hombre, como el amor, la tranquilidad o el placer. También domina el conocimiento y la detección. Su poder ofensivo y defensivo está muy equilibrado. La vía opuesta a Luz es Oscuridad.</rdfs:comment>
-    </rdf:Description>
-    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Nigromancia">
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La nigromancia es una perversión de la magia como tal. Mientras que el resto de vías se alimenta de las energías de la red de almas, la nigromancia las arranca de allí. Sus conjuros destruyen la esencia de la vida, estancando y pervirtiendo las almas que utiliza. Su poder permite devolver la vida a los muertos, destruir las almas y drenar la vida y la esencia de otros seres. La Nigromancia se opone al resto de las vías de magia.</rdfs:comment>
-    </rdf:Description>
-    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Oscuridad">
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La oscuridad no controla la ausencia de luz, sino el puro poder de las tinieblas. Domina todas las emociones negativas como el miedo, la ira y el odio. Es también el poder de los secretos, entre los que se incluyen los conjuros de ocultación y ofuscación. Al igual que la Luz, su poder está muy equilibrado. La vía opuesta a Oscuridad es Luz.</rdfs:comment>
-    </rdf:Description>
-    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Tierra">
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La Tierra es el poder del planeta, la piedra y los minerales. Es la magia más material de todas y controla las leyes de la física, como la gravedad y el magnetismo. Su influencia sobre los espíritus y lo inmaterial es muy limitada. Los conjuros de piedra recogen la magia relacionada con la resistencia, la dureza y la lentitud. La vía opuesta a Tierra es Aire.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Yelmo">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Los yelmos o cascos se utilizan sólo para proteger la cabeza. La TA que ofrecen se emplea únicamente cuando un golpe va dirigido directamente contra ella. Usar un yelmo junto con otra armadura no se considera una combinación, ya que ambas protegen zonas completamente diferentes, aunque sí se suman sus requerimientos y penalizadores. La desventaja de los yelmos se basa en que, al cubrir ojos y oídos, disminuye la capacidad perceptiva del personaje y causa penalizadores a sus habilidades de Advertir y Buscar.</rdfs:comment>
