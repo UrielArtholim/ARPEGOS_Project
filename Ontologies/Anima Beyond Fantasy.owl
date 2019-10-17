@@ -1138,6 +1138,28 @@ Beneficio: 1</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Armadura_Oscura -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Armadura_Oscura">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Oscuridad"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 16 
+Acción: Activa 
+Tipo: Efecto
+Efecto: Forma una coraza mística que otorga TA a su usuario contra todo tipo de ataque, en especial contra los basados en energía. Aunque cuenta como una armadura, no se aplican penalizadores al turno por emplear capas de protección adicionales.
+
+Grado    Base    Intermedio     Avanzado    Arcano
+Zeon         60             90                  120             150
+Int. R.         6               9                     12               15
+
+Base: TA 2 en Energía y TA 1 en el resto.
+Intermedio: TA 5 en Energía y TA 2 en el resto.
+Avanzado: TA 8 en Energía y TA 4 en el resto.
+Arcano: TA 12 en Energía y TA 6 en el resto.
+Mantenimiento: 5 / 10 / 15 / 20</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Armadura_Peto -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Armadura_Peto">
@@ -1291,11 +1313,24 @@ Mantenimiento: 30 / 40 / 45 / 50</rdfs:comment>
     
 
 
-    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Asesino -->
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Ascensión_Oscura -->
 
-    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Asesino">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Categoría"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Son individuos que se especializan en los campos del subterfugio y la intriga. Se mueven en el anonimato y tratan de que sus víctimas no sean ni siquiera conscientes de qué les ha matado. Emplean técnicas muy refinadas, prefiriendo evitar en todo momento llegar al combate, donde son muy vulnerables. Por ello, tras hacer su trabajo, desaparecen de nuevo entre las sombras de las que surgieron. De todas formas, los personajes con esta categoría no están necesariamente obligados a representar únicamente el papel de ejecutores dentro de la sociedad, ya que existen muchos otros ámbitos en los que pueden poner en práctica sus excelentes habilidades, como por ejemplo el espionaje.</rdfs:comment>
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ascensión_Oscura">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Oscuridad"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 98 
+Acción: Activa 
+Tipo: Efecto
+Efecto: El conjuro intercambia la esencia del lanzador por energía divina, modificando su espíritu por puro poder sobrenatural. Al hacerlo, el lanzador o el individuo designado por éste aumenta su Gnosis hasta una cantidad máxima determinada por el grado del conjuro.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       500          1.000            2.000         5.000
+Int. R.       14               16                 18               20
+
+Base: Gnosis máximo 30.
+Intermedio: Gnosis máximo 35.
+Avanzado: Gnosis máximo 40.
+Arcano: Gnosis máximo 45.
+Mantenimiento: 30 / 40 / 45 / 50</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -1475,6 +1510,185 @@ Bono: +10 a la habilidad de esquiva.</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Categoría_Asesino -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Categoría_Asesino">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Categoría"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Son individuos que se especializan en los campos del subterfugio y la intriga. Se mueven en el anonimato y tratan de que sus víctimas no sean ni siquiera conscientes de qué les ha matado. Emplean técnicas muy refinadas, prefiriendo evitar en todo momento llegar al combate, donde son muy vulnerables. Por ello, tras hacer su trabajo, desaparecen de nuevo entre las sombras de las que surgieron. De todas formas, los personajes con esta categoría no están necesariamente obligados a representar únicamente el papel de ejecutores dentro de la sociedad, ya que existen muchos otros ámbitos en los que pueden poner en práctica sus excelentes habilidades, como por ejemplo el espionaje.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Categoría_Conjurador -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Categoría_Conjurador">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Categoría"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Los conjuradores son místicos dotados de la capacidad de llamar a criaturas sobrenaturales y someterlas a su voluntad. Aunque, por sí mismos, ni sus poderes mágicos ni sus habilidades físicas son especialmente notables, los seres que convocan a este mundo son capaces de realizar prácticamente cualquier cosa que desee su controlador. Los conjuradores también pueden realizar invocaciones, recurriendo a la ayuda de grandes potencias sobrenaturales durante un tiempo limitado.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Categoría_Explorador -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Categoría_Explorador">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Categoría"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Un explorador es el prototipo tradicional de aventurero. Normalmente, se trata de personas que han sacado el máximo provecho a su capacidad de percibir lo que les rodea y adentrarse donde nadie más sería capaz. Un explorador suele tener siempre sus sentidos pendientes de lo que hay a su alrededor, por lo que es muy complicado cogerle por sorpresa. Es también un rastreador y un superviviente nato, razón por la que tiene grandes conocimientos sobre zonas boscosas o regiones inhóspitas. En la sociedad suelen trabajar como cazadores, batidores o incluso arqueólogos, pero lo más normal es que simplemente se trate de habitantes de territorios apartados donde sus habilidades son necesarias para sobrevivir.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Categoría_Guerrero -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Categoría_Guerrero">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Categoría"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El guerrero es el luchador arquetípico por excelencia. Esta categoría engloba a aquellas personas que han dedicado por completo su vida al combate y son capaces de explotar al máximo su habilidad bélica. Esto les lleva no sólo a dominar el manejo de las armas, sino a, llegado el momento, emplear su energía anímica en la lucha. También tienen facilidad para desarrollar un gran conocimiento en el campo de las tácticas militares y convertirse en cabecillas de ejércitos. Tradicionalmente, los guerreros pueden llegar a trabajar casi de cualquier cosa, desde meros mercenarios a caballeros.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Categoría_Guerrero_Acróbata -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Categoría_Guerrero_Acróbata">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Categoría"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Categoría_Guerrero_Conjurador -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Categoría_Guerrero_Conjurador">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Categoría"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Los guerreros conjuradores reúnen las habilidades de combate de los luchadores con las capacidades de invocación y control de los convocadores. Cuando luchan, emplean la ayuda de criaturas sobrenaturales que llaman a este mundo y ponen a su servicio temporalmente, o incluso invocando a los grandes poderes. Por desgracia, al igual que otras categorías mixtas, al dedicar demasiado esfuerzo para dominar dos campos tan complejos como la convocación y las artes bélicas, pueden dejar desatendidas otras habilidades importantes.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Categoría_Guerrero_Mentalista -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Categoría_Guerrero_Mentalista">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Categoría"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Los guerreros mentalistas son luchadores dotados de habilidades psíquicas, que han desarrollado un completo control de dichos poderes para obtener ventaja en la lucha. Sus capacidades mentales y combativas pueden ser tan elevadas como las de mentalistas y guerreros, aunque a veces su extrema dedicación en ambos campos hace que no tengan demasiado tiempo para desarrollar otras habilidades. Normalmente, un guerrero mentalista centra su atención sobre una de ellas, convirtiéndose en un guerrero que se apoya en sus poderes psíquicos para combatir o viceversa.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Categoría_Hechicero -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Categoría_Hechicero">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Categoría"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Los hechiceros no son simplemente aquellos que tienen la increíble capacidad de manejar las energías místicas, sino las personas que se han dedicado en cuerpo y alma a comprender sus entresijos y llegar a dominarlas. Se especializan en el aspecto más puro de la magia: el uso de conjuros con los que son capaces de alterar la realidad a su antojo, enfocando y dominando sus poderes con completa precisión. Sienten también interés por todos los campos del intelecto, pero por desgracia, esta dedicación hace que su desarrollo físico sea por tanto inferior al de otras categorías.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Categoría_Hechicero_Mentalista -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Categoría_Hechicero_Mentalista">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Categoría"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El potencial de los hechiceros mentalistas es enorme. Los personajes con esta categoría están dedicados a controlar la combinación de las excepcionales habilidades de las que están dotados: la magia y las matrices psíquicas. Aunque su resistencia y sus conocimientos secundarios pueden ser escasos a causa de su extrema dedicación, con la capacidad de lanzar conjuros y apoyándose en sus disciplinas psíquicas hay muy pocas cosas que no estén a su alcance.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Categoría_Ilusionista -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Categoría_Ilusionista">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Categoría"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Los ilusionistas combinan sus grandes habilidades en los campos del subterfugio con el control de la magia. Un buen ilusionista consigue que quienes le rodean no sepan si lo que hace se debe a sus poderes sobrenaturales o a su propia habilidad. Sus capacidades místicas son casi tan grandes como las de cualquier hechicero, pero carecen de la misma facilidad para ejecutar conjuros rápidamente. Al contrario de lo que su nombre parezca sugerir, los ilusionistas pueden dominar muchos tipos de magia y no sólo la ilusión. Muchas veces, usan diversos conjuros obteniendo unos efectos igualmente notables. Son muy vulnerables físicamente, por lo que suelen rehuir el combate directo en busca de estratagemas más ingeniosas.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Categoría_Ladrón -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Categoría_Ladrón">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Categoría"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Como sugiere su nombre, un ladrón es un personaje especializado en los campos del sigilo, el robo y la ocultación. Son personas que huyen de los enfrentamientos directos y prefieren confiar en sus habilidades de subterfugio para conseguir lo que desean. Dado que su resistencia física no suele ser demasiado elevada, son muy hábiles huyendo y esquivando golpes cuando son descubiertos. Pueden representar diversos papeles en la sociedad, aunque habitualmente se dedican a la profesión que da nombre a la categoría.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Categoría_Maestro_En_Armas -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Categoría_Maestro_En_Armas">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Categoría"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Son luchadores que se han dedicado a perfeccionar sus habilidades marciales con todo tipo de armas. Se trata de guerreros natos, los cuales han llevado hasta el límite su capacidad combativa por encima de cualquier otra categoría. Opuestamente a los guerreros convencionales, no emplean ninguna otra habilidad en la lucha más que su maestría en el uso de las armas. En una contienda, ignoran el uso de su energía física y de todo aquello que no sea su propia habilidad marcial, pero no por ello dejan de ser los combatientes más hábiles y los más centrados en las verdaderas habilidades marciales. La gran mayoría de caballeros y mercenarios tienen esta categoría.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Categoría_Mentalista -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Categoría_Mentalista">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Categoría"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Los mentalistas son aquellos personajes que se han dedicado a desarrollar al máximo el potencial que les brindan sus poderes psíquicos. No se conforman sólo con poseer disciplinas mentales, sino que tratan de descubrir su funcionamiento y dominar nuevas habilidades. Al igual que los hechiceros, tienen grandes conocimientos en los campos intelectuales, pero esta dedicación hace que su desarrollo físico y su resistencia sean también inferiores a los de otras categorías.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Categoría_Novel -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Categoría_Novel">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Categoría"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Los noveles representan el arquetipo de Sin categoría, o lo que es lo mismo, alguien que no se encuentra dentro de ninguno de los arquetipos que se han explicado hasta el momento. Puede ser cualquier tipo de persona que no tenga una verdadera especialización. Desde campesinos a bardos, pasando por nobles y bufones, el novel es la categoría estándar de Ánima, a la que podrá acceder cualquiera. El novel tiene buenas habilidades en todos los campos, desde la magia al combate, aunque no se especializa en ninguno. Además, le resulta excepcionalmente fácil cambiar posteriormente de categoría a la de cualquier otro arquetipo. En muchas ocasiones, cuando un jugador no tenga realmente decidido qué hacer con su personaje, puede empezar como novel y realizar después un cambio de categoría, cuando finalmente encuentre la apropiada.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Categoría_Paladín -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Categoría_Paladín">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Categoría"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Los paladines son luchadores muy defensivos que combaten apoyándose en ciertas capacidades místicas. Una de sus especialidades consiste en expulsar a los seres sobrenaturales usando sus poderes naturales. Normalmente, muchos se rigen por códigos de conducta basados en normas religiosas o en el honor, aunque no están obligados a ello. Son líderes naturales, capaces de utilizar su carisma y dotes para movilizar a su favor a enormes cantidades de personas, que incluso darán sus vidas por ellos.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Categoría_Paladín_Oscuro -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Categoría_Paladín_Oscuro">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Categoría"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">En cierto modo, esta categoría es la opuesta directa al paladín. Es un luchador especializado en el ataque que se apoya en unas limitadas habilidades místicas. Sus principales poderes se basan en el dominio y control de los seres sobrenaturales, quienes, una vez sometidos a su voluntad, son utilizados en su beneficio. Tienen grandes capacidades de mando, pero emplean la intimidación y el miedo para subyugar a los demás a sus deseos. Si esto no funciona, persuaden a las personas tratando de conseguir salirse con lo que pretende.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Categoría_Sombra -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Categoría_Sombra">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Categoría"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Las sombras son luchadores que se mueven en la oscuridad y aprovechan a su favor el entorno. Aunque sus habilidades de combate son excelentes, prefieren acabar con sus enemigos sin darles la oportunidad de responder a sus ataques. Para ello, emplean el subterfugio para sorprenderles, o usan otras tácticas más complejas. Incluso si es descubierta, una sombra es capaz de seguir luchando con sus enemigos en igualdad de oportunidades, aunque su resistencia tiende a ser menor que la de otros luchadores. Generalmente ágiles y veloces, prefieren esquivar los ataques en lugar de afrontarlos.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Categoría_Taoísta -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Categoría_Taoísta">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Categoría"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Son artistas marciales que se han especializado en el combate sin armas. Dedicados a dominar todos los conocimientos marciales que les sea posible, siempre tratan de desarrollar nuevas y personales artes de lucha. Su entrenamiento les permite aprender con facilidad cualquier estilo marcial que se propongan, extrayendo de ellos los elementos que puedan volverles mejores combatientes. Llegado el momento, tratan además de emplear sus energías internas y sacarles el máximo provecho posible, compensando cualquier desventaja contra un enemigo bien equipado. Naturalmente, nada les impide llevar armas de cualquier clase.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Categoría_Tecnicista -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Categoría_Tecnicista">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Categoría"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Un tecnicista es un experto utilizando sus habilidades del Ki. Se trata de individuos que han explorado a fondo los secretos del cuerpo y del alma, desarrollando con facilidad capacidades que resultan imposibles para personas normales. A veces, pueden incluso tardar años en desplegar el verdadero alcance de sus habilidades, pero cuando lo hacen, se convierten en sujetos de considerable poder. Aunque no poseen grandes dotes para el combate, cuando utilizan su control sobre el Ki en contra de un adversario resultan enemigos terribles, pudiendo desencadenar técnicas inhumanas con sencillez.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Categoría_Warlock -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Categoría_Warlock">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Categoría"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Un warlock es un mago guerrero que desarrolla tanto sus habilidades marciales como las místicas. Igual que los hechiceros, dominan la habilidad sobrenatural más pura de todas, la capacidad de realizar conjuros con los que modificar la propia realidad. Aunque puede centrarse principalmente sobre un solo campo, un warlock es perfectamente capaz de convertirse en un maestro que controle por igual el uso de las armas en combate y de las artes sobrenaturales. Sin embargo, haciéndolo, pueden dejar desatendidas otras habilidades importantes.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Ciego -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ciego">
@@ -1527,15 +1741,6 @@ Beneficio: 2</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Comida_Y_Bebida">
         <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Conjurador -->
-
-    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Conjurador">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Categoría"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Los conjuradores son místicos dotados de la capacidad de llamar a criaturas sobrenaturales y someterlas a su voluntad. Aunque, por sí mismos, ni sus poderes mágicos ni sus habilidades físicas son especialmente notables, los seres que convocan a este mundo son capaces de realizar prácticamente cualquier cosa que desee su controlador. Los conjuradores también pueden realizar invocaciones, recurriendo a la ayuda de grandes potencias sobrenaturales durante un tiempo limitado.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -1741,6 +1946,28 @@ Beneficio: 2</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Creación_Oscura -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Creación_Oscura">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Oscuridad"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 82 
+Acción: Activa 
+Tipo: Efecto
+Efecto: Crea un ser oscuro con apariencia de vida, bajo el control absoluto del hechicero. El ente será desarrollado como un Ser Entre Mundos, usando los poderes y limitaciones de los elementales oscuros. Para calcular su nivel máximo se emplean las mismas reglas que en el conjuro Crear Ser, de la vía de Creación.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       250           350                500             700
+Int. R.       10             12                   14               16
+
+Base: Nivel 1.
+Intermedio: Nivel 3.
+Avanzado: Nivel 6.
+Arcano: Nivel 10.
+Mantenimiento: 50 / 70 / 100 / 140 Diario</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Creación_de_Luz -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Creación_de_Luz">
@@ -1781,6 +2008,50 @@ Intermedio: 25 metros de zona iluminada.
 Avanzado: 100 metros de zona iluminada.
 Arcano: 500 metros de zona iluminada.
 Mantenimiento: 5 / 5 / 10 / 15 Diario</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Crear_Oscuridad -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Crear_Oscuridad">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Oscuridad"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 2 
+Acción: Activa 
+Tipo: Efecto
+Efecto: Oscurece completamente una zona. Todo lo que hay en su interior se percibe como en una noche cerrada y sin luna.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon        20              50                 100             200
+Int. R.        5                8                    10               12
+
+Base: 5 metros de radio.
+Intermedio: 25 metros de radio.
+Avanzado: 100 metros de radio.
+Arcano: 500 metros de radio.
+Mantenimiento: 5 / 5 / 10 / 15 Diario</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Crear_Sentimientos_Negativos -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Crear_Sentimientos_Negativos">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Oscuridad"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 58 
+Acción: Activa 
+Tipo: Anímico
+Efecto: Introduce algún tipo de sentimiento negativo, como odio, miedo o ira, en los individuos designados por el hechicero. El afectado puede repetir el control una vez al día.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       100            180                240            300
+Int. R.         8               10                  12               15
+
+Base: Radio de 20 metros / RM o RP 120.
+Intermedio: Radio de 100 metros / RM o RP 160.
+Avanzado: Radio de 250 metros / RM o RP 180.
+Arcano: Radio de 500 metros / RM o RP 220.
+Mantenimiento: 10 / 20 / 25 / 30 Diario</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -1829,6 +2100,28 @@ Mantenimiento: 10 / 15 / 15 / 20</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Cuerpo_a_Oscuridad -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Cuerpo_a_Oscuridad">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Oscuridad"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 52 
+Acción: Activa 
+Tipo: Efecto
+Efecto: El cuerpo designado por el hechicero se transformará en pura energía oscura, volviéndose intangible ante todas las materias y ataques no basados en energía. Mientras se encuentre en este estado, el sujeto ganará un bono en sus habilidades secundarias de Advertir y Buscar, así como a sus Resistencias contra efectos basados en Oscuridad. En este estado, cualquier daño causado por Luz se doblará.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       100            120                140            160
+Int. R.         8               11                  13              16
+
+Base: +50 en Advertir y Buscar / +20 a sus Resistencias.
+Intermedio: +60 en Advertir y Buscar / +30 a sus Resistencias.
+Avanzado: Como el Intermedio, pero el bono a sus Resistencias se aplica contra toda clase de efecto sobrenatural no basado en Luz.
+Arcano: Como el Avanzado, pero no sufre doble daño por recibir ataques basados en Luz.
+Mantenimiento: 10 / 15 / 15 / 20</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Debilidad_física -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Debilidad_física">
@@ -1851,6 +2144,28 @@ Beneficio: 1</rdfs:comment>
 Efectos: El Director de Juego deberá interpretar el alcance de esta desventaja. En un grupo, alguien desafortunado será siempre el que caiga en la trampa aleatoria y el primero al que ataquen cuando el azar decida quién recibe el primer impacto.
 
 Beneficio: 1</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Descarga_Oscura -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Descarga_Oscura">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Oscuridad"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 22 
+Acción: Activa 
+Tipo: Ataque
+Efecto: Proyecta una descarga mágica basada en oscuridad. El ataque se realiza en la TA de Energía.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon         50             90                  120           150
+Int. R.         6                9                    12             15
+
+Base: Daño 60.
+Intermedio: Daño 90.
+Avanzado: Daño 120.
+Arcano: Daño 150.
+Mantenimiento: No</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -1894,11 +2209,55 @@ Mantenimiento: No</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Destrozar -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Destrozar">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Oscuridad"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 68 
+Acción: Activa 
+Tipo: Anímico
+Efecto: Provoca penalizadores mediante la acumulación de dolor, sufrimiento, desdicha y otros efectos místicos tenebrosos. El afectado deberá superar una RM, o sufrir un penalizador a toda acción y a sus Resistencias equivalente al nivel de fracaso del control. Si no supera la RM, el blanco del conjuro no tendrá derecho a una nueva tirada mientras el hechizo se mantenga. 
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       100            180                240            300
+Int. R.         6                9                   12               15
+
+Base: RM 120.
+Intermedio: RM 160.
+Avanzado: RM 200.
+Arcano: RM 240.
+Mantenimiento: 10 / 20 / 25 / 30</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Destrucción -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Destrucción">
         <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Mágica"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Esta vía permite utilizar el poder del flujo de almas para destruir la propia realidad. Sus conjuros afectan tanto al mundo material como al espiritual. Su poder es por naturaleza muy ofensivo. Su vía opuesta es Creación.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Destrucción_de_Luz -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Destrucción_de_Luz">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Oscuridad"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 18 
+Acción: Activa 
+Tipo: Efecto, Anímico
+Efecto: Destruye la luminosidad ambiental alrededor del hechicero. Si se lanza sobre seres basados naturalmente en luz, estos deberán superar una RM o perderán una cantidad equivalente al doble de su nivel de fracaso en puntos de vida (por diez, si poseen acumulación de daño). Mientras se mantenga el conjuro, la entidad, deberá realizar un nuevo control de RM cada asalto que permanezca en el interior del radio del conjuro.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon         60            100                150            250
+Int. R.         6                9                   12              15
+
+Base: 10 metros de radio / 140 RM.
+Intermedio: 100 metros de radio / 180 RM.
+Avanzado: 250 metros de radio / 220 RM.
+Arcano: 500 metros de radio / 280 RM.
+Mantenimiento: 10 / 10 / 15 / 25</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -1937,6 +2296,28 @@ Efecto: Destruye temporalmente cualquier sentimiento negativo, como odio, miedo 
 Grado    Base    Intermedio    Avanzado    Arcano
 Zeon         80            180               240             350
 Int. R.         6                9                  12                15
+
+Base: RM o RP 100 / 100 metros de radio.
+Intermedio: RM o RP 150 / 500 metros de radio.
+Avanzado: RM o RP 180 / 1 kilómetro de radio.
+Arcano: RM o RP 220 / 5 Kilómetros de radio.
+Mantenimiento: No</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Destruir_Sentimientos_Positivos -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Destruir_Sentimientos_Positivos">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Oscuridad"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 40 
+Acción: Activa 
+Tipo: Anímico
+Efecto: Destruye temporalmente cualquier sentimiento positivo, como paz interior, calma o alegría, que se encuentre en un radio respecto al hechicero. Si desea resistirse, ha de superarse una RM o RP. 
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon         80            180                240            350
+Int. R.         6                9                   12              15
 
 Base: RM o RP 100 / 100 metros de radio.
 Intermedio: RM o RP 150 / 500 metros de radio.
@@ -2177,6 +2558,28 @@ Mantenimiento: 5 / 20 / 25 / 30</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Dominio_Oscuro -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Dominio_Oscuro">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Oscuridad"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 30 
+Acción: Activa 
+Tipo: Efecto, Anímico
+Efecto: Este conjuro modifica y controla la forma e intensidad de la oscuridad y sombras que rodean al hechicero. Si se lanza sobre seres basados naturalmente en este elemento serán dominados por el hechicero si no superan una RM determinada por el grado del conjuro. La criatura sólo puede repetir el control si recibe una orden que sea opuesta a su naturaleza.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon         50            150                250            350
+Int. R.         6                9                   12              16
+
+Base: Radio de 20 metros / RM 80.
+Intermedio: Radio de 150 metros / RM 140.
+Avanzado: Radio de 300 metros y RM 180.
+Arcano: Radio de 500 metros / RM 220.
+Mantenimiento: 5 / 20 / 25 / 30</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Dumah -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Dumah">
@@ -2199,6 +2602,28 @@ Bono: +20 a la habilidad de ataque sin armas.</rdfs:comment>
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Dura">
         <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Dureza"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Las armaduras duras son rígidas y dificultan el movimiento de los presonajes que las utilizan.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Eliminar_Residuos -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Eliminar_Residuos">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Oscuridad"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 60 
+Acción: Activa 
+Tipo: Efecto
+Efecto: El hechicero puede borrar el rastro de que ha estado en un sitio determinado. De hecho, cualquier residuo de su paso por ese lugar desaparece completamente, ya sea ante habilidades de carácter natural, como Rastrear, o detecciones sobrenaturales.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       100            200               300             400
+Int. R.         8               10                 13                16
+
+Base: 50 metros de radio.
+Intermedio: 250 metros de radio.
+Avanzado: 1 kilómetro de radio / El conjuro permite además borrar las acciones de un individuo ante habilidades que permiten ver el pasado de objetos o lugares.
+Arcano: 5 kilómetros de radio / Como en grado Avanzado, salvo que el hechicero puede borrar todo rastro de cuanto aconteció en el pasado en la zona afectada.
+Mantenimiento: No</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -2302,6 +2727,28 @@ Mantenimiento: 15 / 20 / 25 / 30 Diario</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Escudar_Contra_lo_Positivo -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Escudar_Contra_lo_Positivo">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Oscuridad"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 62 
+Acción: Activa 
+Tipo: Automático
+Efecto: Encanta una zona, haciéndola impenetrable para los seres basados naturalmente en sentimientos positivos u luz. Cualquiera de estas criaturas que entre en la zona del conjuro, deberá realizar cada asalto una RM o sufrir una pérdida en puntos de vida equivalente al nivel de fracaso. Adicionalmente, de fallar el control, el ser recibirá de inmediato un penalizador a toda acción de -40 mientras sigua en su interior. La zona afectada permanece estática en el lugar donde fue lanzada.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       140            180                240            300
+Int. R.         7                9                   12               15
+
+Base: RM 120 / radio de 20 metros.
+Intermedio: RM 140 / radio de 100 metros.
+Avanzado: RM 160 / radio de 250 metros.
+Arcano: RM 180 / radio de 500 metros.
+Mantenimiento: 15 / 20 / 25 / 30 Diario</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Escudo -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Escudo">
@@ -2332,11 +2779,54 @@ Mantenimiento: 5 / 15 / 20 / 25</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Escudo_Oscuro -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Escudo_Oscuro">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Oscuridad"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 10 
+Acción: Pasiva 
+Tipo: Defensa
+Efecto: Forma una barrera de energía, que protege frente a cualquier fuente de ataque. El escudo sólo puede ser dañado por ataques de naturaleza sobrenatural, aunque los impactos basados en luz causarán doble daño sobre él. 
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon         50            120                180            250
+Int. R.         6                8                   10              14
+
+Base: El escudo tiene 300 puntos de Resistencia.
+Intermedio: El escudo tiene 1.000 puntos de Resistencia.
+Avanzado: El escudo tiene 1.800 puntos de Resistencia.
+Arcano: El escudo tiene 3.000 puntos de Resistencia.
+Mantenimiento: 5 / 15 / 20 / 25</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Esencia -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Esencia">
         <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Mágica"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La Esencia controla la vida y las almas. Esta vía tiene el poder sobre los espíritus y los seres naturales que pertenecen al mundo. Es también la vía de la naturaleza y los conjuros de origen druídicos. La vía opuesta a Esencia es Ilusión.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Esencia_Oscura -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Esencia_Oscura">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Oscuridad"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 96 
+Acción: Activa 
+Tipo: Efecto
+Efecto: Permite al lanzador o el objetivo designado por este entrar en un estado de completo letargo, mientras su cuerpo se hace uno con la oscuridad. La entidad abandona el mundo y asciende a la red de almas para nutrirse de sus energías. Apartado y desconocedor de todo lo que sucede en el exterior, multiplica por 10 su regeneración zeónica y cura sus heridas con Regeneración 16. Cuanto tiempo puede permanecer apartado del mundo es determinado por el grado del conjuro.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       200             400               600            800
+Int. R.       12               14                  16              18
+Base: Un día.
+Intermedio: Una semana.
+Avanzado: Un mes.
+Arcano: Un año.
+Mantenimiento: No</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -2371,6 +2861,28 @@ Mantenimiento: No</rdfs:comment>
 Acción: Activa 
 Tipo: Ataque
 Efecto: Desencadena una esfera de energía luminosa que ataca en la TA de Energía. El conjuro puede controlarse con la Proyección Mágica del lanzador hasta que impacte sobre un objetivo, por lo que si un blanco esquiva la acometida de una Esfera Buscadora, esta podrá seguir atacando en el turno siguiente al no haber sido destruida. Únicamente cuando causa daño o es parada, la esfera desaparece. Si el hechicero abandona el control directo sobre ella, la esfera se moverá por si misma, atacando todos los asaltos al último blanco prefijado con su propia Proyección Mágica independiente de la del hechicero.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       120           180                 240            300
+Int. R.         6               9                    12               15
+
+Base: Daño Base 100 / Proyección Mágica 150.
+Intermedio: Daño Base de 120 / Proyección Mágica 180.
+Avanzado: Daño Base de 160 / Proyección Mágica 210.
+Arcano: Daño Base de 200 / Proyección Mágica 240.
+Mantenimiento: 15 / 20 / 25 / 30</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Esfera_Oscura -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Esfera_Oscura">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Oscuridad"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 46 
+Acción: Activa 
+Tipo: Ataque
+Efecto: Desencadena una esfera de energía oscura que ataca en la TA de Energía. El conjuro puede controlarse con la Proyección Mágica del lanzador hasta que impacte sobre un objetivo, por lo que si un blanco esquiva la acometida de una Esfera Oscura, esta podrá seguir atacando en el turno siguiente al no haber sido destruida. Únicamente cuando causa daño o es parada, la esfera desaparece. Si el hechicero abandona el control directo sobre ella, la esfera se moverá por si misma, atacando todos los asaltos al último blanco prefijado con su propia Proyección Mágica independiente de la del hechicero.
 
 Grado    Base    Intermedio    Avanzado    Arcano
 Zeon       120           180                 240            300
@@ -2454,15 +2966,6 @@ Mantenimiento: 5 / 10 / 10 / 15</rdfs:comment>
 Efectos: Dobla los penalizadores a la acción provocados por la fatiga y resta un punto el Cansancio base del personaje.
 
 Beneficio: 1</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Explorador -->
-
-    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Explorador">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Categoría"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Un explorador es el prototipo tradicional de aventurero. Normalmente, se trata de personas que han sacado el máximo provecho a su capacidad de percibir lo que les rodea y adentrarse donde nadie más sería capaz. Un explorador suele tener siempre sus sentidos pendientes de lo que hay a su alrededor, por lo que es muy complicado cogerle por sorpresa. Es también un rastreador y un superviviente nato, razón por la que tiene grandes conocimientos sobre zonas boscosas o regiones inhóspitas. En la sociedad suelen trabajar como cazadores, batidores o incluso arqueólogos, pero lo más normal es que simplemente se trate de habitantes de territorios apartados donde sus habilidades son necesarias para sobrevivir.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -2595,41 +3098,6 @@ Requisitos: Proezas de fuerza 40.
 Conocimiento marcial: +10
 
 Bono: Ninguno.</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Guerrero -->
-
-    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Guerrero">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Categoría"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El guerrero es el luchador arquetípico por excelencia. Esta categoría engloba a aquellas personas que han dedicado por completo su vida al combate y son capaces de explotar al máximo su habilidad bélica. Esto les lleva no sólo a dominar el manejo de las armas, sino a, llegado el momento, emplear su energía anímica en la lucha. También tienen facilidad para desarrollar un gran conocimiento en el campo de las tácticas militares y convertirse en cabecillas de ejércitos. Tradicionalmente, los guerreros pueden llegar a trabajar casi de cualquier cosa, desde meros mercenarios a caballeros.</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Guerrero_Acróbata -->
-
-    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Guerrero_Acróbata">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Categoría"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Guerrero_Conjurador -->
-
-    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Guerrero_Conjurador">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Categoría"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Los guerreros conjuradores reúnen las habilidades de combate de los luchadores con las capacidades de invocación y control de los convocadores. Cuando luchan, emplean la ayuda de criaturas sobrenaturales que llaman a este mundo y ponen a su servicio temporalmente, o incluso invocando a los grandes poderes. Por desgracia, al igual que otras categorías mixtas, al dedicar demasiado esfuerzo para dominar dos campos tan complejos como la convocación y las artes bélicas, pueden dejar desatendidas otras habilidades importantes.</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Guerrero_Mentalista -->
-
-    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Guerrero_Mentalista">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Categoría"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Los guerreros mentalistas son luchadores dotados de habilidades psíquicas, que han desarrollado un completo control de dichos poderes para obtener ventaja en la lucha. Sus capacidades mentales y combativas pueden ser tan elevadas como las de mentalistas y guerreros, aunque a veces su extrema dedicación en ambos campos hace que no tengan demasiado tiempo para desarrollar otras habilidades. Normalmente, un guerrero mentalista centra su atención sobre una de ellas, convirtiéndose en un guerrero que se apoya en sus poderes psíquicos para combatir o viceversa.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -2798,24 +3266,6 @@ Bono: +20 al turno cuando se utilicen artes marciales, y +10 a la habilidad de a
     
 
 
-    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Hechicero -->
-
-    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Hechicero">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Categoría"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Los hechiceros no son simplemente aquellos que tienen la increíble capacidad de manejar las energías místicas, sino las personas que se han dedicado en cuerpo y alma a comprender sus entresijos y llegar a dominarlas. Se especializan en el aspecto más puro de la magia: el uso de conjuros con los que son capaces de alterar la realidad a su antojo, enfocando y dominando sus poderes con completa precisión. Sienten también interés por todos los campos del intelecto, pero por desgracia, esta dedicación hace que su desarrollo físico sea por tanto inferior al de otras categorías.</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Hechicero_Mentalista -->
-
-    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Hechicero_Mentalista">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Categoría"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El potencial de los hechiceros mentalistas es enorme. Los personajes con esta categoría están dedicados a controlar la combinación de las excepcionales habilidades de las que están dotados: la magia y las matrices psíquicas. Aunque su resistencia y sus conocimientos secundarios pueden ser escasos a causa de su extrema dedicación, con la capacidad de lanzar conjuros y apoyándose en sus disciplinas psíquicas hay muy pocas cosas que no estén a su alcance.</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Holocausto_de_Luz -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Holocausto_de_Luz">
@@ -2824,6 +3274,28 @@ Bono: +20 al turno cuando se utilicen artes marciales, y +10 a la habilidad de a
 Acción: Activa 
 Tipo: Ataque, Anímico
 Efecto: Este conjuro desencadena el poder de la luz en su estado más puro, arrasando todo lo que encuentra a su paso, tanto en el mundo material como en el espiritual. La energía liberada lo arrastra y devora todo, unificando toda existencia con la luz. Incluso las criaturas elementales de luz son asimiladas por su poder. El Holocausto crea una gran cúpula lumínica que ataca en la TA de energía. Cualquier ser que reciba daño, por mínimo que sea, deberá superar una RM contra 160 o será unificado con la luz y, por tanto, destruido en cuerpo y alma de forma automática. No es posible designar blancos específicos en el radio del conjuro, y afectará a todos por igual salvo al lanzador.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       600          1.000             2.500       10.000
+Int. R.       14               16                  18              20
+
+Base: Daño 350 / 100 metros de radio.
+Intermedio: Daño 500 / 100 kilómetros de radio.
+Avanzado: Daño 800 / 10.000 kilómetros de radio.
+Arcano: Daño 1.000 / 1 ua de radio.
+Mantenimiento: No</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Holocausto_de_Oscuridad -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Holocausto_de_Oscuridad">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Oscuridad"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 100 
+Acción: Activa 
+Tipo: Ataque, Anímico
+Efecto: Este conjuro desencadena el poder de la oscuridad en su estado más puro, arrasando todo lo que encuentra a su paso, tanto en el mundo material como en el espiritual. La energía liberada lo arrastra y devora todo, unificando toda existencia con las tinieblas. Incluso las criaturas elementales de oscuridad son asimiladas por su poder. El Holocausto crea una gran cúpula de tinieblas que ataca en la TA de energía. Cualquier ser que reciba daño, por mínimo que sea, deberá superar una RM contra 160 o será unificado con la oscuridad y, por tanto, destruido en cuerpo y alma de forma automática. No es posible designar blancos específicos en el radio del conjuro, y afectará a todos por igual salvo al lanzador. 
 
 Grado    Base    Intermedio    Avanzado    Arcano
 Zeon       600          1.000             2.500       10.000
@@ -3100,15 +3572,6 @@ Apariencia habitual: El Hierofante se manifiesta junto al invocador en la forma 
     
 
 
-    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Ilusionista -->
-
-    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ilusionista">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Categoría"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Los ilusionistas combinan sus grandes habilidades en los campos del subterfugio con el control de la magia. Un buen ilusionista consigue que quienes le rodean no sepan si lo que hace se debe a sus poderes sobrenaturales o a su propia habilidad. Sus capacidades místicas son casi tan grandes como las de cualquier hechicero, pero carecen de la misma facilidad para ejecutar conjuros rápidamente. Al contrario de lo que su nombre parezca sugerir, los ilusionistas pueden dominar muchos tipos de magia y no sólo la ilusión. Muchas veces, usan diversos conjuros obteniendo unos efectos igualmente notables. Son muy vulnerables físicamente, por lo que suelen rehuir el combate directo en busca de estratagemas más ingeniosas.</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Ilusión -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ilusión">
@@ -3140,6 +3603,50 @@ Mantenimiento: No</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Imbuir_Miedo -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Imbuir_Miedo">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Oscuridad"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 6 
+Acción: Activa 
+Tipo: Anímico
+Efecto: Provoca, temporalmente, el estado de Miedo a todos los sujetos que se encuentren alrededor del lanzador. El hechicero decidirá cuál es la fuente que origina el miedo a los afectados.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon         40             80                  140            180
+Int. R.         5                8                    10              12
+
+Base: RM o RP 80 / 10 metros de radio.
+Intermedio: RM o RP 100 / 50 metros de radio.
+Avanzado: RM o RP 120 / 100 metros de radio.
+Arcano: RM o RP 140 / 250 metros de radio.
+Mantenimiento: No</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Indetección -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Indetección">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Oscuridad"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 90 
+Acción: Activa 
+Tipo: Efecto
+Efecto: El hechicero, o quien este designe, se vuelve completamente inmune ante ciertos tipos de detecciones sobrenaturales. Por ejemplo, un personaje que use este conjuro en grado Arcano sólo podría ser encontrado mediante los sentidos físicos, como la vista o el oído.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       350            450               600             800
+Int. R.       12              14                  16               18
+
+Base: El personaje se vuelve indetectable ante conjuros y habilidades psíquicas.
+Intermedio: Como en grado Base, pero también se vuelve indetectable ante habilidades del Ki.
+Avanzado: Como en grado Intermedio, pero también se vuelve indetectable ante todas las habilidades sobrenaturales.
+Arcano: Ignora cualquier detección que no sean los sentidos naturales.
+Mantenimiento: 80 / 90 / 105 / 115 Diario</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Inteligencia -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Inteligencia">
@@ -3153,6 +3660,28 @@ Mantenimiento: No</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Inteligencia_Requerida">
         <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Magia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Introducirse_en_las_Pesadillas -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Introducirse_en_las_Pesadillas">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Oscuridad"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 50 
+Acción: Activa 
+Tipo: Anímico
+Efecto: Permite al hechicero introducirse físicamente en las pesadillas de un durmiente. El brujo no tendrá ningún control sobre el mundo onírico del soñador, y cualquier cosa que suceda será real para él. La persona deberá tener terribles pesadillas para que este conjuro pueda afectarle y, en el momento en que se torne un sueño plácido, despierte o muera, el mago abandonará el mundo onírico y volverá al real. Cualquier conjuro de Esencia realizado sobre el durmiente afectará también al hechicero. Una vez en las pesadillas, el brujo podrá saltar al subconsciente de otro soñador si este no se encuentra, físicamente, a una distancia cercana del durmiente original. Naturalmente, este sujeto tendrá derecho a una nueva RM. En el caso de que la conciencia del soñador se encuentre en el mundo de la Vigilia, el hechicero quedará atrapado allí incluso después de que finalice el conjuro.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon        120           180                240            300
+Int. R.          6               9                   12               15
+
+Base: RM o RP 140 / 10 metros de distancia.
+Intermedio: RM o RP 160 / 80 metros de distancia.
+Avanzado: RM o RP 200 / 140 metros de distancia.
+Arcano: RM o RP 240 / 200 metros de distancia.
+Mantenimiento: 10 / 10 / 15 / 15 Diario</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -3229,15 +3758,6 @@ Bono: +10 variable.</rdfs:comment>
     
 
 
-    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Ladrón -->
-
-    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ladrón">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Categoría"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Como sugiere su nombre, un ladrón es un personaje especializado en los campos del sigilo, el robo y la ocultación. Son personas que huyen de los enfrentamientos directos y prefieren confiar en sus habilidades de subterfugio para conseguir lo que desean. Dado que su resistencia física no suele ser demasiado elevada, son muy hábiles huyendo y esquivando golpes cuando son descubiertos. Pueden representar diversos papeles en la sociedad, aunque habitualmente se dedican a la profesión que da nombre a la categoría.</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Lazo_existencial -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Lazo_existencial">
@@ -3247,6 +3767,28 @@ Bono: +10 variable.</rdfs:comment>
 Efectos: El mago no podrá elegir los conjuros de Libre Acceso de sus vías de magia y será incapaz de acceder a conjuros elegidos libremente.
 
 Beneficio: 1</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Lazos_Oscuros -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Lazos_Oscuros">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Oscuridad"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 28 
+Acción: Activa 
+Tipo: Ataque
+Efecto: Forma unos lazos de oscuridad que sujetan al blanco designado. Para ello el lanzador emplea las reglas de Presa, aunque sin penalizador alguno a su habilidad. Los lazos de oscuridad no pueden romperse por el sujeto al que sujetan, pero si un tercero intenta romperlos, estos se consideran un arma de energía con Entereza 25.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon         60            100                140            180
+Int. R.         6                9                   12               15
+
+Base: Disponen de una Fuerza base 8 para los controles.
+Intermedio: Disponen de una Fuerza base 12 para los controles.
+Avanzado: Disponen de una Fuerza base 15 para los controles y tienen Entereza 30.
+Arcano: Disponen de una Fuerza base 18 para los controles y tienen Entereza 35.
+Mantenimiento: 10 / 10 / 15 / 15</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -3449,15 +3991,6 @@ Mantenimiento: No</rdfs:comment>
     
 
 
-    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Maestro_En_Armas -->
-
-    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Maestro_En_Armas">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Categoría"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Son luchadores que se han dedicado a perfeccionar sus habilidades marciales con todo tipo de armas. Se trata de guerreros natos, los cuales han llevado hasta el límite su capacidad combativa por encima de cualquier otra categoría. Opuestamente a los guerreros convencionales, no emplean ninguna otra habilidad en la lucha más que su maestría en el uso de las armas. En una contienda, ignoran el uso de su energía física y de todo aquello que no sea su propia habilidad marcial, pero no por ello dejan de ser los combatientes más hábiles y los más centrados en las verdaderas habilidades marciales. La gran mayoría de caballeros y mercenarios tienen esta categoría.</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Magia -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Magia">
@@ -3524,6 +4057,28 @@ Beneficio: 1</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Marca_del_Miedo -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Marca_del_Miedo">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Oscuridad"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 70 
+Acción: Activa
+Tipo: Automático
+Efecto: Forma una marca o un espectáculo de luces en un lugar determinado que aterroriza y llena de terror a quienes la observen. Todo aquel que lo mire y falle la Resistencia sufrirá de inmediato el estado de Terror. La condición para ser afectado consiste en mirar directamente la Marca del Miedo.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       140           200                 280            360
+Int. R.       10              12                   14              16
+
+Base: Visible en 1 kilómetro de radio / RM o RP 120.
+Intermedio: Visible en 5 kilómetros de radio / RM o RP 150.
+Avanzado: Visible en 15 kilómetros de radio / RM o RP 180.
+Arcano: Visible en 25 kilómetros de radio / RM o RP 220.
+Mantenimiento: 5 / 10 / 10 / 15</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Melkaiah -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Melkaiah">
@@ -3537,15 +4092,6 @@ Requisitos: Grappling o Sambo, Inhumanidad, más de 160 en la habilidad de ataqu
 Conocimiento marcial: +10
 
 Bono: +10 a la habilidad de ataque sin armas.</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Mentalista -->
-
-    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Mentalista">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Categoría"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Los mentalistas son aquellos personajes que se han dedicado a desarrollar al máximo el potencial que les brindan sus poderes psíquicos. No se conforman sólo con poseer disciplinas mentales, sino que tratan de descubrir su funcionamiento y dominar nuevas habilidades. Al igual que los hechiceros, tienen grandes conocimientos en los campos intelectuales, pero esta dedicación hace que su desarrollo físico y su resistencia sean también inferiores a los de otras categorías.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -3775,11 +4321,24 @@ Mágico hacia la Oscuridad.
     
 
 
-    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Novel -->
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Noche -->
 
-    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Novel">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Categoría"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Los noveles representan el arquetipo de Sin categoría, o lo que es lo mismo, alguien que no se encuentra dentro de ninguno de los arquetipos que se han explicado hasta el momento. Puede ser cualquier tipo de persona que no tenga una verdadera especialización. Desde campesinos a bardos, pasando por nobles y bufones, el novel es la categoría estándar de Ánima, a la que podrá acceder cualquiera. El novel tiene buenas habilidades en todos los campos, desde la magia al combate, aunque no se especializa en ninguno. Además, le resulta excepcionalmente fácil cambiar posteriormente de categoría a la de cualquier otro arquetipo. En muchas ocasiones, cuando un jugador no tenga realmente decidido qué hacer con su personaje, puede empezar como novel y realizar después un cambio de categoría, cuando finalmente encuentre la apropiada.</rdfs:comment>
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Noche">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Oscuridad"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 42 
+Acción: Activa 
+Tipo: Efecto
+Efecto: Forma una cúpula de oscuridad absoluta. Todo aquel que se encuentre en su interior, excepto el hechicero, se verá sometido a las reglas de Ceguera. Para poder ver a través de esta oscuridad, ya sea desde dentro o fuera de la cúpula, es necesario superar una dificultad de Imposible en Advertir o de Absurdo en Buscar. No se puede designar blancos en el interior del área.
+
+Grado    Base    Intermedio    Avanzado   Arcano
+Zeon         80            180                240           300
+Int. R.         6                9                   12             15
+
+Base: Radio 25 metros.
+Intermedio: Radio 250 metros.
+Avanzado: Radio 500 metros/ La oscuridad se considera sobrenatural.
+Arcano: Radio 1 kilómetro / La oscuridad se considera sobrenatural.
+Mantenimiento: 10 / 20 / 25 / 30</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -3796,6 +4355,28 @@ Efecto: Forma un objeto físico de energía lumínica. Pese a estar hecho de luz
 Grado    Base    Intermedio    Avanzado    Arcano
 Zeon       150            200               240             300
 Int. R.       10               12                 14               16
+
+Base: Presencia 60 / Calidad +5.
+Intermedio: Presencia 100 / Calidad +10.
+Avanzado: Presencia 140 / Calidad +10.
+Arcano: Presencia 180 / Calidad +15.
+Mantenimiento: 15 / 20 / 25 / 30</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Objetos_Oscuros -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Objetos_Oscuros">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Oscuridad"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 76 
+Acción: Activa 
+Tipo: Efecto
+Efecto: Forma un objeto físico de energía lumínica, ya sea algo tan complejo como un reloj o tan simple como una espada. Pese a estar hecho de luz, tiene consistencia física. La presencia máxima de dicho objeto y la calidad del mismo viene determinada por el grado del conjuro.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       150            200               240             300
+Int. R.       10              12                 14                16
 
 Base: Presencia 60 / Calidad +5.
 Intermedio: Presencia 100 / Calidad +10.
@@ -3828,6 +4409,94 @@ Beneficio: 1</rdfs:comment>
 Efectos: El personaje debe moverse libremente para acumular magia y realizar sus conjuros.
 
 Beneficio: 1</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Ocultación -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ocultación">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Oscuridad"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 32 
+Acción: Pasiva 
+Tipo: Efecto
+Efecto: Oculta la presencia del hechicero o del blanco designado por este ante cualquier tipo de detección. A efectos de juego, aumenta en las Resistencias que se efectúen contra detecciones sobrenaturales, ya sean místicas o psíquicas. Esta habilidad también aumenta la Ocultación del Ki del personaje (aunque este aumento no se contabiliza a la hora de determinar los bonos aplicables a la RM), permitiéndole esconder su energía incluso si no ha desarrollado dicha habilidad.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon         60            180                240            300
+Int. R.         6                9                   12              15
+
+Base: +50 a la RM o RP / +50 Ocultación del Ki.
+Intermedio: +140 a la RM o RP / +150 Ocultación del Ki.
+Avanzado: +220 a la RM o RP / +200 Ocultación del Ki.
+Arcano: +280 a la RM o RP / +250 Ocultación del Ki.
+Mantenimiento: 10 / 20 / 25 / 30 Diario</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Ocultación_de_Magia -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ocultación_de_Magia">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Oscuridad"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 20 
+Acción: Pasiva 
+Tipo: Efecto
+Efecto: Oculta un conjuro, o las propiedades místicas de un objeto, ante cualquier tipo de detección mágica. A efectos de juego, produce un penalizador a la Valoración mágica de quien intente detectar o medir el conjuro u objeto oculto (así como al propio hechizo de Ocultación de Magia).
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon         50            180                240            300
+Int. R.         6                9                   12               15
+
+Base: –100 a Valoración Mágica.
+Intermedio: –180 a Valoración Mágica.
+Avanzado: –240 a Valoración Mágica.
+Arcano: –320 a Valoración Mágica.
+Mantenimiento: 5 / 20 / 25 / 30 Diario</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Ocultarse_Ante_la_Magia -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ocultarse_Ante_la_Magia">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Oscuridad"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 86 
+Acción: Pasiva 
+Tipo: Efecto
+Efecto: Oculta la presencia de un individuo contra los conjuros de tipo Automático, haciendo que no sea afectado de manera directa por ellos. Al contrario de lo que indican las reglas generales, el hechicero que mantenga cualquier conjuro Automático deberá conseguir fijar con su Proyección Mágica al personaje, como si se tratase de un conjuro Anímico normal, a pesar de que este cumpla la condición para ser afectado.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       200            240                280            320
+Int. R.       10              12                  14               16
+
+Base: Afecta a conjuros Automáticos de Grado Base.
+Intermedio: Afecta a conjuros Automáticos de Grado Intermedio.
+Avanzado: Afecta a conjuros Automáticos de Grado Avanzado.
+Arcano: Afecta a conjuros Automáticos de Grado Arcano.
+Mantenimiento: 10 / 15 / 15 / 20 Diario</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Ofuscar -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ofuscar">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Oscuridad"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 36 
+Acción: Activa 
+Tipo: Efecto
+Efecto: Modifica el cuerpo de un individuo, fundiéndolo con su entorno y permitiéndole ocultarse naturalmente. Mientras el conjuro de Ofuscar se mantenga activo, el personaje podrá intercambiar su habilidad de Sigilo y Ocultarse por un valor base. También proporciona la misma cantidad a su Ocultación del Ki, incluso si no ha desarrollado dicha habilidad.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       100            180                240            300
+Int. R.         6                9                   12               15
+
+Base: Base de 100 en Sigilo, Ocultarse y Ocultación del Ki.
+Intermedio: Base de 150 en Sigilo, Ocultarse y Ocultación del Ki.
+Avanzado: Base de 200 en Sigilo, Ocultarse y Ocultación del Ki.
+Arcano: Base de 250 en Sigilo, Ocultarse y Ocultación del Ki.
+Mantenimiento: 20 / 40 / 50 / 60 Diario</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -3872,20 +4541,68 @@ Mantenimiento: 40 / 50 / 60 / 65</rdfs:comment>
     
 
 
-    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Paladín -->
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Oscuridad_Ambiental -->
 
-    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Paladín">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Categoría"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Los paladines son luchadores muy defensivos que combaten apoyándose en ciertas capacidades místicas. Una de sus especialidades consiste en expulsar a los seres sobrenaturales usando sus poderes naturales. Normalmente, muchos se rigen por códigos de conducta basados en normas religiosas o en el honor, aunque no están obligados a ello. Son líderes naturales, capaces de utilizar su carisma y dotes para movilizar a su favor a enormes cantidades de personas, que incluso darán sus vidas por ellos.</rdfs:comment>
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Oscuridad_Ambiental">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Oscuridad"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 26 
+Acción: Activa 
+Tipo: Efecto
+Efecto: Crea un ambiente místico que nubla los sentidos de cualquiera que se encuentre en su interior. La Oscuridad Ambiental aumenta en dos grados el nivel de dificultad de cualquier control perceptivo que se realice dentro, incluyendo detección por Ki o medios mágicos. No se puede designar blancos en su interior, y la zona permanece inmóvil en el mismo lugar en el que fue lanzada. No tiene control de RM posible.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon         60            180                240            300
+Int. R.         6                9                   12              15
+
+Base: Radio de 20 metros.
+Intermedio: Radio de 250 metros.
+Avanzado: Radio de 500 metros.
+Arcano: Radio de 1 kilómetro.
+Mantenimiento: 5 / 10 / 15 / 15</rdfs:comment>
     </owl:NamedIndividual>
     
 
 
-    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Paladín_Oscuro -->
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Oscuridad_Catastrófica -->
 
-    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Paladín_Oscuro">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Categoría"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">En cierto modo, esta categoría es la opuesta directa al paladín. Es un luchador especializado en el ataque que se apoya en unas limitadas habilidades místicas. Sus principales poderes se basan en el dominio y control de los seres sobrenaturales, quienes, una vez sometidos a su voluntad, son utilizados en su beneficio. Tienen grandes capacidades de mando, pero emplean la intimidación y el miedo para subyugar a los demás a sus deseos. Si esto no funciona, persuaden a las personas tratando de conseguir salirse con lo que pretende.</rdfs:comment>
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Oscuridad_Catastrófica">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Oscuridad"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 72 
+Acción: Activa 
+Tipo: Ataque
+Efecto: Proyecta una descarga de energía basada en oscuridad. Ataca en la TA de Energía.
+
+Grado    Base    Intermedio   Avanzado    Arcano
+Zeon       140           180                240            350
+Int. R.       10             12                   14              16
+
+Base: Daño 120 / 25 metros de radio.
+Intermedio: Daño 150 / 100 metros de radio.
+Avanzado: Daño 200 / 150 metros de radio.
+Arcano: Daño 250 / 250 metros de radio.
+Mantenimiento: No</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Oscuridad_Devoradora -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Oscuridad_Devoradora">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Oscuridad"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 66 
+Acción: Pasiva 
+Tipo: Defensa
+Efecto: Crea un escudo sobrenatural sombrío que posee además la habilidad de tragarse cualquier hechizo de Ataque que reciba. Para que el conjuro sea absorbido, es necesario primero lograr una parada con éxito contra la descarga, y en segundo lugar ganar un control de choque. El vacío permite absorber la mitad del Zeon del conjuro devorado. Es posible incluso que se trague ataques en área.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       120            180                240            300
+Int. R.         6                9                   12               15
+
+Base: Daño del choque 80 y 600 puntos de Resistencia.
+Intermedio: Daño del choque 110 y 1200 puntos de Resistencia.
+Avanzado: Daño del choque 140 y 1800 puntos de Resistencia.
+Arcano: Daño del choque 170 y 2200 puntos de Resistencia.
+Mantenimiento: 10 / 10 / 15 / 15</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -3917,6 +4634,28 @@ Intermedio: +150 Advertir, Buscar y Valoración mágica.
 Avanzado: +200 Advertir, Buscar y Valoración mágica.
 Arcano: +250 Advertir, Buscar y Valoración mágica.
 Mantenimiento: 5 / 15 / 20 / 25</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Perdición -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Perdición">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Oscuridad"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 56 
+Acción: Activa 
+Tipo: Automático, Efecto
+Efecto: La Perdición causa una conmoción a los individuos a los que afecte, disminuyendo sus capacidades y poderes. Aquellos que se encuentren bajo su zona de influencia deberán superar una RM, o recibir un penalizador a toda acción y a sus Resistencias de –30. El conjuro afecta en un radio alrededor del hechicero, afectando automáticamente a cualquiera que el hechicero desee de cuantos se encuentren en el interior. Los penalizadores de la Perdición no se superponen, por lo que un personaje no sufriría el doble de negativos por encontrarse bajo la influencia de dos perdiciones.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon        100           180                240            300
+Int. R.          6               9                   12               15
+
+Base: RM 120 / Radio de 5 metros.
+Intermedio: RM 160 / 25 metros de radio.
+Avanzado: RM 180 / 50 metros de radio / -40 a toda acción.
+Arcano: RM 200 / 150 metros de radio / -50 a toda acción.
+Mantenimiento: 5 / 10 / 15 / 15</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -4012,6 +4751,28 @@ Mantenimiento: 40 / 70 / 100 / 160</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Prisión_de_Oscuridad -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Prisión_de_Oscuridad">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Oscuridad"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 92 
+Acción: Activa 
+Tipo: Anímico
+Efecto: Encierra algo en un mundo de tinieblas intraspasable, un universo propio desde el que no podrá interactuar con el exterior, ni el exterior hacerlo recíprocamente con el objeto o criatura. Mientras el afectado se encuentre dentro de la prisión, no será consciente de lo que ocurre fuera, ni viceversa. Para forzar el conjuro desde el interior, la prisión es considerada como un ser con acumulación de daño y una TA 10, cuya resistencia es determinada por el grado del conjuro. No obstante, todo daño que sufra desde fuera se dobla automáticamente, La prisión se recupera de cualquier daño con Regeneración 19. Si el blanco del conjuro falla la RM y es afectado por el sortilegio, no tendrá derecho a ninguna tirada posterior; si quiere salir, deberá ser capaz de romper la prisión. El lanzador del conjuro no puede encerrarse a si mismo dentro de su propia prisión de oscuridad.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon        200           350                500            800
+Int. R.        14             16                   18              20
+
+Base: RM 140 / La prisión posee 10.000 puntos de resistencia.
+Intermedio: RM 180 / La prisión posee 250.000 puntos de resistencia.
+Avanzado: RM 220 / La prisión posee 500.000 puntos de resistencia.
+Arcano: RM 240 / La prisión no puede ser rota desde el interior, pero tiene 500.000 puntos de resistencia si es atacada desde fuera.
+Mantenimiento: 40 / 70 / 100 / 160</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Prisma_Reflectante -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Prisma_Reflectante">
@@ -4070,6 +4831,28 @@ proyección mágica no aplica ninguno de los penalizadores de combate ni para at
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Puntos_Ki">
         <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ki"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Los puntos de Ki miden el potencial de la energía interna del personaje. Cuantos más posea, habrá conseguido despertar una mayor cantidad de poder. Estos puntos dependen de algunas de las características primarias: Fuerza, Destreza, Agilidad, Constitución, Poder y Voluntad. Para calcular cuánto Ki tiene un personaje, debemos fijarnos en el valor de sus características. Cada punto que el personaje tenga en uno de esos seis atributos que no supere el 10, proporciona uno de Ki. Por tanto, si posee Fuerza 7, tiene 7 puntos de Ki gracias su Fuerza. Aquellos que sobrepasen el 10, otorgan el doble de puntos; alguien con Destreza 13 tendría 16 de Ki. Para saber cuantos puntos de Ki tiene en total un personaje, se ha de sumar los puntos que haya obtenido en todas sus características. A esa suma se la llama reserva de Ki</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Rabia -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Rabia">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Oscuridad"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 38 
+Acción: Activa 
+Tipo: Anímico
+Efecto: Provoca el estado de Ira sobre los objetivos del conjuro, haciendo que estos no controlen sus acciones y ataquen al individuo más cercano a ellos. Mientras alguien se vea influido por sus efectos, aplicará un bono de +10 a su habilidad ofensiva y un –30 al resto de sus controles.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon         60             90                 150             200
+Int. R.         6                9                   12               15
+
+Base: 5 metros de radio / RM 80.
+Intermedio: 20 metros de radio / RM 100.
+Avanzado: 50 metros de radio / RM 120.
+Arcano: 100 metros de radio / RM 140.
+Mantenimiento: 10 / 10 / 15 / 20</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -4147,6 +4930,28 @@ Beneficio: 1</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Reino_de_Tinieblas -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Reino_de_Tinieblas">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Oscuridad"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 88 
+Acción: Activa 
+Tipo: Automático
+Efecto: Crea una zona estática alrededor del hechicero donde todo se vuelve oscuridad absoluta. El cuerpo del brujo se funde con las sombras, incrementando en +20 su ACT al lanzar conjuros de Oscuridad y aumentando en +40 sus Resistencias contra cualquier clase de detección. Si alguien intenta localizarlo empleando los sentidos naturales, es necesario superar un control de Buscar contra Imposible, o de Advertir contra Inhumano, mientras que si se usa Detección del Ki, se requiere pasar un control contra Zen. Además, mientras sea uno con la oscuridad el hechicero podrá transportarse una vez por asalto como una acción activa hasta el lugar que desee dentro de los límites del Reino de Tinieblas. Cualquier ser vivo que permanezca dentro del área que no sea un elemental oscuro pierde automáticamente 10 puntos de Zeon por asalto y un punto de Ki (el doble, si es un elemental de luz).
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       200            360               420             480
+Int. R.       10              12                  14               16
+
+Base: 50 metros de radio.
+Intermedio: 500 metros de radio.
+Avanzado: 1 kilómetro de radio.
+Arcano: 1 kilómetros de radio / +30 al ACT al lanzar conjuros oscuros.
+Mantenimiento: 10 / 20 / 25 / 25</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Restituir -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Restituir">
@@ -4165,6 +4970,28 @@ Intermedio: Elimina un -80 a toda acción y restituye 5 puntos de Cansancio
 Avanzado: Elimina un -120 a toda acción y restituye 10 puntos de Cansancio
 Arcano: Restituye cualquier penalizador y cantidad de Puntos de Cansancio.
 Mantenimiento: No</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Rey_de_Pesadillas -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Rey_de_Pesadillas">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Oscuridad"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 80 
+Acción: Activa 
+Tipo: Efecto, Anímico
+Efecto: Permite dominar cualquier tipo de pesadilla de un individuo que no supere la RM del conjuro. El hechicero tendrá la capacidad de controlar el mundo onírico de un durmiente, modificándolo como si tuviera Gnosis 45. En el caso de que el sueño se alimente de energía positiva, es decir, que se torne un sueño plácido, su Gnosis será sólo de 30. Los conjuros que el brujo lance únicamente gracias a dicho Gnosis (como por ejemplo, magia divina), no tienen efecto fuera de los límites espaciales del conjuro y sus efectos desaparecen en cuanto el hechicero sale del sueño o de la Vigilia.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       300            400               500             750
+Int. R.       12              14                  16               18
+
+Base: RM 140.
+Intermedio: RM 150 / Si el hechicero se encuentra en la Vigilia, controla además su entorno y gana los poderes de una criatura con Gnosis 40, siempre y cuando esté en un lugar fuertemente influenciado por energías negativas. Si se encuentra en una zona neutra, su puntuación será 30. Este conjuro sólo afecta la zona de la Vigilia en la que fue lanzado, y siempre y cuando no haya otra entidad de Gnosis similar enlazada a ella.
+Avanzado: RM 160 / Como Intermedio, pero el Gnosis del brujo en zonas neutras es de 35.
+Arcano: RM 180 / Como Avanzado, pero los efectos del conjuro no tienen límites espaciales, afectando por igual a toda la Vigilia influenciada por energías positivas.
+Mantenimiento: 60 / 65 / 70 / 80</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -4323,8 +5150,21 @@ Beneficio: 1</rdfs:comment>
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Sombra -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Sombra">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Categoría"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Las sombras son luchadores que se mueven en la oscuridad y aprovechan a su favor el entorno. Aunque sus habilidades de combate son excelentes, prefieren acabar con sus enemigos sin darles la oportunidad de responder a sus ataques. Para ello, emplean el subterfugio para sorprenderles, o usan otras tácticas más complejas. Incluso si es descubierta, una sombra es capaz de seguir luchando con sus enemigos en igualdad de oportunidades, aunque su resistencia tiende a ser menor que la de otros luchadores. Generalmente ágiles y veloces, prefieren esquivar los ataques en lugar de afrontarlos.</rdfs:comment>
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Oscuridad"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 10 
+Acción: Pasiva 
+Tipo: Efecto
+Efecto: Este conjuro aumenta la capacidad de ocultación del hechicero, acrecentando sus habilidades secundarias de Sigilo y Ocultarse, así como su Valoración mágica en la misma cantidad, aunque sólo en el caso de que pretenda ocultar el potencial mágico de algo o alguien (nunca para detectarlo).
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon         50            150                200             240
+Int. R.         5                9                   12               14
+
+Base: +50 en Sigilo, Ocultarse y Valoración Mágica.
+Intermedio: +150 en Sigilo, Ocultarse y Valoración Mágica.
+Avanzado: +200 en Sigilo, Ocultarse y Valoración Mágica.
+Arcano: +250 en Sigilo, Ocultarse y Valoración Mágica.
+Mantenimiento: 5 / 15 / 20 / 25</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -4793,24 +5633,6 @@ Bono: Ninguno.</rdfs:comment>
     
 
 
-    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Taoísta -->
-
-    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Taoísta">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Categoría"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Son artistas marciales que se han especializado en el combate sin armas. Dedicados a dominar todos los conocimientos marciales que les sea posible, siempre tratan de desarrollar nuevas y personales artes de lucha. Su entrenamiento les permite aprender con facilidad cualquier estilo marcial que se propongan, extrayendo de ellos los elementos que puedan volverles mejores combatientes. Llegado el momento, tratan además de emplear sus energías internas y sacarles el máximo provecho posible, compensando cualquier desventaja contra un enemigo bien equipado. Naturalmente, nada les impide llevar armas de cualquier clase.</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Tecnicista -->
-
-    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tecnicista">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Categoría"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Un tecnicista es un experto utilizando sus habilidades del Ki. Se trata de individuos que han explorado a fondo los secretos del cuerpo y del alma, desarrollando con facilidad capacidades que resultan imposibles para personas normales. A veces, pueden incluso tardar años en desplegar el verdadero alcance de sus habilidades, pero cuando lo hacen, se convierten en sujetos de considerable poder. Aunque no poseen grandes dotes para el combate, cuando utilizan su control sobre el Ki en contra de un adversario resultan enemigos terribles, pudiendo desencadenar técnicas inhumanas con sencillez.</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Tierra -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tierra">
@@ -4901,6 +5723,28 @@ Efecto: Transporta instantáneamente a los individuos u objetos designados por e
 Grado    Base    Intermedio    Avanzado    Arcano
 Zeon        250          360                 450            600
 Int. R.        10             12                   14              16
+
+Base: 100 kilómetros / 250 de presencia / RM 120.
+Intermedio: 1.000 kilómetros / 500 de presencia / RM 140.
+Avanzado: 5.000 kilómetros / 1.000 de presencia / RM 180.
+Arcano: 15.000 kilómetros / 2.000 de presencia / RM contra 200.
+Mantenimiento: No</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Transmisión_por_Sombras -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Transmisión_por_Sombras">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Oscuridad"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 78 
+Acción: Activa 
+Tipo: Efecto, Anímico
+Efecto: Transporta instantáneamente a los individuos u objetos designados por el brujo, desde una sombra hasta otra. Si desea resistirse, hay que superar la RM del conjuro. Tanto la distancia máxima como la máxima presencia afectable son determinadas por el grado del conjuro.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       250            360                450            600
+Int. R.       10              12                  14               16
 
 Base: 100 kilómetros / 250 de presencia / RM 120.
 Intermedio: 1.000 kilómetros / 500 de presencia / RM 140.
@@ -5159,6 +6003,28 @@ Mantenimiento: 10 / 15 / 15 / 25 Diario</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Ver_en_la_Oscuridad -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ver_en_la_Oscuridad">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Oscuridad"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 8 
+Acción: Activa 
+Tipo: Efecto
+Efecto: Permite al hechicero, o a quienes este seleccione, ver perfectamente en la oscuridad natural, siempre que la suma de sus presencias no supere el valor determinado por el grado del conjuro.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon         40              80                100             120
+Int. R.         5                8                   10               12
+
+Base: Presencia máxima 80.
+Intermedio: Presencia máxima 100.
+Avanzado: Presencia máxima 120.
+Arcano: Presencia máxima 140 / Permite ver en la oscuridad sobrenatural.
+Mantenimiento: 5 / 10 / 10 / 15 Diario</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Vestimenta -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vestimenta">
@@ -5245,15 +6111,6 @@ Beneficio: 1</rdfs:comment>
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vulnerable_al_frío">
         <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Desventaja_Comun"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El frío afecta terriblemente al personaje causándole muchos problemas físicos. Su cuerpo se ve seriamente perjudicado si se pone en contacto con algo muy frío, al igual que si visita lugares con temperaturas extremas, como zonas heladas.</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Warlock -->
-
-    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Warlock">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Categoría"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Un warlock es un mago guerrero que desarrolla tanto sus habilidades marciales como las místicas. Igual que los hechiceros, dominan la habilidad sobrenatural más pura de todas, la capacidad de realizar conjuros con los que modificar la propia realidad. Aunque puede centrarse principalmente sobre un solo campo, un warlock es perfectamente capaz de convertirse en un maestro que controle por igual el uso de las armas en combate y de las artes sobrenaturales. Sin embargo, haciéndolo, pueden dejar desatendidas otras habilidades importantes.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -5891,6 +6748,28 @@ Base: RM 180 / 20 metros de radio.
 Intermedio: RM 240 / 80 metros de radio.
 Avanzado: RM 280 / 150 metros de radio.
 Arcano: RM 340 / 250 metros de radio.
+Mantenimiento: 10 / 10 / 15 / 15 Diario</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Zona_de_Ocultación -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Zona_de_Ocultación">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Oscuridad"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 48 
+Acción: Activa 
+Tipo: Detección
+Efecto: Al lanzar este conjuro sobre una zona, el hechicero crea un área mística que impide que se pueda detectar nada de lo que se encuentra en el interior. Todo lo que hay dentro de la zona incrementa su RM contra detecciones y cualquier habilidad de Detección del Ki, Valoración mágica o habilidad psíquica de detección que se utilice en ella, sufre un penalizador a su resultado final. La zona afectada permanece estática en el lugar donde fue lanzada.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       140            180                240            300
+Int. R.         7                9                   12               15
+
+Base: 20 metros de radio, RM +100, -140 a Habilidades de detección.
+Intermedio: 50 metros de radio, RM +150, -180 a Habilidades de detección.
+Avanzado: 250 metros de radio, RM +200, -240 a Habilidades de detección.
+Arcano: 500 metros de radio, RM +300, -320 a Habilidades de detección.
 Mantenimiento: 10 / 10 / 15 / 15 Diario</rdfs:comment>
     </owl:NamedIndividual>
     
