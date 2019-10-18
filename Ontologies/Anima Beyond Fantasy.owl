@@ -1011,6 +1011,28 @@ Beneficio: 1</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Alzamiento -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Alzamiento">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Nigromancia"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 82 
+Acción: Activa 
+Tipo: Efecto
+Efecto: Permite alzar un cadáver conservando todos y cada uno de los poderes, conocimientos y habilidades que tenía en vida. Desgraciadamente, se trata sólo de una sombra de quien fue, un ser no muerto carente de verdadera alma. Permite afectar a cualquier individuo o criatura fallecida cuyo cadáver esté al alcance del brujo, siempre y cuando su nivel no fuese mayor de lo que determine el coste del conjuro. A veces, si ha pasado mucho tiempo y el cuerpo se encuentra en mal estado, sus habilidades físicas pueden verse perjudicadas. Alguien que haya sido levantado gracias a este hechizo no puede volver a ser alzado. Ten en cuenta que el cadáver, a pesar de ser un no muerto, no está controlado por el nigromante.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       350           500                800           1.200
+Int. R.        9               12                  14                16
+
+Base: Nivel máximo 3.
+Intermedio: Nivel máximo 6.
+Avanzado: Nivel máximo 9.
+Arcano: Nivel máximo 12.
+Mantenimiento: No</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Apariencia -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Apariencia">
@@ -2193,6 +2215,28 @@ Mantenimiento: 25 / 40 / 50 / 60 Diario</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Controlar_a_los_Muertos -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Controlar_a_los_Muertos">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Nigromancia"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 40 
+Acción: Activa 
+Tipo: Anímico
+Efecto: El nigromante obtiene el control absoluto de cualquier no muerto que se encuentre en un radio en el momento de lanzar el conjuro. El dominio sobre los no muertos permanece activo mientras el hechizo se mantenga, pero no afecta a otras criaturas nigrománticas que le se acerquen con posterioridad. Los no muertos pueden evitar el control, superando una RM. Las entidades sólo tienen derecho a repetir la tirada si reciben una orden que vaya en contra de su naturaleza, por lo que las criaturas sin voluntad, como los cadáveres animados, nunca pueden liberarse.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       100           140                180             250
+Int. R.         9              11                  14               16
+
+Base: 20 metros de radio / RM 120.
+Intermedio: 50 metros de radio / RM 140.
+Avanzado: 100 metros de radio / RM 160.
+Arcano: 150 metros de radio / RM 180.
+Mantenimiento: 10 / 15 / 20 / 25 Diario</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Convocación -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Convocación">
@@ -2556,6 +2600,28 @@ Mantenimiento: 50 / 80 / 120 / 200 Diario</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Cuerpo_Muerto -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Cuerpo_Muerto">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Nigromancia"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 30 
+Acción: Activa 
+Tipo: Efecto
+Efecto: Este hechizo detiene temporalmente las funciones corporales de un individuo sin matarlo, aunque sigue siendo capaz de moverse y actuar con completa normalidad. Mientras permanezca activo el conjuro, el personaje será extremadamente resistente a los efectos del daño y a sus consecuencias, por lo que cualquier penalizador físico queda reducido a la mitad. Adicionalmente, permite mantenerse consciente y sin negativos (salvo los causados por críticos) en el estado de entre la vida y la muerte. Cualquiera que inspeccione el cuerpo será incapaz de descubrir que no se trata de un verdadero cadáver.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon         80            100                120            140
+Int. R.         8               10                  12              14
+
+Base: Personajes de Nivel 3.
+Intermedio: Personajes de Nivel 6.
+Avanzado: Personajes de Nivel 12.
+Arcano: Personajes de Nivel 18.
+Mantenimiento: 10 / 10 / 15 / 15 Diario</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Cuerpo_a_Luz -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Cuerpo_a_Luz">
@@ -2758,6 +2824,28 @@ Mantenimiento: No</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Descarga_de_Almas -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Descarga_de_Almas">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Nigromancia"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 68 
+Acción: Activa 
+Tipo: Ataque
+Efecto: Proyecta una descarga de energía mágica compuesta por almas marchitas. Este conjuro ataca en Energía. Sólo afecta a seres con alma, por lo que ignora los cuerpos físicos sin vida, como paredes o golems. Dada la naturaleza de la descarga, únicamente aquellos con la capacidad de ver espíritus son capaces de percibirla.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       140           260                380             500
+Int. R.         9              11                  13               16
+
+Base: Daño 100.
+Intermedio: Daño 200.
+Avanzado: Daño 300.
+Arcano: Daño 400.
+Mantenimiento: No</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Descarga_de_Luz -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Descarga_de_Luz">
@@ -2775,6 +2863,28 @@ Base: Daño 60.
 Intermedio: Daño 90.
 Avanzado: Daño 120.
 Arcano: Daño 150.
+Mantenimiento: No</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Descarga_de_Muerte -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Descarga_de_Muerte">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Nigromancia"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 26 
+Acción: Activa 
+Tipo: Ataque
+Efecto: Proyecta una potente descarga nigromántica. El ataque se realiza en la TA de energía.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon         60            90                  120            150
+Int. R.         6              9                     12              15
+
+Base: Daño 80.
+Intermedio: Daño 100.
+Avanzado: Daño 140.
+Arcano: Daño 180.
 Mantenimiento: No</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -3158,6 +3268,28 @@ Mantenimiento: No</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Destruir_No_Muertos -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Destruir_No_Muertos">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Nigromancia"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 36 
+Acción: Activa 
+Tipo: Anímico
+Efecto: Este conjuro destruye completamente la esencia de los no muertos. Cualquier ser nigromántico que sea su blanco deberá superar un control de RM o sufrir un daño equivalente al doble de su nivel de fracaso. Si tiene acumulación, sufre diez veces dicha cantidad.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon         80            160                240            320
+Int. R.         8               10                 13               15
+
+Base: RM 140.
+Intermedio: RM 180.
+Avanzado: RM 220.
+Arcano: RM 260.
+Mantenimiento: No</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Destruir_Poderes -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Destruir_Poderes">
@@ -3322,6 +3454,28 @@ Mantenimiento: 20 / 20 / 25 / 30</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Detección_Nigromántica -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Detección_Nigromántica">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Nigromancia"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 16 
+Acción: Activa 
+Tipo: Detección
+Efecto: Permite al nigromante detectar la presencia de cualquier criatura viva o muerta que se encuentre cerca de él. Para resistirse a sus efectos, hay que superar una RM.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon         50             80                 100            120
+Int. R.         6               9                    11              13
+
+Base: RM 120 / 20 metros de radio.
+Intermedio: RM 160 / 50 metros de radio.
+Avanzado: RM 200 / 100 metros de radio.
+Arcano: RM 240 / 150 metros de radio.
+Mantenimiento: 5 / 10 / 10 / 15</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Detectar_Vida -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Detectar_Vida">
@@ -3480,6 +3634,50 @@ Mantenimiento: 5 / 10 / 20 / 30</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Dominar_a_los_Carroñeros -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Dominar_a_los_Carroñeros">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Nigromancia"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 8 
+Acción: Activa 
+Tipo: Efecto
+Efecto: Otorga al brujo un control absoluto sobre cualquier alimaña carroñera. La consideración de alimaña carroñera es la de toda criatura de naturaleza inferior, es decir, con presencia 20 o inferior, que se alimente generalmente de los muertos. Cuervos, gusanos y otros muchos insectos encajan perfectamente dentro de esta descripción.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon        40            120                 200            300
+Int. R.        6                8                    11              13
+
+Base: 10 metros de radio.
+Intermedio: 150 metros de radio.
+Avanzado: 500 metros de radio.
+Arcano: 2 kilómetros de radio.
+Mantenimiento: 5 / 10 / 10 / 15</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Dominar_la_Vida -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Dominar_la_Vida">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Nigromancia"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 48 
+Acción: Pasiva 
+Tipo: Anímico
+Efecto: Permite al brujo esclavizar el alma de un ser vivo, sometiéndolo a un control similar al que tiene sobre sus criaturas no muertas. El personaje podrá resistirse superando un control de RM. El individuo tendrá derecho a una nueva Resistencia por día, y en cada ocasión en la que las órdenes recibidas vayan completamente en contra de su comportamiento.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       140            180                240            300
+Int. R.         9               11                  13               15
+
+Base: RM 100.
+Intermedio: RM 120.
+Avanzado: RM 140.
+Arcano: RM 160.
+Mantenimiento: 30 / 40 / 50 / 60 Diario</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Dominar_un_nuevo_poder_mental -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Dominar_un_nuevo_poder_mental">
@@ -3542,6 +3740,72 @@ Mantenimiento: 5 / 20 / 25 / 30</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Drenar_Almas -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Drenar_Almas">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Nigromancia"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 78 
+Acción: Activa 
+Tipo: Anímico
+Efecto: El nigromante arranca el alma de otra persona, alimentándose de su esencia y poder. Cuanto más fuerte sea el espíritu que absorbe, mayor será la energía recibida. El individuo que sea blanco de este conjuro debe superar un control de RM o perderá una cantidad de presencia equivalente a la mitad de su nivel de fracaso. Cada cinco puntos perdidos resta también un nivel y, con ello, cualquier capacidad o poder que dependiera de este. Si su presencia llega a cero, su alma ha sido completamente consumida y muere. Por cada 10 puntos de presencia que absorba, el nigromante incrementa temporalmente una de sus características en +1, u obtiene 10 PD para adquirir cualquier poder o habilidad esencial de monstruos como un ser con Gnosis 30. El nigromante pierde cada día un punto de característica o 20 de los PD incrementados.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       200           240                 280            320
+Int. R.       10              12                   14              16
+
+Base: RM 120.
+Intermedio: RM 140.
+Avanzado: RM 160.
+Arcano: RM 180.
+Mantenimiento: No</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Drenar_Características -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Drenar_Características">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Nigromancia"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 38 
+Acción: Activa 
+Tipo: Anímico
+Efecto: El nigromante roba las capacidades de otros individuos, aumentando en el proceso las suyas propias. El lanzador debe decidir cuál es la característica que quiere drenar, antes de ejecutar el conjuro. El blanco designado perderá un punto de ese atributo por cada 10 por los que no supere un control de RM. Si el valor natural de las características drenadas es superior a las del nigromante, por cada punto que absorba aumenta en uno la suya. Si es inferior, necesita drenar tres para sumar uno. Mientras se mantenga el conjuro, el brujo conserva los atributos incrementados. Las características perdidas se recuperan a un ritmo de un punto por hora, una vez que el nigromante deshace el hechizo.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon         60            150                240            320
+Int. R.         8               10                  13              15
+
+Base: RM 140.
+Intermedio: RM 180.
+Avanzado: RM 220.
+Arcano: RM 260.
+Mantenimiento: 5 / 10 / 15 / 15</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Drenar_Vida -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Drenar_Vida">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Nigromancia"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 12 
+Acción: Activa 
+Tipo: Anímico
+Efecto: El nigromante puede absorber una parte de la vida de otra persona, dañándola gravemente en el proceso a la vez que él se fortalece. Cualquier individuo que sea afectado por este conjuro deberá realizar un control de RM o perderá una cantidad de puntos de vida equivalente al nivel de fracaso, los cuales servirán al brujo para curar sus propias heridas. Los seres con acumulación de daño pierden cinco veces esa cantidad, pero el brujo, sólo recupera una quinta parte de lo que arrebata (es decir, si un ser con acumulación de daño falla el control por 20 puntos, perdería 100 PV, aunque el nigromante solo absorbería 20).
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon        50             140                230            320
+Int. R.        6                 9                   12               14
+
+Base: RM 100.
+Intermedio: RM 140.
+Avanzado: RM 180.
+Arcano: RM 240.
+Mantenimiento: No</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Dumah -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Dumah">
@@ -3564,6 +3828,28 @@ Bono: +20 a la habilidad de ataque sin armas.</rdfs:comment>
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Dura">
         <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Dureza"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Las armaduras duras son rígidas y dificultan el movimiento de los presonajes que las utilizan.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#El_Despertar -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#El_Despertar">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Nigromancia"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 100 
+Acción: Activa 
+Tipo: Automático
+Efecto: El Despertar es el más poderoso de los conjuros nigrománticos. Corrompiendo una parte del alma del mundo, el lanzador extiende su sombra por toda la existencia, devolviendo la vida a los muertos y sometiéndolos a su dominio. El Despertar no tiene un radio de acción determinado; afecta por igual a cualquier difunto cuyo nivel no fuese superior a lo que determine el grado del conjuro. Si sus espíritus esperan aún el llamamiento, se levantan como espectros o, en caso contrario, como cadáveres animados. Aquellos seres cuyo gnosis sea al menos 15 puntos superior a su Natura, regresa como no muerto con sus facultades plenas.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       900          2.000            3.500         5.000
+Int. R.       17              18                 19                20
+
+Base: Nivel 4.
+Intermedio: Nivel 8.
+Avanzado: Nivel 12.
+Arcano: Nivel 15l.
+Mantenimiento: 45 / 100 / 175 / 250 Diario</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -3741,6 +4027,28 @@ Mantenimiento: 15 / 20 / 25 / 30 Diario</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Escudo_Espectral -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Escudo_Espectral">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Nigromancia"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 10 
+Acción: Pasiva 
+Tipo: Escudo
+Efecto: Forma un escudo de energía nigromántica, capaz de detener cualquier asalto anímico que afecte a las Resistencias sobrenaturales del personaje, aunque no así de acometidas de carácter físico o ataques que produzcan daños. Permite detener efectos místicos, siempre que estos no obliguen a lanzar una Resistencia contra más de lo que determine el grado del conjuro.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon        40              60                  80             100
+Int. R.        6                9                    11              13
+
+Base: Detiene Resistencias de hasta 140.
+Intermedio: Detiene Resistencias de hasta 180.
+Avanzado: Detiene Resistencias de hasta 220.
+Arcano: Detiene Resistencias de hasta 260.
+Mantenimiento: 5 / 5 / 10 / 15</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Escudo_Luz -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Escudo_Luz">
@@ -3759,6 +4067,28 @@ Intermedio: El escudo tiene 1.000 puntos de Resistencia.
 Avanzado: El escudo tiene 1.800 puntos de Resistencia.
 Arcano: El escudo tiene 3.000 puntos de Resistencia.
 Mantenimiento: 5 / 15 / 20 / 25</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Escudo_Nigromántico -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Escudo_Nigromántico">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Nigromancia"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 46 
+Acción: Pasiva 
+Tipo: Defensa
+Efecto: Empleando la esencia de almas muertas, forma un escudo de energía que protege frente a cualquier clase de ataque.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon         80           160                240             300
+Int. R.         9              11                  13               15
+
+Base: 1.000 puntos de Resistencia.
+Intermedio: 2.000 puntos de Resistencia.
+Avanzado: 3.500 puntos de Resistencia.
+Arcano: 5.000 puntos de Resistencia.
+Mantenimiento: 5 / 10 / 15 / 15</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -4051,6 +4381,28 @@ Mantenimiento: 15 / 20 / 25 / 30</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Estigma_Vampírico -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Estigma_Vampírico">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Nigromancia"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 50 
+Acción: Activa 
+Tipo: Efecto
+Efecto: El personaje sobre el que se lance este conjuro obtiene la capacidad de absorber, automáticamente, un porcentaje del daño que produzca personalmente a sus adversarios. Funciona tanto con ataques físicos como con conjuros de daño directo o poderes equivalentes. En el caso de los seres con acumulación, la cantidad absorbida se divide por el múltiplo de acumulación de la criatura. 
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       140           180                240             300
+Int. R.         9              11                  13               15
+
+Base: 20% de absorción.
+Intermedio: 40% de absorción.
+Avanzado: 60% de absorción.
+Arcano: 100% de absorción.
+Mantenimiento: 15 / 20 / 25 / 30</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Exhausto -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Exhausto">
@@ -4140,6 +4492,27 @@ Beneficio: 1</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Forma_Espectral -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Forma_Espectral">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Nigromancia"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 52 
+Acción: Activa 
+Tipo: Efecto
+Efecto:El cuerpo físico del nigromante se convierte en una crepitante masa espectral, que daña la esencia de cualquier ser vivo que se ponga en contacto con ella.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       100           180                 240            300
+Int. R.       10              12                   14              16
+
+Base: El brujo es inmaterial y sólo puede ser dañado por ataques que afecten energía.
+Intermedio: Como en base, pero aquel que toque al brujo siente un frío de muerte que le obliga a realizar un control de RF o RM contra el doble de la presencia de este y, si falla la tirada, sufrirá un negativo a toda acción y una pérdida de puntos de vida equivalente a la mitad de su nivel de fracaso. Avanzado: Como en Avanzado, pero el brujo obtiene una cantidad de puntos de vida equivalentes a la cantidad que pierde cualquier persona con la que entre en contacto.
+Arcano: Como en avanzado, pero si el objetivo falla la RM o RF por más de 40 puntos muere irremisiblemente.
+Mantenimiento: 10 / 20 / 25 / 30</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Fragilidad -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Fragilidad">
@@ -4176,6 +4549,28 @@ Mantenimiento: 5 / 10 / 15 / 15</rdfs:comment>
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Fuerza">
         <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Característica_Primaria"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La Fuerza evalúa la capacidad del esfuerzo físico del personaje, su musculatura y su vigor. Es la característica que permite levantar grandes pesos, causar mayor daño al golpear o romper objetos.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Fuerza_Vital -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Fuerza_Vital">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Nigromancia"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 62 
+Acción: Activa 
+Tipo: Anímico
+Efecto: Este hechizo absorbe la fuerza vital de un individuo y se la transmite a quien designe el nigromante. El personaje que sea su blanco debe superar un control de RM o perderá un punto de Constitución y de Poder por cada 10 por el que lo falle. Si el lanzador lo desea, el objetivo puede también envejecer tantos años como nivel de fracaso. Los puntos absorbidos permiten al nigromante o, en su defecto, al sujeto que los reciba, recuperar atributos perdidos hasta sus niveles iniciales o rejuvenecer. El personaje al que se le arranque su fuerza vital no la recupera nunca, salvo mediante habilidades sobrenaturales que lo permitan.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       180            240               300             360
+Int. R.         9               12                 15               18
+
+Base: RM 100.
+Intermedio: RM 130.
+Avanzado: RM 160.
+Arcano: RM 190.
+Mantenimiento: No</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -4383,6 +4778,28 @@ Bono: Ninguno.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Vigor">
         <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Hablar_con_los_Muertos -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Hablar_con_los_Muertos">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Nigromancia"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 18 
+Acción: Activa 
+Tipo: Automático
+Efecto: Este hechizo confiere al nigromante la capacidad de comunicarse con almas y espíritus de seres muertos que se encuentren a su alrededor, incluso si no es consciente de su posición exacta. El nivel del espíritu es el que determina si este puede o no escucharle.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon        60              90                 120            150
+Int. R.        6                9                    12               15
+
+Base: Nivel 4.
+Intermedio: Nivel 8.
+Avanzado: Nivel 12.
+Arcano: Nivel 16.
+Mantenimiento: 5 / 5 / 5 / 5</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -5089,6 +5506,50 @@ Beneficio: 1</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Levantar_Cadáveres -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Levantar_Cadáveres">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Nigromancia"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 28 
+Acción: Activa 
+Tipo: Efecto
+Efecto: Mediante la manipulación de energías nigrománticas, el brujo puede animar cadáveres y convertirlos en zombis o esqueletos bajo su control. Los muertos no conservan las habilidades especiales o conocimientos que tenían en vida, dado que son sólo remedos de carne y hueso de su anterior condición. Aun así, mantienen sus capacidades básicas, como armas naturales y algunas de sus características físicas. El poder y resistencia de la criatura varía dependiendo de su cuerpo. Por ejemplo, el cadáver de un oso sería considerablemente más peligroso que el de un ser humano. Como referencia, el Director de Juego tiene a su disposición las fichas de zombis básicos que aparecen en el bestiario. Puede animar entre una o varias criaturas hasta un valor de presencia, siempre que ninguno de los no muertos levantados supere el nivel que determina el grado del conjuro.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon         80            180                300            450
+Int. R.         7               10                  13              15
+
+Base: 100 puntos de presencia (Nivel máximo 0).
+Intermedio: 300 puntos de presencia (Nivel máximo 1).
+Avanzado: 600 puntos de presencia (Nivel máximo 2).
+Arcano: 1.000 puntos de presencia (Nivel máximo 3).
+Mantenimiento: 10 / 20 / 25 / 30 Diario</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Levantar_Espectros -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Levantar_Espectros">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Nigromancia"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 60 
+Acción: Activa 
+Tipo: Efecto
+Efecto: Dominando las almas de los muertos, el nigromante obtiene la capacidad de pervertir sus esencias y convertirlas en espectros a su servicio. Estos fantasmas conservan una pequeña parte de sus capacidades en vida, aunque pierden la gran mayoría de sus antiguos poderes y atributos en el proceso. Un espectro, alzado por este hechizo reduce a la mitad el nivel que tenía mientras vivía (redondeado hacia arriba), aunque utiliza las reglas generales de los espíritus no muertos obteniendo 100 PD adicionales que el brujo empleará para darle los poderes que considere apropiados como un ser con Gnosis 20. Este hechizo sólo funciona sobre almas recién fallecidas y que aún esperen el llamamiento. Puede afectar a varios espectros a la vez, siempre y cuando la suma de sus presencias no supere lo que determine el grado del conjuro.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       200            240               280            320
+Int. R.       10              12                 14               16
+
+Base: Nivel máximo del espíritu 1 / Suma total de presencias 100.
+Intermedio: Nivel máximo del espíritu 2 / Suma total de presencias 160.
+Avanzado: Nivel máximo del espíritu 4 / Suma total de presencias 220.
+Arcano: Nivel máximo del espíritu 6 / Suma total de presencias 280.
+Mantenimiento: 20 / 25 / 30 / 35 Diario</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Agua -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Agua">
@@ -5173,6 +5634,28 @@ Beneficio: 1</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Tierra">
         <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Llamar_a_los_Muertos -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Llamar_a_los_Muertos">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Nigromancia"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 58 
+Acción: Activa 
+Tipo: Efecto
+Efecto: Este conjuro atrae hasta el nigromante las almas de personas fallecidas o de espectros. El brujo es quien elige a qué espíritu llama, aunque en el caso de que este no pueda responderle, es posible que se presente alguna otra alma en su lugar. Llamar a los Muertos sólo funciona con espíritus que permanecen atados al mundo o con criaturas espectrales, por lo que no tiene poder sobre almas que ya hayan transmigrado.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       100           140                160             180
+Int. R.         9              12                  14               16
+
+Base: Nivel máximo 3.
+Intermedio: Nivel máximo 6.
+Avanzado: Nivel máximo 9.
+Arcano: Nivel máximo 12.
+Mantenimiento: No</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -5393,6 +5876,72 @@ Mantenimiento: 5 / 10 / 10 / 15</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Marchitar_la_Vida -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Marchitar_la_Vida">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Nigromancia"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 42 
+Acción: Activa 
+Tipo: Automático
+Efecto: Este conjuro crea un área de energía nigromántica que mata de inmediato cualquier forma de vida inferior que se encuentre alrededor del brujo, como pequeños animales y plantas. Todo ser vivo con una presencia 20 o inferior se pudre o marchita a gran velocidad sin derecho a ningún control de Resistencia.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       100            140               180             220
+Int. R.         9               12                 14                16
+
+Base: 10 metros de radio.
+Intermedio: 20 metros de radio.
+Avanzado: 30 metros de radio.
+Arcano: 50 metros de radio.
+Mantenimiento: 10 / 15 / 20 / 25 Diario</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Matar -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Matar">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Nigromancia"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 66 
+Acción: Activa 
+Tipo: Anímico
+Efecto: Este conjuro detiene las funciones vitales de una persona, produciéndole de inmediato la muerte. Este hechizo sólo funciona sobre seres vivos, por lo que resulta virtualmente inútil contra espíritus o Seres Entre Mundos inanimados. Cualquier afectado deberá superar un control de RM o RF si quiere sobrevivir.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       100           140                180             220
+Int. R.       10              12                  14               16
+
+Base: RM o RF 80.
+Intermedio: RM o RF 100.
+Avanzado: RM o RF 120.
+Arcano: RM o RF 140.
+Mantenimiento: No</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Materia_Prima -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Materia_Prima">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Nigromancia"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 92 
+Acción: Activa 
+Tipo: Efecto
+Efecto: Este hechizo genera las energías corruptas que utiliza la magia nigromántica para alzar cadáveres y espectros, permitiendo al lanzador crear de la nada materia prima con la que levantar cadáveres posteriormente. El conjuro forma material nigromántico equivalente a cierta cantidad de cuerpos humanos muertos o, en su defecto, a una cantidad menor de otras criaturas más poderosas.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       350            500                900          1.500
+Int. R.       12              14                   16              18
+
+Base: 1.000 cuerpos humanos.
+Intermedio: 10.000 cuerpos humanos.
+Avanzado: 100.000 cuerpos humanos.
+Arcano: 1.000.000 de cuerpos humanos.
+Mantenimiento: No</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Melkaiah -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Melkaiah">
@@ -5484,6 +6033,28 @@ Mantenimiento: 5 / 5 / 5 / 10</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Modificación_Nigromántica -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Modificación_Nigromántica">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Nigromancia"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 56 
+Acción: Activa 
+Tipo: Efecto
+Efecto: La entidad no muerta que sea blanco de este hechizo se alimenta de su energía, adquiriendo temporalmente nuevos poderes y habilidades. A términos de juego, un no muerto obtiene PD adicionales para obtener cualquiera de los Poderes Especiales detallados en el Capítulo 26, como si se tratase de una criatura con Gnosis 25. No puede usarse sobre seres vivos. Los efectos de este hechizo no se superponen, y sólo puede afectar uno de ellos a la vez a un mismo sujeto.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       100            200                300            400
+Int. R.         9               11                  13              16
+
+Base: 100 PD.
+Intermedio: 200 PD.
+Avanzado: 300 PD.
+Arcano: 400 PD.
+Mantenimiento: 10 / 20 / 30 / 40</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Mudo -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Mudo">
@@ -5567,11 +6138,55 @@ Mantenimiento: No</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Más_Allá -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Más_Allá">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Nigromancia"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 6 
+Acción: Activa 
+Tipo: Efecto
+Efecto: Permite ver ciertas clases de seres espirituales invisibles al ojo humano.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon        30              60                  90             120
+Int. R.        6                 8                   10              12
+
+Base: Permite ver seres espectrales.
+Intermedio: Permite ver seres espectrales y almas que esperan El Llamamiento.
+Avanzado: Permite ver toda clase de ser espiritual.
+Arcano: Permite ver toda clase de ser espiritual así como cualquier cosa de carácter sobrenatural que haya en el ambiente.
+Mantenimiento: 5 / 10 / 10 / 15</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Místico -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Místico">
         <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arquetipo"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Este arquetipo recoge aquellas categorías que se han adentrado en el mundo de lo sobrenatural. Son los personajes con la capacidad de invocar criaturas místicas o moldear la realidad con sus conjuros. Su especialidad son las habilidades primarias sobrenaturales.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Necromitud -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Necromitud">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Nigromancia"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 22 
+Acción: Activa 
+Tipo: Efecto
+Efecto: Hace recuperar puntos de vida a una criatura nigromántica. No tiene ningún efecto sobre seres vivos.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon         80            100               120             140
+Int. R.         8               10                 12               14
+
+Base: 50 puntos de vida.
+Intermedio: 100 puntos de vida.
+Avanzado: 150 puntos de vida.
+Arcano: 250 puntos de vida.
+Mantenimiento: No</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -6031,6 +6646,28 @@ Mantenimiento: No</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Paralización_Nigromántica -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Paralización_Nigromántica">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Nigromancia"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 20 
+Acción: Activa 
+Tipo: Anímico
+Efecto: Este conjuro congela la esencia sobrenatural de las criaturas no muertas, conteniéndolas y haciendo que sean incapaces de moverse. Cualquier ser nigromántico, en un radio respecto al brujo, queda automáticamente sometido a paralización completa si no es capaz de superar un control de RM.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon         60            90                  120            150
+Int. R.         7             10                    13              15
+
+Base: 10 metros de radio / RM 120.
+Intermedio: 25 metros de radio / RM 140.
+Avanzado: 50 metros de radio / RM 160.
+Arcano: 100 metros de radio / RM 180.
+Mantenimiento: 10 / 10 / 15 / 15</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Percepcion -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Percepcion">
@@ -6108,6 +6745,28 @@ Mantenimiento: 5 / 10 / 15 / 15</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Perversión_de_Vida -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Perversión_de_Vida">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Nigromancia"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 72 
+Acción: Activa 
+Tipo: Anímico
+Efecto: Este conjuro corrompe la esencia de un ser vivo y detiene sus funciones físicas, transformándolo de inmediato en un ente no muerto. El personaje afectado mantendrá las mismas características y habilidades que tenía en vida, aunque en su estado de cadáver animado conseguirá, naturalmente, la ventaja de exención física. Para evitar la transformación, es necesario superar una RM o RF.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       180            240               300            360
+Int. R.       10               13                 15              18
+
+Base: RM o RF 100.
+Intermedio: RM o RF 140.
+Avanzado: RM o RF 180.
+Arcano: RM o RF 220.
+Mantenimiento: No</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Poder -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Poder">
@@ -6151,6 +6810,28 @@ Intermedio: Afecta la los conjuros de Grado Intermedio.
 Avanzado: Afecta la los conjuros de Grado Avanzado.
 Arcano: Afecta la los conjuros de Grado Arcano.
 Mantenimiento: 10 / 20 / 30 / 40</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Pozo_de_Vida -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Pozo_de_Vida">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Nigromancia"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 86 
+Acción: Activa 
+Tipo: Automático
+Efecto: Como un vacío que se alimenta del daño que sufren los demás, el nigromante absorbe la mitad de los puntos de vida perdidos por los seres vivos que se encuentren a su alrededor, sin posible resistencia alguna. Estos PV le sirven para restituir cualquier clase de herida que haya sufrido. 
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       300            400               500            600
+Int. R.         9               12                 14               16
+
+Base: 50 metros de radio.
+Intermedio: 250 metros de radio.
+Avanzado: 500 metros de radio.
+Arcano: 1 kilómetro de radio.
+Mantenimiento: 15 / 20 / 25 / 30</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -6324,6 +7005,28 @@ Intermedio: +200 PD / hasta 100 PD opcionales en desventajas.
 Avanzado: +300 PD / hasta 200 PD opcionales en desventajas.
 Arcano: +400 PD / hasta 200 PD opcionales en desventajas.
 Mantenimiento: No</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Quimera_Nigromántica -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Quimera_Nigromántica">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Nigromancia"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 70 
+Acción: Activa 
+Tipo: Efecto
+Efecto: Permite al mago componer una criatura no muerta sometida a su control. El ente será desarrollado como un Ser Entre Mundos con Gnosis 25. Sin embargo, el nigromante no puede crear a la criatura de la nada, por lo que para desarrollarla debe reunir partes de diversos cadáveres con los que darle forma. Para otorgarle cualquier poder o habilidad esencial que desee, primero ha de conseguir cuerpos de seres que los tuvieran. Si, por ejemplo, quiere dotarle del poder Vuelo Natural, antes debería conseguir el cadáver de una criatura que tuviera esa capacidad exacta. Puesto que la existencia de la quimera se encuentra directamente atada al alma del nigromante, para calcular su nivel máximo se emplean las mismas reglas que en el conjuro Crear Ser, de la vía de Creación. 
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       250            360               500             800
+Int. R.        9                12                 15               17
+
+Base: Nivel 2.
+Intermedio: Nivel 6.
+Avanzado: Nivel 10.
+Arcano: Nivel 13.
+Mantenimiento: 50 / 80 / 100 / 160 Diario</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -6533,6 +7236,28 @@ Mantenimiento: 10 / 10 / 15 / 25 Diario</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Regresar_de_Entre_los_Muertos -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Regresar_de_Entre_los_Muertos">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Nigromancia"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 98 
+Acción: Activa 
+Tipo: Efecto
+Efecto: Este hechizo devuelve al mundo el espíritu de una criatura difunta, incluso si ha regresado al flujo de almas o su esencia ha sido dispersada. El personaje regresa como una criatura no muerta, pero conservando intactas su alma y su esencia. Si el cuerpo del fallecido aún sigue existiendo, regresará a él. En caso contrario, también puede encarnar uno nuevo o convertirse en un espectro inmaterial. Como en otros hechizos similares, el tiempo que haya transcurrido entre la muerte y su regreso condicionan la efectividad del conjuro, tal y como indican los diferentes grados de poder. No es posible resucitar un alma que ya se haya reencarnado o que fuese descreada o destruida.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       400            800             1.600         3.200
+Int. R.       16              17                 18               19
+
+Base: Nivel 4 máximo / Un mes como máximo desde su muerte.
+Intermedio: Nivel 8 máximo / Un año como máximo desde su muerte.
+Avanzado: Nivel 12 máximo / Una década como máximo desde su muerte.
+Arcano: Nivel 16 máximo / Un siglo como máximo desde su muerte.
+Mantenimiento: No</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Reino_de_Tinieblas -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Reino_de_Tinieblas">
@@ -6646,6 +7371,28 @@ Bono: +20 a la habilidad de esquiva y parada sin armas.</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Sentir_la_Muerte -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Sentir_la_Muerte">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Nigromancia"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 2 
+Acción: Activa 
+Tipo: Detección
+Efecto: El nigromante detecta, automáticamente, cualquier fallecimiento que ocurra en un radio a su alrededor. Este hechizo es también capaz de revelar criaturas no muertas, aunque estas tendrán derecho a una RM para evitar ser encontradas.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon         30             60                  90             120
+Int. R.         6                8                   10              12
+
+Base: 100 metros de radio / RM 120.
+Intermedio: 250 metros de radio / RM 140.
+Avanzado: 500 metros de radio / RM 160.
+Arcano: 1 kilómetro de radio / RM 180.
+Mantenimiento: 5 / 10 / 10 / 15</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Seraphite -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Seraphite">
@@ -6689,6 +7436,28 @@ Mantenimiento: No</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Sexo">
         <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Señor_de_los_Muertos -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Señor_de_los_Muertos">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Nigromancia"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 96 
+Acción: Activa 
+Tipo: Automático
+Efecto: El Señor de los Muertos extiende su presencia por el mundo, obteniendo el control absoluto de todas las criaturas no muertas que se encuentren a su alrededor. Cualquiera de estos seres que esté dentro del área del conjuro deberá superar una RM o será completamente controlado por el lanzador. Si pasa la Resistencia, ya no tiene que volver a realizarla. Los afectados tienen derecho a un nuevo control únicamente si alteran sus Resistencias.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       300            600              1.000         2.000
+Int. R.       12              14                   16              18
+
+Base: 100 kilómetros de radio / 140 RM.
+Intermedio: 1.000 kilómetros de radio / 160 RM.
+Avanzado: 10.000 kilómetros de radio / 180 RM.
+Arcano: 100.000 kilómetros de radio / 200 RM.
+Mantenimiento: 30 / 60 / 100 / 200 Diario</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -6807,6 +7576,28 @@ Beneficio: 1</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Sostenimiento -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Sostenimiento">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Nigromancia"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 90 
+Acción: Activa 
+Tipo: Efecto
+Efecto: Afecta a la esencia de una o varias criaturas no muertas que se hallen sostenidas por un conjuro, permitiéndoles seguir existiendo incluso después de que el nigromante deje de pagar su mantenimiento. Si, por ejemplo, el hechicero utiliza sostenimiento sobre un zombi animado por un sortilegio de levantar cadáveres, el ser seguirá activo una vez que el hechizo haya finalizado. Afecta a tantos no muertos como desee el nigromante, siempre y cuando la suma de sus presencias no sea superior a lo que determine el grado del conjuro.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       200           300                400             500
+Int. R.       10             13                   16               18
+
+Base: Hasta 60 de presencia.
+Intermedio: Hasta 120 de presencia.
+Avanzado: Hasta 240 de presencia.
+Arcano: Hasta 480 de presencia.
+Mantenimiento: No</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Sueño_profundo -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Sueño_profundo">
@@ -6816,6 +7607,28 @@ Beneficio: 1</rdfs:comment>
 Efectos: El personaje aplicará un penalizador de –200 a cualquier tirada de percepción mientras duerme. Durante los diez asaltos posteriores a su despertar, aplicará un penalizador de –40 a toda acción.
 
 Beneficio: 1</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Superar_la_Muerte -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Superar_la_Muerte">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Nigromancia"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 80 
+Acción: Activa 
+Tipo: Efecto
+Efecto: Este conjuro permite a su objetivo vencer a la propia muerte convirtiéndose en un no muerto sin ataduras, una entidad capaz de sostenerse en el mundo con su mero poder. El sortilegio debe lanzarse en el instante en el que el personaje fallece o, en su defecto, escasos segundos antes (ya que por sí mismo no es capaz de producirle la muerte). El brujo es libre de decidir si se convierte en un Ser Entre Mundos o en un Espíritu, aunque en un caso u otro, tendrá Gnosis 25. El conjuro le confiere PD adicionales para elegir entre cualquier habilidad esencial o poder descrito en el Capítulo 26; aunque si opta por ser un espectro, deberá invertir 100 PD en el proceso. También puede escoger PD en desventajas y penalizadores, con los que obtendrá puntos adicionales. El exceso de PD aumenta su nivel del modo descrito en el hechizo Quimera de la vía de Creación. Superar la muerte sólo funciona sobre seres vivos en el momento de morir, por lo que no tiene efecto sobre criaturas de origen nigromántico. 
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       250            500             1.000          2.500
+Int. R.       10               13                 15               17
+
+Base: +100 PD / hasta 100 PD opcionales en desventajas.
+Intermedio: +200 PD / hasta 100 PD opcionales en desventajas.
+Avanzado: +300 PD / hasta 200 PD opcionales en desventajas.
+Arcano: +400 PD / hasta 200 PD opcionales en desventajas.
+Mantenimiento: No</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -7267,6 +8080,28 @@ Bono: Ninguno.</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Tierra_Maldita -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tierra_Maldita">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Nigromancia"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 88 
+Acción: Activa 
+Tipo: Efecto
+Efecto: Corrompiendo un pequeño fragmento del mundo, el brujo encanta una zona de terreno, haciendo que cualquier ser que fallezca en su interior se levante al instante como un no muerto bajo su control. Los difuntos se convierten automáticamente en cadáveres animados, aunque aquellos seres naturales cuyo Gnosis sea al menos 5 puntos superior a su natura, se levanta como un espectro (como si hubiera sido afectado por el conjuro de nivel 60 de esta vía). Las criaturas sólo pueden actuar mientras se encuentren en el interior de la tierra maldita. Si salen de ella, la magia que los sustenta desaparece. El conjuro afecta una zona de terreno que permanece estática en el lugar donde fue lanzada.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       350           600                900           1.500
+Int. R.        9               12                  14                16
+
+Base: 1 kilómetro de radio.
+Intermedio: 10 kilómetro de radio.
+Avanzado: 100 kilómetro de radio.
+Arcano: 1.000 kilómetro de radio.
+Mantenimiento: 35 / 60 / 90 / 150</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Tipo_Ataque -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tipo_Ataque">
@@ -7613,6 +8448,28 @@ Intermedio: 15 metros de radio / 500 metros de succión / 160 de RM y RF.
 Avanzado: 25 metros de radio / 1 kilómetro de succión / 200 de RM y RF.
 Arcano: 50 metros de radio / 3 kilómetros de succión / 240 de RM y RF.
 Mantenimiento: 25 / 40 / 45 / 55</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Vasallaje -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vasallaje">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Nigromancia"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 76 
+Acción: Activa 
+Tipo: Anímico
+Efecto: Ata eternamente la esencia de una criatura no muerta a la del nigromante, convirtiendo automáticamente al brujo en su superior jerárquico, y haciendo que la existencia de la entidad dependa de este. Aunque este conjuro no otorga realmente al nigromante control sobre la criatura, la vida del vasallo está unida a la de su maestro, conllevando que si el “amo” es destruido, también perezca el “súbdito”. Un no muerto puede resistirse al vasallaje superando una RM o RF, pero una vez lograda la unión no puede romperse de ningún modo.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       250            360               450             540
+Int. R.       10              13                  15               18
+
+Base: RM o RF 100.
+Intermedio: RM o RF 140.
+Avanzado: RM o RF 180.
+Arcano: RM o RF 220.
+Mantenimiento: No</rdfs:comment>
     </owl:NamedIndividual>
     
 
