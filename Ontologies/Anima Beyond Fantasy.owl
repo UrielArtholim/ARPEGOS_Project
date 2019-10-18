@@ -732,6 +732,14 @@
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Tipos_Vía -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tipos_Vía">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Mágica"/>
+    </owl:Class>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Transporte -->
 
     <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Transporte">
@@ -929,6 +937,28 @@ Mantenimiento: 20 / 40 / 50 / 60</rdfs:comment>
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Agilidad">
         <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Característica_Primaria"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La Agilidad representa la habilidad física del personaje, su velocidad de desplazamiento y su equilibrio. Mide su habilidad acrobática o lo bien que esquivará ataques. Junto con la Destreza, es la característica que mide su velocidad de reacción.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Agravar_Daño -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Agravar_Daño">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Destrucción"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 20 
+Acción: Pasiva 
+Tipo: Efecto
+Efecto: Aumenta el daño base que produzca una fuente de ataque de cualquier clase: física o sobrenatural. Así pues, si un luchador acomete con un arma con daño base 60, empleando este conjuro en grado base el hechicero podrá aumentarlo hasta 90. A pesar de ser un sortilegio pasivo, debe de ser ejecutado antes de que se lancen los dados, para calcular el ataque y la defensa de los oponentes.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon         60            100                150            220
+Int. R.         6                9                   12              15
+
+Base: +30 al daño.
+Intermedio: +50 al daño.
+Avanzado: +90 al daño.
+Arcano: +120 al daño.
+Mantenimiento: No</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -1286,6 +1316,28 @@ Mantenimiento: 5 / 10 / 15 / 20</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Arrojar_de_los_Cielos -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arrojar_de_los_Cielos">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Destrucción"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 88 
+Acción: Activa T
+ipo: Anímico
+Efecto: Despojándolo de su propia esencia, este hechizo arrebata la presencia divina de un ente, transformándolo temporalmente en un ser terrenal. Aplicado a reglas de juego, la criatura afectada por el conjuro disminuirá el valor de su Gnosis. Esta reducción afecta a los poderes o habilidades del ente que dependan de dicha capacidad, por lo que no podrá utilizarlas mientras se mantenga su pérdida. No es posible repetir la Resistencia de ningún modo mientras el conjuro siga activo.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       300            600              1.000         2.000
+Int. R.       12              14                   16               18
+
+Base: -5 a su Gnosis, RM 120.
+Intermedio: -10 a su Gnosis, RM 160.
+Avanzado: -15 a su Gnosis, RM 200.
+Arcano: -20 a su Gnosis, RM 260.
+Mantenimiento: 15 / 30 / 50 / 100 Diario</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Arte_Marcial -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arte_Marcial">
@@ -1424,6 +1476,28 @@ Mantenimiento: 15 / 20 / 30 / 40 Diario</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Aura_de_Destrucción -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Aura_de_Destrucción">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Destrucción"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 50 
+Acción: Activa 
+Tipo: Efecto
+Efecto: Encanta un objeto o lugar, creando a su alrededor un aura de magia que destruye todo lo que se pone en contacto con ella. Cualquiera que la toque deberá superar una RM, o perderá una cantidad de puntos de vida equivalente a su nivel de fracaso. La máxima presencia de objeto afectado, así como la superficie afectada (en caso de tratarse de un lugar) no puede ser superior a lo que determine el grado del conjuro. Los efectos de este hechizo afectan incluso a su propio lanzador.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       150            200               250             350
+Int. R.         8               10                 12                15
+
+Base: RM 80 / Presencia máxima 60 / 1 metro de diámetro.
+Intermedio: RM 100 / Presencia máxima 90 / 5 metros de diámetro.
+Avanzado: RM 120 / Presencia máxima 120 / 15 metros de diámetro.
+Arcano: RM 150 / Presencia máxima 150 / 25 metros de diámetro.
+Mantenimiento: 15 / 20 / 25 / 30 Diario</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Aura_de_Protección -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Aura_de_Protección">
@@ -1508,6 +1582,28 @@ Mantenimiento: 5 / 10 / 15 / 15</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Bloquear_Aprendizaje -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Bloquear_Aprendizaje">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Destrucción"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 56 
+Acción: Activa 
+Tipo: Anímico
+Efecto: Este hechizo estanca la capacidad de aprendizaje de un individuo, impidiéndole completamente evolucionar o adquirir nuevos conocimientos. Mientras un personaje se encuentre bajo los efectos de este conjuro, no podrá adquirir puntos de experiencia ni desarrollar ninguna de sus habilidades o poderes. Para evitar los efectos de este conjuro, deberá superarse una RM. Sólo es posible repetir la Resistencia una vez al día.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon         80            180                300            500
+Int. R.         7                9                   12              15
+
+Base: RM 120.
+Intermedio: RM 160.
+Avanzado: RM 200.
+Arcano: RM 240.
+Mantenimiento: 15 / 20 / 25 / 30 Diario</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Brujería -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Brujería">
@@ -1581,6 +1677,28 @@ Mantenimiento: 10 / 10 / 15 / 25 Diario</rdfs:comment>
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Cansancio">
         <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Capacidad_Física"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El Cansancio está relacionado con las acciones físicas que realiza un personaje. Cada vez que alguien hace esfuerzos corporales, va agotándose poco a poco. Este atributo depende directamente de la Constitución y es equivalente al valor de dicha característica.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Caos -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Caos">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Destrucción"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 98 
+Acción: Activa 
+Tipo: Automático
+Efecto: Caos es un conjuro que destruye los pilares de la propia realidad. Al desencadenarlo, el lanzador desmorona el orden en el mundo, alterando el equilibrio de todas las cosas de un modo completamente imprevisto. En el interior de una zona de caos nada funciona como debería y todos los acontecimientos son tergiversados de un modo innatural. Por poner algunos ejemplos, Caos podría afectar a la gravedad, haciendo que a veces las cosas fuesen ligeras como plumas y otras pesadas como el plomo, o bien podría afectar al clima, causando ventiscas heladas a unos escasos metros de donde se desencadenan vendavales y olas de calor. Pero este hechizo no afecta únicamente a elementos naturales, sino que influencia a sentimientos y a la reacción de las personas, provocando que parejas se odien a muerte o enemigos irreconciliables decidan hacer las paces. Incluso puede afectar al mismo paso del tiempo, haciendo que fluya a mayor o menor velocidad (aunque no permite viajar hacia el pasado). Es decir, Caos es capaz de afectar a prácticamente cualquier matiz de la realidad imaginable. El lanzador puede designar qué aspecto de la existencia en concreto quiere alterar, o por el contrario, transformarla toda completamente. De todos modos, este conjuro no le otorga control sobre lo que está cambiando, por lo que el resultado y devenir de los acontecimientos serán, como el nombre del conjuro indica, completamente caóticos. No existe resistencia posible, y afecta a todos aquellos seres cuyo Gnosis no sea suficientemente elevado. La única excepción son individuos cuyo Gnosis sea 20 puntos superior a su Natura.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       700          1.200            2.000         5.000
+Int. R.       14               16                 18               20
+
+Base: 100 kilómetros de radio / Afecta hasta Gnosis 10.
+Intermedio: 1.000 kilómetros de radio / Afecta hasta Gnosis 20.
+Avanzado: 10.000 kilómetros de radio / Afecta hasta Gnosis 30.
+Arcano: Afecta toda la creación / Afecta hasta Gnosis 40.
+Mantenimiento: 70 / 80 / 90 / 100 Diario</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -2504,6 +2622,28 @@ Mantenimiento: No</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Cúpula_de_Destrucción -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Cúpula_de_Destrucción">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Destrucción"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 46 
+Acción: Activa 
+Tipo: Ataque
+Efecto: Desencadena una cúpula de energía sobrenatural, que estalla en un área. El ataque se realiza en la TA de energía y no es posible seleccionar blancos en su interior.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       100           180                 240            300
+Int. R.        7               10                   12               15
+
+Base: 10 metros de radio / Daño 80.
+Intermedio: 50 metros de radio / Daño 120.
+Avanzado: 100 metros de radio / Daño 160.
+Arcano: 150 metros de radio / Daño 200.
+Mantenimiento: No</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Debilidad_física -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Debilidad_física">
@@ -2526,6 +2666,72 @@ Beneficio: 1</rdfs:comment>
 Efectos: El Director de Juego deberá interpretar el alcance de esta desventaja. En un grupo, alguien desafortunado será siempre el que caiga en la trampa aleatoria y el primero al que ataquen cuando el azar decida quién recibe el primer impacto.
 
 Beneficio: 1</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Desatar_Vínculos -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Desatar_Vínculos">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Destrucción"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 38 
+Acción: Activa 
+Tipo: Anímico
+Efecto: Mediante este conjuro, el brujo deshace los lazos que permiten a los convocadores tener cualquier tipo de dominio sobre sus criaturas. Puede utilizarse indistintamente sobre el ser o su controlador, pero en cualquier caso, será el creador del vínculo quien deba realizar el control de Resistencia. Si se lanza sobre la criatura, sólo afectará al lazo que la ata a ella, mientras que si se emplea sobre el convocador, el hechizo romperá un vínculo de control o atadura adicional por cada 10 puntos por los que este no supere una RM. Los familiares pueden aplicar un bonificador de +40 a sus RM.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       100            200               300             500
+Int. R.         8               10                 13               16
+
+Base: RM 120.
+Intermedio: RM 140.
+Avanzado: RM 160.
+Arcano: RM 200.
+Mantenimiento: No</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Descarga -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Descarga">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Destrucción"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 36 
+Acción: Activa 
+Tipo: Ataque
+Efecto: Proyecta una descarga mística. El ataque se realiza en la TA de energía.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon         80            140                220            300
+Int. R.         6                9                   12               15
+
+Base: Daño 100.
+Intermedio: Daño 150.
+Avanzado: Daño 200.
+Arcano: Daño 250.
+Mantenimiento: No</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Descarga_Mayor -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Descarga_Mayor">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Destrucción"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 62 
+Acción: Activa 
+Tipo: Ataque
+Efecto: Proyecta una poderosa descarga mística. El ataque se realiza en la TA de energía.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       150            300               450             600
+Int. R.        8                10                 13                16
+
+Base: Daño 150.
+Intermedio: Daño 300.
+Avanzado: Daño 450.
+Arcano: Daño 600.
+Mantenimiento: No</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -2582,6 +2788,72 @@ Mantenimiento: No</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Descrear -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Descrear">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Destrucción"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 100 
+Acción: Activa 
+Tipo: Automático
+Efecto: Este conjuro permite al hechicero designar un aspecto de la existencia, tan complejo como una ciudad o una raza, o tan simple como un individuo en concreto, y hacer sencillamente que deje de existir. El elemento descreado será borrado de la realidad con todas las consecuencias que esto implica, de modo que nunca hubiera existido. Nadie que lo conociese lo recordaría, y todos los sucesos en los que él pudo intervenir serán modificados como si no hubiera estado presente, incluso devolviendo la vida a aquellos que hayan perecido por su causa (siempre y cuando sus almas no hayan sido destruidas). Únicamente las entidades con Gnosis mayor de 40 o 20 puntos por encima de su Natura serán conscientes del cambio. Tan sólo es posible realizar un control de RM para evitar este efecto, incluso si se afecta a multitud de blancos o individuos. Para saber quién debe realizar el control, se designará a aquel que posea la mayor Resistencia en ese momento en concreto. No se pueden descrear elementos del pasado, sino cosas que estén presentes en la actualidad. 
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon     1.000         2.500            5.000        10.000
+Int. R.       17               18                 19               20
+
+Base: RM 140.
+Intermedio: RM 160.
+Avanzado: RM 200.
+Arcano: RM 240.
+Mantenimiento: No</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Deshacer_Estados -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Deshacer_Estados">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Destrucción"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 42 
+Acción: Activa 
+Tipo: Efecto
+Efecto: Deshace inmediatamente cualquiera de los estadosde alteración. Podrá afectar a tantos individuos como se desee, siempre y cuando la suma de sus presencias no superen el valor determinado por el grado del conjuro. Este hechizo no puede deshacer los penalizadores a la acción provocados por un crítico. Si desea resistirse, es necesario superar una RM.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       120            180                240            300
+Int. R.        7                10                  12              15
+
+Base: RM 120 / Presencia máxima 120.
+Intermedio: RM 140 / Presencia máxima 200.
+Avanzado: RM 160 / Presencia máxima 300.
+Arcano: RM 200 / Presencia máxima 400.
+Mantenimiento: No</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Desmantelar -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Desmantelar">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Destrucción"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 6 
+Acción: Activa 
+Tipo: Efecto
+Efecto: Desmantela un objeto que esté formado por varias piezas. Solo afecta a cosas inanimadas.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon        40              80                 120            150
+Int. R.        5                 8                   10              12
+
+Base: Presencia máxima 20.
+Intermedio: Presencia máxima 40.
+Avanzado: Presencia máxima 60.
+Arcano: Presencia máxima 80.
+Mantenimiento: No</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Destreza -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Destreza">
@@ -2622,6 +2894,94 @@ Mantenimiento: 10 / 20 / 25 / 30</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Destrucción_Mayor -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Destrucción_Mayor">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Destrucción"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 92 
+Acción: Activa 
+Tipo: Efecto
+Efecto: Otorga la capacidad de destruir parte del mundo material a gran escala, desintegrando incluso grandes construcciones, como ciudades enteras, o amplias zonas de terreno. Puede afectar automáticamente a cualquier número de cosas inorgánicas, siempre que no supere la presencia determinada por el grado del conjuro.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       350            600               900           1.500
+Int. R.       12              14                  16               18
+
+Base: Presencia máxima 100.
+Intermedio: Presencia máxima 160.
+Avanzado: Presencia máxima 200.
+Arcano: Presencia máxima 240.
+Mantenimiento: No</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Destrucción_Menor -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Destrucción_Menor">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Destrucción"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 10 
+Acción: Activa 
+Tipo: Efecto
+Efecto: Afecta a la esencia de un objeto sin vida, destruyéndolo completamente, siempre que su presencia no sea superior a lo permitido por el grado del conjuro.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon         50             90                 140             180
+Int. R.         6               9                    11               13
+
+Base: Presencia máxima 20.
+Intermedio: Presencia máxima 40.
+Avanzado: Presencia máxima 60.
+Arcano: Presencia máxima 80.
+Mantenimiento: No</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Destrucción_de_Almas -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Destrucción_de_Almas">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Destrucción"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 96 
+Acción: Activa 
+Tipo: Automático
+Efecto: El poder que desencadena la destrucción de almas arrasa la materia espiritual que se encuentra alrededor del lanzador, acabando con la existencia de todo aquel que no sea capaz de superar sus efectos. Cualquier individuo que esté dentro del área donde el conjuro se desencadena, deberá realizar automáticamente una RM, o su alma quedará completamente descompuesta y morirá de inmediato.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       500            800              1.500         2.500
+Int. R.       13              15                   17              19
+
+Base: RM 100 / 5 kilómetros de radio.
+Intermedio: RM 140 /50 kilómetros de radio.
+Avanzado: RM 180 / 250 kilómetros de radio.
+Arcano: RM 220 / 1.000 kilómetros de radio.
+Mantenimiento: No</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Destrucción_de_Ki -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Destrucción_de_Ki">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Destrucción"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 28 
+Acción: Activa 
+Tipo: Anímico
+Efecto: La magia que desencadena este conjuro se introduce en el alma de un individuo, deshaciendo la reserva de Ki que posea. El afectado deberá superar una RM o perderá una cantidad de puntos de Ki equivalente al nivel de fracaso.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon         80            140                220            300
+Int. R.         6                9                   12               15
+
+Base: 140 RM.
+Intermedio: 160 RM.
+Avanzado: 180 RM.
+Arcano: 220 RM.
+Mantenimiento: No</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Destrucción_de_Luz -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Destrucción_de_Luz">
@@ -2644,6 +3004,72 @@ Mantenimiento: 10 / 10 / 15 / 25</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Destrucción_de_Magia -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Destrucción_de_Magia">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Destrucción"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 18 
+Acción: Pasiva 
+Tipo: Efecto
+Efecto: Destruye un sortilegio hasta cierto valor de Zeon. Dado que es un conjuro pasivo, puede emplearse para anular cualquier hechizo que se lance en el mismo asalto en el que se usa la Destrucción de Magia.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon         60            150                300            500
+Int. R.         6                9                   12               16
+
+Base: Valor zeónico 50.
+Intermedio: Valor zeónico 120.
+Avanzado: Valor zeónico 200.
+Arcano: Valor zeónico 350.
+Mantenimiento: No</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Destrucción_de_Matrices -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Destrucción_de_Matrices">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Destrucción"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 22 
+Acción: Pasivo 
+Tipo: Efecto
+Efecto: Este hechizo deshace las energías matriciales de un poder psíquico. Dado que es un conjuro pasivo, puede emplearse para anular cualquier poder psíquico que se utilice en el mismo asalto en que se usa la destrucción de Matrices.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon         80            140                240            320
+Int. R.         6                9                   12               16
+
+Base: Dificultad Media (80).
+Intermedio: Dificultad Muy Difícil (140).
+Avanzado: Dificultad Casi Imposible (240).
+Arcano: Dificultad Inhumano (320).
+Mantenimiento: No</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Destrucción_de_Sentidos -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Destrucción_de_Sentidos">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Destrucción"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 32 
+Acción: Activa 
+Tipo: Anímico
+Efecto: El brujo arrebata los sentidos de un individuo que no supere una RM contra 100. El mago es quien decide de cuáles despojar.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       100            140               200             280
+Int. R.         8               10                 12                15
+
+Base: 100 RM.
+Intermedio: 120 RM.
+Avanzado: 140 RM.
+Arcano: 180 RM.
+Mantenimiento: 5 / 10 / 15 / 15</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Destrucción_de_Sombras -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Destrucción_de_Sombras">
@@ -2662,6 +3088,138 @@ Intermedio: 100 metros de radio / 180 RM.
 Avanzado: 250 metros de radio / 220 RM.
 Arcano: 500 metros de radio / 280 RM.
 Mantenimiento: 10 / 10 / 15 / 25</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Destrucción_de_Zeon -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Destrucción_de_Zeon">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Destrucción"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 86 
+Acción: Activa 
+Tipo: Efecto
+Efecto: Afectando directamente a la propia esencia de la magia, este conjuro es capaz de disipar el poder de otro sortilegio activo, disminuyendo automáticamente su valor zeónico y de grado. Si el hechizo mermado baja por debajo del coste de su grado base, desaparece.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       200           400                600             700
+Int. R.       10              12                  14               16
+
+Base: -50 al Zeon del Conjuro / Sólo afecta a conjuros de grado base.
+Intermedio: -150 al Zeon del Conjuro/ Afecta a conjuros hasta grado intermedio.
+Avanzado: -250 al Zeon del Conjuro/ Afecta a conjuros hasta grado avanzado.
+Arcano: -350 al Zeon del Conjuro/ Afecta a conjuros hasta grado arcano.
+Mantenimiento: No</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Destruir_Capacidades -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Destruir_Capacidades">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Destrucción"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 78 
+Acción: Activa 
+Tipo: Anímico
+Efecto: Este conjuro destruye parte de las habilidades o poderes de un individuo, arrebatándoselas para siempre. El brujo puede rebajar libremente PD del personaje afectado, eligiendo en qué capacidades o campos arrancárselos. Podría, por ejemplo, rebajar 30 PD de su habilidad de ataque y los 20 restantes de una habilidad secundaria. También es posible utilizar este hechizo para destruir habilidades sobrenaturales de criaturas místicas. Destruir Capacidades permite también arrebatar las ventajas elegidas con Puntos de Creación, a un coste de 100 PD por punto.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       150           250                 350            500
+Int. R.         8              10                   12              15
+
+Base: -50 PD, RM 120.
+Intermedio: -100 PD, RM 160.
+Avanzado: -150 PD, RM 200.
+Arcano: -200 PD, RM 240.
+Mantenimiento: No</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Destruir_Intensidades -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Destruir_Intensidades">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Destrucción"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 8 
+Acción: Activa 
+Tipo: Efecto
+Efecto: Destruye intensidades de uno de los tres tipos de energía existentes: frío, fuego o electricidad. Los seres formados por dichos elementos pierden 5 puntos de vida por cada intensidad disminuida si fallan la RM del conjuro. 
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon         40             80                  120            150
+Int. R.         5                8                    10              12
+
+Base: 1 intensidad / 100 RM.
+Intermedio: 5 intensidades / 120 RM.
+Avanzado: 10 intensidades / 140 RM.
+Arcano: 15 intensidades / 160 RM.
+Mantenimiento: No</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Destruir_Poderes -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Destruir_Poderes">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Destrucción"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 60 
+Acción: Activa 
+Tipo: Anímico
+Efecto: Si un sujeto es afectado por este conjuro, pierde automáticamente la capacidad de utilizar todas sus habilidades sobrenaturales. De este modo, niega los poderes mágicos, psíquicos o dominios del Ki que posea. Los seres místicos también pierden todos sus poderes (aunque no sus habilidades naturales). Para evitar los efectos de este sortilegio, deberá superarse una RM.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       140           180                 240            300
+Int. R.        7                9                    12               15
+
+Base: RM 120.
+Intermedio: RM 140.
+Avanzado: RM 180.
+Arcano: RM 220.
+Mantenimiento: 15 / 20 / 25 / 30 Diario</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Destruir_Recuerdos -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Destruir_Recuerdos">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Destrucción"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 52 
+Acción: Activa 
+Tipo: Anímico
+Efecto: Afecta a los recuerdos de un individuo, haciéndole olvidar todo lo que el hechicero desee. Este conjuro no influye en las habilidades de un personaje, sólo a su memoria consciente.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       140            180               240             300
+Int. R.        7                 9                   12               15
+
+Base: RM o RP 100.
+Intermedio: RM o RP 120.
+Avanzado: RM o RP 160.
+Arcano: RM o RP 200.
+Mantenimiento: No</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Destruir_Resistencias -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Destruir_Resistencias">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Destrucción"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 40 
+Acción: Activa 
+Tipo: Anímico
+Efecto: El afectado por este conjuro disminuirá todas sus Resistencias, en una cantidad equivalente a la cifra por la que no supere la RM.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon         80            160                240            300
+Int. R.         7                9                   12               15
+
+Base: RM 120.
+Intermedio: RM 160.
+Avanzado: RM 200.
+Arcano: RM 240.
+Mantenimiento: 10 / 20 / 25 / 30</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -2706,6 +3264,28 @@ Intermedio: RM o RP 150 / 500 metros de radio.
 Avanzado: RM o RP 180 / 1 kilómetro de radio.
 Arcano: RM o RP 220 / 5 Kilómetros de radio.
 Mantenimiento: No</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Destruir_la_Voluntad -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Destruir_la_Voluntad">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Destrucción"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 66 
+Acción: Activa 
+Tipo: Anímico
+Efecto: Este conjuro afecta a un área dentro de la cual, todo individuo que no supere una RM perderá automáticamente la capacidad de tomar decisiones. Mientras una persona esté influida por este sortilegio, no podrá emprender ninguna acción activa, ni siquiera moverse, salvo caso de necesidad instintiva.
+
+Grado     Base    Intermedio    Avanzado    Arcano
+Zeon        160           200                240             280
+Int. R.          8              10                  13               16
+
+Base: RM 120 / 10 metros de radio.
+Intermedio: RM 140 / 25 metros de radio.
+Avanzado: RM 160 / 50 metros de radio.
+Arcano: RM 180 / 100 metros de radio.
+Mantenimiento: 20 / 20 / 25 / 30</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -3279,6 +3859,28 @@ Mantenimiento: No</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Esencia_de_Destrucción -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Esencia_de_Destrucción">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Destrucción"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 70 
+Acción: Activa 
+Tipo: Efecto
+Efecto: El brujo altera la materia de un cuerpo, transformándola en una forma de pura energía destructiva, capaz de devorar todo lo que se ponga en contacto con ella. Mientras se encuentre en este estado, sólo podrá ser dañado por ataques capaces de afectar a cuerpos sobrenaturales, y cualquiera que se ponga en contacto con él deberá superar una RM contra el doble de su presencia, o sufrir los efectos descritos por el grado del conjuro.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       150           200                 250            300
+Int. R.         9              12                   14               16
+
+Base: Daño equivalente al nivel de fracaso.
+Intermedio: Daño y negativo a toda acción equivalente al nivel de fracaso.
+Avanzado: Daño equivalente al doble del nivel de fracaso / Negativo a toda acción equivalente al nivel de fracaso.
+Arcano: Daño y negativo a toda acción equivalente al doble del nivel de fracaso.
+Mantenimiento: 15 / 20 / 25 / 30</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Esencia_de_Luz -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Esencia_de_Luz">
@@ -3341,6 +3943,28 @@ Intermedio: Daño Base de 120 / Proyección Mágica 180.
 Avanzado: Daño Base de 160 / Proyección Mágica 210.
 Arcano: Daño Base de 200 / Proyección Mágica 240.
 Mantenimiento: 15 / 20 / 25 / 30</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Esfera_de_Destrucción -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Esfera_de_Destrucción">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Destrucción"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 12 
+Acción: Activa 
+Tipo: Ataque
+Efecto: Proyecta descargas menores de energía mágica. El ataque se realiza en la TA de energía y tiene daño 30. Cada ataque puede ser dirigido a blancos diferentes, pero hay que determinar todos sus objetivos y distribución en el momento del lanzamiento.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon         30             60                  100           150
+Int. R.         5                8                    10             13
+
+Base: Realiza un ataque.
+Intermedio: Realiza tres ataques.
+Avanzado: Realiza cinco ataques.
+Arcano: Realiza siete ataques.
+Mantenimiento: No</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -3512,6 +4136,28 @@ Mantenimiento: No</rdfs:comment>
 Efectos: El personaje aplicará el estado de miedo siempre que se encuentre con el objeto de su fobia.
 
 Beneficio: 1</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Fragilidad -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Fragilidad">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Destrucción"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 2 
+Acción: Activa 
+Tipo: Efecto
+Efecto: Altera la solidez de un objeto, disminuyendo su resistencia y volviéndolo quebradizo. Cualquier cuerpo afectado perderá automáticamente su barrera de daño y, en el caso de que sea un arma o una armadura, reducirá su entereza.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon         30             60                 120             150
+Int. R.         5                8                   10               12
+
+Base: -2 a su entereza / Presencia máxima afectable 30.
+Intermedio: -4 a su entereza / Presencia máxima afectable 60.
+Avanzado: -8 a su entereza / Presencia máxima afectable 90.
+Arcano: -12 a su entereza / Presencia máxima afectable 120.
+Mantenimiento: 5 / 10 / 15 / 15</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -3754,6 +4400,28 @@ Requisitos: Shotokan o Moai Thai, Uso de la energía necesaria, Maestría en ata
 Conocimiento marcial: +10
 
 Bono: +20 al turno cuando se utilicen artes marciales, y +10 a la habilidad de ataque sin armas.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Herir -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Herir">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Destrucción"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 26 
+Acción: Activa 
+Tipo: Anímico
+Efecto: Herir afecta a la condición física de un individuo, menoscabando su estado de salud en ese momento. Produce heridas y daños equivalentes a un porcentaje de sus puntos de vida actuales, no de su total. Para resistir este hechizo, debe de superase una RM.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon         80            120                180            300
+Int. R.         6                9                   12               15
+
+Base: 20% de Puntos de Vida / 120 RM.
+Intermedio: 40% de Puntos de Vida / 140 RM.
+Avanzado: 60% de Puntos de Vida / 160 RM.
+Arcano: 80% de Puntos de Vida / 200 RM.
+Mantenimiento: No</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -4139,6 +4807,28 @@ Mantenimiento: 5 / 10 / 15 / 20 Diario</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Incrementar_Debilidad -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Incrementar_Debilidad">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Destrucción"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 16 
+Acción: Activa 
+Tipo: Anímico
+Efecto: Este conjuro encuentra los puntos débiles de un individuo y los acrecienta sobrenaturalmente. A efectos de juego, dobla cualquier penalizador que el personaje tenga por alguna vulnerabilidad. Por ejemplo, un elemental débil ante la luz recibiría el cuádruple de daño contra ataques luminosos en lugar de sólo el doble, mientras que un personaje vulnerable a los venenos reduciría su RV a una cuarta parte en lugar de a la mitad. Una vez afectado por la RM, el blanco del conjuro sólo podrá repetir la tirada cada vez que su debilidad le afecte.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon        50               80                120            150
+Int. R.        6                  8                  10               12
+
+Base: 120 RM.
+Intermedio: 140 RM.
+Avanzado: 160 RM.
+Arcano: 200 RM.
+Mantenimiento: 5 / 10 / 15 / 15 Diario</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Indetección -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Indetección">
@@ -4487,6 +5177,28 @@ Beneficio: 1</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Lluvia_de_Destrucción -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Lluvia_de_Destrucción">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Destrucción"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 82 
+Acción: Activa 
+Tipo: Ataque
+Efecto: Desencadena una tempestad de descargas selectivas en área que destrozan únicamente los blancos designados por el brujo. Este conjuro ataca en Energía. Adicionalmente, si consigue impactar a un blanco y provocarle daño, este deberá superar una RM o sufrir una perdida de puntos de vida equivalente al nivel de fracaso.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       250            350                450            600
+Int. R.       10              13                   15              17
+
+Base: Daño 200 / RM 140 / 50 metros de radio.
+Intermedio: Daño 250 / RM 180 / 150 metros de radio.
+Avanzado: Daño 300 / RM 220 / 500 metros de radio.
+Arcano: Daño 400 / RM 260 / 1 kilómetro de radio.
+Mantenimiento: No</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Luchador -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Luchador">
@@ -4785,6 +5497,28 @@ Beneficio: 1</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Muerte -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Muerte">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Destrucción"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 72 
+Acción: Activa 
+Tipo: Anímico
+Efecto: El brujo es capaz de producir la muerte de un ser vivo, separando el alma de su cuerpo. El poder de este conjuro es tan grande que puede incluso matar a seres espirituales o a criaturas nigrománticas, convirtiéndolos en simples almas muertas o destruyéndolos completamente. Para resistir los efectos de este conjuro, es necesario superar una RM o RF.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       200            250               300             350
+Int. R.       10              12                  14               16
+
+Base: RM o RF 120.
+Intermedio: RM o RF 140.
+Avanzado: RM o RF 160.
+Arcano: RM o RF 180.
+Mantenimiento: No</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Mujer -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Mujer">
@@ -4838,6 +5572,28 @@ Beneficio: 1</rdfs:comment>
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Místico">
         <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arquetipo"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Este arquetipo recoge aquellas categorías que se han adentrado en el mundo de lo sobrenatural. Son los personajes con la capacidad de invocar criaturas místicas o moldear la realidad con sus conjuros. Su especialidad son las habilidades primarias sobrenaturales.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Negar -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Negar">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Destrucción"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 58 
+Acción: Activa 
+Tipo: Anímico
+Efecto: El hechicero veta una acción concreta de un sujeto, impidiéndole completamente que pueda ni siquiera tratar de llevarla a cabo. Este conjuro sólo permite negar acciones activas. Para resistirse a él, es necesario superar una RM, aunque en el caso de que la acción negada sea muy amplia, como no atacar o no moverse, el afectado puede aplicar un bono a su RM entre +10 y +30.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       100           180                 240            300
+Int. R.        7               10                   13               16
+
+Base: RM 120.
+Intermedio: RM 160.
+Avanzado: RM 200.
+Arcano: RM 240.
+Mantenimiento: 10 / 15 / 25 / 30</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -5488,6 +6244,28 @@ Mantenimiento: 20 / 25 / 30 / 40 Diario</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Producir_Daño -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Producir_Daño">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Destrucción"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 30 
+Acción: Activa 
+Tipo: Anímico
+Efecto: Mediante el uso de este hechizo, el brujo produce automáticamente una herida en el cuerpo de un individuo. Si no supera una RM, el personaje afectado recibirá directamente daño. Las criaturas con acumulación de daño aumentan esta cantidad por su múltiplo de acumulación. 
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon         80             120               180            300
+Int. R.         6                 9                  12               15
+
+Base: 50 puntos de daño / 120 RM.
+Intermedio: 100 puntos de daño / 140 RM.
+Avanzado: 180 puntos de daño / 160 RM.
+Arcano: 250 puntos de daño / 200 RM.
+Mantenimiento: No</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Proyección_Mágica -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Proyección_Mágica">
@@ -5881,6 +6659,28 @@ Requisitos: Shotokan o Kempo, Extrusión de presencia, más de 180 en la habilid
 Conocimiento marcial: +10
 
 Bono: +20 a la habilidad de ataque sin armas.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Sesgar_la_Existencia -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Sesgar_la_Existencia">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Destrucción"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 80 
+Acción: Activa 
+Tipo: Anímico
+Efecto: Como si enarbolara una cuchilla de vacío, el brujo es capaz de cortar la misma realidad, aniquilando todo aquello que encuentra en su camino. De este modo, cualquier cosa que entre en contacto con el conjuro será destruido física y anímicamente, sin dejar ningún rastro de haber existido. El hechizo permite cortar una línea o focalizar todo su poder en un solo punto, destruyendo completamente cuanto toque y no sea capaz de superar la Resistencia requerida. A pesar de ser un conjuro anímico, el corte en la realidad es perfectamente visible, incluso para aquellos que no sean capaces de ver la magia. Las cosas o individuos sesgados por este sortilegio son destruidos completamente, en lugar de regresar al flujo de almas. Si se enfoca en un solo punto, la RM aumenta en +20.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       350           500                 600            800
+Int. R.       12             14                    16              18
+
+Base: RM 120 / 10 metros de línea.
+Intermedio: RM 160 / 100 metros de línea.
+Avanzado: RM 200 / 250 metros de línea.
+Arcano: RM 240 / 1 kilómetro metros de línea.
+Mantenimiento: No</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -6795,6 +7595,28 @@ Apariencia habitual: Su forma es la de un anciano decrépito engalanado como un 
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Vacío -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vacío">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Destrucción"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 90 
+Acción: Activa 
+Tipo: Efecto
+Efecto: Este hechizo forma una esfera de absoluto vacío que, como un agujero negro, absorbe hacia su interior toda materia física y espiritual que haya a su alrededor, deshaciéndola completamente. La cúpula debe de ser ubicada en un espacio abierto, y esta permanecerá fija en ese lugar hasta que desaparezca. Una vez creada, comienza a succionar cualquier cosa que se encuentre a su alrededor. El poder de atracción del conjuro emplea el equivalente a una Fuerza 14, y cualquiera que fracase en un control enfrentado de características contra ella será atraído hacia el interior a un ritmo de 10 metros por cada punto de diferencia. El Vacío es tan poderoso que, todo lo que se ponga directamente en contacto con la esfera, irá debilitándose hasta desaparecer. Cada asalto que se permanezca en su interior es necesario realizar dos Resistencias distintas; una RM o perder una cantidad de puntos de Zeon equivalente al doble del nivel de fracaso, y otra de RF o perderlos en Puntos de Vida. Cuando un personaje se haya quedado sin Zeon, empezará a bajar un punto permanente de su característica de Poder por cada 100 de magia que debiese perder. Si su característica disminuye hasta cero, o muere por pérdida de puntos de vida, todo su ser será engullido por la nada. Aunque el hechicero no es influido por la fuerza de succión de la cúpula, sufrirá los efectos del vacío si se pone en contacto con su núcleo.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       250            350               500             800
+Int. R.       12              14                  16               18
+
+Base: 5 metros de radio / 50 metros de succión / 120 de RM y RF.
+Intermedio: 15 metros de radio / 500 metros de succión / 160 de RM y RF.
+Avanzado: 25 metros de radio / 1 kilómetro de succión / 200 de RM y RF.
+Arcano: 50 metros de radio / 3 kilómetros de succión / 240 de RM y RF.
+Mantenimiento: 25 / 40 / 45 / 55</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Velez -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Velez">
@@ -6980,6 +7802,24 @@ Beneficio: 1</rdfs:comment>
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vulnerable_al_frío">
         <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Desventaja_Comun"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El frío afecta terriblemente al personaje causándole muchos problemas físicos. Su cuerpo se ve seriamente perjudicado si se pone en contacto con algo muy frío, al igual que si visita lugares con temperaturas extremas, como zonas heladas.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Mayor -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Mayor">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tipos_Vía"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Es una de las vías que controlan los aspectos más fundamentales de la realidad.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Menor -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Menor">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tipos_Vía"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Es una de las vías que controlan los elementos básicos, las almas y la ilusión.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -7600,6 +8440,51 @@ El Zeon base se calcula de la misma forma que los puntos de vida, pero en este c
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Zona_Devoradora -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Zona_Devoradora">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Destrucción"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 76 
+Acción: Activa 
+Tipo: Automático
+Efecto: Como un vacío de muerte, la Zona Devoradora se extiende desgarrando la esencia de todo lo que encuentra a su paso y consumiéndola lentamente. Poco a poco, las cosas que alcanza este conjuro van debilitándose hasta deshacerse, ya sean objetos materiales o seres vivos. Cada día de permanencia en su interior, exigirá realizar una RM o RF, o perderá temporalmente cinco puntos de su presencia base. Si esta disminuye hasta cero, se descompondrá dejando escasos rastros. En el caso de los seres vivos, estos recibirán adicionalmente un penalizador a toda acción, equivalente al doble de sus puntos de presencia perdidos. El daño espiritual se repone a
+un ritmo de cinco puntos por día, una vez que se está fuera de su influencia. Permanece fija en el lugar donde es lanzada.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       250            360               450             600
+Int. R.        9                12                 15                17
+
+Base: RM o RF 140 y 500 metros de radio.
+Intermedio: RM o RF 195 y 6000 metros de radio.
+Avanzado: RM o RF 240 y 10500 metros de radio.
+Arcano: RM o RF 270 y 13500 metros de radio.
+Mantenimiento: 25 / 40 / 45 / 55 Diario</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Zona_de_Debilidad -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Zona_de_Debilidad">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Destrucción"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 68 
+Acción: Activa 
+Tipo: Automático
+Efecto: Con este hechizo, el brujo debilita las fibras de la propia realidad dentro de un área determinada, haciendo que todo lo que se encuentre en ella se vuelva frágil y quebradizo. De este modo, cualquier daño que se produzca en su interior se dobla automáticamente, y los personajes sufren críticos como si todo su cuerpo fuera un punto vulnerable. Las estructuras y edificaciones perderán automáticamente su barrera de daño, y los objetos con entereza, como espadas y armaduras, sufrirán un penalizador de -5. Permanece fijo en el lugar donde es conjurado. Cualquier ser vivo u objeto de poder puede evitar sus efectos superando una RM. La condición para ser influido por la Zona de Debilidad es estar simplemente en su interior, y únicamente es posible librarse de ella saliendo del área, ya que sólo permite repetir el control de Resistencia una vez al día.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       200            300               400             500
+Int. R.         9               12                 14               16
+
+Base: 25 metros de radio / RM 140.
+Intermedio: 100 metros de radio / RM 160.
+Avanzado: 250 metros de radio / RM 180.
+Arcano: 500 metros de radio / RM 200.
+Mantenimiento: 20 / 30 / 40 / 50 Diario</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Zona_de_Detección -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Zona_de_Detección">
@@ -7662,6 +8547,28 @@ Intermedio: RM 180 / radio de 500 metros.
 Avanzado: RM 220 / radio de 1 kilómetro.
 Arcano: RM 250 / radio de 5 kilómetros.
 Mantenimiento: 35 / 50 / 80 / 150 Diario</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Área_de_Decaimiento -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Área_de_Decaimiento">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Destrucción"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 48 
+Acción: Activa 
+Tipo: Automático
+Efecto: Este conjuro encanta una zona fija dentro de la cual toda forma de vida comienza a pudrirse y deshacerse a un ritmo acelerado. Cualquier ser que se encuentre en el interior del área de decaimiento perderá una décima parte de sus puntos de vida totales si no es capaz de superar la RM. Cada asalto que se permanezca en el interior del área deberá realizarse un nuevo control, sin importar que en el anterior se haya o no superado la Resistencia. La condición para ser afectado por el conjuro es, simplemente, encontrarse en el interior del área.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       140            180                240            300
+Int. R.        7                 9                   12               15
+
+Base: 10 metros de radio / RM 100.
+Intermedio: 30 metros de radio / RM 120.
+Avanzado: 60 metros de radio / RM 160.
+Arcano: 100 metros de radio / RM 200.
+Mantenimiento: 15 / 20 / 25 / 30</rdfs:comment>
     </owl:NamedIndividual>
     
 
