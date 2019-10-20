@@ -998,6 +998,28 @@ Bono: +10 a la habilidad de esquiva o parada sin armas.</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Aire_Sólido -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Aire_Sólido">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Aire"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 76 
+Acción: Activa 
+Tipo: Efecto, Ataque
+Efecto: Permite solidificar el aire, creando una materia compacta y resistente. El brujo puede elegir qué forma darle y dónde ubicarla. Podría, por ejemplo, cerrar una entrada creando un bloque sólido que impidiera el paso, o formar un puente invisible por el que pasar una grieta. El aire sólido sólo puede ser dañado con armas capaces de afectar energía, y cada 5 metros de material resiste 150 puntos de daño antes de ser roto. Esta sustancia no puede ser vista, salvo si se supera un control de Advertir contra Inhumano, o de Buscar contra Absurdo. Este conjuro puede también utilizarse para rodear a personas e impedirles moverse con libertad. En caso de que se emplee con este objetivo, es posible realizar un ataque usando las reglas de Presa, aunque el brujo no sufrirá ningún penalizador a su habilidad de Proyección por ejecutar la maniobra. El aire posee una Fuerza 14, afectando a todos los individuos designados que estén dentro del área del hechizo.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       140           200                260             350
+Int. R.         9              11                  13                16
+
+Base: 25 metros de radio.
+Intermedio: 150 metros de radio.
+Avanzado: 300 metros de radio.
+Arcano: 500 metros de radio / Si se usa para apresar, tiene Fuerza 16.
+Mantenimiento: 10 / 10 / 15 / 25</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Alergia_grave -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Alergia_grave">
@@ -2215,6 +2237,72 @@ Mantenimiento: 25 / 40 / 50 / 60 Diario</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Control_de_la_Electricidad -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Control_de_la_Electricidad">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Aire"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 60 
+Acción: Activa 
+Tipo: Efecto, Anímico
+Efecto: Permite controlar la forma y dirección de una fuente eléctrica. Si se trata de un ser basado naturalmente en electricidad, el mago podrá controlarlo si este no supera una RM.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon         80            150                240            350
+Int. R.         8               10                  13              15
+
+Base: RM 120 / 5 intensidades.
+Intermedio: RM 160 / 15 intensidades.
+Avanzado: RM 180 / 25 intensidades.
+Arcano: RM 220 / 40 intensidades.
+Mantenimiento: 10 / 20 / 25 / 35</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Control_del_Aire -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Control_del_Aire">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Aire"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 56 
+Acción: Activa 
+Tipo: Efecto, Anímico
+Efecto: Otorga al hechicero el control del aire, así como el de cualquier sustancia gaseosa que se encuentre a su alrededor. El mago será capaz de manejar a su antojo las corrientes de viento y los elementos gaseosos para usarlos como desee. Podría, por ejemplo, vaciar de aire una zona o cambiar el curso de un tornado. Si se lanza sobre un ser basado naturalmente en aire, el mago podrá controlarlo si la criatura no supera una RM.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon         80            150                240            350
+Int. R.         8               10                  13              15
+
+Base: Radio de 50 metros / RM 120.
+Intermedio: Radio de 300 metros / RM 140.
+Avanzado: Radio de 500 metros / RM 180.
+Arcano: Radio de 1 kilómetro / RM 220.
+Mantenimiento: 10 / 20 / 25 / 35</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Control_del_Clima -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Control_del_Clima">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Aire"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 80 
+Acción: Activa 
+Tipo: Efecto
+Efecto: El hechicero obtiene un completo control sobre el clima en un radio de acción determinado por el grado del conjuro. Podrá modificar cualquier elemento meteorológico a su antojo, creando la situación climática que desee de manera gradual.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon        250           300                 380           500
+Int. R.         9               12                   14              16
+
+Base: 5 kilómetros.
+Intermedio: 25 kilómetros.
+Avanzado: 100 kilómetros.
+Arcano: 1.000 kilómetros.
+Mantenimiento: 50 / 60 / 80 / 100 Diario</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Controlar_a_los_Muertos -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Controlar_a_los_Muertos">
@@ -2596,6 +2684,50 @@ Intermedio: Nivel 5.
 Avanzado: Nivel 9.
 Arcano: Nivel 12.
 Mantenimiento: 50 / 80 / 120 / 200 Diario</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Crear_Silfo -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Crear_Silfo">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Aire"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 82 
+Acción: Activa 
+Tipo: Efecto
+Efecto: Crea una criatura de aire con apariencia de vida bajo el control absoluto del hechicero. El ente será desarrollado como un Ser Entre Mundos, usando los poderes y limitaciones de los elementales de aire. Para calcular su nivel máximo, se emplean las mismas reglas que en el conjuro Crear Ser de la vía de Creación.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       250           350                500            700
+Int. R.       10             12                  14               16
+
+Base: Nivel 1.
+Intermedio: Nivel 3.
+Avanzado: Nivel 6.
+Arcano: Nivel 10.
+Mantenimiento: 50 / 70 / 100 / 140 Diario</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Crear_Viento -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Crear_Viento">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Aire"/>
+        <rdfs:comment>Nivel: 2 
+Acción: Activa 
+Tipo: Efecto
+Efecto: Levanta viento de gran velocidad. Para usar este conjuro, es necesario que el brujo se encuentre en el exterior, o en una zona en la que sea posible que sople el aire. La anchura de la corriente no deberá exceder lo determinado por el grado del conjuro, y su longitud será 10 veces su anchura.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon        30              60                   90             120
+Int. R.        5                8                     10              12
+
+Base: 20 Km/h / 25 metros de anchura.
+Intermedio: 40 Km/h / 50 metros de anchura.
+Avanzado: 80 Km/h / 75 metros de anchura.
+Arcano: 100 Km/h / 100 metros de anchura.
+Mantenimiento: 5 / 10 / 10 / 15</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -3876,6 +4008,28 @@ Mantenimiento: No</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Electrificar -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Electrificar">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Aire"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 36 
+Acción: Activa 
+Tipo: Efecto
+Efecto: Este conjuro electrifica un cuerpo físico, provocando potentes descargas a quien lo toque. Cualquier sujeto que se ponga en contacto con él, incluyendo el lanzador, deberá superar cada asalto una RF o perderá una cantidad de puntos de vida equivalente a la mitad del nivel de fracaso. El daño se considera producido por un ataque de electricidad. La máxima presencia del objeto así como su longitud máxima son determinadas por el grado del conjuro.
+
+Grado    Base    Intermedio   Avanzado    Arcano
+Zeon         80            120               160            240
+Int. R.         7               10                 13              15
+
+Base: RF 100 / Presencia máxima 30 / 1 metro de longitud.
+Intermedio: RF 120 / Presencia máxima 40 / 3 metros de longitud.
+Avanzado: RF 140 / Presencia máxima 60 / 5 metros de longitud.
+Arcano: RF 160 / Presencia máxima 80 / 10 metros de longitud.
+Mantenimiento: 10 / 15 / 20 / 25 Diario</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Eliminar_Residuos -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Eliminar_Residuos">
@@ -4513,6 +4667,28 @@ Mantenimiento: 10 / 20 / 25 / 30</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Forma_etérea -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Forma_etérea">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Aire"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 52 
+Acción: Activa 
+Tipo: Efecto
+Efecto: El cuerpo designado por el hechicero se transformará en aire, volviéndose intangible ante todas las materias y ataques no basados en energía. Mientras se encuentre en este estado será invisible ante cualquier individuo incapaz de ver magia o que no supere un control de Advertir contra Casi Imposible, o un Buscar contra Muy Difícil. Aunque no puede traspasar materia física, un cuerpo etéreo se introduce por cualquier rendija o espacio por el que pueda soplar el aire.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       100            120               140            160
+Int. R.        8                11                 13               16
+
+Base: Las habilidades descritas.
+Intermedio: El sujeto podrá moverse por el aire a una velocidad equivalente a su Tipo de movimiento natural.
+Avanzado: Como el Intermedio, pero incluso aquellos con la capacidad de ver magia requieren superar un control de Advertir contra Muy Difícil, o un Buscar contra Medio para ver al personaje.
+Arcano: Como el Avanzado, pero los ataques de Filo o Penetrantes basados en energía le producen sólo mitad de daño.
+Mantenimiento: 10 / 15 / 15 / 20</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Fragilidad -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Fragilidad">
@@ -4614,6 +4790,28 @@ Beneficio: 1</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Generación_Tiradas">
         <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Golpe_de_Aire -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Golpe_de_Aire">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Aire"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 20 
+Acción: Activa 
+Tipo: Ataque
+Efecto: El hechicero desencadena un potente golpe de viento, concentrándolo lo suficiente para impactar a un solo blanco muy lejano, o de una forma tan dispersa como para retener a un grupo de personas a distancia. En el caso de que se concentre sobre un solo blanco, aplica un bonificador de +2 a su Fuerza. Aunque mínimo, un golpe de viento es capaz de causar daño real, que equivaldría al doble del bono de la Fuerza del impacto atacando en Contundente. Al ser un impacto producido por aire, el ataque sólo podrá ser percibido por personas capaces de ver magia o que superen un control de Advertir contra Absurdo.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon        40              80                 140            200
+Int. R.        6                9                    11              13
+
+Base: 5 metros de anchura / Fuerza 6.
+Intermedio: 20 metros de anchura / Fuerza 9.
+Avanzado: 30 metros de anchura / Fuerza 12.
+Arcano: 50 metros de anchura / Fuerza 14.
+Mantenimiento: No</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -4922,6 +5120,28 @@ Mantenimiento: 5 / 20 / 25 / 30</rdfs:comment>
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Humano">
         <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Raza_Pura"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Raza humana como la conocemos hoy en día. No tienen características sobre naturales, ni ventajas o desventajas especiales.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Huracán -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Huracán">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Aire"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 72 
+Acción: Activa 
+Tipo: Automático
+Efecto: Como su nombre indica, este conjuro crea un terrible vendaval que arrasará cuanto se encuentre en un radio de acción. Cualquiera que esté en el interior del área deberá superar un control contra una Fuerza 12, o será arrastrado por el viento. Toda construcción que posea una barrera de daño inferior a 60 quedará automáticamente destrozada, mientras que las que tengan menos de 120, recibirán 10 puntos de daño por asalto hasta ser destruidas. Las construcciones con una barrera superior a 120 no se verán afectadas en absoluto. Aquellos cuerpos que hayan sido arrastrados por el viento quedarán suspensos en el aire hasta que el conjuro finalice, momento en el cual caerán desde la altura (la distancia hasta el suelo puede variar dependiendo del entorno y de la voluntad del hechicero, aunque en ningún caso podrá superar los 100 metros). Quien pase el control enfrentado de Fuerza, no tendrá que volver a repetirlo mientras no se mueva y permanezca en la misma posición, pero deberá repetirlo cada turno que se mueva por encima de su movimiento pasivo. El DJ puede aplicar el bono que considere oportuno al control de características de los afectados, dependiendo de su entorno y de si tienen algo sólido a lo que aferrarse.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       200           300                 450            600
+Int. R.        9               12                   14              16
+
+Base: 500 metros de radio.
+Intermedio: 1 kilómetro de radio.
+Avanzado: 2 kilómetros de radio.
+Arcano: 5 kilómetros de radio / El control de Fuerza es contra 14.
+Mantenimiento: 10 / 15 / 20 / 25</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -5246,6 +5466,28 @@ Mantenimiento: 5 / 10 / 15 / 15 Diario</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Incremento_de_Reacción -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Incremento_de_Reacción">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Aire"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 32 
+Acción: Activa 
+Tipo: Efecto
+Efecto: Aumenta la capacidad de reacción de un sujeto, otorgándole un bono a su turno. A partir de turno 200, este incremento se reduce a la mitad. 
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon        60              90                 120            150
+Int. R.        6                9                    12              15
+
+Base: +30 al turno.
+Intermedio: +60 al turno.
+Avanzado: +90 al turno.
+Arcano: +120 al turno.
+Mantenimiento: 5 / 5 / 10 / 15</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Indetección -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Indetección">
@@ -5264,6 +5506,28 @@ Intermedio: Como en grado Base, pero también se vuelve indetectable ante habili
 Avanzado: Como en grado Intermedio, pero también se vuelve indetectable ante todas las habilidades sobrenaturales.
 Arcano: Ignora cualquier detección que no sean los sentidos naturales.
 Mantenimiento: 80 / 90 / 105 / 115 Diario</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Inmaterialidad -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Inmaterialidad">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Aire"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 70 
+Acción: Activa 
+Tipo: Efecto, Anímico
+Efecto: El cuerpo designado por el hechicero se vuelve completamente inmaterial, haciéndose intangible ante todo lo que no esté basado en energía. Mientras esté así el afectado no podrá tocar ni ser tocado y, por tanto, será capaz de atravesar cualquier cosa que no sea de naturaleza sobrenatural. Si el hechicero lanza el conjuro sobre un sujeto o cuerpo que desea resistirse a sus efectos, este deberá superar una RM para conseguirlo. Si fracasa el control y se torna inmaterial, tendrá derecho a una nueva Resistencia cada día. La máxima presencia afectable será de 80 puntos.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       120            180                240            350
+Int. R.        6                 9                   12               15
+
+Base: RM 100 / Presencia máxima 80.
+Intermedio: RM 140 / Presencia máxima 120.
+Avanzado: RM 160 / Presencia máxima 160.
+Arcano: RM 200 / Presencia máxima 200.
+Mantenimiento: 15 / 20 / 25 / 30 Diario</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -5783,6 +6047,28 @@ Mantenimiento: No</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Magia_Pasiva -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Magia_Pasiva">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Aire"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 92 
+Acción: Activa 
+Tipo: Efecto
+Efecto: Este hechizo envuelve la esencia de su lanzador, haciendo que la magia fluya en él de un modo instintivo y manifestando automáticamente sus designios. Así pues, la magia y él responden como un solo ser ante cualquier acontecimiento. Mientras se mantenga, cualquier hechizo que ejecute el personaje se considerará una acción pasiva, incluidos los de Ataque y los Anímicos.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       300           400                 550            800
+Int. R.       12              12                   14              16
+
+Base: Afecta a conjuros de grado Base.
+Intermedio: Afecta a conjuros de grado Intermedio.
+Avanzado: Afecta a conjuros de grado Avanzado.
+Arcano: Afecta a conjuros de grado Arcano.
+Mantenimiento: 30 / 40 / 55 / 80</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Magia_atada_a_acción -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Magia_atada_a_acción">
@@ -6051,6 +6337,72 @@ Intermedio: 200 PD.
 Avanzado: 300 PD.
 Arcano: 400 PD.
 Mantenimiento: 10 / 20 / 30 / 40</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Mover -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Mover">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Aire"/>
+        <rdfs:comment>Nivel: 6 
+Acción: Activa 
+Tipo: Efecto
+Efecto: Este conjuro permite al brujo mover objetos inanimados a distancia, sin la necesidad de que exista contacto físico entre ellos, a una velocidad equivalente a un Tipo de vuelo 10. No afecta a objetos que estén directamente en contacto con seres vivos.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon        30              60                  90              120
+Int. R.        5                8                    10               12
+
+Base: Peso máximo 10 Kg.
+Intermedio: Peso máximo 50 Kg.
+Avanzado: Peso máximo 100 Kg.
+Arcano: Peso máximo 250 Kg.
+Mantenimiento: 5 / 10 / 10 / 15</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Movimiento_Defensivo -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Movimiento_Defensivo">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Aire"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 62 
+Acción: Pasiva 
+Tipo: Defensa
+Efecto: Mediante esta defensa, el brujo se mueve o se transporta fuera del alcance de un ataque. A efectos de juego, permite utilizar la habilidad de Proyección Mágica del hechicero como si se tratase de su esquiva. Podrá apartarse de un máximo de ataques por asalto, tras los cuales deberá encontrar otro método de defensa hasta el siguiente turno. El conjuro esquiva como si se dispusiera de una velocidad equivalente a un Tipo de movimiento determinado por el grado del conjuro a la hora de contabilizar los penalizadores contra ataques en área.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       120           180                 240            300
+Int. R.        7               10                   12              15
+
+Base: 3 Esquivas por asalto / Tipo de Movimiento 8.
+Intermedio: 9 Esquivas por asalto / Tipo de Movimiento 12.
+Avanzado: 15 Esquivas por asalto / Tipo de Movimiento 16.
+Arcano: Sin límite de esquivas / Tipo de Movimiento 18.
+Mantenimiento: 15 / 20 / 25 / 30</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Movimiento_Libre -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Movimiento_Libre">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Aire"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 16 
+Acción: Activa 
+Tipo: Efecto
+Efecto: Otorga al blanco del conjuro la habilidad de moverse libremente por cualquier tipo de superficie, ignorando completamente las leyes de la gravedad. De este modo, un individuo podrá caminar por encima del agua o correr sin problemas por paredes y techos. Puede afectar a tantos blancos como desee el brujo, siempre que la suma de sus presencias no supere lo que determine el grado del conjuro.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon         50             80                  110            150
+Int. R.         6               8                     10              12
+
+Base: Presencia máxima 80.
+Intermedio: Presencia máxima 120.
+Avanzado: Presencia máxima 160.
+Arcano: Presencia máxima 240.
+Mantenimiento: 5 / 10 / 10 / 15</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -6334,6 +6686,28 @@ Mágico hacia la Oscuridad.
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Nigromancia">
         <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Mágica"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La nigromancia es una perversión de la magia como tal. Mientras que el resto de vías se alimenta de las energías de la red de almas, la nigromancia las arranca de allí. Sus conjuros destruyen la esencia de la vida, estancando y pervirtiendo las almas que utiliza. Su poder permite devolver la vida a los muertos, destruir las almas y drenar la vida y la esencia de otros seres. La Nigromancia se opone al resto de las vías de magia.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#No_Respirar -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#No_Respirar">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Aire"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 12 
+Acción: Pasiva 
+Tipo: Efecto
+Efecto: El blanco de este conjuro deja de tener la necesidad de respirar. Puede afectar a tantos individuos como desee el lanzador, siempre que la suma de sus presencias no supere lo que determine el grado del conjuro.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon        40              80                 110             150
+Int. R.        6                 8                   10               12
+
+Base: Presencia máxima 80.
+Intermedio: Presencia máxima 150.
+Avanzado: Presencia máxima 200.
+Arcano: Presencia máxima 350.
+Mantenimiento: 5 / 10 / 10 / 15 Diario</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -6642,6 +7016,28 @@ Intermedio: Presencia máxima 50.
 Avanzado: Presencia máxima 80.
 Arcano: Presencia máxima 100.
 Mantenimiento: No</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Pantalla_de_Aire -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Pantalla_de_Aire">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Aire"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 22 
+Acción: Pasiva 
+Tipo: Defensa
+Efecto: Forma una barrera de aire que protege frente a cualquier fuente de ataque, excepto aquellas basadas en electricidad o energía. Adicionalmente, los fuertes vientos que levanta perjudican a cualquier proyectil físico que sea disparado o lanzado contra el defensor, por lo que provocan un penalizador de -50 a la habilidad de ataque final del proyectil.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon         50           160                 200            240
+Int. R.         6               8                    10              14
+
+Base: 300 puntos de Resistencia.
+Intermedio: 1.500 puntos de Resistencia.
+Avanzado: 2.000 puntos de Resistencia.
+Arcano: 3.500 puntos de Resistencia.
+Mantenimiento: 5 / 20 / 20 / 25</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -7061,6 +7457,28 @@ Mantenimiento: 10 / 10 / 15 / 20</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Rayo_Aire -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Rayo_Aire">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Aire"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 46 
+Acción: Activa 
+Tipo: Ataque
+Efecto: Desencadena un relámpago eléctrico con un daño base de 100 puntos. Antes de impactar, el hechicero debe elegir si concentra todo el poder del rayo en una sola descarga, o por el contrario tras alcanzar su blanco, la electricidad rebota una vez hacia el cuerpo más próximo realizando un nuevo ataque de idénticas características al primero. El hechicero no podrá elegir sobre quién se dirigirá el rayo después del ataque original, aunque nunca podrá volverse contra él. Un mismo blanco no puede ser afectado dos veces por el mismo rayo a causa de los rebotes.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon        80            180                 280            400
+Int. R.        6                9                    12              15
+
+Base: 1 rebote o +10 al Daño.
+Intermedio: 10 rebotes o + 40 al Daño.
+Avanzado: 15 rebotes o + 80 al Daño.
+Arcano: 25 rebotes o +150 al Daño.
+Mantenimiento: No</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Raza -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Raza">
@@ -7199,6 +7617,28 @@ Mantenimiento: No</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Reducir_Peso -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Reducir_Peso">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Aire"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 10 
+Acción: Activa 
+Tipo: Efecto
+Efecto: Reduce el peso de un cuerpo material orgánico o inorgánico hasta un mínimo de 1 kilogramo.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon        40            140                 240            350
+Int. R.        5                8                    10              12
+
+Base: -20 Kg.
+Intermedio: -150 Kg.
+Avanzado: -300 Kg.
+Arcano: -500 Kg.
+Mantenimiento: 5 / 15 / 25 / 35 Diario</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Reducir_dos_puntos_a_una_característica -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Reducir_dos_puntos_a_una_característica">
@@ -7276,6 +7716,28 @@ Intermedio: 500 metros de radio.
 Avanzado: 1 kilómetro de radio.
 Arcano: 1 kilómetros de radio / +30 al ACT al lanzar conjuros oscuros.
 Mantenimiento: 10 / 20 / 25 / 25</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Remolino -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Remolino">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Aire"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 50 
+Acción: Activa 
+Tipo: Automático
+Efecto: El brujo levanta un remolino de aire que lo arrasa todo a su paso. Cualquier sujeto que se encuentre en el interior de su área recibirá automáticamente un ataque con una habilidad directa de Absurdo (es decir, un ataque final de 180) y un daño base de 40 en Contundente. Adicionalmente, todos los afectados deberán superar un control enfrentado de características, usando su Fuerza o Agilidad contra el equivalente a una Fuerza 12, o de lo contrario serán levantados por los aires y arrollados por el remolino. Quien sea arrastrado de esta manera, recibe un penalizador de –60 a toda acción mientras permanezca en su interior. Cuando el conjuro finalice, los cuerpos elevados caen desde una distancia de entre 30 y 50 metros. La condición para ser afectado por el remolino será encontrarse en el interior de su área, a partir del asalto siguiente al que ha sido creado. El hechicero podrá desplazar el hechizo con una velocidad 8. No tiene efectos sobre cuerpos inmateriales o aquellos que no sean afectados por el aire.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       140           180                240             300
+Int. R.        7                9                   12                15
+
+Base: 3 metros de radio.
+Intermedio: 6 metros de radio.
+Avanzado: 12 metros de radio.
+Arcano: 25 metros de radio.
+Mantenimiento: 30 / 40 / 50 / 60</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -7481,6 +7943,28 @@ Avanzado: RM 160 / Como Intermedio, pero el Gnosis del brujo en zonas
 neutras es de 35. 
 Arcano: RM 180 / Como Avanzado, pero los efectos del conjuro no tienen límites espaciales, afectando por igual a toda la Vigilia influenciada por energías positivas.
 Mantenimiento: 60 / 65 / 70 / 80</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Señor_del_Aire -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Señor_del_Aire">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Aire"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 96 
+Acción: Activa 
+Tipo: Automático
+Efecto: El lanzador controla cualquier núcleo de aire y electricidad, sin importar el número de intensidades que lo compongan. Este dominio le permite también modificar a su antojo el clima, así como crear vendavales, tormentas o ventiscas de cualquier magnitud. Toda criatura basada en aire que se encuentre dentro del área del sortilegio, deberá superar una RM o será controlada de inmediato. Si la pasan, ya no necesitan volver a realizar el control. Los afectados tienen derecho a una nueva tirada únicamente si alteran su Resistencia base.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       300           450                 600          1.000
+Int. R.       10              12                   14              16
+
+Base: 100 kilómetros de radio / 140 RM.
+Intermedio: 1.000 kilómetros de radio / 180 RM.
+Avanzado: 10.000 kilómetros de radio / 200 RM.
+Arcano: 100.000 kilómetros de radio / 240 RM.
+Mantenimiento: 30 / 45 / 60 / 100 Diario</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -8062,11 +8546,77 @@ Bono: Ninguno.</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Tajo_de_Aire -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tajo_de_Aire">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Aire"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 40 
+Acción: Activa 
+Tipo: Ataque
+Efecto: Produce una fuerte ráfaga de aire, capaz de cortar lo que toque como si se tratase de una afilada espada. El tajo afecta en una línea en la cual no será posible seleccionar blanco. Tiene un daño base de 80 y ataca en Filo, reduciendo en -2 la TA al defensor.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon         60           150                 240            350
+Int. R.         6               9                    12              15
+
+Base: Línea de 3 metros de longitud.
+Intermedio: Línea de 12 metros de longitud.
+Avanzado: Línea de 25 metros de longitud.
+Arcano: Línea de 50 metros de longitud.
+Mantenimiento: No</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Tamaño -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tamaño">
         <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Característica_Secundaria"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El Tamaño indica las medidas y el peso del personaje, es decir, lo pequeño o grande que es. Para calcularlo se suman las dos características físicas Fuerza y Constitución.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Telequinesis_Superior -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Telequinesis_Superior">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Aire"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 86 
+Acción: Activa 
+Tipo: Efecto
+Efecto: Este conjuro permite al brujo mover a distancia cualquier cuerpo material, orgánico o inorgánico, sin la necesidad de que exista contacto físico con ellos y dotándoles de una velocidad equivalente a un Tipo de vuelo 10. Los seres vivos o criaturas de presencia sobrenatural excepcional podrán resistirse si superan una RM.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       160            280               400             550
+Int. R.        10             12                  14               16
+
+Base: RM 100 / 100 toneladas.
+Intermedio: RM 120 / 10.000 toneladas.
+Avanzado: RM 140 / 250.000 toneladas.
+Arcano: RM 160 / 150.000 toneladas.
+Mantenimiento: 35 / 40 / 50 / 60 Diario</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Teletransportación -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Teletransportación">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Aire"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 66 
+Acción: Activa 
+Tipo: Efecto.
+Efecto: El hechicero o quien este designe es transportado a distancia. Este conjuro permite pasar a través de cuerpos físicos si no se encuentran basados en energía. Puede afectar a tantos blancos como desee el brujo, siempre que la suma de sus presencias no supere lo que determine el grado del conjuro. El objetivo tiene que conocer o ver el lugar al que va a ser transportado si quiere poder hacerlo con precisión. En caso contrario, sólo se transportará a un lugar aproximado hacia la dirección que desee.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       180            300               450             600
+Int. R.         8               11                 13                16
+
+Base: Presencia máxima 80 / 10 kilómetros.
+Intermedio: Presencia máxima 150 / 10.000 kilómetros.
+Avanzado: Presencia máxima 240 / 100.000 kilómetros.
+Arcano: Presencia máxima 350 / Cualquier distancia.
+Mantenimiento: No</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -8241,6 +8791,72 @@ Mantenimiento: No</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Transporte">
         <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Transporte_Automático -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Transporte_Automático">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Aire"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 26 
+Acción: Activa 
+Tipo: Efecto
+Efecto: El hechicero, o quien este designe, es teletransportado a un lugar que vea o conozca de antemano. Este conjuro permite pasar a través de objetos físicos, como muros o puertas, mientras estos no se encuentren basados en energía o sean de carácter sobrenatural. En caso de que el conjuro se use para teletransportar a alguien a una posición innatural (como por ejemplo, a 50 metros de altura en el aire), el blanco del conjuro puede aplicar un +40 a su RM. Puede afectar a tantos blancos como desee el brujo, siempre que la suma de sus presencias no supere lo que determine el grado del conjuro.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon        50              80                 120            150
+Int. R.        6                 8                   10              12
+
+Base: 50 metros / Presencia máxima 60.
+Intermedio: 250 metros / Presencia máxima 90.
+Avanzado: 400 metros / Presencia máxima 120.
+Arcano: 1 kilómetro / Presencia máxima 150.
+Mantenimiento: No</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Ubicar_Magia -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ubicar_Magia">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Aire"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 90 
+Acción: Activa 
+Tipo: Efecto
+Efecto: Otorga al brujo la capacidad de trasladar libremente las fuentes mágicas que sustentan un conjuro activo de un sitio a otro. De este modo, puede mover un sortilegio de lugar y situarlo donde le plazca. Será capaz de trasladar cualquier conjuro mantenido, incluso si no se encuentra bajo su control. La distancia máxima de su reubicación queda determinada por las reglas generales de Proyección Mágica. Este hechizo puede emplearse tanto contra conjuros que afecten a un determinado lugar, como contra los que se encuentren sobre un individuo u objeto. Si lo que se traslada es un conjuro Anímico de un sujeto a otro, se tratará a todos los efectos del mismo modo que si acabase de ser lanzado por el hechicero, permitiendo al nuevo blanco defenderse de él y realizar un control de Resistencia con normalidad.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       180            270               360             450
+Int. R.        9               11                  13               16
+
+Base: Conjuros de hasta 100 puntos de Zeon.
+Intermedio: Conjuros de hasta 200 puntos de Zeon.
+Avanzado: Conjuros de hasta 300 puntos de Zeon.
+Arcano: Conjuros de hasta 400 puntos de Zeon.
+Mantenimiento: 20 / 30 / 40 / 45 Diario</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Un_Lugar_en_el_Mundo -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Un_Lugar_en_el_Mundo">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Aire"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 100 
+Acción: Activa 
+Tipo: Automático
+Efecto: Al ejecutar este conjuro, el lanzador altera el orden de la misma red de almas y, con ello, el de la propia realidad. Aunque no es capaz de cambiar la esencia de las cosas ni su forma, este hechizo le otorga la habilidad de moverlas por el mundo y situarlas en cualquier lugar que se desee, sin otra limitación que su voluntad. De este modo, puede mover cualesquiera objetos o seres, tanto físicos como espirituales, y teletransportarlos adonde quiera. Es posible mover tantas cosas como se desee por asalto, sin importar su número o condición, y reubicar cada una de ellas a voluntad. La única manera de resistirse a sus efectos será superar una RM en cada ocasión en la que se quiera evitar ser trasladado. El radio de acción afecta automáticamente a cualquier ser u objeto que se encuentre en su interior.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       450            800             1.200         1.600
+Int. R.       12              14                  16               18
+
+Base: 50 Kilómetros de radio / RM 140.
+Intermedio: 250 Kilómetros de radio / RM 180.
+Avanzado: 500 Kilómetros de radio / RM 240.
+Arcano: 1.000 Kilómetros de radio / RM 280.
+Mantenimiento: 45 / 80 / 120 / 200</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -8491,6 +9107,28 @@ Bono: +20 a la habilidad de esquiva y parada sin armas.</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Velocidad_Aire -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Velocidad_Aire">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Aire"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 42 
+Acción: Activa 
+Tipo: Efecto
+Efecto: Incrementa de un modo increíble la velocidad de desplazamiento de los individuos afectados. A efectos de juego, dobla la cantidad de metros por asalto que un personaje puede moverse gracias a su Tipo de movimiento. Puede afectar a tantos blancos como desee el brujo, siempre que la suma de sus presencias no supere lo que determine el grado del conjuro.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon         80            100                120            140
+Int. R.         8               10                  12              14
+
+Base: Presencia máxima 50.
+Intermedio: Presencia máxima 80.
+Avanzado: Presencia máxima 120.
+Arcano: Presencia máxima 160.
+Mantenimiento: 10 / 10 / 15 / 15 Diario</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Venenos -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Venenos">
@@ -8602,6 +9240,28 @@ Mantenimiento: 15 / 20 / 25 / 35 Diario</rdfs:comment>
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Voluntad">
         <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Característica_Primaria"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La Voluntad mide la fortaleza mental de un personaje, su frialdad y tenacidad. También se utiliza para emplear disciplinas psíquicas o resistirse a ellas.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Vuelo_Aire -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vuelo_Aire">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Aire"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 30 
+Acción: Activa 
+Tipo: Efecto
+Efecto: Otorga al afectado la capacidad de moverse con un Tipo de Vuelo místico determinado por el grado del conjuro.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon         60            100               150             240
+Int. R.         6                9                  12               15
+
+Base: Tipo de Vuelo 4.
+Intermedio: Tipo de Vuelo 8.
+Avanzado: Tipo de Vuelo 12.
+Arcano: Tipo de Vuelo 15.
+Mantenimiento: 15 / 20 / 25 / 30</rdfs:comment>
     </owl:NamedIndividual>
     
 
