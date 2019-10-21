@@ -1490,6 +1490,28 @@ Beneficio: 1</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Ataque_de_Hielo -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ataque_de_Hielo">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Agua"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 42 
+Acción: Activa 
+Tipo: Ataque
+Efecto: Produce una potente descarga de hielo capaz de dañar energía. El lanzador puede elegir libremente entre atacar en Frío o en Penetrantes.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon         80            160                240            300
+Int. R.         6                9                   12               15
+
+Base: Daño 100.
+Intermedio: Daño 150.
+Avanzado: Daño 200.
+Arcano: Daño 250.
+Mantenimiento: No</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Atar -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Atar">
@@ -1661,6 +1683,28 @@ Beneficio: 2</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Burbuja_Protectora -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Burbuja_Protectora">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Agua"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 16 
+Acción: Pasiva 
+Tipo: Defensa
+Efecto: Levanta una burbuja de energía mágica que funciona a modo de escudo contra cualquier clase de ataque. La barrera no sufre perjuicio alguno si detiene ataques con un daño base igual o inferior a lo que indique el grado del conjuro, pero los impactos con un daño base superior la rompen automáticamente.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon        40              90                 140             220
+Int. R.        6                9                    12               15
+
+Base: Hasta Daño base 40.
+Intermedio: Hasta Daño base 90.
+Avanzado: Hasta Daño base 120.
+Arcano: Hasta Daño base 160.
+Mantenimiento: 5 / 5 / 10 / 10</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#CV -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#CV">
@@ -1743,6 +1787,28 @@ Intermedio: 1.000 kilómetros de radio / Afecta hasta Gnosis 20.
 Avanzado: 10.000 kilómetros de radio / Afecta hasta Gnosis 30.
 Arcano: Afecta toda la creación / Afecta hasta Gnosis 40.
 Mantenimiento: 70 / 80 / 90 / 100 Diario</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Capacidad_Acuática -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Capacidad_Acuática">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Agua"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 10 
+Acción: Activa 
+Tipo: Efecto
+Efecto: Confiere la capacidad de respirar y moverse libremente por ambientes acuáticos. El personaje sobre el que se lance podrá trasladarse con su máximo Tipo de movimiento en dichos medios, respirando líquidos y resistiendo cualquier clase de presión. Puede afectar a tantos blancos como desee el brujo, siempre que la suma de sus presencias no supere lo que determine el grado del conjuro.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon        50              70                 100            140
+Int. R.        5                 8                   10              12
+
+Base: Presencia máxima 50.
+Intermedio: Presencia máxima 100.
+Avanzado: Presencia máxima 200.
+Arcano: Presencia máxima 350.
+Mantenimiento: 10 / 20 / 20 / 25 Diario</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -2039,6 +2105,72 @@ Beneficio: 2</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Congelar -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Congelar">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Agua"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 32 
+Acción: Activa 
+Tipo: Anímico
+Efecto: Provoca un intenso frío sobre una o varias personas, congelando sus cuerpos al tiempo que los encierra en prisiones de hielo. Si se concentra sobre un único antagonista, aumenta el valor de la Resistencia 20 puntos. Dependiendo del nivel de fracaso del control, las consecuencias del conjuro son distintas. Si la diferencia es menor de 20, el efecto es parálisis menor; si es menor de 80, de parálisis normal, y si es superior, parálisis completa.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon         60            100               140             220
+Int. R.         6                9                  12               15
+
+Base: RM 120 / 5 metros de radio.
+Intermedio: RM 140/ 10 metros de radio.
+Avanzado: RM 160 / 25 metros de radio.
+Arcano: RM 180 / 50 metros de radio.
+Mantenimiento: 10 / 10 / 15 / 15 Diario</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Congelar_la_Magia -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Congelar_la_Magia">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Agua"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 86 
+Acción: Pasiva 
+Tipo: Efecto
+Efecto: Este hechizo congela la magia, paralizando temporalmente un conjuro y anulando sus efectos. Mientras un sortilegio permanezca helado no desaparece, pero se queda estancado sin producir consecuencias, y tampoco requiere que se pague su mantenimiento. Afecta tanto a hechizos controlados por el brujo como a aquellos que han sido lanzados por terceros. En el momento en el que congelar la magia deja de mantenerse, el sortilegio estancado vuelve a ser efectivo. Dado que es pasivo, puede congelar hechizos que se usan en el mismo asalto en que es ejecutado.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       250         400                  550             800
+Int. R.        9             12                    15               18
+
+Base: Valor zeónico máximo 150.
+Intermedio: Valor zeónico máximo 250.
+Avanzado: Valor zeónico máximo 300.
+Arcano: Valor zeónico máximo 400.
+Mantenimiento: 50 / 75 / 90 / 110 Diario</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Congelar_las_Emociones -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Congelar_las_Emociones">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Agua"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 26 
+Acción: Activa 
+Tipo: Efecto
+Efecto: Este hechizo hiela los sentimientos de una persona, otorgándole inmunidad psicológica contra todos los estados emocionales.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon        60              90                 120            150
+Int. R.        6                9                    12              15
+
+Base: Afecta a estados naturales.
+Intermedio: Como en grado base, pero el afectado deja de sentir también dolor.
+Avanzado: Como en grado intermedio, pero también afecta a todos los estados sobrenaturales.
+Arcano: Como en grado Avanzado, pero el hechicero es capaz de elegir libremente que sentimientos congelar y cuales no.
+Mantenimiento: 5 / 5 / 10 / 10</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Conjuro -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Conjuro">
@@ -2237,6 +2369,28 @@ Mantenimiento: 25 / 40 / 50 / 60 Diario</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Control_Reflejo -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Control_Reflejo">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Agua"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 50 
+Acción: Activa 
+Tipo: Anímico
+Efecto: El hechicero ata el cuerpo de un individuo al suyo propio, obligándole a imitar todos los movimientos que haga. En cierta manera, el personaje afectado se comporta como un espejo, que copia al instante a su controlador. Para resistir el conjuro es necesario superar un control de RM. El hechizo no permite repetir la tirada, salvo si el afectado se da cuenta de que va a ejecutar una acción que jamás realizaría.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon        80             160                 240           350
+Int. R.        7               10                    13              15
+
+Base: RM 80.
+Intermedio: RM 130.
+Avanzado: RM 160.
+Arcano: RM 200.
+Mantenimiento: 5 / 10 / 15 / 20</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Control_de_la_Electricidad -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Control_de_la_Electricidad">
@@ -2255,6 +2409,28 @@ Intermedio: RM 160 / 15 intensidades.
 Avanzado: RM 180 / 25 intensidades.
 Arcano: RM 220 / 40 intensidades.
 Mantenimiento: 10 / 20 / 25 / 35</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Control_de_las_Mareas -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Control_de_las_Mareas">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Agua"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 62 
+Acción: Activa 
+Tipo: Efecto
+Efecto: Otorga la capacidad de controlar limitadamente las corrientes de agua de mares y ríos, permitiendo al hechicero modificar su curso y potencia. El poder de este hechizo es tal, que el mago puede incluso producir pequeños maremotos o invertir el sentido de un río. Afecta en un radio alrededor del hechicero.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       150            300               450             600
+Int. R.         6                9                  12                15
+
+Base: 500 metros de radio.
+Intermedio: 1 kilómetro de radio.
+Avanzado: 3 kilómetros de radio.
+Arcano: 5 kilómetros de radio.
+Mantenimiento: 15 / 30 / 45 / 60 Diario</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -2303,6 +2479,28 @@ Mantenimiento: 50 / 60 / 80 / 100 Diario</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Control_sobre_los_Líquidos -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Control_sobre_los_Líquidos">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Agua"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 22 
+Acción: Activa Tipo: 
+Efecto, Anímico
+Efecto: Otorga completo control sobre una masa líquida. El hechizo permite alterar su forma y naturaleza, haciendo que se mueva por sí misma, dándole otra apariencia o incluso modificando su solidez. Si se ejecuta contra un elemental de agua, el mago podrá dominarlo si la criatura no supera una RM. Este sortilegio es incluso capaz de manejar el torrente sanguíneo de los seres vivos, pero en tal caso, el individuo afectado aplica un bono de +40 a su RM o RF. Manejar la sangre de una persona permite al hechicero producirle por asalto un negativo a la acción y un daño equivalente a la mitad del nivel de fracaso. En el caso de los elementales, tendrán derecho a un nuevo control al día o si reciben una orden completamente opuesta a su naturaleza, mientras que, cualquier otro individuo afectado, podrá repetirlo cada cinco asaltos para tratar de librarse completamente de la influencia del mago.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon        60             100               150             220
+Int. R.        6                 9                  12               15
+
+Base: RM o RF 100 / 5 litros.
+Intermedio: RM o RF 120 / 50 litros.
+Avanzado: RM o RF 140 / 500 litros.
+Arcano: RM o RF 180 / 5.000 litros.
+Mantenimiento: 10 / 10 / 15 / 15 Diario</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Controlar_a_los_Muertos -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Controlar_a_los_Muertos">
@@ -2321,6 +2519,28 @@ Intermedio: 50 metros de radio / RM 140.
 Avanzado: 100 metros de radio / RM 160.
 Arcano: 150 metros de radio / RM 180.
 Mantenimiento: 10 / 15 / 20 / 25 Diario</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Controlar_el_Frío -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Controlar_el_Frío">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Agua"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 30 
+Acción: Activa 
+Tipo: Efecto, Anímico
+Efecto: Permite controlar una cantidad de frío o hielo. El dominio capacita al brujo para alterar su potencia (hasta un la mitad de su valor arriba o abajo, en caso de que se mida por intensidades) o cambiar su forma. Si lo usa contra un ser basado naturalmente en frío, el mago podrá controlarlo si este no supera una RM. La criatura tendrá derecho a un nuevo control al día, o si recibe una orden completamente opuesta a su naturaleza.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon        50              80                 120            180
+Int. R.        6                9                    12              15
+
+Base: RM 100 / 5 intensidades.
+Intermedio: RM 120 / 8 intensidades.
+Avanzado: RM 140 / 12 intensidades.
+Arcano: RM 180 / 15 intensidades.
+Mantenimiento: 5 / 10 / 15 / 20</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -2526,6 +2746,28 @@ Mantenimiento: 10 / 15 / 25 / 50</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Crear_Frío -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Crear_Frío">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Agua"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 6 
+Acción: Activa 
+Tipo: Efecto
+Efecto: Crea intensidades de frío o hielo. Mientras se mantenga el conjuro, la temperatura se conservará.
+
+Grado    Base    Intermedio    Avanzado   Arcano
+Zeon         30             50                   90            140
+Int. R.         5               7                     10             12
+
+Base: 1 Intensidad.
+Intermedio: 3 Intensidades.
+Avanzado: 5 Intensidades.
+Arcano: 8 Intensidades.
+Mantenimiento: 5 / 5 / 10 / 15 Diario</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Crear_Homúnculo -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Crear_Homúnculo">
@@ -2574,6 +2816,50 @@ Intermedio: 25 metros de zona iluminada.
 Avanzado: 100 metros de zona iluminada.
 Arcano: 500 metros de zona iluminada.
 Mantenimiento: 5 / 5 / 10 / 15 Diario</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Crear_Líquidos -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Crear_Líquidos">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Agua"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 40 
+Acción: Activa 
+Tipo: Efecto
+Efecto: Crea agua o un cuerpo líquido similar. En el caso de que el compuesto tenga una presencia superior al agua, el DJ tiene la capacidad de reducir como considere necesario su cantidad. Este conjuro no permite elaborar líquidos con capacidades místicas.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon         80            140                240            350
+Int. R.         6                9                   12              16
+
+Base: 50 litros de agua.
+Intermedio: 500 litros de agua.
+Avanzado: 5.000 litros de agua.
+Arcano: 50.000 litros de agua.
+Mantenimiento: 10 / 20 / 25 / 30 Diario</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Crear_Ondina -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Crear_Ondina">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Agua"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 82 
+Acción: Activa 
+Tipo: Efecto
+Efecto: Crea una entidad de agua con apariencia de vida bajo el control absoluto del hechicero. El ente será desarrollado como un Ser Entre Mundos, usando los poderes y limitaciones de los elementales de agua. Para calcular su nivel máximo, se emplean las mismas reglas que en el conjuro Crear Ser de la vía de Creación.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       250            350                500            700
+Int. R.       10              12                  14               16
+
+Base: Nivel 1.
+Intermedio: Nivel 3.
+Avanzado: Nivel 6.
+Arcano: Nivel 10.
+Mantenimiento: 50 / 70 / 100 / 140 Diario</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -2728,6 +3014,50 @@ Intermedio: 40 Km/h / 50 metros de anchura.
 Avanzado: 80 Km/h / 75 metros de anchura.
 Arcano: 100 Km/h / 100 metros de anchura.
 Mantenimiento: 5 / 10 / 10 / 15</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Cristalización -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Cristalización">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Agua"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 46 
+Acción: Activa 
+Tipo: Anímico
+Efecto: Este hechizo cristaliza un cuerpo, tornándolo frágil y quebradizo. El individuo afectado deberá superar un control de RM o RF o todo su cuerpo se congelará, quedando sometido de inmediato a paralización menor. Adicionalmente, cualquier daño que reciba se considera automáticamente crítico, sin importar cuál sea su valor. Los seres con acumulación no reciben un crítico directo, pero todo su cuerpo se torna un punto vulnerable.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon        80             120                150            200
+Int. R.        8                10                  12              14
+
+Base: RM o RF 140.
+Intermedio: RM o RF 160.
+Avanzado: RM o RF 180.
+Arcano: RM o RF 200.
+Mantenimiento: 5 / 10 / 15 / 20</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Cuerpo_Líquido -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Cuerpo_Líquido">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Agua"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 52 
+Acción: Activa 
+Tipo: Efecto
+Efecto: El cuerpo designado por el hechicero se transforma en una sustancia líquida, permitiéndole alterar su forma voluntariamente y volviéndolo inmune a muchas clases de ataques. El limitado metamorfismo funciona con efectividad, ya que quienquiera que lo vea, debe superar un control de Advertir contra Muy difícil para percatarse de su naturaleza líquida. Adicionalmente, tiene la capacidad de convertir sus extremidades en variadas armas físicas, que poseerán una calidad +5. Aunque no es propiamente inmaterial, alguien en forma líquida puede entrar en cualquier lugar en el que sea capaz de filtrarse, como pequeñas rendijas. En este estado, un personaje es completamente invulnerable a los ataques Penetrantes y de Filo que no dañen energía, mientras que los Contundentes le producen sólo la mitad de efecto (salvo si dañan energía, que seguirán afectándole plenamente). Desgraciadamente, se torna vulnerable a los efectos de frío paralizantes, aplicando un penalizador de -20 a sus Resistencias contra ellos.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       100            120               140            160
+Int. R.         8               11                 13               16
+
+Base: Las habilidades descritas.
+Intermedio: El sujeto podrá moverse por el agua a una velocidad equivalente a su Tipo de movimiento natural.
+Avanzado: Como el Intermedio, pero la calidad de las armas es +10. 
+Arcano: Como el Avanzado, pero los ataques de Filo o Penetrantes basados en energía le producen sólo mitad de daño.
+Mantenimiento: 10 / 15 / 15 / 20</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -4069,6 +4399,28 @@ Bono: +20 a la habilidad de ataque sin armas y +10 al turno cuando se utilicen a
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#En_el_Interior_del_Espejo -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#En_el_Interior_del_Espejo">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Agua"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 90 
+Acción: Activa 
+Tipo: Efecto
+Efecto: El brujo conjura el reflejo de un territorio, creando una realidad paralela a imagen y semejanza de un lugar que existe en el mundo real. El reflejo es idéntico al sitio imitado, incluyendo tanto construcciones como flora y clima, que permanecen inalterables de la manera en la que se encontraban cuando el sortilegio fue lanzado. Únicamente no podrán ser imitados los seres vivos con una presencia superior a 20 y los lugares con características excepcionales. En el momento de lanzar el conjuro, el hechicero debe crear distintas puertas que conecten el mundo real con su obra, que podrán ubicarse y tener la forma que desee. No hay un número máximo de aperturas, aunque por lo menos está obligado a crear una.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       300            480               600             800
+Int. R.         9               12                 15               17
+
+Base: 500 metros de radio máximo.
+Intermedio: 2 kilómetros de radio máximo.
+Avanzado: 5 kilómetros de radio máximo.
+Arcano: 10 kilómetros de radio máximo / Se pueden imitar seres de hasta presencia 30.
+Mantenimiento: 30 / 50 / 60 / 70 Diario</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Encontrar -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Encontrar">
@@ -4100,6 +4452,28 @@ Mantenimiento: No</rdfs:comment>
 Efectos: El personaje aplicará un penalizador acumulativo de –10 a toda acción por cada mes que transcurra. El Director de Juego determinará una fecha en secreto, llegada la cual morirá.
 
 Beneficio: 2</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Enlentecer_el_Tiempo -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Enlentecer_el_Tiempo">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Agua"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 80 
+Acción: Activa 
+Tipo: Automático
+Efecto: Este conjuro influye en las fibras del continuo espacio tiempo de una parte de la realidad, aminorando su flujo de modo que, para todo el mundo, incluyendo al propio lanzador, trascurre mucho más lentamente. La zona afectada por el hechizo se separa de la realidad momentáneamente, haciendo que cada instante dure más en el exterior; por ejemplo, si el tiempo se reduce una décima parte, cada minuto dentro serían diez fuera del área del conjuro. El área de acción es alrededor del brujo, aunque se extiende a una velocidad de 10 metros por asalto a partir del momento en el que es lanzado. Si alguien penetra en ella posteriormente, se ve igualmente influenciado. Las entidades afectadas pueden evitar las consecuencias del hechizo superando una RM, pero únicamente si posee un Gnosis mayor de 30. La condición para ser influido es encontrarse en el interior de la zona seleccionada, en el asalto posterior al lanzamiento del conjuro.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       200            320               450             600
+Int. R.       10              12                  14               16
+
+Base: 100 metros de radio / RM 120 / El tiempo se reduce una décima parte.
+Intermedio: 200 metros de radio / RM 140 / El tiempo se reduce una centésima parte.
+Avanzado: 500 metros de radio / RM 160 / El tiempo se reduce una milésima parte.
+Arcano: 1 kilómetro de radio / RM 180 / El tiempo se reduce una millonésima parte.
+Mantenimiento: 20 / 25 / 30 / 35</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -4794,6 +5168,29 @@ Beneficio: 1</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Glacial -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Glacial">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Agua"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 70 
+Acción: Activa 
+Tipo: Efecto
+Efecto: Como su nombre indica, crea una inmensa zona glacial alrededor del hechicero, sin importar en absoluto cuáles sean las condiciones climáticas del ambiente en el que se encuentra. Todo el entorno se cubrirá de inmediato de hielo y nieve, reduciendo la temperatura ambiental a varios grados bajo cero.
+Mientras el conjuro se mantenga, el frío no será afectado por los fenómenos atmosféricos naturales.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       200           300                 400            500
+Int. R.       10             12                    14              16
+
+Base: 1 Kilómetro de radio.
+Intermedio: 3 Kilómetros de radio.
+Avanzado: 5 Kilómetros de radio.
+Arcano: 10 Kilómetros de radio.
+Mantenimiento: 40 / 60 / 80 / 100 Diario</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Golpe_de_Aire -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Golpe_de_Aire">
@@ -5444,6 +5841,29 @@ Mantenimiento: 5 / 10 / 15 / 20 Diario</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Impacto_de_Agua -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Impacto_de_Agua">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Agua"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 20 
+Acción: Activa 
+Tipo: Ataque
+Efecto: El brujo genera una descarga ofensiva que, aunque ataca en Contundente, es capaz de dañar energía. Si causa daño o es detenido, produce 
+un impacto sobre el blanco del sortilegio con una fuerza determinada por el grado del conjuro.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon         50              90                140            200
+Int. R.         5                8                   10              12
+
+Base: Daño 40 / Fuerza 8.
+Intermedio: Daño 60 / Fuerza 10.
+Avanzado: Daño 80 / Fuerza 12.
+Arcano: Daño 100 / Fuerza 14.
+Mantenimiento: No</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Incrementar_Debilidad -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Incrementar_Debilidad">
@@ -5550,6 +5970,28 @@ Intermedio: 15 Intensidades.
 Avanzado: 25 Intensidades.
 Arcano: 35 Intensidades.
 Mantenimiento: 10 / 20 / 25 / 30 Diario</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Inmunidad_al_Frío -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Inmunidad_al_Frío">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Agua"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 12 
+Acción: Activa 
+Tipo: Efecto
+Efecto: Este conjuro permite al hechicero, o a las personas que designe, ser inmune a intensidades de frío. En el caso de que se reciba un ataque basado en dicho elemento, cada intensidad a la que es inmune disminuye 5 puntos el daño base del ataque y otorga un +5 a las Resistencias contra sus efectos.
+
+Grado    Base    Intermedio    Avanzado     Arcano
+Zeon        50             140                200             300
+Int. R.        6                 8                   10               13
+
+Base: 5 intensidades de frío.
+Intermedio: 12 intensidades de frío.
+Avanzado: 20 intensidades de frío.
+Arcano: 30 intensidades de frío.
+Mantenimiento: 5 / 10 / 10 / 15 Diario</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -6106,6 +6548,28 @@ Beneficio: 2</rdfs:comment>
 Efectos: La cifra requerida para pifiar aumenta en dos puntos. En las habilidades normales pifiará con un resultado de 5 y, si es maestro, lo hará con 4.
 
 Beneficio: 1</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Manantial -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Manantial">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Agua"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 2 
+Acción: Activa 
+Tipo: Efecto
+Efecto: Atrae cualquier corriente o arroyo subterráneo que haya en las proximidades, haciendo brotar un manantial en el lugar designado por el brujo. El conjuro influye en los líquidos naturales que se encuentren a menos distancia del lanzador de lo que determina el grado del conjuro, aunque no es capaz de atravesar barreras de energía.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon        30              80                 120            180
+Int. R.        5                7                    10              12
+
+Base: 100 metros.
+Intermedio: 250 metros.
+Avanzado: 500 metros.
+Arcano: 1 kilómetro.
+Mantenimiento: 5 / 10 / 15 / 20 Diario</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -7042,6 +7506,28 @@ Mantenimiento: 5 / 20 / 20 / 25</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Pantalla_de_Hielo -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Pantalla_de_Hielo">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Agua"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 36 
+Acción: Pasiva 
+Tipo: Defensa
+Efecto: Forma una barrera de hielo que protege frente a cualquier fuente de ataque. En el caso de que el escudo detenga con éxito una descarga de energía basada en luz u oscuridad, puede devolver el ataque hacia su lanzador con la misma habilidad con la que este lo proyectó.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon        60             180                240            300
+Int. R.        6                 9                   12               15
+
+Base: 400 puntos de Resistencia.
+Intermedio: 1.500 puntos de Resistencia.
+Avanzado: 2.500 puntos de Resistencia.
+Arcano: 4.000 puntos de Resistencia.
+Mantenimiento: 10 / 10 / 15 / 15</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Paralización_Nigromántica -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Paralización_Nigromántica">
@@ -7250,6 +7736,28 @@ Intermedio: Cinco años.
 Avanzado: Cincuenta años / En caso de ser una predicción de algo que deba ocurrir en menos de un día, ésta será bastante exacta.
 Arcano: Un siglo / En caso de ser una predicción de algo que deba ocurrir en menos de años, ésta será bastante exacta.
 Mantenimiento: No</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Prisión_de_Agua -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Prisión_de_Agua">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Agua"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 66 
+Acción: Activa 
+Tipo: Automático
+Efecto: Este hechizo crea una inmensa masa de agua que engulle en su interior a todos los individuos que encuentre. Quienquiera que sea atrapado dentro, se moverá como si estuviera buceando y, a menos que respire en cuerpos líquidos, comenzará también a ahogarse. La prisión no permite que nadie escape de ella, produciendo potentes corrientes que empujan a sus víctimas hacia su centro. Si un personaje pretende huir, debe superar un control enfrentado contra una Fuerza 14, aunque obtiene un bonificar de +1 a su característica por cada nivel de Nadar que supere por encima de Fácil. La condición para ser afectado será encontrarse en el interior de la zona seleccionada, en el asalto posterior al lanzamiento del conjuro.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       140           200                280             350
+Int. R.        7               10                  13               16
+
+Base: 10 metros cúbicos.
+Intermedio: 50 metros cúbicos.
+Avanzado: 100 metros cúbicos.
+Arcano: 150 metros cúbicos / El control es contra Fuerza 15.
+Mantenimiento: 10 / 10 / 15 / 20</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -7654,6 +8162,50 @@ Beneficio: 1</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Reflejar_Estados -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Reflejar_Estados">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Agua"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 56 
+Acción: Pasiva 
+Tipo: Automático
+Efecto: El brujo crea un espejo místico, capaz de reflejar cualquier estado sobrenatural del que él o un individuo cercano sea blanco. El efecto se refleja automáticamente sobre aquel que lo haya producido, quien deberá superar una RM para evitar caer víctima de su propio poder. Si, por ejemplo, el brujo es presa de un terrible dolor de carácter mágico, este hechizo obliga al individuo que se lo hubiera provocado a superar automáticamente la RM, o también sufrirá el mismo padecimiento. Este hechizo no tiene mantenimiento, pero el estado reflejado se mantendrá mientras perdure en el sujeto sobre el que fue lanzado originariamente. Cada efecto sólo puede tratar de reflejarse una vez.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       120            180                240            320
+Int. R.        7                10                  13               16
+
+Base: RM 120.
+Intermedio: RM 150.
+Avanzado: RM 180.
+Arcano: RM 220.
+Mantenimiento: No</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Reflejo_del_Alma -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Reflejo_del_Alma">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Agua"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 76 
+Acción: Activa 
+Tipo: Automático
+Efecto: El poder de este hechizo manifiesta un reflejo espiritual de una persona o criatura, una copia anímica de un individuo que conserva todas y cada una de las cualidades que tiene el original. La entidad es idéntica al personaje afectado, salvo por el hecho de que es un ser espiritual, con la capacidad de interactuar con el mundo real y visible por cualquiera (pero aun así, inmune a cualquier ataque no basado en energía). Si la criatura tiene poderes que dependen de un Gnosis superior a 20, dichas habilidades no son copiadas. El reflejo obedece las órdenes del brujo, pero sólo puede manifestarse mientras se encuentre en presencia del sujeto a partir del cual se ha formado. Puede exteriorizarse el alma de cualquiera. El brujo sólo puede tener activo un hechizo de reflejo del alma sobre un mismo individuo a la vez. Si el sujeto que va a ser copiado trata de resistirse, puede evitar los efectos del sortilegio superando una RM. Este conjuro no funciona sobre el propio lanzador.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       200            280               320             400
+Int. R.       10              12                  14               16
+
+Base: RM 140 / Copia entidades de hasta Nivel 3.
+Intermedio: RM 160 / Copia entidades de hasta Nivel 5.
+Avanzado: RM 180 / Copia entidades de hasta Nivel 8 / Imita poderes de hasta Gnosis 25.
+Arcano: RM 200 / Copia entidades de hasta Nivel 12 / Imita poderes de hasta Gnosis 30.
+Mantenimiento: 20 / 30 / 35 / 40</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Regeneración -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Regeneración">
@@ -7898,6 +8450,50 @@ Mantenimiento: No</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Sexo">
         <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Señor_de_las_Aguas -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Señor_de_las_Aguas">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Agua"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 96 
+Acción: Activa 
+Tipo: Automático
+Efecto: Otorga el control absoluto de todas las sustancias líquidas que se encuentren en un radio de 100 kilómetros. Este dominio le permite alterar libremente los océanos, ríos y lagos de cualquier magnitud, moldeándolos a su antojo como si fuesen una extensión de su ser. Toda criatura basada en agua que se encuentre dentro del área del conjuro, deberá superar una RM o será controlada por el lanzador. Si la pasan, ya no necesitan volver a realizar el control. Los afectados tienen derecho a una nueva tirada únicamente si alteran su Resistencia base.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       300           450                 600          1.000
+Int. R.       10             12                   15               18
+
+Base: 100 kilómetros de radio / 140 RM.
+Intermedio: 1.000 kilómetros de radio / 180 RM.
+Avanzado: 10.000 kilómetros de radio / 200 RM.
+Arcano: Afecta cualquier sustancia líquida existente / 240 RM.
+Mantenimiento: 30 / 45 / 60 / 100 Diario</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Señor_de_los_Hielos -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Señor_de_los_Hielos">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Agua"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 92 
+Acción: Activa 
+Tipo: Automático
+Efecto: El lanzador controla cualquier núcleo de frío o hielo sin importar el número de intensidades que lo compongan. Este dominio le permite disminuir la temperatura ambiental dentro de su área de acción, y cristalizar hielo allí donde desee. Cualquier criatura basada en frío que se encuentre en el interior, deberá superar una RM o será dominada de inmediato. Si la pasan, ya no necesitan volver a realizar el control. Los afectados tienen derecho a una nueva tirada únicamente si alteran sus Resistencias.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       300           450                600           1.000
+Int. R.       10             12                  14                16
+
+Base: 100 kilómetros de radio / 140 RM.
+Intermedio: 1.000 kilómetros de radio / 180 RM.
+Avanzado: 10.000 kilómetros de radio / 200 RM.
+Arcano: 100.000 kilómetros de radio / 240 RM.
+Mantenimiento: 30 / 45 / 60 / 100 Diario</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -8721,6 +9317,28 @@ Mantenimiento: 35 / 60 / 90 / 150</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Tormenta_de_Hielo -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tormenta_de_Hielo">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Agua"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 60 
+Acción: Activa 
+Tipo: Automático
+Efecto: Crea una potente tormenta helada que congelará todo lo que encuentre. Quienquiera que se halle en ella, debe de superar cada cinco asaltos un control de RF contra 140, o sufrir automáticamente 10 puntos de daño basado en frío y un -5 acumulativo a toda acción. Debido a la intensa ventisca, las habilidades perceptivas aumentan dos niveles su dificultad. La tormenta tendrá un radio dentro del cual no es posible designar blancos. La condición para ser afectado será estar en el interior del área en el asalto posterior a su lanzamiento. El conjuro permanece siempre estático en el mismo lugar.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       120            180                240            320
+Int. R.         7               10                  12               15
+
+Base: 50 metros de radio.
+Intermedio: 150 metros de radio.
+Avanzado: 500 metros de radio / La RF se incrementa hasta 160.
+Arcano: 1 kilómetro de radio / La RF se incrementa hasta 180.
+Mantenimiento: 10 / 10 / 15 / 15</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Transmisión_por_Luz -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Transmisión_por_Luz">
@@ -8817,6 +9435,28 @@ Mantenimiento: No</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Tsunami -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tsunami">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Agua"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 72 
+Acción: Activa 
+Tipo: Efecto
+Efecto: Levanta un devastador tsunami capaz de arrasar completamente la costa. Las construcciones con una barrera de daño inferior a 80 serán destruidas de inmediato, mientras que el resto sufrirá enormes daños. Naturalmente, cualquier individuo dentro de la zona de impacto padecerá las consecuencias lógicas del fenómeno.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon        250           350                450            550
+Int. R.        10             12                   15              17
+
+Base: 1 kilómetro de longitud.
+Intermedio: 10 kilómetros de longitud.
+Avanzado: 20 kilómetros de longitud.
+Arcano: 30 kilómetros de longitud / Arrasa construcciones de hasta barrera de daño 90.
+Mantenimiento: No</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Ubicar_Magia -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ubicar_Magia">
@@ -8857,6 +9497,28 @@ Intermedio: 250 Kilómetros de radio / RM 180.
 Avanzado: 500 Kilómetros de radio / RM 240.
 Arcano: 1.000 Kilómetros de radio / RM 280.
 Mantenimiento: 45 / 80 / 120 / 200</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Un_mundo_Perfecto -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Un_mundo_Perfecto">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Agua"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 100 
+Acción: Activa 
+Tipo: Automático
+Efecto: Este hechizo congela toda la realidad, deteniendo completamente el paso del tiempo. Mientras duren sus efectos, la existencia permanece paralizada; únicamente el lanzador podrá moverse y alterar su entorno libremente (aunque será incapaz de regenerar Zeon). Las entidades afectadas pueden evitar las consecuencias del hechizo superando una RM, pero únicamente si poseen un Gnosis mayor de 35 o 20 puntos por encima de su Natura.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       450           800               1.200        1.600
+Int. R.       12             15                    17              20
+
+Base: RM 120.
+Intermedio: RM 180.
+Avanzado: RM 220.
+Arcano: RM 260.
+Mantenimiento: 90 / 115 / 130 / 145 Diario</rdfs:comment>
     </owl:NamedIndividual>
     
 
