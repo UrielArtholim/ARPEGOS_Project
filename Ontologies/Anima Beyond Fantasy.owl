@@ -1140,6 +1140,28 @@ Beneficio: 1</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Arma_Ígnea -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arma_Ígnea">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Fuego"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 26 
+Acción: Activa 
+Tipo: Efecto
+Efecto: Imbuye de llamas un arma, haciendo que ataque en la TA de calor como crítico primario. El fuego será tan potente que aumentará en el daño base del ataque, sin afectar en absoluto la resistencia del arma.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon        50              80                100              120
+Int. R.        6                9                   11                14
+
+Base: +10 al daño base.
+Intermedio: +20 al daño base.
+Avanzado: +30 al daño base.
+Arcano: +40 al daño base.
+Mantenimiento: 5 / 10 / 10 / 15</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Armadura -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Armadura">
@@ -1344,6 +1366,28 @@ Mantenimiento: 5 / 10 / 15 / 20</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Armagedón -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Armagedón">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Fuego"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 100 
+Acción: Activa 
+Tipo: Automático
+Efecto: El conjuro de fuego definitivo concede al lanzador la capacidad de consumir una parte de la propia esencia del mundo, calcinando las almas que están a su alrededor. Cualquier cosa, orgánica o no, que se encuentre en el interior de su área, deberá superar cada minuto que esté dentro una RM o será calcinado física y espiritualmente. Mientras el lanzador mantenga activo el Armagedón, ninguna forma de vida podrá nacer o ser creada dentro de su zona de influencia.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       450            800             1.200         1.600
+Int. R.       15              16                  17               18
+
+Base: 10 kilómetros de radio / RM 140.
+Intermedio: 25 kilómetros de radio / RM 150.
+Avanzado: 50 kilómetros de radio / RM 160.
+Arcano: 150 kilómetros de radio / RM 180.
+Mantenimiento: 90 / 100 / 105 / 110</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Armas_Y_Escudos -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Armas_Y_Escudos">
@@ -1542,6 +1586,50 @@ Mantenimiento: 15 / 20 / 30 / 40 Diario</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Aumentar_el_Crítico -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Aumentar_el_Crítico">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Fuego"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 42 
+Acción: Pasiva 
+Tipo: Efecto
+Efecto: Proporciona un bonificador a la tirada para calcular el Nivel de Crítico que haya provocado un ataque determinado. A pesar de ser un conjuro pasivo, debe usarse antes de que se lancen los dados. 
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon         60             90                120             150
+Int. R.         6               9                   12               15
+
+Base: +20 al Nivel de Crítico.
+Intermedio: +40 al Nivel de Crítico.
+Avanzado: +60 al Nivel de Crítico.
+Arcano: +80 al Nivel de Crítico.
+Mantenimiento: No</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Aumentar_la_Temperatura_Ambiental -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Aumentar_la_Temperatura_Ambiental">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Fuego"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 36 
+Acción: Activa 
+Tipo: Efecto
+Efecto: Aumenta la temperatura ambiente. Si la temperatura aumenta 10 grados por encima de lo que es natural en una zona en su momento más cálido, el índice de aumento se reduce a la mitad. 
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon         60            140                240            300
+Int. R.         7               10                  12              15
+
+Base: +5 grados / 1 kilómetro de radio.
+Intermedio: +10 grados / 5 kilómetros de radio.
+Avanzado: +20 grados / 10 kilómetros de radio.
+Arcano: +30 grados / 15 kilómetros de radio.
+Mantenimiento: 15 / 40 / 50 / 60 Diario</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Aura_de_Destrucción -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Aura_de_Destrucción">
@@ -1617,6 +1705,28 @@ Mantenimiento: 10 / 10 / 15 / 15 Diario</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Barrera_de_Fuego -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Barrera_de_Fuego">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Fuego"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 22 
+Acción: Activa 
+Tipo: Automático, Defensa
+Efecto: Este conjuro levanta un potente muro de fuego. Cualquiera que trate de traspasarlo recibirá automáticamente un ataque contra una habilidad Casi Imposible (es decir, un ataque automático de habilidad final 240) en la TA de calor. Recibir daño no impide a un personaje atravesar el muro. Adicionalmente, el brujo podrá usarla a modo de escudo mágico para detener únicamente ataques basados en agua, frío o fuego.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon        50              90                 120            150
+Int. R.        6                 9                   12              15
+
+Base: Daño 80 / 2 metros de extensión / 300 puntos de Resistencia.
+Intermedio: Daño 90 / 5 metros de extensión / 500 puntos de Resistencia.
+Avanzado: Daño 100 / 10 metros de extensión / 800 puntos de Resistencia / Permite detener ataques basados en energía.
+Arcano: Daño 100 / 15 metros de extensión / 1.500 puntos de Resistencia / El ataque es contra Imposible / Permite detener ataques basados en cualquier tipo de ataque.
+Mantenimiento: 5 / 10 / 10 / 15</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Bendición -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Bendición">
@@ -1666,6 +1776,28 @@ Intermedio: RM 160.
 Avanzado: RM 200.
 Arcano: RM 240.
 Mantenimiento: 15 / 20 / 25 / 30 Diario</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Bola_de_Fuego -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Bola_de_Fuego">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Fuego"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 16 
+Acción: Activa 
+Tipo: Ataque
+Efecto: Proyecta un ataque ígneo que estalla en un área. No es posible seleccionar blancos en el interior de la explosión. Ataca en la TA de calor. 
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon        50            100                160             250
+Int. R.        6                9                   12               15
+
+Base: Daño base 50 / Área de 5 metros de radio.
+Intermedio: Daño base 100 / Área de 25 metros de radio.
+Avanzado: Daño base 140 / Área de 80 metros de radio.
+Arcano: Daño base 160 / área de 150 metros de radio.
+Mantenimiento: No</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -2347,6 +2479,50 @@ Beneficio: 2</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Consumir_Esencia -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Consumir_Esencia">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Fuego"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 62 
+Acción: Activa 
+Tipo: Anímico
+Efecto: Este hechizo crea una terrorífica aura sobrenatural alrededor del brujo que destruye la esencia vital de las personas, consumiendo sus energías e impidiéndoles curarse por medios naturales. Cualquier sujeto que se encuentre en un radio respecto al mago deberá superar una RM o perderá una cantidad de puntos de vida y puntos de Zeon equivalentes al nivel de fracaso. Los puntos de vida que un personaje pierda a causa de este hechizo no se recuperan de manera natural, y sólo podrán sanarse mediante conjuros de curación o medios sobrenaturales equivalentes. En lo que respecta a los puntos de Zeon, deberán ser absorbidos de otros hechiceros o contenedores mágicos.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       120           180                240             300
+Int. R.         6               9                    12               15
+
+Base: 10 metros de radio / RM 120.
+Intermedio: 25 metros de radio / RM 160.
+Avanzado: 50 metros de radio y RM 200.
+Arcano: 150 metros de radio / RM 220.
+Mantenimiento: No</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Consumir_Vida_por_Magia -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Consumir_Vida_por_Magia">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Fuego"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 80 
+Acción: Activa 
+Tipo: Efecto
+Efecto: Permite al hechicero consumir su propia fuerza vital para incrementar su reserva de magia. Este conjuro otorga la habilidad pasiva de sacrificar temporalmente puntos de vida para recuperar Zeon. Cada 5 PV que se sacrifiquen con este objetivo, proporcionan al personaje 100 puntos de Zeon que gastar (en el caso de las criaturas con acumulación de daño, la cantidad a sacrificar aumentará dependiendo de su múltiplo). Los puntos de vida perdidos mediante este método se recuperarán a un ritmo de 10 puntos por día, sin importar la Regeneración natural del personaje ni los conjuros de curación que emplee (es decir, cuentan como un Sacrificio). Sus efectos no se superponen, y sólo se puede tener un conjuro de esta clase activo sobre un individuo determinado.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       120           180                 240            300
+Int. R.        6                9                    12               15
+
+Base: 20 puntos de vida asalto.
+Intermedio: 80 puntos de vida asalto.
+Avanzado: 140 puntos de vida asalto.
+Arcano: 200 puntos de vida asalto.
+Mantenimiento: 10 / 10 / 15 / 15 Diario</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Control_Físico -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Control_Físico">
@@ -2386,6 +2562,28 @@ Base: RM 80.
 Intermedio: RM 130.
 Avanzado: RM 160.
 Arcano: RM 200.
+Mantenimiento: 5 / 10 / 15 / 20</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Control_Sobre_el_Fuego -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Control_Sobre_el_Fuego">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Fuego"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 20 
+Acción: Activa 
+Tipo: Efecto, Anímico
+Efecto: Permite controlar la forma y crecimiento de un fuego. Del mismo modo, podrán modificarse distintos aspectos de las llamas, como su color, apariencia e incluso el humo que producen. Si se trata de un ser basado naturalmente en este elemento, el mago podrá controlarlo si la criatura no supera una RM. Un ser que falle la Resistencia no puede repetirla, salvo en caso de que recibir una orden opuesta a su naturaleza.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon         50             80                 120            180
+Int. R.         6               9                    12              15
+
+Base: RM 100 / 5 intensidades.
+Intermedio: RM 120 / 8 intensidades.
+Avanzado: RM 140 / 12 intensidades.
+Arcano: RM 180 / 15 intensidades.
 Mantenimiento: 5 / 10 / 15 / 20</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -2768,6 +2966,28 @@ Mantenimiento: 5 / 5 / 10 / 15 Diario</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Crear_Fuego -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Crear_Fuego">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Fuego"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 6 
+Acción: Activa 
+Tipo: Efecto
+Efecto: Crea intensidades de fuego. Mientras se mantenga el conjuro, la temperatura se conservará.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon         30             80                 100            120
+Int. R.         5               8                    10               12
+
+Base: 1 intensidad de fuego.
+Intermedio: 6 intensidades de fuego.
+Avanzado: 8 intensidades de fuego.
+Arcano: 10 intensidades de fuego.
+Mantenimiento: 5 / 10 / 10 / 15 Diario</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Crear_Homúnculo -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Crear_Homúnculo">
@@ -2794,6 +3014,28 @@ Intermedio: 10 Homúnculos.
 Avanzado: 25 Homúnculos.
 Arcano: 100 Homúnculos.
 Mantenimiento: 10 / 20 / 25 / 35 Diario</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Crear_Ifreet -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Crear_Ifreet">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Fuego"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 82 
+Acción: Activa 
+Tipo: Efecto
+Efecto: Crea una criatura de fuego con apariencia de vida, bajo el control absoluto del hechicero. El ente será desarrollado como un Ser Entre Mundos, usando los poderes y limitaciones de los elementales de Fuego. La criatura tendrá PD y, para calcular su nivel máximo, se emplean las mismas reglas que en el conjuro Crear Ser de la vía de Creación.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       250            350                500            700
+Int. R.       10              12                  14               16
+
+Base: Nivel 1.
+Intermedio: Nivel 3.
+Avanzado: Nivel 6.
+Arcano: Nivel 10.
+Mantenimiento: 50 / 70 / 100 / 140 Diario</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -3040,6 +3282,28 @@ Mantenimiento: 5 / 10 / 15 / 20</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Crítico_Directo -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Crítico_Directo">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Fuego"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 70 
+Acción: Activa 
+Tipo: Anímico
+Efecto: Causa un estallido interno en un individuo, provocándole un crítico de manera automática. A efectos de juego, el blanco recibirá el equivalente a un Nivel de Crítico aunque tendrá la capacidad de contrarrestarlo con su RF, empleando las reglas generales. Para evitar sus efectos es necesario superar un control de RM contra el valor determinado por el grado del conjuro.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       100          140                  200            280
+Int. R.         9             11                    13               16
+
+Base: Crítico 120 / RM 140.
+Intermedio: Crítico 140 / RM 160.
+Avanzado: Crítico 180 / RM 180.
+Arcano: Crítico 220 / RM 200.
+Mantenimiento: No</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Cuerpo_Líquido -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Cuerpo_Líquido">
@@ -3080,6 +3344,28 @@ Intermedio: Personajes de Nivel 6.
 Avanzado: Personajes de Nivel 12.
 Arcano: Personajes de Nivel 18.
 Mantenimiento: 10 / 10 / 15 / 15 Diario</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Cuerpo_a_Fuego -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Cuerpo_a_Fuego">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Fuego"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 52 
+Acción: Activa 
+Tipo: Efecto
+Efecto: El cuerpo designado por el hechicero se transformará en llamas, volviéndose inmune a cualquier ataque no basado en energía, frío o agua. Todo aquello capaz de mitigar el fuego (arena, espuma…) producirá también daño al personaje, Cualquiera que se ponga en contacto con las llamas que forman su cuerpo, estará obligado a realizar una RF contra el doble de su presencia, o a perder una cantidad de puntos de vida equivalente a la mitad del nivel de fracaso (si el afectado tiene protección contra fuego, cada punto de TA contra calor que posea le otorga un bono de +5 a esta tirada).
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       100           120                140             160
+Int. R.         8              11                  13                16
+
+Base: Las habilidades descritas.
+Intermedio: El sujeto ganará un bono de +30 a sus Resistencias contra efectos basados en calor.
+Avanzado: Como el Intermedio, el sujeto puede colarse por cualquier lugar en el que pueda pasar las lenguas de fuego.
+Arcano: Como el Avanzado, pero los ataques basados en frío o agua que no sean de origen sobrenatural no le producen daño.
+Mantenimiento: 10 / 15 / 15 / 20</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -3303,6 +3589,28 @@ Base: Daño 100.
 Intermedio: Daño 200.
 Avanzado: Daño 300.
 Arcano: Daño 400.
+Mantenimiento: No</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Descarga_de_Calor -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Descarga_de_Calor">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Fuego"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 30 
+Acción: Activa 
+Tipo: Ataque
+Efecto: Proyecta una descarga de ondas de alta temperatura, capaces de abrasar cualquier cosa. El ataque se realiza en la TA de calor. Dado que las ondas no son visibles para el ojo humano, el defensor deberá ser capaz de ver magia, tener visión térmica, o superar un control de Advertir contra Absurdo, si no quiere sufrir el penalizador de Cegado contra este ataque.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon        60             90                  120            150
+Int. R.        6               9                    12               15
+
+Base: Daño 50.
+Intermedio: Daño 70.
+Avanzado: Daño 90.
+Arcano: Daño 110.
 Mantenimiento: No</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -3978,6 +4286,28 @@ Intermedio: 150 metros de radio / 140 RM para resistirse.
 Avanzado: 500 metros de radio / 160 RM para resistirse.
 Arcano: 1 kilómetro de radio / 200 RM para resistirse.
 Mantenimiento: 5 / 10 / 20 / 30</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Devastación -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Devastación">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Fuego"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 90 
+Acción: Activa 
+Tipo: Ataque
+Efecto: Proyecta una explosión ígnea, que ataca en área con un daño base de 200 puntos. Ataca en la TA de calor, aunque es capaz de dañar energía. No es posible designar blancos en el interior del conjuro.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       200            300              400              500
+Int. R.       10              13                 16                18
+
+Base: 1 kilómetro de radio.
+Intermedio: 5 kilómetros de radio.
+Avanzado: 10 kilómetros de radio.
+Arcano: 15 kilómetros de radio.
+Mantenimiento: No</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -5125,6 +5455,28 @@ Mantenimiento: No</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Fundir -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Fundir">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Fuego"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 50 
+Acción: Activa 
+Tipo: Anímico
+Efecto: Este conjuro calienta cualquier objeto inorgánico que el hechicero elija en un radio haciendo que alcance altísimas temperaturas. El calor producido será tan intenso que, cualquier objeto susceptible de fundirse que no supere un control de Resistencia se fundirá en un número de asaltos equivalente a su entereza. Cualquier persona que esté en contacto con el cuerpo abrasado, deberá desprenderse de él o sufrirá daños. Si no lo arroja, cada turno realizará una tirada acumulativa.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon         80            120               180             240
+Int. R.         8               10                 12               14
+
+Base: 10 metros de radio / RF 80.
+Intermedio: 50 metros de radio / RF 100.
+Avanzado: 100 metros de radio / RF 120.
+Arcano: 150 metros de radio / RF 140.
+Mantenimiento: 10 / 10 / 15 / 15</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Fusionar -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Fusionar">
@@ -5864,6 +6216,28 @@ Mantenimiento: No</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Incinerar -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Incinerar">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Fuego"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 60 
+Acción: Activa 
+Tipo: Automático
+Efecto: Prende en llamas cualquier cuerpo que designe el hechicero, orgánico o inorgánico, por la mera condición de hallarse en su presencia. A efectos de juego, el brujo realizará una tirada con el bonificador En Llamas, por cada blanco que desee incinerar.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       100           150                200             260
+Int. R.       10              12                  14               16
+
+Base: RM 140 / +100 a la Tabla 76 / 50 metros de radio.
+Intermedio: RM 160 / +120 a la Tabla 76 / 100 metros de radio.
+Avanzado: RM 180 / +140 a la Tabla 76 / 150 metros de radio.
+Arcano: RM 200 / +160 a la Tabla 76 / 200 metros de radio.
+Mantenimiento: 10 / 15 / 15 / 20</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Incrementar_Debilidad -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Incrementar_Debilidad">
@@ -5970,6 +6344,28 @@ Intermedio: 15 Intensidades.
 Avanzado: 25 Intensidades.
 Arcano: 35 Intensidades.
 Mantenimiento: 10 / 20 / 25 / 30 Diario</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Inmunidad_Contra_el_Fuego -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Inmunidad_Contra_el_Fuego">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Fuego"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 10 
+Acción: Activa 
+Tipo: Efecto
+Efecto: Este conjuro permite al hechicero, o a las personas que designe, ser inmunes a intensidades de calor. En el caso de que se reciba un ataque basado en dicho elemento, cada intensidad a la que es inmune disminuye 5 puntos el daño base del ataque, otorgando un +5 a las Resistencias contra sus efectos.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon         50            140                200            300
+Int. R.         6                8                   10              13
+
+Base: 5 intensidades de calor.
+Intermedio: 12 intensidades de calor.
+Avanzado: 20 intensidades de calor.
+Arcano: 30 intensidades de calor.
+Mantenimiento: 5 / 10 / 10 / 15 Diario</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -6539,6 +6935,28 @@ Beneficio: 2</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Magia_por_Capacidades -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Magia_por_Capacidades">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Fuego"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 72 
+Acción: Activa 
+Tipo: Efecto
+Efecto: Permite al hechicero consumir su propia energía mágica, para incrementar temporalmente sus atributos y las habilidades que dependan de ellos. Este conjuro otorga la habilidad pasiva de sacrificar sus puntos de Zeon para obtener un bonificador a las características. Cada 25 puntos de Zeon que gaste de esta forma le proporcionarán un +1 a uno de sus atributos hasta el final del turno. Sus efectos no se superponen, y sólo se puede tener un conjuro de esta clase activo sobre un individuo determinado.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       120           180                 240            300
+Int. R.         6               9                    12               15
+
+Base: 50 puntos de Zeon por asalto.
+Intermedio: 100 puntos de Zeon por asalto.
+Avanzado: 150 puntos de Zeon por asalto.
+Arcano: 200 puntos de Zeon por asalto.
+Mantenimiento: 10 / 10 / 15 / 15 Diario</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Mala_suerte -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Mala_suerte">
@@ -6731,6 +7149,28 @@ Mantenimiento: 10 / 10 / 15 / 20 Diario</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Mina_de_Fuego -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Mina_de_Fuego">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Fuego"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 40 
+Acción: Activa 
+Tipo: Efecto
+Efecto: Crea una mina ígnea, que estalla a voluntad del hechicero en radio atacando en la TA de calor. Para defenderse de la explosión, es necesario realizar una defensa contra un ataque final de dificultad Casi Imposible (es decir, una habilidad de ataque final de 240) si se encuentra a más de la mitad de la zona abarcada por el área de explosión, o contra Imposible (ataque de habilidad final 280) si se está a menos. A bocajarro, es decir, a menos de un metro de su centro, el ataque es de dificultad Inhumana (habilidad final de 320). La mina puede dejarse fija en un lugar o en un objeto determinado, y permanece estática en ese lugar hasta que estalla. El brujo puede activarla cuando desee, aunque hacerlo se considera una acción activa. No es posible seleccionar blancos en el interior de su explosión, y afecta a todos los presentes, incluyendo al propio lanzador.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon        80             160               240             320
+Int. R.        7                10                 12               15
+
+Base: 10 metros de radio / Daño 80.
+Intermedio: 50 metros de radio / Daño 120.
+Avanzado: 150 metros de radio / Daño 180.
+Arcano: 250 metros de radio / Daño 240.
+Mantenimiento: 20 / 40 / 50 / 60 Diario</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Miopía -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Miopía">
@@ -6740,6 +7180,28 @@ Mantenimiento: 10 / 10 / 15 / 20 Diario</rdfs:comment>
 Efectos: Aplicará un negativo de –50 a cualquier tirada de la habilidad Advertir o Buscar en la que se emplee la vista y un –3 a cualquier control de Percepción que la requiera. Este penalizador también se aplicará a la puntería. Si consigue unas gafas, el negativo penalizador se reduciría como el Director de Juego considere conveniente.
 
 Beneficio: 1</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Mitigar_Fuego -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Mitigar_Fuego">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Fuego"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 6 
+Acción: Activa 
+Tipo: Efecto, Anímico
+Efecto: Disminuye intensidades de fuego o de calor. Hay que tener en cuenta que algunas fuentes de fuego, como volcanes o grandes incendios, se reproducen automáticamente si no se consiguen mitigar del todo. Al lanzarlo sobre un ser basado en fuego, recibirá 5 puntos de daño por cada intensidad rebajada, si no supera una RM. Los seres con acumulación reciben 25 puntos de daño por cada intensidad.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon        30              80                 120             200
+Int. R.        5                8                    10               13
+
+Base: -1 intensidad de fuego / RM 100.
+Intermedio: -5 intensidades de fuego / RM 120.
+Avanzado: -10 intensidades de fuego / RM 140.
+Arcano: -15 intensidades de fuego / RM 180.
+Mantenimiento: No</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -7649,6 +8111,28 @@ Mantenimiento: No</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Pira_Absoluta -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Pira_Absoluta">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Fuego"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 86 
+Acción: Activa 
+Tipo: Efecto
+Efecto: Crea intensidades de fuego. Mientras se mantenga el conjuro, la llama seguirá ardiendo incluso sin nada que consumir. Si se prende en algo inflamable, arderá naturalmente tras finalizar el hechizo.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       250            300               350             400
+Int. R.       10               12                 14               18
+
+Base: 15 intensidades.
+Intermedio: 25 intensidades.
+Avanzado: 35 intensidades.
+Arcano: 45 intensidades.
+Mantenimiento: 25 / 30 / 30 / 35 Diario</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Poder -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Poder">
@@ -8338,6 +8822,72 @@ Mantenimiento: 60 / 65 / 70 / 80</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Sacrificar_a_Otros -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Sacrificar_a_Otros">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Fuego"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 92 
+Acción: Activa 
+Tipo: Anímico, Efecto
+Efecto: Este hechizo encadena la esencia y la fuerza vital de otros individuos al lanzador, permitiendo a este consumirla en su propio beneficio. A efectos de juego, permite a la entidad utilizar los puntos de vida y Zeon de los sujetos afectados por el conjuro para sus hechizos de sacrificio: Sacrificio Vital, Magia por Capacidades, Sacrificio de Poder y Consumir Vida Por Magia. Este conjuro tiene un área estática de un kilómetro, dentro de la cual podrá designar a tantos blancos como quiera el lanzador. La RM para superar este conjuro será de 120. Los afectados tendrán derecho a una nueva tirada por día que transcurra, o en cada ocasión en la que sus energías sean consumidas.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       250            350               500             750
+Int. R.       13              15                  17               19
+
+Base: RM 120 / 1 kilómetro de área.
+Intermedio: RM 140 / 2 kilómetros de área.
+Avanzado: RM 160 / 3 kilómetros de área.
+Arcano: RM 180 / 5 kilómetros de área.
+Mantenimiento: 50 / 70 / 100 / 150 Diario</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Sacrificio_Vital -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Sacrificio_Vital">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Fuego"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 56 
+Acción: Activa 
+Tipo: Efecto
+Efecto: Permite al hechicero consumir su propia fuerza vital para incrementar sus capacidades físicas cuando lo requiera. Este conjuro otorga la habilidad pasiva de sacrificar temporalmente sus puntos de vida para obtener un bonificador a una acción determinada. Cada 5 puntos de vida que gaste de esta forma proporcionarán al personaje +5 a una de sus tiradas (en el caso de las criaturas de acumulación de daño, será necesario multiplicar estos puntos por su múltiplo de acumulación). Este bono sólo será aplicable a las acciones físicas, pero podrá sumarse a habilidades primarias como ataque, defensa o Proyección Mágica. A pesar de ser una acción pasiva, es necesario declarar el sacrificio antes de lanzar los dados. Es también posible que el brujo decida conferir esta habilidad a otro individuo, siendo entonces este quien decida cuántos puntos gastar en cada caso. Los puntos de vida perdidos de esta forma se recuperan a un ritmo de 10 al día, sin importar lo que indique la Regeneración natural del personaje (es decir, cuentan como un Sacrificio). Sus efectos no se superponen, y sólo se puede tener un conjuro de esta clase activo sobre un individuo determinado.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       120           180                240            300
+Int. R.         6               9                    12              15
+
+Base: Sacrificio máximo de 50 Puntos de Vida por asalto.
+Intermedio: Sacrificio máximo de 100 Puntos de Vida por asalto.
+Avanzado: Sacrificio máximo de 150 Puntos de Vida por asalto.
+Arcano: Sacrificio máximo de 200 Puntos de Vida por asalto.
+Mantenimiento: 10 / 10 / 15 / 15 Diario</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Sacrificio_de_Poder -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Sacrificio_de_Poder">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Fuego"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 66 
+Acción: Activa 
+Tipo: Efecto
+Efecto: Permite al hechicero consumir su propia energía mágica para incrementar su acumulación mágica. Este conjuro otorga la habilidad pasiva de gastar puntos de Zeon para obtener un bono temporal a su ACT. Cada 10 puntos que invierta con este fin, le proporcionarán un +5 a su ACT hasta el fin del turno. Sus efectos no se superponen, y sólo se puede tener un conjuro de esta clase activo sobre un individuo determinado.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       120           180                240             300
+Int. R.         7              10                  13                15
+
+Base: 20 puntos de Zeon por asalto.
+Intermedio: 50 puntos de Zeon por asalto.
+Avanzado: 80 puntos de Zeon por asalto.
+Arcano: 120 puntos de Zeon por asalto.
+Mantenimiento: 10 / 10 / 15 / 15 Diario</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Salud_enfermiza -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Salud_enfermiza">
@@ -8368,6 +8918,28 @@ Bono: +10 a la habilidad de parada sin armas.</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Secar -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Secar">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Fuego"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 46 
+Acción: Activa 
+Tipo: Efecto, Anímico
+Efecto: Este conjuro seca inmediatamente cualquier cuerpo mojado que se encuentre dentro de un radio. Puede utilizarse para dañar cualquier tipo de elemental de agua, causándole el doble de daño por el que no supere una RM o RF. Si se usa para perjudicar a seres vivos que poseen organismos basados en agua (lo que incluye a los seres humanos), sus efectos pueden ser también muy perjudiciales, aunque el daño se reduce sólo a la mitad del nivel de fracaso.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon         80            120                180            240
+Int. R.         8               10                  12              14
+
+Base: 5 metros de radio / RM o RF 100.
+Intermedio: 15 metros de radio / RM o RF 120.
+Avanzado: 25 metros de radio / RM o RF 140.
+Arcano: 35 metros de radio / RM o RF 160.
+Mantenimiento: No</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Selene -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Selene">
@@ -8381,6 +8953,28 @@ Requisitos: Aikido, maestría en esquiva o parada sin armas.
 Conocimiento marcial: +10
 
 Bono: +20 a la habilidad de esquiva y parada sin armas.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Sentir_el_Calor -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Sentir_el_Calor">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Fuego"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 12 
+Acción: Activa 
+Tipo: Detección
+Efecto: Detecta la localización de cualquier fuente de calor. El conjuro no dará información sobre qué lo produce, pero podrá sentir intensidades y tamaños. Es posible, incluso, percibir el calor que desprende un cuerpo humano, pero no el de seres inanimados o inmateriales, como golems o no muertos. Si se desea resistir, deberá superarse una RM.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon        60             100                140            200
+Int. R.        6                 9                   12              15
+
+Base: 25 metros / RM 120.
+Intermedio: 50 metros / RM 150.
+Avanzado: 100 metros / RM 180.
+Arcano: 250 metros / RM 220.
+Mantenimiento: 10 / 10 / 15 / 15</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -8560,6 +9154,28 @@ Base: 100 kilómetros de radio / 140 RM.
 Intermedio: 1.000 kilómetros de radio / 180 RM.
 Avanzado: 10.000 kilómetros de radio / 200 RM.
 Arcano: 100.000 kilómetros de radio / 240 RM.
+Mantenimiento: 30 / 45 / 60 / 100 Diario</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Señor_del_Fuego -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Señor_del_Fuego">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Fuego"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 96 
+Acción: Activa 
+Tipo: Automático
+Efecto: El hechicero controla cualquier núcleo de elevado calor a su alrededor. Este dominio le permite incluso manejar las corrientes de magma del interior del planeta, pudiendo crear erupciones y volcanes. Toda criatura basada en fuego que se encuentre dentro del área del conjuro, deberá superar una RM o será controlada por el lanzador. Si la pasan, ya no necesitan volver a realizar el control. Los afectados tienen derecho a una nueva tirada únicamente si alteran su Resistencia base.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       300            450                600          1.000
+Int. R.       10              12                   15              18
+
+Base: 100 kilómetros de radio / 140 RM.
+Intermedio: 1.000 kilómetros de radio / 180 RM.
+Avanzado: 10.000 kilómetros de radio / 200 RM.
+Arcano: Afecta cualquier fuente de calor / 240 RM.
 Mantenimiento: 30 / 45 / 60 / 100 Diario</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -9317,6 +9933,28 @@ Mantenimiento: 35 / 60 / 90 / 150</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Tormenta_de_Fuego -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tormenta_de_Fuego">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Fuego"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 76
+ Acción: Activa 
+Tipo: Automático
+Efecto: El brujo designa un área dentro de la cual se desencadena una potente tormenta de llamas, que calcina todo lo que se encuentra en su interior. Los individuos que se hallen en ella sufrirán, cada asalto, un ataque automático en la TA de calor contra una habilidad final determinada por el grado del conjuro y un daño base de 100 puntos. El área de la tormenta tendrá un radio máximo en cuyo interior no se podrán designar blancos, pudiendo afectar incluso al propio lanzador. La condición para recibir el ataque será estar dentro de la tormenta en el asalto posterior a su lanzamiento. El hechizo siempre permanece estático en el lugar donde fue conjurado.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       150           200                 240            280
+Int. R.        8              10                    12              15
+
+Base: 25 metros de radio / Habilidad de Ataque Absurdo (180).
+Intermedio: 150 metros de radio / Habilidad de Ataque Casi Imposible (240).
+Avanzado: 200 metros de radio/ Habilidad de Imposible (280).
+Arcano: 250 metros de radio/ Habilidad de Ataque Inhumano (320).
+Mantenimiento: 15 / 20 / 25 / 30</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Tormenta_de_Hielo -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tormenta_de_Hielo">
@@ -9847,6 +10485,28 @@ Intermedio: Presencia máxima 100.
 Avanzado: Presencia máxima 120.
 Arcano: Presencia máxima 140 / Permite ver en la oscuridad sobrenatural.
 Mantenimiento: 5 / 10 / 10 / 15 Diario</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Ver_en_las_Cenizas -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ver_en_las_Cenizas">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Fuego"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 32 
+Acción: Activa 
+Tipo: Efecto
+Efecto: Traslada los sentidos del hechicero al pasado, permitiéndole ver la causa o incidente que provocó un determinado incendio. El hechicero deberá estar presente entre los restos del incendio para ejecutar el conjuro, y mientras lo hace no será consciente de lo que ocurre a su alrededor en la actualidad.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon        60             140                220            340
+Int. R.        6               10                  13               15
+
+Base: Retrocede un día hora.
+Intermedio: Retrocede un día.
+Avanzado: Retrocede un mes.
+Arcano: Retrocede un año.
+Mantenimiento: No</rdfs:comment>
     </owl:NamedIndividual>
     
 
