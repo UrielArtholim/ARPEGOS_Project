@@ -879,6 +879,28 @@ Beneficio: 1</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Adquirir_Capacidades_Naturales -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Adquirir_Capacidades_Naturales">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Esencia"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 36 
+Acción: Activa 
+Tipo: Efecto
+Efecto: Concede a un individuo la capacidad de adquirir habilidades y características de los seres existentes en el reino animal o vegetal. A efectos de juego, concede PD adicionales al personaje para obtener habilidades secundarias, habilidades esenciales o poderes de la Creación de Seres. No obstante, sólo podrán escogerse habilidades secundarias de los campos físicos de Agilidad, Percepción y Fuerza, y los poderes especiales que tengan como requerimiento Gnosis 0. Los PD se invierten según los costes de la categoría del personaje. No puede aumentarse ningún campo de habilidades primarias, ni tampoco adquirir capacidades sobrenaturales. Hay que tener en cuenta que estos cambios afectarán temporalmente a la forma física del personaje. Si, por ejemplo, ha adquirido un Arma Natural de daño incrementado, lo más lógico sería que estuviese dotado de unas enormes garras o cuernos. Los efectos de este conjuro no se superponen, y sólo se puede afectar con él una vez a cada sujeto. Si quieren obtenerse poderes distintos, primero debe dejar de mantenerse el sortilegio y lanzar uno nuevo.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       120           200                280             360
+Int. R.        7               10                  13               15
+
+Base: +50 PD.
+Intermedio: +10 PD.
+Avanzado: +150 PD.
+Arcano: +200 PD.
+Mantenimiento: 25 / 40 / 60 / 80 Diario</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Adquirir_Habilidades -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Adquirir_Habilidades">
@@ -919,6 +941,28 @@ Intermedio: 200 PD.
 Avanzado: 300 PD.
 Arcano: 400 PD / Gnosis 30.
 Mantenimiento: 20 / 40 / 50 / 60</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Afinidad_Natural -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Afinidad_Natural">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Esencia"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 2 
+Acción: Activa 
+Tipo: Efecto
+Efecto: Altera la esencia de un individuo, permitiéndole volverse afín a cualquier tipo de ser vivo y consiguiendo así que estos le reconozcan como un miembro de su especie. Como ejemplo, podría usarse este conjuro para adquirir afinidad hacia los lobos y, de ese modo, ser reconocido como un igual por estos. Sólo afecta a seres que se basen en instintos.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon        30               80                100             120
+Int. R.        5                 8                   10               12
+
+Base: Afecta a animales naturales (caballos, conejos, lobos…).
+Intermedio: Afecta a toda clase de criatura natural.
+Avanzado: Afecta tanto a seres naturales como a criaturas entre mundo.
+Arcano: Cualquier clase de criatura, incluyendo seres sobrenaturales de alto poder existencial.
+Mantenimiento: 5 / 10 / 10 / 15 Diario</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -1033,6 +1077,28 @@ Beneficio: 1</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Alterar_el_Crecimiento -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Alterar_el_Crecimiento">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Esencia"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 46 
+Acción: Activa 
+Tipo: Anímico
+Efecto: Modifica el ritmo natural de desarrollo de un organismo, acelerando o retrasando su evolución. En juego, permite multiplicar o dividir el ritmo de envejecimiento de un cuerpo vivo por el valor que determina el grado del conjuro. Por ejemplo, si este conjuro se lanza en grado avanzado para acelerar el envejecimiento de alguien, cada día que transcurra será equivalente a cincuenta para el objetivo. Una vez alguien es afectado por este conjuro, no tiene derecho a repetir la RM mientras el lanzador mantenga el sortilegio.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon         80            140                180            240
+Int. R.         9               11                  13              16
+
+Base: x2 al ritmo de crecimiento / RM 100.
+Intermedio: x10 al ritmo de crecimiento / RM 120.
+Avanzado: x50 al ritmo de crecimiento / RM 140.
+Arcano: x100 al ritmo de crecimiento / RM 160.
+Mantenimiento: 10 / 15 / 15 / 20 Diario</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Alzamiento -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Alzamiento">
@@ -1050,6 +1116,29 @@ Base: Nivel máximo 3.
 Intermedio: Nivel máximo 6.
 Avanzado: Nivel máximo 9.
 Arcano: Nivel máximo 12.
+Mantenimiento: No</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Analizar_el_Alma -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Analizar_el_Alma">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Esencia"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 32 
+Acción: Activa 
+Tipo: Automático
+Efecto: Este hechizo permite al brujo analizar espiritualmente a un individuo o
+criatura, obteniendo información detallada acerca de sus capacidades naturales y sus poderes. Aunque no le da acceso a saber cuáles son sus conocimientos ni el nivel de las habilidades que dependan de estos, sí puede medir su potencial espiritual y averiguar cómo funcionan sus capacidades innatas. Por ejemplo, si se utiliza sobre un ser sobrenatural, el brujo descubrirá cuáles son sus poderes y cuán elevados son, pero no lo que sabe hacer ni cómo es de bueno luchando. Este conjuro funciona automáticamente sobre la criatura designada si el hechicero la ve o conoce su verdadero nombre, aunque ésta puede resistirse superando una RM.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon         60             90                 120            150
+Int. R.         7              10                  13               15
+
+Base: RM 120.
+Intermedio: RM 140.
+Avanzado: RM 180.
+Arcano: RM 200.
 Mantenimiento: No</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -1564,6 +1653,28 @@ Mantenimiento: No</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Atar_Esencia_Vital -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Atar_Esencia_Vital">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Esencia"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 86 
+Acción: Activa 
+Tipo: Anímico
+Efecto: Este conjuro esconde un alma en un contenedor físico, sin desligarla completamente de su forma original. El afectado seguirá actuando a través de su antiguo cuerpo con libertad, puesto que sigue existiendo un vínculo con su alma, aunque este no será más que una carcasa vacía inmortal, ya que su esencia vital se encuentra a salvo en otro lugar. No obstante, el hecho de que no muera no significa que sea invulnerable. El cuerpo no es inmune a los críticos y estos podrán incapacitarle por completo. Además, aunque es incapaz de perecer a causa de la pérdida de puntos de vida, si estos se reducen hasta el estado de muerte, su cuerpo se convierte en una cáscara sin vida que sólo se curará con habilidades sobrenaturales. La carcasa sin alma será inmune a los efectos místicos de carácter anímico, es decir, que afecten directamente a su esencia. Por el contrario, el contenedor sí es vulnerable, y si este es destruido el personaje morirá automáticamente. Dado que sigue existiendo un lazo entre el cuerpo y el objeto que sirve como escondite para el alma, estos no pueden separarse a mucha distancia a riesgo de que se rompa la unión y el individuo fallezca. Dicha distancia es determinada por el grado del conjuro. Si alguien quiere resistirse a este efecto, deberá superar una RM, pero una vez fallada, no tendrá derecho a repetirla mientras no se ponga en contacto físico con el contenedor.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       200            300               400             500
+Int. R.       10              12                 14                16
+
+Base: RM 100 / 1 kilómetro de distancia.
+Intermedio: RM 120 / 5 kilómetros de distancia.
+Avanzado: RM 140 / 50 kilómetros de distancia.
+Arcano: RM 160 / 150 kilómetros de distancia.
+Mantenimiento: No</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Atravesar_lo_Sólido -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Atravesar_lo_Sólido">
@@ -1745,6 +1856,28 @@ Mantenimiento: 10 / 15 / 25 / 35</rdfs:comment>
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Baja_Nobleza">
         <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Clase_Social"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Estrato social al que pertenecen personajes que ostentan títulos nobiliarios, pero no poseen rentas para sostener un modo de vida compatible con tal condición (que es vivir sin trabajar).</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Barrera_de_Almas -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Barrera_de_Almas">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Esencia"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 20 
+Acción: Activa 
+Tipo: Escudo
+Efecto: Crea una barrera espiritual que detiene cualquier ataque anímico que afecte a las Resistencias sobrenaturales. Es decir, permite usar el escudo para detener cualquier efecto que obligue al hechicero a lanzar una RM o RP, aunque es virtualmente inútil contra otros tipos de ataques o conjuros. Tampoco es capaz de detener ataques que producen daños con efectos añadidos, como por ejemplo, el sortilegio Lluvia de Destrucción. El escudo en sí no tiene puntos de vida, ya que no protege contra impactos que produzcan daño.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon         40             60                  90              120
+Int. R.         6                9                   12               15
+
+Base: Hasta 140 de Resistencia.
+Intermedio: Hasta 160 de Resistencia.
+Avanzado: Hasta 200 de Resistencia.
+Arcano: Hasta 240 de Resistencia.
+Mantenimiento: 5 / 10 / 10 / 15 Diario</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -2325,6 +2458,71 @@ Beneficio: 2</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Compartir_Esencia -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Compartir_Esencia">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Esencia"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 72 
+Acción: Activa 
+Tipo: Anímico
+Efecto: El mago ata la esencia de dos individuos, formando una unidad indivisible. De este modo, cualquier daño o efecto espiritual que reciba uno de los afectados, lo sufrirán igualmente los demás. En el caso de los conjuros anímicos, se usará la RM más elevada. Si se ata la esencia de un ser normal con otro de acumulación de daño, el primero sólo sufrirá una quinta parte del daño recibido por la criatura. En el caso de que alguno de los blancos del conjuro quiera resistirse deberá superar una RM.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       140           180                 240            300
+Int. R.         8              10                   12              15
+
+Base: Presencia máxima 100 / RM 120.
+Intermedio: Presencia máxima 140 / RM 140.
+Avanzado: Presencia máxima 200 / RM 170.
+Arcano: Presencia máxima 260 / RM 200.
+Mantenimiento: 15 / 20 / 25 / 30 Diario</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Compartir_Sentidos -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Compartir_Sentidos">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Esencia"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 22 
+Acción: Activa 
+Tipo: Efecto
+Efecto: Conecta los sentidos del hechicero con los de otros individuos y viceversa, permitiéndoles ver y escuchar lo que los otros perciban. Si el brujo lo desea, es capaz de negar el acceso a sus propios sentidos. Para resistirse, se debe superar una RM o RP. Cualquier afectado tiene derecho a una nueva Resistencia cada hora. Puede afectar a varios individuos a la vez, siempre que la suma de la presencia de estos (sin incluir la del hechicero) no supere lo que determine el grado del conjuro.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon         60            180                 240           300
+Int. R.         6                9                    12             15
+Base: Presencia máxima 100 / RM o RP 100 / 1 kilómetro de distancia máxima.
+Intermedio: Presencia máxima 160 / RM o RP 160 / 10 kilómetros de distancia máxima.
+Avanzado: Presencia máxima 200 / RM o RP 190 / 50 kilómetros de distancia máxima.
+Arcano: Presencia máxima 240 / RM o RP 220 / 150 kilómetros de distancia máxima.
+Mantenimiento: 10 / 20 / 25 / 30 Diario</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Comunicación_por_Esencia -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Comunicación_por_Esencia">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Esencia"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 10 
+Acción: Activa 
+Tipo: Automático
+Efecto: El hechizo establece un enlace anímico entre el lanzador y un sujeto determinado, permitiendo a ambos comunicarse espiritualmente. La conversación se realizará mediante conceptos que ambos entenderán automáticamente, incluso si hablan idiomas diferentes o uno de ellos ni siquiera está capacitado para hablar. Es incluso posible comunicarse con plantas o animales que no tienen un idioma estructurado.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon        30              70                 100            150
+Int. R.        6                9                    10              13
+
+Base: Permite comunicarte con animales y plantas.
+Intermedio: Permite comunicarte con cualquier clase de ser natural.
+Avanzado: Permite comunicarte con cualquier clase de ser natural o entre mundos.
+Arcano: Permite comunicarte con cualquier clase de entidad.
+Mantenimiento: 10 / 20 / 20 / 25 Diario</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Congelar -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Congelar">
@@ -2545,6 +2743,28 @@ Los personajes adquieren puntos de CM por el simple hecho de pertenecer a una ca
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Conocimiento_Natural -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Conocimiento_Natural">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Esencia"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 12 
+Acción: Activa 
+Tipo: Efecto
+Efecto: Permite analizar toda la información sobre un determinado tipo de ser natural, como animales o plantas. Un hechicero que usase este conjuro podría, por ejemplo, examinar una planta extraña y descubrir si es venenosa o si tiene algún tipo de propiedad especial.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon        40              60                   90             120
+Int. R.        6                9                     10              13
+
+Base: Analiza las propiedades básicas de una planta o animal.
+Intermedio: Analiza todas las propiedades de una planta o animal.
+Avanzado: Analiza todas las propiedades de una raza natural.
+Arcano: Analiza todas las propiedades y poderes místicos o especiales de un ser natural.
+Mantenimiento: No</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Constitucion -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Constitucion">
@@ -2699,6 +2919,28 @@ Mantenimiento: 5 / 10 / 10 / 15 Diario</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Control_Natural -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Control_Natural">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Esencia"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 56 
+Acción: Activa 
+Tipo: Anímico
+Efecto: Por medio de este hechizo, el mago obtiene el dominio absoluto de un miembro de una raza natural con Gnosis 0, como animales, plantas o incluso seres humanos normales. El brujo podrá transmitir sus órdenes directamente por la conexión mística que crea con el afectado, sin la necesidad de hablarle o de que este le entienda. Para resistir los efectos del hechizo es necesario superar una RM (dado que se controla la esencia del sujeto y no su mente, no le es posible utilizar su RP). El individuo subyugado tendrá derecho a un nuevo control por día, y en cada ocasión en la que la reciba una orden que vaya completamente en contra de su naturaleza. Ante una petición que ponga su vida en peligro o le obligue a matar a alguien querido, podrá aplicar un bono de +20 a su RM.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       100            180               240             300
+Int. R.         8               10                 12               15
+
+Base: RM 80.
+Intermedio: RM 120.
+Avanzado: RM 150.
+Arcano: RM 180.
+Mantenimiento: 20 / 40 / 50 / 60 Diario</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Control_Reflejo -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Control_Reflejo">
@@ -2739,6 +2981,28 @@ Intermedio: RM 120 / 8 intensidades.
 Avanzado: RM 140 / 12 intensidades.
 Arcano: RM 180 / 15 intensidades.
 Mantenimiento: 5 / 10 / 15 / 20</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Control_Sobrenatural -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Control_Sobrenatural">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Esencia"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 70 
+Acción: Activa 
+Tipo: Anímico
+Efecto: Por medio de este conjuro, el hechicero obtiene el control absoluto de un espíritu o de un Ser Entre Mundos. El brujo podrá transmitir sus órdenes directamente, por la conexión mística que crea con la entidad. Para resistir los efectos de este conjuro, es necesario que la entidad supere una RM (dado que se controla la esencia de la criatura, no es posible utilizar su RP). El ser tendrá derecho a una nueva Resistencia por día, y en cada ocasión en la que las órdenes recibidas vayan completamente en contra de su comportamiento.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       120            180                240            300
+Int. R.         8               10                  13              15
+
+Base: RM 100.
+Intermedio: RM 120.
+Avanzado: RM 140.
+Arcano: RM 180.
+Mantenimiento: 25 / 40 / 50 / 60 Diario</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -3160,6 +3424,28 @@ Intermedio: Nivel 4.
 Avanzado: Nivel 8.
 Arcano: Nivel 12.
 Mantenimiento: 10 / 15 / 25 / 50</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Crear_Espíritu -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Crear_Espíritu">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Esencia"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 82 
+Acción: Activa 
+Tipo: Efecto
+Efecto: Mediante su magia, el brujo crea un ente espiritual bajo su completo dominio. El ser debe ser desarrollado como un Espíritu, usando los poderes y limitaciones de dichos seres. La criatura tendrá PD y, para calcular su nivel máximo, se emplean las mismas reglas que en el conjuro Crear Ser de la vía de Creación.
+
+Grado    Base    Intermedio    Avanzado   Arcano
+Zeon       250            350               500            700
+Int. R.       10              12                  14              16
+
+Base: Nivel 1.
+Intermedio: Nivel 3.
+Avanzado: Nivel 6.
+Arcano: Nivel 10.
+Mantenimiento: 50 / 70 / 100 / 140 Diario</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -4533,6 +4819,28 @@ Mantenimiento: 5 / 10 / 10 / 15</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Detectar_Esencia -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Detectar_Esencia">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Esencia"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 6 
+Acción: Activa 
+Tipo: Automático
+Efecto: El hechicero percibe la esencia en la que está basado cualquier ser que se encuentre a su alrededor. El brujo no obtiene información real sobre las criaturas, pero puede reconocer sus ataduras elementales e identificar posteriormente seres con el mismo tipo de esencia o raza. Ten en cuenta que no es un conjuro de detección como tal, por lo que el mago deberá tener al menos constancia de que una entidad está cerca de él para poder sentir su esencia. Aun así, el hechizo sí le permite percibir a criaturas espirituales que sean invisibles al ojo humano.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon         30             60                 100            140
+Int. R.         5               8                    10              12
+
+Base: RM 100 / 10 metros de radio.
+Intermedio: RM 140 / 25 metros de radio.
+Avanzado: RM 160 y 50 metros de radio.
+Arcano: RM 200 / 100 metros de radio.
+Mantenimiento: 5 / 10 / 10 / 15</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Detectar_Minerales -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Detectar_Minerales">
@@ -4616,6 +4924,28 @@ Base: 1 kilómetro de radio.
 Intermedio: 5 kilómetros de radio.
 Avanzado: 10 kilómetros de radio.
 Arcano: 15 kilómetros de radio.
+Mantenimiento: No</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Devolver_el_Flujo -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Devolver_el_Flujo">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Esencia"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 62 
+Acción: Activa 
+Tipo: Anímico
+Efecto: Este conjuro afecta a un espíritu devolviéndolo al más allá. Permite influenciar tanto a almas muertas que esperan “El Llamamiento” como a criaturas de naturaleza espiritual. Salvo si la entidad tiene un Gnosis lo suficientemente elevado que le permita regresar al mundo, su esencia desaparecerá al llegar al más allá. En el caso de No Muertos, dado que sus almas ya no pertenecen al mundo, son automáticamente destruidas.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       100            180               240             300
+Int. R.         8               10                 12                15
+
+Base: RM 120.
+Intermedio: RM 160.
+Avanzado: RM 180.
+Arcano: RM 220.
 Mantenimiento: No</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -4837,6 +5167,28 @@ Intermedio: Radio de 150 metros / RM 140.
 Avanzado: Radio de 300 metros y RM 180.
 Arcano: Radio de 500 metros / RM 220.
 Mantenimiento: 5 / 20 / 25 / 30</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Dominio_de_la_Vida -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Dominio_de_la_Vida">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Esencia"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 92 
+Acción: Activa 
+Tipo: Automático
+Efecto: El lanzador controla parte de la esencia del mundo, obteniendo el dominio absoluto de todos los Seres Naturales que se encuentren a su alrededor. Podrá transmitir sus órdenes directamente por la conexión mística que mantiene con los afectados, sin la necesidad de estar junto a ellos. Para resistirse, es necesario superar una RM (dado que controla la esencia misma de las criaturas, no es posible utilizar la RP). Los afectados tendrán derecho a una nueva Resistencia por día, y en cada ocasión en la que las órdenes recibidas vayan completamente en contra de su comportamiento.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       300           500                750           1.000
+Int. R.       10              13                  15               18
+
+Base: RM 100 / 100 kilómetros de radio.
+Intermedio: RM 130 / 500 kilómetros de radio.
+Avanzado: RM 160 / 1.500 kilómetros de radio.
+Arcano: RM 200 / 2.500 kilómetros de radio.
+Mantenimiento: 60 / 75 / 85 / 100 Diario</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -5161,6 +5513,28 @@ Intermedio: 3 kilómetros de radio.
 Avanzado: 10 kilómetros de radio.
 Arcano: 15 kilómetros de radio.
 Mantenimiento: No</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Escudar -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Escudar">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Esencia"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 66 
+Acción: Activa 
+Tipo: Automático
+Efecto: Encanta una cierta zona, haciéndola impenetrable para un determinado tipo de ser. En el momento de lanzar el hechizo, el mago debe elegir a qué clase de seres les estará vedado el acceso, aunque tendrá libertad absoluta para seleccionar a tantos como desee. Podría, por ejemplo, prohibir el paso sólo a los elementales de fuego o permitir únicamente la entrada de humanos. La zona afectada no podrá tener una extensión mayor de lo que indique el grado del conjuro, o el doble en longitud si tiene forma de muro. Es decir, si lanza el conjuro en grado base el hechicero puede elegir entre que la zona tenga 20 metros de radio o una longitud de 40 metros en línea. Cualquier ser que tenga el paso vedado y que no supere una RM no será capaz de atravesar el escudo. Alguien que haya fallado el control tiene derecho a repetir la tirada una vez por hora. Si alguno de estos seres ya se encontraba en el interior de una zona escudada cuando el conjuro fue lanzado, podrá moverse libremente por ella hasta que salga y pretenda volver a entrar. Escudar permanece estático en el lugar donde es lanzado.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       120           180                240             300
+Int. R.         8              10                  13               15
+
+Base: RM 120 / 20 metros de radio.
+Intermedio: RM 160 / 30 metros de radio.
+Avanzado: RM 180 / 40 metros de radio.
+Arcano: RM 200 / 50 metros de radio.
+Mantenimiento: 15 / 20 / 25 / 30 Diario</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -5650,6 +6024,28 @@ Beneficio: 1</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Existencia_Espiritual -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Existencia_Espiritual">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Esencia"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 80 
+Acción: Activa 
+Tipo: Efecto
+Efecto: Permite al mago trascender a un estado espiritual, abandonando definitivamente su cuerpo físico. A partir de ese momento, dejará de ser una criatura natural o entre mundos y pasará a convertirse en ente espiritual con Gnosis 25, gozando de todas las ventajas que ello conlleva. Adicionalmente, obtendrá PD extras, que podrá usar para elegir entre Habilidades Naturales y Poderes de Creación de Seres, descritas en el Capítulo 26. También permite escoger PD en desventajas y penalizadores para obtener puntos adicionales. Ten en cuenta que el exceso de PD aumenta el nivel del hechicero; al usar este conjuro, el hechicero sume automáticamente un nivel (al convertirse en un ente espiritual) más otro adicional por cada 100 PD que obtenga sin desventajas. Este conjuro sólo funciona sobre seres naturales y seres entre mundos, por lo que no podrá ser lanzado sobre espíritus para incrementar sus habilidades nuevamente. En el caso de que un ser espiritual se reencarne de nuevo en una forma física, perderá de manera automática las ventajas y poderes que haya obtenido mediante este hechizo.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       250           500              1.000          2.500
+Int. R.       10             13                   15                17
+
+Base: Hasta 100 PD opcionales en desventajas.
+Intermedio: +100 PD / hasta 100 PD opcionales en desventajas.
+Avanzado: +200 PD / hasta 200 PD opcionales en desventajas.
+Arcano: +300 PD / hasta 200 PD opcionales en desventajas.
+Mantenimiento: No</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Extenuación_mágica -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Extenuación_mágica">
@@ -5787,6 +6183,28 @@ Base: El brujo es inmaterial y sólo puede ser dañado por ataques que afecten e
 Intermedio: Como en base, pero aquel que toque al brujo siente un frío de muerte que le obliga a realizar un control de RF o RM contra el doble de la presencia de este y, si falla la tirada, sufrirá un negativo a toda acción y una pérdida de puntos de vida equivalente a la mitad de su nivel de fracaso. Avanzado: Como en Avanzado, pero el brujo obtiene una cantidad de puntos de vida equivalentes a la cantidad que pierde cualquier persona con la que entre en contacto.
 Arcano: Como en avanzado, pero si el objetivo falla la RM o RF por más de 40 puntos muere irremisiblemente.
 Mantenimiento: 10 / 20 / 25 / 30</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Forma_Espiritual -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Forma_Espiritual">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Esencia"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 52 
+Acción: Activa 
+Tipo: Efecto
+Coste: 100
+Efecto: Transforma la forma física de un individuo en materia espiritual. Mientras se encuentre en este estado, aplicará las reglas descritas en el grado del conjuro como si fuera un ser espiritual.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       100           120                 140            160
+Int. R.         8              11                   13               16
+Base: El personaje se vuelve intangible ante cualquier materia o ataque no basado en energía.
+Intermedio: Como en grado base pero el personaje también carece de necesidades físicas.
+Avanzado: Como en grado intermedio pero el personaje obtiene invisibilidad espiritual.
+Arcano: Como en grado avanzado pero el personaje también obtiene el poder Interacción con el mundo.
+Mantenimiento: 10 / 15 / 15 / 20</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -6612,6 +7030,28 @@ Mantenimiento: No</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Imitación_Natural -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Imitación_Natural">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Esencia"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 50 
+Acción: Activa 
+Tipo: Efecto
+Efecto: Crea un animal natural, imitando a una especie existente. El ser estará bajo el control absoluto del hechicero, quien podrá darle órdenes a través del lazo místico que les une. La criatura creada debe de ser un animal con Gnosis 0 y de una raza que exista en el mundo (por ejemplo osos, conejos, elefantes...). El conjuro permite crear un solo ser (nivel 5 como máximo), o repartir los niveles que confiere entre varias criaturas. Las creaciones tendrán todos sus instintos y habilidades naturales.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon         60            180                240            300
+Int. R.         8              10                   13              15
+
+Base: 2 niveles.
+Intermedio: 10 niveles.
+Avanzado: 20 niveles.
+Arcano: 50 niveles.
+Mantenimiento: 10 / 10 / 15 / 15</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Imitar -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Imitar">
@@ -6741,6 +7181,28 @@ Intermedio: Como en grado Base, pero también se vuelve indetectable ante habili
 Avanzado: Como en grado Intermedio, pero también se vuelve indetectable ante todas las habilidades sobrenaturales.
 Arcano: Ignora cualquier detección que no sean los sentidos naturales.
 Mantenimiento: 80 / 90 / 105 / 115 Diario</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Inducción_de_Estados -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Inducción_de_Estados">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Esencia"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 60 
+Acción: Activa 
+Tipo: Anímico
+Efecto: Mediante la manipulación del alma, se imbuye al objetivo del conjuro en cualquiera de los estados genéricos (con excepción de muerte). El brujo elige el momento de lanzamiento del hechizo cual desea provocar, cuya duración dependerá de las reglas generales en cada caso. Para resistirse, es necesario superar una RM. Si los estados inducidos son Coma o Paralización completa, el afectado puede añadir un bono de +40 a su tirada.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       100           180                 240            300
+Int. R.         8              10                   12              15
+
+Base: RM 100.
+Intermedio: RM 140.
+Avanzado: RM 180.
+Arcano: RM 200.
+Mantenimiento: No</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -7612,6 +8074,28 @@ Bono: +10 a la habilidad de ataque sin armas.</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Mente_de_Vida -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Mente_de_Vida">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Esencia"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 42 
+Acción: Activa 
+Tipo: Automático
+Efecto: Permite al brujo conectar su esencia con la mente de cualquier ser vivo (lo que incluye animales y plantas) con Gnosis entre 0 y 10 que se encuentre en la zona de acción del conjuro. El mago podrá sentir lo que hay alrededor de los afectados utilizando la percepción de estos individuos, aunque no puede influir en lo más mínimo sobre ellos. Dado que también transmite una parte de su espíritu, puede lanzar conjuros con la mitad de su ACT como si estuviera presente, aunque por ello cualquier conjuro Anímico realizado sobre el cuerpo en el que se encuentra funcionará, de forma adicional, también contra él. En el momento en el que pretende introducir su esencia en un individuo, el objetivo puede evitarlo superando una RM. Una vez que está observando desde ese cuerpo, el mago es libre de saltar a cualquier otro blanco que esté dentro del radio de acción del hechizo (siempre y cuando el nuevo objetivo no supere la Resistencia, por supuesto). Una vez que un individuo pasa el control, ya no puede ser afectado por el conjuro por más que el brujo trate de introducirse en él. Si alguien en quien reside la esencia del hechicero sale del área de acción de Mente de Vida, el lanzador perderá su poder sobre él. Habitualmente, una persona afectada no se da cuenta de que está siendo utilizada de este modo, incluso si desde ella se lanzan conjuros. Mente de Vida no permite al lanzador detectar cuántos objetivos hay a su alrededor ni su posición exacta, pero el mago puede dirigir sus poderes hacia el lugar al que le interesa enviar su espíritu. Es posible, por ejemplo, decidir que quiere entrar en la mente más cercana que se encuentre a 300 metros de él hacia el norte, y el conjuro buscará de modo automático el ser que más se acerque al punto designado. Mientras una parte de su esencia se encuentra fuera del cuerpo, el brujo no es consciente de lo que ocurre alrededor de su verdadero yo. 
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       120           180                240             300
+Int. R.         7              10                  13               15
+
+Base: RM 80 / 500 metros de radio.
+Intermedio: RM 120 / 1 kilómetro de radio.
+Avanzado: RM 140 / 2 kilómetros de radio.
+Arcano: RM 180 / 3 kilómetros de radio.
+Mantenimiento: 10 / 10 / 15 / 15</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Metamorfismo -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Metamorfismo">
@@ -7770,6 +8254,28 @@ Intermedio: 200 PD.
 Avanzado: 300 PD.
 Arcano: 400 PD.
 Mantenimiento: 10 / 20 / 30 / 40</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Modificar_la_Esencia -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Modificar_la_Esencia">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Esencia"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 26 
+Acción: Activa 
+Tipo: Anímico
+Efecto: Permite al hechicero modificar libremente la esencia de un individuo o ser. Este conjuro no otorga habilidades especiales por el cambio en si, pero altera temporalmente la base anímica del objetivo. De esta forma, mientras se mantenga, podría incluso modificar la esencia de un elemental de tierra por frío, haciéndole especialmente vulnerable a efectos y ataques basados en calor. En el caso de que la criatura posea poderes que están cerrados al elemento al que se modifica su esencia, perderá temporalmente la capacidad de utilizarlos.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon         50             80                 100            140
+Int. R.         6                8                   10              12
+
+Base: RM 140.
+Intermedio: RM 160.
+Avanzado: RM 180.
+Arcano: RM 200.
+Mantenimiento: 5 / 10 / 10 / 15</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -9352,6 +9858,50 @@ Mantenimiento: No</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Resurrección_Esencia -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Resurrección_Esencia">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Esencia"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 96 
+Acción: Activa 
+Tipo: Efecto
+Efecto: Este conjuro arranca del más allá un alma muerta, devolviéndola a la vida. La dificultad del hechizo depende del tiempo que haya transcurrido desde el momento en el que esta falleció, ya que cuanto mayor sea el periodo, el espíritu se encontrará mucho más disperso y arraigado en el flujo de las almas. Este hechizo sólo permite traer el alma, pero no podrá atarla por sí solo a su cuerpo ni sanarlo. Para hacer completamente efectiva una resurrección, deberá trasladarse el espíritu a un cuerpo apropiado mediante el conjuro Transmigrar el Alma. Existe la posibilidad de que el tiempo que ha pasado en el más allá haya afectado de forma irreparable al alma, por lo que queda en manos del Director de Juego limitar de algún modo los recuerdos y conocimientos del individuo. No es posible resucitar un alma que ya se haya reencarnado o que fuese destruida. Por base, el alma resucitada no podrá tener una presencia superior ni su muerte superar el plazo de tiempo que determine el grado del conjuro.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       400            500               600             700
+Int. R.        10              13                 15               18
+
+Base: Presencia máxima 30 / 1 mes.
+Intermedio: Presencia máxima 60 / 1 año.
+Avanzado: Presencia máxima 120 / 1 década.
+Arcano: Presencia máxima 150 / 1 siglo.
+Mantenimiento: No</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Revitalizar -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Revitalizar">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Esencia"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 40 
+Acción: Activa 
+Tipo: Automático
+Efecto: Crea una zona dentro de la cual todo ser vivo regenera sus heridas y se revitaliza. Personas y animales recuperarán su vigor, mientras que las plantas florecerán con renovadas fuerzas. El conjuro afecta un radio alrededor del hechicero dentro del cual las criaturas vivientes adquirirán una Regeneración 16 mientras permanezcan en ella.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       100           180                 240            300 
+Int. R.         7               9                    12               15
+
+Base: 50 metros de radio.
+Intermedio: 200 metros de radio.
+Avanzado: 500 metros de radio.
+Arcano: 1 kilómetro de radio.
+Mantenimiento: 10 / 20 / 25 / 30</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Rey_de_Pesadillas -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Rey_de_Pesadillas">
@@ -9488,6 +10038,28 @@ Requisitos: Ninguno.
 Conocimiento marcial: +10
 
 Bono: +10 a la habilidad de parada sin armas.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Sanación -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Sanación">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Esencia"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 16 
+Acción: Activa 
+Tipo: Efecto
+Efecto: Otorga la capacidad de regenerar a un ritmo vertiginoso las heridas de un individuo, curando los puntos de vida perdidos. Este conjuro no permite recuperar miembros cercenados o daños similares, ni tampoco elimina los penalizadores causados por los críticos, pero sí detiene cualquier tipo de desangramiento. En el caso de que sea lanzado sobre un ser con acumulación de daño, sólo recupera la mitad del valor porcentual.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon         80            100                120            150
+Int. R.         8               10                  13              15
+
+Base: 20% de puntos de vida.
+Intermedio: 40% de puntos de vida.
+Avanzado: 60% de puntos de vida.
+Arcano: 80% de puntos de vida.
+Mantenimiento: No</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -9640,6 +10212,28 @@ Intermedio: 1.000 kilómetros de radio / 180 RM.
 Avanzado: 10.000 kilómetros de radio / 200 RM.
 Arcano: Afecta cualquier sustancia líquida existente / 240 RM.
 Mantenimiento: 30 / 45 / 60 / 100 Diario</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Señor_de_las_Almas -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Señor_de_las_Almas">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Esencia"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 100 
+Acción: Activa 
+Tipo: Automático
+Efecto: El lanzador controla una parte del flujo de las almas, obteniendo el dominio absoluto de todos los espíritus. Su autoridad se extiende sobre cualquier alma, lo que incluye tanto Seres Espirituales como otras criaturas similares. Tendrá un control total sobre ellas y podrá manejarlas como desee: mantenerlas en el mundo, devolverlas al flujo o modificar su esencia como se le antoje. También podrá arrancarlas de un cuerpo y reintroducirlas en otro libremente, incluso en niños que aún no han nacido (controlando así el nacimiento de Nephilim). El Señor de las Almas puede transmitir sus órdenes a las almas que se encuentren bajo su control directamente, por la conexión mística que mantiene con estas, sin necesidad de tener que estar ante ellas. Cualquiera que se pueda ver afectado por este conjuro podrá resistir sus efectos superando una RM. Aquellos que fallen el control tendrán derecho a una nueva tirada cada día, o cada vez que las órdenes recibidas vayan completamente en contra de su comportamiento. Una vez superada la Resistencia, un individuo queda completamente libre del hechizo. Este conjuro no otorga ningún control sobre los espíritus de los No Muertos, ya que se encuentran desvinculados del flujo.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       600            800              1.200        1.500
+Int. R.       12              14                   16              18
+
+Base: RM 120 / 100 kilómetros.
+Intermedio: RM 140 / 1.000 kilómetros.
+Avanzado: RM 180 / 2.500 kilómetros.
+Arcano: RM 200 / 5.000 kilómetros.
+Mantenimiento: 120 / 160 / 240 / 300 Diario</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -10617,6 +11211,28 @@ Mantenimiento: 5 / 5 / 5 / 10</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Transmigrar_Almas -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Transmigrar_Almas">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Esencia"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 76 
+Acción: Activa 
+Tipo: Anímico
+Efecto: Otorga al hechicero la capacidad de transportar un alma de un cuerpo a otro. A todos los efectos, permite abandonar su antigua forma para tomar una nueva, conservando únicamente las capacidades intelectuales y anímicas. El alma puede ser ubicada tanto en cuerpos inanimados (piedras, espadas, etc...) como en seres vivos. Por naturaleza, el espíritu adquiere las limitaciones físicas de su nuevo cuerpo, aunque podrá sobrevivir mientras su carcasa no sea destruida. Si su nueva forma no tiene necesidades, el individuo podrá subsistir sin ellas. Si, por ejemplo, se transmigra a una piedra, el afectado no será consciente de qué hay en su entorno ni podrá moverse, pero en el caso de que la roca sea destruida, sería equivalente a que su cuerpo muriese. Si se introduce en un cuerpo sin vida, pero conservado en buenas condiciones, este volverá a vivir, al imbuírsele el alma de la que carecía. Si el cuerpo en el que se introduce ya tuviese alma, esta tratará naturalmente de resistirse a la intrusa. Para calcular el resultado de la lucha espiritual por el dominio, deberá realizarse un control comparativo entre ambas presencias. Cada una deberá lanzar un D100 y sumar el resultado a su presencia base (sin admitir la Tirada Abierta). Si la diferencia es superior a 100, el ganador habrá consumido a su antagonista y tomará el control del cuerpo para siempre. Si la diferencia es mayor de 50, el alma más débil permanecerá dormida indefinidamente hasta que algo la haga despertar. Finalmente, si es inferior a 50, la vencedora obtendrá un control temporal del cuerpo, aunque la más débil permanecerá despierta y tendrá derecho a un nuevo control al finalizar el día. Tanto el alma afectada como el cuerpo en el que se desea introducir, tendrán derecho a resistirse superando una RM. Este conjuro permite transmigrar cualquier clase de alma que esté presente ante el mago, lo que incluye espíritus fallecidos que aún esperan El Llamamiento, pero no trae de vuelta espíritus del más allá. Si un espíritu sobrenatural es encerrado en un cuerpo físico, pierde sus poderes anímicos, reduciendo si es preciso su nivel.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       180            240               300             540
+Int. R.        9                12                 15               18
+
+Base: RM 100 / Presencia máxima 60
+Intermedio: RM 140 / Presencia máxima 100
+Avanzado: RM 160 / Presencia máxima 140
+Arcano: RM 200 / Presencia máxima 180
+Mantenimiento: No</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Transmisión_por_Luz -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Transmisión_por_Luz">
@@ -11091,6 +11707,28 @@ Mantenimiento: 10 / 10 / 15 / 15 Diario</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Veneno_de_Almas -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Veneno_de_Almas">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Esencia"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 30 
+Acción: Activa 
+Tipo: Anímico
+Efecto: El veneno de esencia es una creación sobrenatural que se inocula en el alma del afectado y se extiende por todo su cuerpo. El hechicero podrá crear libremente los efectos del veneno. También es posible desarrollar antídotos, si se tienen los conocimientos suficientes sobre el veneno original.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon         60             90                120             150
+Int. R.         6               9                   12               15
+
+Base: Veneno Nivel 40.
+Intermedio: Veneno Nivel 50.
+Avanzado: Veneno Nivel 60.
+Arcano: Veneno Nivel 70.
+Mantenimiento: No</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Venenos -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Venenos">
@@ -11168,6 +11806,28 @@ Base: Retrocede un día hora.
 Intermedio: Retrocede un día.
 Avanzado: Retrocede un mes.
 Arcano: Retrocede un año.
+Mantenimiento: No</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Verdor -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Verdor">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Esencia"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 90 
+Acción: Activa 
+Tipo: Efecto
+Efecto: El hechicero une su espíritu con las criaturas más naturales de la creación: los animales y las plantas, obteniendo el poder de extenderlos por todo el mundo. Verdor crea vida vegetal y animal al antojo del lanzador. La vegetación y los animales aparecerán en el mismo instante en el que se lanza este hechizo, sin importar las condiciones climatológicas de la zona; el brujo podría crear una selva incluso en mitad de un desierto (aunque eso no implica que sobreviviese durante un periodo prolongado en tales condiciones). Los animales y plantas deben ser de especies y razas existentes.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       250           450                600             750
+Int. R.       10              12                  13               16
+
+Base: 10 kilómetros de radio.
+Intermedio: 150 kilómetros de radio.
+Avanzado: 350 kilómetros de radio.
+Arcano: 600 kilómetros de radio.
 Mantenimiento: No</rdfs:comment>
     </owl:NamedIndividual>
     
