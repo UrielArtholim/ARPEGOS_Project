@@ -1564,6 +1564,50 @@ Mantenimiento: No</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Atravesar_lo_Sólido -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Atravesar_lo_Sólido">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Tierra"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 32 
+Acción: Activa 
+Tipo: Efecto
+Efecto: Este conjuro permite a uno o varios sujetos, a elección del hechicero, ser capaces de atravesar cuerpos sólidos. Aquellos sobre quienes sea lanzado no son realmente inmateriales, viéndose influidos por los efectos de los elementos como el calor o el frío, pero pueden ignorar completamente cualquier cosa no basada en energía. De este modo, podrían atravesar voluntariamente una pared como si no existiera para ellos, o pasar a través de una espada normal sin sufrir daños. Es posible decidir a qué cuerpos se puede atravesar y a cuáles no.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon         80            100               120             140
+Int. R.         7              10                  12               14
+
+Base: Presencia máxima 100.
+Intermedio: Presencia máxima 140.
+Avanzado: Presencia máxima 180.
+Arcano: Presencia máxima 240.
+Mantenimiento: 5 / 5 / 10 / 10</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Aumentar_Peso -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Aumentar_Peso">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Tierra"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 10 
+Acción: Activa 
+Tipo: Efecto
+Efecto: Incrementa el peso de un cuerpo físico ya sea orgánico o inorganico.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon        40             120                200            320
+Int. R.        5                 8                   10              12
+
+Base: +20 kilogramos.
+Intermedio: +120 kilogramos.
+Avanzado: +200 kilogramos.
+Arcano: +300 kilogramos.
+Mantenimiento: 5 / 25 / 30 / 40 Diario</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Aumentar_Resistencias -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Aumentar_Resistencias">
@@ -1626,6 +1670,28 @@ Intermedio: +10 grados / 5 kilómetros de radio.
 Avanzado: +20 grados / 10 kilómetros de radio.
 Arcano: +30 grados / 15 kilómetros de radio.
 Mantenimiento: 15 / 40 / 50 / 60 Diario</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Aumento_de_Gravedad -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Aumento_de_Gravedad">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Tierra"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 86 
+Acción: Activa 
+Tipo: Automático
+Efecto: Incrementa la masa de la atmósfera de una zona determinada, aumentando con ello la fuerza de la gravedad y, por tanto, el peso de todo lo que se halle en su interior. A efectos de juego, aumenta el peso de todo lo que determine el hechicero dentro del área del conjuro. El área del sortilegio permanece estática en el lugar donde fue lanzado. 
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon        200           240                280            320
+Int. R.         10             12                 14               16
+
+Base: Dobla el peso / 100 metros de radio.
+Intermedio: Triplica el peso / 200 metros de radio.
+Avanzado: Quintuplica el peso / 300 metros de radio.
+Arcano: Deduplica el peso / 400 metros de radio.
+Mantenimiento: 20 / 25 / 30 / 35 Diario</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -1723,6 +1789,28 @@ Intermedio: Daño 90 / 5 metros de extensión / 500 puntos de Resistencia.
 Avanzado: Daño 100 / 10 metros de extensión / 800 puntos de Resistencia / Permite detener ataques basados en energía.
 Arcano: Daño 100 / 15 metros de extensión / 1.500 puntos de Resistencia / El ataque es contra Imposible / Permite detener ataques basados en cualquier tipo de ataque.
 Mantenimiento: 5 / 10 / 10 / 15</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Barrera_de_Piedra -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Barrera_de_Piedra">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Tierra"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 20 
+Acción: Activa 
+Tipo: Defensa
+Efecto: Levanta una barrera material que permite al hechicero defenderse de cualquier tipo de ataque que provoque daños, incluyendo los basados en energía. No obstante, este escudo es incapaz de detener efectos anímicos o que obliguen únicamente a realizar una RM o RP. Además de su resistencia, tiene una barrera de daño contra los ataques físicos.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon        60            160                240             300
+Int. R.        6                9                   12                15
+
+Base: Barrera de daño 60 / 600 Puntos de Resistencia.
+Intermedio: Barrera de daño 100 / 1.600 Puntos de Resistencia.
+Avanzado: Barrera de daño 150 / 3.000 Puntos de Resistencia.
+Arcano: Barrera de daño 200 / 5.000 Puntos de Resistencia.
+Mantenimiento: 10 / 20 / 25 / 30</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -2523,6 +2611,28 @@ Mantenimiento: 10 / 10 / 15 / 15 Diario</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Control_Atómico -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Control_Atómico">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Tierra"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 100 
+Acción: Activa 
+Tipo: Automático
+Efecto: Este hechizo permite a su lanzador controlar completamente la materia atómica que se encuentre a su alrededor, pudiendo moldearla como si fuese arcilla en sus manos. Para él, todo lo que se mueve no es más que un conjunto de átomos que alterar y manejar a su antojo. De este modo, obtiene el dominio absoluto de toda materia, orgánica o inorgánica, que no supere una RF o RM y se encuentre cerca. No hay límite para lo que el brujo puede hacer con un cuerpo que tiene controlado, desde alterar su forma, masa y apariencia, hasta hacerlo desaparecer completamente desperdigando sus átomos. Este conjuro sólo afecta materia física, por lo que no tiene ningún efecto sobre cuerpos completamente inmateriales o almas.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       450            800              1.200        1.600
+Int. R.       12              14                   16              18
+
+Base: RM o RF 140 / 100 metros de radio.
+Intermedio: RM o RF 160 / 250 metros de radio.
+Avanzado: RM o RF 200 / 500 metros de radio.
+Arcano: RM o RF 240 / 1 kilómetro de radio.
+Mantenimiento: 45 /80 / 120 / 160</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Control_Físico -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Control_Físico">
@@ -2541,6 +2651,50 @@ Intermedio: RM 120.
 Avanzado: RM 140.
 Arcano: RM 180.
 Mantenimiento: 25 / 40 / 50 / 60 Diario</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Control_Magnético -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Control_Magnético">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Tierra"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 46 
+Acción: Activa 
+Tipo: Efecto
+Efecto: Otorga al hechicero el control de los campos magnéticos que se encuentren a su alrededor. De ese modo, podrá mover a distancia con completa libertad cualquier cuerpo metálico que esté a su alcance, con el equivalente de una fuerza determinada por el grado del conjuro. Su control sobre el magnetismo es tal, que sus acciones se ejecutan como un efecto automático sobre el metal. Podría, por ejemplo, paralizar a alguien que utiliza una armadura completa, o arrebatarle la espada de sus manos sin ni siquiera hacer un control de Proyección Mágica. En estos casos, es posible evitar tales efectos superando un control enfrentado de Fuerza o Agilidad. Este control es una acción activa, por lo que el mago ha de tener la acción para ejecutarlo (y, por tanto, no puede ser utilizado como defensa). Si un cuerpo está compuesto por metales sólo en una pequeña parte, o se encuentra escudado con energía, el control de Fuerza aplica un -4. De usarse para enarbolar un arma a distancia, se emplean las mismas reglas que en el poder mental Telequinesis Menor. 
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       100           180                240             320
+Int. R.         6               9                    12               15
+
+Base: 25 metros de radio / Fuerza 10
+Intermedio: 150 metros de radio / Fuerza 12
+Avanzado: 350 metros de radio / Fuerza 13.
+Arcano: 500 metros de radio / Fuerza 14.
+Mantenimiento: 10 / 20 / 25 / 30</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Control_Mineral -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Control_Mineral">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Tierra"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 6 
+Acción: Activa 
+Tipo: Efecto, Anímico
+Efecto: Otorga la capacidad de controlar cualquier sustancia mineral. Ten en cuenta que, por mucho dominio que ejerza el hechicero sobre las cosas, no puede atribuirles capacidades que estas no tengan por sí solas. Es decir, aunque controle una roca, no podría hacer que se moviese por sí sola, pero sí obligar a un golem mecánico o a un elemental de piedra a someterse a su voluntad. Los seres de tales características pueden evitar este efecto superando una RM contra 100. La criatura puede repetir el control una vez al día, o si recibe una orden que sea completamente opuesta a su naturaleza.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon         30             60                 100            140
+Int. R.         5               8                    10              12
+
+Base: Presencia máxima 30 / RM 100.
+Intermedio: Presencia máxima 60 / RM 120.
+Avanzado: Presencia máxima 90 / RM 130.
+Arcano: Presencia máxima 120 / RM 140.
+Mantenimiento: 5 / 10 / 10 / 15 Diario</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -2607,6 +2761,28 @@ Intermedio: RM 160 / 15 intensidades.
 Avanzado: RM 180 / 25 intensidades.
 Arcano: RM 220 / 40 intensidades.
 Mantenimiento: 10 / 20 / 25 / 35</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Control_de_la_Gravedad -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Control_de_la_Gravedad">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Tierra"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 92 
+Acción: Activa 
+Tipo: Efecto
+Efecto: Otorga la capacidad de controlar completamente todas las fuerzas gravitacionales de una zona del planeta. Dentro de ella, el lanzador tendrá un dominio absoluto de la gravedad, pudiendo anularla, incrementar hasta diez veces su valor o invertirla. Todo cuerpo físico que se encuentre en esta área, será automáticamente influido por sus efectos.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       350            500               650             800
+Int. R.       12              14                  16               18
+
+Base: 100 kilómetros de radio.
+Intermedio: 750 kilómetros de radio.
+Avanzado: 1.500 kilómetros de radio.
+Arcano: 5.000 kilómetros de radio.
+Mantenimiento: 70 / 100 / 130 / 160 Diario</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -2759,6 +2935,28 @@ Mantenimiento: 5 / 10 / 15 / 20</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Coraza -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Coraza">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Tierra"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 26 
+Acción: Activa 
+Tipo: Efecto
+Efecto: Forma una coraza física que protege contra todos los tipos de ataque, salvo los basados en energía. Aunque cuenta como una armadura, no se aplican penalizadores al turno por emplear capas de protección adicionales.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon         80            100               120             140
+Int. R.         8              10                  12               15
+
+Base: TA 2.
+Intermedio: TA 4.
+Avanzado: TA 6.
+Arcano: TA 8.
+Mantenimiento: 5 / 5 / 10 / 10 Diario</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Creación -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Creación">
@@ -2830,6 +3028,28 @@ Intermedio: 5 objetos / presencia máxima 25.
 Avanzado: 1 objetos / presencia máxima 30.
 Arcano: 5 objetos / presencia máxima 25.
 Mantenimiento: 5 / 10 / 10 / 15</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Creación_Mineral -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Creación_Mineral">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Tierra"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 70 
+Acción: Activa 
+Tipo: Efecto
+Efecto: El hechicero puede utilizar este conjuro para crear cualquier cosa que desee, siempre y cuando esté compuesta por minerales o metales. El objeto creado debe de aparecer ubicado lógicamente según su naturaleza. Es decir, no se puede crear una pequeña montaña en mitad del aire.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       120           180                 240            300
+Int. R.         8              10                   12               15
+
+Base: Presencia máxima 40.
+Intermedio: Presencia máxima 70.
+Avanzado: Presencia máxima 100.
+Arcano: Presencia máxima 140.
+Mantenimiento: 15 / 20 / 25 / 30 Diario</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -2984,6 +3204,28 @@ Intermedio: 6 intensidades de fuego.
 Avanzado: 8 intensidades de fuego.
 Arcano: 10 intensidades de fuego.
 Mantenimiento: 5 / 10 / 10 / 15 Diario</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Crear_Gólem -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Crear_Gólem">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Tierra"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 82 
+Acción: Activa 
+Tipo: Efecto
+Efecto: Crea un ser de piedra con apariencia de vida, bajo el control absoluto del hechicero. El ente será creado como un Ser Entre Mundos, usando los poderes y limitaciones de los elementales de Piedra de las reglas de creación de seres. La criatura tendrá PD y se le aplican los mismos límites descritos en el conjuro Crear Ser, de la vía de Creación.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       250            350               500             700
+Int. R.       10              12                  14               16
+
+Base: Nivel 1.
+Intermedio: Nivel 3.
+Avanzado: Nivel 6.
+Arcano: Nivel 10.
+Mantenimiento: 50 / 70 / 100 / 140 Diario</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -3344,6 +3586,28 @@ Intermedio: Personajes de Nivel 6.
 Avanzado: Personajes de Nivel 12.
 Arcano: Personajes de Nivel 18.
 Mantenimiento: 10 / 10 / 15 / 15 Diario</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Cuerpo_Sólido -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Cuerpo_Sólido">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Tierra"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 52 
+Acción: Activa 
+Tipo: Efecto
+Efecto: El cuerpo designado por el hechicero adquirirá una enorme solidez, obteniendo una resistencia similar a la de la piedra. Si se lanza contra un individuo, obtendrá una armadura natural (salvo contra energía) y una barrera de daño equivalente al doble de su presencia. Mientras se encuentre en este estado sus músculos se fortalecerán, pero también disminuirá en 2 su Tipo de movimiento. El material al que se asemeja el cuerpo transformado varía, dependiendo del grado del conjuro: Roca, acero, diamante y malebolgia. 
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       100            120               140             160
+Int. R.         8               11                  13               16
+
+Base: Las habilidades descritas / TA natural 6 / +1 Fuerza.
+Intermedio: Las habilidades descritas / TA natural 8 / +2 Fuerza.
+Avanzado: TA natural 10 / No puede ser dañado por ataques físicos no basados en energía / +3 Fuerza.
+Arcano: Como en grado Intermedio, pero obtiene TA natural 12 / Los ataques físicos basados en energía le producen sólo la mitad de daño / +4 Fuerza.
+Mantenimiento: 10 / 15 / 15 / 20</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -3770,6 +4034,29 @@ Mantenimiento: 10 / 20 / 25 / 30</rdfs:comment>
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Destrucción">
         <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Mágica"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Esta vía permite utilizar el poder del flujo de almas para destruir la propia realidad. Sus conjuros afectan tanto al mundo material como al espiritual. Su poder es por naturaleza muy ofensivo. Su vía opuesta es Creación.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Destrucción_Gravitacional -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Destrucción_Gravitacional">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Tierra"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 80 
+Acción: Activa 
+Tipo: Automático
+Efecto: El control de la gravedad que otorga este hechizo permite al brujo crear una cúpula de alta presión, capaz de reventar completamente cualquier cosa física que se encuentre en su interior. Si un individuo está dentro de ella, deberá superar una RF contra 180 cada asalto, o sufrir un daño equivalente a la mitad de su nivel de fracaso. No obstante, cada punto de TA contra ataques Contundentes otorga un bono de +5 a la tirada de RF. La cúpula permanece estática en el lugar donde es lanzada, aunque la presión impide a cualquiera que se encuentre en su interior salir, si no es capaz de superar un control
+de Fuerza 16. La potencia gravitacional es tan fuerte que incluso los seres inmateriales son parcialmente afectados por ella, aunque podrán aplicar un bono de +40 a sus controles de Resistencia y +6 a los de Fuerza. Tiene un radio de 20 metros, dentro del cual no es posible seleccionar blancos, y sólo el lanzador será inmune a sus efectos. La condición para ser afectado por el conjuro es encontrarse en el interior de la cúpula el turno siguiente al que es lanzada.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       180            250                320            400
+Int. R.         9               12                  15              17
+
+Base: 20 metros de radio.
+Intermedio: 50 metros de radio.
+Avanzado: 100 metros de radio.
+Arcano: 150 metros de radio.
+Mantenimiento: 20 / 25 / 35 / 40</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -4242,6 +4529,28 @@ Intermedio: RM 160 / 50 metros de radio.
 Avanzado: RM 200 / 100 metros de radio.
 Arcano: RM 240 / 150 metros de radio.
 Mantenimiento: 5 / 10 / 10 / 15</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Detectar_Minerales -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Detectar_Minerales">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Tierra"/>
+        <rdfs:comment>Nivel: 2 
+Acción: Activa 
+Tipo: Detección
+Efecto: Permite al hechicero detectar la ubicación de un mineral determinado que se encuentre en el radio de acción del conjuro. Este hechizo no da información sobre la forma del material, pero sí indica de un modo aproximado su tamaño o cantidad. No es posible detectar a través de barreras basadas en energía.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon        20              60                 100            140
+Int. R.        5                 8                   10              12
+
+Base: 10 metros de radio.
+Intermedio: 50 metros de radio.
+Avanzado: 150 metros de radio.
+Arcano: 500 metros de radio.
+Mantenimiento: No</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -4833,6 +5142,29 @@ Bono: +20 a la habilidad de esquiva y parada sin armas.</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Erudición_del_Terreno -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Erudición_del_Terreno">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Tierra"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 72 
+Acción: Activa
+Tipo: Efecto
+Efecto: El lanzador obtiene un conocimiento absoluto de todo lo que se halla a su alrededor en contacto con el suelo. En realidad este conjuro no es un hechizo de localización, sino que permite al brujo unir su conciencia con la propia tierra, y sentir todo lo que esté en contacto con ella como si se encontrara presente. Tanto seres vivos como construcciones, son localizados de inmediato (siempre y cuando no se trate de seres inmateriales o voladores). Este
+conjuro no permite ver a través de lugares sellados por energía.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       120            270               360             450
+Int. R.        7                10                 12               15
+
+Base: 500 metros de radio.
+Intermedio: 3 kilómetros de radio.
+Avanzado: 10 kilómetros de radio.
+Arcano: 15 kilómetros de radio.
+Mantenimiento: No</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Escudar_Contra_lo_Negativo -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Escudar_Contra_lo_Negativo">
@@ -4925,6 +5257,28 @@ Intermedio: El escudo tiene 1.000 puntos de Resistencia.
 Avanzado: El escudo tiene 1.800 puntos de Resistencia.
 Arcano: El escudo tiene 3.000 puntos de Resistencia.
 Mantenimiento: 5 / 15 / 20 / 25</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Escudo_Magnético -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Escudo_Magnético">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Tierra"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 30 
+Acción: Pasiva 
+Tipo: Defensa
+Efecto: Controlando los campos magnéticos de su entorno, el hechicero levanta un escudo capaz de repeler cualquier ataque que se realice en su contra empleando un medio metálico. Si recibe una acometida de tales características, la distorsión causada por el magnetismo provocará un penalizador de -50 a la habilidad ofensiva del atacante. El escudo sólo puede ser perjudicado por ataques que sean capaces de dañar energía. Esta barrera es virtualmente inútil contra ataques inmateriales o anímicos.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon        50              90                  120           160
+Int. R.        6                 8                    11             14
+
+Base: 300 puntos de resistencia.
+Intermedio: 600 puntos de resistencia.
+Avanzado: 900 puntos de resistencia.
+Arcano: 1.200 puntos de resistencia.
+Mantenimiento: 5 / 10 / 10 / 20</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -5173,6 +5527,28 @@ Mantenimiento: No</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Espina_de_la_Tierra -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Espina_de_la_Tierra">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Tierra"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 36 
+Acción: Activa 
+Tipo: Ataque
+Efecto: El control que ejerce el hechicero sobre la tierra le permite levantar afiladas aristas del suelo, que puede utilizar como medio de ataque contra adversarios que se encuentren en la superficie. Cada espina tiene un daño base de 60 y ataca en Penetrantes. No producen efectos sobre seres inmateriales o en aquellos que sólo sean dañados por energía (salvo si las aristas se combinan a un hechizo de Encantar). Cada espina puede ser utilizada para atacar a un mismo individuo, o sobre distintos blancos. A pesar de ser un sortilegio de ataque, no puede utilizarse para realizar un choque de conjuros. Este ataque no puede usarse contra seres voladores que se encuentren en ese momento a más de 10 metros del una superficie sólida.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon        80             120               150             200
+Int. R.        8                10                 12               14
+
+Base: 2 Espinas.
+Intermedio: 4 Espinas.
+Avanzado: 6 Espinas.
+Arcano: 8 Espinas.
+Mantenimiento: No</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Espía_de_Luz -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Espía_de_Luz">
@@ -5315,6 +5691,28 @@ Beneficio: 1</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Firmeza -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Firmeza">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Tierra"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 16 
+Acción: Activa 
+Tipo: Efecto
+Efecto: Aumenta el aguante de un individuo o un objeto, haciéndolo especialmente resistente al daño. Si se lanza sobre un ser vivo, otorga un  bonificador a cualquier tirada de RF que realice para evitar los efectos de un critico, mientras que si se aplica sobre un objeto, incrementa su entereza. Sólo es posible afectar con un conjuro de Firmeza a un cuerpo a la vez.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon         50             80                 120            160
+Int. R.         6                9                   11              13
+
+Base: +20 RF / +3 entereza.
+Intermedio: +30 RF / +5 entereza.
+Avanzado: +45 RF / +7 entereza.
+Arcano: +60 RF / +9 entereza.
+Mantenimiento: 5 / 10 / 15 / 20 Diario</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Flash_Cegador -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Flash_Cegador">
@@ -5346,6 +5744,28 @@ Mantenimiento: No</rdfs:comment>
 Efectos: El personaje aplicará el estado de miedo siempre que se encuentre con el objeto de su fobia.
 
 Beneficio: 1</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Forja -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Forja">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Tierra"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 50 
+Acción: Activa 
+Tipo: Efecto
+Efecto: Este conjuro emplea la magia para fraguar un objeto, empleando el equivalente a la habilidad de Forja. Dado que se utiliza puro poder sobrenatural, la creación no aplica ninguno de los modificadores por tiempo, ni necesita tener ningún tipo de equipo o fragua. Este hechizo no fabrica materiales, por lo que debe de ser el propio hechicero quien los consiga.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       160            270               360             450
+Int. R.         7                9                   12              15
+
+Base: Forja 120.
+Intermedio: Forja 180.
+Avanzado: Forja 240.
+Arcano: Forja 280.
+Mantenimiento: No</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -5578,6 +5998,27 @@ Requisitos: Proezas de fuerza 40.
 Conocimiento marcial: +10
 
 Bono: Ninguno.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Grieta -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Grieta">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Tierra"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 62 
+Acción: Activa 
+Tipo: Efecto
+Efecto: El brujo es capaz de abrir grietas de gran tamaño en el suelo, capaces de engullir por igual tanto construcciones como personas. Si un individuo se encuentra en la zona en la que se abre la grieta, debe superar un control de Agilidad para evitar caer al interior y sufrir una caída de entre 20 y 50 metros. Las construcciones con una barrera de daño muy elevada no son afectadas por este conjuro, dado que su edificación es demasiado compacta para ser deteriorada por la fisura. La grieta tendrá una longitud y anchura máximas determinadas por el grado del conjuro.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       150            200               250             300
+Int. R.         8              10                  12               14
+Base: 10 metros de longitud y 3 de anchura / Construcciones con barrera de daño 40.
+Intermedio: 25 metros de longitud / 8 de anchura / Construcciones con barrera de daño 60.
+Avanzado: 36 metros de longitud / 12 de anchura / Construcciones con barrera de daño 80.
+Arcano: 48 metros de longitud / 15 de anchura / Construcciones con barrera de daño 100.
+Mantenimiento: No</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -6453,6 +6894,28 @@ Mantenimiento: 10 / 10 / 15 / 15 Diario</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Invertir_la_Gravedad -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Invertir_la_Gravedad">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Tierra"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 66 
+Acción: Activa 
+Tipo: Automático
+Efecto: Altera completamente las fuerzas gravitacionales de una zona del planeta, invirtiendo su potencia; en cierta manera, le da la vuelta al mundo por completo. Todo lo que se encuentre en el interior de un área, comenzará de inmediato a “caer” hacia el cielo hasta la distancia máxima que determine el conjuro. El lanzador puede fijar un límite a la caída inferior del máximo (por ejemplo, afectar sólo lo que se encuentre en el interior de una construcción), o por el contrario, arrojarlo todo hasta su máxima altura. Naturalmente, las cosas que se encuentren pegadas al suelo no caerán, del mismo modo que un sujeto puede quedarse “colgando” si encuentra algo donde agarrarse. Un individuo puede evitar este efecto superando una RM. El hechizo permanece estático en el lugar donde fue lanzado.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       200            240                280            320
+Int. R.       10              12                   14              16
+
+Base: 25 metros de radio / 50 de altura / 120 RM
+Intermedio: 50 metros de radio / 100 de altura / 140 RM
+Avanzado: 100 metros de radio / 200 de altura / 160 RM
+Arcano: 150 metros de radio / 300 de altura / 180 RM
+Mantenimiento: 40 / 50 / 60 / 65 Diario</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Invocacion -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Invocacion">
@@ -6604,6 +7067,28 @@ Beneficio: 1</rdfs:comment>
 Efectos: La regeneración zeónica del personaje se reduce a la mitad.
 
 Beneficio: 1</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Lentitud -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Lentitud">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Tierra"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 22 
+Acción: Activa 
+Tipo: Anímico
+Efecto: Reduce la velocidad de desplazamiento y la capacidad de reacción de un individuo si este no supera la RM del conjuro. Si el tipo de movimiento llega a 0, cada punto de movimiento adicional que se disminuya provoca en su lugar un -20 a todas las acciones físicas.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon         60            90                  120            150
+Int. R.         6               9                    12              15
+
+Base: RM 120 / -50 al turno y -2 al Tipo de Movimiento.
+Intermedio: RM 140 / -70 al turno y -4 al Tipo de Movimiento.
+Avanzado: RM 160 / -90 al turno y -6 al Tipo de Movimiento.
+Arcano: RM 180 / -120 al turno y -10 al Tipo de Movimiento.
+Mantenimiento: 10 / 10 / 15 / 15</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -7145,6 +7630,28 @@ Intermedio: RM 120.
 Avanzado: RM 160.
 Arcano: RM 200.
 Mantenimiento: 10 / 10 / 15 / 20 Diario</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Meteoro -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Meteoro">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Tierra"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 90 
+Acción: Activa 
+Tipo: Ataque
+Efecto: Este conjuro permite a su lanzador controlar la trayectoria de uno o varios meteoros y arrojarlos desde los cielos para provocar una devastación sin precedentes. A pesar de ser un conjuro de ataque, la llegada de cada asteroide requiere entre uno y diez asaltos tras su lanzamiento, los cuales se determinan lanzando un dado de diez por meteoro. Cada uno de ellos produce un daño base de 200 puntos en 10 metros de radio, atacando en la TA de Contundentes o Calor. No obstante, todo lo que se encuentre en una zona de 50 metros alrededor del impacto central, sufrirá también los efectos de la onda expansiva, que tiene un daño base de 60 puntos y produce adicionalmente un impacto de Fuerza 14. Naturalmente, este conjuro no produce efectos plenos si es lanzado en interiores o subterráneos, por lo que sus consecuencias pueden alterarse dependiendo del entorno.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       200           250                350             450
+Int. R.       10             13                   15               17
+
+Base: 1 meteoro.
+Intermedio: 5 meteoros.
+Avanzado: 10 meteoros.
+Arcano: 15 meteoros.
+Mantenimiento: No</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -8111,6 +8618,28 @@ Mantenimiento: No</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Petrificar -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Petrificar">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Tierra"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 60 
+Acción: Activa 
+Tipo: Anímico
+Efecto: Este hechizo transforma en piedra a un ser físico, confinándolo en esa forma durante años si es preciso. Mientras se encuentre petrificado, no podrá moverse ni ser consciente de lo que ocurre a su alrededor. Cuando el conjuro desaparezca, el individuo vuelve a su forma original, con la misma edad y apariencia que tenia en el momento en el que fue petrificado. Si la “estatua” sufre deterioros o se rompe, el sujeto puede recibir daños o incluso morir. Para resistirse a este efecto, es necesario superar una RM contra lo que determine el grado del conjuro. Un sujeto afectado por un conjuro de petrificación tiene derecho a repetir la tirada, al finalizar el primer día en el que fue afectado y, posteriormente, una vez a la semana.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       140            200               260             320
+Int. R.         7               10                 13               16
+
+Base: RM 120.
+Intermedio: RM 150.
+Avanzado: RM 180.
+Arcano: RM 220.
+Mantenimiento: 10 / 10 / 15 / 20 Diario</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Pira_Absoluta -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Pira_Absoluta">
@@ -8778,6 +9307,29 @@ Mantenimiento: 30 / 40 / 50 / 60</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Resistencia_Tierra -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Resistencia_Tierra">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Tierra"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 56 
+Acción: Activa 
+Tipo: Efecto
+Efecto: Este hechizo afecta al cuerpo de un individuo, confiriéndole temporalmente la capacidad de absorber casi cualquier daño. A efectos de juego, otorga “puntos de vida adicionales”, permitiendo al afectado emplear
+las reglas de defensa de los seres con acumulación. Estos puntos serán los primeros que pierda antes de restar los suyos propios. La TA depende del Tamaño del personaje. Mientras este conjuro permanezca activo, el individuo sobre el que sea lanzado no puede utilizar ningún tipo de habilidad de defensa. Sólo un hechizo de Resistencia puede afectar a la vez a un sujeto determinado.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       100            180                240            300
+Int. R.         8               10                  13               15
+
+Base: 500 Puntos de Vida.
+Intermedio: 1.200 Puntos de Vida.
+Avanzado: 2.000 Puntos de Vida.
+Arcano: 3.000 Puntos de Vida.
+Mantenimiento: 10 / 20 / 25 / 30</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Restituir -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Restituir">
@@ -8818,6 +9370,28 @@ Intermedio: RM 150 / Si el hechicero se encuentra en la Vigilia, controla ademá
 Avanzado: RM 160 / Como Intermedio, pero el Gnosis del brujo en zonas neutras es de 35.
 Arcano: RM 180 / Como Avanzado, pero los efectos del conjuro no tienen límites espaciales, afectando por igual a toda la Vigilia influenciada por energías positivas.
 Mantenimiento: 60 / 65 / 70 / 80</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Rotura -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Rotura">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Tierra"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 40 
+Acción: Activa 
+Tipo: Efecto
+Efecto: Mediante la magia, el brujo incrementa la capacidad de un cuerpo para romper cosas. A efectos de juego, la rotura del objeto o arma sobre el que se lance.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon         60             90                 120            150
+Int. R.         6                9                   12              15
+
+Base: +4 a la rotura.
+Intermedio: +8 a la rotura.
+Avanzado: +12 a la rotura.
+Arcano: +15 a la rotura.
+Mantenimiento: 10 / 10 / 15 / 15</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -9789,6 +10363,28 @@ Mantenimiento: No</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Telemetría -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Telemetría">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Tierra"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 42 
+Acción: Activa 
+Tipo: Efecto
+Efecto: El brujo puede leer la historia de un objeto con el que se ponga en contacto, percibiendo los acontecimientos más importantes que hayan ocurrido con él durante un tiempo. Puede usarse también sobre personas pero, en tal caso, el individuo afectado podrá evitarlo superando una RM.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       120            180                240            300
+Int. R.         6                9                    12              15
+
+Base: RM 80 / 1 mes.
+Intermedio: RM 120 / 1 año.
+Avanzado: RM 140 / 10 años.
+Arcano: RM 160 / 1 siglo.
+Mantenimiento: No</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Telequinesis_Superior -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Telequinesis_Superior">
@@ -9829,6 +10425,28 @@ Intermedio: Presencia máxima 150 / 10.000 kilómetros.
 Avanzado: Presencia máxima 240 / 100.000 kilómetros.
 Arcano: Presencia máxima 350 / Cualquier distancia.
 Mantenimiento: No</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Terremoto -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Terremoto">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Tierra"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 76 
+Acción: Activa 
+Tipo: Efecto
+Efecto: Provoca una sacudida a gran escala capaz de devastar cuanto rodee al lanzador. Cualquier construcción con una barrera de daño inferior a 40 quedará destruida de inmediato, mientras que el resto sufrirá 5 puntos de daño en el primer asalto, que se irán doblando cada turno posterior. Así pues, recibirá 5 puntos de daño en el primero, 10 en el segundo, 20 en el tercero… Las construcciones con una barrera de daño superior a 150 no son afectadas por el terremoto. Naturalmente, cualquier individuo dentro de la zona del conjuro sufrirá sus efectos, dependiendo siempre del entorno en el que se encuentre.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       150            200               300             400
+Int. R.         8               10                 12               14
+
+Base: 500 metros de radio.
+Intermedio: 3 kilómetros de radio.
+Avanzado: 10 kilómetros de radio.
+Arcano: 15 kilómetros de radio.
+Mantenimiento: 15 / 20 / 25 / 30</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -9973,6 +10591,28 @@ Intermedio: 150 metros de radio.
 Avanzado: 500 metros de radio / La RF se incrementa hasta 160.
 Arcano: 1 kilómetro de radio / La RF se incrementa hasta 180.
 Mantenimiento: 10 / 10 / 15 / 15</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Transformar_Mineral -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Transformar_Mineral">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Tierra"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 12 
+Acción: Pasiva 
+Tipo: Efecto
+Efecto: Transmuta un determinado tipo de mineral en otro distinto, modificando su composición natural. Puede alterarse minerales convirtiendo, por ejemplo, una roca en oro. El peso resultante puede variar dependiendo de aquello en que se lo transforme y según su presencia.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon        40              80                 120            160
+Int. R.        6                 8                   11              13
+
+Base: Presencia máxima 30 / hasta 10 kilos de masa.
+Intermedio: Presencia máxima 50 / hasta 50 kilos de masa.
+Avanzado: Presencia máxima 70 / hasta 100 kilos de masa.
+Arcano: Presencia máxima 90 / hasta 250 kilos de masa.
+Mantenimiento: 5 / 5 / 5 / 10</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -10157,6 +10797,28 @@ Intermedio: RM 180.
 Avanzado: RM 220.
 Arcano: RM 260.
 Mantenimiento: 90 / 115 / 130 / 145 Diario</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Uno_con_la_Tierra -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Uno_con_la_Tierra">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Tierra"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 96 
+Acción: Activa 
+Tipo: Automático
+Efecto: El hechicero puede fusionar su esencia con el mundo, obteniendo un control absoluto de cualquier elemento mineral. Este control le permite alterar la apariencia del planeta dentro de su radio de acción, levantando montañas y cordilleras o haciéndolas desaparecer. Toda criatura basada en piedra que se encuentre dentro del área del sortilegio deberá superar una RM o será controlada de inmediato. Si la pasan, ya no necesitan volver a realizar el control. Los afectados tienen derecho a una nueva tirada únicamente si alteran su Resistencia base.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       300            450               600           1.000
+Int. R.       10              12                  15               18
+
+Base: 100 kilómetros de radio / 140 RM.
+Intermedio: 1.000 kilómetros de radio / 180 RM.
+Avanzado: 10.000 kilómetros de radio / 200 RM.
+Arcano: Afecta cualquier elemento mineral existente / 240 RM.
+Mantenimiento: 30 / 45 / 60 / 100 Diario</rdfs:comment>
     </owl:NamedIndividual>
     
 
