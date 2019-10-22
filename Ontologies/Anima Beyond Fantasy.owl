@@ -1077,6 +1077,28 @@ Beneficio: 1</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Alterar_Apariencia -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Alterar_Apariencia">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Ilusión"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 22 
+Acción: Activa 
+Tipo: Automático
+Efecto: El ilusionista altera a la vista de los demás el aspecto físico de un individuo u objeto, modificándolo por otro a su elección. Este conjuro sólo podrá aumentar o reducir en tres grados las características de Tamaño y Apariencia del afectado. Cualquier sujeto que mire la ilusión, deberá superar una RM para ver la realidad que se esconde bajo este falso aspecto. Una vez que alguien es afectado por ella, sólo tendrá derecho a un nuevo control de Resistencia cuando posea algún motivo para sospechar que hay algo raro en la identidad o apariencia del sujeto.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon         60             90                 120            150
+Int. R.         6                9                   12              15
+
+Base: RM 120.
+Intermedio: RM 160.
+Avanzado: RM 200.
+Arcano: RM 240.
+Mantenimiento: 10 / 10 / 15 / 15 Diario</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Alterar_el_Crecimiento -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Alterar_el_Crecimiento">
@@ -1619,6 +1641,28 @@ Efectos: Reduce la apariencia del personaje a 2.
 Limitación: El personaje tiene que tener como mínimo un 7 en apariencia. Esta característica debe de haber sido generada mediante una tirada, no elegida libremente por el jugador.
 
 Beneficio: 1</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Ataque_Fantasmal -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ataque_Fantasmal">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Ilusión"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 70 
+Acción: Activa 
+Tipo: Ataque, Anímico
+Efecto: Proyecta una descarga de energía fantasmal. El daño se someterá a las reglas de conjuros fantasmales. Dado que el ataque no es real, no puede usarse para chocar contra otras descargas. Puede atacar en cualquier tipología de ataque que desee el lanzador.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon        80             140                220            300
+Int. R.        6                 9                   12               15
+
+Base: RM 140 / Daño 100.
+Intermedio: RM 160 / Daño 180.
+Avanzado: RM 180 / Daño 250.
+Arcano: RM 200 / Daño 350.
+Mantenimiento: No</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -2519,6 +2563,28 @@ Intermedio: Permite comunicarte con cualquier clase de ser natural.
 Avanzado: Permite comunicarte con cualquier clase de ser natural o entre mundos.
 Arcano: Permite comunicarte con cualquier clase de entidad.
 Mantenimiento: 10 / 20 / 20 / 25 Diario</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Confusión -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Confusión">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Ilusión"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 36 
+Acción: Activa 
+Tipo: Anímico
+Efecto: Confunde los sentidos de un individuo, provocando un penalizador a todas las habilidades secundarias del campo perceptivo equivalente al nivel de fracaso. Si la diferencia es mayor de 40, el afectado sufrirá un negativo adicional de -20 a toda acción a causa de los mareos. Un individuo afectado no tiene derecho a un nuevo control salvo si aumentan sus Resistencias.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon         50             70                  90              120
+Int. R.         6                9                   11               13
+
+Base: RM 140.
+Intermedio: RM 160.
+Avanzado: RM 180.
+Arcano: RM 200.
+Mantenimiento: 5 / 5 / 5 / 10</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -3744,6 +3810,33 @@ Mantenimiento: 50 / 80 / 120 / 200 Diario</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Crear_Ser_Ilusiorio -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Crear_Ser_Ilusiorio">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Ilusión"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 40 
+Acción: Activa 
+Tipo: Automático
+Efecto: Crea un ser ilusorio que actúa dentro de una zona determinada. El ente será confeccionado a gusto del hechicero como un Ser Entre Mundos, aunque al ser irreal, goza automáticamente de la Habilidad Natural Exención Física. La criatura será ficticia a todos los efectos y no podrá producir daños ni alterar de ningún modo la realidad, al igual que cualquier ataque no basado en energía
+la atravesará sin producirle daños. Este conjuro debe lanzarse sobre un área
+determinada, que se mantiene fija en todo momento. Cualquiera que entre en
+ella debe de pasar automáticamente una RM y, en caso de superarla, no verá o sentirá a la criatura. De igual forma, si alguien supera la Resistencia
+de la ilusión, tampoco existirá para la criatura, la cual no será capaz de ver al personaje. La ilusión puede tener como máximo dos niveles
+por encima del lanzador.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon         60             90                 120            150
+Int. R.          7             10                   13              15
+
+Base: RM 120 / Nivel 2 / 20 metros de radio.
+Intermedio: RM 140 / Nivel 4 / 50 metros de radio.
+Avanzado: RM 160 / Nivel 7 / 100 metros de radio.
+Arcano: RM 180 / Nivel 10 / 250 metros de radio.
+Mantenimiento: 5 / 5 / 10 / 10 Diario</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Crear_Silfo -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Crear_Silfo">
@@ -3784,6 +3877,28 @@ Intermedio: 40 Km/h / 50 metros de anchura.
 Avanzado: 80 Km/h / 75 metros de anchura.
 Arcano: 100 Km/h / 100 metros de anchura.
 Mantenimiento: 5 / 10 / 10 / 15</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Credulidad -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Credulidad">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Ilusión"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 66 
+Acción: Activa 
+Tipo: Anímico
+Efecto: Debilita las Resistencias sobrenaturales de un blanco contra los conjuros ilusorios. El afectado deberá superar una RM o sufrirá un negativo a su RM y RP, equivalente a la cifra por la que falló el control, aunque únicamente contra hechizos de ilusión.
+
+Grado    Base    Intermedio   Avanzado    Arcano
+Zeon         60            100               140            200
+Int. R.         7               10                 12              14
+
+Base: RM 140.
+Intermedio: RM 160.
+Avanzado: RM 180.
+Arcano: RM 200.
+Mantenimiento: 10 / 10 / 15 / 15</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -4589,6 +4704,28 @@ Mantenimiento: No</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Destruir_Ilusiones -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Destruir_Ilusiones">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Ilusión"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 60 
+Acción: Activa 
+Tipo: Efecto
+Efecto: Destruye un conjuro activo que pertenezca a la vía de Ilusión.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon         80            180                300             500
+Int. R.         7               10                  12               15
+
+Base: Zeón máximo 80.
+Intermedio: Zeón máximo 140.
+Avanzado: Zeón máximo 200.
+Arcano: Zeón máximo 300.
+Mantenimiento: No</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Destruir_Intensidades -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Destruir_Intensidades">
@@ -4837,6 +4974,50 @@ Intermedio: RM 140 / 25 metros de radio.
 Avanzado: RM 160 y 50 metros de radio.
 Arcano: RM 200 / 100 metros de radio.
 Mantenimiento: 5 / 10 / 10 / 15</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Detectar_Ilusiones -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Detectar_Ilusiones">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Ilusión"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 16 
+Acción: Activa 
+Tipo: Automático
+Efecto: Otorga al brujo la capacidad de sentir las ilusiones en un radio. Mientras esté activa la detección, cualquier conjuro de esta vía será automáticamente revelado al hechicero.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon         60            160                200            240
+Int. R.         6                8                   10               12
+
+Base: Afecta a conjuros de grado base.
+Intermedio: Afecta a conjuros de grado intermedio.
+Avanzado: Afecta a conjuros de grado avanzado.
+Arcano: Afecta a conjuros de grado arcano.
+Mantenimiento: 10 / 20 / 20 / 25</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Detectar_Mentira -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Detectar_Mentira">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Ilusión"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 46 
+Acción: Activa 
+Tipo: Automático
+Efecto: Detecta automáticamente cualquier mentira que se diga en presencia del hechicero. Cada vez que alguien mienta conscientemente ante el brujo, deberá superar un control de RM o RP, o el lanzador se dará cuenta de que no ha dicho la verdad. Si alguien no sabe que esta mintiendo, no es afectado por el hechizo. 
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon         80            120                160            200
+Int. R.         7               10                  13              15
+
+Base: RM o RP 120.
+Intermedio: RM o RP 140.
+Avanzado: RM o RP 160.
+Arcano: RM o RP 180.
+Mantenimiento: 10 / 15 / 20 / 20 Diario</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -5307,6 +5488,28 @@ Mantenimiento: 45 / 100 / 175 / 250 Diario</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#El_Don_de_la_Mentira -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#El_Don_de_la_Mentira">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Ilusión"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 72 
+Acción: Activa 
+Tipo: Anímico
+Efecto: El ilusionista tiene la capacidad de obligar a un individuo a mentir. Puede constreñirle a hacerlo en absolutamente todo lo que diga, o únicamente en un tema determinado. El afectado no podrá indicar a otros que está mintiendo, ni tampoco dar información veraz sobre el tema (o temas) de ningún modo. Si alguien falla la RM o RP, sólo puede repetir el control una vez al día.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       120            180               240             320
+Int. R.         8               10                 13                16
+
+Base: RM o RP 140.
+Intermedio: RM o RP 160.
+Avanzado: RM o RP 180.
+Arcano: RM o RP 200.
+Mantenimiento: 15 / 20 / 25 / 35 Diario</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#El_Don_de_la_Vida -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#El_Don_de_la_Vida">
@@ -5443,6 +5646,50 @@ Mantenimiento: No</rdfs:comment>
 Efectos: El personaje aplicará un penalizador acumulativo de –10 a toda acción por cada mes que transcurra. El Director de Juego determinará una fecha en secreto, llegada la cual morirá.
 
 Beneficio: 2</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Engatusar -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Engatusar">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Ilusión"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 20 
+Acción: Activa 
+Tipo: Efecto
+Efecto: El individuo objeto del conjuro ve aumentado, mediante la magia, su carisma y su encanto. Mientras esté activo, el personaje recibirá un bono a sus habilidades secundarias Liderazgo y Persuasión.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon        50              80                 100            120
+Int. R.        6                 8                   10              13
+
+Base: +50 a Liderazgo y Persuasión.
+Intermedio: +80 a Liderazgo y Persuasión.
+Avanzado: +100 a Liderazgo y Persuasión.
+Arcano: +120 a Liderazgo y Persuasión.
+Mantenimiento: 5 / 10 / 10 / 15</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Engañar_a_la_Muerte -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Engañar_a_la_Muerte">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Ilusión"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 92 
+Acción: Activa 
+Tipo: Efecto
+Efecto: El ilusionista logra, con este conjuro, engañar a la propia muerte. Mientras se encuentre activo, el individuo afectado por él no morirá de ningún modo, puesto que el flujo de almas ignora su presencia y será incapaz de reclamarlo. Aunque su espíritu no saldrá del cuerpo, su forma física puede ser destrozada, y el personaje seguirá sufriendo cualquier efecto perjudicial que le produzca el daño. Este conjuro no protege de un efecto que destruya el alma.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       500            800              1.200         1.500
+Int. R.        13             15                   17               19
+
+Base: Nivel 5.
+Intermedio: Nivel 10.
+Avanzado: Nivel 15.
+Arcano: Nivel 20.
+Mantenimiento: 100 / 160 / 240 / 300 Diario</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -6083,6 +6330,50 @@ Beneficio: 1</rdfs:comment>
 Efectos: El personaje aplica un penalizador de –80 a todas las acciones físicas que requieran el uso del miembro atrofiado.
 
 Beneficio: 1</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Falsear_Detección -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Falsear_Detección">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Ilusión"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 52 
+Acción: Activa 
+Tipo: Automático
+Efecto: Otorga al ilusionista la capacidad de alterar el resultado de cualquier detección de carácter sobrenatural que se realice a su alrededor. Podrá falsear la información de la forma que desee, aumentando o disminuyendo el potencial de una criatura o un artefacto, sus habilidades o su emplazamiento. El personaje que haya lanzado la detección deberá superar una RM para evitar ser engañado. Este conjuro no funciona contra los individuos que se encuentren dentro de su área de efecto, sino contra la propia detección sobrenatural. Por tanto, si alguien intenta detectar algo que está en el radio de acción del sortilegio, incluso si se encuentra físicamente fuera del radio del conjuro, deberá superar igualmente la RM. Sería el ejemplo de un brujo que, desde kilómetros de distancia, trata de encontrar mágicamente al ilusionista o a alguien que va a su lado. Por la misma razón, al afectar directamente a la detección, aquel que la emplee no se percata de que ha tenido que superar una Resistencia y puede estar siendo engañado.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       120            180                240            300
+Int. R.         7               10                  13               15
+
+Base: RM 120 / 10 metros de radio.
+Intermedio: RM 140 / 50 metros de radio.
+Avanzado: RM 180 / 250 metros de radio.
+Arcano: RM 220 / 500 metros de radio.
+Mantenimiento: 15 / 20 / 25 / 30 Diario</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Fijar_Ilusión -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Fijar_Ilusión">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Ilusión"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 82 
+Acción: Activa 
+Tipo: Efecto
+Efecto: Fija una ilusión a la realidad de forma permanente. A efectos de juego añade puntos de Zeon al mantenimiento de un conjuro de la vía de Ilusión. Ten en cuenta que esta cantidad no se suma al poder del hechizo, sino que añade Zeon sólo para pagar su mantenimiento. No puede utilizarse sobre conjuros de Libre Acceso, incluso si pertenecen a la vía de Ilusión.
+
+Grado    Base    Intermedio    Avanzado    Arcano 
+Zeon       250           360                450             600
+Int. R.         9              12                  15               18
+
+Base: +1.000 puntos de Zeón al mantenimiento.
+Intermedio: +1.500 puntos de Zeón al mantenimiento.
+Avanzado: +3.000 puntos de Zeón al mantenimiento.
+Arcano: +5.000 puntos de Zeón al mantenimiento.
+Mantenimiento: No</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -6986,6 +7277,204 @@ Apariencia habitual: El Hierofante se manifiesta junto al invocador en la forma 
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Ilusión_Fantasmal -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ilusión_Fantasmal">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Ilusión"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 50 
+Acción: Activa 
+Tipo: Automático
+Efecto: Crea uno o varios objetos, que se verán sometidos a las reglas de conjuro Fantasmal. Podrá crearse cualquier cosa inanimada que decida el hechicero, desde una espada a un muro, siempre y cuando la supuesta presencia del objeto no supere lo que determina el grado del conjuro. Una vez fallada la Resistencia, los afectados sólo tendrán derecho a una nueva tirada si encuentran algún motivo o sospecha para dudar de la realidad de la ilusión.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       120           180                 240            300
+Int. R.         6               9                    12               15
+
+Base: RM 120 / Presencia máxima 60.
+Intermedio: RM 150 / Presencia máxima 80.
+Avanzado: RM 180 / Presencia máxima 100.
+Arcano: RM 210 / Presencia máxima 120.
+Mantenimiento: 10 / 10 / 15 / 15</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Ilusión_Mayor -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ilusión_Mayor">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Ilusión"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 80 
+Acción: Activa 
+Tipo: Automático
+Efecto: Crea una enorme ilusión que afecta a los cinco sentidos humanos. El hechizo se manifiesta en una zona dentro de la cual las personas verán y sentirán todo lo que el hechicero desee. Por ejemplo, puede crear la apariencia de que un pueblo está deshabitado cuando en realidad es una próspera ciudad. Cualquiera que entre en la zona se verá afectado automáticamente por la ilusión si no supera una RM. Si falla el control, sus sentidos se adaptarán a la mentira, y sólo podrán repetir la Resistencia si encuentran algún motivo de sospecha sobre la autenticidad de lo que hay a su alrededor.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       250            350                500            700
+Int. R.        9                12                  15              18
+
+Base: RM 120 / 1 kilómetro de radio.
+Intermedio: RM 160 / 5 kilómetros de radio.
+Avanzado: RM 200 / 10 kilómetros de radio.
+Arcano: RM 240 / 20 kilómetros de radio.
+Mantenimiento: 25 / 35 / 50 / 70 Diario</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Ilusión_Olfativa -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ilusión_Olfativa">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Ilusión"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 6 
+Acción: Activa 
+Tipo: Automático
+Efecto: Crea un olor ilusorio. El conjuro afectará en radio a aquellos sujetos que no superen una RM. El hechicero puede elegir quién huele el aroma dentro del área y quién no.
+
+Grado    Base    Intermedio    Avanzado   Arcano
+Zeon         30             50                  90             120
+Int. R.         5                8                   10              12
+
+Base: RM 100 / radio de 20 metros.
+Intermedio: RM 120 / radio de 50 metros.
+Avanzado: RM 140 / radio de 100 metros.
+Arcano: RM 160 / radio de 250 metros.
+Mantenimiento: 5 / 5 / 10 / 10</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Ilusión_Sonora -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ilusión_Sonora">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Ilusión"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 2 
+Acción: Activa 
+Tipo: Automático
+Efecto: Forma un sonido ilusorio, que el hechicero compondrá con completa libertad. Podría crear, por ejemplo, voces humanas o el ruido de un arroyo. El conjuro afectará a aquellos sujetos que no superen una RM. El hechicero puede elegir quién escucha el sonido dentro del área y quién no.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon         30             50                   90             120
+Int. R.         5                8                    10              12
+
+Base: RM 100 / radio de 20 metros.
+Intermedio: RM 120 / radio de 50 metros.
+Avanzado: RM 140 / radio de 100 metros.
+Arcano: RM 160 / radio de 250 metros.
+Mantenimiento: 5 / 5 / 10 / 10</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Ilusión_Total -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ilusión_Total">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Ilusión"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 32 
+Acción: Activa 
+Tipo: Automático
+Efecto: Forma una ilusión completa, que engaña a los cinco sentidos de los afectados. El brujo podrá crear cualquier cosa inanimada. La ilusión será destruida si es alcanzada por ataques que dañen energía. El conjuro afectará a cualquiera capaz de ver, oír o sentir la ilusión y que no supere una RM.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon        80            180                 240            300
+Int. R.        6                9                    12               15
+
+Base: 120 RM.
+Intermedio: 160 RM.
+Avanzado: 200 RM.
+Arcano: 240 RM.
+Mantenimiento: 5 / 5 / 10 / 10</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Ilusión_Táctil -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ilusión_Táctil">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Ilusión"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 10 
+Acción: Activa 
+Tipo: Automático
+Efecto: Falsea el tacto o el gusto de un elemento concreto. El ilusionista decidirá qué nueva sensación o gusto adquiere, y quién la notará, dentro del área. El conjuro afectará a aquellos sujetos que no superen una RM.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon        30              50                   90             120
+Int. R.        5                8                     10              12
+
+Base: RM 100 / radio de 20 metros.
+Intermedio: RM 120 / radio de 50 metros.
+Avanzado: RM 140 / radio de 100 metros.
+Arcano: RM 160 / radio de 250 metros.
+Mantenimiento: 5 / 5 / 10 / 10</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Ilusión_Visual -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ilusión_Visual">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Ilusión"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 12 
+Acción: Activa 
+Tipo: Automático
+Efecto: Crea una imagen ilusoria inmóvil que engaña al sentido de la vista. El conjuro afectará a cualquier persona dentro del radio de efecto que vea la imagen y no supere una RM. El hechicero puede elegir qué sujetos la verán y cuáles no.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon        40              70                  100            130
+Int. R.        6                 8                    10              12
+
+Base: RM 100 / radio de 10 metros.
+Intermedio: RM 120 / radio de 25 metros.
+Avanzado: RM 140 / radio de 50 metros.
+Arcano: RM 160 / radio de 100 metros.
+Mantenimiento: 5 / 5 / 10 / 10</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Ilusión_de_Sentidos -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ilusión_de_Sentidos">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Ilusión"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 86 
+Acción: Activa 
+Tipo: Anímico
+Efecto: El hechicero tiene la capacidad de hacer creer a un individuo cualquier cosa que desee. Aunque en realidad el brujo no está cambiando nada, el personaje afectado asumirá la ilusión hasta tal punto que reaccionará como si fuera cierta en todos los aspectos. Si, por ejemplo, utiliza el conjuro para hacerle pensar que no tiene brazos ni piernas, dejará de sentir sus extremidades y caerá al suelo pensando que realmente las ha perdido. Otro ejemplo sería que la ilusión se empleara sobre un luchador herido y con negativos, al cual se le hace sentir no sólo que está en perfecto estado, sino que posee además un bono a toda acción de +50 (completamente ficticio, por supuesto). Si se le dice a un personaje que está muerto, este queda inconsciente automáticamente. El personaje afectado no tendrá derecho a una nueva Resistencia, salvo si tiene la convicción de que es víctima de un engaño.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       200            250                300            350
+Int. R.       10              12                   14              16
+
+Base: RM o RP 120.
+Intermedio: RM o RP 150.
+Avanzado: RM o RP 190.
+Arcano: RM o RP 220.
+Mantenimiento: 20 / 25 / 30 / 35</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Imagen_Espejo -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Imagen_Espejo">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Ilusión"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 30 
+Acción: Activa 
+Tipo: Automático
+Efecto: Realiza copias de un blanco determinado. Se trata sólo de imágenes ilusorias, que no podrán estar separadas a más de 10 metros de distancia entre ellas. Como si se tratase de espejos, realizarán los mismos movimientos que el blanco del conjuro. Si alguna de ellas es alcanzada por algún impacto que dañe energía, será inmediatamente destruida. Para ver la ilusión, es necesario pasar una RM.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon         60             90                 120             150
+Int. R.         8              10                   12               14
+
+Base: RM 120 / 5 imágenes.
+Intermedio: RM 140 / 10 imágenes.
+Avanzado: RM 160 / 20 imágenes.
+Arcano: RM 180 / 50 imágenes.
+Mantenimiento: 10 / 10 / 15 / 15</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Imbuir_Calma -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Imbuir_Calma">
@@ -7207,6 +7696,28 @@ Mantenimiento: No</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Inexistencia -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Inexistencia">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Ilusión"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 90 
+Acción: Activa 
+Tipo: Automático
+Efecto: La persona u objeto que sea blanco de este conjuro no podrá ser percibido mediante ninguno de los sentidos naturales. Por tanto, no será visto, oído, olido, sentido o degustado de ningún modo, aunque seguirá siendo material y físico. Adicionalmente, mientras se mantenga el hechizo, el personaje tampoco dejará rastros o huellas visibles. La única manera de darse cuenta de su presencia será mediante alguna clase de detección sobrenatural; ya sea mágica, psíquica o de Ki. Cualquiera que pueda sentirle mediante algún sentido natural debe superar automáticamente una RM o será incapaz de detectarle. Si alguien falla el control, sólo tendrá la oportunidad de repetirlo cada vez que tenga una causa para pensar que hay alguien a su alrededor.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       250            300               400             500
+Int. R.       11               13                 15               17
+
+Base: RM 120.
+Intermedio: RM 140.
+Avanzado: RM 160.
+Arcano: RM 180.
+Mantenimiento: 25 / 30 / 40 / 50 Diario</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Inmaterialidad -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Inmaterialidad">
@@ -7378,6 +7889,28 @@ Mantenimiento: 40 / 50 / 60 / 65 Diario</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Invisibilidad_Ilusoria -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Invisibilidad_Ilusoria">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Ilusión"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 26 
+Acción: Activa 
+Tipo: Automático
+Efecto: Utilizando este conjuro, un ilusionista puede hacer desaparecer de la vista cualquier ser u objeto. Afectará a tantos como desee, mientras la suma de sus presencias no supere lo que determina el grado del conjuro. Cualquier individuo que mire hacia los cuerpos invisibles deberá superar automáticamente una RM o no será capaz de detectarlos usando su sentido de la vista. 
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon         60             90                120             150
+Int. R.         6                9                 12                15
+
+Base: RM 120 / Presencia máxima 140.
+Intermedio: RM 150 / Presencia máxima 200.
+Avanzado: RM 180 / Presencia máxima 260.
+Arcano: RM 210 / Presencia máxima 320.
+Mantenimiento: 5 / 5 / 10 / 10</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Invocacion -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Invocacion">
@@ -7446,6 +7979,28 @@ Intermedio: RM 180 / 1.000 kilómetros cuadrados o línea.
 Avanzado: RM 240 / 100.000 kilómetros cuadrados o línea.
 Arcano: RM 300 / Sin límite de espacio.
 Mantenimiento: 40 / 45 / 45 / 50 Diario</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#La_Falsa_Realidad -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#La_Falsa_Realidad">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Ilusión"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 100 
+Acción: Activa 
+Tipo: Automático
+Efecto: Este hechizo engaña a la existencia, haciendo realidad un hecho que no ha ocurrido. De este modo, se pueden inventar acontecimientos que jamás sucedieron y que repercutan en el presente. La historia no se modifica realmente, ya que el conjuro lo que hace es cambiar las cosas en el momento en el que se desencadena, pero muy pocos son capaces de notar la diferencia. El sortilegio no puede realizar imposibles, sólo alterar acontecimientos factibles que sean capaces de ocurrir si el lanzador crea una situación apropiada. Imaginemos algunos ejemplos. Quien ejecuta este conjuro podría decir que un paso de montaña está bloqueado a causa de que, días atrás, hubo un derrumbamiento provocado por unos ladrones. Así pues, La Falsa Realidad afectaría a un grupo de ladrones cualesquiera (si no se ha seleccionado a ciertos individuos en concreto) y a toda persona que esté viajando por el paso en ese momento. Otra posibilidad sería que el lanzador afirmara que una terrible entidad que no existe, a la que decide llamar Ethon, está a punto de atacar a una ciudad, siempre que sea capaz de justificar su nacimiento alegando, por ejemplo, que fue creada por un poderoso hechicero en el pasado. Todo depende de la creatividad con la que componga su mentira. La RM de este conjuro es difícil de calcular; hay que buscar el ser u objeto con mayor Resistencia que ha sido introducido en la mentira o que se vea afectado por ella. En el primero de los ejemplos anteriores, parece natural que las rocas o el grupo de ladrones serían quienes lanzaran la RM, pero si un individuo de elevado nivel está cruzando el paso en ese momento, podría usar su RM en lugar de los ladrones. En el ejemplo de “Ethon”, lo más lógico seria que el DJ buscara al hechicero más apropiado capaz de realizar semejante creación y le hiciese lanzar la Resistencia. Ten en cuenta que, cuanto mayor sea el acontecimiento provocado, entidades más poderosas podrían tener relación. Dado que en realidad este conjuro no puede cambiar la historia, no es posible devolver la vida a los muertos o hacer que alguien haya fallecido en un pasado distante. La razón que lo justifica es que no es viable devolver al mundo a una presencia que ha regresado al flujo de almas. En el caso de que se cambiara algún acontecimiento que implicase que un difunto volviese a la vida, lo haría sin alma y sin personalidad, como una carcasa vacía de lo que fue realmente. Este sortilegio no permite aumentar o disminuir las características o el nivel de los personajes. Dadas las enormes implicaciones que conlleva, tampoco es posible involucrar en la historia ficticia a un ser con Gnosis superior al del lanzador.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       600         1.000             2.000         3.000
+Int. R.       14              16                  18               19
+
+Base: RM 140.
+Intermedio: RM 180.
+Avanzado: RM 220.
+Arcano: RM 240.
+Mantenimiento: No</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -8096,6 +8651,28 @@ Mantenimiento: 10 / 10 / 15 / 15</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Mentira -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Mentira">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Ilusión"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 56 
+Acción: Activa 
+Tipo: Anímico
+Efecto: Al lanzar este conjuro, el ilusionista induce a todo aquel que le escuche a creer sus mentiras, por absurdas o ilógicas que sean. Eso no significa que los afectados deban necesariamente obedecerle, pero sí se sentirán empujados a creerle. Cada vez que el ilusionista diga una mentira, quienes le escuchen deben superar una RM o le creerán. En el caso de que la mentira sea excepcionalmente increíble o un individuo esté prevenido hacia esta habilidad, puede aplicar un bono de +40 a su tirada.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       100           120                140             160
+Int. R.         8              11                  14                16
+
+Base: RM 100.
+Intermedio: RM 120.
+Avanzado: RM 140.
+Arcano: RM 160.
+Mantenimiento: 10 / 15 / 15 / 20 Diario</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Metamorfismo -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Metamorfismo">
@@ -8385,6 +8962,28 @@ Mantenimiento: No</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Mujer">
         <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Sexo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Mundo_de_Mentiras -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Mundo_de_Mentiras">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Ilusión"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 96 
+Acción: Activa 
+Tipo: Automático
+Efecto: Forma una realidad de mentiras que el lanzador puede modificar a su antojo; es capaz de crear una ciudad de la nada y transformarla, en el asalto siguiente, en un paraje de fantasía; el único límite es su imaginación. Afecta en una zona dentro de la cual todas las ilusiones tendrán el carácter de conjuro fantasmal, y cualquiera que entre en ella debe superar automáticamente una RM para no verse influido por sus efectos. El conjuro también permite engendrar criaturas irreales que habiten el Mundo de Mentiras que, como el resto de las ilusiones, serán de carácter fantasmal. El lanzador tendrá a su disposición niveles a repartir entre estas entidades, aunque ninguna de ellas podrá tener más de la mitad de su nivel (redondeado hacia arriba). Es decir, puede crear cien seres fantasmales de nivel uno o veinte de quinto nivel; cualquier combinación es posible. Los fantasmas serán confeccionados como Seres Entre Mundos, usando las reglas de creación de seres. Estas criaturas tendrán inteligencia y vida ficticia, y son capaces de actuar independientemente siguiendo las órdenes que su señor les haya dado. Los personajes que entren dentro del área de influencia de este hechizo y fallen el control de Resistencia, sólo podrán repetirlo cuando tengan alguna duda sobre la realidad de su entorno.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       500            900              1.400         2.000
+Int. R.       13              15                   17              19
+
+Base: RM 140 / 10 km de radio / 100 niveles a repartir entre seres.
+Intermedio: RM 180 / 100 km de radio / 500 niveles a repartir entre seres.
+Avanzado: RM 220 / 1.000 km de radio / 1.500 niveles a repartir entre seres.
+Arcano: RM 260 / 10.000 km de radio / 5.000 niveles a repartir entre seres.
+Mantenimiento: 50 / 90 / 140 / 200 Diario</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -9836,6 +10435,28 @@ Mantenimiento: 10 / 20 / 25 / 30</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Resistencia_a_las_Ilusiones -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Resistencia_a_las_Ilusiones">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Ilusión"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 42 
+Acción: Activa 
+Tipo: Efecto
+Efecto: Aumenta la Resistencia mágica de un sujeto contra los efectos ilusorios. El conjuro otorga un bonificador a toda RM contra cualquier conjuro de la vía Ilusión (o conjuros de naturaleza similar). Los efectos de este hechizo no se superponen, y sólo se puede afectar con él una vez a cada sujeto.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon        80             100                120            140
+Int. R.        7                10                  12              14
+
+Base: +20 a la RM.
+Intermedio: +40 a la RM.
+Avanzado: +60 a la RM.
+Arcano: +80 a la RM.
+Mantenimiento: 10 / 10 / 15 / 15 Diario</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Restituir -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Restituir">
@@ -10143,6 +10764,28 @@ Intermedio: 250 metros de radio / RM 140.
 Avanzado: 500 metros de radio / RM 160.
 Arcano: 1 kilómetro de radio / RM 180.
 Mantenimiento: 5 / 10 / 10 / 15</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Ser_Fantasmal -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ser_Fantasmal">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Ilusión"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 62 
+Acción: Activa 
+Tipo: Automático
+Efecto: Crea un ser fantasmal. El ente ilusorio será confeccionado a gusto del hechicero como un Ser Entre Mundos, usando las reglas de creación de seres. A todos los efectos, funciona igual que el sortilegio Crear Ser Ilusorio (ilusión nivel 40), salvo por el hecho de que quien fracase una RM se ve sometido a las reglas de conjuros fantasmales. Es posible realizar un nuevo control sólo si un personaje encuentra alguna duda o motivo para sospechar de la autenticidad del ser. El fantasma puede tener como máximo tres niveles por encima del lanzador.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon       100            120               150             200
+Int. R.         8               11                 13               16
+
+Base: RM 120 / Nivel 2 / 20 metros de radio.
+Intermedio: RM 140 / Nivel 4 / 50 metros de radio.
+Avanzado: RM 160 / Nivel 7 / 100 metros de radio.
+Arcano: RM 180 / Nivel 10 / 250 metros de radio.
+Mantenimiento: 10 / 15 / 15 / 20</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -11845,6 +12488,28 @@ Mantenimiento: No</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Via">
         <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Vida_Ilusoria -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vida_Ilusoria">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Ilusión"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 76 
+Acción: Activa 
+Tipo: Anímico
+Efecto: Introduce recuerdos falsos en la mente de un individuo. El ilusionista puede alterar sus recuerdos, incluyendo todos los datos nuevos que desee. Una persona influida por este hechizo no es capaz de diferenciar los recuerdos ilusorios de los suyos propios. Una vez fallado el control, el personaje no tendrá derecho a una nueva tirada, salvo si encuentra motivos para pensar que esos recuerdos son falsos.
+
+Grado    Base    Intermedio    Avanzado    Arcano
+Zeon        140          200                 260            320
+Int. R.          8             10                   13              16
+
+Base: RM o RP 140.
+Intermedio: RM o RP 160.
+Avanzado: RM o RP 180.
+Arcano: RM o RP 200.
+Mantenimiento: 15 / 20 / 30 / 35 Diario</rdfs:comment>
     </owl:NamedIndividual>
     
 
