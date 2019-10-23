@@ -220,6 +220,14 @@
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Crioquinesis -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Crioquinesis">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Psiquica"/>
+    </owl:Class>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases -->
 
     <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
@@ -262,10 +270,26 @@
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Disciplina -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Disciplina">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Psiquica"/>
+    </owl:Class>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Dureza -->
 
     <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Dureza">
         <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Armadura"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Energía_Psíquica -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Energía_Psíquica">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Psiquica"/>
     </owl:Class>
     
 
@@ -418,6 +442,14 @@
 
     <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Vigor">
         <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Secundaria"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Incremento_Físico -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Incremento_Físico">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Psiquica"/>
     </owl:Class>
     
 
@@ -618,6 +650,22 @@
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Piroquinesis -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Piroquinesis">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Psiquica"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Poder_Matricial -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Poder_Matricial">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Psiquica"/>
+    </owl:Class>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Rango_Armas -->
 
     <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Rango_Armas">
@@ -644,6 +692,14 @@
 
     <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Raza_Pura">
         <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Raza"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Sentiente -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Sentiente">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Psiquica"/>
     </owl:Class>
     
 
@@ -698,6 +754,30 @@
 
     <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tecnica_Dominio">
         <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ki"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Telemetría_Psíquica -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Telemetría_Psíquica">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Psiquica"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Telepatía -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Telepatía">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Psiquica"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Telequinesis -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Telequinesis">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Psiquica"/>
     </owl:Class>
     
 
@@ -2567,6 +2647,18 @@ Mantenimiento: 10 / 20 / 20 / 25 Diario</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Conectar_Matrices -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Conectar_Matrices">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Poder_Matricial"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: NA 
+Acción: Activa 
+Mantenimiento: Sí
+Descripción: Mediante esta habilidad, el personaje podrá conectar, con la suya propia, las mentes de varios individuos con la capacidad de usar poderes psíquicos. De este modo, uno de los miembros conectados sumará a su potencial psíquico los bonificadores de Voluntad de los otros. Sólo uno podrá utilizar sus habilidades psíquicas mientras estén conectados, ya que el resto utiliza su poder sólo como potenciador. Las personas conectadas deben usar voluntariamente sus poderes con esta finalidad. El número de individuos capaces de conectarse depende del potencial del poder.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Confusión -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Confusión">
@@ -3903,6 +3995,14 @@ Mantenimiento: 10 / 10 / 15 / 15</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Crioquinesis -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Crioquinesis">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Disciplina"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Cristalización -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Cristalización">
@@ -4748,6 +4848,18 @@ Mantenimiento: No</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Destruir_Matrices -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Destruir_Matrices">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Poder_Matricial"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: NA 
+Acción: Pasiva 
+Mantenimiento: Sí
+Descripción: Esta habilidad destruye poderes psíquicos activos, siempre que no sean superiores al nivel de dificultad que indica los efectos.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Destruir_No_Muertos -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Destruir_No_Muertos">
@@ -5230,6 +5342,14 @@ Mantenimiento: No</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Disciplina -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Disciplina">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Disciplina_Psíquica -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Disciplina_Psíquica">
@@ -5633,6 +5753,14 @@ Intermedio: RM 180.
 Avanzado: RM 220.
 Arcano: RM 260.
 Mantenimiento: No</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Energía_Psíquica -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Energía_Psíquica">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Disciplina"/>
     </owl:NamedIndividual>
     
 
@@ -7630,6 +7758,14 @@ Mantenimiento: 5 / 10 / 15 / 15 Diario</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Incremento_Físico -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Incremento_Físico">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Disciplina"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Incremento_de_Reacción -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Incremento_de_Reacción">
@@ -9386,6 +9522,18 @@ Mantenimiento: 5 / 20 / 25 / 30 Diario</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Ocultar_Matrices -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ocultar_Matrices">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Poder_Matricial"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: NA 
+Acción: Pasiva 
+Mantenimiento: Sí
+Descripción: Esconde las habilidades mentales del psíquico contra el poder de “Sentir matrices” de otras personas. Este poder disminuye el potencial de “Sentir matrices” tantos grados de dificultad como indique el efecto alcanzado. Si el potencial de “Sentir matrices” de un tercero disminuye por debajo de su requerimiento base (es decir, de Fácil), los poderes del psíquico estarán ocultos ante esa detección. El poder de “Sentir matrices” sólo se anula con los poderes del psíquico que los oculta, por lo que seguirá funcionando con normalidad contra otros blancos.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Ocultarse_Ante_la_Magia -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ocultarse_Ante_la_Magia">
@@ -9767,11 +9915,27 @@ Mantenimiento: 25 / 30 / 30 / 35 Diario</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Piroquinesis -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Piroquinesis">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Disciplina"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Poder -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Poder">
         <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Característica_Primaria"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Representa el poder anímico o espiritual del personaje. Cuanto más elevada sea, mayor capacidad tendrá para influir o resistir lo sobrenatural, y será capaz de destacar más delante de otros individuos.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Poder_Matricial -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Poder_Matricial">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Disciplina"/>
     </owl:NamedIndividual>
     
 
@@ -10724,6 +10888,26 @@ Bono: +20 a la habilidad de esquiva y parada sin armas.</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Sentiente -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Sentiente">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Disciplina"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Sentir_Matrices -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Sentir_Matrices">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Poder_Matricial"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: NA 
+Acción: Activa 
+Mantenimiento: Sí
+Descripción: El psíquico puede sentir el uso de poderes y notar la presencia de inividuos que posean también estas habilidades. De este modo, el personaje “ve” la energía de las matrices y, por tanto, no aplicará ningún penalizador por ceguera contra las habilidades psíquicas invisibles. Por ejemplo, quien alcance una dificultad Media podrá sentir matrices psíquicas activas y detectar poderes latentes en las personas, todo en un área de 25 metros.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Sentir_el_Calor -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Sentir_el_Calor">
@@ -11600,9 +11784,17 @@ Mantenimiento: No</rdfs:comment>
     
 
 
-    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Telemetría -->
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Telemetría_Psíquica -->
 
-    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Telemetría">
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Telemetría_Psíquica">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Disciplina"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Telemetría_Tierra -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Telemetría_Tierra">
         <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Tierra"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 42 
 Acción: Activa 
@@ -11618,6 +11810,22 @@ Intermedio: RM 120 / 1 año.
 Avanzado: RM 140 / 10 años.
 Arcano: RM 160 / 1 siglo.
 Mantenimiento: No</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Telepatía -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Telepatía">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Disciplina"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Telequinesis -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Telequinesis">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Disciplina"/>
     </owl:NamedIndividual>
     
 
@@ -13652,6 +13860,12 @@ Las habilidades mágicas no dependen exclusivamente del Don y de los conjuros. A
 
 No todos los seres vivos se ven sometidos a las habilidades de convocatoria. Estos poderes sólo permiten interactuar con las criaturas cuya presencia se encuentra sometida al flujo de almas. La mayoría de criaturas que pueblan el mundo, como los humanos, los animales e incluso algunas razas sobrenaturales, no están atados al flujo de almas y no son afectados por la influencia de los invocadores. En realidad su presencia está mucho más ligada al mundo físico que al espiritual. A pesar de que la convocatoria es una habilidad sobrenatural, los individuos que utilizan sus poderes no requieren necesariamente el Don de la magia. En realidad, únicamente necesitan tener un alma lo suficientemente fuerte para forzar a los seres sobrenaturales a cumplir su voluntad, y los conocimientos para hacerlo.</rdfs:comment>
     </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Crioquinesis">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Al contrario que la Piroquinesis, esta disciplina permite al psíquico controlar las bajas temperaturas y el hielo. Sus poderes pueden congelar a personas o disminuir la temperatura a cientos de metros de distancia.
+
+Modificador: Como en la Piroquinesis, el entorno aumenta o disminuye
+el potencial psíquico al usar esta disciplina.</rdfs:comment>
+    </rdf:Description>
     <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Desventaja">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Las desventajas funcionan de una manera similar a las ventajas, pero en lugar de gastar Puntos de Creación para obtenerlas, al elegirlas te proporcionan nuevos puntos para adquirir más ventajas. De este modo se nivelan los beneficios y los inconvenientes: cuantas más ventajas tengas, mayores serán sin duda tus problemas. Puedes elegir hasta tres desventajas para un personaje, aunque no
 es obligatorio hacerlo. Cualquier ventaja o desventaja, salvo que se diga expresamente lo contrario, sólo puede adquirirse en una ocasión.</rdfs:comment>
@@ -13667,6 +13881,13 @@ es obligatorio hacerlo. Cualquier ventaja o desventaja, salvo que se diga expres
     </rdf:Description>
     <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Dificultad">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La puntuación final de una habilidad es la capacidad que tiene un personaje de realizar una acción con éxito. Cuanto más elevada sea, mayores probabilidades tiene de utilizarla correctamente en una situación determinada. Lo primero que debe hacerse será determinar la dificultad de la acción. El Director de Juego fijará el nivel de dificultad, o lo que es lo mismo, la cantidad que se debe superar para tener éxito. En Ánima hay diez niveles de dificultad posibles y cada uno de ellos requiere superar una cifra distinta. Cada vez que un personaje necesita realizar una acción de una dificultad determinada, lo denominaremos control de habilidad.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Disciplina">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Las habilidades mentales se dividen en varios niveles, y cada uno de ellos afecta a una esfera distinta con poderes completamente diferentes del resto. A estas esferas las llamaremos disciplinas psíquicas. Cada disciplina psíquica tiene un número desigual de poderes, divididos en tres niveles. En algunas ocasiones, una disciplina en concreto tiene algún tipo de modificador que depende de la situación en la que se usen sus poderes. Por ejemplo, es mucho más fácil utilizar un poder telepático sobre un sujeto si se esta en contacto físico con él. Si una disciplina en concreto tiene algún modificador,
+este afecta a todos sus poderes.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Energía_Psíquica">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Esta disciplina permite al psíquico usar sus poderes para generar energía pura, e influir en menor grado en el calor, el frio y la electricidad. La matriz psíquica se materializa, afectando físicamente al mundo material de muy diversos modos. No tiene ningún modificador.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Equipamiento">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ahora que tu personaje ya tiene todas sus habilidades, ha llegado el momento de elegir su equipamiento. Por muchas pericias que tenga, de muy poco le pueden servir sin las cosas adecuadas. Conforme prospere y mejore, irá solicitando consecuentemente mejores artilugios, de acorde a sus necesidades.</rdfs:comment>
@@ -13721,6 +13942,9 @@ es obligatorio hacerlo. Cualquier ventaja o desventaja, salvo que se diga expres
     </rdf:Description>
     <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Vigor">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Son las habilidades que recogen aquellas pericias basadas en el esfuerzo corporal, el aguante físico y la resistencia mental.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Incremento_Físico">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La disciplina Incremento físico otorga al psíquico un completo dominio sobre su cuerpo y todas las células que lo componen. De este modo, controla cada parte de su anatomía como si se tratase de una máquina perfecta, aumentando de un modo increible sus capacidades corporales. Sólo es posible emplear una vez un mismo poder sobre un determinado individuo. No tiene ningún modificador.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Invocacion">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Los personajes tienen a su disposición la capacidad de contactar con entidades de enorme poder y solicitar su ayuda temporalmente. Semejantes seres son inmunes a las habilidades de convocatoria naturales, pero intervienen de manera limitada en el mundo, brindando parte de su poder a quienes los llaman. En cierta manera son equivalentes a poderosos hechizos, pero en lugar de ser realizados por el invocador, son las propias entidades quienes los ejecutan.</rdfs:comment>
@@ -13798,6 +14022,14 @@ influencia en su desarrollo. Algunas de ellas son secretas y se mueven en las so
     <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Personaje_No_Jugador">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Personaje interpretado por el Director de Juego.</rdfs:comment>
     </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Piroquinesis">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Esta disciplina permite al psíquico tener dominio sobre las altas temperaturas y el fuego. Puede controlar su forma o volverse inmune a los efectos del calor.
+
+Modificador: El entorno en el que se encuentre el psíquico aumenta o disminuye su potencial.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Poder_Matricial">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">De modo adicional a las habilidades mentales explicadas, existen cuatro poderes genéricos a los que tienen acceso todos los psíquicos indistintamente. No se encuentran dentro de ninguna disciplina, por lo que cualquiera de ellos puede adquirirse invirtiendo un solo CV, o gastar temporalmente uno para tener un acceso limitado a él. Estos poderes no tienen nivel.</rdfs:comment>
+    </rdf:Description>
     <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Rango_Armas">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Distancia a la que puede golpear un arma.</rdfs:comment>
     </rdf:Description>
@@ -13811,6 +14043,11 @@ De cualquier modo, si los jugadores lo desean, hay diferentes razas que se puede
     </rdf:Description>
     <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Raza_Pura">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Comunidad de seres definida por afinidades raciales, lingüísticas, culturales, sobrenaturales, etc.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Sentiente">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Esta disciplina permite al psíquico percibir y controlar los sentimientos y sentidos de otras personas. Como la Telepatía, no tiene ninguna utilidad sobre seres sin mente, como golems o similares. Sentiente tampoco requiere un control de Proyección Psíquica para fijar su blanco (la tirada sigue siendo requerido para determinar el alcance del poder), pero si el psíquico no es capaz de obtener un mínimo de daño 10% en el resultado del asalto, el individuo afectado puede añadir un +60 a su control de RP.
+
+Modificador: Siempre que un psíquico utilice uno de sus poderes sentientes sobre un sujeto que se encuentra en contacto físico con él, puede sumar un bonificador de +20 a su potencial psíquico.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Sexo">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Condición orgánica, masculina o femenina, de los animales y las plantas.</rdfs:comment>
@@ -13826,6 +14063,19 @@ De cualquier modo, si los jugadores lo desean, hay diferentes razas que se puede
     </rdf:Description>
     <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Estilo">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Estas tablas permiten al personaje potenciar su habilidad marcial, disminuyendo los penalizadores que se aplican al realizar algunas maniobras específicas de ataque.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Telemetría_Psíquica">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La Telemetría es la capacidad mental de percibir los residuos ambientales de tiempos pasados. Ello se debe a que la matriz psíquica de cada persona deja siempre tras de sí cierta energía residual, que depende de su estado de ánimo y de sus pensamientos en cada momento. Un individuo con esta disciplina es capaz de percibir dichos residuos y, consecuentemente, de sentir en mayor o menor grado lo que ha ocurrido en el pasado.
+
+Modificador: Siempre que un psíquico utilice uno de sus poderes telemétricos sobre algo con lo que se encuentre en contacto físico (ya sea un objeto o una persona), puede sumar un bonificador de +10 a su potencial.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Telepatía">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La Telepatía es una de las disciplinas más fascinantes que tienen los psíquicos a su disposición: sincronizar las energías de dos matrices psíquicas, permitiendo penetrar a quien la utilice en la mente de otros sujetos. Algunos ejemplos de poderes telépatas serían leer los pensamientos de otros individuos, alterar su percepción o incluso dominar su voluntad. No tiene ninguna utilidad sobre seres sin mente, como golems o similares. Al contrario que otras Disciplinas, no se requiere un control de Proyección Psíquica para fijar su blanco (la tirada sigue siendo requerido para determinar el alcance del poder), pero si el psíquico no es capaz de obtener un mínimo de daño 10% en el resultado del asalto, el individuo afectado puede añadir un +60 a su control de RP. 
+
+Modificador: Siempre que un psíquico utilice uno de sus poderes telepáticos sobre un sujeto que se encuentra en contacto físico con él, puede sumar un bonificador de +20 a su potencial.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Telequinesis">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La Telequinesis es la facultad psíquica de mover objetos con la fuerza mental de un individuo. A mayor nivel, un personaje es incluso capaz de destrozar cosas a distancia o modificar su estructura atómica. Esta disciplina no tiene ningún modificador.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tipo_Ataque">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">En primer lugar debemos saber que, cuando un arma se utiliza para atacar, lo
