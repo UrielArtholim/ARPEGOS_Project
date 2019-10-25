@@ -286,9 +286,9 @@
     
 
 
-    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Energía_Psíquica -->
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Energía -->
 
-    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Energía_Psíquica">
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Energía">
         <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Psiquica"/>
     </owl:Class>
     
@@ -1548,6 +1548,18 @@ Mantenimiento: 5 / 10 / 15 / 20</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Armadura_Telequinética -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Armadura_Telequinética">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Telequinesis"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 1 
+Acción: Pasiva 
+Mantenimiento: Sí
+Descripción: Crea una armadura de fuerza sobre el psíquico o el sujeto a quien este designe. La TA de la coraza protege a su usuario contra todos los tipos de ataque, salvo los de energía. Puede combinarse con cualquier otra protección como capa adicional, pero no causa penalizadores especiales al turno por ello.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Armadura_de_Luz -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Armadura_de_Luz">
@@ -1889,6 +1901,18 @@ Mantenimiento: 15 / 20 / 30 / 40 Diario</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Aumentar_Temperatura_Ambiental -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Aumentar_Temperatura_Ambiental">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Piroquinesis"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 2 
+Acción: Activa 
+Mantenimiento: Sí
+Descripción: El psíquico tiene control sobre la temperatura ambiental y puede aumentarla considerablemente en un amplio radio. Tanto la zona afectable como la cantidad de tempera ruta que se puede alterar depende de la dificultad alcanzada.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Aumentar_el_Crítico -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Aumentar_el_Crítico">
@@ -2008,6 +2032,18 @@ Mantenimiento: 10 / 15 / 25 / 35</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Balística -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Balística">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Telequinesis"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 2 
+Acción: Activa 
+Mantenimiento: No
+Descripción: Permite al psíquico lanzar con completa precisión objetos empleando su Proyección Psíquica como habilidad de disparo. Cuanto mayor sea su potencial, mayor será su precisión o la cantidad de elementos que será capaz de lanzar simultáneamente (desde una simple daga a cientos de enormes rocas). Dependiendo del Potencial que haya obtenido, el personaje será capaz de incrementar el número de objetos que lanza (cubriendo así un área mucho mayor), o la precisión de este poder. Es decir, debe de decidir entre obtener un bono a su Proyección (si lanza usa un sólo objeto), o arrojar multitud de ellos cubriendo una gran zona. Por ejemplo, alguien que alcance un nivel de dificultad Absurdo podrá elegir entre un +20 a su Proyección lanzando un único elemento, o arrojar una lluvia de objetos que cubrirían un área de 15 metros. El daño base del ataque variará dependiendo de los elementos que son lanzados y de si se ataca o no en área. Si sólo se proyecta un objeto, su daño dependerá exactamente de su naturaleza; las armas producen su daño base natural, aunque aplicando el bono de Voluntad en lugar del de Fuerza. Si se lanzan elementos de escenografía (rocas, sillas, candelabros…) el daño debe de ser determinado por el DJ entre 30 y 150, dependiendo de aquello que tenga el psíquico a su alcance. De usarse un ataque en área, el daño base de las armas aumenta un 50% a causa de que se proyectan multitud de elementos a la vez. Un proyectil disparado con esta habilidad queda fuera del control del psíquico, por lo que si pretende volverlo a utilizar, deberá primero recuperarlo.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Barrera_de_Almas -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Barrera_de_Almas">
@@ -2092,6 +2128,18 @@ Intermedio: Barrera de daño 100 / 1.600 Puntos de Resistencia.
 Avanzado: Barrera de daño 150 / 3.000 Puntos de Resistencia.
 Arcano: Barrera de daño 200 / 5.000 Puntos de Resistencia.
 Mantenimiento: 10 / 20 / 25 / 30</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Barrera_Ígnea -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Barrera_Ígnea">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Piroquinesis"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 2 
+Acción: Activa 
+Mantenimiento: Sí
+Descripción: Este poder crea una barrera de fuego en el lugar que el psíquico decida. Cualquiera que trate de atravesarla recibirá, de manera automática, un ataque con la habilidad de Proyección Psíquica de su creador. La agresión tiene un daño base variable y emplea la TA de Calor. La longitud máxima de la barrera depende la dificultad que se alcance, pero el psíquico puede darle la forma que desee. Al igual que la repulsión telequinética, no puede lanzarse directamente sobre los blancos.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -2363,6 +2411,18 @@ Bono: +10 a la habilidad de esquiva.</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Cargar_con_Sentimientos -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Cargar_con_Sentimientos">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Sentiente"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 2 
+Acción: Activa 
+Mantenimiento: Sí
+Descripción: Este poder carga un objeto o lugar determinado con un fuerte sentimiento, que invade automáticamente a cualquier individuo que lo toque o entre en él. Si por ejemplo el psíquico carga con ira una espada, cualquiera que la toque sentirá una cólera inmensa. Si se afecta un lugar, el área estará delimitada por el potencial alcanzado. Para resistirse hay que superar una RP, aunque quien no la pase tiene derecho a una nueva tirada cada 5 asaltos, si sospecha que sus sentimientos están siendo alterados de manera innatural. No se requiere utilizar Proyección Psíquica, sino estar en el lugar determinado o tocando el objeto. Fuera del área o sin contacto con el cuerpo cargado, los efectos desaparecen de inmediato.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Categoría -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Categoría">
@@ -2550,6 +2610,18 @@ Bono: +10 a la habilidad de esquiva.</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Cero_Absoluto -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Cero_Absoluto">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Crioquinesis"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 3 
+Acción: Activa 
+Mantenimiento: Sí
+Descripción: El psíquico disminuye la temperatura a su alrededor hasta el cero absoluto, destruyendo cualquier cuerpo, orgánico o inorgánico, que se encuentre en su radio. A términos de juego, todo aquel ser u objeto físico que no consiga superar una RF contra 100 cada turno que se encuentre en el interior del área, quedará inmediatamente hecho añicos por el Cero absoluto. Este poder no requiere que el personaje utilice su Proyección Psíquica, sino que afecta automáticamente a cualquier individuo que esté dentro de su radio.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Ciego -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ciego">
@@ -2695,6 +2767,18 @@ Descripción: Mediante esta habilidad, el personaje podrá conectar, con la suya
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Conectar_Sentidos -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Conectar_Sentidos">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Sentiente"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 1 
+Acción: Activa 
+Mantenimiento: Sí
+Descripción: Conecta los sentidos del psíquico con los de otro individuo y viceversa, permitiendo a ambos ver y escuchar lo que el otro sienta. Si el psíquico lo desea, puede negar el acceso a sus sentidos, aunque el afectado no tendrá la misma capacidad sobre el creador del lazo, salvo si supera la RP que indique la dificultad alcanzada. Cualquiera que falle el control de Resistencia tiene derecho a una nueva tirada cada cinco asaltos, pero sólo si sospecha que es objeto de ese tipo de poder. La distancia máxima de la conexión depende del potencial.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Conexión_Psíquica -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Conexión_Psíquica">
@@ -2747,6 +2831,18 @@ Intermedio: RM 140/ 10 metros de radio.
 Avanzado: RM 160 / 25 metros de radio.
 Arcano: RM 180 / 50 metros de radio.
 Mantenimiento: 10 / 10 / 15 / 15 Diario</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Congelar_Crioquinesis -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Congelar_Crioquinesis">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Crioquinesis"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 1 
+Acción: Activa 
+Mantenimiento: Sí
+Descripción: Congela cualquier tipo de cuerpo que no supere la RF requerida. El individuo afectado sufre un penalizador a toda acción, equivalente a la cantidad por la que no ha superado la Resistencia. Si la diferencia es mayor de 40 puntos, queda congelado y es sometido a Paralización parcial. Puede usarse la TA de Frío como defensa contra este poder. Cualquier individuo afectado tiene derecho a un nuevo control cada cinco asaltos.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -2993,6 +3089,18 @@ Beneficio: 2</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Consumir -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Consumir">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Piroquinesis"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 3 
+Acción: Activa 
+Mantenimiento: No
+Descripción: Hace arder internamente un cuerpo, consumiendo su sustancia y reduciéndolo a cenizas. No importa que se trate de cosas inorgánicas (como espadas, ropas, piedras...) o de seres vivos; nada material puede evitar ser destruido por esta habilidad. Si un personaje es afectado por ella, debe superar una RF para no ser consumido. En el caso de que no la supere, recibirá automáticamente el daño que indica la dificultad alcanzada. Si se trata de un ser con acumulación de daño, esta cantidad se multiplica por 5. No existe TA que proteja contra esta habilidad, ni siquiera la de calor, ya que afecta directamente al interior de los cuerpos. Si se lanza contra un objeto y no supera la Resistencia, es destruido directamente, salvo en el caso de los de calidad excepcional, que sólo pierden un grado.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Consumir_Esencia -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Consumir_Esencia">
@@ -3181,6 +3289,18 @@ Mantenimiento: 5 / 10 / 15 / 20</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Control_Sobre_el_Frío -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Control_Sobre_el_Frío">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Crioquinesis"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 1 
+Acción: Activa 
+Mantenimiento: Sí
+Descripción: Controla el frío y el hielo de una zona. Puede modificarlo de cualquier manera, quebrándolo o cambiándolo de forma. Si se usa sobre un ser elemental, podrá evitarse este efecto superando una RF contra la dificultad indicada por el valor alcanzado</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Control_Sobre_el_Fuego -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Control_Sobre_el_Fuego">
@@ -3335,6 +3455,18 @@ Mantenimiento: 50 / 60 / 80 / 100 Diario</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Control_del_Terreno -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Control_del_Terreno">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Telequinesis"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 3 
+Acción: Activa 
+Mantenimiento: No
+Descripción: Permite al psíquico controlar completamente el terreno o zona en la que se encuentre. Su dominio es total, por lo que puede desde crear un pequeño terremoto a levantar enormes muros de piedra, siempre que sus efectos no excedan el radio indicado. En el caso de que se pretenda afectar a construcciones sólidas, su posible destrucción dependerá de su barrera de daño.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Control_sobre_los_Líquidos -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Control_sobre_los_Líquidos">
@@ -3353,6 +3485,18 @@ Intermedio: RM o RF 120 / 50 litros.
 Avanzado: RM o RF 140 / 500 litros.
 Arcano: RM o RF 180 / 5.000 litros.
 Mantenimiento: 10 / 10 / 15 / 15 Diario</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Controlar_Energía -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Controlar_Energía">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Energía"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 2 
+Acción: Activa 
+Mantenimiento: Sí
+Descripción: Otorga al psíquico el control completo de varias intensidades de energía, ya sea frío, calor o electricidad. El personaje podrá mover y dirigir libremente esas intensidades como le plazca, aunque si las emplea para atacar, reducirá a la mitad su Proyección Psíquica. Si se lanza sobre algo con presencia propia, o un ente vivo, podrá evitar este efecto superando una RF.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -3397,6 +3541,18 @@ Intermedio: RM 120 / 8 intensidades.
 Avanzado: RM 140 / 12 intensidades.
 Arcano: RM 180 / 15 intensidades.
 Mantenimiento: 5 / 10 / 15 / 20</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Controlar_el_Fuego -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Controlar_el_Fuego">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Piroquinesis"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 1 
+Acción: Activa 
+Mantenimiento: Sí
+Descripción: Controla el crecimiento y el tamaño de un fuego que no tenga más de las intensidades indicadas por el nivel de poder alcanzado. Por ejemplo, el personaje puede dirigir el crecimiento de un incendio en un poblado hacia un lugar concreto, ignorando las cabañas que no quiere ver quemadas. También permite modelar la forma y el color de las llamas. Si se usa sobre un fuego con presencia propia o una criatura elemental, podrá evitarse este efecto superando una RF contra la dificultad indicada por el valor alcanzado.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -3558,6 +3714,18 @@ Mantenimiento: 50 / 70 / 100 / 140 Diario</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Creación_de_Energía -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Creación_de_Energía">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Energía"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 1 
+Acción: Activa 
+Mantenimiento: Sí
+Descripción: Crea un único objeto material simple, dándole forma a partir de energía pura, como un cubo de fuerza o una espada. No podrá exceder el metro cúbico de capacidad. El material tiene una Resistencia 25, y estará basado en energía. Si se crea un arma, tendrá un daño base entre de 80 y 120, dependiendo de su tamaño, y una velocidad natural de 10. Dado que es pura energía, no emplea el bono de Fuerza del personaje, pero ataca en la TA de Electricidad.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Creación_de_Luz -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Creación_de_Luz">
@@ -3620,6 +3788,18 @@ Intermedio: 5 intensidades.
 Avanzado: 10 intensidades.
 Arcano: 20 intensidades.
 Mantenimiento: 5 / 15 / 20 / 25</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Crear_Energía_Psíquica -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Crear_Energía_Psíquica">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Energía"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 1 
+Acción: Activa 
+Mantenimiento: Sí
+Descripción: Crea intensidades de energía o aumenta en la misma cantidad una fuente ya existente. Puede formarse cualquier tipo de energía, desde hogueras a relámpagos, aunque no es posible hacerlo si esta es de origen sobrenatural.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -3690,6 +3870,18 @@ Mantenimiento: 5 / 5 / 10 / 15 Diario</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Crear_Frío_Crioquinesis -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Crear_Frío_Crioquinesis">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Crioquinesis"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 1 
+Acción: Activa 
+Mantenimiento: Sí
+Descripción: Crea varias intensidades de frío. Si se produce sobre un cuerpo líquido, puede formar hielo.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Crear_Fuego -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Crear_Fuego">
@@ -3708,6 +3900,18 @@ Intermedio: 6 intensidades de fuego.
 Avanzado: 8 intensidades de fuego.
 Arcano: 10 intensidades de fuego.
 Mantenimiento: 5 / 10 / 10 / 15 Diario</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Crear_Fuego_Piroquinesis -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Crear_Fuego_Piroquinesis">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Piroquinesis"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 1 
+Acción: Activa 
+Mantenimiento: Sí
+Descripción: Crea intensidades de fuego o aumenta en la misma cantidad una llama ya existente. Si se produce sobre un cuerpo capaz de prender, no es necesario mantener el poder para que siga ardiendo. En caso contrario, el mantenimiento permite a la llama arder sin consumir nada, incluso en el aire (aunque no impide que sea apagada).</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -3892,6 +4096,18 @@ Intermedio: RM o RP 120.
 Avanzado: RM o RP 160.
 Arcano: RM o RP 200.
 Mantenimiento: No</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Crear_Sentimientos -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Crear_Sentimientos">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Sentiente"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 2 
+Acción: Activa 
+Mantenimiento: Sí
+Descripción: Crea sentimientos nuevos en un individuo. Por ejemplo, puede hacer que dos personas que no se soportan se enamoren la una de la otra, o que dos amantes sientan repulsión recíproca. Con este poder, el psíquico es capaz de someter a su antagonista a cualquier estado psicológico que desee, como miedo, dolor… Para resistirse, debe superar una RP contra la cifra que indique la dificultad alcanzada. Si los sentimientos que se crean son de naturaleza radicalmente opuesta a los del individuo, podrá aplicar un +20 adicional a su RP. Cualquier afectado tiene derecho a un nuevo control cada 5 asaltos, pero sólo si sospecha que estos sentimientos no son naturales en él.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -4081,6 +4297,18 @@ Intermedio: RM o RF 160.
 Avanzado: RM o RF 180.
 Arcano: RM o RF 200.
 Mantenimiento: 5 / 10 / 15 / 20</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Cristalizar -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Cristalizar">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Crioquinesis"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 2 
+Acción: Activa 
+Mantenimiento: Sí
+Descripción: Esta habilidad cristaliza cualquier clase de cuerpo que no supere la RF del poder. Todo lo que se congele de este modo se vuelve excepcionalmente quebradizo, pudiendo romperse con el menor golpe. Un personaje cristalizado está sometido a Paralización menor y, si sufre cualquier tipo de daño, recibe automáticamente un crítico con un penalizador de –40 puntos a su RF. En el caso de que se trate de un ser con acumulación, no sufre un crítico directo pero, a partir de ese momento, todo su cuerpo se considera como un punto vulnerable.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -4283,6 +4511,18 @@ Mantenimiento: No</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Cúpula_de_Energía -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Cúpula_de_Energía">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Energía"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 3 
+Acción: Activa 
+Mantenimiento: No
+Descripción: El psíquico crea una cúpula de energía que destruye todo lo que se ponga en contacto con ella. El ataque afecta a una amplia zona, dentro de la cual no es posible designar blancos. Se ejecuta en la TA de Electricidad y su daño depende del nivel de Dificultad del efecto alcanzado. A ciertas dificultades, el poder de la Cúpula es tan elevado y puro que incluso resulta capaz de dañar a seres inmateriales. El ataque es perfectamente visible, incluso para individuos que no son capaces de percibir matrices.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Debilidad_física -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Debilidad_física">
@@ -4441,6 +4681,18 @@ Mantenimiento: No</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Descarga_de_Energía -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Descarga_de_Energía">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Energía"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 1 
+Acción: Activa 
+Mantenimiento: No
+Descripción: Permite al personaje realizar un ataque utilizando su Proyección Psíquica. Este poder actúa en la TA de Electricidad, con el daño base que indique el potencial alcanzado. Si llega a un nivel de dificultad lo suficientemente elevado, la energía es tan pura que daña incluso a seres inmateriales. El ataque es perfectamente visible, incluso para individuos que no son capaces de percibir matrices.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Descarga_de_Luz -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Descarga_de_Luz">
@@ -4511,6 +4763,18 @@ Intermedio: RM 160.
 Avanzado: RM 200.
 Arcano: RM 240.
 Mantenimiento: No</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Deshacer_Energía -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Deshacer_Energía">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Energía"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 2 
+Acción: Activa 
+Mantenimiento: No
+Descripción: Disminuye varias intensidades de energía, salvo aquellas que tiene origen sobrenatural. Si se usa sobre un ser basado en intensidades de cualquier tipo, recibirá 5 puntos de daño por cada intensidad rebajada, si no supera una RF contra la cifra indicada por el potencial del poder (los seres con acumulación reciben 25 puntos).</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -4586,6 +4850,18 @@ Intermedio: RM 160.
 Avanzado: RM 200.
 Arcano: RM 240.
 Mantenimiento: 10 / 20 / 25 / 30</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Destrozar_Telequinesis -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Destrozar_Telequinesis">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Telequinesis"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 2 
+Acción: Activa 
+Mantenimiento: No
+Descripción: Este poder destroza un cuerpo, haciéndolo estallar en pedazos desde dentro. Si el objetivo es un objeto, deberá superar una Resistencia para evitar ser destrozado (los objetos de calidad especial no se rompen automáticamente, sino que pierden un nivel por cada 50 puntos de fracaso). Si es un ser vivo natural, deberá utilizar su RF contra la dificultad requerida, o perderá el doble de puntos de vida por los que no superó el control. Si se trata de un armazón con resistencia estructural o de un ser con acumulación, sufrirá cinco veces el daño que indique el nivel de fracaso. Naturalmente, sólo es posible afectar a seres materiales.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -5008,6 +5284,18 @@ Mantenimiento: 10 / 20 / 25 / 30</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Destruir_Sentimientos -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Destruir_Sentimientos">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Sentiente"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 3 
+Acción: Activa 
+Mantenimiento: No
+Descripción: Elimina los sentimientos que el psíquico desee de un individuo. Es necesario determinar cuál pretende borrar, y si es general o sólo hacia algo en concreto. Para resistirse, hay que superar la RP que indique la dificultad alcanzada, aunque puede aplicar un +20 si la emoción se encuentra muy arraigada en el corazón de ese sujeto. Por cada 20 puntos por los que no consiga superarla, se permite al psíquico eliminar un sentimiento adicional. Si falla la tirada por más de 80 puntos, puede incluso borrar todo sentimiento de la mente del individuo, prácticamente convirtiéndolo en un vegetal.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Destruir_Sentimientos_Negativos -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Destruir_Sentimientos_Negativos">
@@ -5128,6 +5416,18 @@ Mantenimiento: 5 / 10 / 10 / 15</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Detección_de_Movimiento -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Detección_de_Movimiento">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Telequinesis"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 2 
+Acción: Activa 
+Mantenimiento: Sí
+Descripción: Dentro del radio de acción de este poder, el psíquico puede detectar cualquier cuerpo en movimiento que no supere la RF requerida. Percibe la velocidad, el tamaño y la dirección que lleva el objeto, pero no distingue su forma. Esta habilidad únicamente funciona contra formas físicas materiales, por lo que las cosas sin sustancia no son detectadas. Este poder no requiere que el personaje utilice su Proyección Psíquica, sino que afecta automáticamente a cualquier individuo que esté dentro del área de acción. La ocultación del Ki funciona contra esta habilidad, otorgando un bono a la RF.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Detectar_Esencia -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Detectar_Esencia">
@@ -5212,6 +5512,18 @@ Intermedio: 50 metros de radio.
 Avanzado: 150 metros de radio.
 Arcano: 500 metros de radio.
 Mantenimiento: No</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Detectar_Sentimientos -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Detectar_Sentimientos">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Sentiente"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 1 
+Acción: Activa 
+Mantenimiento: Sí
+Descripción: Detecta un sentimiento determinado en cualquier sujeto que se encuentre en el radio de acción del poder. Si por ejemplo se pretende detectar ira, el psíquico hallará a cualquier individuo colérico dentro de su área de influencia. Para resistirse, puede superarse una RP contra el valor alcanzado por la dificultad. Este poder no requiere que el personaje utilice su Proyección Psíquica, sino que afecta automáticamente a cualquier individuo que esté dentro del área.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -5414,6 +5726,18 @@ Mantenimiento: No</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Disciplina_Psíquica">
         <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Disminuir_la_Temperatura_Ambiental -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Disminuir_la_Temperatura_Ambiental">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Crioquinesis"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 2 
+Acción: Activa 
+Mantenimiento: Sí
+Descripción: El psíquico tiene control sobre la temperatura ambiental y puede disminuirla dentro de un amplio radio de acción.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -5734,6 +6058,18 @@ Mantenimiento: 10 / 15 / 20 / 25 Diario</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Eliminación_de_Cansancio -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Eliminación_de_Cansancio">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Incremento_Físico"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 3 
+Acción: Activa 
+Mantenimiento: No
+Descripción: Usando la energía de su matriz, el personaje puede descargar el desgaste físico de su cuerpo, restaurando algunos de sus puntos de Cansancio perdidos. Sin embargo, este poder no permite eliminar el cansancio que haya adquirido a causa de la fatiga psíquica.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Eliminar_Residuos -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Eliminar_Residuos">
@@ -5752,6 +6088,30 @@ Intermedio: 250 metros de radio.
 Avanzado: 1 kilómetro de radio / El conjuro permite además borrar las acciones de un individuo ante habilidades que permiten ver el pasado de objetos o lugares.
 Arcano: 5 kilómetros de radio / Como en grado Avanzado, salvo que el hechicero puede borrar todo rastro de cuanto aconteció en el pasado en la zona afectada.
 Mantenimiento: No</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Eliminar_Sentidos -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Eliminar_Sentidos">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Sentiente"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 2 
+Acción: Activa 
+Mantenimiento: Sí
+Descripción: El psíquico hace desaparecer temporalmente alguno de los cinco sentidos de un individuo. Puede eliminarse uno adicional por cada 20 puntos por los que el blanco afectado no supere la dificultad requerida. Tiene derecho a un nuevo control cada 5 asaltos, pero sólo puede recuperar un sentido cada vez.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Eliminar_el_Frío -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Eliminar_el_Frío">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Crioquinesis"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 1 
+Acción: Activa 
+Mantenimiento: No
+Descripción: Disminuye varias intensidades de frío de una zona, ser u objeto. Si se usa sobre una criatura basada en frío o hielo, recibirá 5 puntos de daño por cada intensidad rebajada si no supera una RF requerida (los seres con acumulación de daño reciben 25 puntos).</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -5817,10 +6177,22 @@ Mantenimiento: No</rdfs:comment>
     
 
 
-    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Energía_Psíquica -->
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Energía -->
 
-    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Energía_Psíquica">
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Energía">
         <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Disciplina"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Energía_Mayor -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Energía_Mayor">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Energía"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 3 
+Acción: Activa 
+Mantenimiento: Sí
+Descripción: Versión incrementada del poder de primer nivel Crear energía, capaz de provocar efectos mucho más devastadores.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -5925,6 +6297,18 @@ Bono: +20 a la habilidad de esquiva y parada sin armas.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Equipamiento">
         <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Erudición_Humana -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Erudición_Humana">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Telemetría_Psíquica"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 2 
+Acción: Activa 
+Mantenimiento: No
+Descripción: Este poder otorga la habilidad de analizar el pasado de un individuo, tratando de percibir acciones que hubiese realizado. El psíquico puede buscar un acto concreto ejecutado por el afectado, o que haya hecho en un momento determinado. Podría, por ejemplo, saber si ha cometido un asesinato, o lo que hizo exactamente hace una semana a esa misma hora. Un individuo puede resistirse a este efecto superando una RP contra la dificultad indicada.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -6204,6 +6588,42 @@ Mantenimiento: 5 / 15 / 15 / 20</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Escudo_Telequinético -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Escudo_Telequinético">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Telequinesis"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 1 
+Acción: Pasiva 
+Mantenimiento: Sí
+Descripción: Crea un escudo telequinético, que defiende a su usuario contra cualquier ataque no inmaterial. Por lo tanto, aunque es capaz de detener el golpe de una espada mágica que daña energía, no para una descarga de magia luminosa. Sólo en el caso de que la barrera sea creada con un nivel de poder superior a Imposible, será capaz de detener efectos y ataques etéreos. A cierto nivel, el escudo gana también la habilidad de barrera de daño. Al contrario que otros poderes, el escudo telequinético mantenido permanece con la misma cantidad de puntos de vida con la que fue creado originariamente. Sin embargo, cada turno posterior pierde 5 puntos de vida, hasta llegar a la cantidad a la que el psíquico puede mantenerlo naturalmente.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Escudo_de_Energía -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Escudo_de_Energía">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Energía"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 1 
+Acción: Pasiva 
+Mantenimiento: Sí
+Descripción: Forma un escudo de energía que protege al psíquico frente a cualquier tipo de ataque, incluyendo los de naturaleza sobrenatural. Al contrario que otros poderes, el escudo de energía permanece con la misma cantidad de puntos de vida con la que fue creado originariamente, en lugar de conservarse con el mantenimiento natural del psíquico. Sin embargo, una vez creado pierde 5 puntos de vida por asalto, hasta que llega a la cantidad en la que el psíquico puede mantener naturalmente el escudo.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Escudo_de_Hielo -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Escudo_de_Hielo">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Crioquinesis"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 2 
+Acción: Pasiva 
+Mantenimiento: Sí
+Descripción: Crea un escudo de hielo que protege al psíquico contra cualquier fuente de ataque no basada en energía, salvo los conjuros de tipo Ataque de luz u oscuridad, los cuales sí se pueden detener. Al contrario que otros poderes, el Escudo de hielo permanece con la misma cantidad de puntos de vida con la que fue creado originariamente, en lugar de mantenerse con el mantenimiento natural del psíquico. Sin embargo, una vez creado pierde 5 puntos de vida por asalto, hasta que llega a la cantidad a la que el psíquico pueda mantener naturalmente el escudo.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Esencia -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Esencia">
@@ -6422,6 +6842,18 @@ Intermedio: Visible en 5 kilómetros de radio / RM o RP 150.
 Avanzado: Visible en 15 kilómetros de radio / RM o RP 180.
 Arcano: Visible en 25 kilómetros de radio / RM o RP 220.
 Mantenimiento: 5 / 10 / 10 / 15</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Esquirlas_de_HIelo -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Esquirlas_de_HIelo">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Crioquinesis"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 2 
+Acción: Activa 
+Mantenimiento: No
+Descripción: El psíquico crea esquirlas de hielo, que puede proyectar como medio de ataque. Atacan en la TA de Frío o en la de Penetrantes, con un daño base que varía según el potencial alcanzado. Son perfectamente visibles, incluso para individuos que no son capaces de percibir matrices</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -6768,11 +7200,35 @@ Mantenimiento: 5 / 10 / 15 / 15</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Frío_Mayor -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Frío_Mayor">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Crioquinesis"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 3 
+Acción: Activa 
+Mantenimiento: Sí
+Descripción: Versión amplificada del poder de primer nivel de Crear frío, que provoca temperaturas mucho más extremas.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Fuego -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Fuego">
         <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Mágica"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La primera de las cuatro vías elementales menores tiene el control sobre las altas temperaturas. Sus conjuros crean calor, fuego y arrasan grandes cantidades de terreno. También reúne conjuros de sacrificio, que permiten consumir ciertos aspectos de un individuo para potenciar a cambio otros. Es una vía muy ofensiva. La vía opuesta a Fuego es Agua.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Fuego_Mayor -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Fuego_Mayor">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Piroquinesis"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 3 
+Acción: Activa 
+Mantenimiento: Sí
+Descripción: Versión amplificada del poder de primer nivel de Crear fuego, que permite crear temperaturas y llamas mucho mayores del modo que indique el grado de dificultad alcanzado.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -7711,6 +8167,18 @@ Mantenimiento: 10 / 10 / 15 / 15</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Imbuir -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Imbuir">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Incremento_Físico"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 3 
+Acción: Activa 
+Mantenimiento: Sí
+Descripción: Permite emplear las habilidades de esta disciplina sobre otros individuos. Los poderes que se imbuyen no pueden tener un efecto de dificultad superior al indicado.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Imbuir_Calma -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Imbuir_Calma">
@@ -7799,6 +8267,18 @@ Mantenimiento: 5 / 10 / 15 / 20 Diario</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Impacto_Telequinético -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Impacto_Telequinético">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Telequinesis"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 1 
+Acción: Activa 
+Mantenimiento: No
+Descripción: Proyecta un impacto invisible con potencia variable. Aunque su principal función es empujar, causa un daño equivalente al doble del bono de la Fuerza alcanzada, más el que el DJ considere que puede sufrir por el entorno.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Impacto_de_Agua -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Impacto_de_Agua">
@@ -7844,6 +8324,30 @@ Mantenimiento: 10 / 15 / 15 / 20</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Incrementar_Aguante -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Incrementar_Aguante">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Incremento_Físico"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 2 
+Acción: Pasiva 
+Mantenimiento: Sí
+Descripción: El psíquico refuerza la resistencia de su cuerpo controlando sus propias células. De este modo, se prepara para absorber daños y recibir impactos sin sufrir sus consecuencias. Este poder aumenta la RF del personaje en la cantidad que indique el efecto alcanzado.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Incrementar_Capacidad_de_Salto -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Incrementar_Capacidad_de_Salto">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Incremento_Físico"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 1 
+Acción: Activa 
+Mantenimiento: Sí
+Descripción: El psíquico puede saltar extraordinariamente, aumentando con este poder la potencia de su impulso. Suma cierta cantidad a su habilidad secundaria de Saltar y, en algunos casos, puede incluso alcanzar dificultades Inhumanas o de nivel Zen.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Incrementar_Debilidad -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Incrementar_Debilidad">
@@ -7866,10 +8370,82 @@ Mantenimiento: 5 / 10 / 15 / 15 Diario</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Incrementar_Desplazamiento -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Incrementar_Desplazamiento">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Incremento_Físico"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 1 
+Acción: Activa 
+Mantenimiento: Sí
+Descripción: El psíquico es capaz de trasladarse a una velocidad muy superior a la que normalmente desarrolla, aumentando su Tipo de movimiento. Si el desplazamiento se incrementa por encima de 10, la progresión de aumento se reduce a la mitad.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Incrementar_Fuerza -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Incrementar_Fuerza">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Incremento_Físico"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 1 
+Acción: Activa 
+Mantenimiento: Sí
+Descripción: Aumenta la característica de Fuerza del psíquico. La progresión de aumento se reduce a la mitad si el atributo incrementado alcanza un valor superior a 10; consecuentemente, necesita aumentar dos puntos para sumar sólo uno por encima de esta cantidad.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Incrementar_Habilidad -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Incrementar_Habilidad">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Incremento_Físico"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 1 
+Acción: Activa 
+Mantenimiento: Sí
+Descripción: Aumenta la Destreza o Agilidad del psíquico de un modo desproporcionado. Si se modifica la Agilidad, sólo incrementa el nivel de la característica, no el Tipo de movimiento del personaje (es decir, el personaje es mucho más ágil, pero su velocidad de desplazamiento no se incrementa). La progresión se reduce a la mitad si el atributo alcanza un valor superior a 10; por tanto, necesita aumentar dos puntos para sumar sólo uno por encima de 10.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Incrementar_el_Sentido_Acrobático -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Incrementar_el_Sentido_Acrobático">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Incremento_Físico"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 1 
+Acción: Activa 
+Mantenimiento: Sí
+Descripción: El psíquico puede realizar acrobacias y cabriolas realmente sorprendentes, casi sobrenaturales. Por tanto, suma cierta cantidad a su habilidad secundaria de Acrobacias y, en algunos casos, puede incluso alcanzar dificultades Inhumanas o de nivel Zen.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Incremento_Físico -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Incremento_Físico">
         <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Disciplina"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Incremento_Total -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Incremento_Total">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Incremento_Físico"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 3 
+Acción: Activa 
+Mantenimiento: Sí
+Descripción: El personaje puede incrementar a la vez todas las características de su cuerpo. Este poder otorga un bono a los cuatro atributos físicos (Fuerza, Destreza, Agilidad y Constitución), al igual que a la Percepción. Los efectos de este poder se acumulan a los de cualquier otra incrementación que el personaje mantenga activa. La progresión se reduce a la mitad en los atributos que alcancen un valor superior a 10.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Incremento_de_Percepción -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Incremento_de_Percepción">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Incremento_Físico"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 2 
+Acción: Activa 
+Mantenimiento: Sí
+Descripción: Incrementa la capacidad perceptiva del personaje. A términos de juego, suma puntos a la Percepción del psíquico. La progresión se reduce a la mitad si el atributo alcanza un valor superior a 10.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -7892,6 +8468,18 @@ Intermedio: +60 al turno.
 Avanzado: +90 al turno.
 Arcano: +120 al turno.
 Mantenimiento: 5 / 5 / 10 / 15</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Incremento_de_Reacción_Psíquica -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Incremento_de_Reacción_Psíquica">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Incremento_Físico"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 2 
+Acción: Activa 
+Mantenimiento: Sí
+Descripción: Aumentando sus sentidos y su velocidad de reacción, este poder permite al psíquico actuar antes que ninguna persona normal. Por ello, consigue un bonificador especial a su turno para el siguiente asalto.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -7962,6 +8550,18 @@ Mantenimiento: 25 / 30 / 40 / 50 Diario</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Inhumanidad_Psíquica -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Inhumanidad_Psíquica">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Incremento_Físico"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 1 
+Acción: Activa 
+Mantenimiento: Sí
+Descripción: El psíquico puede alcanzar la dificultad de Inhumano al realizar acciones físicas. Además, mejora todas sus habilidades secundarias del campo atlético aplicando un bonificador a sus tiradas.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Inmaterialidad -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Inmaterialidad">
@@ -7980,6 +8580,18 @@ Intermedio: RM 140 / Presencia máxima 120.
 Avanzado: RM 160 / Presencia máxima 160.
 Arcano: RM 200 / Presencia máxima 200.
 Mantenimiento: 15 / 20 / 25 / 30 Diario</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Inmolar -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Inmolar">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Piroquinesis"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 1 
+Acción: Activa 
+Mantenimiento: No
+Descripción: El psíquico provoca una explosión de fuego sobre una amplia zona, que causa un daño base variable. A todos los efectos, se trata de un ataque en la TA de Calor. No es posible seleccionar blancos en el interior del área, e incluso el propio psíquico puede ser afectado si no tiene cuidado cuando estalla. El ataque es perfectamente visible, incluso para individuos que no son capaces de percibir matrices, ya que habitualmente toma la forma de una bola de fuego.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -8028,6 +8640,18 @@ Mantenimiento: 5 / 10 / 10 / 15 Diario</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Inmunidad_Energía -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Inmunidad_Energía">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Energía"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 2 
+Acción: Pasiva 
+Mantenimiento: Sí
+Descripción: El psíquico, o la persona designada por este, se vuelve inmune al efecto de varias intensidades de un tipo de energía determinada. La inmunidad debe ser hacia una única clase, por lo que si el personaje decide, por ejemplo, no ser afectado por la electricidad, el frío y el fuego seguirán perjudicándole. En el caso de que reciba una agresión a la que es inmune, cada intensidad disminuye 5 puntos el daño base del ataque, y aumenta en +5 las Resistencias contra sus efectos.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Inmunidad_al_Frío -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Inmunidad_al_Frío">
@@ -8050,6 +8674,18 @@ Mantenimiento: 5 / 10 / 10 / 15 Diario</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Inmunidad_al_Fuego -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Inmunidad_al_Fuego">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Piroquinesis"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 2 
+Acción: Pasiva 
+Mantenimiento: Sí
+Descripción: Permite al psíquico, o al individuo designado por este, ser inmune al efecto de varias intensidades de calor, incluso si se trata de uno de carácter sobrenatural. En el caso de que se reciba un ataque basado en fuego, cada intensidad a la que es inmune disminuye 5 puntos el daño base del ataque, y aumenta en +5 las Resistencias contra sus efectos.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Inteligencia -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Inteligencia">
@@ -8063,6 +8699,18 @@ Mantenimiento: 5 / 10 / 10 / 15 Diario</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Inteligencia_Requerida">
         <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Magia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Intensificar_Sentimientos -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Intensificar_Sentimientos">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Sentiente"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 1 
+Acción: Activa 
+Mantenimiento: Sí
+Descripción:Intensifica el sentimiento o estado de ánimo principal del individuo en ese preciso momento. Ten en cuenta que este poder no es capaz de acrecentar una emoción que no exista previamente. Es posible, por ejemplo, hacer que una persona enfadada no sea capaz de contener su rabia, o que alguien triste se hunda en la depresión. Para resistirse hay que superar una RP, con derecho a una nueva tirada cada 5 asaltos si sospecha que está siendo objeto de este tipo de poder.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -8314,6 +8962,18 @@ Mantenimiento: 10 / 10 / 15 / 15</rdfs:comment>
 Acción: Activa 
 Mantenimiento: Sí
 Descripción: Permite al psíquico leer los pensamientos que cruzan por la mente de un sujeto en ese mismo momento, aunque no le es posible profundizar en sus recuerdos o sentimientos. Para resistirse a este poder, debe superarse una RP contra la cifra que indique la dificultad alcanzada. Es posible realizar una nueva Resistencia para librarse de la lectura cada 5 asaltos, siempre y cuando el afectado sea de algún modo consciente de que está siendo víctima de este poder. Mientras lea las intenciones de su adversario, el psíquico puede aplicar un bonificador de +30 a las acciones enfrentadas en su contra.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Leer_el_Pasado -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Leer_el_Pasado">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Telemetría_Psíquica"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 2 
+Acción: Activa 
+Mantenimiento: No
+Descripción: Permite sentir lo que ha ocurrido en el pasado con un objeto determinado o en un lugar concreto. Pueden percibirse absolutamente todos los sucesos acontecidos en el periodo de tiempo que alcance el poder.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -8792,6 +9452,18 @@ Mantenimiento: No</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Mantenimiento_Ígneo -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Mantenimiento_Ígneo">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Piroquinesis"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 2 
+Acción: Activa 
+Mantenimiento: Sí
+Descripción: Mantiene varias intensidades de fuego ardiendo sin que pueda apagarse. No existe ningún medio natural de extinguir un fuego mantenido de esa manera, incluso lanzando sobre él agua o arena. De hecho, ni siquiera necesita consumir ningún tipo de material para seguir ardiendo.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Marca_del_Miedo -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Marca_del_Miedo">
@@ -9042,6 +9714,18 @@ Mantenimiento: No</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Mitigar_Fuego_Piroquinesis -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Mitigar_Fuego_Piroquinesis">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Piroquinesis"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 1 
+Acción: Activo 
+Mantenimiento: No
+Descripción: Disminuye varias intensidades de un fuego ya existente. Si se usa sobre un ser basado en calor, recibirá 5 puntos de daño por cada intensidad rebajada si no supera una RF (los seres con acumulación, reciben 25 puntos). Ten en cuenta que si un fuego no desaparece completamente, puede recobrar su potencia en el siguiente asalto.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Moai_Thai -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Moai_Thai">
@@ -9111,6 +9795,18 @@ Mantenimiento: 10 / 20 / 30 / 40</rdfs:comment>
 Acción: Activa 
 Mantenimiento: No
 Descripción: Permite modificar los recuerdos de la mente de un sujeto, eliminándolos completamente o creando nuevos. Es necesario determinar exactamente qué es lo que se pretende crear o borrar. Puede modificarse una hora de recuerdos por cada punto por el que sujeto afectado no supere la RP requerida. Aunque no tiene mantenimiento, el personaje tendrá derecho a una nueva Resistencia contra la RP original del poder, si ve o hace algo que esté lo suficientemente arraigado a sus recuerdos originales como para hacerle recordar.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Modificar_Naturaleza -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Modificar_Naturaleza">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Energía"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 2 
+Acción: Activa 
+Mantenimiento: No
+Descripción: Este poder permite transformar varias intensidades de energía de un tipo a otro. Un psíquico puede, por ejemplo, convertir el fuego en hielo o en electricidad. Si dicha energía posee presencia propia, podrá evitar este efecto superando una RF.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -9564,6 +10260,18 @@ Mantenimiento: 10 / 20 / 25 / 30</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Nova -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Nova">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Piroquinesis"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 3 
+Acción: Activa 
+Mantenimiento: Sí
+Descripción: Esta disciplina permite al personaje consumir su propia energía vital para aumentar sus capacidades psíquicas. A términos de juego, puede intercambiar sus puntos de vida a cambio de conseguir un bono a su potencial. Cada punto que consuma, le permite aumentar dos su potencial psíquico durante ese asalto (en el caso de los seres con acumulación, se aplica a esta cantidad su Múltiplo de acumulación para determinar la cantidad de PV que tiene que invertir). La máxima cantidad de vida sacrificable por turno depende de la dificultad alcanzada, aunque naturalmente el personaje puede invertir menos PV si quiere. El daño sufrido se considera causado por fuego, y se regenera a la mitad de velocidad que las heridas convencionales, incluso mediante medios sobrenaturales y conjuros.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Objetos_Luminosos_Materiales -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Objetos_Luminosos_Materiales">
@@ -9959,6 +10667,54 @@ Mantenimiento: 5 / 15 / 20 / 25</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Percibir_Energía -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Percibir_Energía">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Energía"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 1 
+Acción: Activa 
+Mantenimiento: Sí
+Descripción: El psíquico percibe la energía que se encuentra a su alrededor. Detecta su intensidad y naturaleza, aunque no puede hacerlo si esta se halla oculta de algún modo. Este poder no requiere que el personaje utilice su Proyección Psíquica, sino que afecta automáticamente a todo lo que se encuentre dentro del área de acción.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Percibir_Residuos -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Percibir_Residuos">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Telemetría_Psíquica"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 1 
+Acción: Activa 
+Mantenimiento: Sí
+Descripción: El psíquico percibe residuos ambientales de sentimientos intensos emitidos mucho tiempo atrás. Las emociones deben de haber sido realmente fuertes para poder sentirlos, como una gran pasión o un miedo atroz.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Percibir_Sentimientos -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Percibir_Sentimientos">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Sentiente"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 1 
+Acción: Activa 
+Mantenimiento: Sí
+Descripción: Percibe lo que siente un individuo en ese mismo momento. Para resistirse a los efectos de este poder, se debe superar una RP contra la cifra que indique la dificultad alcanzada. El afectado tiene derecho a una nueva tirada cada 5 asaltos, pero sólo si sospecha que está siendo objeto de este tipo de poder.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Percibir_Temperatura -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Percibir_Temperatura">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Crioquinesis"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 1 
+Acción: Activa 
+Mantenimiento: Sí
+Descripción: Detecta cualquier variación en la temperatura ambiental dentro de un radio de acción, incluido el calor de un cuerpo vivo. Puede percibirse incluso a través de paredes u obstáculos, si estos no están basados en energía. Si el adversario oculta su Ki o no emite calor, esta habilidad es ineficaz. Este poder no requiere que el personaje utilice su Proyección Psíquica, sino que afecta automáticamente a cualquier individuo que esté dentro del área.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Perdición -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Perdición">
@@ -10174,6 +10930,18 @@ Intermedio: Cinco años.
 Avanzado: Cincuenta años / En caso de ser una predicción de algo que deba ocurrir en menos de un día, ésta será bastante exacta.
 Arcano: Un siglo / En caso de ser una predicción de algo que deba ocurrir en menos de años, ésta será bastante exacta.
 Mantenimiento: No</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Presa_Telequinética -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Presa_Telequinética">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Telequinesis"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 1 
+Acción: Activa 
+Mantenimiento: Sí
+Descripción: Permite utilizar la Proyección Psíquica del personaje para ejecutar una maniobra de Presa, sin aplicar ningún penalizador a su habilidad al realizarla. La característica empleada por el psíquico es indicada por el nivel de dificultad alcanzado. Existe la posibilidad de que el poder se incremente tanto, que permita apresar a varios individuos dentro de un área determinada. En dicho caso, el psíquico aplica un penalizador de –2 a la Fuerza de la Presa.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -10612,6 +11380,18 @@ Beneficio: 1</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Reestructuración_Atómica -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Reestructuración_Atómica">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Telequinesis"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 3 
+Acción: Activa 
+Mantenimiento: No
+Descripción: El psíquico puede reconstruir atómicamente cualquier material, orgánico o inorgánico, transformándolo en sustancia y forma en otro completamente distinto. Por poner un ejemplo, podría convertir a un ser vivo en una estatua de piedra, o la arena en monedas de oro. De todas formas, la capacidad de modelar y forjar está limitada por los conocimientos del personaje en los campos secundarios de Arte y Forja. Sin embargo, dado que puede modificar directamente el material como desee, la dificultad de cualquier creación será de dos niveles menos que el requerido. En lo que respecta a la remodelación de un material, podrá alterar la escala de calidad en más o menos 5 grados, con la única limitación de que no pueden crearse materiales de carácter místico, como malebolgia, iluminati o metal estelar. La masa máxima afectable por esta habilidad y la Resistencia de aquellos que no quieran verse afectados por ella, son delimitadas por el nivel de dificultad que se alcance.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Reflejar_Estados -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Reflejar_Estados">
@@ -10678,6 +11458,18 @@ Mantenimiento: 10 / 10 / 15 / 25 Diario</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Regeneración_Psíquica -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Regeneración_Psíquica">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Incremento_Físico"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 2 
+Acción: Activa 
+Mantenimiento: Sí
+Descripción: Controlando su físico a un nivel muy primario, el psíquico aumenta el ritmo de curación de su cuerpo. Este poder eleva su nivel de Regeneración, aunque no le permite alcanzar un nivel superior a 18.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Regresar_de_Entre_los_Muertos -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Regresar_de_Entre_los_Muertos">
@@ -10740,6 +11532,18 @@ Intermedio: 6 metros de radio.
 Avanzado: 12 metros de radio.
 Arcano: 25 metros de radio.
 Mantenimiento: 30 / 40 / 50 / 60</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Repulsión_Telequinesis -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Repulsión_Telequinesis">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Telequinesis"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 2 
+Acción: Activa 
+Mantenimiento: Sí
+Descripción: Crea una barrera que rechaza violentamente cualquier cuerpo físico con el que se ponga en contacto, o trate de atravesarla. Para saber si un individuo es capaz de pasar el campo o no, debe superar un control enfrentado de características, utilizando su Fuerza o su Agilidad contra el atributo que indique el efecto del poder. No es necesario utilizar la Proyección Psíquica para fijar a nadie; Repulsión funciona de manera automática sobre cualquier individuo u objeto que atraviese la barrera. En el momento en el que se crea el poder, no puede utilizarse directamente sobre blancos concretos. La longitud está delimitada por la dificultad del poder alcanzado, aunque el psíquico podrá darle la forma que desee, incluso rodeando completamente su cuerpo.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -11998,6 +12802,42 @@ Mantenimiento: No</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Telequinesis_Mayor -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Telequinesis_Mayor">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Telequinesis"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 3 
+Acción: Activa 
+Mantenimiento: Sí
+Descripción: Versión amplificada de la telequinesis simple, que permite mover una masa de peso muy superior.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Telequinesis_Menor -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Telequinesis_Menor">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Telequinesis"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 1 
+Acción: Activa 
+Mantenimiento: Sí
+Descripción: El psíquico mueve a distancia una masa inorgánica. El peso y la velocidad con la que lo hace, dependen de la dificultad que se alcance con el poder. Si se utiliza para atacar a distancia lanzando objetos, el personaje debe reducir a la mitad su Proyección Psíquica, ya que el control que ofrece este poder no está específicamente preparado para ello. Si un luchador con la Tabla de Proyección Psíquica lo domina, puede emplearlo para controlar un arma a distancia y atacar utilizando su Proyección Psíquica en lugar de hacerlo físicamente (es decir, sólo si ha desarrollado por igual su habilidad de ataque como su Proyección Psíquica).</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Telequinesis_Orgánica -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Telequinesis_Orgánica">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Telequinesis"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 2 
+Acción: Activa 
+Mantenimiento: Sí
+Descripción: Es posible mover una masa material, incluso si esta es de carácter orgánico, siempre que el individuo afectado no supere la RF requerida. La velocidad depende de la dificultad alcanzada.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Telequinesis_Superior -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Telequinesis_Superior">
@@ -12348,6 +13188,18 @@ Mantenimiento: No</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Trasladar_los_Sentimientos -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Trasladar_los_Sentimientos">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Sentiente"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 2 
+Acción: Activa 
+Mantenimiento: Sí
+Descripción: Permite al psíquico proyectar uno de sus sentidos hasta una distancia máxima de un kilómetro. Una vez en dicho lugar, podrá utilizar sus habilidades secundarias perceptivas como si estuviera allí. La presencia del psíquico sólo podrá ser detectada por individuos que sean capaces de sentir matrices psíquicas. No es posible atravesar barreras de energía o lugares protegidos mágicamente.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Tsunami -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tsunami">
@@ -12388,6 +13240,18 @@ Intermedio: Conjuros de hasta 200 puntos de Zeon.
 Avanzado: Conjuros de hasta 300 puntos de Zeon.
 Arcano: Conjuros de hasta 400 puntos de Zeon.
 Mantenimiento: 20 / 30 / 40 / 45 Diario</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Un_Instante_Eterno -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Un_Instante_Eterno">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Crioquinesis"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 3 
+Acción: Activa 
+Mantenimiento: Sí
+Descripción: Mediante la manipulación del frío, el psíquico crea a su alrededor una zona de baja temperatura dentro de la cual, cualquier cuerpo en movimiento salvo el suyo propio, es inmovilizado si no pasa una RF. Si la tirada no es superada por una diferencia de 40, el cuerpo afectado queda completamente congelado y se somete a una Paralización completa. Si la diferencia es menor, el afectado recibirá sólo un penalizador a toda acción, equivalente al nivel de fracaso. Estos negativos duran mientras el poder se mantenga y, mientras el personaje congelado permanezca dentro del área, no tiene derecho a repetir la Resistencia. En el caso de que consiga superarla, debe repetir el control cada 5 asaltos que permanezca en el interior de la zona. Este poder no requiere que el personaje utilice su Proyección Psíquica, sino que afecta automáticamente a cualquier individuo que esté dentro de la zona.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -12786,6 +13650,18 @@ Mantenimiento: 10 / 15 / 15 / 25 Diario</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Ver_en_la_Historia -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ver_en_la_Historia">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Telemetría_Psíquica"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 3 
+Acción: Activa 
+Mantenimiento: Sí
+Descripción: Permite proyectar los sentidos hacia el pasado, pudiendo presenciar, como si se encontrase presente, cualquier suceso que ocurriera en el lugar en el que esté. Puede retrocederse tantos años como indique el potencial.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Ver_en_la_Oscuridad -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ver_en_la_Oscuridad">
@@ -12947,6 +13823,18 @@ Intermedio: Tipo de Vuelo 8.
 Avanzado: Tipo de Vuelo 12.
 Arcano: Tipo de Vuelo 15.
 Mantenimiento: 15 / 20 / 25 / 30</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Vuelo_Telequinético -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vuelo_Telequinético">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Telequinesis"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 2 
+Acción: Activa 
+Mantenimiento: Sí
+Descripción: El psíquico puede moverse libremente por el aire, con el Tipo de vuelo que le indique el poder alcanzado.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -13753,6 +14641,18 @@ Mantenimiento: 35 / 50 / 80 / 150 Diario</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Área_Sentiente -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Área_Sentiente">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Sentiente"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 3 
+Acción: Activa 
+Mantenimiento: Sí
+Descripción: Funciona igual que el poder con el mismo nombre de Telepatía, pero permitiendo usar en área los poderes sentientes. De este modo, cualquier habilidad psíquica que se ejecute mientras se mantiene activa el Área, afectará a cualquier individuo que se encuentre dentro del radio indicado.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Área_Telepática -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Área_Telepática">
@@ -14066,7 +14966,7 @@ es obligatorio hacerlo. Cualquier ventaja o desventaja, salvo que se diga expres
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Las habilidades mentales se dividen en varios niveles, y cada uno de ellos afecta a una esfera distinta con poderes completamente diferentes del resto. A estas esferas las llamaremos disciplinas psíquicas. Cada disciplina psíquica tiene un número desigual de poderes, divididos en tres niveles. En algunas ocasiones, una disciplina en concreto tiene algún tipo de modificador que depende de la situación en la que se usen sus poderes. Por ejemplo, es mucho más fácil utilizar un poder telepático sobre un sujeto si se esta en contacto físico con él. Si una disciplina en concreto tiene algún modificador,
 este afecta a todos sus poderes.</rdfs:comment>
     </rdf:Description>
-    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Energía_Psíquica">
+    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Energía">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Esta disciplina permite al psíquico usar sus poderes para generar energía pura, e influir en menor grado en el calor, el frio y la electricidad. La matriz psíquica se materializa, afectando físicamente al mundo material de muy diversos modos. No tiene ningún modificador.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Equipamiento">
