@@ -182,6 +182,14 @@
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Celéritas -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Celéritas">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_de_Tecnicas_de_Dominio"/>
+    </owl:Class>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Clase_Armadura -->
 
     <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Clase_Armadura">
@@ -282,6 +290,14 @@
 
     <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Dureza">
         <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Armadura"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#El_Dragón -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#El_Dragón">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_de_Tecnicas_de_Dominio"/>
     </owl:Class>
     
 
@@ -442,6 +458,14 @@
 
     <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Vigor">
         <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Secundaria"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Ignis -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ignis">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_de_Tecnicas_de_Dominio"/>
     </owl:Class>
     
 
@@ -742,17 +766,9 @@
     
 
 
-    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Tecnicas_Dominio -->
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_de_Tecnicas_de_Dominio -->
 
-    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Tecnicas_Dominio">
-        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ki"/>
-    </owl:Class>
-    
-
-
-    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Tecnica_Dominio -->
-
-    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tecnica_Dominio">
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_de_Tecnicas_de_Dominio">
         <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ki"/>
     </owl:Class>
     
@@ -1560,6 +1576,18 @@ Descripción: Crea una armadura de fuerza sobre el psíquico o el sujeto a quien
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Armadura_de_Energía -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Armadura_de_Energía">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Ki"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Permite al personaje emplear su aura como armadura espiritual contra efectos esotéricos y ataques basados en energía pura. A todos los efectos, concede una TA 2 natural contra energía. Aunque cuenta como una armadura, no se aplican penalizadores al turno por emplear capas de protección adicionales.
+
+Requisitos: Extrusión de presencia.
+Conocimiento marcial: 10</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Armadura_de_Luz -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Armadura_de_Luz">
@@ -1953,6 +1981,18 @@ Intermedio: +10 grados / 5 kilómetros de radio.
 Avanzado: +20 grados / 10 kilómetros de radio.
 Arcano: +30 grados / 15 kilómetros de radio.
 Mantenimiento: 15 / 40 / 50 / 60 Diario</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Aumento_de_Características -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Aumento_de_Características">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Ki"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Usando su energía interna, un individuo es capaz de aumentar sus atributos físicos hasta tres grados por encima de su valor original. Debe invertir tantos puntos de Ki como la cifra que vaya a alcanzar con la característica, por lo que cuanto más la incremente, mayor será el coste. El gasto debe ser del atributo que se pretende subir. Posteriormente, el personaje pierde un punto de Ki por asalto para mantener activa esta habilidad.
+
+Requisitos: Uso de la energía necesaria.
+Coste: 20 CM</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -2606,6 +2646,14 @@ Descripción: Este poder carga un objeto o lugar determinado con un fuerte senti
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Categoría_Warlock">
         <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Categoría"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Un warlock es un mago guerrero que desarrolla tanto sus habilidades marciales como las místicas. Igual que los hechiceros, dominan la habilidad sobrenatural más pura de todas, la capacidad de realizar conjuros con los que modificar la propia realidad. Aunque puede centrarse principalmente sobre un solo campo, un warlock es perfectamente capaz de convertirse en un maestro que controle por igual el uso de las armas en combate y de las artes sobrenaturales. Sin embargo, haciéndolo, pueden dejar desatendidas otras habilidades importantes.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Celéritas -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Celéritas">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_de_Tecnicas_de_Dominio"/>
     </owl:NamedIndividual>
     
 
@@ -3451,6 +3499,18 @@ Intermedio: 25 kilómetros.
 Avanzado: 100 kilómetros.
 Arcano: 1.000 kilómetros.
 Mantenimiento: 50 / 60 / 80 / 100 Diario</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Control_del_Ki -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Control_del_Ki">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Ki"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Esta habilidad otorga un control absoluto de la energía interna. El personaje es completamente consciente de su poder anímico y puede acumular su Ki. Una vez que la tiene, puede utilizar Técnicas de Dominio.
+
+Requisitos: Uso del Ki.
+Conocimiento marcial: 30</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -4489,6 +4549,18 @@ Mantenimiento: No</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Curación_por_Ki -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Curación_por_Ki">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Ki"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Permite curar dos puntos de vida por cada uno de Ki genérico que se gaste. El personaje puede sanarse a sí mismo o a cualquier otro individuo con el que esté en contacto. Esta habilidad no puede reparar completamente el daño, por lo que sólo permite recuperar la mitad del que se ha sufrido.
+
+Requisitos: Transmisión del Ki.
+Conocimiento marcial: 10</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Cúpula_de_Destrucción -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Cúpula_de_Destrucción">
@@ -5118,6 +5190,18 @@ Mantenimiento: No</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Destrucción_por_Ki -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Destrucción_por_Ki">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Ki"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Con esta habilidad, un individuo puede proyectar su energía física para destruir algo que se encuentre en contacto con él. Para emplearla, debe gastar un punto de Ki genérico, con lo que provoca que el cuerpo afectado deba superar un control de RF contra la presencia base del personaje que usa la Destrucción. Si se utiliza contra un ser vivo, causa un daño equivalente al nivel de fracaso de la Resistencia. Si se trata de un objeto inorgánico, si no la supera por más de 40 puntos, queda destruido inmediatamente o baja un grado de calidad. Cada punto de Ki adicional que se invierta en la habilidad, suma 5 puntos a la Resistencia a superar, hasta un máximo del doble de la presencia de quien la desencadena. Un luchador puede utilizar su habilidad de ataque para tratar de alcanzar físicamente a su enemigo. Naturalmente, esta capacidad puede dañar seres a los que sólo afecta la energía. Dado que Destrucción por Ki se considera un ataque, no puede mantenerse. En cada asalto que se desee utilizar, deberán invertirse de nuevo puntos de Ki.
+
+Requisitos: Extrusión de presencia.
+Coste: 20 CM</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Destruir_Capacidades -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Destruir_Capacidades">
@@ -5424,6 +5508,18 @@ Mantenimiento: 5 / 10 / 10 / 15</rdfs:comment>
 Acción: Activa 
 Mantenimiento: Sí
 Descripción: Dentro del radio de acción de este poder, el psíquico puede detectar cualquier cuerpo en movimiento que no supere la RF requerida. Percibe la velocidad, el tamaño y la dirección que lleva el objeto, pero no distingue su forma. Esta habilidad únicamente funciona contra formas físicas materiales, por lo que las cosas sin sustancia no son detectadas. Este poder no requiere que el personaje utilice su Proyección Psíquica, sino que afecta automáticamente a cualquier individuo que esté dentro del área de acción. La ocultación del Ki funciona contra esta habilidad, otorgando un bono a la RF.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Detección_del_Ki -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Detección_del_Ki">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Ki"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El personaje es capaz de detectar las energías de los seres que se encuentren a su alrededor. De este modo es consciente de que hay algo que desprende energía cerca, aunque no puede determinar la forma, el tamaño o la intensidad de la fuente. La Detección del Ki penetra sin ningún problema a través de objetos sólidos y espacios cerrados, pero no le es posible traspasar lugares sellados con energía. Esta capacidad se considera a todos los efectos como una habilidad secundaria especial. Se calcula sacando la media entre el CM total del personaje y su habilidad en Advertir.
+
+Requisitos: Control del Ki.
+Conocimiento marcial: 20</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -5970,6 +6066,43 @@ Bono: +20 a la habilidad de ataque sin armas.</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#El_Aliento_del_Dragón -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#El_Aliento_del_Dragón">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#El_Dragón"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El último y más grande de los poderes del dragón es su aliento. Esta Técnica desencadena una potente descarga de pura energía, que avanza desde el cuerpo del luchador hasta una distancia máxima de un kilómetro, donde estalla destruyéndolo todo en cien metros de radio. El aliento del dragón no utiliza el daño del arma del personaje, sino que emplea como base el doble de su presencia más el bono de Poder, cantidad que después se debe multiplicar por dos. El aliento del dragón es una técnica predeterminada, por lo que quien pretenda usarla, debe declarar de antemano su intención.
+
+CM requerido: 80 
+Nivel: 3
+DES 10
+CON 10
+AGI 10
+POD 6
+FUE 15
+Efectos: Ataque a distancia: un kilómetro, Ataque en área: 100 metros de radio, Capaz de dañar energía, x2 al daño.
+Desventaja: Predeterminación</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#El_Colmillo -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#El_Colmillo">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#El_Dragón"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El comillo del dragón es preciso y afilado, capaz de atravesar cualquier barrera o protección. Este ataque disminuye en seis puntos el tipo de armadura del defensor, al mismo tiempo que aumenta la habilidad ofensiva y reduce los penalizadores de su usuario al realizar golpes apuntados.
+
+CM requerido: 45 
+Nivel: 2
+DES 5
+CON 8
+AGI 6
+FUE 3
+Efectos: -6 a la TA defensora, -50 a los golpes apuntados, +50 a la habilidad
+de ataque.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#El_Despertar -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#El_Despertar">
@@ -6036,6 +6169,31 @@ Mantenimiento: No</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#El_Dragón -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#El_Dragón">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_de_Tecnicas_de_Dominio"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Eld -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Eld">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ignis"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Esta aterradora Técnica tiene efectos devastadores, tanto para quien la recibe como para aquel que la ejecuta. Para emplearla, el personaje sacrifica una parte de su energía vital, quedando malherido en el proceso. Además de aumentar su habilidad de ataque, incrementa el daño base en una cantidad equivalente al doble de los puntos de vida que gaste al desencadenarla. Eld requiere que el luchador mantenga activa la Técnica de primer nivel Feuer.
+
+CM requerido: 60 
+Nivel: 3
+VOL 19
+DES 10
+FUE 10
+Efectos: +150 al ataque, Sacrificio vital doble.
+Requisitos: Mantener activo Feuer</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Electrificar -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Electrificar">
@@ -6066,6 +6224,42 @@ Mantenimiento: 10 / 15 / 20 / 25 Diario</rdfs:comment>
 Acción: Activa 
 Mantenimiento: No
 Descripción: Usando la energía de su matriz, el personaje puede descargar el desgaste físico de su cuerpo, restaurando algunos de sus puntos de Cansancio perdidos. Sin embargo, este poder no permite eliminar el cansancio que haya adquirido a causa de la fatiga psíquica.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Eliminación_de_Necesidades -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Eliminación_de_Necesidades">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Ki"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El sujeto que desarrolle esta habilidad ha alcanzado la capacidad de eliminar sus necesidades físicas, por lo que sólo necesita comer, beber o dormir una décima parte de lo que lo requiere una persona normal.
+
+Requisitos: Uso de la energía necesaria.
+Coste: 10 CM</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Eliminación_de_Penalizadores -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Eliminación_de_Penalizadores">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Ki"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El personaje disminuye a la mitad los penalizadores que sufra a causa del cansancio o por críticos. Esta habilidad no tiene efectos si los negativos son producidos por amputaciones u otros daños similares, ni tampoco ante aquellos que sean provocados por medios mágicos o psíquicos.
+
+Requisitos: Uso de la energía necesaria.
+Coste: 20 CM</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Eliminación_de_Peso -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Eliminación_de_Peso">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Ki"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mediante el control de su energía, un personaje puede afectar su masa corporal e ignorar parcialmente los efectos de la gravedad. Usando esta habilidad, simula que temporalmente elimina parte de su peso, lo que le permite realiza acciones virtualmente imposibles, como correr por las paredes o incluso por encima del agua, por lo que Durante un asalto completo, el personaje puede correr por cualquier tipo de superficie hasta el máximo de su desplazamiento. Si, por ejemplo, es capaz de correr 22 metros por asalto trata de cruzar un río corriendo con esta habilidad, podrá pasar los 22 primeros metros por encima del agua, pero acabará hundiéndose si con ello no ha conseguido cruzarlo completamente. Invirtiendo un punto de Ki genérico en cada asalto, puede prolongar los efectos de esta habilidad. Es importante puntualizar que en realidad su peso sigue siendo el mismo a todos los demás efectos, como el viento, los golpes...
+
+Requisitos: Uso del Ki.
+Conocimiento marcial: 10</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -6297,6 +6491,18 @@ Bono: +20 a la habilidad de esquiva y parada sin armas.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Equipamiento">
         <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Erudición -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Erudición">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Ki"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La Erudición permite a quien realice una detección determinar la potencia y la forma de las energías que percibe. Utilizando Erudición, es posible descubrir si alguien está concentrando Ki o si un adversario es especialmente fuerte. También permite reconocer el tipo de energía de un individuo en concreto, si se le busca específicamente. Podría, por ejemplo, saber en qué celda se encuentra uno de sus compañeros sin la necesidad de abrir la puerta.
+
+Requisitos: Detección del Ki.
+Conocimiento marcial: 10</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -6902,6 +7108,38 @@ Mantenimiento: 15 / 20 / 25 / 30</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Excisum_Aeris -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Excisum_Aeris">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Celéritas"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Esta Técnica permite al personaje hacer estallar todo su Ki en un momento, proyectando un golpe a tal velocidad que el mismo aire se deforma y avanza hasta impactar con su enemigo. Este ataque utiliza el daño base del arma empleada por su ejecutor.
+
+CM requerido: 25 
+Nivel: 1
+AGI 4
+DES 4
+POD 2
+Efectos: Ataque a distancia: 50 metros, +50 al turno.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Excisum_Magister -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Excisum_Magister">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Celéritas"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El luchador concentra toda su energía para ejecutar un solo movimiento; un ataque a tal velocidad que atraviesa a su antagonista antes de que sus heridas empiecen a sangrar. Esta técnica incrementa tanto su turno base como su habilidad ofensiva.
+
+CM requerido: 45 
+Nivel: 2
+AGI 8
+DES 8
+POD 5
+Efectos: +75 a la habilidad de ataque, +125 al turno.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Exhausto -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Exhausto">
@@ -6933,6 +7171,18 @@ Intermedio: +100 PD / hasta 100 PD opcionales en desventajas.
 Avanzado: +200 PD / hasta 200 PD opcionales en desventajas.
 Arcano: +300 PD / hasta 200 PD opcionales en desventajas.
 Mantenimiento: No</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Extensión_del_Aura_al_Arma -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Extensión_del_Aura_al_Arma">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Ki"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Como su nombre indica, permite desplegar energía hasta cualquier artefacto empuñado, como una extensión del propio individuo. El personaje canaliza su esencia a través del arma, por lo que esta puede usar sus Resistencias en lugar de las del objeto. Esta habilidad permite extender los poderes que otorga “extrusión de presencia” al arma esgrimida, pudiendo dañar energía como si se tratase de un artefacto místico. Estos objetos también sirven para detener ataques sobrenaturales y efectos similares. Como consecuencia, al extender el aura sobre un arma aumenta 10 puntos el daño base que esta produce, añade 10 puntos a su Resistencia y 5 a su rotura. Esta última habilidad también puede extenderse a la armadura. Si dos individuos combaten usando armas con energía, el choque de sus filos causará destellos visibles por cualquiera.
+
+Requisitos: Extrusión de presencia.
+Conocimiento marcial: 10</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -6978,6 +7228,30 @@ Beneficio: 1</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Extrusión_de_Presencia -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Extrusión_de_Presencia">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Ki"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Permite concentrar el Ki alrededor de uno mismo, como un aura invisible. De este modo, es capaz de tocar físicamente energía pura y elementos intangibles, como fuego, seres espectrales o incluso la magia. Cuando luche con su cuerpo, el personaje puede dañar a seres que sólo sean afectados por ataques sobrenaturales, hasta un valor equivalente al doble de su presencia. Es decir, alguien con presencia 50 sería capaz de dañar a criaturas como si empleara un arma mística de 100. Esta habilidad también permite defenderse de efectos sobrenaturales con su habilidad de parada, deshilachando en el aire las fibras mágicas o incluso partiendo una bola de fuego en dos.
+
+Requisitos: Uso del Ki.
+Conocimiento marcial: 10</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Falsa_Muerte -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Falsa_Muerte">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Ki"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Capacita al personaje para entrar en un estado de coma, muy parecido a la muerte. Mientras permanezca en él no podrá moverse, pero será consciente de cualquier acontecimiento que ocurra a su alrededor. Quien examine el cuerpo pensará que está realmente muerto, ya que no respira, ni le late el corazón o desprende algún tipo de energía física. Para descubrir que no es un difunto, debe superarse un control contra una dificultad de Imposible en la habilidad Medicina. Es necesario un turno completo para recuperar el control del cuerpo al finalizar el estado de Falsa muerte, durante el cual, aunque seguirá sin moverse, sus funciones físicas volverán a la normalidad.
+
+Requisitos: Ocultación del Ki.
+Coste: 10 CM</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Falsear_Detección -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Falsear_Detección">
@@ -6996,6 +7270,22 @@ Intermedio: RM 140 / 50 metros de radio.
 Avanzado: RM 180 / 250 metros de radio.
 Arcano: RM 220 / 500 metros de radio.
 Mantenimiento: 15 / 20 / 25 / 30 Diario</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Feuer -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Feuer">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ignis"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Concentrando el Ki en su arma, el luchador es capaz de rodearla completamente con una potente aura de fuego, con lo que aumenta 25 puntos su daño base y le permite atacar en la TA de Calor como crítico primario. Feuer puede mantenerse invirtiendo un punto de Ki de Voluntad y otro de Poder, en cada asalto. Esta Técnica es, además, clave para realizar posteriormente otros ataques de mayor poder.
+
+CM requerido: 20 
+Nivel: 1
+VOL 5 Mant 1
+POD 1
+FUE 3 Mant 1
+Efectos: +25 al daño, Ataque elemental: Calor, Técnica mantenida.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -7478,6 +7768,14 @@ Mantenimiento: No</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Ki -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Ki">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ki"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Llevar_Armadura -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Llevar_Armadura">
@@ -7690,6 +7988,24 @@ Mantenimiento: 5 / 20 / 25 / 30</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Hombre">
         <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Sexo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Horecka -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Horecka">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ignis"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Esta Técnica se ejecuta introduciendo aún más energía en el interior del arma, lo que desencadena un verdadero infierno que engulle todo lo que hay en un área de 50 metros de radio alrededor del personaje, en una inmensa explosión. El fuego es tan intenso que dobla el daño base que de por sí produce el arma. Horecka requiere que el luchador mantenga activa la Técnica de primer nivel Feuer.
+
+CM requerido: 40 
+Nivel: 2
+VOL 10
+DES 6
+POD 6
+FUE 2
+Efectos: x2 al daño, Ataque en área: 50 metros de radio.
+Requisitos: Mantener activo Feuer</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -7944,6 +8260,14 @@ Efecto: La invocación de El Hierofante invertido realiza una descarga de energ�
 Duración: Un asalto por cada 10 puntos que supere la dificultad requerida.
 
 Apariencia habitual: El Hierofante se manifiesta junto al invocador en la forma de un hechicero oscuro o una bestia macabra. Hace los gestos como si realizara un conjuro, o en forma bestial lanza su aliento sobrenatural.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Ignis -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ignis">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_de_Tecnicas_de_Dominio"/>
     </owl:NamedIndividual>
     
 
@@ -8550,6 +8874,18 @@ Mantenimiento: 25 / 30 / 40 / 50 Diario</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Inhumanidad_Ki -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Inhumanidad_Ki">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Ki"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Esta habilidad permite al personaje realizar acciones físicas imposibles para otros seres humanos. Con ella, es posible alcanzar el nivel Inhumano en la Tabla de dificultades y sacarle el máximo provecho a las capacidades que le permitan sus características.
+
+Requisitos: Uso del Ki.
+Coste: 30 CM</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Inhumanidad_Psíquica -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Inhumanidad_Psíquica">
@@ -8875,6 +9211,24 @@ Mantenimiento: 40 / 45 / 45 / 50 Diario</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#La_Cola -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#La_Cola">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#El_Dragón"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Un simple movimiento de la cola del dragón puede hacer volar ejércitos enteros. Esta Técnica permite al luchador realizar un potente ataque en un área de 25 metros de radio, empleando el daño base del arma que utilice e incrementando su habilidad ofensiva. Cualquier individuo que reciba el impacto deberá realizar, además, un control enfrentado contra una característica equivalente a Fuerza 16, o saldrá despedido por su descomunal potencia.
+
+CM requerido: 55 
+Nivel: 2
+DES 6
+CON 8
+AGI 6
+FUE 2
+Efectos: +40 a la habilidad de ataque, Ataque en área: 25 metros de radio,
+Proyección de Fuerza 16.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#La_Falsa_Realidad -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#La_Falsa_Realidad">
@@ -8893,6 +9247,39 @@ Intermedio: RM 180.
 Avanzado: RM 220.
 Arcano: RM 240.
 Mantenimiento: No</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Las_Escamas -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Las_Escamas">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#El_Dragón"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El dragón está preparado para enfrentarse a multitud de enemigos, por lo que puede escudarse de varios impactos sin sufrir penalizadores. Esta técnica permite al usuario defenderse de siete ataques sin menoscabar su habilidad.
+
+CM requerido: 20 
+Nivel: 1
+DES 3
+CON 3
+AGI 1
+Efectos: +6 defensas adicionales.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Las_Garras -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Las_Garras">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#El_Dragón"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pocas cosas son tan letales como las garras del dragón. Al ejecutar esta Técnica, el personaje realiza dos ataques con un bono de 40 puntos a su daño base en ambos.
+
+CM requerido: 30 
+Nivel: 1
+DES 4
+CON 4
+AGI 4
+FUE 2
+Efectos: +1 ataque adicional, +40 al daño.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -8950,6 +9337,23 @@ Intermedio: Disponen de una Fuerza base 12 para los controles.
 Avanzado: Disponen de una Fuerza base 15 para los controles y tienen Entereza 30.
 Arcano: Disponen de una Fuerza base 18 para los controles y tienen Entereza 35.
 Mantenimiento: 10 / 10 / 15 / 15</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Le_Feu -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Le_Feu">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ignis"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Esta Técnica desencadena una potente bola de fuego, que avanza hasta impactar con un objetivo que no se encuentre a más de 20 metros. Le Feu no utiliza el daño del arma del personaje, sino que emplea como base el doble de su presencia más el bono de Poder.
+
+CM requerido: 20 
+Nivel: 1
+VOL 5
+DES 3
+POD 3
+FUE 1
+Efectos: +40 al ataque, Ataque a distancia: 20 metros.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -9066,6 +9470,18 @@ Intermedio: Nivel máximo del espíritu 2 / Suma total de presencias 160.
 Avanzado: Nivel máximo del espíritu 4 / Suma total de presencias 220.
 Arcano: Nivel máximo del espíritu 6 / Suma total de presencias 280.
 Mantenimiento: 20 / 25 / 30 / 35 Diario</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Levitación -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Levitación">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Ki"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Permite usar la energía física para elevarse por el aire y moverse libremente. Cada nivel de Tipo de vuelo que adquiera le cuesta al personaje un punto de Ki genérico. El máximo Tipo de vuelo que puede alcanzar es una cuarta parte de su Tipo de movimiento, redondeado hacia arriba. Para mantenerse en el aire, el personaje debe de invertir un punto de Ki adicional por minuto.
+
+Requisitos: Eliminación de peso.
+Conocimiento marcial: 20</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -9383,6 +9799,22 @@ Intermedio: 100 puntos de Zeon por asalto.
 Avanzado: 150 puntos de Zeon por asalto.
 Arcano: 200 puntos de Zeon por asalto.
 Mantenimiento: 10 / 10 / 15 / 15 Diario</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Magnus_Exactor -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Magnus_Exactor">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Celéritas"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Como una tormenta de golpes, el personaje empieza a moverse a toda velocidad, destrozando cualquier cosa que encuentre a su paso en diez metros de radio. Aparentemente, quienes sufren este ataque sólo pueden ver cómo alguien aparece delante de ellos y arremete en su contra, para después desaparecer. Emplea el daño base del arma que utiliza el personaje que lo ejecuta.
+
+CM requerido: 45 
+Nivel: 2
+AGI 7
+DES 7
+POD 3
+Efectos: Ataque en área: 10 metros de radio, +150 al turno.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -9899,6 +10331,18 @@ Mantenimiento: 5 / 10 / 10 / 15</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Movimiento_de_Objetos -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Movimiento_de_Objetos">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Ki"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Con esta habilidad, un sujeto es capaz de exteriorizar su energía y emplearla como una prolongación de su propio cuerpo, con la que tocar y mover cosas a distancia. El objeto debe de encontrarse a la vista o el personaje ha de tener una idea muy concreta de dónde se encuentra. El uso de esta habilidad cuesta un punto de Ki cada asalto por cada 5 kilos de peso.
+
+Requisitos: Levitación.
+Conocimiento marcial: 10</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Mudo -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Mudo">
@@ -10382,6 +10826,18 @@ Intermedio: –180 a Valoración Mágica.
 Avanzado: –240 a Valoración Mágica.
 Arcano: –320 a Valoración Mágica.
 Mantenimiento: 5 / 20 / 25 / 30 Diario</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Ocultación_del_Ki -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ocultación_del_Ki">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Ki"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El personaje oculta los rastros de su energía, haciéndola invisible a las habilidades Detección y Erudición del Ki. Técnicamente, provoca un vacío espiritual que dificulta su localización. Al igual que Detección del Ki, se calcula como una habilidad secundaria especial: se saca la media entre el CM total y su habilidad en Ocultarse. Cuando alguien con Detección del Ki trata de localizar a un personaje que esconde su energía, ambos deberán hacer un control enfrentado: la cantidad obtenida en la ocultación se resta del valor final de la detección. Si un individuo acumula Ki, resta 10 a esta habilidad por cada punto que esté empleando. Otra posible utilidad de la Ocultación del Ki es la de falsear la percepción de la energía que proporciona Erudición. Ganando el control enfrentado, un individuo puede enviar información errónea, simulando lo que no es. Esta capacidad también proporciona cierta ventaja contra las detecciones sobrenaturales. Si un personaje está escondiendo su Ki y alguien trata de localizarlo mediante un conjuro o una habilidad psíquica, puede sumar la mitad del valor de su Ocultación del Ki a la Resistencia que deba superar.
+
+Requisitos: Uso de la energía necesaria.
+Coste: 10 CM</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -11295,6 +11751,18 @@ Intermedio: Presencia máxima 120.
 Avanzado: Presencia máxima 180.
 Arcano: Presencia máxima 240.
 Mantenimiento: No</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Recuperación -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Recuperación">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Ki"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El personaje puede emplear su Ki para recuperarse del agotamiento físico. El índice de recuperación es de un punto de Cansancio por cada 5 de Ki genéricos que se gasten. Sólo puede recobrarse un punto por turno.
+
+Requisitos: Eliminación de penalizadores.
+Coste: 20 CM</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -12274,6 +12742,22 @@ Beneficio: 1</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Summun -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Summun">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Celéritas"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La Técnica arcana de Celéritas es un espectáculo sobrecogedor. El personaje extiende sus brazos y desaparece momentáneamente. En ese instante, comienza a manifestarse alrededor de su adversario, haciendo continuas pasadas de un lado a otro de su cuerpo y destrozándolo completamente en el proceso. Esta Técnica permite al personaje ejecutar nueve ataques en el mismo asalto, el primero de los cuales suele ir acompañado de sorpresa a causa de su velocidad de reacción.
+
+CM requerido: 85 
+Nivel: 3
+AGI 15
+DES 17
+POD 8
+Efectos: +8 ataques adicionales limitados, +175 al turno.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Superar_la_Muerte -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Superar_la_Muerte">
@@ -13092,6 +13576,18 @@ Mantenimiento: No</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Transmisión_del_Ki -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Transmisión_del_Ki">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Ki"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Esta habilidad permite a un personaje transmitir o absorber Ki de otros sujetos. Si dos individuos con esta habilidad se encuentran, pueden intercambiar libremente puntos. Naturalmente, el Ki se intercambia entre las mismas características de las que provienen. El índice de la transmisión por asalto es la acumulación de los personajes.
+
+Requisitos: Uso del Ki.
+Conocimiento marcial: 10</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Transmisión_por_Luz -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Transmisión_por_Luz">
@@ -13222,6 +13718,19 @@ Mantenimiento: No</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Técnica_de_Dominio -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Técnica_de_Dominio">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ki"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Los personajes que controlen su energía interna tienen a su disposición algo más que las habilidades del Ki. Invirtiendo puntos de Conocimiento Marcial, pueden desarrollar otras capacidades especiales a las que llamaremos Técnicas. Estas artes tienen funciones muy diversas, desde potenciar la habilidad de ataque y defensa hasta transportar al personaje a grandes distancias. 
+
+Las Técnicas permiten a los individuos que las utilizan emplear su energía interna para ejecutar acciones sorprendentes. Por ejemplo, una Técnica puede ser ejecutada para proyectar un ataque a distancia o multiplicar su velocidad, y realizar así varias acciones sin penalizadores en un solo asalto. Es importante tener en cuenta que cada Técnica es visualmente distinta a las demás, incluso si tienen los mismos efectos. Un ataque que permita a un luchador impactar a un enemigo a distancia puede consistir en, desde efectuar un simple tajo en el aire, hasta lanzar el arma como un torbellino de energía. Ambos ataques tienen la misma finalidad, pero su apariencia varía según el estilo que quiera darle cada individuo. Es el propio jugador o el Director de Juego quien debe encargarse de desarrollar su forma en cada caso. 
+
+El uso de una Técnica es un acto pasivo, pero está ligado a la acción que pretende potenciar. Si la Técnica es un ataque, es necesario que el personaje tenga la oportunidad de atacar; si es una defensa, basta simplemente con ser capaz de realizar un control de parada o esquiva. Aquellas que otorguen habilidades especiales, como teletransportes o armas de energía, requieren siempre que el personaje pueda realizar una acción activa. Para usar una Técnica es necesario declararla antes de realizar ninguna tirada de dados. En el caso de que modifique una habilidad enfrentada, como la defensa o el ataque, hay que declararla antes de que alguno de los contendientes lance los dados. Si modifica el turno, debe hacerse antes de que se calcule la iniciativa, incluso si al final no se ejecuta. Las Técnicas consumen puntos de Ki. Cada vez que un personaje utiliza una de ellas, debe de gastar el Ki de su reserva.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Ubicar_Magia -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ubicar_Magia">
@@ -13318,6 +13827,30 @@ Intermedio: 1.000 kilómetros de radio / 180 RM.
 Avanzado: 10.000 kilómetros de radio / 200 RM.
 Arcano: Afecta cualquier elemento mineral existente / 240 RM.
 Mantenimiento: 30 / 45 / 60 / 100 Diario</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Uso_de_la_Energía_Necesaria -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Uso_de_la_Energía_Necesaria">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Ki"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El personaje aprende a controlar de tal manera su energía interna que sólo utiliza la cantidad requerida en cada una de sus maniobras. Ello le permite correr o esforzarse durante horas sin sufrir apenas los efectos del cansancio. Por ello, esta habilidad multiplica por diez el tiempo que un personaje puede estar realizando trabajo físico, corriendo o haciendo cualquier actividad pesada, sin perder puntos de Cansancio. Por ejemplo, un personaje que fuera corriendo a su máximo Tipo de movimiento, perdería un punto de Cansancio cada cincuenta asaltos en lugar de cada cinco. Esta habilidad también permite forzar hasta el límite las maniobras corporales, aumentando la cantidad de puntos de Cansancio máximos que se pueden gastar en un solo asalto. El personaje es capaz de quemar sus reservas con muy pocos movimientos, pero a cambio logra cosas de otro modo imposibles para él. En lugar de dos puntos de Cansancio por asalto, esta habilidad permite gastar hasta cinco, pudiendo sumar un +75 a una única acción o diversos bonos de +15 a varias a la vez.
+
+Requisitos: Uso del Ki.
+Conocimiento marcial: 10</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Uso_del_Ki -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Uso_del_Ki">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Ki"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El uso del Ki es la habilidad básica necesaria para desarrollar las demás. Permite al personaje despertar su energía interna y utilizarla inconscientemente. 
+
+Requisitos: Ninguno.
+Conocimiento marcial: 40</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -13551,6 +14084,25 @@ Mantenimiento: No</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Vatra -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vatra">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ignis"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Como un ave de fuego, el personaje se lanza sobre su antagonista envuelto en llamas, consumiéndolo física y espiritualmente. Este ataque aumenta el daño, la habilidad y el crítico resultante (en el caso de que se produzca). Vatra requiere que el luchador mantenga activa la Técnica de primer nivel Feuer.
+
+CM requerido: 40 
+Nivel: 2
+VOL 11
+DES 6
+POD 6
+FUE 1
+CON 3
+Efectos: +75 al ataque, +75 al daño, +40 al crítico.
+Requisitos: Mantener activo Feuer</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Velez -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Velez">
@@ -13586,6 +14138,22 @@ Intermedio: Presencia máxima 80.
 Avanzado: Presencia máxima 120.
 Arcano: Presencia máxima 160.
 Mantenimiento: 10 / 10 / 15 / 15 Diario</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Velocitas_Ventus -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Velocitas_Ventus">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Celéritas"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aumentando inhumanamente su velocidad, el personaje se traslada tan rápido que su cuerpo parece dividirse. De este modo, es capaz incluso de atacar cuatro veces en ese asalto, sumando además un bono a su turno.
+
+CM requerido: 25 
+Nivel: 1
+AGI 7
+DES 7
+POD 4
+Efectos: +3 ataques limitados, +50 al turno.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -13823,6 +14391,18 @@ Intermedio: Tipo de Vuelo 8.
 Avanzado: Tipo de Vuelo 12.
 Arcano: Tipo de Vuelo 15.
 Mantenimiento: 15 / 20 / 25 / 30</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Vuelo_Ki -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vuelo_Ki">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Ki"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Representa que el personaje tiene ya un completo control de su masa, pudiendo moverse libremente por el aire de la misma forma que lo haría por el suelo. Esta habilidad permite alcanzar un Tipo de vuelo equivalente a su Movimiento, en lugar de estar limitado a una cuarta parte como en la Levitación. Debe gastarse un punto de Ki genérico por cada Tipo de vuelo que se quiera alcanzar, y el mantenimiento sigue siendo un punto por minuto.
+
+Requisitos: Levitación.
+Conocimiento marcial: 20</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -14519,6 +15099,18 @@ Apariencia habitual: Frecuentemente aparece bajo la forma de un simple gato negr
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Zen_Ki -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Zen_Ki">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Ki"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El Zen es el estado de perfección completa entre cuerpo y alma. A efectos de juego, actúa igual que la Inhumanidad, salvo que capacita al personaje para alcanzar la dificultad de Zen en sus controles y habilidades.
+
+Requisitos: Inhumanidad.
+Coste: 50 CM</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Zeon -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Zeon">
@@ -14927,6 +15519,9 @@ determinados sobre la categoría que vamos a elegir.Existen seis arquetipos, que
     <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Categoría">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ahora que ya conocemos los arquetipos de los personajes ha llegado el momento del elegir su categoría. Tener una categoría no significa que alguien se dedique a una profesión concreta en sentido estricto. Un ladrón no tiene por qué ganarse necesariamente la vida robando, al igual que un asesino no tiene que dedicarse sólo a matar gente. Las categorías te indicarán cuáles son los costes de desarrollo de tu personaje, sus límites en la distribución de puntos y alguna de sus habilidades especiales.</rdfs:comment>
     </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Celéritas">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Celéritas es un arte que se basa principalmente en la velocidad. Controlando la energía del cuerpo para potenciar sus sentidos, un practicante de este estilo es capaz de reaccionar a la velocidad del pensamiento, adelantándose a las acciones de cualquiera de sus contrincantes. Todas las técnicas de Celéritas están enfocadas al ataque: es un arte que no requiere defensa alguna, solo avanza y somete.</rdfs:comment>
+    </rdf:Description>
     <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Clase_Social">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Normalmente, los personajes comenzarán la partida con una cantidad de dinero inicial para realizar pequeños gastos y poder equiparse. Cada jugador puede justificar como desee el origen de este dinero: una herencia, su propio trabajo o un casual golpe de suerte. Quienes posean habilidades de combate pueden comenzar adicionalmente con el arma básica que saben utilizar, o en su defecto, con alguna armadura de escaso valor. Para determinar los fondos iniciales de un personaje, debe atenderse a su clase social. Su origen indica la cantidad de la que inicialmente se dispone.</rdfs:comment>
     </rdf:Description>
@@ -14966,6 +15561,9 @@ es obligatorio hacerlo. Cualquier ventaja o desventaja, salvo que se diga expres
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Las habilidades mentales se dividen en varios niveles, y cada uno de ellos afecta a una esfera distinta con poderes completamente diferentes del resto. A estas esferas las llamaremos disciplinas psíquicas. Cada disciplina psíquica tiene un número desigual de poderes, divididos en tres niveles. En algunas ocasiones, una disciplina en concreto tiene algún tipo de modificador que depende de la situación en la que se usen sus poderes. Por ejemplo, es mucho más fácil utilizar un poder telepático sobre un sujeto si se esta en contacto físico con él. Si una disciplina en concreto tiene algún modificador,
 este afecta a todos sus poderes.</rdfs:comment>
     </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#El_Dragón">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Los orígenes de este arte son anteriores al Imperio. Desarrollada originariamente por un sacerdote guerrero de Lannet, se dice que sus secretos le fueron enseñados por una de las grandes bestias. Todas sus técnicas resultan tan variadas como potentes, a imagen y semejanza de las habilidades de la criatura en la que se inspiran. Cada vez que su usuario ejecuta una de ellas, durante unos instantes su cuerpo se cubre con diversos tatuajes en alusión al poder del dragón.</rdfs:comment>
+    </rdf:Description>
     <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Energía">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Esta disciplina permite al psíquico usar sus poderes para generar energía pura, e influir en menor grado en el calor, el frio y la electricidad. La matriz psíquica se materializa, afectando físicamente al mundo material de muy diversos modos. No tiene ningún modificador.</rdfs:comment>
     </rdf:Description>
@@ -14999,6 +15597,9 @@ este afecta a todos sus poderes.</rdfs:comment>
     <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Intelectual">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Las habilidades intelectuales son las que dependen principalmente del conocimiento, la sabiduría y el raciocinio de los personajes.</rdfs:comment>
     </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Ki">
+        <rdfs:comment>Las habilidades del Ki son una serie de capacidades especiales que pueden desarrollar los personajes, utilizando sus puntos de Conocimiento Marcial. Cuando alguien domina una de ellas, esta le permite realizar acciones especiales que ningún otro ser humano es capaz de ejecutar. Cada una tiene un coste en puntos de CM, que es necesario invertir para adquirirla. Las habilidades del Ki se desarrollan siguiendo una lógica en su conocimiento y por tanto es posible que, para aprender a utilizar algunas, un individuo tenga que dominar anteriormente otras.</rdfs:comment>
+    </rdf:Description>
     <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Mistica">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La habilidad sobrenatural agrupa todas las pericias de carácter místico del personaje. Son las que utilizan las categorías dotadas de poderes sobrenaturales, como los magos, los invocadores o los ilusionistas.</rdfs:comment>
     </rdf:Description>
@@ -15022,6 +15623,9 @@ este afecta a todos sus poderes.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Vigor">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Son las habilidades que recogen aquellas pericias basadas en el esfuerzo corporal, el aguante físico y la resistencia mental.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ignis">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ignis es la esencia del fuego, un estilo que permite a sus usuarios producir potentes llamaradas gracias al Ki. Sus ataques son excepcionalmente destructivos, y resulta prácticamente imposible contenerlos. Se trata de un estilo de procedencia no humana, que ha sido empleado por muchos Duk´zarist. Toda la tabla de Ignis sufre la desventaja Atadura elemental hacia el fuego.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Incremento_Físico">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La disciplina Incremento físico otorga al psíquico un completo dominio sobre su cuerpo y todas las células que lo componen. De este modo, controla cada parte de su anatomía como si se tratase de una máquina perfecta, aumentando de un modo increible sus capacidades corporales. Sólo es posible emplear una vez un mismo poder sobre un determinado individuo. No tiene ningún modificador.</rdfs:comment>
