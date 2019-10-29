@@ -54,6 +54,14 @@
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Animales_de_Transporte -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Animales_de_Transporte">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Transporte"/>
+    </owl:Class>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Arcano -->
 
     <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arcano">
@@ -78,6 +86,14 @@
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Arcos -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arcos">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arma_de_Proyectiles"/>
+    </owl:Class>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Arma -->
 
     <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arma">
@@ -86,10 +102,74 @@
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Arma_Común -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arma_Común">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arma"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Arma_Exótica -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arma_Exótica">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arma"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Arma_Improvisada -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arma_Improvisada">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arma"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Arma_Lanzable -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arma_Lanzable">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arma_de_Proyectiles"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Arma_de_Asedio -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arma_de_Asedio">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arma"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Arma_de_Proyectiles -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arma_de_Proyectiles">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arma"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Arma_de_Pólvora -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arma_de_Pólvora">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arma_de_Proyectiles"/>
+    </owl:Class>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Armadura -->
 
     <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Armadura">
         <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Equipamiento"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Armadura_Para_Animales -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Armadura_Para_Animales">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Armadura"/>
     </owl:Class>
     
 
@@ -136,6 +216,62 @@
 
     <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arte_Y_Decoracion">
         <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Equipamiento"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Ballestas -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ballestas">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arma_de_Proyectiles"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Bebida -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Bebida">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Comida_Y_Bebida"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Calidad_Armadura -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Calidad_Armadura">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Armadura"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Calidad_Arte -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Calidad_Arte">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arte_Y_Decoracion"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Calidad_Vestimenta -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Calidad_Vestimenta">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vestimenta"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Calidad_Vivienda -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Calidad_Vivienda">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vivienda"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Calzado -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Calzado">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vestimenta"/>
     </owl:Class>
     
 
@@ -190,6 +326,14 @@
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Cerbatana -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Cerbatana">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arma_de_Proyectiles"/>
+    </owl:Class>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Clase_Armadura -->
 
     <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Clase_Armadura">
@@ -201,6 +345,14 @@
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Clase_Social -->
 
     <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Clase_Social"/>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Comida -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Comida">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Comida_Y_Bebida"/>
+    </owl:Class>
     
 
 
@@ -232,6 +384,22 @@
 
     <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Crioquinesis">
         <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Psiquica"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Cuadros -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Cuadros">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arte_Y_Decoracion"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Decoración -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Decoración">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arte_Y_Decoracion"/>
     </owl:Class>
     
 
@@ -302,6 +470,14 @@
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Embarcaciones -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Embarcaciones">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Transporte"/>
+    </owl:Class>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Energía -->
 
     <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Energía">
@@ -334,6 +510,14 @@
 
     <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Especial_Armas">
         <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Especial"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Gemas -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Gemas">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arte_Y_Decoracion"/>
     </owl:Class>
     
 
@@ -458,6 +642,14 @@
 
     <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Vigor">
         <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Secundaria"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Honda -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Honda">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arma_de_Proyectiles"/>
     </owl:Class>
     
 
@@ -686,42 +878,58 @@
     
 
 
-    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Municion_Arcos -->
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Munición_Arcos -->
 
-    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Municion_Arcos">
-        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tipo_Municion"/>
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Munición_Arcos">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tipo_Munición"/>
     </owl:Class>
     
 
 
-    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Municion_Ballesta -->
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Munición_Asedio -->
 
-    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Municion_Ballesta">
-        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tipo_Municion"/>
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Munición_Asedio">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tipo_Munición"/>
     </owl:Class>
     
 
 
-    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Municion_Cerbatana -->
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Munición_Ballesta -->
 
-    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Municion_Cerbatana">
-        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tipo_Municion"/>
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Munición_Ballesta">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tipo_Munición"/>
     </owl:Class>
     
 
 
-    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Municion_Honda -->
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Munición_Cerbatana -->
 
-    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Municion_Honda">
-        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tipo_Municion"/>
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Munición_Cerbatana">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tipo_Munición"/>
     </owl:Class>
     
 
 
-    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Municion_Polvora -->
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Munición_Honda -->
 
-    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Municion_Polvora">
-        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tipo_Municion"/>
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Munición_Honda">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tipo_Munición"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Munición_Pólvora -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Munición_Pólvora">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tipo_Munición"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Orfebrería -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Orfebrería">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arte_Y_Decoracion"/>
     </owl:Class>
     
 
@@ -774,6 +982,22 @@
 
     <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Poder_Matricial">
         <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Psiquica"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Precio_Cuadros -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Precio_Cuadros">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Cuadros"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Raciones -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Raciones">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Comida_Y_Bebida"/>
     </owl:Class>
     
 
@@ -900,17 +1124,17 @@
     
 
 
-    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Tipo_Municion -->
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Tipo_Munición -->
 
-    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tipo_Municion">
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tipo_Munición">
         <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arma"/>
     </owl:Class>
     
 
 
-    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Tipologia_Armas -->
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Tipos_Armas -->
 
-    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tipologia_Armas">
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tipos_Armas">
         <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arma"/>
     </owl:Class>
     
@@ -928,6 +1152,14 @@
 
     <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Transporte">
         <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Equipamiento"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Transporte_Terrestre -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Transporte_Terrestre">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Transporte"/>
     </owl:Class>
     
 
@@ -1021,6 +1253,31 @@
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Abanico -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Abanico">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Orfebrería"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Abanico_de_Combate -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Abanico_de_Combate">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arma_Exótica"/>
+        <rdfs:comment>Arma oriental especialmente exótica. Su apariencia es la de un abanico en el cual la madera ha sido sustituida por cuchillas afiladas. La parte posterior tiene un gran contrapeso con el que se puede golpear de manera contundente.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Abrigo -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Abrigo">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vestimenta"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Absorber_Información -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Absorber_Información">
@@ -1049,6 +1306,14 @@ Vías Cerradas: Ninguna</rdfs:comment>
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Acechador">
         <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arquetipo"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Es el arquetipo de aquellas categorías que emplean el subterfugio y el ingenio para lograr sus objetivos, evitando el enfrentamiento directo. Su especialidad es el campo de las habilidades secundarias físicas.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Aceite -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Aceite">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Utiles_Varios"/>
     </owl:NamedIndividual>
     
 
@@ -1085,6 +1350,14 @@ Descripción: Se trata de un metal blanco que sólo se encuentra en las minas de
 Calidad Máxima: +5
 Disponibilidad: B
 Descripción: Es una aleación excepcionalmente rara. Se llama así por su color oscuro, y su principal característica es su increíble dureza.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Acqua_Toffana -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Acqua_Toffana">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Venenos"/>
     </owl:NamedIndividual>
     
 
@@ -1325,6 +1598,23 @@ Mantenimiento: 10 / 10 / 15 / 25</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Al-Baladín -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Al-Baladín">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Venenos"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Alabarda -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Alabarda">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arma_Común"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La alabarda es un arma compuesta de un palo hecho de madera o metal, acabado en un filo similar al de un hacha. En total mide alrededor de 150 a 200 centímetros.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Alergia_grave -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Alergia_grave">
@@ -1334,6 +1624,14 @@ Mantenimiento: 10 / 10 / 15 / 25</rdfs:comment>
 Efectos: Los negativos a toda acción por entrar en contacto con dicha sustancia variarán entre un –40 y un –80, dependiendo de la gravedad o del tiempo que se haya permanecido en contacto con dicho elemento.
 
 Beneficio: 1</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Alfombra -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Alfombra">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Decoración"/>
     </owl:NamedIndividual>
     
 
@@ -1496,6 +1794,15 @@ Mantenimiento: No</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Anciano_de_Primavera -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Anciano_de_Primavera">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arma_Exótica"/>
+        <rdfs:comment>Arma de diseño oriental que consiste en dos varas largas, unidas por cadenas a una tercera de menor tamaño. Cada uno de los palos largos está rematado en una cuchilla similar a las que tienen las alabardas, pero más pequeñas. Se utiliza situando la vara corta en la espalda mientras se sujetan las otras con cada una de las manos. Para darle mayor potencia al ataque, se le hace girar aprovechando la fuerza centrífuga del movimiento. Aunque requiere utilizar las dos manos, no dobla el bono de Fuerza. Por su forma y empleo, el anciano de primavera permite realizar un segundo ataque por asalto como si se utilizase un arma adicional, pero aplicando únicamente un penalizador de –10 a la habilidad de ataque.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Andar_por_las_Paredes -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Andar_por_las_Paredes">
@@ -1519,11 +1826,28 @@ Vías Cerradas: Agua</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Anillo -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Anillo">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Orfebrería"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Animales -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Animales">
         <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Intelectual"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Recoge el conocimiento sobre todo lo relacionado con el mundo animal. Mediante esta habilidad no sólo se pueden reconocer sus características y costumbres, sino también ser un experto en su crianza y adiestramiento. Es posible especializarse en una especie en concreto, en cuyo caso el personaje obtendrá un bonificador de +40 a los controles de la habilidad.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Antorcha -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Antorcha">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arma_Improvisada"/>
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Utiles_Varios"/>
     </owl:NamedIndividual>
     
 
@@ -1623,6 +1947,15 @@ Beneficio: 2</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Arcabuz -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arcabuz">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arma_de_Pólvora"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El arcabuz es un arma de fuego compuesta por un largo tubo metálico, por el que se impulsa una bala gracias a la detonación de la pólvora. Es un cañón lo suficientemente reducido como para que lo lleve y dispare un solo hombre. El nombre de arcabuz significa “cañón de gancho”, debido a que se asociaba con las picas, que eran lanzas acabadas en ganchos. Al igual que las ballestas, no dependen de la Fuerza de quienes las utilicen y no aplican el bono de Fuerza del personaje. Por el contrario tienen su propia característica, que es de 11, por lo que suman un +20 al daño base de sus balas. Si se obtiene una Pifia con el arcabuz de nivel inferior a 80, el arma se encasquilla. Si es superior, estalla. Cada +5 del arma, además de aumentar su precisión, suma un punto a la Fuerza con la que dispara, al igual que aumenta en 15 el nivel de Pifia requerido para que estalle.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Arcano -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arcano">
@@ -1647,10 +1980,69 @@ Beneficio: 2</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Arco_Compuesto -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arco_Compuesto">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arcos"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Se trata de los arcos más grandes y potentes. Están formados por tres piezas y miden sobre los dos metros y medio de largo. Requieren ambas manos para usarlos, pero no doblan el bono de Fuerza.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Arco_Corto -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arco_Corto">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arcos"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Compuesto por un único palo curvo de madera flexible, en cuyos extremos se une una cuerda tensada. Son arcos con un tamaño inferior a 120 centímetros de largo. Requiere ambas manos para usarlo, pero no dobla el bono de Fuerza.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Arco_Largo -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arco_Largo">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arcos"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Como el arco corto, pero con una dimensión comprendida entre el metro y medio y los dos metros. Requiere ambas manos para usarlo, pero no dobla el bono de Fuerza.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Arcón_Grande -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arcón_Grande">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Utiles_Varios"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Arcón_Pequeño -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arcón_Pequeño">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Utiles_Varios"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Arma -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arma">
         <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Arma_Cuerpo_a_Cuerpo -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arma_Cuerpo_a_Cuerpo">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Rango_Armas"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Arma_Lanzable -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arma_Lanzable">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Rango_Armas"/>
     </owl:NamedIndividual>
     
 
@@ -1674,6 +2066,14 @@ Avanzado: Calidad +15.
 Arcano: Calidad +20.
 Mantenimiento: 15 / 20 / 25 /30 Diario
 Vías Cerradas: Destrucción</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Arma_de_Proyectiles -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arma_de_Proyectiles">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Rango_Armas"/>
     </owl:NamedIndividual>
     
 
@@ -1720,6 +2120,14 @@ Mantenimiento: 5 / 10 / 10 / 15</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Armadura">
         <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Armadura_-5 -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Armadura_-5">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Calidad_Armadura"/>
     </owl:NamedIndividual>
     
 
@@ -1974,6 +2382,16 @@ Mantenimiento: 90 / 100 / 105 / 110</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Arpón -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arpón">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arma_Común"/>
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Utiles_Varios"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Arma de asta pequeña, similar a una jabalina pero con la punta acabada en garfio.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Arquetipo -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arquetipo">
@@ -2004,11 +2422,35 @@ Mantenimiento: 15 / 30 / 50 / 100 Diario</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Arsénico_Real -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arsénico_Real">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Venenos"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Arte -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arte">
         <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Creativa"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mide la pericia de un individuo en los campos artísticos, como la pintura o la escultura. Un personaje puede especializarse en una única habilidad artística,  en cuyo caso aplicará un bonificador de +40 al realizar dichos controles.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Arte_Bueno -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arte_Bueno">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Calidad_Arte"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Arte_Excelente -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arte_Excelente">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Calidad_Arte"/>
     </owl:NamedIndividual>
     
 
@@ -2037,10 +2479,34 @@ Mantenimiento: 15 / 30 / 50 / 100 Diario</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Arte_Mediocre -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arte_Mediocre">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Calidad_Arte"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Arte_Normal -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arte_Normal">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Calidad_Arte"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Arte_Y_Decoracion -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arte_Y_Decoracion">
         <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Arte_de_Lujo_o_de_Diseño -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arte_de_Lujo_o_de_Diseño">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Calidad_Arte"/>
     </owl:NamedIndividual>
     
 
@@ -2179,6 +2645,41 @@ Vías Cerradas: Destrucción e Ilusión</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Ataque_Calor -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ataque_Calor">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tipo_Ataque"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Están basados en los efectos de las altas temperaturas. Causan quemaduras y heridas abrasivas.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Ataque_Contundente -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ataque_Contundente">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tipo_Ataque"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Son los ataques golpeadores y aplastantes. El daño que producen se basa en el impacto y en el peso.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Ataque_Electricidad -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ataque_Electricidad">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tipo_Ataque"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Ataque_Energía -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ataque_Energía">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tipo_Ataque"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Son los ataques de origen místico, que afectan el alma y la esencia del oponente.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Ataque_Fantasmal -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ataque_Fantasmal">
@@ -2197,6 +2698,33 @@ Intermedio: RM 160 / Daño 180.
 Avanzado: RM 180 / Daño 250.
 Arcano: RM 200 / Daño 350.
 Mantenimiento: No</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Ataque_Filo -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ataque_Filo">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tipo_Ataque"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Son ataques cortantes que causan heridas mediante tajos. Es el tipo que usan las armas afiladas.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Ataque_Frío -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ataque_Frío">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tipo_Ataque"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Producen daños congelantes. Son ocasionados por el hielo y las bajas temperaturas extremas.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Ataque_Penetrante -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ataque_Penetrante">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tipo_Ataque"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Acometidas perforantes que atraviesan los cuerpos. Suelen ser causados por objetos puntiagudos y afilados.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -2305,6 +2833,14 @@ Intermedio: Presencia máxima 140.
 Avanzado: Presencia máxima 180.
 Arcano: Presencia máxima 240.
 Mantenimiento: 5 / 5 / 10 / 10</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Atropina -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Atropina">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Venenos"/>
     </owl:NamedIndividual>
     
 
@@ -2533,6 +3069,38 @@ Mantenimiento: 10 / 15 / 25 / 35</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Autor_Conocido -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Autor_Conocido">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Precio_Cuadros"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Autor_Legendario -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Autor_Legendario">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Precio_Cuadros"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Autor_Prestigioso -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Autor_Prestigioso">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Precio_Cuadros"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Azada -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Azada">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arma_Improvisada"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Baile -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Baile">
@@ -2551,6 +3119,76 @@ Mantenimiento: 10 / 15 / 25 / 35</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Bala -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Bala">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Munición_Pólvora"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Bala_de_Cañón -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Bala_de_Cañón">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Munición_Asedio"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Balista_Ligera -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Balista_Ligera">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arma_de_Asedio"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La balista es una ballesta de enormes proporciones que se usa como arma de asedio. Se mueven mediante ruedas, ya que su desproporcionado tamaño impide que nadie las transporte manualmente. Las balistas ligeras son usadas por tres individuos, dos que la mueven lateralmente y un tercero que apunta y dispara. Las balistas no dependen de la Fuerza de quienes las utilicen, por lo que no aplican el bono de Fuerza de ninguno de los personajes. Por el contrario tienen su propia característica, que es de 12, por lo que suman un bono de +20 al daño base de sus virotes. Cada +5 del arma, además de aumentar su precisión, suma un punto a la Fuerza con la que dispara. Como regla especial, la enorme capacidad de penetración de las balistas les permite hacer un Ataque en área, pero en una línea recta de 3 metros desde que impactan por primera vez.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Balista_Pesada -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Balista_Pesada">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arma_de_Asedio"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Versión de mayor tamaño de las anteriores, que requiere cinco personas para controlarla. Tienen Fuerza 13, por lo que suman un bono de +25 al daño base de sus virotes. Cada +5 del arma, además de aumentar su precisión, suma un punto a la Fuerza con la que dispara. Su Ataque en área alcanza una línea de 5 metros desde que impactan por primera vez.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Ballesta -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ballesta">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ballestas"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Arco montado sobre una caja con un canal por donde se disparan virotes. Se tensa usando un resorte. Las ballestas no dependen de la Fuerza de quienes las utilicen, por lo que no aplican el bono de Fuerza del personaje. Por el contrario tienen su propia característica, que es de 8, por lo que suman un bono de +10 al daño base de los virotes. Cada +5 del arma, además de aumentar su precisión, suma un punto a la Fuerza con la que dispara. Requiere ambas manos para usarla.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Ballesta_Pesada -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ballesta_Pesada">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ballestas"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ballesta de gran tamaño y dimensiones. Tiene el equivalente a una característica de Fuerza de 10, por lo que suma un bono de +15 al daño de sus virotes. Requiere ambas manos para usarla.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Ballesta_de_Mano -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ballesta_de_Mano">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ballestas"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ballesta de escasas dimensiones que se puede utilizar con una sola mano. Tiene una característica de Fuerza de 5, por lo que no aplica ningún bono a su daño. A términos de juego, funciona igual que una ballesta convencional, por lo que no es necesario desarrollarla por separado.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Ballesta_de_Repetición -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ballesta_de_Repetición">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ballestas"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">En realidad no es un tipo distinto a la ballesta convencional, por lo que puede usarse con la misma habilidad sin la necesidad de desarrollar una pericia distinta en su uso. Simplemente está dotada de un sistema de engranajes capaz de disparar un mayor número de proyectiles sin la necesidad de recargar. Habitualmente, tiene una recámara de 4 a 8 virotes. Requiere ambas manos para usarla.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Balística -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Balística">
@@ -2559,6 +3197,46 @@ Mantenimiento: 10 / 15 / 25 / 35</rdfs:comment>
 Acción: Activa 
 Mantenimiento: No
 Descripción: Permite al psíquico lanzar con completa precisión objetos empleando su Proyección Psíquica como habilidad de disparo. Cuanto mayor sea su potencial, mayor será su precisión o la cantidad de elementos que será capaz de lanzar simultáneamente (desde una simple daga a cientos de enormes rocas). Dependiendo del Potencial que haya obtenido, el personaje será capaz de incrementar el número de objetos que lanza (cubriendo así un área mucho mayor), o la precisión de este poder. Es decir, debe de decidir entre obtener un bono a su Proyección (si lanza usa un sólo objeto), o arrojar multitud de ellos cubriendo una gran zona. Por ejemplo, alguien que alcance un nivel de dificultad Absurdo podrá elegir entre un +20 a su Proyección lanzando un único elemento, o arrojar una lluvia de objetos que cubrirían un área de 15 metros. El daño base del ataque variará dependiendo de los elementos que son lanzados y de si se ataca o no en área. Si sólo se proyecta un objeto, su daño dependerá exactamente de su naturaleza; las armas producen su daño base natural, aunque aplicando el bono de Voluntad en lugar del de Fuerza. Si se lanzan elementos de escenografía (rocas, sillas, candelabros…) el daño debe de ser determinado por el DJ entre 30 y 150, dependiendo de aquello que tenga el psíquico a su alcance. De usarse un ataque en área, el daño base de las armas aumenta un 50% a causa de que se proyectan multitud de elementos a la vez. Un proyectil disparado con esta habilidad queda fuera del control del psíquico, por lo que si pretende volverlo a utilizar, deberá primero recuperarlo.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Barca -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Barca">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Embarcaciones"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Barco_de_Guerra -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Barco_de_Guerra">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Embarcaciones"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Barda_Ligera -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Barda_Ligera">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Armadura_Para_Animales"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Barda_Pesada -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Barda_Pesada">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Armadura_Para_Animales"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Barra_Metálica -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Barra_Metálica">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arma_Improvisada"/>
     </owl:NamedIndividual>
     
 
@@ -2663,6 +3341,38 @@ Descripción: Este poder crea una barrera de fuego en el lugar que el psíquico 
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Barril -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Barril">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Utiles_Varios"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Bastón_Artístico -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Bastón_Artístico">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Orfebrería"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Bastón_Normal -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Bastón_Normal">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Utiles_Varios"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Belladona -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Belladona">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Venenos"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Bendición -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Bendición">
@@ -2761,6 +3471,32 @@ Mantenimiento: No</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Bolas -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Bolas">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arma_Lanzable"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Esferas metálicas provistas de pinchos para su lanzamiento.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Boleadoras -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Boleadoras">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arma_Lanzable"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Arma arrojadiza que se compone de múltiples cuerdas, acabadas en esferas metálicas o de cuero reforzado. Su finalidad es la de apresar al oponente. Al contrario que otras armas de presa, no sufre el penalizador de -40 al ejecutar dicha maniobra.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Bolsa_Grande -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Bolsa_Grande">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Utiles_Varios"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Bolsa_Infinita -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Bolsa_Infinita">
@@ -2780,6 +3516,54 @@ Avanzado: x40 su capacidad.
 Arcano: x50 su capacidad.
 Mantenimiento: 5 / 10 / 10 / 15 Diario
 Vías Cerradas: Ninguna</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Bolsa_Pequeña -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Bolsa_Pequeña">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Utiles_Varios"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Botas_de_Viaje -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Botas_de_Viaje">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Calzado"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Botella_Rota -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Botella_Rota">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arma_Improvisada"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Botella_de_Cristal_Grande -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Botella_de_Cristal_Grande">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Utiles_Varios"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Botella_de_Cristal_Pequeña -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Botella_de_Cristal_Pequeña">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Utiles_Varios"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Broche -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Broche">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Orfebrería"/>
     </owl:NamedIndividual>
     
 
@@ -2805,6 +3589,31 @@ Descripción: El bronce fue el primero de los metales con los que empezaron a fo
 Efectos: El hechicero requiere obligatoriamente emplear componentes materiales para lanzar hechizos. Cada conjuro requerirá un componente distinto determinado por el Director de Juego, según su origen y los conocimientos del brujo.
 
 Beneficio: 2</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Buey_de_Carga -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Buey_de_Carga">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Animales_de_Transporte"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Bufanda -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Bufanda">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vestimenta"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Bumerán -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Bumerán">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arma_Exótica"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Palo curvo hecho de madera o metal, diseñado para ser lanzado y regresar en el caso de no impactar. Para recogerlo, se requiere superar un control de Trucos de manos contra una dificultad de Difícil (DIF).</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -2869,6 +3678,47 @@ permanentemente, de manera que desaparecen y no pueden volver a ser usados. Otro
  - Acceso temporal a un poder: Existe la posibilidad de que, en un momento determinado, un personaje necesite utilizar un poder psíquico que no tenga dominado, y no desee gastar en él un CV permanentemente. Invirtiendo temporalmente un CV, el psíquico puede utilizar durante ese asalto una habilidad mental que no tiene dominada, pero que pertenece a una disciplina a la que es afín. Los poderes adquiridos temporalmente no pueden ser mantenidos con innatos.
 
  - Incrementar un innato: El personaje puede utilizar sus CV libres para incrementar el valor de un poder mantenido innatamente. Para hacerlo, debe de gastar los CV que quiere usar en el momento en que deja activo el poder. Cada CV que invierta con esta finalidad, aumenta 20 puntos su potencial psíquico sólo para calcular el valor con el que lo mantiene. Un psíquico puede gastar hasta 5 CV con este fin. Al contrario de lo que ocurre como regla general, el personaje no recupera los CV que invierta con esta finalidad mientras mantenga el poder innato incrementado. Una vez que deje de usarlo, comenzará a recuperarlos a su ritmo natural.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Caballo -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Caballo">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Animales_de_Transporte"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Caballo_de_Guerra -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Caballo_de_Guerra">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Animales_de_Transporte"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Cadena -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Cadena">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arma_Común"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cuerda metálica compuesta de eslabones.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Caja -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Caja">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Utiles_Varios"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Calzoncillos -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Calzoncillos">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vestimenta"/>
     </owl:NamedIndividual>
     
 
@@ -2941,11 +3791,43 @@ Vías Cerradas: Destrucción</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Camisa -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Camisa">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vestimenta"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Campana -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Campana">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Utiles_Varios"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Candelabros -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Candelabros">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Decoración"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Cansancio -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Cansancio">
         <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Capacidad_Física"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El Cansancio está relacionado con las acciones físicas que realiza un personaje. Cada vez que alguien hace esfuerzos corporales, va agotándose poco a poco. Este atributo depende directamente de la Constitución y es equivalente al valor de dicha característica.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Cantaridina -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Cantaridina">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Venenos"/>
     </owl:NamedIndividual>
     
 
@@ -2968,6 +3850,14 @@ Intermedio: 1.000 kilómetros de radio / Afecta hasta Gnosis 20.
 Avanzado: 10.000 kilómetros de radio / Afecta hasta Gnosis 30.
 Arcano: Afecta toda la creación / Afecta hasta Gnosis 40.
 Mantenimiento: 70 / 80 / 90 / 100 Diario</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Capa -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Capa">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vestimenta"/>
     </owl:NamedIndividual>
     
 
@@ -3043,6 +3933,14 @@ Bono: +10 a la habilidad de esquiva.</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Carcaj_de_Flechas -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Carcaj_de_Flechas">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Utiles_Varios"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Cargar_con_Sentimientos -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Cargar_con_Sentimientos">
@@ -3051,6 +3949,78 @@ Bono: +10 a la habilidad de esquiva.</rdfs:comment>
 Acción: Activa 
 Mantenimiento: Sí
 Descripción: Este poder carga un objeto o lugar determinado con un fuerte sentimiento, que invade automáticamente a cualquier individuo que lo toque o entre en él. Si por ejemplo el psíquico carga con ira una espada, cualquiera que la toque sentirá una cólera inmensa. Si se afecta un lugar, el área estará delimitada por el potencial alcanzado. Para resistirse hay que superar una RP, aunque quien no la pase tiene derecho a una nueva tirada cada 5 asaltos, si sospecha que sus sentimientos están siendo alterados de manera innatural. No se requiere utilizar Proyección Psíquica, sino estar en el lugar determinado o tocando el objeto. Fuera del área o sin contacto con el cuerpo cargado, los efectos desaparecen de inmediato.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Carreta -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Carreta">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Transporte_Terrestre"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Carromato_Vivienda_de_Madera -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Carromato_Vivienda_de_Madera">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Transporte_Terrestre"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Carromato_de_Tela -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Carromato_de_Tela">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Transporte_Terrestre"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Carruaje_Lujoso -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Carruaje_Lujoso">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Transporte_Terrestre"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Carruaje_Normal -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Carruaje_Normal">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Transporte_Terrestre"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Casa -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Casa">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vivienda"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Caserón -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Caserón">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vivienda"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Castillo -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Castillo">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vivienda"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Catalejo -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Catalejo">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Utiles_Varios"/>
     </owl:NamedIndividual>
     
 
@@ -3288,6 +4258,15 @@ Vías Cerradas: Luz</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Cañón -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Cañón">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arma_de_Asedio"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Arma de fuego compuesta por un enorme tubo metálico, por el que se impulsa una gran bala gracias a la pólvora. La munición está preparada para que estalle formando una nube de metralla en una zona de 5 a 10 metros de radio. Aunque la bala ataca de modo convencional, la explosión no; la puntería mide si se impacta el lugar que se pretende afectar. Después, si pretende esquivarse o detenerse, hay que superar un control de esquiva o Atletismo contra Absurdo, en el caso de que el personaje se encuentre a más de la mitad del radio de la explosión, o contra Casi Imposible en el contrario. Los cañones no dependen de la Fuerza de quienes los utilicen, ya que tienen su propia característica, que es de 13, por lo que suman un bono de +25 al daño base de las balas. Si se obtiene una Pifia con el cañón de nivel inferior a 70, el arma se bloquea. Si es superior, el arma estalla. Cada +5 que posea, además de aumentar su precisión, suma un punto a la Fuerza con la que dispara, e incrementa en 15 el nivel de Pifia requerido para que el arma reviente.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Ceguera_Libre_Acceso -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ceguera_Libre_Acceso">
@@ -3342,6 +4321,30 @@ Vías Cerradas: Tierra</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Cepo_Grande -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Cepo_Grande">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Utiles_Varios"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Cepo_Pequeño -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Cepo_Pequeño">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Utiles_Varios"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Cerbatana -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Cerbatana">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Cerbatana"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Cero_Absoluto -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Cero_Absoluto">
@@ -3350,6 +4353,30 @@ Vías Cerradas: Tierra</rdfs:comment>
 Acción: Activa 
 Mantenimiento: Sí
 Descripción: El psíquico disminuye la temperatura a su alrededor hasta el cero absoluto, destruyendo cualquier cuerpo, orgánico o inorgánico, que se encuentre en su radio. A términos de juego, todo aquel ser u objeto físico que no consiga superar una RF contra 100 cada turno que se encuentre en el interior del área, quedará inmediatamente hecho añicos por el Cero absoluto. Este poder no requiere que el personaje utilice su Proyección Psíquica, sino que afecta automáticamente a cualquier individuo que esté dentro de su radio.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Cerradura_Buena -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Cerradura_Buena">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Utiles_Varios"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Cerradura_Excelente -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Cerradura_Excelente">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Utiles_Varios"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Cerradura_Normal -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Cerradura_Normal">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Utiles_Varios"/>
     </owl:NamedIndividual>
     
 
@@ -3409,6 +4436,87 @@ Vías Cerradas: Ninguna</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Cerveza_Buena -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Cerveza_Buena">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Bebida"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Cerveza_normal -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Cerveza_normal">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Bebida"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Cesto_Grande -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Cesto_Grande">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Utiles_Varios"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Cesto_Pequeño -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Cesto_Pequeño">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Utiles_Varios"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Cestus -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Cestus">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arma_Común"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Acoplamiento metálico para manos, rodillas, codos y antebrazos, formado por cuchillas o pinchos.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Cetro -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Cetro">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Orfebrería"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Chabola -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Chabola">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vivienda"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Chaleco -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Chaleco">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vestimenta"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Chaqueta -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Chaqueta">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vestimenta"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Cianuro -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Cianuro">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Venenos"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Ciego -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ciego">
@@ -3427,6 +4535,31 @@ Beneficio: 2</rdfs:comment>
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ciencia">
         <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Intelectual"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Con la única excepción de la Medicina, la ciencia es la reunión de todos los conocimientos intelectuales que constituyen disciplinas de estudios. Algunos ejemplos de las nociones ligadas a esta habilidad son las matemáticas, la mecánica, la astronomía o la filosofía. Naturalmente, las aptitudes que desarrolle un personaje en estos campos no serán tan avanzadas como las ideas científicas actuales, puesto que su formación no constituye una disciplina unificada como lo es hoy en día. Es posible especializarse en una ciencia en concreto, en cuyo caso se obtendrá un bonificador de +40 a los controles de la habilidad.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Cimitarra -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Cimitarra">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arma_Común"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Espada curva de gran tamaño. Generalmente más corta que la espada larga, pero con un filo más ancho.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Cinturón -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Cinturón">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vestimenta"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Circonio -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Circonio">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Gemas"/>
     </owl:NamedIndividual>
     
 
@@ -3462,6 +4595,55 @@ Beneficio: 2</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Clase_Social">
         <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Collar -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Collar">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Orfebrería"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Combate_Desarmado -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Combate_Desarmado">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arma_Común"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">No es un arma en sí. Estas son las estadísticas que aplica un personaje por el hecho de luchar desarmado. Se incluyen puñetazos, patadas, cabezazos y mordiscos. Combatir sin armas requiere el uso completo de todo el cuerpo, por lo que quien luche de este modo no puede aplicar la reglas de ataques con armas adicionales.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Comida_Buena -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Comida_Buena">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Comida"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Comida_Excelente -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Comida_Excelente">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Comida"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Comida_Mediocre -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Comida_Mediocre">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Comida"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Comida_Normal -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Comida_Normal">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Comida"/>
     </owl:NamedIndividual>
     
 
@@ -4495,6 +5677,14 @@ Mantenimiento: 5 / 5 / 10 / 10 Diario</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Corona -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Corona">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Orfebrería"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Creación -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Creación">
@@ -5271,6 +6461,14 @@ Mantenimiento: 10 / 10 / 15 / 15</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Cristalera -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Cristalera">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Decoración"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Cristalización -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Cristalización">
@@ -5305,6 +6503,30 @@ Descripción: Esta habilidad cristaliza cualquier clase de cuerpo que no supere 
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Crucero -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Crucero">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Embarcaciones"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Crucero_Pequeño -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Crucero_Pequeño">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Embarcaciones"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Cruz -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Cruz">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Utiles_Varios"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Crítico_Directo -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Crítico_Directo">
@@ -5323,6 +6545,46 @@ Intermedio: Crítico 140 / RM 160.
 Avanzado: Crítico 180 / RM 180.
 Arcano: Crítico 220 / RM 200.
 Mantenimiento: No</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Cuadro_Bueno -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Cuadro_Bueno">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Cuadros"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Cuadro_Excelente -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Cuadro_Excelente">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Cuadros"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Cuadro_Normal -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Cuadro_Normal">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Cuadros"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Cubo -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Cubo">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Utiles_Varios"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Cuchillo_de_Cocina -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Cuchillo_de_Cocina">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arma_Improvisada"/>
     </owl:NamedIndividual>
     
 
@@ -5481,6 +6743,15 @@ Mantenimiento: 10 / 15 / 15 / 20</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Cuervo -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Cuervo">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arma_Exótica"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cuchilla en forma de estrella con un orificio en el centro. Se introduce el pulgar en el agujero y se la hace girar con fuerza. Mientras da vueltas, puede detener proyectiles como si se tratase de una rodela.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Curación -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Curación">
@@ -5561,6 +6832,14 @@ Vías Cerradas: Destrucción</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Curare -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Curare">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Venenos"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Cúpula_de_Destrucción -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Cúpula_de_Destrucción">
@@ -5591,6 +6870,41 @@ Mantenimiento: No</rdfs:comment>
 Acción: Activa 
 Mantenimiento: No
 Descripción: El psíquico crea una cúpula de energía que destruye todo lo que se ponga en contacto con ella. El ataque afecta a una amplia zona, dentro de la cual no es posible designar blancos. Se ejecuta en la TA de Electricidad y su daño depende del nivel de Dificultad del efecto alcanzado. A ciertas dificultades, el poder de la Cúpula es tan elevado y puro que incluso resulta capaz de dañar a seres inmateriales. El ataque es perfectamente visible, incluso para individuos que no son capaces de percibir matrices.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Daga -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Daga">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arma_Común"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Un cuchillo para el combate, de entre 20 y 30 centímetros de largo. Habitualmente está afilada por ambos lados y equilibrada para su lanzamiento.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Daga_de_Parada -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Daga_de_Parada">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arma_Común"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Variación de la daga tradicional, preparada para detener las armas de los adversarios y trabarlas con la empuñadura. Tiene en su base dos aristas afiladas.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Dardos_de_Cerbatana -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Dardos_de_Cerbatana">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Munición_Cerbatana"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Dardos_de_Mano -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Dardos_de_Mano">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arma_Lanzable"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pequeños dardos con puntas metálicas preparados para ser lanzados.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -6965,6 +8279,22 @@ Mantenimiento: No</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Diadema -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Diadema">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Orfebrería"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Diamante -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Diamante">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Gemas"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Dificultad -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Dificultad">
@@ -8247,6 +9577,15 @@ Mantenimiento: 15 / 20 / 25 / 30 Diario</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Escudo_Corporal -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Escudo_Corporal">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Escudo"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gran escudo pesado que suele alcanzar el tamaño de un hombre. Usados generalmente por los soldados de infantería, tienen una base cuadrada o en punta para clavarla en el suelo por su propio peso.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Escudo_Espectral -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Escudo_Espectral">
@@ -8358,6 +9697,15 @@ Mantenimiento: 5 / 10 / 15 / 15</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Escudo_Normal -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Escudo_Normal">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Escudo"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Superficie de metal o madera reforzada, con asas en su parte posterior para ser blandido. Se utiliza principalmente como medio de defensa.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Escudo_Oscuro -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Escudo_Oscuro">
@@ -8444,6 +9792,14 @@ Mantenimiento: 5 / 15 / 15 / 20</rdfs:comment>
 Acción: Pasiva 
 Mantenimiento: Sí
 Descripción: Crea un escudo telequinético, que defiende a su usuario contra cualquier ataque no inmaterial. Por lo tanto, aunque es capaz de detener el golpe de una espada mágica que daña energía, no para una descarga de magia luminosa. Sólo en el caso de que la barrera sea creada con un nivel de poder superior a Imposible, será capaz de detener efectos y ataques etéreos. A cierto nivel, el escudo gana también la habilidad de barrera de daño. Al contrario que otros poderes, el escudo telequinético mantenido permanece con la misma cantidad de puntos de vida con la que fue creado originariamente. Sin embargo, cada turno posterior pierde 5 puntos de vida, hasta llegar a la cantidad a la que el psíquico puede mantenerlo naturalmente.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Escudo_de_Armas -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Escudo_de_Armas">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Decoración"/>
     </owl:NamedIndividual>
     
 
@@ -8635,6 +9991,50 @@ Vías Cerradas: Tierra, Agua</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Esmeralda -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Esmeralda">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Gemas"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Espada_Ancha -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Espada_Ancha">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arma_Común"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Arma con una hoja recta ligeramente más corta que la espada larga. Se caracteriza por su ancho filo y gran resistencia.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Espada_Bastarda -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Espada_Bastarda">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arma_Común"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Arma a medio camino entre la espada larga y el mandoble, que mide aproximadamente unos 130 centímetros. Su larga empuñadura y contrapeso permiten usarla con una o dos manos.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Espada_Corta -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Espada_Corta">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arma_Común"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hoja recta afilada de unos 50 centímetros. Aunque puede cortar, se utiliza principalmente para atravesar con la punta. Su reducido tamaño hace de ella un arma muy discreta.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Espada_Larga -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Espada_Larga">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arma_Común"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hoja cortante acabada en punta. Aproximadamente, su longitud total tiene entre 90 centímetros a 110 centímetros</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Especial -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Especial">
@@ -8647,6 +10047,22 @@ Vías Cerradas: Tierra, Agua</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Especial_Armas">
         <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Espejo_Pequeño_de_Cristal -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Espejo_Pequeño_de_Cristal">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Utiles_Varios"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Espejo_Pequeño_de_Metal -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Espejo_Pequeño_de_Metal">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Utiles_Varios"/>
     </owl:NamedIndividual>
     
 
@@ -8796,11 +10212,29 @@ Mantenimiento: 15 / 20 / 25 / 30</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Estilete -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Estilete">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arma_Común"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Una penetrante aguja afilada. Su principal función consiste en ser lanzada, aunque también puede usarse para combatir cuerpo a cuerpo.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Estilo -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Estilo">
         <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Social"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Estilo es la capacidad de quedar “estéticamente” bien ante cualquier situación, ya sea en una fiesta o en mitad de una pelea. Alguien con Estilo sabrá que, por mucho que se tuerzan las cosas, al menos va a quedar con clase. Incluso si recibe un duro golpe en la cara, un personaje puede tirar Estilo para que el pelo se le mueva de manera dramáticamente apropiada y el hilillo de sangre que le sale de la comisura de los labios quede resultón. Permite también que las cicatrices sean atrayentes en lugar de horribles o, incluso a niveles muy elevados, que los truenos de una tormenta suenen acorde a sus movimientos más teatrales. Vamos, pura cinematografía.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Estoque -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Estoque">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arma_Común"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Espada fina y estilizada con filo por ambos lados.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -8960,6 +10394,14 @@ Conocimiento marcial: 10</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Exóticas -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Exóticas">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Bebida"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Falsa_Muerte -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Falsa_Muerte">
@@ -9072,6 +10514,42 @@ Intermedio: 25 metros de radio / 140 RF.
 Avanzado: 50 metros de radio / 140 RF.
 Arcano: 100 metros de radio / 160 RF.
 Mantenimiento: No</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Flecha_de_Descarga -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Flecha_de_Descarga">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Munición_Arcos"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La flecha más común que se utiliza con los arcos.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Flecha_de_Fajo -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Flecha_de_Fajo">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Munición_Arcos"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Flecha muy ligera, que añade 20 metros adicionales al alcance máximo del arco.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Flecha_de_Mella -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Flecha_de_Mella">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Munición_Arcos"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Flecha con una punta penetrante, preparada para traspasar armaduras duras. Resta un punto adicional a la TA del defensor.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Florete -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Florete">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arma_Común"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Espada más delgada y flexible que el estoque. Se usa como arma punzante.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -9386,6 +10864,58 @@ Beneficio: 1</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Gafas -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Gafas">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Utiles_Varios"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Ganzúas -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ganzúas">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Utiles_Varios"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Garfio -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Garfio">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arma_Común"/>
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Utiles_Varios"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Punzón de forma curva y pequeñas dimensiones.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Garras -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Garras">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arma_Exótica"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cuchillas acopladas a un guante con forma de garra de animal.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Garrote -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Garrote">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arma_Común"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hecho con madera o piedra, el garrote es el arma contundente por excelencia.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Gemas_Varias -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Gemas_Varias">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Gemas"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Generación_Tiradas -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Generación_Tiradas">
@@ -9439,6 +10969,15 @@ Mantenimiento: No</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Gran_Martillo_de_Guerra -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Gran_Martillo_de_Guerra">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arma_Común"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Arma contundente a dos manos, de gran tamaño. Consiste en un palo recto coronado por un enorme martillo metálico. Algunos tienen una punta afilada en uno de sus extremos, por lo que pueden emplear como Crítico secundario un ataque penetrante.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Grappling -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Grappling">
@@ -9473,6 +11012,23 @@ Intermedio: 25 metros de longitud / 8 de anchura / Construcciones con barrera de
 Avanzado: 36 metros de longitud / 12 de anchura / Construcciones con barrera de daño 80.
 Arcano: 48 metros de longitud / 15 de anchura / Construcciones con barrera de daño 100.
 Mantenimiento: No</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Guadaña -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Guadaña">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arma_Común"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Una larga vara acabada en una gran hoja curva. Tiene un asa para ser cogida con ambas manos.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Guantes -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Guantes">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vestimenta"/>
     </owl:NamedIndividual>
     
 
@@ -9654,6 +11210,41 @@ Mantenimiento: 5 / 5 / 5 / 5</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Hacha_a_2_Manos -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Hacha_a_2_Manos">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arma_Común"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Enorme hacha con un contrapeso en su parte inferior. Según su forma, puede tener uno o dos filos. Su gran dimensión hace casi imprescindible usarla con ambas manos. Mide entre 100 y 170 centímetros.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Hacha_de_Guerra -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Hacha_de_Guerra">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arma_Común"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Versión más manejable del hacha a dos manos, que puede ser empleada con una sola. Tiene una longitud entre 70 y 80 centímetros.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Hacha_de_Leñador -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Hacha_de_Leñador">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arma_Improvisada"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Hacha_de_Mano -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Hacha_de_Mano">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arma_Común"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Armas ligeras que se utilizan con una sola mano. Suelen tener un contrapeso que facilita usarlas como proyectiles. Sus medidas varían de 30 a 60 centímetros.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Hakyoukuken -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Hakyoukuken">
@@ -9667,6 +11258,14 @@ Requisitos: Shotokan o Moai Thai, Uso de la energía necesaria, Maestría en ata
 Conocimiento marcial: +10
 
 Bono: +20 al turno cuando se utilicen artes marciales, y +10 a la habilidad de ataque sin armas.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Hebilla -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Hebilla">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Orfebrería"/>
     </owl:NamedIndividual>
     
 
@@ -9797,6 +11396,14 @@ Mantenimiento: 5 / 20 / 25 / 30</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Honda -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Honda">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Honda"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Horecka -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Horecka">
@@ -9811,6 +11418,14 @@ POD 6
 FUE 2
 Efectos: x2 al daño, Ataque en área: 50 metros de radio.
 Requisitos: Mantener activo Feuer</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Hoz -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Hoz">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arma_Improvisada"/>
     </owl:NamedIndividual>
     
 
@@ -11146,6 +12761,58 @@ Vías Cerradas: Luz</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Jabalina -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Jabalina">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arma_Común"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lanza pequeña usada casi exclusivamente como arma arrojadiza.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Jabón -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Jabón">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Utiles_Varios"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Jarrón -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Jarrón">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arma_Improvisada"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Katana -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Katana">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arma_Exótica"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Arma de diseño oriental, formada por una hoja curva afilada por un único lado. Similar a un sable, es considerablemente más pesada y efectiva, pero con escasa resistencia.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Katana_de_Doble_Hoja -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Katana_de_Doble_Hoja">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arma_Exótica"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Katana doble con un filo en la parte superior y un segundo en la inferior. Tiene un gran mango en el centro por el que se sostiene y se la hace girar. Aunque requiere utilizar las dos manos, no dobla el bono de Fuerza del personaje. Por su forma y empleo, permite realizar un segundo ataque por asalto como si se utilizase un arma adicional, pero aplicando únicamente un penalizador de –10 a la habilidad.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Katar -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Katar">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arma_Exótica"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Guantelete con cuchillas de 25 a 30 centímetros, que puede estar armado con uno o tres filos.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Kempo -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Kempo">
@@ -11171,6 +12838,22 @@ Bono: Ninguno.</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Kimono_de_Hombre -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Kimono_de_Hombre">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vestimenta"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Kimono_de_Mujer -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Kimono_de_Mujer">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vestimenta"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Kung_Fu -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Kung_Fu">
@@ -11184,6 +12867,15 @@ Requisitos: Acrobacias 40, Trucos de manos 40 y Estilo 20.
 Conocimiento marcial: +10
 
 Bono: +10 variable.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Kusari-Gama -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Kusari-Gama">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arma_Exótica"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hoz oriental, con una cadena en su parte inferior que se utiliza para apresar a los oponentes. Aunque se usa a dos manos, no dobla el bono de Fuerza. Puede emplearse para atacar de manera convencional, o arrojar la cadena para sujetar al adversario, en cuyo caso sólo provoca un daño base de 10.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -11250,6 +12942,24 @@ Mantenimiento: No</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Lanza -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Lanza">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arma_Común"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La lanza es el arma de asta por excelencia. Consiste en un largo palo de madera o metal, acabado en una fina punta de doble filo. Muy propicia para ser usada sobre una montura o mantener a los enemigos a distancia. Mide entre 150 y 220 centímetros. Aunque puede emplearse con una sola mano, esgrimirla de ese modo penaliza la habilidad de ataque en -10, salvo si se usa para resistir una carga.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Lanza_de_Caballería -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Lanza_de_Caballería">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arma_Común"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Versión más larga y pesada de la lanza tradicional. Dado que mide entre 3 y 4 metros, sólo se usa a caballo. Si se emplea con la finalidad de parar un golpe, el defensor aplica un penalizador de –30 a su habilidad.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Las_Escamas -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Las_Escamas">
@@ -11279,6 +12989,15 @@ CON 4
 AGI 4
 FUE 2
 Efectos: +1 ataque adicional, +40 al daño.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Lazo -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Lazo">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arma_Común"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Un lazo es una cuerda preparada con un nudo corredizo para sujetar animales y personas. Como regla especial, no aplica el bono de Fuerza del personaje para calcular su daño. Requiere ambas manos para usarla.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -11357,6 +13076,14 @@ Efectos: +40 al ataque, Ataque a distancia: 20 metros.</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Leche -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Leche">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Bebida"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Lectura_Mental -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Lectura_Mental">
@@ -11400,6 +13127,14 @@ Avanzado: RM o RP 140.
 Arcano: RM o RP 180.
 Mantenimiento: 10 / 20 / 20 / 25
 Vías Cerradas: Oscuridad</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Lencería -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Lencería">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vestimenta"/>
     </owl:NamedIndividual>
     
 
@@ -11619,11 +13354,51 @@ Vías Cerradas: Tierra</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_en_Blanco_Grande -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_en_Blanco_Grande">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Utiles_Varios"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_en_Blanco_Pequeño -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_en_Blanco_Pequeño">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Utiles_Varios"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Liderazgo -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Liderazgo">
         <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Social"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Refleja el carisma y la capacidad de ganarse la confianza de las personas a su cargo, incluso en condiciones difíciles. Es la aptitud que todo monarca, general o cabecilla tiene para mandar y conseguir que los demás le sigan. Un líder carismático puede levantar la moral a sus tropas en la peor de las situaciones o mandarlas a la muerte sin escuchar una sola queja. Sus efectos son completamente interpretativos.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Liga_de_Caza -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Liga_de_Caza">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Utiles_Varios"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Linterna_de_Aceite -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Linterna_de_Aceite">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Utiles_Varios"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Linterna_de_Velas -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Linterna_de_Velas">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Utiles_Varios"/>
     </owl:NamedIndividual>
     
 
@@ -11765,6 +13540,15 @@ Intermedio: 80 Puntos de Vida.
 Avanzado: 120 Puntos de Vida.
 Arcano: 250 Puntos de Vida.
 Mantenimiento: No</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Látigo -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Látigo">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arma_Común"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Un látigo es una cuerda o cadena convenientemente tratada para ser utilizada como un arma. Se usa con rápidos movimientos de muñeca y es capaz de cortar o apresar.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -12001,6 +13785,40 @@ Mantenimiento: 5 / 10 / 15 / 20 Diario</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Mandoble -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Mandoble">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arma_Común"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El mandoble es la mayor de todas las espadas, que llega a medir hasta 160 centímetros. Usada casi exclusivamente a dos manos, es un arma imprecisa pero mortal.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Mangual -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Mangual">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arma_Común"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mayal de enormes dimensiones. Tiene varias cadenas, acabadas en esferas metálicas con pinchos.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Mansión -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Mansión">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vivienda"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Manta -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Manta">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Utiles_Varios"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Mantenimiento -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Mantenimiento">
@@ -12110,6 +13928,23 @@ Mantenimiento: 10 / 15 / 20 / 25 Diario</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Martillo -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Martillo">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arma_Improvisada"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Martillo_de_Guerra -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Martillo_de_Guerra">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arma_Común"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Arma contundente, consistente en una vara coronada por un gran martillo de acero.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Matar -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Matar">
@@ -12150,6 +13985,33 @@ Intermedio: 10.000 cuerpos humanos.
 Avanzado: 100.000 cuerpos humanos.
 Arcano: 1.000.000 de cuerpos humanos.
 Mantenimiento: No</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Mayal -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Mayal">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arma_Común"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vara de madera o metal con una cadena acabada en una esfera metálica con pinchos. Existe una variación con multitud de cadenas de menor tamaño.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Maza -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Maza">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arma_Común"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vara de madera o metal de medio metro, terminada en una pesada esfera o cilindro.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Maza_Pesada_de_Combate -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Maza_Pesada_de_Combate">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arma_Común"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Adaptación pesada de la maza, con una vara de casi un metro y coronada con un peso de enormes proporciones. Por su tamaño, se utiliza generalmente con ambas manos.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -12431,6 +14293,14 @@ Descripción: Disminuye varias intensidades de un fuego ya existente. Si se usa 
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Mitones -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Mitones">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vestimenta"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Moai_Thai -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Moai_Thai">
@@ -12589,6 +14459,14 @@ Avanzado: Tipo de movimiento 14, 1.500 PV, Fuerza 14, Tamaño máximo 24.
 Arcano: Tipo de movimiento 15, 2.000 PV, Fuerza 15, Tamaño máximo 28.
 Mantenimiento: 10 / 15 / 15 / 20 Diario
 Vías Cerradas: Ilusión</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Monóculo -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Monóculo">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Utiles_Varios"/>
     </owl:NamedIndividual>
     
 
@@ -12795,6 +14673,14 @@ Descripción: Este poder ataca la mente de una persona, destrozándola completam
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Mula_de_Carga -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Mula_de_Carga">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Animales_de_Transporte"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Mundo_de_Mentiras -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Mundo_de_Mentiras">
@@ -12817,42 +14703,50 @@ Mantenimiento: 50 / 90 / 140 / 200 Diario</rdfs:comment>
     
 
 
-    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Municion_Arcos -->
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Munición_Arcos -->
 
-    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Municion_Arcos">
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Munición_Arcos">
         <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Municion_Ballesta -->
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Munición_Ballesta -->
 
-    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Municion_Ballesta">
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Munición_Ballesta">
         <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Municion_Cerbatana -->
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Munición_Cerbatana -->
 
-    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Municion_Cerbatana">
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Munición_Cerbatana">
         <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Municion_Honda -->
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Munición_Honda -->
 
-    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Municion_Honda">
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Munición_Honda">
         <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Municion_Polvora -->
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Munición_Pólvora -->
 
-    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Municion_Polvora">
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Munición_Pólvora">
         <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Muscarina -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Muscarina">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Venenos"/>
     </owl:NamedIndividual>
     
 
@@ -13151,6 +15045,15 @@ Mantenimiento: 10 / 20 / 25 / 30</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Nodachi -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Nodachi">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arma_Exótica"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Versión grande de la katana, de forma y funcionamiento similares, pero mucho más larga y gruesa.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Nova -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Nova">
@@ -13205,6 +15108,15 @@ Avanzado: 500 metros de radio.
 Arcano: 1 kilómetro de radio.
 Mantenimiento: 10 / 15 / 20 / 30 Diario
 Vías Cerradas: Fuego y Tierra</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Nunchaku -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Nunchaku">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arma_Exótica"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dos palos cortos de madera o metal, sujetos por una cadena.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -13383,6 +15295,14 @@ Mantenimiento: 10 / 15 / 15 / 20 Diario</rdfs:comment>
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ocultismo">
         <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Intelectual"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El conocimiento de los campos sobrenaturales desde el punto de vista mitológico. Esta es la habilidad que permite reconocer el significado de dagas rituales o los métodos tradicionales de acabar con un licántropo. A consideración del Director de Juego, es posible utilizarla para reconocer criaturas de carácter sobrenatural.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Odre -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Odre">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Utiles_Varios"/>
     </owl:NamedIndividual>
     
 
@@ -13583,6 +15503,22 @@ Mantenimiento: No</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Palacio -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Palacio">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vivienda"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Palo_de_Madera -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Palo_de_Madera">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arma_Improvisada"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Pantalla_de_Aire -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Pantalla_de_Aire">
@@ -13623,6 +15559,30 @@ Intermedio: 1.500 puntos de Resistencia.
 Avanzado: 2.500 puntos de Resistencia.
 Arcano: 4.000 puntos de Resistencia.
 Mantenimiento: 10 / 10 / 15 / 15</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Pantalón -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Pantalón">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vestimenta"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Papel -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Papel">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Utiles_Varios"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Papiro -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Papiro">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Utiles_Varios"/>
     </owl:NamedIndividual>
     
 
@@ -13672,6 +15632,14 @@ Vías Cerradas: Aire</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Pasador -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Pasador">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Orfebrería"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Pasar_Sin_Dejar_Marca -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Pasar_Sin_Dejar_Marca">
@@ -13691,6 +15659,30 @@ Avanzado: Presencia máxima 240 / La dificultad para rastrearle aumenta a Inhuma
 Arcano: Presencia máxima 320 / La dificultad para rastrearle aumenta a Zen.
 Mantenimiento: 10 / 15 / 25 / 35 Diario
 Vías Cerradas: Luz</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Pañuelo -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Pañuelo">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vestimenta"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Peineta -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Peineta">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Orfebrería"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Pendiente -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Pendiente">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Orfebrería"/>
     </owl:NamedIndividual>
     
 
@@ -13819,6 +15811,54 @@ Mantenimiento: 5 / 10 / 15 / 15</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Perfume_Bueno -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Perfume_Bueno">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Utiles_Varios"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Perfume_Excelente -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Perfume_Excelente">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Utiles_Varios"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Perfume_Normal -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Perfume_Normal">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Utiles_Varios"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Pergamino -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Pergamino">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Utiles_Varios"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Perla -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Perla">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Gemas"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Perla_Negra -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Perla_Negra">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Gemas"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Personaje -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Personaje">
@@ -13896,6 +15936,14 @@ Mantenimiento: 10 / 10 / 15 / 20 Diario</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Pico -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Pico">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arma_Improvisada"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Piedra -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Piedra">
@@ -13904,6 +15952,22 @@ Mantenimiento: 10 / 10 / 15 / 20 Diario</rdfs:comment>
 Calidad Máxima: +0
 Disponibilidad: Común
 Descripción: La piedra ha sido desde el principio de la historia uno de los materiales más utilizados en la construcción, por su excepcional disponibilidad y la sencillez de su usanza.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Piedra_de_Afilar -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Piedra_de_Afilar">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Utiles_Varios"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Piedra_de_Honda -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Piedra_de_Honda">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Munición_Honda"/>
     </owl:NamedIndividual>
     
 
@@ -13934,6 +15998,15 @@ Mantenimiento: 25 / 30 / 30 / 35 Diario</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Piroquinesis">
         <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Disciplina"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Pistola_de_Mecha -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Pistola_de_Mecha">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arma_de_Pólvora"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Una versión reducida y más compleja del arcabuz, que puede dispararse con una sola mano. Como su hermano mayor, tiene su propia Fuerza, que es de 9, por lo que suma un bono de +10 al daño base de sus balas. Si se obtiene una Pifia con la pistola inferior a 80, el arma se encasquilla. Si es superior, estalla. Cada +5 del arma, además de aumentar su precisión, suma un punto a la Fuerza con la que dispara, al igual que aumenta en 15 el nivel de Pifia requerido para que el arma reviente.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -14396,11 +16469,27 @@ proyección mágica no aplica ninguno de los penalizadores de combate ni para at
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Pulsera -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Pulsera">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Orfebrería"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Puntos_Ki -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Puntos_Ki">
         <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ki"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Los puntos de Ki miden el potencial de la energía interna del personaje. Cuantos más posea, habrá conseguido despertar una mayor cantidad de poder. Estos puntos dependen de algunas de las características primarias: Fuerza, Destreza, Agilidad, Constitución, Poder y Voluntad. Para calcular cuánto Ki tiene un personaje, debemos fijarnos en el valor de sus características. Cada punto que el personaje tenga en uno de esos seis atributos que no supere el 10, proporciona uno de Ki. Por tanto, si posee Fuerza 7, tiene 7 puntos de Ki gracias su Fuerza. Aquellos que sobrepasen el 10, otorgan el doble de puntos; alguien con Destreza 13 tendría 16 de Ki. Para saber cuantos puntos de Ki tiene en total un personaje, se ha de sumar los puntos que haya obtenido en todas sus características. A esa suma se la llama reserva de Ki</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Pura_Sangre -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Pura_Sangre">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Animales_de_Transporte"/>
     </owl:NamedIndividual>
     
 
@@ -14424,6 +16513,15 @@ Avanzado: Nivel máximo del veneno 70.
 Arcano: Nivel máximo del veneno 90.
 Mantenimiento: No
 Vías Cerradas: Creación</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Quebradora -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Quebradora">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arma_Exótica"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La quebradora o rompearmas es una espada corta de gran peso y una anchura superior a 25 centímetros. Dada su enorme contundencia, se utiliza comúnmente para partir las armas y armaduras de los contrincantes.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -14490,6 +16588,38 @@ Intermedio: 20 metros de radio / RM 100.
 Avanzado: 50 metros de radio / RM 120.
 Arcano: 100 metros de radio / RM 140.
 Mantenimiento: 10 / 10 / 15 / 20</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Raciones_de_Viaje_Buenas -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Raciones_de_Viaje_Buenas">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Raciones"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Raciones_de_Viaje_Excelentes -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Raciones_de_Viaje_Excelentes">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Raciones"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Raciones_de_Viaje_Mediocres -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Raciones_de_Viaje_Mediocres">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Raciones"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Raciones_de_Viaje_Normales -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Raciones_de_Viaje_Normales">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Raciones"/>
     </owl:NamedIndividual>
     
 
@@ -14730,6 +16860,16 @@ Vías Cerradas: Ninguna</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Red_de_Gladiador -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Red_de_Gladiador">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arma_Común"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Una estrecha red dotada de garfios, preparada para sujetar a la persona sobre la que se lance. A pesar de ser un arma física, tiene un área de 3 metros al
+atacar, y puede abarcar a varios blancos. No aplica el bono de Fuerza del personaje, ni tampoco el penalizador de -40 a la habilidad, al ejecutar maniobras de Presa con ella.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Reducción_de_Daño -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Reducción_de_Daño">
@@ -14919,6 +17059,14 @@ Intermedio: 500 metros de radio.
 Avanzado: 1 kilómetro de radio.
 Arcano: 1 kilómetros de radio / +30 al ACT al lanzar conjuros oscuros.
 Mantenimiento: 10 / 20 / 25 / 25</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Reloj_de_Arena -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Reloj_de_Arena">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Utiles_Varios"/>
     </owl:NamedIndividual>
     
 
@@ -15200,6 +17348,31 @@ Vías Cerradas: Ninguna</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Rodela -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Rodela">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Escudo"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Escudo pequeño de un tamaño no superior a 30 centímetros. La principal ventaja de la rodela es que se acopla directamente al antebrazo, por lo que puede utilizarse incluso con armas a dos manos.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Ropa_Interior_Fenenina -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ropa_Interior_Fenenina">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vestimenta"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Rosario -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Rosario">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Orfebrería"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Rotura -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Rotura">
@@ -15218,6 +17391,23 @@ Intermedio: +8 a la rotura.
 Avanzado: +12 a la rotura.
 Arcano: +15 a la rotura.
 Mantenimiento: 10 / 10 / 15 / 15</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Rubí -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Rubí">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Gemas"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Sable -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Sable">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arma_Común"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hoja curva y ligera de menor tamaño y resistencia que una espada larga, pero mucho más manejable.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -15288,6 +17478,39 @@ Mantenimiento: 10 / 10 / 15 / 15 Diario</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Saeta -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Saeta">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Munición_Ballesta"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Saeta_Ligera -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Saeta_Ligera">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Munición_Ballesta"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Saeta_Pesada -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Saeta_Pesada">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Munición_Ballesta"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Sai -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Sai">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arma_Exótica"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cuchillo punzante oriental con forma de tridente para detener los ataques de otras armas.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Saltar -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Saltar">
@@ -15350,6 +17573,14 @@ Bono: +10 a la habilidad de parada sin armas.</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#San_Bernardo -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#San_Bernardo">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Animales_de_Transporte"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Sanación -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Sanación">
@@ -15368,6 +17599,14 @@ Intermedio: 40% de puntos de vida.
 Avanzado: 60% de puntos de vida.
 Arcano: 80% de puntos de vida.
 Mantenimiento: No</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Savia_de_Ramalen -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Savia_de_Ramalen">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Venenos"/>
     </owl:NamedIndividual>
     
 
@@ -15779,11 +18018,37 @@ Bono: +10 a la habilidad de ataque sin armas.</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Shuko -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Shuko">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arma_Exótica"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Artilugio en forma de garras, que se lleva en la palma de las manos. Se utiliza como arma y como apoyo para trepar, habilidad en la que otorga un bono de +10.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Shuriken -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Shuriken">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arma_Exótica"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pequeñas armas orientales de metal, que se emplean exclusivamente lanzándolas. Pueden tener formas muy diversas, desde superficies afiladas a cuchillas con forma de estrella.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Sigilo -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Sigilo">
         <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Subterfugio"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Permite realizar acciones sin ser percibido por los demás, como desplazarse, trepar o incluso desenfundar un arma en completo silencio. El Sigilo se enfrenta directamente a la capacidad de Advertir de otros individuos. Si la habilidad de sigilo del personaje es superior a la de Advertir de alguien que no sabe que se encuentra cerca, este sorprenderá a su adversario. Cuando un personaje se mueve en silencio debe restar cuatro puntos a su Tipo de movimiento, o aplicará un penalizador de –80 a su habilidad. También puede usarse para evitar dejar rastros, en cuyo caso se enfrentaría directamente a la pericia de Rastreo de sus perseguidores sin aplicar ningun modificador. Sufre el penalizador por armadura, pero al contrario de lo que ocurre en otras habilidades, el negativo sólo puede reducirse hasta la mitad de su valor mediante la capacidad de Llevar Armadura.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Silla -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Silla">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arma_Improvisada"/>
     </owl:NamedIndividual>
     
 
@@ -15828,6 +18093,14 @@ Intermedio: +150 en Sigilo, Ocultarse y Valoración Mágica.
 Avanzado: +200 en Sigilo, Ocultarse y Valoración Mágica.
 Arcano: +250 en Sigilo, Ocultarse y Valoración Mágica.
 Mantenimiento: 5 / 15 / 20 / 25</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Sombrero -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Sombrero">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vestimenta"/>
     </owl:NamedIndividual>
     
 
@@ -16392,11 +18665,36 @@ Mantenimiento: No</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Talio -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Talio">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Venenos"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Tamaño -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tamaño">
         <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Característica_Secundaria"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El Tamaño indica las medidas y el peso del personaje, es decir, lo pequeño o grande que es. Para calcularlo se suman las dos características físicas Fuerza y Constitución.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Tanto -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tanto">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arma_Exótica"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Arma de diseño oriental. Parecida a la katana, pero menor.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Tapices -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tapices">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Decoración"/>
     </owl:NamedIndividual>
     
 
@@ -16612,10 +18910,51 @@ Mantenimiento: 35 / 60 / 90 / 150</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Tipo_Armas_Cortas -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tipo_Armas_Cortas">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tipos_Armas"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Tipo_Asta -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tipo_Asta">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tipos_Armas"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Las armas de asta son las que están compuestas por un palo largo terminado en algún tipo de artilugio. Suelen usarse con ambas manos. Son de tamaño Grande (G).</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Tipo_Ataque -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tipo_Ataque">
         <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Tipo_Cuerda -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tipo_Cuerda">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tipos_Armas"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Tipo_Espada -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tipo_Espada">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tipos_Armas"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Tipo_Hacha -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tipo_Hacha">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tipos_Armas"/>
     </owl:NamedIndividual>
     
 
@@ -16656,6 +18995,30 @@ Mantenimiento: 35 / 60 / 90 / 150</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Tipo_Mandoble -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tipo_Mandoble">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tipos_Armas"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Tipo_Maza -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tipo_Maza">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tipos_Armas"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Tipo_Mixtas -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tipo_Mixtas">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tipos_Armas"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Tipo_Movimiento -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tipo_Movimiento">
@@ -16665,18 +19028,35 @@ Mantenimiento: 35 / 60 / 90 / 150</rdfs:comment>
     
 
 
-    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Tipo_Municion -->
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Tipo_Munición -->
 
-    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tipo_Municion">
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tipo_Munición">
         <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Tipologia_Armas -->
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Tipo_Sin_Armas -->
 
-    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tipologia_Armas">
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tipo_Sin_Armas">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tipos_Armas"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Tipos_Armas -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tipos_Armas">
         <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Tonfa -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tonfa">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arma_Exótica"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Porra oriental en forma de L, que se utiliza sujetándola lateralmente al antebrazo.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -16721,6 +19101,30 @@ Intermedio: 150 metros de radio.
 Avanzado: 500 metros de radio / La RF se incrementa hasta 160.
 Arcano: 1 kilómetro de radio / La RF se incrementa hasta 180.
 Mantenimiento: 10 / 10 / 15 / 15</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Toro_de_Carga -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Toro_de_Carga">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Animales_de_Transporte"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Toro_de_Monta -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Toro_de_Monta">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Animales_de_Transporte"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Traje_de_Gala -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Traje_de_Gala">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vestimenta"/>
     </owl:NamedIndividual>
     
 
@@ -16930,6 +19334,23 @@ Descripción: Permite al psíquico proyectar uno de sus sentidos hasta una dista
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Tridente -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tridente">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arma_Común"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lanza acabada en tres puntas. Su diseño permite lanzarla. Es ligeramente más grande que el tridente que se usa simplemente para pescar.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Trineo -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Trineo">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Transporte_Terrestre"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Trucos_de_Manos -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Trucos_de_Manos">
@@ -16961,6 +19382,15 @@ Mantenimiento: No</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Turcus -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Turcus">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arma_Lanzable"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Arma indígena con la forma de una cuchilla circular, que se utiliza como objeto arrojadizo. También se la conoce como chakram en otras culturas. Es capaz de regresar tras su lanzamiento si no impacta con ningún blanco, pero se requiere superar un control de Trucos de manos contra una dificultad de Muy Difícil (MDF).</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Técnica_de_Dominio -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Técnica_de_Dominio">
@@ -16970,6 +19400,14 @@ Mantenimiento: No</rdfs:comment>
 Las Técnicas permiten a los individuos que las utilizan emplear su energía interna para ejecutar acciones sorprendentes. Por ejemplo, una Técnica puede ser ejecutada para proyectar un ataque a distancia o multiplicar su velocidad, y realizar así varias acciones sin penalizadores en un solo asalto. Es importante tener en cuenta que cada Técnica es visualmente distinta a las demás, incluso si tienen los mismos efectos. Un ataque que permita a un luchador impactar a un enemigo a distancia puede consistir en, desde efectuar un simple tajo en el aire, hasta lanzar el arma como un torbellino de energía. Ambos ataques tienen la misma finalidad, pero su apariencia varía según el estilo que quiera darle cada individuo. Es el propio jugador o el Director de Juego quien debe encargarse de desarrollar su forma en cada caso. 
 
 El uso de una Técnica es un acto pasivo, pero está ligado a la acción que pretende potenciar. Si la Técnica es un ataque, es necesario que el personaje tenga la oportunidad de atacar; si es una defensa, basta simplemente con ser capaz de realizar un control de parada o esquiva. Aquellas que otorguen habilidades especiales, como teletransportes o armas de energía, requieren siempre que el personaje pueda realizar una acción activa. Para usar una Técnica es necesario declararla antes de realizar ninguna tirada de dados. En el caso de que modifique una habilidad enfrentada, como la defensa o el ataque, hay que declararla antes de que alguno de los contendientes lance los dados. Si modifica el turno, debe hacerse antes de que se calcule la iniciativa, incluso si al final no se ejecuta. Las Técnicas consumen puntos de Ki. Cada vez que un personaje utiliza una de ellas, debe de gastar el Ki de su reserva.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Túnica -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Túnica">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vestimenta"/>
     </owl:NamedIndividual>
     
 
@@ -17336,6 +19774,15 @@ Mantenimiento: 25 / 40 / 45 / 55</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Vara -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vara">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arma_Común"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bastón de madera o metal que llega a medir más de dos metros. Aunque puede emplearse con una sola mano, esgrimirla de ese modo penaliza la habilidad de ataque en -10.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Vasallaje -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vasallaje">
@@ -17373,6 +19820,30 @@ FUE 1
 CON 3
 Efectos: +75 al ataque, +75 al daño, +40 al crítico.
 Requisitos: Mantener activo Feuer</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Velero_de_1_Palo -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Velero_de_1_Palo">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Embarcaciones"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Velero_de_2_Palos -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Velero_de_2_Palos">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Embarcaciones"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Velero_de_3_Palos -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Velero_de_3_Palos">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Embarcaciones"/>
     </owl:NamedIndividual>
     
 
@@ -17450,6 +19921,22 @@ Intermedio: Veneno Nivel 50.
 Avanzado: Veneno Nivel 60.
 Arcano: Veneno Nivel 70.
 Mantenimiento: No</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Veneno_de_Cobra_Blanca -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Veneno_de_Cobra_Blanca">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Venenos"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Veneno_de_Serpiente -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Veneno_de_Serpiente">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Venenos"/>
     </owl:NamedIndividual>
     
 
@@ -17570,10 +20057,58 @@ Mantenimiento: No</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Vestido -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vestido">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vestimenta"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Vestido_de_Gala -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vestido_de_Gala">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vestimenta"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Vestimenta -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vestimenta">
         <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Vestimenta_Buena -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vestimenta_Buena">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Calidad_Vestimenta"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Vestimenta_Mediocre -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vestimenta_Mediocre">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Calidad_Vestimenta"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Vestimenta_Normal -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vestimenta_Normal">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Calidad_Vestimenta"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Vestimenta_de_Lujo_o_de_Diseño -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vestimenta_de_Lujo_o_de_Diseño">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Calidad_Vestimenta"/>
     </owl:NamedIndividual>
     
 
@@ -17608,6 +20143,14 @@ Mantenimiento: 15 / 20 / 30 / 35 Diario</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Vinagre_de_Saturno -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vinagre_de_Saturno">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Venenos"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Vincular_Mantenimiento -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vincular_Mantenimiento">
@@ -17627,6 +20170,46 @@ Avanzado: RM 160.
 Arcano: RM 180.
 Mantenimiento: No
 Vías Cerradas: Ninguna</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Vino_Bueno -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vino_Bueno">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Bebida"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Vino_Excelente -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vino_Excelente">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Bebida"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Vino_Normal -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vino_Normal">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Bebida"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Virote_Ligero -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Virote_Ligero">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Munición_Asedio"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Virote_Pesado -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Virote_Pesado">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Munición_Asedio"/>
     </owl:NamedIndividual>
     
 
@@ -17680,6 +20263,46 @@ Mantenimiento: 15 / 20 / 25 / 35 Diario</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vivienda">
         <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Vivienda_Buena -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vivienda_Buena">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Calidad_Vivienda"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Vivienda_Lujosa -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vivienda_Lujosa">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Calidad_Vivienda"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Vivienda_Mediocre -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vivienda_Mediocre">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Calidad_Vivienda"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Vivienda_Normal -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vivienda_Normal">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Calidad_Vivienda"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Vivienda_de_Área_Metropolitana -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vivienda_de_Área_Metropolitana">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Calidad_Vivienda"/>
     </owl:NamedIndividual>
     
 
@@ -18442,6 +21065,22 @@ Apariencia habitual: Frecuentemente aparece bajo la forma de un simple gato negr
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Zafiro -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Zafiro">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Gemas"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Zapatos -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Zapatos">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Calzado"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Zen_Ki -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Zen_Ki">
@@ -18599,6 +21238,22 @@ Mantenimiento: 35 / 50 / 80 / 150 Diario</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Zuecos -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Zuecos">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Calzado"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Zumos -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Zumos">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Bebida"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Área_Sentiente -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Área_Sentiente">
@@ -18676,6 +21331,14 @@ Mantenimiento: 10 / 10 / 15 / 15</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Ópalo_Negro -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ópalo_Negro">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Gemas"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#0_El_Loco -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#0_El_Loco">
@@ -18716,6 +21379,78 @@ Efecto: El Loco provoca que cualquier invocación que se realice en su presencia
 Duración: Un minuto por cada 10 puntos que supere la dificultad requerida.
 
 Apariencia habitual: Toma la forma de un vagabundo deforme con un hatillo a su espalda. Aparece alrededor del invocador y se marcha por el lugar más ilógico posible, como debajo de una piedra.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Armadura_+0 -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Armadura_+0">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Calidad_Armadura"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Armadura_+5 -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Armadura_+5">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Calidad_Armadura"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Cadena_Ligera_(1_m) -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Cadena_Ligera_(1_m)">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Utiles_Varios"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Cadena_Pesada_(1_m) -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Cadena_Pesada_(1_m)">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Utiles_Varios"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Cuerda_Buena_(10_m) -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Cuerda_Buena_(10_m)">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Utiles_Varios"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Cuerda_Excelente_(10_m) -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Cuerda_Excelente_(10_m)">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Utiles_Varios"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Cuerda_Normal_(10_m) -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Cuerda_Normal_(10_m)">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Utiles_Varios"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Escalera_de_Cuerda_(10_m) -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Escalera_de_Cuerda_(10_m)">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Utiles_Varios"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Lona_(1_m_cuadrado) -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Lona_(1_m_cuadrado)">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Utiles_Varios"/>
     </owl:NamedIndividual>
     
 
@@ -18788,6 +21523,14 @@ El descomunal poder que poseen las almas de los Duk´zarist se manifiesta con fu
 • Alergia al metal: La única debilidad de los Duk´zarist en vida era su vulnerabilidad a los metales, especialmente hacia el hierro y las aleaciones que lo contenían. Un Duk´zarist podía llegar incluso a morir por el simple contacto con el metal, y las espadas les hacían mucho más daño por su material que por el filo en sí. Aunque de un modo extremadamente limitado, los Nephilim han heredado parte de esta desventaja que aun ahora les afecta. Si pone su piel en contacto con un metal que contenga una aleación de hierro, deberá superar un control usando su presencia base contra una dificultad de 60, o sufrirá una reacción adversa que le produce un negativo a la acción equivalente a la cantidad por la que falló la tirada. Si el metal es hierro puro, la tirada es contra 80.Estos negativos desaparecen a un ritmo de 10 puntos por minuto. Un Nephilim Duk´zarist puede utilizar ropas y guantes para evitar estos efectos.
 
 • Alma inmortal: De igual manera que el alma Duk´zarist está mucho más presente en sus formas físicas que en otros Nephilim, la pugna entre lo que aprenden y sus antiguos recuerdos es muy fuerte en ellos. Por ello, sufren un penalizador de -5 puntos a la experiencia que otorgue el Director de Juego al finalizar cada sesión.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Red_de_Pesca_(1_m) -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Red_de_Pesca_(1_m)">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Utiles_Varios"/>
     </owl:NamedIndividual>
     
 
@@ -18887,6 +21630,9 @@ determinados sobre la categoría que vamos a elegir.Existen seis arquetipos, que
     </rdf:Description>
     <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Celéritas">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Celéritas es un arte que se basa principalmente en la velocidad. Controlando la energía del cuerpo para potenciar sus sentidos, un practicante de este estilo es capaz de reaccionar a la velocidad del pensamiento, adelantándose a las acciones de cualquiera de sus contrincantes. Todas las técnicas de Celéritas están enfocadas al ataque: es un arte que no requiere defensa alguna, solo avanza y somete.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Cerbatana">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Se trata de un tubo de madera o metal hueco, de 30 a 90 centímetros de largo. Se usa para disparar dardos pequeños, usualmente llenos de veneno. Como regla especial, la cerbatana no aplica el bono de Fuerza del personaje para calcular su daño. Requiere ambas manos para usarla.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Clase_Social">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Normalmente, los personajes comenzarán la partida con una cantidad de dinero inicial para realizar pequeños gastos y poder equiparse. Cada jugador puede justificar como desee el origen de este dinero: una herencia, su propio trabajo o un casual golpe de suerte. Quienes posean habilidades de combate pueden comenzar adicionalmente con el arma básica que saben utilizar, o en su defecto, con alguna armadura de escaso valor. Para determinar los fondos iniciales de un personaje, debe atenderse a su clase social. Su origen indica la cantidad de la que inicialmente se dispone.</rdfs:comment>
@@ -18990,6 +21736,9 @@ este afecta a todos sus poderes.</rdfs:comment>
     <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Vigor">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Son las habilidades que recogen aquellas pericias basadas en el esfuerzo corporal, el aguante físico y la resistencia mental.</rdfs:comment>
     </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Honda">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pedazo de cuero atado a una cuerda, con el que se lanzan piedras haciéndolo girar.</rdfs:comment>
+    </rdf:Description>
     <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ignis">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ignis es la esencia del fuego, un estilo que permite a sus usuarios producir potentes llamaradas gracias al Ki. Sus ataques son excepcionalmente destructivos, y resulta prácticamente imposible contenerlos. Se trata de un estilo de procedencia no humana, que ha sido empleado por muchos Duk´zarist. Toda la tabla de Ignis sufre la desventaja Atadura elemental hacia el fuego.</rdfs:comment>
     </rdf:Description>
@@ -19044,19 +21793,19 @@ El poder de la magia no es uniforme. Al mezclarse con las almas, se nutre de su 
 
 No todas las personas son capaces de controlar el poder de las almas. Hacerlo no resulta fácil ni siquiera para los propios espíritus sobrenaturales. Sin embargo, algunos sujetos nacen con la capacidad de sentir la magia, dejarla fluir por su cuerpo y encauzar su energía mediante conjuros. Estos individuos son brujos, aquellos que han nacido con el don de alterar la realidad a su antojo. Los brujos son una luz en las tinieblas para la magia, núcleos en torno a los cuales se acumula su poder. Actúan como portales para que esta se manifieste en el mundo físico: la magia se reúne a su alrededor, penetra en ellos y crece en sus almas hasta que se exterioriza mediante un conjuro. En realidad, los hechizos no son nada más que una manera de controlar la existencia y alterar sus reglas. Los brujos utilizan su energía sobrenatural para tejer sortilegios que se enmarañan en la propia esencia de la realidad. Las gesticulaciones y los versos son palabras que los magos susurran al alma del mundo para canalizar mejor sus energías, pero no son necesarios para alterar la realidad. A un brujo le basta su propia voluntad para manejar la magia y lanzar un conjuro, aunque al utilizar los rituales puede aumentar considerablemente su poder. Cada hechicero conoce sus propias fórmulas para modificar la existencia. Un mago crea sus sortilegios utilizando los conocimientos y medios que tiene a su alcance, porque la ejecución de la magia puede ser muy diferente de una persona a otra.</rdfs:comment>
     </rdf:Description>
-    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Municion_Arcos">
+    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Munición_Arcos">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Variedad de proyectil que se utiliza para arcos.</rdfs:comment>
     </rdf:Description>
-    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Municion_Ballesta">
+    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Munición_Ballesta">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Variedad de proyectil que se utiliza para ballestas.</rdfs:comment>
     </rdf:Description>
-    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Municion_Cerbatana">
+    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Munición_Cerbatana">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Variedad de proyectil que se utiliza para cerbatanas.</rdfs:comment>
     </rdf:Description>
-    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Municion_Honda">
+    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Munición_Honda">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Variedad de proyectil que se utiliza para hondas.</rdfs:comment>
     </rdf:Description>
-    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Municion_Polvora">
+    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Munición_Pólvora">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Variedad de proyectil que se utiliza para armas de pólvora.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Organizacion">
@@ -19131,10 +21880,10 @@ Modificador: Siempre que un psíquico utilice uno de sus poderes telepáticos so
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">En primer lugar debemos saber que, cuando un arma se utiliza para atacar, lo
 hace empleando un tipo de ataque concreto. Existen siete clases distintas: Filo, Contundente, Penetrante, Calor, Frío, Electricidad y Energía.</rdfs:comment>
     </rdf:Description>
-    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tipo_Municion">
+    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tipo_Munición">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Variedad de proyectil que se utiliza para un tipo de arma concreto.</rdfs:comment>
     </rdf:Description>
-    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tipologia_Armas">
+    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tipos_Armas">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Categoría en la que se clasifican las armas.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Transporte">
