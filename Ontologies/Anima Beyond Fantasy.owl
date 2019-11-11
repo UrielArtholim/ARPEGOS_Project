@@ -65,7 +65,7 @@
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Arcano -->
 
     <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arcano">
-        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Invocacion"/>
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Invocación"/>
     </owl:Class>
     
 
@@ -236,6 +236,14 @@
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Beryl -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Beryl">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Luz_y_Tinieblas"/>
+    </owl:Class>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Calidad_Armadura -->
 
     <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Calidad_Armadura">
@@ -359,7 +367,7 @@
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Comida_Y_Bebida -->
 
     <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Comida_Y_Bebida">
-        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Equipamiento"/>
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Materiales_Forja"/>
     </owl:Class>
     
 
@@ -375,7 +383,7 @@
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Convocación -->
 
     <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Convocación">
-        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Mistica"/>
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Mística"/>
     </owl:Class>
     
 
@@ -383,7 +391,7 @@
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Crioquinesis -->
 
     <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Crioquinesis">
-        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Psiquica"/>
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Psíquica"/>
     </owl:Class>
     
 
@@ -449,7 +457,7 @@
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Disciplina -->
 
     <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Disciplina">
-        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Psiquica"/>
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Psíquica"/>
     </owl:Class>
     
 
@@ -481,7 +489,7 @@
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Energía -->
 
     <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Energía">
-        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Psiquica"/>
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Psíquica"/>
     </owl:Class>
     
 
@@ -495,21 +503,7 @@
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Escudo -->
 
     <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Escudo">
-        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Armas_Y_Escudos"/>
-    </owl:Class>
-    
-
-
-    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Especial -->
-
-    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Especial"/>
-    
-
-
-    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Especial_Armas -->
-
-    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Especial_Armas">
-        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Especial"/>
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arte_Y_Decoracion"/>
     </owl:Class>
     
 
@@ -582,9 +576,9 @@
     
 
 
-    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Mistica -->
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Mística -->
 
-    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Mistica">
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Mística">
         <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Primaria"/>
     </owl:Class>
     
@@ -606,9 +600,9 @@
     
 
 
-    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Psiquica -->
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Psíquica -->
 
-    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Psiquica">
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Psíquica">
         <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Primaria"/>
     </owl:Class>
     
@@ -665,14 +659,14 @@
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Incremento_Físico -->
 
     <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Incremento_Físico">
-        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Psiquica"/>
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Psíquica"/>
     </owl:Class>
     
 
 
-    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Invocacion -->
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Invocación -->
 
-    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Invocacion">
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Invocación">
         <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Convocación"/>
     </owl:Class>
     
@@ -862,10 +856,16 @@
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Luz_y_Tinieblas -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Luz_y_Tinieblas"/>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Magia -->
 
     <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Magia">
-        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Mistica"/>
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Mística"/>
     </owl:Class>
     
 
@@ -973,7 +973,7 @@
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Piroquinesis -->
 
     <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Piroquinesis">
-        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Psiquica"/>
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Psíquica"/>
     </owl:Class>
     
 
@@ -981,7 +981,7 @@
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Poder_Matricial -->
 
     <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Poder_Matricial">
-        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Psiquica"/>
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Psíquica"/>
     </owl:Class>
     
 
@@ -1035,7 +1035,7 @@
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Sentiente -->
 
     <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Sentiente">
-        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Psiquica"/>
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Psíquica"/>
     </owl:Class>
     
 
@@ -1043,6 +1043,14 @@
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Sexo -->
 
     <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Sexo"/>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Shajad -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Shajad">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Luz_y_Tinieblas"/>
+    </owl:Class>
     
 
 
@@ -1089,7 +1097,7 @@
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Telemetría_Psíquica -->
 
     <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Telemetría_Psíquica">
-        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Psiquica"/>
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Psíquica"/>
     </owl:Class>
     
 
@@ -1097,7 +1105,7 @@
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Telepatía -->
 
     <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Telepatía">
-        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Psiquica"/>
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Psíquica"/>
     </owl:Class>
     
 
@@ -1105,7 +1113,7 @@
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Telequinesis -->
 
     <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Telequinesis">
-        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Psiquica"/>
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Psíquica"/>
     </owl:Class>
     
 
@@ -1167,7 +1175,7 @@
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Utiles_Varios -->
 
     <owl:Class rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Utiles_Varios">
-        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Equipamiento"/>
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Calidad_Vestimenta"/>
     </owl:Class>
     
 
@@ -1301,6 +1309,51 @@ Vías Cerradas: Ninguna</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Acceso_Libre_a_Cualquier_Disciplina_Psíquica -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Acceso_Libre_a_Cualquier_Disciplina_Psíquica">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ventaja_Comun"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El personaje está dotado de la capacidad de emplear cualquier tipo de disciplina psíquica y sus habilidades. Efectos: Esta ventaja capacita al personaje a acceder libremente a tantas disciplinas psíquicas como desee empleando sus CV. Coste: 2</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Acceso_a_Poderes_Psíquicos_Naturales_1 -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Acceso_a_Poderes_Psíquicos_Naturales_1">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ventaja_Comun"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El personaje está dotado de una limitada capacidad psíquica que le permite utilizar inconscientemente una habilidad determinada. En realidad no tiene conocimiento del origen de su poder ni un completo control sobre él, pero es capaz de utilizarlo siempre que lo requiera. Efectos: El personaje es capaz de utilizar de manera natural un único poder mental determinado. En realidad no es un verdadero psíquico, por lo que no puede emplear CVs para adquirir nuevas habilidades ni para potenciar el poder que posee. Su potencial psíquico no se basa en su Voluntad ni requiere lanzar dados para calcularlo, sino que tiene automáticamente un valor de Difícil (DIF). El poder elegido puede ser de cualquier nivel, pero si tiene un requerimiento base superior a Difícil no es posible utilizarlo. Puede usarse una vez por minuto sin que el personaje sufra ningún tipo de penalización, pero cada uso adicional sin el periodo de descanso requerido causa la pérdida de un punto de Cansancio. Coste: 1</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Acceso_a_Poderes_Psíquicos_Naturales_2 -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Acceso_a_Poderes_Psíquicos_Naturales_2">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ventaja_Comun"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El personaje está dotado de una limitada capacidad psíquica que le permite utilizar inconscientemente una habilidad determinada. En realidad no tiene conocimiento del origen de su poder ni un completo control sobre él, pero es capaz de utilizarlo siempre que lo requiera. Efectos: El personaje es capaz de utilizar de manera natural un único poder mental determinado. En realidad no es un verdadero psíquico, por lo que no puede emplear CVs para adquirir nuevas habilidades ni para potenciar el poder que posee. Su potencial psíquico no se basa en su Voluntad ni requiere lanzar dados para calcularlo, sino que tiene automáticamente un valor de Muy Difícil (MDF). El poder elegido puede ser de cualquier nivel, pero si tiene un requerimiento base superior a Muy Difícil no es posible utilizarlo. Puede usarse una vez por minuto sin que el personaje sufra ningún tipo de penalización, pero cada uso adicional sin el periodo de descanso requerido causa la pérdida de un punto de Cansancio. Coste: 2</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Acceso_a_Poderes_Psíquicos_Naturales_3 -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Acceso_a_Poderes_Psíquicos_Naturales_3">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ventaja_Comun"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El personaje está dotado de una limitada capacidad psíquica que le permite utilizar inconscientemente una habilidad determinada. En realidad no tiene conocimiento del origen de su poder ni un completo control sobre él, pero es capaz de utilizarlo siempre que lo requiera. Efectos: El personaje es capaz de utilizar de manera natural un único poder mental determinado. En realidad no es un verdadero psíquico, por lo que no puede emplear CVs para adquirir nuevas habilidades ni para potenciar el poder que posee. Su potencial psíquico no se basa en su Voluntad ni requiere lanzar dados para calcularlo, sino que tiene automáticamente un valor de Absurdo (ABS). El poder elegido puede ser de cualquier nivel, pero si tiene un requerimiento base superior a Absurdo no es posible utilizarlo. Puede usarse una vez por minuto sin que el personaje sufra ningún tipo de penalización, pero cada uso adicional sin el periodo de descanso requerido causa la pérdida de un punto de Cansancio. Coste: 3</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Acceso_a_una_Disciplina_Psíquica -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Acceso_a_una_Disciplina_Psíquica">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ventaja_Comun"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El personaje está dotado de la capacidad de utilizar los poderes de una disciplina psíquica. Sus habilidades están limitadas a un único campo y, por mucho que aumente su potencial, no tendrá acceso a poderes que están más allá de sus capacidades naturales. Efectos: Esta ventaja permite utilizar un CV para adquirir afinidad a una única disciplina psíquica y a los poderes matriciales. Coste: 1</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Acechador -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Acechador">
@@ -1383,7 +1436,7 @@ Descripción: Es una aleación excepcionalmente rara. Se llama así por su color
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Acumulación_Turno -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Acumulación_Turno">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Mistica"/>
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Mística"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ACT es la abreviación de “ACumulación por Turno”, y representa la velocidad con la que un hechicero puede disponer de su poder. Cuanto más elevada sea su acumulación, el brujo podrá concentrar más rápido sus energías y realizar conjuros más poderosos en menos tiempo. Todas las personas tienen ACT y Zeon, aunque sólo quienes posean el Don son capaces de desarrollarlos.
 
 El ACT también se basa en la característica de Poder.</rdfs:comment>
@@ -1479,6 +1532,16 @@ Mantenimiento: 20 / 40 / 50 / 60</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Afinidad_Animal -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Afinidad_Animal">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ventaja_Comun"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Quien posea esta ventaja tiene un vínculo especial hacia los animales que le permite obtener una reacción positiva por su parte. Incomprensiblemente es incluso capaz de comunicarse de un modo limitado con ellos, entendiendo a rasgos generales cuáles son sus intenciones y viceversa. Efectos: El alcance de esta ventaja debe de ser interpretada por el Director de Juego. De cualquier modo, hay que explicar que un animal entrenado para atacar acabará haciéndolo a pesar de esta ventaja, pero probablemente lo hará tras una advertencia y dando siempre la oportunidad de escapar al personaje. En caso de que se fuerce un combate contra un animal, el personaje con esta ventaja será siempre la última persona a la que atacará si se encuentra en un grupo.
+Coste: 1</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Afinidad_Natural -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Afinidad_Natural">
@@ -1504,8 +1567,17 @@ Mantenimiento: 5 / 10 / 10 / 15 Diario</rdfs:comment>
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Afinidad_a_una_disciplina_psíquica -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Afinidad_a_una_disciplina_psíquica">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Psiquica"/>
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Psíquica"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Los personajes no poseen originalmente ninguna disciplina psíquica. Para tener acceso a los poderes de una, es necesario invertir un CV. Al hacerlo, el personaje consigue una afinidad hacia esa disciplina en concreto y, a partir de ese momento, puede dominar cualquiera de sus poderes invirtiendo nuevos CV. No hay límite en el número de disciplinas que puede adquirir mediante esta habilidad.  Esta habilidad consume permanentemente un CV libre.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Afortunado -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Afortunado">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ventaja_Comun"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Una persona afortunada es alguien que goza de verdadera suerte. En muchas ocasiones, podrá salir de situaciones difíciles utilizando únicamente su buena estrella. Efectos: El alcance de esta ventaja debe de ser interpretada por el Director de Juego. En cualquier caso, nunca sufrirá los efectos negativos de una trampa o de un ataque que se determinen mediante el azar. Coste: 1</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -1541,15 +1613,6 @@ Mantenimiento: No</rdfs:comment>
     
 
 
-    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Agua -->
-
-    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Agua">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Mágica"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El elemento del agua recoge dentro de sí muchos conceptos distintos. Es la vía que controla los líquidos y la pureza de las cosas. También representa el poder del hielo y el de las bajas temperaturas. Su poder es muy equilibrado ofensiva y defensivamente. La vía opuesta a Agua es Fuego.</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Aikido -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Aikido">
@@ -1563,15 +1626,6 @@ Requisitos: Trucos de manos 40.
 Conocimiento marcial: +10
 
 Bono: +10 a la habilidad de esquiva o parada sin armas.</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Aire -->
-
-    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Aire">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Mágica"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Es la vía de lo etéreo y lo incorpóreo. Recoge los conjuros de velocidad y movimiento. Con su poder se puede alterar el espacio y transportar cuerpos de un lugar a otro. También es la vía que controla el clima y la electricidad. La vía opuesta a Aire es Tierra.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -1748,6 +1802,15 @@ Mantenimiento: No</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Ambidestría -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ambidestría">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ventaja_Comun"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Una persona que goza de ambidestria tiene un perfecto control sobre ambas manos y puede utilizarlas con la misma habilidad. Efectos: Un personaje ambidiestro podrá efectuar maniobras con cualquier mano con idéntica habilidad. En combate, permite reducir a –10 los ataques efectuados con un arma adicional. Coste: 1</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Amistad -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Amistad">
@@ -1919,6 +1982,70 @@ Vías Cerradas: Destrucción y Fuego</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Aprendizaje_1 -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Aprendizaje_1">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ventaja_Comun"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El personaje tiene una enorme capacidad de aprendizaje para desarrollar su potencial, y saca siempre el máximo provecho a lo que ha visto o hecho. Efectos: Obtiene un beneficio adicional de 3 puntos de experiencia a la cantidad que le otorgue el Director de Juego al finalizar cada sesión de juego. Coste: 1</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Aprendizaje_2 -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Aprendizaje_2">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ventaja_Comun"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El personaje tiene una enorme capacidad de aprendizaje para desarrollar su potencial, y saca siempre el máximo provecho a lo que ha visto o hecho. Efectos: Obtiene un beneficio adicional de 6 puntos de experiencia a la cantidad que le otorgue el Director de Juego al finalizar cada sesión de juego. Coste: 2</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Aprendizaje_3 -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Aprendizaje_3">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ventaja_Comun"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El personaje tiene una enorme capacidad de aprendizaje para desarrollar su potencial, y saca siempre el máximo provecho a lo que ha visto o hecho. Efectos: Obtiene un beneficio adicional de 9 puntos de experiencia a la cantidad que le otorgue el Director de Juego al finalizar cada sesión de juego. Coste: 3</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Aprendizaje_Innato_1 -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Aprendizaje_Innato_1">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ventaja_Comun"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El personaje tiene una capacidad innata para mejorar en una habilidad secundaria. Sin esforzarse o practicarla, va perfeccionándola poco a poco. Efectos: Otorga un bono de categoría de +10 por nivel en una habilidad secundaria. Este bono se suma a cualquier otro bonificador innato que pudiera obtener el personaje gracias a su categoría. 
+Coste: 1</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Aprendizaje_Innato_2 -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Aprendizaje_Innato_2">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ventaja_Comun"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El personaje tiene una capacidad innata para mejorar en una habilidad secundaria. Sin esforzarse o practicarla, va perfeccionándola poco a poco. Efectos: Otorga un bono de categoría de +20 por nivel en una habilidad secundaria. Este bono se suma a cualquier otro bonificador innato que pudiera obtener el personaje gracias a su categoría. Coste: 1</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Aprendizaje_Innato_en_un_Campo_1 -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Aprendizaje_Innato_en_un_Campo_1">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ventaja_Comun"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Igual que en el anterior, salvo que en este caso el personaje mejora en todas las habilidades secundarias que pertenezcan a un campo determinado. Efectos: Otorga un bono de categoría de +5 por nivel a todas las habilidades de un campo. Estos bonificadores se suman a cualquier otro bono innato que pudiera obtener el personaje por su categoría. Coste: 2</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Aprendizaje_Innato_en_un_Campo_2 -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Aprendizaje_Innato_en_un_Campo_2">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ventaja_Comun"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Igual que en el anterior, salvo que en este caso el personaje mejora en todas las habilidades secundarias que pertenezcan a un campo determinado. Efectos: Otorga un bono de categoría de +10 por nivel a todas las habilidades de un campo. Estos bonificadores se suman a cualquier otro bono innato que pudiera obtener el personaje por su categoría. Coste: 3</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Aprendizaje_Lento_1 -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Aprendizaje_Lento_1">
@@ -1943,6 +2070,51 @@ Efectos: El personaje tiene un penalizador de 8 puntos de experiencia a los
 otorgados por el Director de Juego al finalizar la sesión.
 
 Beneficio: 2</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Apto_en_un_Campo -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Apto_en_un_Campo">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ventaja_Comun"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Igual que la anterior, sólo que en este caso el personaje tiene una gran capacidad de aprendizaje en los costes de todo un campo de habilidades secundarias. Efectos: El coste de desarrollo de un campo de habilidades secundarias se reduce en un punto. Si se da el caso de que la categoría del personaje posee una habilidad secundaria concreta dentro de dicho campo con un coste inferior al del resto de habilidades, este valor también se reducirá. Limitación: Los costes de desarrollo no pueden reducirse por debajo de 1. Esta ventaja sólo funciona con los costes de las habilidades secundarias. Coste: 2</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Apto_en_una_Materia -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Apto_en_una_Materia">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ventaja_Comun"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Representa que el personaje tiene una enorme capacidad de aprendizaje en una habilidad secundaria que le permite desarrollarla con muy poco esfuerzo, por debajo incluso de lo que su categoría indica. Efectos: Esta ventaja reduce un punto el coste de desarrollo de una habilidad secundaria. Limitación: Los costes de desarrollo no pueden reducirse por debajo de 1. Esta ventaja sólo funciona con los costes de las habilidades secundarias. Coste: 1</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Apto_en_una_Materia_2 -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Apto_en_una_Materia_2">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ventaja_Comun"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Representa que el personaje tiene una enorme capacidad de aprendizaje en una habilidad secundaria que le permite desarrollarla con muy poco esfuerzo, por debajo incluso de lo que su categoría indica. Efectos: Esta ventaja reduce dos puntos el coste de desarrollo de una habilidad secundaria. Limitación: Los costes de desarrollo no pueden reducirse por debajo de 1. Esta ventaja sólo funciona con los costes de las habilidades secundarias. Coste: 2</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Apto_en_una_Materia_3 -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Apto_en_una_Materia_3">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ventaja_Comun"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Representa que el personaje tiene una enorme capacidad de aprendizaje en una habilidad secundaria que le permite desarrollarla con muy poco esfuerzo, por debajo incluso de lo que su categoría indica. Efectos: Esta ventaja reduce tres punto el coste de desarrollo de una habilidad secundaria por cada Punto de Creación que se invierta. Limitación: Los costes de desarrollo no pueden reducirse por debajo de 1. Esta ventaja sólo funciona con los costes de las habilidades secundarias. Coste: 3</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Apto_para_el_Desarrollo_de_la_Magia -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Apto_para_el_Desarrollo_de_la_Magia">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ventaja_Mistica"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dota al personaje de la capacidad de comprender y alcanzar con sus conjuros niveles de poder muy superiores al que le permite su Inteligencia. Efectos: El personaje añade 3 puntos a su característica de Inteligencia para calcular la Inteligencia Requerida de los conjuros. Este bonificador no se aplica para ninguna otra habilidad, ni siquiera para calcular su nivel de magia. Coste: 1</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -2240,6 +2412,24 @@ Mantenimiento: 5 / 10 / 10 / 15</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Armadura_Mística -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Armadura_Mística">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ventaja_Comun"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El aura del personaje forma una capa de energía mística a su alrededor que le protege contra los ataques sobrenaturales. Efectos: Otorga un Tipo de Armadura natural de 4 contra los ataques basados en Energía. Aunque cuenta como una armadura, no se aplican penalizadores al turno por emplear capas de protección adicionales. Coste: 1</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Armadura_Natural -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Armadura_Natural">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ventaja_Comun"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El personaje tiene una piel extremadamente resistente y unos músculos muy duros, lo suficiente como para que sea muy difícil traspasarlos. Efectos: Otorga un Tipo de Armadura natural de 2 contra todas las clases de ataques salvo las de energía. Aunque cuenta como una protección, no se aplican penalizadores al turno por emplear capas de armaduras adicionales. Coste: 1</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Armadura_Oscura -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Armadura_Oscura">
@@ -2511,6 +2701,33 @@ Mantenimiento: 15 / 30 / 50 / 100 Diario</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Artefacto_1 -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Artefacto_1">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ventaja_Comun"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El personaje posee un artefacto místico de enorme poder. Efectos: El jugador y el Director de Juego deberán ponerse de acuerdo con las habilidades del artefacto. Coste: 1</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Artefacto_2 -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Artefacto_2">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ventaja_Comun"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El personaje posee un artefacto místico de enorme poder. Efectos: El jugador y el Director de Juego deberán ponerse de acuerdo con las habilidades del artefacto. Coste: 2</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Artefacto_3 -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Artefacto_3">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ventaja_Comun"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El personaje posee un artefacto místico de enorme poder. Efectos: El jugador y el Director de Juego deberán ponerse de acuerdo con las habilidades del artefacto. Coste: 3</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Asakusen -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Asakusen">
@@ -2754,7 +2971,7 @@ Mantenimiento: No</rdfs:comment>
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Atar -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Atar">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Mistica"/>
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Mística"/>
     </owl:NamedIndividual>
     
 
@@ -3395,6 +3612,14 @@ Mantenimiento: 5 / 10 / 15 / 15</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Beryl -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Beryl">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Blanco_Perfecto -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Blanco_Perfecto">
@@ -3593,6 +3818,15 @@ Beneficio: 2</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Buena_Suerte -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Buena_Suerte">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ventaja_Comun"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El personaje tiene mucha suerte a la hora de poner en práctica cualquier cosa que se proponga y resulta muy raro que cometa un grave error. Efectos: Se reduce un punto la cifra requerida para pifiar. En circunstancias normales el personaje pifiará con un 2. Si alcanza la maestría en una habilidad, sólo pifiará con un 1. Coste: 1</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Buey_de_Carga -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Buey_de_Carga">
@@ -3652,7 +3886,7 @@ Mantenimiento: 5 / 5 / 10 / 10</rdfs:comment>
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#CV -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#CV">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Psiquica"/>
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Psíquica"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Los Consumos de Voluntad, a los que llamaremos CV a partir de ahora, son otro elemento fundamental para el uso de los poderes mentales. Los CV indican en qué invierten los personajes sus energías psíquicas y lo que tratan de potenciar más. En cierta manera, son una especie de comodín que permite al mentalista adquirir ventajas muy distintas, desde dominar nuevas disciplinas a incrementar temporalmente su potencial. Todos los personajes comienzan en primer nivel con un CV, pero pueden aumentar esta cantidad invirtiendo PD o subiendo de nivel.
 
 Algunas de las ventajas que proporcionan los CV los consumen
@@ -3664,7 +3898,7 @@ permanentemente, de manera que desaparecen y no pueden volver a ser usados. Otro
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#CV_Libre -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#CV_Libre">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Psiquica"/>
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Psíquica"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Los CV que no se invierten permanentemente en alguna de las habilidades anteriores se llaman libres. Los CV libres tienen diversas funciones, desde evitar perder puntos de Cansancio si el personaje obtiene un resultado de fatiga, a otorgar durante un asalto habilidades especiales a los psíquicos. Estos usos no consumen completamente el CV libre como ocurre en los casos anteriores, sino que lo gastan sólo temporalmente. Los CV libres usados de esta manera se recuperan a un ritmo de uno por hora. Si, por ejemplo, un personaje usa 3 CV libres para potenciar temporalmente sus habilidades o los pierde por fatiga, tardará tres horas en recuperarlos todos. El gasto de CV libres es una acción pasiva.
 
  Sus diversas funciones son las siguientes:
@@ -3711,6 +3945,15 @@ permanentemente, de manera que desaparecen y no pueden volver a ser usados. Otro
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Caja">
         <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Utiles_Varios"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Calibre -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Calibre">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ventaja_Psiquica"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El psíquico es capaz de potenciar más de lo normal su habilidad para enfocar sus poderes sobre un objetivo. Efectos: Los CV invertidos para mejorar la Proyección Psíquica aumentarán su habilidad en +20 en lugar de +10. Coste: 1</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -4756,6 +4999,24 @@ Mantenimiento: 10 / 20 / 20 / 25 Diario</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Concentración_Extrema -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Concentración_Extrema">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ventaja_Psiquica"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El personaje puede concentrarse mucho más que el resto de los psíquicos y sacar mayor rendimiento de sus habilidades. Efectos: El psíquico dobla el bono que le reporta la concentración a su potencial. Por ejemplo, si se concentra un asalto completo obtiene un +20 en lugar de un +10. Coste: 2</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Concentración_Pasiva -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Concentración_Pasiva">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ventaja_Psiquica"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El psíquico es capaz de concentrarse en cualquier situación, sin importar su dificultad o complicación. Efectos: El psíquico puede concentrarse para potenciar un poder incluso mientras ejecuta acciones activas. Coste: 2</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Condicionamiento -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Condicionamiento">
@@ -5080,6 +5341,15 @@ Vías Cerradas: Ninguna</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Conocedor_de_Todas_las_Materias -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Conocedor_de_Todas_las_Materias">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ventaja_Comun"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El personaje es un individuo que posee la excepcional habilidad de adaptarse a cualquier necesidad que se le presente y desarrolla conocimientos en todos los campos y materias. No importa lo rara o inusual que sea la habilidad secundaria que requiera utilizar, siempre tendrá algún conocimiento o pericia que le será útil en esa situación. Efecto: El personaje no aplica nunca el penalizador de –30 por no haber invertido PD en una habilidad secundaria y tiene un bonificador natural de 10 en todas sus habilidades secundarias, que se suma directamente al bono que le otorgue su característica. Coste: 2</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Conocimiento_Marcial -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Conocimiento_Marcial">
@@ -5110,6 +5380,15 @@ Intermedio: Analiza todas las propiedades de una planta o animal.
 Avanzado: Analiza todas las propiedades de una raza natural.
 Arcano: Analiza todas las propiedades y poderes místicos o especiales de un ser natural.
 Mantenimiento: No</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Conocimiento_Natural_de_Vía -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Conocimiento_Natural_de_Vía">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ventaja_Mistica"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El personaje ha nacido dotado de la capacidad de realizar ciertos conjuros de manera natural sin la necesidad de haberlos estudiado. De un modo inconsciente puede tejer los poderes del flujo de almas de una vía, como si simplemente esta fuera capaz de responder a sus habilidades. El personaje sabe utilizar perfectamente los sortilegios, pero no comprende su teoría ni podría explicarla a los demás. Efectos: Esta ventaja otorga conocimientos innatos de una vía a nivel 40 sin invertir en ella puntos de nivel de magia. Al ser un conocimiento natural, el hechicero puede seguir desarrollandola a partir de nivel 40 gastando en ella nuevos puntos de nivel de magia. Limitación: Esta ventaja puede adquirirse nuevamente en vías distintas. Coste: 1</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -5650,7 +5929,7 @@ Descripción: Controla el crecimiento y el tamaño de un fuego que no tenga más
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Convocar -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Convocar">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Mistica"/>
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Mística"/>
     </owl:NamedIndividual>
     
 
@@ -5681,15 +5960,6 @@ Mantenimiento: 5 / 5 / 10 / 10 Diario</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Corona">
         <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Orfebrería"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Creación -->
-
-    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Creación">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Mágica"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El poder de la creación es la capacidad mágica de componer y alterar la realidad que rodea a los hechiceros. Sus conjuros engloban el cambio, la curación y la creación de cosas. Es una magia marcadamente defensiva. La vía opuesta a Creación es Destrucción.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -6840,6 +7110,33 @@ Vías Cerradas: Destrucción</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Curtido_1 -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Curtido_1">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ventaja_Comun"/>
+        <owl:backwardCompatibleWith rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El personaje ya ha tenido varias experiencias en el mundo real, de las que ha aprendido grandes lecciones. Efectos: El personaje comienza con 50 puntos de experiencia añadidos. Coste: 1</owl:backwardCompatibleWith>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Curtido_2 -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Curtido_2">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ventaja_Comun"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El personaje ya ha tenido varias experiencias en el mundo real, de las que ha aprendido grandes lecciones. Efectos: El personaje comienza con 100 puntos de experiencia añadidos. Coste: 2</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Curtido_3 -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Curtido_3">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ventaja_Comun"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El personaje ya ha tenido varias experiencias en el mundo real, de las que ha aprendido grandes lecciones. Efectos: El personaje comienza con 150 puntos de experiencia añadidos. Coste: 3</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Cúpula_de_Destrucción -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Cúpula_de_Destrucción">
@@ -7172,7 +7469,7 @@ Mantenimiento: No</rdfs:comment>
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Desconvocar -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Desconvocar">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Mistica"/>
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Mística"/>
     </owl:NamedIndividual>
     
 
@@ -7218,6 +7515,33 @@ Avanzado: Presencia máxima 120.
 Arcano: Presencia máxima 140.
 Mantenimiento: No
 Vías Cerradas: Creación</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Desequilibrio_Elemental -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Desequilibrio_Elemental">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ventaja_Mistica"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Representa que el personaje es naturalmente afín a los poderes de una vía mágica específica, siendo a la vez más débil en la opuesta. Su esencia está fuertemente ligada a este elemento y, por tanto, la magia fluye de un modo mucho más poderoso cuando utiliza esos conjuros. Efectos: El personaje dispone de un bono especial de +20 a su ACT y un +20 a su RM en la vía mágica que elija. Cuando utilice conjuros de la vía opuesta, aplicará un penalizador de –20 a su ACT y un –20 a su RM. Si la vía elegida es la nigromancia, el penalizador se aplicará a todas las demás. Coste: 1</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Desequilibrio_Psíquico -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Desequilibrio_Psíquico">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ventaja_Psiquica"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Una de las disciplinas del psíquico está potenciada muy por encima del resto de sus habilidades. Efectos: El psíquico obtiene automáticamente un nivel de dificultad superior al que ha obtenido con su potencial al utilizar los poderes de una disciplina determinada. Coste: 2</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Desequilibrio_Sephirótico -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Desequilibrio_Sephirótico">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ventaja_Mistica"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Representa que el personaje es naturalmente afín a la magia de una mitad del árbol místico, siendo a la vez más débil en la opuesta.  Efectos: El brujo dispone de un bono especial de +20 a su ACT y un +20 en su RM en las cinco vías mágicas de un segmento del árbol que elija. En el resto aplicará un penalizador de –20 a su ACT y un –20 a su RM. Limitación: La nigromancia no está incluida en esta ventaja, al encontrarse fuera del árbol. Coste: 2</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -7409,15 +7733,6 @@ Mantenimiento: 10 / 20 / 25 / 30</rdfs:comment>
 Acción: Activa 
 Mantenimiento: No
 Descripción: Este poder destroza un cuerpo, haciéndolo estallar en pedazos desde dentro. Si el objetivo es un objeto, deberá superar una Resistencia para evitar ser destrozado (los objetos de calidad especial no se rompen automáticamente, sino que pierden un nivel por cada 50 puntos de fracaso). Si es un ser vivo natural, deberá utilizar su RF contra la dificultad requerida, o perderá el doble de puntos de vida por los que no superó el control. Si se trata de un armazón con resistencia estructural o de un ser con acumulación, sufrirá cinco veces el daño que indique el nivel de fracaso. Naturalmente, sólo es posible afectar a seres materiales.</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Destrucción -->
-
-    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Destrucción">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Mágica"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Esta vía permite utilizar el poder del flujo de almas para destruir la propia realidad. Sus conjuros afectan tanto al mundo material como al espiritual. Su poder es por naturaleza muy ofensivo. Su vía opuesta es Creación.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -8433,7 +8748,7 @@ Descripción: El psíquico tiene control sobre la temperatura ambiental y puede 
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Dominar -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Dominar">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Mistica"/>
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Mística"/>
     </owl:NamedIndividual>
     
 
@@ -8485,7 +8800,7 @@ Mantenimiento: 30 / 40 / 50 / 60 Diario</rdfs:comment>
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Dominar_un_nuevo_poder_mental -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Dominar_un_nuevo_poder_mental">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Psiquica"/>
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Psíquica"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Una vez que el personaje tiene afinidad con una disciplina psíquica, puede dominar sus poderes. Si quiere utilizar una habilidad determinada de una disciplina hacia la que es afín, primero debe dominarla invirtiendo de manera permanente un nuevo CV. Pueden adquirirse tantos poderes como el personaje necesite. La única limitación es que, para dominar uno de segundo nivel, es necesario controlar previamente uno de primero, al igual que para dominar uno de tercer nivel se necesita antes uno de segundo. Así, si un personaje es afín hacia la disciplina de Piroquinesis y tiene tres CV sin gastar, puede dominar los poderes de Crear Fuego (primer nivel), Inmunidad al Fuego (segundo nivel) y Nova (tercer nivel), gastando los tres.</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -8585,6 +8900,15 @@ Intermedio: RM 130 / 500 kilómetros de radio.
 Avanzado: RM 160 / 1.500 kilómetros de radio.
 Arcano: RM 200 / 2.500 kilómetros de radio.
 Mantenimiento: 60 / 75 / 85 / 100 Diario</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Don -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Don">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ventaja_Comun"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El personaje puede sentir y manejar las energías sobrenaturales del flujo de almas. La magia fluye a través de su espíritu, y con los conocimientos apropiados, será capaz de lanzar conjuros. Efectos: El personaje está dotado de la capacidad de ver y utilizar la magia. Añadirá además un bonificador especial de +10 a su RM, puesto que su naturaleza sobrenatural resiste mejor los efectos místicos. Nota: Ten en cuenta que tanto los hechiceros como otras categorías especializadas en el lanzamiento de conjuros requieren escoger esta ventaja para poder usar sortilegios. Coste: 2</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -8857,6 +9181,33 @@ Avanzado: 500 metros de radio / RM 220.
 Arcano: 1 kilómetro de radio / RM 260.
 Mantenimiento: 45 / 60 / 80 / 100 Diario
 Vías Cerradas: Ninguna</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Elan_1 -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Elan_1">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ventaja_Comun"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">De manera inconsciente, el personaje ha conseguido atraer la atención de un Shajad o de una Beryl. Generalmente representa que la estirpe del personaje estuvo ligada a la potencia y mantiene aún algún tipo de vínculo con todos los miembros de la familia. También es posible que dicha atención se deba a alguna de las acciones que haya realizado. De momento, goza de sus favores, aunque a partir del instante en el que el jugador tome control de su personaje, la relación dependerá de cómo se comporte. Efectos: El personaje tiene Elan de 20 de la entidad que elija. Coste: 1</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Elan_2 -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Elan_2">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ventaja_Comun"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">De manera inconsciente, el personaje ha conseguido atraer la atención de un Shajad o de una Beryl. Generalmente representa que la estirpe del personaje estuvo ligada a la potencia y mantiene aún algún tipo de vínculo con todos los miembros de la familia. También es posible que dicha atención se deba a alguna de las acciones que haya realizado. De momento, goza de sus favores, aunque a partir del instante en el que el jugador tome control de su personaje, la relación dependerá de cómo se comporte. Efectos: El personaje tiene Elan de 40 de la entidad que elija. Coste: 2</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Elan_3 -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Elan_3">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ventaja_Comun"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">De manera inconsciente, el personaje ha conseguido atraer la atención de un Shajad o de una Beryl. Generalmente representa que la estirpe del personaje estuvo ligada a la potencia y mantiene aún algún tipo de vínculo con todos los miembros de la familia. También es posible que dicha atención se deba a alguna de las acciones que haya realizado. De momento, goza de sus favores, aunque a partir del instante en el que el jugador tome control de su personaje, la relación dependerá de cómo se comporte. Efectos: El personaje tiene Elan de 50 de la entidad que elija. Coste: 3</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -9156,6 +9507,15 @@ Avanzado: Presencia máxima 90.
 Arcano: Presencia máxima 120.
 Mantenimiento: 5 / 5 / 10 / 10 Diario
 Vías Cerradas: Ninguna</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Encanto -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Encanto">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ventaja_Comun"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El personaje tiene cierto encanto personal que le vuelve carismático ante los demás. Siempre causa una reacción positiva a la gente que no le conoce, e incluso condiciona parcialmente a algunos individuos a ser ligeramente más permisivos con él. Efectos: El alcance de esta ventaja debe de ser interpretada por el Director de Juego. Coste: 1</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -9824,15 +10184,6 @@ Descripción: Forma un escudo de energía que protege al psíquico frente a cual
 Acción: Pasiva 
 Mantenimiento: Sí
 Descripción: Crea un escudo de hielo que protege al psíquico contra cualquier fuente de ataque no basada en energía, salvo los conjuros de tipo Ataque de luz u oscuridad, los cuales sí se pueden detener. Al contrario que otros poderes, el Escudo de hielo permanece con la misma cantidad de puntos de vida con la que fue creado originariamente, en lugar de mantenerse con el mantenimiento natural del psíquico. Sin embargo, una vez creado pierde 5 puntos de vida por asalto, hasta que llega a la cantidad a la que el psíquico pueda mantener naturalmente el escudo.</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Esencia -->
-
-    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Esencia">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Mágica"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La Esencia controla la vida y las almas. Esta vía tiene el poder sobre los espíritus y los seres naturales que pertenecen al mundo. Es también la vía de la naturaleza y los conjuros de origen druídicos. La vía opuesta a Esencia es Ilusión.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -10567,6 +10918,34 @@ Beneficio: 1</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Fondos_Iniciales_1 -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Fondos_Iniciales_1">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ventaja_Comun"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El personaje es un individuo que posee una gran fortuna en material y equipamiento. Efectos: Esta ventaja proporciona una cantidad de dinero inicial o equipo valorado en 2.000 Escudos de Oro (MO). Limitación: Es posible que el Director de Juego prefiera dar una cantidad de dinero distinta a la recomendada, para encajar mejor al personaje dentro de los objetivos de su partida. En dicho caso, ambos deberéis acordar la nueva cantidad. Coste: 1</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Fondos_Iniciales_2 -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Fondos_Iniciales_2">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ventaja_Comun"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El personaje es un individuo que posee una gran fortuna en material y
+equipamiento. Efectos: Esta ventaja proporciona una cantidad de dinero inicial o equipo valorado en 5.000 Escudos de Oro (MO). Limitación: Es posible que el Director de Juego prefiera dar una cantidad de dinero distinta a la recomendada, para encajar mejor al personaje dentro de los objetivos de su partida. En dicho caso, ambos deberéis acordar la nueva cantidad. Coste: 2</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Fondos_Iniciales_3 -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Fondos_Iniciales_3">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ventaja_Comun"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El personaje es un individuo que posee una gran fortuna en material y equipamiento. Efectos: Esta ventaja proporciona una cantidad de dinero inicial o equipo valorado en 10.000 Escudos de Oro (MO). Limitación: Es posible que el Director de Juego prefiera dar una cantidad de dinero distinta a la recomendada, para encajar mejor al personaje dentro de los objetivos de su partida. En dicho caso, ambos deberéis acordar la nueva cantidad. Coste: 3</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Forja -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Forja">
@@ -10728,15 +11107,6 @@ Mantenimiento: 5 / 10 / 15 / 15</rdfs:comment>
 Acción: Activa 
 Mantenimiento: Sí
 Descripción: Versión amplificada del poder de primer nivel de Crear frío, que provoca temperaturas mucho más extremas.</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Fuego -->
-
-    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Fuego">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Mágica"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La primera de las cuatro vías elementales menores tiene el control sobre las altas temperaturas. Sus conjuros crean calor, fuego y arrasan grandes cantidades de terreno. También reúne conjuros de sacrificio, que permiten consumir ciertos aspectos de un individuo para potenciar a cambio otros. Es una vía muy ofensiva. La vía opuesta a Fuego es Agua.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -11115,9 +11485,9 @@ Mantenimiento: No</rdfs:comment>
     
 
 
-    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Mistica -->
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Mística -->
 
-    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Mistica">
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Mística">
         <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
     </owl:NamedIndividual>
     
@@ -11148,9 +11518,9 @@ Mantenimiento: No</rdfs:comment>
     
 
 
-    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Psiquica -->
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Psíquica -->
 
-    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Psiquica">
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Psíquica">
         <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
     </owl:NamedIndividual>
     
@@ -11696,6 +12066,21 @@ Apariencia habitual: El Hierofante se manifiesta junto al invocador en la forma 
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Iglesia -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Iglesia">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Organizacion"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Probablemente, la Iglesia Vaticana es la organización más importante de Gaïa. Tiene como meta promover la fe cristiana entre todos sus habitantes y asegurarse de que su palabra llegue hasta ellos. También se ocupa de la caridad y de ayudar a aquellos que lo necesiten. Sin embargo, asume otra faceta mucho más oscura. Desde su misma aparición, se ha ocupado de destruir todo aquello que pueda representar un peligro para sus dogmas, lo que incluye a hechiceros y a seres de origen sobrenatural. 
+
+La Iglesia Vaticana fue creada por Cristo años antes de su muerte en las murallas de Sólomon, pero no fue hasta poco después cuando esta institución obtuvo verdaderamente fuerza. Tras estar a punto de desaparecer durante la Guerra de Dios, Zhorne Giovanni la levantó de sus cenizas con el objetivo de dar esperanza a los hombres y unirlos bajo una sola bandera. A lo largo de los siglos, se ha convertido en un guía espiritual para millones de personas y ha acrecentando su influencia en todos los campos. Por desgracia, cuando Eljared fue nombrada Sumo Arzobispo surgieron muchos opositores, tanto entre los principados como en su propio seno, mermando considerablemente el poder de los altos cargos eclesiásticos. Para recuperar su prestigio, la Iglesia ha acusado de todo lo sucedido a Eljared, argumentando que ellos no podían hacer otra cosa más que acatar las órdenes del Emperador. En la actualidad siguen considerándose parte del Sacro Santo Imperio (más correctamente, consideran Abel una parte de la Iglesia), pero mantienen una relación abierta con la Alianza Azur y los principados independientes que siguen sus doctrinas. Han nombrado por su propia cuenta al sucesor del Arzobispo, quien ahora ostenta algunas prerrogativas que se reservaban al Emperador como Sumo Pontífice. 
+
+La jerarquía de la Iglesia comienza en el Emperador, máximo representante de Cristo en la tierra. Inmediatamente debajo se encuentra el Sumo Arzobispo, en quien el Pontífice ha delegado muchas prerrogativas y poderes (en la práctica, es el verdadero señor de la Iglesia). A continuación están los obispos, cada uno de los cuales se encarga de controlar un principado entero. Los doce más importantes reciben además el título de Cardenal, y se reúnen periódicamente en la ciudad Sagrada de Albídion con el Arzobispo para tomar decisiones de gran trascendencia. Al servicio de los obispos están los diáconos, quienes se ocupan de distintas diócesis dentro de los principados. Finalmente, hallamos a párrocos y sacerdotes, encargados de transmitir directamente al pueblo la palabra de Cristo. Los objetivos de esta institución son muy variados. Mientras que la gran mayoría de sus miembros son buenas personas que tratan de ayudar a sus semejantes, muchos de los que ostentan los cargos más elevados son individuos sedientos de poder que sólo desean acrecentar el que ya poseen. De cualquier forma, toda la Iglesia parece haber centrado sus esfuerzos en acabar con los reinos que se han escindido directamente de su seno, como Kushistán o Espheria.
+
+La economía de la Iglesia se basa principalmente en los diezmos y las recaudaciones que obtiene por todo el mundo, lo que le proporciona una increíble capacidad financiera. Tiene su propio ejército como cualquier principado más, aunque sus tropas son escasas. De todos modos, si necesita una potente fuerza militar, puede recurrir a los regimientos de otros reinos, en especial a los de Argos.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Ignis -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ignis">
@@ -11712,15 +12097,6 @@ Apariencia habitual: El Hierofante se manifiesta junto al invocador en la forma 
 Calidad Máxima: +5
 Disponibilidad: No Accesible
 Descripción: Es un metal plateado de naturaleza mística, que se caracteriza por lo fácil que resulta de moldear cuando está caliente. No obstante, una vez solidificado, se convierte en uno de los materiales más resistentes que existen.</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Ilusión -->
-
-    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ilusión">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Mágica"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El poder de esta vía permite al hechicero controlar el engaño y la ilusión. Sus conjuros pueden alterar la realidad, y con ella la percepción de las personas. La vía opuesta a Ilusión es Esencia.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -12341,6 +12717,33 @@ Mantenimiento: 25 / 30 / 40 / 50 Diario</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Infatigable_1 -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Infatigable_1">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ventaja_Comun"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El aguante a la fatiga del personaje es muy superior al que debería permitirle su Constitución. Efectos: Aumenta tres puntos el Cansancio del personaje. Coste: 1</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Infatigable_2 -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Infatigable_2">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ventaja_Comun"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El aguante a la fatiga del personaje es muy superior al que debería permitirle su Constitución. Efectos: Aumenta seis puntos el Cansancio del personaje. Coste: 2</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Infatigable_3 -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Infatigable_3">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ventaja_Comun"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El aguante a la fatiga del personaje es muy superior al que debería permitirle su Constitución. Efectos: Aumenta nueve puntos el Cansancio del personaje. Coste: 3</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Inhumanidad_Ki -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Inhumanidad_Ki">
@@ -12524,6 +12927,15 @@ Vías Cerradas: Esencia</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Inmunidad_al_Dolor_y_al_Cansancio -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Inmunidad_al_Dolor_y_al_Cansancio">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ventaja_Comun"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El personaje es especialmente resistente a los los efectos del dolor y de la fatiga. Efectos: Los penalizadores provocados por el dolor y el Cansancio se reducen a la mitad. Coste: 1</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Inmunidad_al_Frío -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Inmunidad_al_Frío">
@@ -12554,6 +12966,15 @@ Mantenimiento: 5 / 10 / 10 / 15 Diario</rdfs:comment>
 Acción: Pasiva 
 Mantenimiento: Sí
 Descripción: Permite al psíquico, o al individuo designado por este, ser inmune al efecto de varias intensidades de calor, incluso si se trata de uno de carácter sobrenatural. En el caso de que se reciba un ataque basado en fuego, cada intensidad a la que es inmune disminuye 5 puntos el daño base del ataque, y aumenta en +5 las Resistencias contra sus efectos.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Inquietante -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Inquietante">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ventaja_Comun"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El personaje tiene la capacidad de poner nerviosas a las personas siempre que lo desee. Incluso el individuo más pequeño y enclenque puede inquietar a otro si goza de esta ventaja. De este modo, podrá desanimar muchas acciones violentas en su contra o forzar el consentimiento de personas intimidables. Efectos: El personaje puede resultar inquietante si lo desea. El alcance de esta ventaja debe de ser interpretado por el Director de Juego. Coste: 1</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -12663,6 +13084,24 @@ Vías Cerradas: Agua</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Inutilidad_Oral -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Inutilidad_Oral">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ventaja_Mistica"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El brujo no necesita realizar gestos físicos para desarrollar su magia, por lo que puede hacer cualquier tipo de acción corporal sin ver por ello reducida la capacidad de controlar sus poderes. Efectos: El personaje no reduce su ACT por no ser capaz de gesticular. Coste: 1</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Inutilidad_Somática -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Inutilidad_Somática">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ventaja_Mistica"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El brujo no necesita realizar gestos físicos para desarrollar su magia, por lo que puede hacer cualquier tipo de acción corporal sin ver por ello reducida la capacidad de controlar sus poderes. Efectos: El personaje no reduce su ACT por no ser capaz de gesticular. Coste: 1</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Invertir_la_Gravedad -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Invertir_la_Gravedad">
@@ -12730,9 +13169,9 @@ Mantenimiento: 5 / 5 / 10 / 10</rdfs:comment>
     
 
 
-    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Invocacion -->
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Invocación -->
 
-    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Invocacion">
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Invocación">
         <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
     </owl:NamedIndividual>
     
@@ -12938,6 +13377,14 @@ Intermedio: RM 180.
 Avanzado: RM 220.
 Arcano: RM 240.
 Mantenimiento: No</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#La_Orden_del_Cielo -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#La_Orden_del_Cielo">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Organizacion"/>
     </owl:NamedIndividual>
     
 
@@ -13269,7 +13716,7 @@ Vías Cerradas: Tierra</rdfs:comment>
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Agua -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Agua">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Mágica"/>
     </owl:NamedIndividual>
     
 
@@ -13277,7 +13724,7 @@ Vías Cerradas: Tierra</rdfs:comment>
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Aire -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Aire">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Mágica"/>
     </owl:NamedIndividual>
     
 
@@ -13285,7 +13732,7 @@ Vías Cerradas: Tierra</rdfs:comment>
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Creación -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Creación">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Mágica"/>
     </owl:NamedIndividual>
     
 
@@ -13293,7 +13740,7 @@ Vías Cerradas: Tierra</rdfs:comment>
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Destrucción -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Destrucción">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Mágica"/>
     </owl:NamedIndividual>
     
 
@@ -13301,7 +13748,7 @@ Vías Cerradas: Tierra</rdfs:comment>
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Esencia -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Esencia">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Mágica"/>
     </owl:NamedIndividual>
     
 
@@ -13309,7 +13756,7 @@ Vías Cerradas: Tierra</rdfs:comment>
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Fuego -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Fuego">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Mágica"/>
     </owl:NamedIndividual>
     
 
@@ -13317,7 +13764,7 @@ Vías Cerradas: Tierra</rdfs:comment>
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Ilusión -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Ilusión">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Mágica"/>
     </owl:NamedIndividual>
     
 
@@ -13325,7 +13772,7 @@ Vías Cerradas: Tierra</rdfs:comment>
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Luz -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Luz">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Mágica"/>
     </owl:NamedIndividual>
     
 
@@ -13333,7 +13780,7 @@ Vías Cerradas: Tierra</rdfs:comment>
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Nigromancia -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Nigromancia">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Mágica"/>
     </owl:NamedIndividual>
     
 
@@ -13341,7 +13788,7 @@ Vías Cerradas: Tierra</rdfs:comment>
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Oscuridad -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Oscuridad">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Mágica"/>
     </owl:NamedIndividual>
     
 
@@ -13349,7 +13796,7 @@ Vías Cerradas: Tierra</rdfs:comment>
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Tierra -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Tierra">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Mágica"/>
     </owl:NamedIndividual>
     
 
@@ -13491,15 +13938,6 @@ Descripción: Localiza la mente de un sujeto determinado que se encuentre, como 
     
 
 
-    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Luz -->
-
-    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Luz">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Mágica"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Esta vía es la que permite a los hechiceros controlar uno de los dos elementos superiores, la luz pura. Es la que controla las emociones positivas del hombre, como el amor, la tranquilidad o el placer. También domina el conocimiento y la detección. Su poder ofensivo y defensivo está muy equilibrado. La vía opuesta a Luz es Oscuridad.</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Luz_Catastrófica -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Luz_Catastrófica">
@@ -13544,6 +13982,14 @@ Mantenimiento: No</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Luz_y_Tinieblas -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Luz_y_Tinieblas">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Látigo -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Látigo">
@@ -13561,6 +14007,33 @@ Mantenimiento: No</rdfs:comment>
 Calidad Máxima: +10
 Disponibilidad: No Accesible
 Descripción: La madera de Ghestal se obtiene de los árboles de Ramalen de los Duk´zarist. Todo parece indicar que en la actualidad no queda ninguno en toda la faz de Gaïa, aunque existen leyendas de que alguno ha sobrevivido en viejos templos abandonados. Sólo los artesanos Duk’zarist conocen el secreto de trabajar esta madera. Un personaje puede especializarse en su uso y cambiar su dificultad a +40, pero a cambio, perderá la capacidad de utilizar otros materiales.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Maestro_Marcial_1 -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Maestro_Marcial_1">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ventaja_Comun"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El conocimiento marcial del personaje es muy superior al de uno de su nivel. Generalmente, ha recibido un entrenamiento especial que le ha permitido explorar sus habilidades del Ki, aunque también es posible que simplemente haya nacido dotado de una enorme habilidad natural. Efectos:Añade 40 puntos al Conocimiento Marcial base. Coste: 1</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Maestro_Marcial_2 -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Maestro_Marcial_2">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ventaja_Comun"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El conocimiento marcial del personaje es muy superior al de uno de su nivel. Generalmente, ha recibido un entrenamiento especial que le ha permitido explorar sus habilidades del Ki, aunque también es posible que simplemente haya nacido dotado de una enorme habilidad natural. Efectos:Añade 80 puntos al Conocimiento Marcial base. Coste: 2</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Maestro_Marcial_3 -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Maestro_Marcial_3">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ventaja_Comun"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El conocimiento marcial del personaje es muy superior al de uno de su nivel. Generalmente, ha recibido un entrenamiento especial que le ha permitido explorar sus habilidades del Ki, aunque también es posible que simplemente haya nacido dotado de una enorme habilidad natural. Efectos:Añade 120 puntos al Conocimiento Marcial base. Coste: 3</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -13623,6 +14096,33 @@ Avanzado: 250 metros de radio / +30 al valor zeónico de la magia innata.
 Arcano: 500 metros de radio / +40 al valor zeónico de la magia innata.
 Mantenimiento: 50 / 60 / 70 / 80 Diario
 Vías Cerradas: Ninguna</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Magia_Innata_Mejorada_1 -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Magia_Innata_Mejorada_1">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ventaja_Mistica"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El personaje con esta capacidad puede ejecutar sus conjuros innatos con un potencial más elevado de lo normal. Efectos: Los conjuros innatos del brujo tienen un potencial de +10 a lo indicado por su ACT. Coste: 1</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Magia_Innata_Mejorada_2 -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Magia_Innata_Mejorada_2">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ventaja_Mistica"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El personaje con esta capacidad puede ejecutar sus conjuros innatos con un potencial más elevado de lo normal. Efectos: Los conjuros innatos del brujo tienen un potencial de +20 a lo indicado por su ACT. Coste: 2</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Magia_Innata_Mejorada_3 -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Magia_Innata_Mejorada_3">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ventaja_Mistica"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El personaje con esta capacidad puede ejecutar sus conjuros innatos con un potencial más elevado de lo normal. Efectos: Los conjuros innatos del brujo tienen un potencial de +30 a lo indicado por su ACT. Coste: 3</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -13837,6 +14337,15 @@ Intermedio: 2.000 Puntos de Zeon.
 Avanzado: 5.000 Puntos de Zeon.
 Arcano: 10.000 Puntos de Zeon.
 Mantenimiento: No</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Mantenimiento_Añadido -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Mantenimiento_Añadido">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ventaja_Psiquica"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El personaje tiene la capacidad de mantener sus poderes psíquicos por encima de lo que le permite su potencial. Efectos: Los poderes mantenidos innatamente se hallan un nivel de dificultad por encima de lo que le permite su potencial psíquico. Coste: 2</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -14992,15 +15501,6 @@ Vías Cerradas: Fuego</rdfs:comment>
     
 
 
-    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Nigromancia -->
-
-    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Nigromancia">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Mágica"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La nigromancia es una perversión de la magia como tal. Mientras que el resto de vías se alimenta de las energías de la red de almas, la nigromancia las arranca de allí. Sus conjuros destruyen la esencia de la vida, estancando y pervirtiendo las almas que utiliza. Su poder permite devolver la vida a los muertos, destruir las almas y drenar la vida y la esencia de otros seres. La Nigromancia se opone al resto de las vías de magia.</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#No_Respirar -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#No_Respirar">
@@ -15398,19 +15898,18 @@ Mantenimiento: 40 / 50 / 60 / 65</rdfs:comment>
     
 
 
-    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Organizacion -->
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Orden_de_Selene -->
 
-    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Organizacion">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Orden_de_Selene">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Organizacion"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Oscuridad -->
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Organizacion -->
 
-    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Oscuridad">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Mágica"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La oscuridad no controla la ausencia de luz, sino el puro poder de las tinieblas. Domina todas las emociones negativas como el miedo, la ira y el odio. Es también el poder de los secretos, entre los que se incluyen los conjuros de ocultación y ofuscación. Al igual que la Luz, su poder está muy equilibrado. La vía opuesta a Oscuridad es Luz.</rdfs:comment>
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Organizacion">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
     </owl:NamedIndividual>
     
 
@@ -16110,6 +16609,15 @@ Vías Cerradas: Ninguna</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Potencial_Enfrentado -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Potencial_Enfrentado">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ventaja_Mistica"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Los poderes místicos del personaje son superiores cuando chocan directamente contra otra habilidad sobrenatural. Efectos: El personaje aplica un bonificador de +50 a sus tiradas para calcular el resultado del choque de conjuros. Coste: 1</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Potenciar_Magia -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Potenciar_Magia">
@@ -16441,7 +16949,7 @@ Vías Cerradas: Destrucción</rdfs:comment>
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Proyección_Mágica -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Proyección_Mágica">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Mistica"/>
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Mística"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La proyección mágica es la habilidad que poseen los brujos para ejecutar y dirigir sus conjuros sobre la realidad. Miden desde la puntería con que lanzan una bola de fuego, al complejo acto que les permite manifestar sus poderes correctamente sobre el alma de una persona. Cada vez que un personaje pretenda utilizar un conjuro, debe realizar un control de proyección mágica para saber si es capaz de enfocar su poder correctamente o falla en su ejecución.
 
 Los magos pueden utilizar esta habilidad para atacar y defenderse con sus conjuros del mismo modo que los luchadores usan su ataque y su defensa. La
@@ -16453,7 +16961,7 @@ proyección mágica no aplica ninguno de los penalizadores de combate ni para at
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Proyección_Psíquica -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Proyección_Psíquica">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Psiquica"/>
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Psíquica"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La Proyección Psíquica es la habilidad de las personas dotadas de disciplinas mentales para enfocar y controlar sus poderes sobre un objetivo. En cierto modo, sería correcto decir que es equivalente a la Proyección Mágica del psíquico. De la misma manera que ocurre con el mago, la Proyección Psíquica no mide su “puntería”, sino el control que tiene sobre sus poderes para llevar a cabo acciones con ellos. El psíquico utiliza su Proyección para atacar y defenderse.</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -16815,6 +17323,87 @@ Coste: 20 CM</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Recuperación_Superior_de_Magia_1 -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Recuperación_Superior_de_Magia_1">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ventaja_Mistica"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La esencia del personaje actúa como un imán para la magia y es capaz de regenerar su poder a un ritmo muy superior que el de otros individuos dotados de capacidades místicas. Efectos: El personaje recupera sus puntos de Zeon al doble de su regeneración zeónica. Coste: 1</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Recuperación_Superior_de_Magia_2 -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Recuperación_Superior_de_Magia_2">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ventaja_Mistica"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La esencia del personaje actúa como un imán para la magia y es capaz de regenerar su poder a un ritmo muy superior que el de otros individuos dotados de capacidades místicas. Efectos: El personaje recupera sus puntos de Zeon al triple de su regeneración zeónica. Coste: 2</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Recuperación_Superior_de_Magia_3 -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Recuperación_Superior_de_Magia_3">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ventaja_Mistica"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La esencia del personaje actúa como un imán para la magia y es capaz de regenerar su poder a un ritmo muy superior que el de otros individuos dotados de capacidades místicas. Efectos: El personaje recupera sus puntos de Zeon al cuádruple de su regeneración zeónica. Coste: 3</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Recuperación_de_CVs_1 -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Recuperación_de_CVs_1">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ventaja_Psiquica"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El psíquico tiene la capacidad de recuperarse con facilidad de la tensión provocada por el uso potenciado de sus habilidades. Efectos: El índice de recuperación de CVs libres es de un punto por cada 10 minutos transcurridos. Coste: 1</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Recuperación_de_CVs_2 -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Recuperación_de_CVs_2">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ventaja_Psiquica"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El psíquico tiene la capacidad de recuperarse con facilidad de la tensión provocada por el uso potenciado de sus habilidades. Efectos: El índice de recuperación de CVs libres es de un punto por cada 5 minutos transcurridos. Coste: 2</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Recuperación_de_CVs_3 -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Recuperación_de_CVs_3">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ventaja_Psiquica"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El psíquico tiene la capacidad de recuperarse con facilidad de la tensión provocada por el uso potenciado de sus habilidades. Efectos: El índice de recuperación de CVs libres es de un punto por cada minuto transcurrido. Coste: 3</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Recuperación_de_Ki_1 -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Recuperación_de_Ki_1">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ventaja_Comun"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La energía espiritual del personaje se recupera a un índice superior al normal. Efectos: El personaje recupera un punto de Ki por característica cada 10 minutos, en lugar de uno por hora. Coste: 1</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Recuperación_de_Ki_2 -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Recuperación_de_Ki_2">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ventaja_Comun"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La energía espiritual del personaje se recupera a un índice superior al normal. Efectos: El personaje recupera un punto de Ki por característica cada 5 minutos, en lugar de uno por hora. Coste: 2</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Recuperación_de_Ki_3 -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Recuperación_de_Ki_3">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ventaja_Comun"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La energía espiritual del personaje se recupera a un índice superior al normal. Efectos: El personaje recupera un punto de Ki por característica cada minuto, en lugar de uno por hora. Coste: 3</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Recuperar -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Recuperar">
@@ -16985,6 +17574,33 @@ Mantenimiento: 20 / 30 / 35 / 40</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Reflejos_Rápidos_1 -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Reflejos_Rápidos_1">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ventaja_Comun"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El personaje posee unos reflejos excepcionales que le permiten responder con enorme velocidad ante cualquier situación. Efectos: Otorga un bonificador especial de +25 al turno.  Coste: 1</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Reflejos_Rápidos_2 -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Reflejos_Rápidos_2">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ventaja_Comun"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El personaje posee unos reflejos excepcionales que le permiten responder con enorme velocidad ante cualquier situación. Efectos: Otorga un bonificador especial de +45 al turno. Coste: 2</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Reflejos_Rápidos_3 -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Reflejos_Rápidos_3">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ventaja_Comun"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El personaje posee unos reflejos excepcionales que le permiten responder con enorme velocidad ante cualquier situación. Efectos: Otorga un bonificador especial de +60 al turno. Coste: 3</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Regeneración -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Regeneración">
@@ -17003,6 +17619,34 @@ Intermedio: Regeneración 8.
 Avanzado: Regeneración 12.
 Arcano: Regeneración 16.
 Mantenimiento: 10 / 10 / 15 / 25 Diario</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Regeneración_Avanzada -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Regeneración_Avanzada">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ventaja_Comun"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Las heridas sufridas por el personaje sanan con mucha facilidad, ya que su
+cuerpo posee un factor de curación muy elevado. Efectos: Aumenta cuatro niveles la Regeneración del personaje.  Coste: 2</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Regeneración_Básica -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Regeneración_Básica">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ventaja_Comun"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Las heridas sufridas por el personaje sanan con mucha facilidad, ya que su cuerpo posee un factor de curación muy elevado. Efectos: Aumenta dos niveles la Regeneración del personaje. Coste: 1</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Regeneración_Mayor -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Regeneración_Mayor">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ventaja_Comun"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Las heridas sufridas por el personaje sanan con mucha facilidad, ya que su cuerpo posee un factor de curación muy elevado. Efectos: Aumenta seis niveles la Regeneración del personaje. Coste: 3</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -17116,6 +17760,15 @@ Vías Cerradas: Destrucción e Ilusión</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Repetir_una_Tirada_de_Características -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Repetir_una_Tirada_de_Características">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ventaja_Comun"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El azar permite a tu personaje modificar una de sus características básicas. Efectos: Te permite lanzar un dado adicional una vez que has generado las características de tu personaje, y utilizar el resultado obtenido en lugar de uno de los anteriores. La nueva cifra no podrá ser inferior al valor de tu tirada más baja. Limitación: Esta ventaja no es compatible con el cuarto método de generación de características. Puede adquirirse tantas veces como se desee. Coste: 1</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Repulsión_Telequinesis -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Repulsión_Telequinesis">
@@ -17124,6 +17777,61 @@ Vías Cerradas: Destrucción e Ilusión</rdfs:comment>
 Acción: Activa 
 Mantenimiento: Sí
 Descripción: Crea una barrera que rechaza violentamente cualquier cuerpo físico con el que se ponga en contacto, o trate de atravesarla. Para saber si un individuo es capaz de pasar el campo o no, debe superar un control enfrentado de características, utilizando su Fuerza o su Agilidad contra el atributo que indique el efecto del poder. No es necesario utilizar la Proyección Psíquica para fijar a nadie; Repulsión funciona de manera automática sobre cualquier individuo u objeto que atraviese la barrera. En el momento en el que se crea el poder, no puede utilizarse directamente sobre blancos concretos. La longitud está delimitada por la dificultad del poder alcanzado, aunque el psíquico podrá darle la forma que desee, incluso rodeando completamente su cuerpo.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Resistencia_Física_Excepcional_1 -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Resistencia_Física_Excepcional_1">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ventaja_Comun"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La Resistencia física del personaje es muy elevada. Los daños, venenos o enfermedades no tienen tanto efecto en él como podrían tenerlos en otros sujetos normales. Efectos: Añade un bonificador especial de +25 a la Resistencia física (RF), Resistencia contra venenos (RV) y Resistencia contra enfermedades (RE). Coste: 1</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Resistencia_Física_Excepcional_2 -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Resistencia_Física_Excepcional_2">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ventaja_Comun"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La Resistencia física del personaje es muy elevada. Los daños, venenos o enfermedades no tienen tanto efecto en él como podrían tenerlos en otros sujetos normales. Efectos: Añade un bonificador especial de +50 a la Resistencia física (RF), Resistencia contra venenos (RV) y Resistencia contra enfermedades (RE). 
+Coste: 2</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Resistencia_Mágica_Excepcional_1 -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Resistencia_Mágica_Excepcional_1">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ventaja_Comun"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El personaje aguanta especialmente los efectos de carácter místico. Efectos: Añade un bonificador especial de +25 a la Resistencia mágica (RM).  Coste: 1</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Resistencia_Mágica_Excepcional_2 -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Resistencia_Mágica_Excepcional_2">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ventaja_Comun"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El personaje aguanta especialmente los efectos de carácter místico. Efectos: Añade un bonificador especial de +50 a la Resistencia mágica (RM).  Coste: 2</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Resistencia_Psíquica_Excepcional_1 -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Resistencia_Psíquica_Excepcional_1">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ventaja_Comun"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La mente del personaje posee unas barreras muy fuertes, que hacen especialmente difícil poder acceder hasta ella. Efectos: Esta ventaja añade un bonificador especial de +25 a la Resistencia mental (RP) del personaje.  Coste: 1</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Resistencia_Psíquica_Excepcional_2 -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Resistencia_Psíquica_Excepcional_2">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ventaja_Comun"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La mente del personaje posee unas barreras muy fuertes, que hacen especialmente difícil poder acceder hasta ella. Efectos: Esta ventaja añade un bonificador especial de +50 a la Resistencia mental (RP) del personaje.  Coste: 2</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -17147,6 +17855,15 @@ Intermedio: 1.200 Puntos de Vida.
 Avanzado: 2.000 Puntos de Vida.
 Arcano: 3.000 Puntos de Vida.
 Mantenimiento: 10 / 20 / 25 / 30</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Resistencia_a_la_Fatiga_Psíquica -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Resistencia_a_la_Fatiga_Psíquica">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ventaja_Psiquica"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El uso de habilidades psíquicas no causa ningún tipo de repercusión en el cuerpo del personaje, por lo que el uso de sus habilidades no lo deja nunca agotado. Efectos: Si el psíquico obtiene un fracaso en el uso de uno de sus poderes, no pierde puntos de Cansancio una vez que se ha quedado sin CVs libres por gastar. Los poderes de tercer nivel no son afectados por esta ventaja. Coste: 2</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -17556,6 +18273,14 @@ Beneficio: 1</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Samael -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Samael">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Organizacion"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Sambo -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Sambo">
@@ -17669,6 +18394,24 @@ Avanzado: Estanca un conjuro de grado avanzado.
 Arcano: Estanca un conjuro de grado arcano.
 Mantenimiento: No
 Vías Cerradas: Ninguna</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Sentido_del_Peligro -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Sentido_del_Peligro">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ventaja_Comun"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dota de un sexto sentido al personaje, que le permite presentir cuando algo peligroso se acerca o le amenaza. No será capaz de detectar el origen o la naturaleza del peligro hasta que este se cierna sobre él, pero sí de intuir su presencia. Efectos: El personaje no puede ser cogido por sorpresa, salvo por una diferencia de 150 en turno contra su adversario. Coste: 2</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Sentidos_Agudos -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Sentidos_Agudos">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ventaja_Comun"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Los sentidos del personaje están tan desarrollados como los de un animal. Efectos: Añade un punto a la Percepción del personaje a la hora de realizar controles de características y un bonificador especial de +50 a sus habilidades secundarias de Advertir y Buscar. Coste: 1</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -17984,6 +18727,14 @@ Mantenimiento: 30 / 45 / 60 / 100 Diario</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Shajad -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Shajad">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Shephon -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Shephon">
@@ -18071,6 +18822,14 @@ Bono: +10 a la habilidad de ataque sin armas.</rdfs:comment>
 Efectos: Un psíquico con esta desventaja no podrá aplicar bonificadores a su potencial psíquico concentrándose.
 
 Beneficio: 1</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Sol_Negro -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Sol_Negro">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Organizacion"/>
     </owl:NamedIndividual>
     
 
@@ -18163,6 +18922,15 @@ Mantenimiento: No</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Sueño_Ligero -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Sueño_Ligero">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ventaja_Comun"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El personaje permanece parcialmente consciente mientras duerme y es capaz de despertarse al más mínimo ruido o movimiento. Efecto: El personaje sólo aplica un penalizador de –20 a su habilidad de Advertir mientras duerme. Coste: 1</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Sueño_profundo -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Sueño_profundo">
@@ -18172,6 +18940,15 @@ Mantenimiento: No</rdfs:comment>
 Efectos: El personaje aplicará un penalizador de –200 a cualquier tirada de percepción mientras duerme. Durante los diez asaltos posteriores a su despertar, aplicará un penalizador de –40 a toda acción.
 
 Beneficio: 1</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Sumar_un_Punto_a_una_Característica -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Sumar_un_Punto_a_una_Característica">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ventaja_Comun"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Uno de los atributos del personaje es superior a su valor original. Efectos: Añade un punto al valor de una característica. Limitación: Las características físicas no podrán superar el once usando esta ventaja. Puede adquirirse tantas veces como se desee. Coste: 1</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -18210,6 +18987,14 @@ Intermedio: +200 PD / hasta 100 PD opcionales en desventajas.
 Avanzado: +300 PD / hasta 200 PD opcionales en desventajas.
 Arcano: +400 PD / hasta 200 PD opcionales en desventajas.
 Mantenimiento: No</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Sustituir_una_Característica_por_un_Nueve -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Sustituir_una_Característica_por_un_Nueve">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ventaja_Comun"/>
     </owl:NamedIndividual>
     
 
@@ -18538,7 +19323,7 @@ Coste: 50 PD</rdfs:comment>
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Proyección_Mágica_Ataque -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Proyección_Mágica_Ataque">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Mistica"/>
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Mística"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Representa que el personaje unifica sus conocimientos de combate con la capacidad de dirigir hechizos sobre los demás. Para él, los conjuros se comportan como verdaderas armas que puede proyectar como una auténtica habilidad marcial.
 
 Efectos: Permite utilizar la habilidad de ataque de un personaje como Proyección Mágica ofensiva. Sólo se emplea la habilidad base, y no los puntos de mejora innata que proporcionan algunas categorías de combate. No puede utilizarse para lanzar conjuros pasivos ni defensivos.
@@ -18551,7 +19336,7 @@ Coste: 75 PD</rdfs:comment>
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Proyección_Mágica_Defensa -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Proyección_Mágica_Defensa">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Mistica"/>
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Mística"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El personaje emplea sus conocimientos defensivos para proyectar sus sortilegios pasivos y escudos, como si se tratasen de armas o protecciones que interceptan los ataques de sus adversarios.
 
 Efectos: Permite utilizar la habilidad de defensa de un personaje como Proyección Mágica defensiva. Sólo se emplea la habilidad base, y no los puntos de mejora innata que proporcionan algunas categorías de combate. No puede utilizarse para dirigir conjuros de carácter ofensivo.
@@ -18564,7 +19349,7 @@ Coste: 75 PD</rdfs:comment>
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Proyección_Psíquica -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Proyección_Psíquica">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Psiquica"/>
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Psíquica"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El personaje usa sus habilidades de combate para proyectar sus poderes mentales como si fuesen verdaderas armas.
 
 Efectos: Otorga la capacidad de usar las habilidades de combate del personaje como Proyección Psíquica. La ofensiva se utiliza para atacar, y la defensiva para levantar escudos. Sólo se emplea la habilidad base, no los puntos de mejora innata que proporcionan algunas categorías de combate.
@@ -18678,6 +19463,15 @@ Mantenimiento: No</rdfs:comment>
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tamaño">
         <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Característica_Secundaria"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El Tamaño indica las medidas y el peso del personaje, es decir, lo pequeño o grande que es. Para calcularlo se suman las dos características físicas Fuerza y Constitución.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Tamaño_no_Natural -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tamaño_no_Natural">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ventaja_Comun"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El personaje tiene un Tamaño inusual para su Fuerza y Constitución, permitiendo que quien debería ser una colosal masa de músculos sea una persona pequeña o viceversa. Efectos: El personaje puede aumentar o disminuir hasta cinco puntos su Tamaño en el momento de su creación. Coste: 1</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -18879,15 +19673,6 @@ Mantenimiento: 15 / 20 / 25 / 30</rdfs:comment>
     
 
 
-    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Tierra -->
-
-    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tierra">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Mágica"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La Tierra es el poder del planeta, la piedra y los minerales. Es la magia más material de todas y controla las leyes de la física, como la gravedad y el magnetismo. Su influencia sobre los espíritus y lo inmaterial es muy limitada. Los conjuros de piedra recogen la magia relacionada con la resistencia, la dureza y la lentitud. La vía opuesta a Tierra es Aire.</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Tierra_Maldita -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tierra_Maldita">
@@ -19048,6 +19833,27 @@ Mantenimiento: 35 / 60 / 90 / 150</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tipos_Armas">
         <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Tol_Rauko -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tol_Rauko">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Organizacion"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tol Rauko es otra de las organizaciones más poderosas de toda Gaïa. Es una orden militar de templarios que se
+dedica a buscar y preservar cualquier vestigio de cultura no humana o entidad sobrenatural que exista en el mundo. Su objetivo es evitar que desaparezcan para siempre e impedir que los humanos tengan acceso a conocimientos que pueden resultar peligrosos. Sus miembros son luchadores excepcionales con grandes conocimientos
+de arqueología y ocultismo, preparados para enfrentarse a cualquier tipo de dificultad. Su símbolo es una cruz granate acabada en punta.
+
+La historia de Tol Rauko es bastante compleja. El primer Emperador era terriblemente consciente de que el hombre no debía olvidar del todo sus orígenes, ni tampoco resultaba justo culpar de lo que había sucedido sólo a los seres sobrenaturales. Sin embargo, el odio que existía contra ellos era demasiado palpable y siempre quedaba la posibilidad de que, si alguien se hacía con el suficiente poder místico, estallasen nuevos conflictos y miles de personas sufrieran otra vez sus consecuencias. Atrapado entre ambos pensamientos, las atrocidades que su propia Inquisición estaba realizando con sus antiguos aliados le hicieron reaccionar, y creó una orden con sus agentes de mayor confianza, a la que le dio plena autoridad para actuar en asuntos de índole sobrenatural. A la cabeza de la organización puso a su primer mariscal Adam Graft, quien realizó una excelente labor, convirtiéndola en una potencia sólo comparable a los Señores de la Guerra. A lo largo de los años, Tol Rauko ha ido acumulando cada vez mayor poder, desligándose completamente de cualquier lazo político salvo de la figura del Emperador. En la actualidad está al mando del mariscal Malakías Graft, quien ha jurado fidelidad a la Emperatriz, pero que también mantiene una estrecha relación con la Alianza Azur y muchos principados independientes. En realidad su objetivo es permanecer fiel a Abel, pero presintiendo que se avecinan tiempos difíciles, Malakías no quiere implicarse abiertamente en una guerra política.
+
+Todo el mundo conoce Tol Rauko, pero pocos tienen claro a qué se dedican exactamente. Dado que hoy en día prácticamente nadie cree en lo inexplicable, los consideran un grupo de privilegiados que viven de las prerrogativas que les concedió el Imperio en la antigüedad. No obstante, la gente es consciente de su potencia y les teme.
+
+Los templarios viajan por todo el mundo en pos de reliquias o entidades sobrenaturales. Cuando se encuentran con unas ruinas, las exploran haciendo detallados mapas de lo que hay dentro, y recogen todos los artefactos peligrosos transportables que hallen. Tras eso, las sellan con su marca y las ocultan. A veces, si el lugar es especialmente peligroso, simplemente lo cierran completamente y dejan una guarnición en la zona custodiándolo. Gaïa entera está plagada de ciudadelas y templos sellados por Tol Rauko, aunque sus miembros saben perfectamente que el mundo es muy grande y que aún faltan muchísimas más por encontrar.
+
+Cuando localizan un ser sobrenatural, actúan de un modo completamente distinto a los inquisidores. Su misión en esos casos es la de capturarlos con vida y trasladarlos hasta su fortaleza central. Si es necesario, están capacitados para hacerles todo el daño que sea preciso, aunque nunca matarlos salvo si peligra abiertamente la vida de inocentes. En ocasiones, pueden incluso dejar morir a algunas personas antes que acabar con un ser único en su especie. No tienen ninguna jurisdicción sobre brujos humanos, aunque sí sobre las cosas que estos puedan poseer. 
+
+Militarmente, Tol Rauko tiene un potencial bélico comparable al de un Señor de la Guerra, por lo que con su poder puede desestabilizar cualquier principado o incluso derrocarlo. Tienen varios miles de soldados a su cargo distribuidos por todo el mundo y casi medio millar de templarios. La misma naturaleza de la orden les enfrenta abiertamente a la Inquisición, quienes se han convertido en sus principales competidores a lo largo de los años. La única razón por la que no ha dado comienzo una guerra abierta entre ambas organizaciones es su mutua fidelidad hacia la figura del Emperador. En sus inicios, los templarios y los inquisidores protagonizaron varios enfrentamientos que acabaron siempre en derramamiento de sangre. Para evitar la muerte de sus agentes, el Emperador impuso un decreto según el cual, aquel que llegase primero hasta el lugar de los hechos tiene la prerrogativa de la investigación, mientras que la otra parte debía retirarse. Aun así, en algunos casos han seguido estallando conflictos armados entre templarios e inquisidores, ya que ambos argumentaban haber sido los primeros en aparecer. También se oponen a Sol Negro, de quienes sólo hace unas décadas que tienen constancia.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -20035,6 +20841,15 @@ Mantenimiento: No</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Ver_lo_Sobrenatural -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ver_lo_Sobrenatural">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ventaja_Comun"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Los ojos del personaje pueden llegar a ver los telares del flujo de las almas y al mismo tiempo percibir la energía de las matrices psíquicas. Efectos: El personaje ve lo sobrenatural, tanto magia y matrices psíquicas como criaturas espirituales. Por tanto, no aplica el penalizador de cegado en ninguna de dichas situaciones. Coste: 1</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Verdor -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Verdor">
@@ -20210,6 +21025,15 @@ Vías Cerradas: Ninguna</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Virote_Pesado">
         <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Munición_Asedio"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Visión_Nocturna -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Visión_Nocturna">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ventaja_Comun"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Esta ventaja permite al personaje ver en la oscuridad y adaptarse a enorme velocidad a cualquier cambio en la intensidad de la luz. Efectos: Permite ignorar cualquier penalizador causado por la oscuridad, siempre que no se trate de un lugar con carencia absoluta de luz o algún tipo de oscuridad mágica, en cuyo caso, sólo quedan reducidos a la mitad. Coste: 1</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -20456,6 +21280,14 @@ Beneficio: 1</rdfs:comment>
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Vía_Menor">
         <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tipos_Vía"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Es una de las vías que controlan los elementos básicos, las almas y la ilusión.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Wissenschaft -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Wissenschaft">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Organizacion"/>
     </owl:NamedIndividual>
     
 
@@ -21096,7 +21928,7 @@ Coste: 50 CM</rdfs:comment>
     <!-- urn:absolute:project_arpg/games/anima_beyond_fantasy#Zeon -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Zeon">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Mistica"/>
+        <rdf:type rdf:resource="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Mística"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El Zeon es la energía mística que controlan los hechiceros. Es la cantidad de poder del que disponen, los “puntos de magia” que pueden invertir en la realización de conjuros. La propia palabra Zeon significa “Maravillas de Dios”, aunque es sólo uno de tantos nombres que recibe, como Maná o Erzvayu.
 
 El Zeon base se calcula de la misma forma que los puntos de vida, pero en este caso utilizando la característica de Poder en lugar de la de Constitución.</rdfs:comment>
@@ -21594,6 +22426,17 @@ determinados sobre la categoría que vamos a elegir.Existen seis arquetipos, que
     <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Arte_Y_Decoracion">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Elementos de arte y decoración que podemos obtener.</rdfs:comment>
     </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Beryl">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Las Beryls son las Hijas de la Luz, siete entidades que se encuentran junto a C´iel desde la Guerra de los Cielos. Su poder es inconmensurable; tanto que escapa completamente a la imaginación del hombre. Salvo en el caso de Uriel, todas poseen personalidades femeninas. Sus verdaderos nombres son una incógnita.
+
+A lo largo de la historia han adoptado varias identidades distintas con las que nunca se han sentido realmente integradas. Generalmente, los mortales se refieren a ellas con los títulos de los siete arcángeles de la religión cristiana, las personalidades que habitualmente más les gusta encarnar. Igual que C´iel, son adoradas por algunas culturas como deidades, ya que muchas de sus intervenciones en el mundo han tomado un cariz marcadamente religioso. 
+
+Cada una de ellas tiene sus propios propósitos y objetivos, que tratan de llevar a cabo por encima de todo. Normalmente no suelen ordenar nada a sus acólitos, pero poseen multitud de agentes dispuestos a seguir sus preceptos autónomamente. Por lo general colaboran entre ellas, pero a veces operan en secreto sin explicar o justificar sus actividades a las demás. 
+
+Aunque todas se encuentran unidas y tienen una importancia similar, entre ellas destaca Mikael, quien está más próxima a C´iel y en cierta manera se ocupa de presidirlas. Uno de sus principales deseos ha sido siempre encontrar una forma de integrarse completamente en la creación, por lo cual, siguiendo el ejemplo de C´iel, las siete han adoptado como suyos diversos conceptos e ideas. 
+
+Muchas están relacionados con los sentimientos positivos del hombre, pero en otros casos representan principios mucho más inusuales. De este modo, fundiendo una porción de su esencia con esos conceptos, sienten cómo un fragmento de ellas mismas forma una parte importante de la realidad.</rdfs:comment>
+    </rdf:Description>
     <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Capacidad_Física">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Las capacidades físicas dependen directamente de las características del personaje. Hay tres distintas: el Tipo de movimiento, el Índice de peso y el Cansancio. Cada una de ellas tiene funciones diferentes, desde saber cuan rápido es capaz de correr un individuo a la cantidad de peso que podrá levantar.</rdfs:comment>
     </rdf:Description>
@@ -21685,12 +22528,6 @@ este afecta a todos sus poderes.</rdfs:comment>
     <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Escudo">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Salvo en el caso de la rodela, los escudos medios y corporales obligan a usar una mano para llevarlos, pero al contrario de lo que ocurre con otras armas, emplearlos con la zurda no provoca ningún negativo a la habilidad de parada (aunque sí a la de ataque). Estos objetos, al igual que las armaduras, tienen una restricción directa sobre la iniciativa, que se resta del turno final como un penalizador especial. Emplear un escudo de modo defensivo no se considera equivalente a usar un arma adicional. Si quiere utilizarse para atacar como segunda arma, quien lo enarbola no puede usar durante ese turno su bono a la defensa.</rdfs:comment>
     </rdf:Description>
-    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Especial">
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Elementos específicos que permiten ampliar el abanico de posibilidades de los juegadores de Anima: Beyond Fantasy.</rdfs:comment>
-    </rdf:Description>
-    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Especial_Armas">
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reglas especiales que siguen algunas armas.</rdfs:comment>
-    </rdf:Description>
     <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Generación_Tiradas">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Una vez que sabemos cuáles son las características primarias debemos aprender a calcular su valor. Lo más importante es el elemento del azar, que es precisamente el que introduce variedad entre los personajes. Para representar este azar, las características deben generarse utilizando un D10.</rdfs:comment>
     </rdf:Description>
@@ -21712,7 +22549,7 @@ este afecta a todos sus poderes.</rdfs:comment>
     <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Ki">
         <rdfs:comment>Las habilidades del Ki son una serie de capacidades especiales que pueden desarrollar los personajes, utilizando sus puntos de Conocimiento Marcial. Cuando alguien domina una de ellas, esta le permite realizar acciones especiales que ningún otro ser humano es capaz de ejecutar. Cada una tiene un coste en puntos de CM, que es necesario invertir para adquirirla. Las habilidades del Ki se desarrollan siguiendo una lógica en su conocimiento y por tanto es posible que, para aprender a utilizar algunas, un individuo tenga que dominar anteriormente otras.</rdfs:comment>
     </rdf:Description>
-    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Mistica">
+    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Mística">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La habilidad sobrenatural agrupa todas las pericias de carácter místico del personaje. Son las que utilizan las categorías dotadas de poderes sobrenaturales, como los magos, los invocadores o los ilusionistas.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Perceptiva">
@@ -21721,7 +22558,7 @@ este afecta a todos sus poderes.</rdfs:comment>
     <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Primaria">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Son llamadas así ya que representan las habilidades básicas o principales de los personajes en el ejercicio de sus categorías. A su vez, las habilidades primarias están divididas en tres campos distintos: la habilidad de combate, la habilidad psíquica y la habilidad sobrenatural.</rdfs:comment>
     </rdf:Description>
-    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Psiquica">
+    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Psíquica">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Recoge todo lo relacionado con el campo de los poderes psíquicos y su uso.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Habilidad_Secundaria">
@@ -21745,7 +22582,7 @@ este afecta a todos sus poderes.</rdfs:comment>
     <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Incremento_Físico">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La disciplina Incremento físico otorga al psíquico un completo dominio sobre su cuerpo y todas las células que lo componen. De este modo, controla cada parte de su anatomía como si se tratase de una máquina perfecta, aumentando de un modo increible sus capacidades corporales. Sólo es posible emplear una vez un mismo poder sobre un determinado individuo. No tiene ningún modificador.</rdfs:comment>
     </rdf:Description>
-    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Invocacion">
+    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Invocación">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Los personajes tienen a su disposición la capacidad de contactar con entidades de enorme poder y solicitar su ayuda temporalmente. Semejantes seres son inmunes a las habilidades de convocatoria naturales, pero intervienen de manera limitada en el mundo, brindando parte de su poder a quienes los llaman. En cierta manera son equivalentes a poderosos hechizos, pero en lugar de ser realizados por el invocador, son las propias entidades quienes los ejecutan.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Ki">
@@ -21754,37 +22591,54 @@ este afecta a todos sus poderes.</rdfs:comment>
 Aunque el Ki está presente en cualquier ser vivo, no todo el mundo llega realmente a ser consciente de ello. Sólo los pocos que son capaces de percibir su propia energía y la despiertan, controlan estas increíbles capacidades. Al hacerlo rompen la fina línea entre la carne y el alma, por lo que pueden emplear sus poderes espirituales mientras permanecen aún en sus cuerpos. El término “Dominio” proviene de la capacidad que tienen esas personas para controlar su energía y sacar el máximo provecho de ella, realizando acciones físicas que ningún otro mortal podría lograr.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Agua">
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Libro que contiene los conjuros de la vía mágica de Agua.</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El elemento del agua recoge dentro de sí muchos conceptos distintos. Es la vía que controla los líquidos y la pureza de las cosas. También representa el poder del hielo y el de las bajas temperaturas. Su poder es muy equilibrado ofensiva y defensivamente. La vía opuesta a Agua es Fuego.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Aire">
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Libro que contiene los conjuros de la vía mágica de Aire.</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Es la vía de lo etéreo y lo incorpóreo. Recoge los conjuros de velocidad y movimiento. Con su poder se puede alterar el espacio y transportar cuerpos de un lugar a otro. También es la vía que controla el clima y la electricidad. La vía opuesta a Aire es Tierra.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Creación">
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Libro que contiene los conjuros de la vía mágica de Creación.</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El poder de la creación es la capacidad mágica de componer y alterar la realidad que rodea a los hechiceros. Sus conjuros engloban el cambio, la curación y la creación de cosas. Es una magia marcadamente defensiva. La vía opuesta a Creación es Destrucción.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Destrucción">
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Libro que contiene los conjuros de la vía mágica de Destrucción.</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Esta vía permite utilizar el poder del flujo de almas para destruir la propia realidad. Sus conjuros afectan tanto al mundo material como al espiritual. Su poder es por naturaleza muy ofensivo. Su vía opuesta es Creación.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Esencia">
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Libro que contiene los conjuros de la vía mágica de Esencia.</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La Esencia controla la vida y las almas. Esta vía tiene el poder sobre los espíritus y los seres naturales que pertenecen al mundo. Es también la vía de la naturaleza y los conjuros de origen druídicos. La vía opuesta a Esencia es Ilusión.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Fuego">
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Libro que contiene los conjuros de la vía mágica de Fuego.</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La primera de las cuatro vías elementales menores tiene el control sobre las altas temperaturas. Sus conjuros crean calor, fuego y arrasan grandes cantidades de terreno. También reúne conjuros de sacrificio, que permiten consumir ciertos aspectos de un individuo para potenciar a cambio otros. Es una vía muy ofensiva. La vía opuesta a Fuego es Agua.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Ilusión">
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Libro que contiene los conjuros de la vía mágica de Ilusión.</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El poder de esta vía permite al hechicero controlar el engaño y la ilusión. Sus conjuros pueden alterar la realidad, y con ella la percepción de las personas. La vía opuesta a Ilusión es Esencia.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Luz">
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Libro que contiene los conjuros de la vía mágica de Luz.</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Esta vía es la que permite a los hechiceros controlar uno de los dos elementos superiores, la luz pura. Es la que controla las emociones positivas del hombre, como el amor, la tranquilidad o el placer. También domina el conocimiento y la detección. Su poder ofensivo y defensivo está muy equilibrado. La vía opuesta a Luz es Oscuridad.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Nigromancia">
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Libro que contiene los conjuros de la vía mágica de Nigromancia.</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La nigromancia es una perversión de la magia como tal. Mientras que el resto de vías se alimenta de las energías de la red de almas, la nigromancia las arranca de allí. Sus conjuros destruyen la esencia de la vida, estancando y pervirtiendo las almas que utiliza. Su poder permite devolver la vida a los muertos, destruir las almas y drenar la vida y la esencia de otros seres. La Nigromancia se opone al resto de las vías de magia.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Oscuridad">
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Libro que contiene los conjuros de la vía mágica de Oscuridad.</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La oscuridad no controla la ausencia de luz, sino el puro poder de las tinieblas. Domina todas las emociones negativas como el miedo, la ira y el odio. Es también el poder de los secretos, entre los que se incluyen los conjuros de ocultación y ofuscación. Al igual que la Luz, su poder está muy equilibrado. La vía opuesta a Oscuridad es Luz.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Libro_Tierra">
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Libro que contiene los conjuros de la vía mágica de Tierra.</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La Tierra es el poder del planeta, la piedra y los minerales. Es la magia más material de todas y controla las leyes de la física, como la gravedad y el magnetismo. Su influencia sobre los espíritus y lo inmaterial es muy limitada. Los conjuros de piedra recogen la magia relacionada con la resistencia, la dureza y la lentitud. La vía opuesta a Tierra es Aire.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Luz_y_Tinieblas">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">En la existencia hay dos fuerzas antagónicas que, ya sea en mayor o menor grado, llevan inmiscuyéndose en los asuntos de Gaïa desde sus inicios. Sus verdaderos orígenes son desconocidos. La primera constancia que se tiene de su presencia en el mundo fue al acabar la Guerra de los Cielos, durante la cual ambas se enfrentaron hasta que estuvieron a punto de borrar completamente toda la creación. Tienen muchos nombres, pero habitualmente se les conoce como C´iel y Gaira, los señores de la luz y de la oscuridad. 
+
+Qué son es un concepto inexplicable. No son dioses ni tampoco demonios tal y como los concebimos, pero su poder está mucho más allá de aquello a lo que llamamos “divinidad”. Ninguno de los dos es nativo de nuestra realidad. De hecho, no pertenecen a ninguna. Nunca se entrometen personalmente en los acontecimientos de Gaïa. Prueba de ello es que, desde la Guerra de la Oscuridad, no han vuelto a intervenir en lo más mínimo. No son pocos quienes los veneran como a deidades. Comúnmente, dado que sus representaciones más habituales son las de dos inmensos dragones, resulta normal denominarles los dioses dragón.
+
+C´iel y Gaira encarnan la Luz y las Tinieblas respectivamente, aunque esto se debe en gran medida a su propia voluntad. Ellos mismos han elegido simbolizar cada uno de estos principios y todas las ideas que conllevan. “Bueno” o “malo”, en la extensión de su significado, son conceptos que no se les puede aplicar. Simplemente, se han acercado a las nociones más afines a sus propias filosofías personales. 
+
+C´iel se relaciona con la Luz, elemento que representa las emociones más positivas del hombre, como el amor, la felicidad o la esperanza. Es una entidad femenina, por lo que son muchos quienes la llaman “la dama de la luz”. Habitualmente se la representa como una mujer de raza humana o élfica con una belleza sobrecogedora y ojos dorados, aunque su forma más conocida es la de un colosal dragón blanco con alas de ángel. Tiene centenares de símbolos dependiendo de cada cultura, pero quizás los más habituales son un ojo plateado con pupila de reptil y una mano de la que surgen alas. Sus principios filosóficos persiguen alcanzar la igualdad de todos los pueblos de Gaïa, esperando que algún día puedan conseguir el orden y la prosperidad. Defiende por encima de todo la vida, considerando ilegítimo arrebatarla bajo ninguna circunstancia. No obstante, también tiene una faceta negativa y, a veces, las medidas que aprueba para lograr sus fines son tan drásticas que prácticamente transgreden sus ideales.
+
+Por el contrario, Gaira armoniza con las Tinieblas y muchos de los sentimientos y las conductas más tortuosas del hombre. Es el señor oscuro, el dragón negro de tres ojos cuya sombra puede engullir el mundo. Su manifestación habitual es la de un Duk´zarist o un humano con un tercer ojo en la frente y largos cabellos blancos que ondean al viento. Entre sus símbolos más conocidos se encuentran una pupila negra o un laberinto de cadenas acabadas en garfios. Su ideología tiene como fin la evolución, el desarrollo y la estabilidad de Gaïa, aunque el camino para lograrlo pueda ser terrible. El dolor, la pena, incluso el odio y los conflictos son sólo dificultades que hay que atravesar para alcanzar el progreso y, en última instancia, la verdadera felicidad. Para él, aquellos que tienen más poder deben convertirse en guías para los demás: el fuerte manda sobre el débil, es una ley de la propia existencia.
+
+Ambos están duramente enfrentados el uno con el otro, pero ninguno de ellos desea iniciar un conflicto abierto. Realmente, carecen de un verdadero motivo para emprenderlo; en el fondo, sienten que se necesitan mutuamente.
+
+Junto a ellos se alza una serie de entidades que les han acompañado desde el principio de los tiempos. Son los Shajads y las Beryls, generales de aquellos que fueran sus ejércitos en la Guerra de los Cielos. Hay siete en cada bando. Comparten la misma naturaleza de C´iel y de Gaira, aunque al contrario que estos, sí han intervenido muy activamente en el mundo. De algún modo, necesitan sentirse integrados en Gaïa y siempre han tratado de buscar un lugar en la existencia que reclamar para sí. Durante miles de años han actuado celosamente mediante agentes, cultos o religiones en pos de muy diversos fines. Ninguno de ellos es material, aunque a veces se han manifestado mediante avatares o diversas encarnaciones divinas. En los últimos siglos, sus actividades han ido disminuyendo de intensidad progresivamente. 
+
+Actualmente, tanto las Beryls como los Shajads (al igual que C´iel y Gaira) han desaparecido completamente de la realidad. No se sabe si sólo permanecen apartados por su deseo de no intervenir o si realmente se han marchado. La respuesta a esa pregunta permanece oculta en su silencio…</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Magia">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La magia influye en todo lo vivo y lo muerto, en todo lo real e irreal, puede serlo todo o no ser nada, pero siempre estuvo y estará ahí, con nosotros. Está formada por la energía espiritual del mundo. Su propia naturaleza se encuentra ligada al flujo de almas, aunque sería más correcto decir que es una faceta de él: nace de los espíritus al igual que la propia realidad. En cierto modo es la sombra de la existencia, una fuerza que no responde a las reglas de la física ni de la lógica, pero que altera el mundo a su antojo.
@@ -21850,6 +22704,17 @@ Modificador: Siempre que un psíquico utilice uno de sus poderes sentientes sobr
     </rdf:Description>
     <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Sexo">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Condición orgánica, masculina o femenina, de los animales y las plantas.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Shajad">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Los amos de la oscuridad son los prosélitos de Gaira, aquellos que durante milenios han sido considerados por varias culturas como los dioses de las tinieblas. Seis son entidades masculinas, mientras que sólo una, Meseguis, tiene esencia de mujer.
+
+Por regla general, siempre emplean los mismos nombres que han usado desde la Guerra de los Cielos, aunque eso no les impide adoptar ocasionalmente alguna identidad divina de inferior importancia. Como las Beryls, tras miles de años comenzaron a sentir la necesidad de integrarse en el mundo, por lo que también personifican diversos principios. Sin embargo, las ideas que encarnan son mucho más sombrías, como reflejo de las emociones más tenebrosas del hombre.
+
+Están organizados jerárquicamente según su poder e influencia. Tres de ellos, Zemial, Jedah y Meseguis, son considerados los Shajads principales, mientras que la posición de los otros cuatro es muy caótica y varía dependiendo de sus acciones en cada momento. 
+
+Paradójicamente, existe poco compañerismo o sentido de grupo entre ellos, dado que mantienen una rivalidad semejante a la que sienten hacia las Beryls. Las luchas internas por el poder intentando acaparar mayor influencia son constantes, aunque jamás se enfrentan abiertamente. La causa de esta unión se debe a que todos están sujetos mutuamente por su respeto y obediencia hacia Gaira, quien les ata con reglas que se ven obligados a seguir ineludiblemente. 
+
+Su intervención en el mundo a través de agentes y seguidores también es escasa, aunque resulta mucho más activa que en el caso de las Beryls.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="urn:absolute:project_arpg/games/anima_beyond_fantasy#Tabla_Armas">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Un individuo no tiene por qué verse obligado a dominar el uso de una única arma, sino que con la práctica es capaz de aprender a utilizar igualmente otras muchas con la misma habilidad. Las tablas de armas permiten a un personaje eliminar los penalizadores por blandir armas distintas a la que escogió inicialmente, e incluso en ocasiones, emplear su habilidad de combate lanzando conjuros o poderes psíquicos.</rdfs:comment>
