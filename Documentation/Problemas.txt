@@ -4,3 +4,8 @@ Problemas del proyecto
             -> Solución: Crear clase abstracta, y crear un individuo por clase, con la definición correspondiente
 
         2: 
+
+
+Posibles mejoras:
+    - Añadir más información a la base de datos.
+    - Desarrollar la versión de escritorio

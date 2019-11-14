@@ -38,6 +38,265 @@
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#tieneArquetipo -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#tieneArquetipo">
+        <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje"/>
+        <rdfs:range rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arquetipo"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#tieneCaractPrimaria -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#tieneCaractPrimaria">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#tieneCaracterística"/>
+        <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje"/>
+        <rdfs:range rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Característica_Primaria"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#tieneCaractSecundaria -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#tieneCaractSecundaria">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#tieneCaracterística"/>
+        <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje"/>
+        <rdfs:range rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Característica_Secundaria"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#tieneCaracterística -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#tieneCaracterística">
+        <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje"/>
+        <rdfs:range rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Característica"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#tieneCategoría -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#tieneCategoría">
+        <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje"/>
+        <rdfs:range rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Categoría"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#tieneConvocación -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#tieneConvocación">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#tieneHabMística"/>
+        <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje"/>
+        <rdfs:range rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Convocación"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#tieneDesventaja -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#tieneDesventaja">
+        <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje"/>
+        <rdfs:range rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Desventaja"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#tieneHabAtlética -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#tieneHabAtlética">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#tieneHabSecundaria"/>
+        <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje"/>
+        <rdfs:range rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Atlética"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#tieneHabCombate -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#tieneHabCombate">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#tieneHabPrimaria"/>
+        <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje"/>
+        <rdfs:range rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Combate"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#tieneHabCreativa -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#tieneHabCreativa">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#tieneHabSecundaria"/>
+        <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje"/>
+        <rdfs:range rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Creativa"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#tieneHabIntelectual -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#tieneHabIntelectual">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#tieneHabSecundaria"/>
+        <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje"/>
+        <rdfs:range rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Intelectual"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#tieneHabMística -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#tieneHabMística">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#tieneHabPrimaria"/>
+        <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje"/>
+        <rdfs:range rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Mística"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#tieneHabPerceptiva -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#tieneHabPerceptiva">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#tieneHabSecundaria"/>
+        <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje"/>
+        <rdfs:range rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Perceptiva"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#tieneHabPrimaria -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#tieneHabPrimaria">
+        <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje"/>
+        <rdfs:range rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Primaria"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#tieneHabPsíquica -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#tieneHabPsíquica">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#tieneHabPrimaria"/>
+        <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje"/>
+        <rdfs:range rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Psíquica"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#tieneHabSecundaria -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#tieneHabSecundaria">
+        <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje"/>
+        <rdfs:range rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Secundaria"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#tieneHabSocial -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#tieneHabSocial">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#tieneHabSecundaria"/>
+        <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje"/>
+        <rdfs:range rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Social"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#tieneHabSubterfugio -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#tieneHabSubterfugio">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#tieneHabSecundaria"/>
+        <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje"/>
+        <rdfs:range rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Subterfugio"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#tieneHabVigor -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#tieneHabVigor">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#tieneHabSecundaria"/>
+        <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje"/>
+        <rdfs:range rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Vigor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#tieneHechizo -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#tieneHechizo">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#tieneMagia"/>
+        <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Libre_Acceso"/>
+                    <rdf:Description rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Libro_Agua"/>
+                    <rdf:Description rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Libro_Aire"/>
+                    <rdf:Description rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Libro_Creación"/>
+                    <rdf:Description rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Libro_Destrucción"/>
+                    <rdf:Description rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Libro_Esencia"/>
+                    <rdf:Description rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Libro_Fuego"/>
+                    <rdf:Description rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Libro_Ilusión"/>
+                    <rdf:Description rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Libro_Luz"/>
+                    <rdf:Description rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Libro_Nigromancia"/>
+                    <rdf:Description rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Libro_Oscuridad"/>
+                    <rdf:Description rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Libro_Tierra"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#tieneInvocación -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#tieneInvocación">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#tieneConvocación"/>
+        <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje"/>
+        <rdfs:range rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Invocación"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#tieneMagia -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#tieneMagia">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#tieneHabMística"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#tieneVentaja -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#tieneVentaja">
+        <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje"/>
+        <rdfs:range rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ventaja"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#tieneVíaMágica -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#tieneVíaMágica">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#tieneMagia"/>
+        <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje"/>
+        <rdfs:range rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Vía_Mágica"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
     // Classes
     //
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -528,9 +787,9 @@
     
 
 
-    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Atletica -->
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Atlética -->
 
-    <owl:Class rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Atletica">
+    <owl:Class rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Atlética">
         <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Secundaria"/>
     </owl:Class>
     
@@ -1396,7 +1655,7 @@ Descripción: Es una aleación excepcionalmente rara. Se llama así por su color
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Acrobacias -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Acrobacias">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Atletica"/>
+        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Atlética"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mide la capacidad acrobática. Las Acrobacias no sólo permiten realizar volteretas y cabriolas circenses, sino muchas otras maniobras físicas que requieran equilibrio y movilidad, como andar por la cuerda floja. También puede emplearse para caer desde grandes alturas sin sufrir daños: un personaje que se esté cayendo tiene la oportunidad de realizar una tirada de Acrobacias para colocarse en una posición favorable y evitar fracturas. Sufre el penalizador por armadura.</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -2979,7 +3238,7 @@ Mantenimiento: No</rdfs:comment>
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Atletismo -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Atletismo">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Atletica"/>
+        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Atlética"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Es la capacidad del personaje de forzar sus habilidades atléticas, manteniendo el ritmo en una carrera, saltando obstáculos o incluso remando. Con ella podrá correr por encima de sus límites y distribuir mejor sus energías para aguantar más sin agotarse. Para saber cada cuanto tiempo un personaje pierde un punto de Cansancio corriendo o desplazándose a su movimiento máximo es necesario realizar un control de Atletismo.
 
 En el caso de que el personaje trate de correr por encima de su Tipo de Movimiento durante un asalto, también puede realizar un control de Atletismo. No obstante, desplazarse por encima de su velocidad natural es terriblemente estresante para el cuerpo, por lo que pierde automáticamente un punto de Cansancio por cada asalto que siga manteniendo esa velocidad incrementada. Estos modificadores no permiten aumentar el Tipo de Movimiento del personaje por encima de 10 si no posee inhumanidad o Zen. Sufre el penalizador por armadura.</rdfs:comment>
@@ -11398,9 +11657,9 @@ Mantenimiento: No</rdfs:comment>
     
 
 
-    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Atletica -->
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Atlética -->
 
-    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Atletica">
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Atlética">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Definicion_Clases"/>
     </owl:NamedIndividual>
     
@@ -14926,7 +15185,7 @@ Mantenimiento: 5 / 10 / 10 / 15</rdfs:comment>
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Montar -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Montar">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Atletica"/>
+        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Atlética"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Se utiliza para medir la habilidad de equitación. Normalmente, cualquiera podrá montar sobre un caballo que se mueve dócilmente, pero la cosa se complica si está trotando o se encabrita por alguna razón. Esta habilidad permite al personaje doblegar la voluntad de su montura en estas situaciones problemáticas, obligándola a saltar por encima de obstáculos o continuar la marcha a pesar de que se encuentre agotada. También otorga la capacidad de realizar acciones acrobáticas desde la grupa, como cubrirse o recoger cosas en el suelo sin perder la marcha. Aunque tradicionalmente se emplea con caballos, esta pericia permite montar otros animales (como camellos o elefantes) cuya naturaleza les permita ser usados con dicha finalidad.</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -15286,7 +15545,7 @@ Mantenimiento: 5 / 10 / 10 / 15</rdfs:comment>
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Nadar -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Nadar">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Atletica"/>
+        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Atlética"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Representa cómo se las apaña un personaje en el agua y, a niveles superiores, lo rápido que es capaz de desplazarse nadando y buceando. Sufre el penalizador por armadura, pero al contrario de lo que ocurre en las otras habilidades, el negativo no puede reducirse mediante Llevar Armadura. Si el agua está revuelta, el Director de Juego puede aplicar un penalizador adicional entre -1 y -4 al Tipo de Movimiento. Si en cualquier caso la velocidad del personaje llega a cero o menos, se considera que no es capaz de permanecer a flote y se hunde irremisiblemente.</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -18227,7 +18486,7 @@ Mantenimiento: 10 / 10 / 15 / 15 Diario</rdfs:comment>
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Saltar -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Saltar">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Atletica"/>
+        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Atlética"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Permite a los personajes incrementar su capacidad de saltar vertical y horizontalmente. Cuanto mayor sea la dificultad alcanzada, más aumentará su Tipo de movimiento únicamente a la hora de determinar la distancia a la que puede saltar. Estos modificadores no permiten aumentar el Tipo de Movimiento del personaje por encima de 10 si no posee inhumanidad o Zen. Sufre el penalizador por armadura.</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -20131,7 +20390,7 @@ Descripción: Permite al psíquico proyectar uno de sus sentidos hasta una dista
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Trepar -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Trepar">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Atletica"/>
+        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Atlética"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Se utiliza para subir o bajar por cualquier tipo de superficie vertical, como muros o árboles. Si se usa con un equipo de escalada apropiado, el personaje podrá aplicar un bonificador de +40 a su habilidad. Normalmente, el índice de velocidad de un sujeto escalando es de una cuarta parte de su Tipo de movimiento redondeado hacia abajo, pero puede aumentarse en un punto por cada nivel que consiga por encima de la dificultad requerida. Sufre el penalizador por armadura.</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -22532,7 +22791,7 @@ este afecta a todos sus poderes.</rdfs:comment>
     <rdf:Description rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Las habilidades son los conocimientos y pericias de nuestro personaje, que nos indican en qué campos está versado y hasta qué grado.</rdfs:comment>
     </rdf:Description>
-    <rdf:Description rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Atletica">
+    <rdf:Description rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Atlética">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Son las habilidades que dependen de la movilidad del personaje, de su equilibrio y de su agilidad.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Combate">
