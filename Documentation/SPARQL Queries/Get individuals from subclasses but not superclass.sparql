@@ -1,0 +1,12 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+prefix abf: <urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#>
+
+SELECT distinct?subject ?type
+WHERE 	
+{
+  	?subject rdf:type ?type.
+  	?type rdfs:subClassOf abf:Habilidad_Secundaria
+          
+}
+
+ORDER BY ?subject

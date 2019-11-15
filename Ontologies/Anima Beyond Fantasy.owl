@@ -46,11 +46,185 @@
     
 
 
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_Arquetipo -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_Arquetipo">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#CategoríaTiene"/>
+        <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Categoría"/>
+        <rdfs:range rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arquetipo"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_BonificadoresInnatos -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_BonificadoresInnatos">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#CategoríaTiene"/>
+        <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Categoría"/>
+        <rdfs:range rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_CVInnatos -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_CVInnatos">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#CategoríaTiene"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Categoría"/>
+        <rdfs:range rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Psíquica"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_ConocimientoMarcial -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_ConocimientoMarcial">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#CategoríaTiene"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Categoría"/>
+        <rdfs:range rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Combate"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_HabCombate -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_HabCombate">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_HabPrimarias"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_HabMística -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_HabMística">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_HabPrimarias"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_HabPrimarias -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_HabPrimarias">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#CategoríaTiene"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_HabPsíquica -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_HabPsíquica">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_HabPrimarias"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_HabSecundarias -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_HabSecundarias">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#CategoríaTiene"/>
+        <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Categoría"/>
+        <rdfs:range rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Secundaria"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:complementOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Hab_Atléticas"/>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:range>
+            <owl:Class>
+                <owl:complementOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Hab_Creativas"/>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:range>
+            <owl:Class>
+                <owl:complementOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Hab_Intelectuales"/>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:range>
+            <owl:Class>
+                <owl:complementOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Hab_Perceptivas"/>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:range>
+            <owl:Class>
+                <owl:complementOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Hab_Sociales"/>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:range>
+            <owl:Class>
+                <owl:complementOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Hab_Subterfugio"/>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:range>
+            <owl:Class>
+                <owl:complementOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Hab_Vigor"/>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_MúltiploVida -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_MúltiploVida">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#CategoríaTiene"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Categoría"/>
+        <rdfs:range rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Capacidad_Física"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_PuntosVida -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_PuntosVida">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#CategoríaTiene"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Categoría"/>
+        <rdfs:range rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Capacidad_Física"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_Turno -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_Turno">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#CategoríaTiene"/>
+        <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Categoría"/>
+        <rdfs:range rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Capacidad_Física"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#CategoríaTiene -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#CategoríaTiene"/>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#PersonajeTiene -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#PersonajeTiene"/>
+    
+
+
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#tieneArquetipo -->
 
     <owl:ObjectProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#tieneArquetipo">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#PersonajeTiene"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arquetipo"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#tieneArteMarcial -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#tieneArteMarcial">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#tieneHabCombate"/>
+        <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje"/>
+        <rdfs:range rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arte_Marcial"/>
     </owl:ObjectProperty>
     
 
@@ -78,6 +252,7 @@
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#tieneCaracterística -->
 
     <owl:ObjectProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#tieneCaracterística">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#PersonajeTiene"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Característica"/>
     </owl:ObjectProperty>
@@ -87,8 +262,19 @@
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#tieneCategoría -->
 
     <owl:ObjectProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#tieneCategoría">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#PersonajeTiene"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Categoría"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#tieneClaseSocial -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#tieneClaseSocial">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#PersonajeTiene"/>
+        <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje"/>
+        <rdfs:range rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Clase_Social"/>
     </owl:ObjectProperty>
     
 
@@ -106,8 +292,39 @@
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#tieneDesventaja -->
 
     <owl:ObjectProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#tieneDesventaja">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#PersonajeTiene"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Desventaja"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#tieneDesventajaMística -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#tieneDesventajaMística">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#tieneDesventaja"/>
+        <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje"/>
+        <rdfs:range rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Desventaja_Mistica"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#tieneDesventajaPsíquica -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#tieneDesventajaPsíquica">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#tieneDesventaja"/>
+        <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje"/>
+        <rdfs:range rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Desventaja_Psiquica"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#tieneEquipo -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#tieneEquipo">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#PersonajeTiene"/>
+        <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje"/>
+        <rdfs:range rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipamiento"/>
     </owl:ObjectProperty>
     
 
@@ -117,7 +334,7 @@
     <owl:ObjectProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#tieneHabAtlética">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#tieneHabSecundaria"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje"/>
-        <rdfs:range rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Atlética"/>
+        <rdfs:range rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Hab_Atléticas"/>
     </owl:ObjectProperty>
     
 
@@ -137,7 +354,7 @@
     <owl:ObjectProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#tieneHabCreativa">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#tieneHabSecundaria"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje"/>
-        <rdfs:range rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Creativa"/>
+        <rdfs:range rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Hab_Creativas"/>
     </owl:ObjectProperty>
     
 
@@ -147,7 +364,17 @@
     <owl:ObjectProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#tieneHabIntelectual">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#tieneHabSecundaria"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje"/>
-        <rdfs:range rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Intelectual"/>
+        <rdfs:range rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Hab_Intelectuales"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#tieneHabKi -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#tieneHabKi">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#tieneHabCombate"/>
+        <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje"/>
+        <rdfs:range rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Ki"/>
     </owl:ObjectProperty>
     
 
@@ -167,7 +394,7 @@
     <owl:ObjectProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#tieneHabPerceptiva">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#tieneHabSecundaria"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje"/>
-        <rdfs:range rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Perceptiva"/>
+        <rdfs:range rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Hab_Perceptivas"/>
     </owl:ObjectProperty>
     
 
@@ -175,6 +402,7 @@
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#tieneHabPrimaria -->
 
     <owl:ObjectProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#tieneHabPrimaria">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#PersonajeTiene"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Primaria"/>
     </owl:ObjectProperty>
@@ -194,6 +422,7 @@
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#tieneHabSecundaria -->
 
     <owl:ObjectProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#tieneHabSecundaria">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#PersonajeTiene"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Secundaria"/>
     </owl:ObjectProperty>
@@ -205,7 +434,7 @@
     <owl:ObjectProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#tieneHabSocial">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#tieneHabSecundaria"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje"/>
-        <rdfs:range rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Social"/>
+        <rdfs:range rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Hab_Sociales"/>
     </owl:ObjectProperty>
     
 
@@ -215,7 +444,7 @@
     <owl:ObjectProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#tieneHabSubterfugio">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#tieneHabSecundaria"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje"/>
-        <rdfs:range rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Subterfugio"/>
+        <rdfs:range rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Hab_Subterfugio"/>
     </owl:ObjectProperty>
     
 
@@ -225,7 +454,7 @@
     <owl:ObjectProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#tieneHabVigor">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#tieneHabSecundaria"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje"/>
-        <rdfs:range rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Vigor"/>
+        <rdfs:range rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Hab_Vigor"/>
     </owl:ObjectProperty>
     
 
@@ -275,11 +504,72 @@
     
 
 
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#tieneRaza -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#tieneRaza">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#PersonajeTiene"/>
+        <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje"/>
+        <rdfs:range rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Raza"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#tieneTablaArmas -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#tieneTablaArmas">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#tieneHabCombate"/>
+        <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje"/>
+        <rdfs:range rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tabla_Armas"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#tieneTablaMística -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#tieneTablaMística">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#tieneHabMística"/>
+        <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje"/>
+        <rdfs:range rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tabla_Mística"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#tieneTablaPsíquica -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#tieneTablaPsíquica">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#tieneHabPsíquica"/>
+        <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje"/>
+        <rdfs:range rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tabla_Psíquica"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#tieneVentaja -->
 
     <owl:ObjectProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#tieneVentaja">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#PersonajeTiene"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ventaja"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#tieneVentajaMística -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#tieneVentajaMística">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#tieneVentaja"/>
+        <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje"/>
+        <rdfs:range rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ventaja_Mistica"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#tieneVentajaPsíquica -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#tieneVentajaPsíquica">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#tieneVentaja"/>
+        <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje"/>
+        <rdfs:range rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ventaja_Psiquica"/>
     </owl:ObjectProperty>
     
 
@@ -781,17 +1071,65 @@
     
 
 
-    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad -->
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Hab_Atléticas -->
 
-    <owl:Class rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad"/>
+    <owl:Class rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Hab_Atléticas">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Secundaria"/>
+    </owl:Class>
     
 
 
-    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Atlética -->
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Hab_Creativas -->
 
-    <owl:Class rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Atlética">
+    <owl:Class rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Hab_Creativas">
         <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Secundaria"/>
     </owl:Class>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Hab_Intelectuales -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Hab_Intelectuales">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Secundaria"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Hab_Perceptivas -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Hab_Perceptivas">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Secundaria"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Hab_Sociales -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Hab_Sociales">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Secundaria"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Hab_Subterfugio -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Hab_Subterfugio">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Secundaria"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Hab_Vigor -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Hab_Vigor">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Secundaria"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad"/>
     
 
 
@@ -799,22 +1137,6 @@
 
     <owl:Class rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Combate">
         <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Primaria"/>
-    </owl:Class>
-    
-
-
-    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Creativa -->
-
-    <owl:Class rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Creativa">
-        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Secundaria"/>
-    </owl:Class>
-    
-
-
-    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Intelectual -->
-
-    <owl:Class rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Intelectual">
-        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Secundaria"/>
     </owl:Class>
     
 
@@ -831,14 +1153,6 @@
 
     <owl:Class rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Mística">
         <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Primaria"/>
-    </owl:Class>
-    
-
-
-    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Perceptiva -->
-
-    <owl:Class rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Perceptiva">
-        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Secundaria"/>
     </owl:Class>
     
 
@@ -863,30 +1177,6 @@
 
     <owl:Class rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Secundaria">
         <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad"/>
-    </owl:Class>
-    
-
-
-    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Social -->
-
-    <owl:Class rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Social">
-        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Secundaria"/>
-    </owl:Class>
-    
-
-
-    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Subterfugio -->
-
-    <owl:Class rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Subterfugio">
-        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Secundaria"/>
-    </owl:Class>
-    
-
-
-    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Vigor -->
-
-    <owl:Class rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Vigor">
-        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Secundaria"/>
     </owl:Class>
     
 
@@ -1323,6 +1613,22 @@
     
 
 
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tabla_Mística -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tabla_Mística">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Mística"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tabla_Psíquica -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tabla_Psíquica">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Psíquica"/>
+    </owl:Class>
+    
+
+
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tabla_de_Tecnicas_de_Dominio -->
 
     <owl:Class rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tabla_de_Tecnicas_de_Dominio">
@@ -1655,7 +1961,7 @@ Descripción: Es una aleación excepcionalmente rara. Se llama así por su color
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Acrobacias -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Acrobacias">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Atlética"/>
+        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Hab_Atléticas"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mide la capacidad acrobática. Las Acrobacias no sólo permiten realizar volteretas y cabriolas circenses, sino muchas otras maniobras físicas que requieran equilibrio y movilidad, como andar por la cuerda floja. También puede emplearse para caer desde grandes alturas sin sufrir daños: un personaje que se esté cayendo tiene la oportunidad de realizar una tirada de Acrobacias para colocarse en una posición favorable y evitar fracturas. Sufre el penalizador por armadura.</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -1763,7 +2069,7 @@ Mantenimiento: 20 / 40 / 50 / 60</rdfs:comment>
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Advertir -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Advertir">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Perceptiva"/>
+        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Hab_Perceptivas"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Refleja la habilidad perceptiva que permite ser consciente de lo que sucede alrededor. Un personaje puede advertir cualquier cosa extraña que pase o se encuentre en su entorno, desde un grabado inusual en la pared a un asesino que se acerque sigilosamente por su espalda. Las personas advierten utilizando sus cinco sentidos, aunque lo más común es que empleen principalmente la vista y el oído. Si un sujeto está privado de uno de ellos reduce su habilidad a la mitad, salvo si las circunstancias requieren que se utilicen solo determinados sentidos. En esta misma página podéis ver los modificadores de Advertir, separada en los cinco sentidos del personaje. Además de estos, un individuo distraído sufre un penalizador adicional comprendido entre -20 y -40 a sus controles, según crea apropiado el Director de Juego.</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -2137,7 +2443,7 @@ Vías Cerradas: Agua</rdfs:comment>
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Animales -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Animales">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Intelectual"/>
+        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Hab_Intelectuales"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Recoge el conocimiento sobre todo lo relacionado con el mundo animal. Mediante esta habilidad no sólo se pueden reconocer sus características y costumbres, sino también ser un experto en su crianza y adiestramiento. Es posible especializarse en una especie en concreto, en cuyo caso el personaje obtendrá un bonificador de +40 a los controles de la habilidad.</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -2860,7 +3166,7 @@ Mantenimiento: 15 / 30 / 50 / 100 Diario</rdfs:comment>
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arte -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arte">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Creativa"/>
+        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Hab_Creativas"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mide la pericia de un individuo en los campos artísticos, como la pintura o la escultura. Un personaje puede especializarse en una única habilidad artística,  en cuyo caso aplicará un bonificador de +40 al realizar dichos controles.</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -3238,7 +3544,7 @@ Mantenimiento: No</rdfs:comment>
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Atletismo -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Atletismo">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Atlética"/>
+        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Hab_Atléticas"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Es la capacidad del personaje de forzar sus habilidades atléticas, manteniendo el ritmo en una carrera, saltando obstáculos o incluso remando. Con ella podrá correr por encima de sus límites y distribuir mejor sus energías para aguantar más sin agotarse. Para saber cada cuanto tiempo un personaje pierde un punto de Cansancio corriendo o desplazándose a su movimiento máximo es necesario realizar un control de Atletismo.
 
 En el caso de que el personaje trate de correr por encima de su Tipo de Movimiento durante un asalto, también puede realizar un control de Atletismo. No obstante, desplazarse por encima de su velocidad natural es terriblemente estresante para el cuerpo, por lo que pierde automáticamente un punto de Cansancio por cada asalto que siga manteniendo esa velocidad incrementada. Estos modificadores no permiten aumentar el Tipo de Movimiento del personaje por encima de 10 si no posee inhumanidad o Zen. Sufre el penalizador por armadura.</rdfs:comment>
@@ -3558,7 +3864,7 @@ Mantenimiento: 10 / 15 / 25 / 35</rdfs:comment>
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Baile -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Baile">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Creativa"/>
+        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Hab_Creativas"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Es la facultad de bailar y de aprender nuevas danzas. Cuanto más elevada sea la habilidad, el personaje podrá dominar un mayor número de bailes y estilos distintos. Es sin duda una buena manera de ganarse la vida: un gran bailarín siempre podrá conseguir unas monedas si sabe sacar provecho de su capacidad. Un personaje puede especializarse únicamente en un tipo concreto de danza, como por ejemplo baile de salón, en cuyo caso aplicará un bonificador de +40 a sus controles. Sufre el penalizador por armadura.</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -4114,7 +4420,7 @@ Mantenimiento: 5 / 5 / 10 / 10</rdfs:comment>
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Buscar -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Buscar">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Perceptiva"/>
+        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Hab_Perceptivas"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Es la capacidad visual e intuitiva del personaje para buscar algo concreto empleando sus sentidos, ya sea una entrada secreta o a alguien oculto. Es una habilidad mucho más precisa que advertir, puesto que es una acción consciente. Para buscar algo hace falta declararlo previamente, aunque lo que se encuentre al final puede que no sea exactamente lo que se pretendía hallar (un personaje podría tratar de buscar una puerta secreta en una habitación, y en el proceso encontrar algún objeto oculto). También sirve para buscar cosas concretas, como un libro en una biblioteca. Si un individuo trata de buscar una trampa, requiere un nivel de dificultad menos del que indique el artilugio. Esta habilidad utiliza también los mismos modificadores que Advertir.</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -4128,6 +4434,15 @@ Mantenimiento: 5 / 5 / 10 / 10</rdfs:comment>
 
 Algunas de las ventajas que proporcionan los CV los consumen
 permanentemente, de manera que desaparecen y no pueden volver a ser usados. Otros usos, por el contrario, sólo proporcionan ventajas temporales, pero el CV no se consume completamente y el personaje lo recupera transcurrido un tiempo.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#CV_Innato -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#CV_Innato">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Psíquica"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Esta sección indica cuántos CV consigue el personaje por nivel. Cualquiera con habilidades psíquicas empieza con un único CV y consigue otro sin invertir PD, dependiendo del número de niveles que le muestre su categoría. Si, por ejemplo, consigue un CV adicional cada 3 niveles, adquiriría el segundo CV en cuarto nivel, el tercero en nivel siete y así consecutivamente.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -4517,6 +4832,7 @@ Descripción: Este poder carga un objeto o lugar determinado con un fuerte senti
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Categoría_Asesino">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Categoría"/>
+        <Cat_HabSecundarias rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Hab_Atléticas"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Son individuos que se especializan en los campos del subterfugio y la intriga. Se mueven en el anonimato y tratan de que sus víctimas no sean ni siquiera conscientes de qué les ha matado. Emplean técnicas muy refinadas, prefiriendo evitar en todo momento llegar al combate, donde son muy vulnerables. Por ello, tras hacer su trabajo, desaparecen de nuevo entre las sombras de las que surgieron. De todas formas, los personajes con esta categoría no están necesariamente obligados a representar únicamente el papel de ejecutores dentro de la sociedad, ya que existen muchos otros ámbitos en los que pueden poner en práctica sus excelentes habilidades, como por ejemplo el espionaje.</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -4864,7 +5180,7 @@ Descripción: El psíquico disminuye la temperatura a su alrededor hasta el cero
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cerrajería -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cerrajería">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Subterfugio"/>
+        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Hab_Subterfugio"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Se emplea para abrir o cerrar todo tipo de cerraduras o mecanismos similares de los que no se tenga la llave. En el caso de que se trate de un cerrojo o candado tradicional, será necesario utilizar una ganzúa o el personaje aplicará un penalizador de –40 a su habilidad.</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -5013,7 +5329,7 @@ Beneficio: 2</rdfs:comment>
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ciencia -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ciencia">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Intelectual"/>
+        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Hab_Intelectuales"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Con la única excepción de la Medicina, la ciencia es la reunión de todos los conocimientos intelectuales que constituyen disciplinas de estudios. Algunos ejemplos de las nociones ligadas a esta habilidad son las matemáticas, la mecánica, la astronomía o la filosofía. Naturalmente, las aptitudes que desarrolle un personaje en estos campos no serán tan avanzadas como las ideas científicas actuales, puesto que su formación no constituye una disciplina unificada como lo es hoy en día. Es posible especializarse en una ciencia en concreto, en cuyo caso se obtendrá un bonificador de +40 a los controles de la habilidad.</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -8964,7 +9280,7 @@ Mantenimiento: No</rdfs:comment>
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Disfraz -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Disfraz">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Subterfugio"/>
+        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Hab_Subterfugio"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mide la pericia para caracterizarse tomando una apariencia distinta a la propia, vistiéndose y maquillándose debidamente. También evalúa la capacidad de interpretar el papel que trata de imitar, como la forma de moverse y su manera de hablar. Disfraz se enfrenta directamente a las habilidades de advertir y buscar de los otros personajes. Para que alguien que no conoce al individuo disfrazado se percate de que hay algo raro en su aspecto, debe de superar por 80 puntos el control de habilidades enfrentadas si utiliza Advertir, o por 20 si emplea Buscar. En el caso de que sí le hubiese visto antes, ambas se reducen a la mitad. Para emplear correctamente esta habilidad, un personaje necesita tiempo y material para disfrazarse.</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -10812,7 +11128,7 @@ Mantenimiento: 15 / 20 / 25 / 30</rdfs:comment>
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Estilo -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Estilo">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Social"/>
+        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Hab_Sociales"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Estilo es la capacidad de quedar “estéticamente” bien ante cualquier situación, ya sea en una fiesta o en mitad de una pelea. Alguien con Estilo sabrá que, por mucho que se tuerzan las cosas, al menos va a quedar con clase. Incluso si recibe un duro golpe en la cara, un personaje puede tirar Estilo para que el pelo se le mueva de manera dramáticamente apropiada y el hilillo de sangre que le sale de la comisura de los labios quede resultón. Permite también que las cicatrices sean atrayentes en lugar de horribles o, incluso a niveles muy elevados, que los truenos de una tormenta suenen acorde a sus movimientos más teatrales. Vamos, pura cinematografía.</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -11330,7 +11646,7 @@ Mantenimiento: 5 / 10 / 15 / 15</rdfs:comment>
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Frialdad -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Frialdad">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Vigor"/>
+        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Hab_Vigor"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Es la capacidad de permanecer impávido ante las situaciones más críticas. Con esta habilidad, un individuo puede mantener la calma y la cabeza fría incluso cuando afronta la muerte. Si un personaje es blanco de un efecto sobrenatural que afecte a su ánimo o emociones, podrá añadir el bono a la Resistencia que corresponda.</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -11640,6 +11956,62 @@ Mantenimiento: No</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Hab_Atléticas -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Hab_Atléticas">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Secundaria"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Hab_Creativas -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Hab_Creativas">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Secundaria"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Hab_Intelectuales -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Hab_Intelectuales">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Secundaria"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Hab_Perceptivas -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Hab_Perceptivas">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Secundaria"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Hab_Sociales -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Hab_Sociales">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Secundaria"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Hab_Subterfugio -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Hab_Subterfugio">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Secundaria"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Hab_Vigor -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Hab_Vigor">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Secundaria"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad">
@@ -11653,14 +12025,6 @@ Mantenimiento: No</rdfs:comment>
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Ataque">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Combate"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mide la pericia de un individuo para alcanzar a su oponente, eludir su guardia y causarle daño. Depende de la Destreza.</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Atlética -->
-
-    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Atlética">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Definicion_Clases"/>
     </owl:NamedIndividual>
     
 
@@ -11681,27 +12045,11 @@ Mantenimiento: No</rdfs:comment>
     
 
 
-    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Creativa -->
-
-    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Creativa">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Definicion_Clases"/>
-    </owl:NamedIndividual>
-    
-
-
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Esquiva -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Esquiva">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Combate"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Es la capacidad que tiene el personaje de apartarse de la trayectoria de un ataque. Depende de la Agilidad.</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Intelectual -->
-
-    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Intelectual">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Definicion_Clases"/>
     </owl:NamedIndividual>
     
 
@@ -11739,14 +12087,6 @@ Mantenimiento: No</rdfs:comment>
     
 
 
-    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Perceptiva -->
-
-    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Perceptiva">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Definicion_Clases"/>
-    </owl:NamedIndividual>
-    
-
-
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Primaria -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Primaria">
@@ -11766,30 +12106,6 @@ Mantenimiento: No</rdfs:comment>
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Secundaria -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Secundaria">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Definicion_Clases"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Social -->
-
-    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Social">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Definicion_Clases"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Subterfugio -->
-
-    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Subterfugio">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Definicion_Clases"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Vigor -->
-
-    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Vigor">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Definicion_Clases"/>
     </owl:NamedIndividual>
     
@@ -11880,7 +12196,7 @@ Bono: +20 al turno cuando se utilicen artes marciales, y +10 a la habilidad de a
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Herbolaria -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Herbolaria">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Intelectual"/>
+        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Hab_Intelectuales"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Recoge todo el campo del conocimiento del mundo vegetal, sus posibles usos, naturaleza y dónde pueden encontrarse. Esta habilidad permite, por ejemplo, reconocer qué plantas son comestibles y cuáles son antídotos o remedios. A niveles avanzados, un buen herbolario puede también realizar compuestos de todo tipo.</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -11923,7 +12239,7 @@ Descripción: El hierro es el material por excelencia para construir armas y arm
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Historia -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Historia">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Intelectual"/>
+        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Hab_Intelectuales"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Otorga erudición tanto de la historia actual como de la pasada. El personaje puede reconocer insignias, tener nociones políticas sobre la situación de un territorio o conocer las leyendas de una zona. Es posible especializarse en un tema concreto, como individuos de renombre, fábulas o economía, lo que otorgará un bonificador de +40 a los controles de la habilidad.</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -13248,7 +13564,7 @@ Descripción:Intensifica el sentimiento o estado de ánimo principal del individ
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Intimidar -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Intimidar">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Social"/>
+        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Hab_Sociales"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intimidar es la capacidad de asustar a alguien con la actitud, las palabras o la simple presencia. Un individuo no tiene por qué parecer amenazador para utilizar esta habilidad, basta con saber cómo debe comportarse para atemorizar a cualquiera. Sus efectos son completamente interpretativos.</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -14062,7 +14378,7 @@ Vías Cerradas: Tierra</rdfs:comment>
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Liderazgo -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Liderazgo">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Social"/>
+        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Hab_Sociales"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Refleja el carisma y la capacidad de ganarse la confianza de las personas a su cargo, incluso en condiciones difíciles. Es la aptitud que todo monarca, general o cabecilla tiene para mandar y conseguir que los demás le sigan. Un líder carismático puede levantar la moral a sus tropas en la peor de las situaciones o mandarlas a la muerte sin escuchar una sola queja. Sus efectos son completamente interpretativos.</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -14770,7 +15086,7 @@ Mantenimiento: No</rdfs:comment>
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Medicina -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Medicina">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Intelectual"/>
+        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Hab_Intelectuales"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La Medicina proporciona conocimientos sobre la anatomía humana, las heridas, la prescripción de enfermedades y su tratamiento. Un personaje puede diagnosticar una enfermedad y determinar su cura, si supera un control de Medicina contra una dificultad del triple del nivel de dicha dolencia. Por ejemplo, una enfermedad de nivel 30 requeriría superar una dificultad de 90. Si es diagnosticada con éxito y su tratamiento seguido correctamente, el enfermo tendrá derecho a una nueva Resistencia (RE), aplicando un bonificador equivalente a la cantidad por la que el médico superó la dificultad requerida.
 
 Esta habilidad también puede emplearse para curar diversas heridas de naturaleza física, como tajos o golpes. Para utilizarla correctamente, es necesario contar con el instrumental apropiado, como gasas o vendas, ya que si no el médico aplicará un penalizador de –40 a su control. Medicina únicamente se puede lanzar una vez por herida o conjunto de heridas, y sólo durante las escasas horas posteriores a haberlas sufrido. La cantidad de puntos de vida recuperados depende del daño recibido. Naturalmente, un médico puede tratarse a sí mismo, pero aplicará un penalizador de –20 a su habilidad.
@@ -14846,7 +15162,7 @@ Bono: +10 a la habilidad de ataque sin armas.</rdfs:comment>
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Memorizar -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Memorizar">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Intelectual"/>
+        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Hab_Intelectuales"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mide la capacidad mnemotécnica del personaje. Permite recordar cosas y los detalles más pequeños con completa exactitud, ya sean libros, canciones, o las facciones de un individuo.</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -15185,7 +15501,7 @@ Mantenimiento: 5 / 10 / 10 / 15</rdfs:comment>
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Montar -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Montar">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Atlética"/>
+        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Hab_Atléticas"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Se utiliza para medir la habilidad de equitación. Normalmente, cualquiera podrá montar sobre un caballo que se mueve dócilmente, pero la cosa se complica si está trotando o se encabrita por alguna razón. Esta habilidad permite al personaje doblegar la voluntad de su montura en estas situaciones problemáticas, obligándola a saltar por encima de obstáculos o continuar la marcha a pesar de que se encuentre agotada. También otorga la capacidad de realizar acciones acrobáticas desde la grupa, como cubrirse o recoger cosas en el suelo sin perder la marcha. Aunque tradicionalmente se emplea con caballos, esta pericia permite montar otros animales (como camellos o elefantes) cuya naturaleza les permita ser usados con dicha finalidad.</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -15533,10 +15849,19 @@ Mantenimiento: 5 / 10 / 10 / 15</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Múltiplo_Vida -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Múltiplo_Vida">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Capacidad_Física"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Es el coste de los múltiplos de vida del personaje. Cada vez que invierta los PD indicados en esta sección, sumará el valor de su característica de Constitución a sus PV. Ten en cuenta que se suma directamente el valor del atributo de Constitución, no su bono.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Música -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Música">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Creativa"/>
+        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Hab_Creativas"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Recoge la habilidad de tocar correctamente instrumentos musicales y la capacidad de componer y leer partituras. Es posible especializarse en un único instrumento y obtener un +40 al realizar sus controles.</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -15545,7 +15870,7 @@ Mantenimiento: 5 / 10 / 10 / 15</rdfs:comment>
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Nadar -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Nadar">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Atlética"/>
+        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Hab_Atléticas"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Representa cómo se las apaña un personaje en el agua y, a niveles superiores, lo rápido que es capaz de desplazarse nadando y buceando. Sufre el penalizador por armadura, pero al contrario de lo que ocurre en las otras habilidades, el negativo no puede reducirse mediante Llevar Armadura. Si el agua está revuelta, el Director de Juego puede aplicar un penalizador adicional entre -1 y -4 al Tipo de Movimiento. Si en cualquier caso la velocidad del personaje llega a cero o menos, se considera que no es capaz de permanecer a flote y se hunde irremisiblemente.</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -15554,7 +15879,7 @@ Mantenimiento: 5 / 10 / 10 / 15</rdfs:comment>
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Navegación -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Navegación">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Intelectual"/>
+        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Hab_Intelectuales"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Se utiliza para navegar en cualquier tipo de embarcación y leer mapas marítimos. No mide únicamente el manejo del timón, sino también cómo aprovechar las mejores corrientes para ganar velocidad y evitar accidentes.</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -16004,7 +16329,7 @@ Descripción: Esconde las habilidades mentales del psíquico contra el poder de 
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ocultarse -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ocultarse">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Subterfugio"/>
+        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Hab_Subterfugio"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Es la capacidad de esconderse y pasar desapercibido. Esta habilidad permite a un personaje encontrar el lugar más apropiado en un entorno para ocultarse y no ser descubierto por los demás. También se utiliza para esconder objetos que se lleven encima. Si se usa para ocultar cosas o personas en un lugar, el Director de Juego podrá aplicar el penalizador o bonificador que considere apropiado, dependiendo del entorno y su tamaño. Ocultarse se enfrenta a la habilidad de advertir y buscar de los demás. Si alguien permanece quieto en su escondite, para detectarlo se requiere superar por más de 80 puntos un control enfrentado empleando advertir, o por 20 si usa buscar. Existen varios modificadores que pueden alterar la habilidad de ocultarse del personaje. Sufre el penalizador por armadura.</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -16035,7 +16360,7 @@ Mantenimiento: 10 / 15 / 15 / 20 Diario</rdfs:comment>
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ocultismo -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ocultismo">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Intelectual"/>
+        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Hab_Intelectuales"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El conocimiento de los campos sobrenaturales desde el punto de vista mitológico. Esta es la habilidad que permite reconocer el significado de dagas rituales o los métodos tradicionales de acabar con un licántropo. A consideración del Director de Juego, es posible utilizarla para reconocer criaturas de carácter sobrenatural.</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -16640,7 +16965,7 @@ Mantenimiento: 5 / 10 / 15 / 15</rdfs:comment>
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Persuasión -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Persuasión">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Social"/>
+        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Hab_Sociales"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Esta habilidad permite influir y convencer a otros individuos, aunque el Director de Juego no debería sustituir la interpretación por ella. Incluso sin haberla desarrollado, un buen jugador puede ser tan persuasivo como intérprete si sus argumentos son lo suficientemente sólidos. De este modo, si el personaje realiza un buen control de persuasión, un Director de Juego razonable podría darle pistas de qué palabras parecen convencer más a las personas con las que habla o lo sugestionadas que parecen estar.</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -17137,7 +17462,7 @@ Mantenimiento: No</rdfs:comment>
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Proezas_de_Fuerza -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Proezas_de_Fuerza">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Vigor"/>
+        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Hab_Vigor"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Permite sacar el mayor rendimiento posible a la fuerza física de un personaje, dándole conocimientos exactos de cómo flexionar los músculos para realizar mayor presión y las mejores técnicas de alzamiento de pesos. No significa que sea más fuerte, sino que sabrá obtener mejor partido a su potencia física en momentos extremos. Si el personaje lo desea, puede tratar de incrementar su fuerza e índice de peso máximo durante unos instantes, doblando barrotes de metal, levantando carros o cualquier otra cosa increíble. Para calcular como usar apropiadamente esta con respecto al Índice de Peso, cuyos efectos duran entre dos y cinco asaltos. Si un personaje hace uso de sus proezas de fuerza más de una vez por minuto, pierde automáticamente un punto de cansancio por intento adicional. Naturalmente, queda a discreción del DJ decidir si permite a un personaje repetir un control fallido de esta habilidad. Estos modificadores no permiten aumentar la Fuerza de un personaje por encima de 10 si no posee inhumanidad o Zen. Sufre el penalizador por armadura.</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -17245,6 +17570,15 @@ proyección mágica no aplica ninguno de los penalizadores de combate ni para at
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Puntos_Ki">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ki"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Los puntos de Ki miden el potencial de la energía interna del personaje. Cuantos más posea, habrá conseguido despertar una mayor cantidad de poder. Estos puntos dependen de algunas de las características primarias: Fuerza, Destreza, Agilidad, Constitución, Poder y Voluntad. Para calcular cuánto Ki tiene un personaje, debemos fijarnos en el valor de sus características. Cada punto que el personaje tenga en uno de esos seis atributos que no supere el 10, proporciona uno de Ki. Por tanto, si posee Fuerza 7, tiene 7 puntos de Ki gracias su Fuerza. Aquellos que sobrepasen el 10, otorgan el doble de puntos; alguien con Destreza 13 tendría 16 de Ki. Para saber cuantos puntos de Ki tiene en total un personaje, se ha de sumar los puntos que haya obtenido en todas sus características. A esa suma se la llama reserva de Ki</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Puntos_Vida -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Puntos_Vida">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Capacidad_Física"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Es el bono innato que consigue un personaje a sus puntos de vida. Suma esta cantidad en primer nivel y posteriormente vuelve a hacerlo cada vez que sube de nuevo.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -17398,7 +17732,7 @@ Mantenimiento: 10 / 10 / 15 / 20</rdfs:comment>
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Rastrear -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Rastrear">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Perceptiva"/>
+        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Hab_Perceptivas"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Permite seguir rastros y deducir información de ellos, como el número de personas que compone un grupo o cuánto tiempo hace desde que pasaron. También se incluye dentro de esta habilidad la orientación del personaje, es decir, evitar perderse siguiendo un camino y reconocer las señales de un entorno para saber donde se encuentra.</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -18171,7 +18505,7 @@ Vías Cerradas: Destrucción</rdfs:comment>
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Resistir_el_Dolor -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Resistir_el_Dolor">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Vigor"/>
+        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Hab_Vigor"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Permite soportar el dolor físico y psicológico. Su fuerza de voluntad le otorga la capacidad de abstraer la mente para ignorarlo, incluso si su cuerpo se encuentra ya al límite. A niveles bajos, un personaje puede emplear esta habilidad para recibir daños sin quejarse, mientras que en dificultades más elevadas, podrá tolerar terribles torturas sin amedrentarse.</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -18314,7 +18648,7 @@ Vías Cerradas: Ninguna</rdfs:comment>
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Robo -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Robo">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Subterfugio"/>
+        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Hab_Subterfugio"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Se utiliza para realizar robos de objetos pequeños sin que la persona desvalijada se dé cuenta. Se enfrenta directamente al Advertir del individuo al que se le sustrae la cosa, por lo que si la habilidad del ladrón es superior, el afectado no se percatará de su pérdida. Si lo que se trata de robar está directamente en contacto con la piel o en una posición muy difícil, como un anillo o un pendiente, el Director de Juego podrá aplicar el bonificador o penalizador que considere oportuno. Para darse cuenta de que otra persona está siendo robada en presencia de un personaje, debe aplicarse un negativo de –40 a la habilidad de advertir.</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -18486,7 +18820,7 @@ Mantenimiento: 10 / 10 / 15 / 15 Diario</rdfs:comment>
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Saltar -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Saltar">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Atlética"/>
+        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Hab_Atléticas"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Permite a los personajes incrementar su capacidad de saltar vertical y horizontalmente. Cuanto mayor sea la dificultad alcanzada, más aumentará su Tipo de movimiento únicamente a la hora de determinar la distancia a la que puede saltar. Estos modificadores no permiten aumentar el Tipo de Movimiento del personaje por encima de 10 si no posee inhumanidad o Zen. Sufre el penalizador por armadura.</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -19037,7 +19371,7 @@ Bono: +10 a la habilidad de ataque sin armas.</rdfs:comment>
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Sigilo -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Sigilo">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Subterfugio"/>
+        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Hab_Subterfugio"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Permite realizar acciones sin ser percibido por los demás, como desplazarse, trepar o incluso desenfundar un arma en completo silencio. El Sigilo se enfrenta directamente a la capacidad de Advertir de otros individuos. Si la habilidad de sigilo del personaje es superior a la de Advertir de alguien que no sabe que se encuentra cerca, este sorprenderá a su adversario. Cuando un personaje se mueve en silencio debe restar cuatro puntos a su Tipo de movimiento, o aplicará un penalizador de –80 a su habilidad. También puede usarse para evitar dejar rastros, en cuyo caso se enfrentaría directamente a la pericia de Rastreo de sus perseguidores sin aplicar ningun modificador. Sufre el penalizador por armadura, pero al contrario de lo que ocurre en otras habilidades, el negativo sólo puede reducirse hasta la mitad de su valor mediante la capacidad de Llevar Armadura.</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -19579,7 +19913,7 @@ Coste: 50 PD</rdfs:comment>
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tabla_Proyección_Mágica_Ataque -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tabla_Proyección_Mágica_Ataque">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Mística"/>
+        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tabla_Mística"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Representa que el personaje unifica sus conocimientos de combate con la capacidad de dirigir hechizos sobre los demás. Para él, los conjuros se comportan como verdaderas armas que puede proyectar como una auténtica habilidad marcial.
 
 Efectos: Permite utilizar la habilidad de ataque de un personaje como Proyección Mágica ofensiva. Sólo se emplea la habilidad base, y no los puntos de mejora innata que proporcionan algunas categorías de combate. No puede utilizarse para lanzar conjuros pasivos ni defensivos.
@@ -19592,7 +19926,7 @@ Coste: 75 PD</rdfs:comment>
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tabla_Proyección_Mágica_Defensa -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tabla_Proyección_Mágica_Defensa">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Mística"/>
+        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tabla_Mística"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El personaje emplea sus conocimientos defensivos para proyectar sus sortilegios pasivos y escudos, como si se tratasen de armas o protecciones que interceptan los ataques de sus adversarios.
 
 Efectos: Permite utilizar la habilidad de defensa de un personaje como Proyección Mágica defensiva. Sólo se emplea la habilidad base, y no los puntos de mejora innata que proporcionan algunas categorías de combate. No puede utilizarse para dirigir conjuros de carácter ofensivo.
@@ -19605,7 +19939,7 @@ Coste: 75 PD</rdfs:comment>
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tabla_Proyección_Psíquica -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tabla_Proyección_Psíquica">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Psíquica"/>
+        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tabla_Psíquica"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El personaje usa sus habilidades de combate para proyectar sus poderes mentales como si fuesen verdaderas armas.
 
 Efectos: Otorga la capacidad de usar las habilidades de combate del personaje como Proyección Psíquica. La ofensiva se utiliza para atacar, y la defensiva para levantar escudos. Sólo se emplea la habilidad base, no los puntos de mejora innata que proporcionan algunas categorías de combate.
@@ -19752,7 +20086,7 @@ Mantenimiento: No</rdfs:comment>
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tasación -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tasación">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Intelectual"/>
+        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Hab_Intelectuales"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Analiza el valor de los objetos y permite calcular su precio aproximado en dinero. Incluso sin entender de arte o de antigüedades, un personaje con esta habilidad siempre podrá intentar averiguar qué objeto es el de valor más elevado y por cuánto se podría vender en el mercado.</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -20194,7 +20528,7 @@ Mantenimiento: 10 / 10 / 15 / 15</rdfs:comment>
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Trampería -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Trampería">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Subterfugio"/>
+        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Hab_Subterfugio"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Esta habilidad se utiliza para montar y desactivar trampas. Los efectos y el funcionamiento de la trampa serán descritos por el personaje que la instale, empleando la Tabla 18 de Trampería para designar su nivel de complejidad Desactivar una trampa localizada requiere superar un nivel de dificultad menos que el necesario para montarla, salvo si el Director de Juego establece lo contrario. Si al intentar desarmarla se fracasa por una diferencia superior a 40, la activa por error. Para montar correctamente una trampa se necesita tiempo y material.</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -20390,7 +20724,7 @@ Descripción: Permite al psíquico proyectar uno de sus sentidos hasta una dista
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Trepar -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Trepar">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Atlética"/>
+        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Hab_Atléticas"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Se utiliza para subir o bajar por cualquier tipo de superficie vertical, como muros o árboles. Si se usa con un equipo de escalada apropiado, el personaje podrá aplicar un bonificador de +40 a su habilidad. Normalmente, el índice de velocidad de un sujeto escalando es de una cuarta parte de su Tipo de movimiento redondeado hacia abajo, pero puede aumentarse en un punto por cada nivel que consiga por encima de la dificultad requerida. Sufre el penalizador por armadura.</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -20416,7 +20750,7 @@ Descripción: Permite al psíquico proyectar uno de sus sentidos hasta una dista
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Trucos_de_Manos -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Trucos_de_Manos">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Creativa"/>
+        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Hab_Creativas"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Permite explotar la destreza manual para realizar juegos malabares y prestidigitación. Se utiliza para hacer trucos y trampas, como sacar una carta de la manga en mitad de una partida, o jugar con los objetos en el aire y atraparlos antes de que caigan al suelo. Es posible especializarse en uno de ellos, aplicando un bonificar de +40 a sus controles en dicho campo.</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -20449,6 +20783,15 @@ Mantenimiento: No</rdfs:comment>
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Turcus">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Lanzable"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Arma indígena con la forma de una cuchilla circular, que se utiliza como objeto arrojadizo. También se la conoce como chakram en otras culturas. Es capaz de regresar tras su lanzamiento si no impacta con ningún blanco, pero se requiere superar un control de Trucos de manos contra una dificultad de Muy Difícil (MDF).</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Turno -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Turno">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Capacidad_Física"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Es el bono natural que consigue el personaje a su turno. Suma esta cantidad en primer nivel y posteriormente vuelve a hacerlo cada vez que sube de nuevo.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -20577,7 +20920,7 @@ Mantenimiento: 30 / 45 / 60 / 100 Diario</rdfs:comment>
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Uso_Forja -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Uso_Forja">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Creativa"/>
+        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Hab_Creativas"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Refleja la habilidad de un personaje en la forja de los metales y en la elaboración de utensilios con otros materiales, como la madera o el cuero. Se pueden fraguar objetos simples como herraduras, al igual que elaborar armas y armaduras de todo tipo. Por supuesto, también es posible reparar objetos dañados o mantener el equipo en perfectas condiciones. Para desarrollar plenamente esta pericia deben usarse las siguientes reglas: 
 
 En primer lugar, hay que determinar el objeto que se desea crear. Cada uno tiene una dificultad distinta para ser forjado. Si el personaje consigue superarla, habrá logrado fabricar el objeto con un nivel de calidad normal. Por cada dos grados de dificultad que el herrero consiga por encima de la base requerida, el objeto tiene un +5 adicional a su calidad, y por cada nivel por debajo, un –5. El bono máximo que puede recibir un objeto así es de +15. Los bonos superiores no se adquieren mediante forja, sino con medios de índole sobrenatural. Ten en cuenta que un arma +5 ya es de por sí una obra maestra, mientras que una +10 es única y legendaria.
@@ -20590,7 +20933,7 @@ La forja requiere también una gran inversión de tiempo, esfuerzo y recursos po
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Uso_Venenos -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Uso_Venenos">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Subterfugio"/>
+        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Hab_Subterfugio"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Permite conocer, usar y preparar venenos o antídotos. Pueden reconocerse al verlos, probándolos o simplemente observando sus síntomas. Si se tienen los componentes adecuados, es posible mezclar antídotos y toxinas.</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -20830,7 +21173,7 @@ Mantenimiento: 25 / 40 / 45 / 55</rdfs:comment>
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Valoración_Mágica -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Valoración_Mágica">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Intelectual"/>
+        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Hab_Intelectuales"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Permite juzgar y valorar las fuerzas mágicas. Mediante esta habilidad, un personaje puede detectar a los seres mágicos, los objetos sobrenaturales y los conjuros. Sólo los individuos que posean el Don o la facultad de ver la magia son capaces de desarrollar esta habilidad.</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -22788,29 +23131,38 @@ este afecta a todos sus poderes.</rdfs:comment>
     <rdf:Description rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Generación_Tiradas">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Una vez que sabemos cuáles son las características primarias debemos aprender a calcular su valor. Lo más importante es el elemento del azar, que es precisamente el que introduce variedad entre los personajes. Para representar este azar, las características deben generarse utilizando un D10.</rdfs:comment>
     </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Hab_Atléticas">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Son las habilidades que dependen de la movilidad del personaje, de su equilibrio y de su agilidad.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Hab_Creativas">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Son todas las habilidades referentes a la capacidad artística e inventiva de los personajes.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Hab_Intelectuales">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Las habilidades intelectuales son las que dependen principalmente del conocimiento, la sabiduría y el raciocinio de los personajes.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Hab_Perceptivas">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">En este grupo se reúnen todas las habilidades perceptivas del personaje. Son las pericias que le permitirán explotar al máximo sus cinco sentidos y analizar la información obtenida.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Hab_Sociales">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Es el grupo de habilidades que reflejan la capacidad del personaje para interactuar con otros individuos e influir de algún modo en ellos.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Hab_Subterfugio">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Es el campo en el que se reúnen aquellas pericias basadas en el disimulo y en la capacidad de actuar sin que los demás puedan percatarse.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Hab_Vigor">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Son las habilidades que recogen aquellas pericias basadas en el esfuerzo corporal, el aguante físico y la resistencia mental.</rdfs:comment>
+    </rdf:Description>
     <rdf:Description rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Las habilidades son los conocimientos y pericias de nuestro personaje, que nos indican en qué campos está versado y hasta qué grado.</rdfs:comment>
     </rdf:Description>
-    <rdf:Description rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Atlética">
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Son las habilidades que dependen de la movilidad del personaje, de su equilibrio y de su agilidad.</rdfs:comment>
-    </rdf:Description>
     <rdf:Description rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Combate">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Son las que permiten al personaje desarrollar todas las habilidades relacionadas con la lucha.</rdfs:comment>
-    </rdf:Description>
-    <rdf:Description rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Creativa">
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Son todas las habilidades referentes a la capacidad artística e inventiva de los personajes.</rdfs:comment>
-    </rdf:Description>
-    <rdf:Description rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Intelectual">
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Las habilidades intelectuales son las que dependen principalmente del conocimiento, la sabiduría y el raciocinio de los personajes.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Ki">
         <rdfs:comment>Las habilidades del Ki son una serie de capacidades especiales que pueden desarrollar los personajes, utilizando sus puntos de Conocimiento Marcial. Cuando alguien domina una de ellas, esta le permite realizar acciones especiales que ningún otro ser humano es capaz de ejecutar. Cada una tiene un coste en puntos de CM, que es necesario invertir para adquirirla. Las habilidades del Ki se desarrollan siguiendo una lógica en su conocimiento y por tanto es posible que, para aprender a utilizar algunas, un individuo tenga que dominar anteriormente otras.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Mística">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La habilidad sobrenatural agrupa todas las pericias de carácter místico del personaje. Son las que utilizan las categorías dotadas de poderes sobrenaturales, como los magos, los invocadores o los ilusionistas.</rdfs:comment>
-    </rdf:Description>
-    <rdf:Description rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Perceptiva">
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">En este grupo se reúnen todas las habilidades perceptivas del personaje. Son las pericias que le permitirán explotar al máximo sus cinco sentidos y analizar la información obtenida.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Primaria">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Son llamadas así ya que representan las habilidades básicas o principales de los personajes en el ejercicio de sus categorías. A su vez, las habilidades primarias están divididas en tres campos distintos: la habilidad de combate, la habilidad psíquica y la habilidad sobrenatural.</rdfs:comment>
@@ -22820,15 +23172,6 @@ este afecta a todos sus poderes.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Secundaria">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Naturalmente, un personaje es mucho más complejo que lo bien que lucha o lanza conjuros. Sin duda sabe hacer una gran cantidad de cosas más y posee muchas habilidades y conocimientos que lo diferencian del resto. Tómate a ti mismo como ejemplo: sabes leer, tienes nociones matemáticas y varias aficiones más, desde cazar hasta navegar en canoa. Estas capacidades también las tiene tu personaje, que a partir de ahora llamaremos habilidades secundarias. Cada habilidad secundaria se encuentra incluida dentro de un campo en concreto y ligada a una característica determinada.</rdfs:comment>
-    </rdf:Description>
-    <rdf:Description rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Social">
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Es el grupo de habilidades que reflejan la capacidad del personaje para interactuar con otros individuos e influir de algún modo en ellos.</rdfs:comment>
-    </rdf:Description>
-    <rdf:Description rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Subterfugio">
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Es el campo en el que se reúnen aquellas pericias basadas en el disimulo y en la capacidad de actuar sin que los demás puedan percatarse.</rdfs:comment>
-    </rdf:Description>
-    <rdf:Description rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad_Vigor">
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Son las habilidades que recogen aquellas pericias basadas en el esfuerzo corporal, el aguante físico y la resistencia mental.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Honda">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pedazo de cuero atado a una cuerda, con el que se lanzan piedras haciéndolo girar.</rdfs:comment>
@@ -22906,9 +23249,6 @@ No todas las personas son capaces de controlar el poder de las almas. Hacerlo no
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gaïa es una tierra llena de sociedades, órdenes y grupos que ejercen una gran
 influencia en su desarrollo. Algunas de ellas son secretas y se mueven en las sombras, mientras que otras son grandes agrupaciones conocidas por todos.</rdfs:comment>
     </rdf:Description>
-    <rdf:Description rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje">
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Individuo de ficción único, dotado de habilidades y características, que forma parte del universo del juego.</rdfs:comment>
-    </rdf:Description>
     <rdf:Description rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje_Jugador">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Personaje interpretado por un jugador durante una partida.</rdfs:comment>
     </rdf:Description>
@@ -22956,6 +23296,9 @@ Modificador: Siempre que un psíquico utilice uno de sus poderes sentientes sobr
     </rdf:Description>
     <rdf:Description rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tabla_Estilo">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Estas tablas permiten al personaje potenciar su habilidad marcial, disminuyendo los penalizadores que se aplican al realizar algunas maniobras específicas de ataque.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tabla_Mística">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Estas tablas están incluidas como una habilidad primaria sobrenatural, por lo que los PD que los personajes inviertan en ellas cuentan dentro de dicho límite de puntos.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Telemetría_Psíquica">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La Telemetría es la capacidad mental de percibir los residuos ambientales de tiempos pasados. Ello se debe a que la matriz psíquica de cada persona deja siempre tras de sí cierta energía residual, que depende de su estado de ánimo y de sus pensamientos en cada momento. Un individuo con esta disciplina es capaz de percibir dichos residuos y, consecuentemente, de sentir en mayor o menor grado lo que ha ocurrido en el pasado.
