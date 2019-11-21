@@ -4,7 +4,7 @@ Problemas del proyecto
             -> Solución: Crear clase abstracta, y crear un individuo por clase, con la definición correspondiente
 
         2: Calcular requisitos que requieren valores numéricos de las habilidades
-            -> Solución: Utilizar 
+            -> Solución: Utilizar data properties en el personaje para indicar dichos valores
 
 
 Posibles mejoras:

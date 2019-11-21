@@ -466,9 +466,168 @@
     
 
 
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Hab_RequisitoClave1 -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Hab_RequisitoClave1">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#HabilidadTieneRequisitoClave"/>
+        <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad"/>
+                    <rdf:Description rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ventaja"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Hab_RequisitoClave2 -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Hab_RequisitoClave2">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#HabilidadTieneRequisitoClave"/>
+        <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad"/>
+                    <rdf:Description rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ventaja"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Hab_RequisitoClave3 -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Hab_RequisitoClave3">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#HabilidadTieneRequisitoClave"/>
+        <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad"/>
+                    <rdf:Description rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ventaja"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Hab_RequisitoClave4 -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Hab_RequisitoClave4">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#HabilidadTieneRequisitoClave"/>
+        <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad"/>
+                    <rdf:Description rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ventaja"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Hab_RequisitoClave5 -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Hab_RequisitoClave5">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#HabilidadTieneRequisitoClave"/>
+        <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad"/>
+                    <rdf:Description rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ventaja"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Hab_RequisitoClave6 -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Hab_RequisitoClave6">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#HabilidadTieneRequisitoClave"/>
+        <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad"/>
+                    <rdf:Description rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ventaja"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Hab_RequisitoClave7 -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Hab_RequisitoClave7">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#HabilidadTieneRequisitoClave"/>
+        <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad"/>
+                    <rdf:Description rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ventaja"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Hab_RequisitoClave8 -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Hab_RequisitoClave8">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#HabilidadTieneRequisitoClave"/>
+        <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad"/>
+                    <rdf:Description rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ventaja"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Hab_RequisitoClave9 -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Hab_RequisitoClave9">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#HabilidadTieneRequisitoClave"/>
+        <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad"/>
+                    <rdf:Description rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ventaja"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#HabilidadTieneObjeto -->
 
     <owl:ObjectProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#HabilidadTieneObjeto"/>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#HabilidadTieneRequisitoClave -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#HabilidadTieneRequisitoClave"/>
     
 
 
@@ -1401,12 +1560,186 @@
     
 
 
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Hab_RequisitoValor1 -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Hab_RequisitoValor1">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#HabilidadTieneRequisitoValor"/>
+        <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Hab_RequisitoValor2 -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Hab_RequisitoValor2">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#HabilidadTieneRequisitoValor"/>
+        <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Hab_RequisitoValor3 -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Hab_RequisitoValor3">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#HabilidadTieneRequisitoValor"/>
+        <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Hab_RequisitoValor4 -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Hab_RequisitoValor4">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#HabilidadTieneRequisitoValor"/>
+        <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Hab_RequisitoValor5 -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Hab_RequisitoValor5">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#HabilidadTieneRequisitoValor"/>
+        <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Hab_RequisitoValor6 -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Hab_RequisitoValor6">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#HabilidadTieneRequisitoValor"/>
+        <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Hab_RequisitoValor7 -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Hab_RequisitoValor7">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#HabilidadTieneRequisitoValor"/>
+        <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Hab_RequisitoValor8 -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Hab_RequisitoValor8">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#HabilidadTieneRequisitoValor"/>
+        <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Hab_RequisitoValor9 -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Hab_RequisitoValor9">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#HabilidadTieneRequisitoValor"/>
+        <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Habilidad"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#HabilidadTieneRequisitoValor -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#HabilidadTieneRequisitoValor"/>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_ACT -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_ACT">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_HabMística"/>
+        <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_Acrobacias -->
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_Acrobacias">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_HabAtlética"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_AcumKi -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_AcumKi">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_HabCombate"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_AcumKi_AGI -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_AcumKi_AGI">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_AcumKi"/>
+        <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_AcumKi_CON -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_AcumKi_CON">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_AcumKi"/>
+        <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_AcumKi_DES -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_AcumKi_DES">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_AcumKi"/>
+        <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_AcumKi_FUE -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_AcumKi_FUE">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_AcumKi"/>
+        <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_AcumKi_POD -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_AcumKi_POD">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_AcumKi"/>
+        <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_AcumKi_VOL -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_AcumKi_VOL">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_AcumKi"/>
+        <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
     
 
@@ -1424,7 +1757,7 @@
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_Agilidad -->
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_Agilidad">
-        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje_Característica"/>
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_CarPrimaria"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -1434,7 +1767,7 @@
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_Agilidad_BonoTemporal -->
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_Agilidad_BonoTemporal">
-        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje_Característica"/>
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_CarPrimaria"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -1444,7 +1777,7 @@
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_Agilidad_ValorBase -->
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_Agilidad_ValorBase">
-        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje_Característica"/>
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_CarPrimaria"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -1457,6 +1790,16 @@
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_HabIntelectual"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_Apariencia -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_Apariencia">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_CarSecundaria"/>
+        <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
     
 
@@ -1541,6 +1884,14 @@
     
 
 
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_Atar -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_Atar">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_HabMística"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_Atletismo -->
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_Atletismo">
@@ -1564,7 +1915,7 @@
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_BonoAgilidad -->
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_BonoAgilidad">
-        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje_Característica"/>
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_CarPrimaria"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
     </owl:DatatypeProperty>
@@ -1574,7 +1925,7 @@
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_BonoConstitución -->
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_BonoConstitución">
-        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje_Característica"/>
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_CarPrimaria"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -1584,7 +1935,7 @@
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_BonoDestreza -->
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_BonoDestreza">
-        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje_Característica"/>
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_CarPrimaria"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -1594,7 +1945,7 @@
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_BonoFuerza -->
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_BonoFuerza">
-        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje_Característica"/>
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_CarPrimaria"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -1604,7 +1955,7 @@
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_BonoInteligencia -->
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_BonoInteligencia">
-        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje_Característica"/>
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_CarPrimaria"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -1614,7 +1965,7 @@
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_BonoPercepción -->
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_BonoPercepción">
-        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje_Característica"/>
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_CarPrimaria"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -1624,7 +1975,7 @@
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_BonoPoder -->
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_BonoPoder">
-        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje_Característica"/>
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_CarPrimaria"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -1634,7 +1985,7 @@
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_BonoVoluntad -->
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_BonoVoluntad">
-        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje_Característica"/>
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_CarPrimaria"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -1647,6 +1998,60 @@
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_HabPerceptiva"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_CM -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_CM">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_HabCombate"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_CV -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_CV">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_HabPsíquica"/>
+        <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_CV_Innatos -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_CV_Innatos">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_HabPsíquica"/>
+        <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_Cansancio -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_Cansancio">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje_General"/>
+        <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_CarPrimaria -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_CarPrimaria">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje_Característica"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_CarSecundaria -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_CarSecundaria">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje_Característica"/>
     </owl:DatatypeProperty>
     
 
@@ -1674,7 +2079,7 @@
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_Constitución -->
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_Constitución">
-        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje_Característica"/>
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_CarPrimaria"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -1684,7 +2089,7 @@
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_Constitución_BonoTemporal -->
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_Constitución_BonoTemporal">
-        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje_Característica"/>
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_CarPrimaria"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -1694,9 +2099,33 @@
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_Constitución_ValorBase -->
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_Constitución_ValorBase">
-        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje_Característica"/>
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_CarPrimaria"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_Controlar -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_Controlar">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_HabMística"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_Convocar -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_Convocar">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_HabMística"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_Desconvocar -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_Desconvocar">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_HabMística"/>
     </owl:DatatypeProperty>
     
 
@@ -1704,7 +2133,7 @@
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_Destreza -->
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_Destreza">
-        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje_Característica"/>
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_CarPrimaria"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -1714,7 +2143,7 @@
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_Destreza_BonoTemporal -->
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_Destreza_BonoTemporal">
-        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje_Característica"/>
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_CarPrimaria"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -1724,7 +2153,7 @@
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_Destreza_ValorBase -->
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_Destreza_ValorBase">
-        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje_Característica"/>
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_CarPrimaria"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -1782,7 +2211,7 @@
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_Fuerza -->
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_Fuerza">
-        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje_Característica"/>
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_CarPrimaria"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -1792,7 +2221,7 @@
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_Fuerza_BonoTemporal -->
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_Fuerza_BonoTemporal">
-        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje_Característica"/>
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_CarPrimaria"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -1802,9 +2231,17 @@
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_Fuerza_ValorBase -->
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_Fuerza_ValorBase">
-        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje_Característica"/>
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_CarPrimaria"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_Gnosis -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_Gnosis">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje_General"/>
     </owl:DatatypeProperty>
     
 
@@ -1841,6 +2278,14 @@
     
 
 
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_HabMística -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_HabMística">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_HabPrimaria"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_HabPerceptiva -->
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_HabPerceptiva">
@@ -1853,6 +2298,14 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_HabPrimaria">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje_Habilidad"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_HabPsíquica -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_HabPsíquica">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_HabPrimaria"/>
     </owl:DatatypeProperty>
     
 
@@ -1912,7 +2365,7 @@
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_Inteligencia -->
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_Inteligencia">
-        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje_Característica"/>
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_CarPrimaria"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -1922,7 +2375,7 @@
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_Inteligencia_BonoTemporal -->
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_Inteligencia_BonoTemporal">
-        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje_Característica"/>
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_CarPrimaria"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -1932,7 +2385,7 @@
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_Inteligencia_ValorBase -->
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_Inteligencia_ValorBase">
-        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje_Característica"/>
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_CarPrimaria"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -1999,6 +2452,24 @@
     
 
 
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_Movimiento -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_Movimiento">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje_General"/>
+        <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_MúltiploReg -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_MúltiploReg">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_HabMística"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_Música -->
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_Música">
@@ -2029,6 +2500,142 @@
     
 
 
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_Nivel -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_Nivel">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje_General"/>
+        <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_NivelLibro_Agua -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_NivelLibro_Agua">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_NivelVía"/>
+        <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_NivelLibro_Aire -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_NivelLibro_Aire">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_NivelVía"/>
+        <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_NivelLibro_Creación -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_NivelLibro_Creación">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_NivelVía"/>
+        <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_NivelLibro_Destrucción -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_NivelLibro_Destrucción">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_NivelVía"/>
+        <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_NivelLibro_Esencia -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_NivelLibro_Esencia">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_NivelVía"/>
+        <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_NivelLibro_Fuego -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_NivelLibro_Fuego">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_NivelVía"/>
+        <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_NivelLibro_Ilusión -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_NivelLibro_Ilusión">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_NivelVía"/>
+        <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_NivelLibro_Luz -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_NivelLibro_Luz">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_NivelVía"/>
+        <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_NivelLibro_Nigromancia -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_NivelLibro_Nigromancia">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_NivelVía"/>
+        <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_NivelLibro_Oscuridad -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_NivelLibro_Oscuridad">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_NivelVía"/>
+        <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_NivelLibro_Tierra -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_NivelLibro_Tierra">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_NivelVía"/>
+        <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_NivelMagia -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_NivelMagia">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_HabMística"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_NivelVía -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_NivelVía">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_HabMística"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_Ocultarse -->
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_Ocultarse">
@@ -2049,6 +2656,16 @@
     
 
 
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_PD -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_PD">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje_General"/>
+        <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_Parada -->
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_Parada">
@@ -2062,7 +2679,7 @@
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_Percepción -->
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_Percepción">
-        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje_Característica"/>
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_CarPrimaria"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -2072,7 +2689,7 @@
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_Percepción_BonoTemporal -->
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_Percepción_BonoTemporal">
-        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje_Característica"/>
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_CarPrimaria"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -2082,7 +2699,7 @@
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_Percepción_ValorBase -->
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_Percepción_ValorBase">
-        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje_Característica"/>
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_CarPrimaria"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -2102,7 +2719,7 @@
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_Poder -->
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_Poder">
-        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje_Característica"/>
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_CarPrimaria"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -2112,7 +2729,7 @@
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_Poder_BonoTemporal -->
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_Poder_BonoTemporal">
-        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje_Característica"/>
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_CarPrimaria"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -2122,9 +2739,27 @@
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_Poder_ValorBase -->
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_Poder_ValorBase">
-        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje_Característica"/>
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_CarPrimaria"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_PotencialPsíquico -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_PotencialPsíquico">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_HabPsíquica"/>
+        <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_Presencia -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_Presencia">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje_General"/>
     </owl:DatatypeProperty>
     
 
@@ -2139,12 +2774,186 @@
     
 
 
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_ProyMágica -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_ProyMágica">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_HabMística"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_ProyPsíquica -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_ProyPsíquica">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_HabPsíquica"/>
+        <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_PuntosCreación -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_PuntosCreación">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje_General"/>
+        <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_PuntosKi -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_PuntosKi">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_HabCombate"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_PuntosKi_AGI -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_PuntosKi_AGI">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_PuntosKi"/>
+        <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_PuntosKi_CON -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_PuntosKi_CON">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_PuntosKi"/>
+        <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_PuntosKi_DES -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_PuntosKi_DES">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_PuntosKi"/>
+        <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_PuntosKi_FUE -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_PuntosKi_FUE">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_PuntosKi"/>
+        <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_PuntosKi_POD -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_PuntosKi_POD">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_PuntosKi"/>
+        <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_PuntosKi_VOL -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_PuntosKi_VOL">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_PuntosKi"/>
+        <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_PuntosVida -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_PuntosVida">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje_General"/>
+        <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_Rastrear -->
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_Rastrear">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_HabPerceptiva"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_Regeneración -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_Regeneración">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje_General"/>
+        <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_ResistenciaEnfermedad -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_ResistenciaEnfermedad">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_Resistencias"/>
+        <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_ResistenciaFísica -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_ResistenciaFísica">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_Resistencias"/>
+        <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_ResistenciaMágica -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_ResistenciaMágica">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_Resistencias"/>
+        <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_ResistenciaPsíquica -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_ResistenciaPsíquica">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_Resistencias"/>
+        <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_ResistenciaVeneno -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_ResistenciaVeneno">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_Resistencias"/>
+        <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_Resistencias -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_Resistencias">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje_General"/>
     </owl:DatatypeProperty>
     
 
@@ -2189,6 +2998,16 @@
     
 
 
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_Tamaño -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_Tamaño">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_CarSecundaria"/>
+        <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_Tasación -->
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_Tasación">
@@ -2229,6 +3048,26 @@
     
 
 
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_Turno -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_Turno">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje_General"/>
+        <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_TurnoBase -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_TurnoBase">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje_General"/>
+        <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_ValoraciónMágica -->
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_ValoraciónMágica">
@@ -2252,7 +3091,7 @@
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_Voluntad -->
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_Voluntad">
-        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje_Característica"/>
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_CarPrimaria"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -2262,7 +3101,7 @@
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_Voluntad_BonoTemporal -->
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_Voluntad_BonoTemporal">
-        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje_Característica"/>
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_CarPrimaria"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -2272,7 +3111,17 @@
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_Voluntad_ValorBase -->
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_Voluntad_ValorBase">
-        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje_Característica"/>
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_CarPrimaria"/>
+        <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_Zeon -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_Zeon">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Per_HabMística"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -2296,6 +3145,14 @@
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje_Característica -->
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje_Característica">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#PersonajeTieneValor"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje_General -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Personaje_General">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#PersonajeTieneValor"/>
     </owl:DatatypeProperty>
     
