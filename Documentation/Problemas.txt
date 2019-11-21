@@ -3,7 +3,8 @@ Problemas del proyecto
         1: Imposible asignar definición a las clases de la ontología.
             -> Solución: Crear clase abstracta, y crear un individuo por clase, con la definición correspondiente
 
-        2: 
+        2: Calcular requisitos que requieren valores numéricos de las habilidades
+            -> Solución: Utilizar 
 
 
 Posibles mejoras:
