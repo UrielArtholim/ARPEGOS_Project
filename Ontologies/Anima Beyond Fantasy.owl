@@ -8724,6 +8724,47 @@ Descripción: Este poder carga un objeto o lugar determinado con un fuerte senti
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Categoría_Ilusionista">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Categoría"/>
+        <Cat_Arquetipo rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Acechador"/>
+        <Cat_Arquetipo rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Místico"/>
+        <Car_CosteReduc_HabPersuasión rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</Car_CosteReduc_HabPersuasión>
+        <Car_CosteReduc_HabTrucosDeManos rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</Car_CosteReduc_HabTrucosDeManos>
+        <Cat_ACT_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">60</Cat_ACT_Coste>
+        <Cat_BI_HabDisfraz rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</Cat_BI_HabDisfraz>
+        <Cat_BI_HabOcultarse rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Cat_BI_HabOcultarse>
+        <Cat_BI_HabPersuasión rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</Cat_BI_HabPersuasión>
+        <Cat_BI_HabRobo rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</Cat_BI_HabRobo>
+        <Cat_BI_HabSigilo rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Cat_BI_HabSigilo>
+        <Cat_BI_HabTrucosDeManos rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Cat_BI_HabTrucosDeManos>
+        <Cat_BI_HabValoraciónMágica rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</Cat_BI_HabValoraciónMágica>
+        <Cat_CM_Nivel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</Cat_CM_Nivel>
+        <Cat_HabAtaque_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Cat_HabAtaque_Coste>
+        <Cat_HabAtar_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Cat_HabAtar_Coste>
+        <Cat_HabAtléticas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_HabAtléticas_Coste>
+        <Cat_HabConvocar_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Cat_HabConvocar_Coste>
+        <Cat_HabCreativas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_HabCreativas_Coste>
+        <Cat_HabDesconvocar_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Cat_HabDesconvocar_Coste>
+        <Cat_HabDominar_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Cat_HabDominar_Coste>
+        <Cat_HabEsquiva_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_HabEsquiva_Coste>
+        <Cat_HabIntelectuales_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_HabIntelectuales_Coste>
+        <Cat_HabLlevarArmadura_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Cat_HabLlevarArmadura_Coste>
+        <Cat_HabParada_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Cat_HabParada_Coste>
+        <Cat_HabPerceptivas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_HabPerceptivas_Coste>
+        <Cat_HabSociales_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_HabSociales_Coste>
+        <Cat_HabSubterfugio_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_HabSubterfugio_Coste>
+        <Cat_HabVigor_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Cat_HabVigor_Coste>
+        <Cat_Límite_HabCombate rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.5</Cat_Límite_HabCombate>
+        <Cat_Límite_HabMísticas rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.6</Cat_Límite_HabMísticas>
+        <Cat_Límite_HabPsíquicas rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.5</Cat_Límite_HabPsíquicas>
+        <Cat_MúltiploAcumKi_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25</Cat_MúltiploAcumKi_Coste>
+        <Cat_MúltiploVida_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</Cat_MúltiploVida_Coste>
+        <Cat_Nivel_CVInnato rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Cat_Nivel_CVInnato>
+        <Cat_ProyMágica_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_ProyMágica_Coste>
+        <Cat_ProyPsíquica_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Cat_ProyPsíquica_Coste>
+        <Cat_PuntoCV_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</Cat_PuntoCV_Coste>
+        <Cat_PuntoKi_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_PuntoKi_Coste>
+        <Cat_PuntosVida_Nivel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</Cat_PuntosVida_Nivel>
+        <Cat_PuntosZeon_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</Cat_PuntosZeon_Coste>
+        <Cat_Turno_Nivel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</Cat_Turno_Nivel>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Los ilusionistas combinan sus grandes habilidades en los campos del subterfugio con el control de la magia. Un buen ilusionista consigue que quienes le rodean no sepan si lo que hace se debe a sus poderes sobrenaturales o a su propia habilidad. Sus capacidades místicas son casi tan grandes como las de cualquier hechicero, pero carecen de la misma facilidad para ejecutar conjuros rápidamente. Al contrario de lo que su nombre parezca sugerir, los ilusionistas pueden dominar muchos tipos de magia y no sólo la ilusión. Muchas veces, usan diversos conjuros obteniendo unos efectos igualmente notables. Son muy vulnerables físicamente, por lo que suelen rehuir el combate directo en busca de estratagemas más ingeniosas.</rdfs:comment>
     </owl:NamedIndividual>
     
