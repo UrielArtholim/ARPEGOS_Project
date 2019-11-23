@@ -70,15 +70,6 @@
     
 
 
-    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Rotura -->
-
-    <owl:ObjectProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Rotura">
-        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#ArmaTieneObjeto"/>
-        <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma"/>
-    </owl:ObjectProperty>
-    
-
-
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Tabla -->
 
     <owl:ObjectProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Tabla">
@@ -115,15 +106,6 @@
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#ArmaTieneObjeto"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma"/>
         <rdfs:range rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tipos_Armas"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Velocidad -->
-
-    <owl:ObjectProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Velocidad">
-        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#ArmaTieneObjeto"/>
-        <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma"/>
     </owl:ObjectProperty>
     
 
@@ -920,15 +902,6 @@
     
 
 
-    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Disponibilidad -->
-
-    <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Disponibilidad">
-        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#ArmaTieneValor"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Entereza -->
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Entereza">
@@ -1103,6 +1076,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Car_CosteReduc_HabAcrobacias">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Car_CosteReduc_HabAtléticas"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Categoría"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -1113,6 +1087,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Car_CosteReduc_HabAdvertir">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Car_CosteReduc_HabPerceptivas"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Categoría"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -1123,6 +1098,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Car_CosteReduc_HabAnimales">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Car_CosteReduc_HabIntelectuales"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Categoría"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -1133,6 +1109,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Car_CosteReduc_HabArte">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Car_CosteReduc_HabCreativas"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Categoría"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -1143,6 +1120,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Car_CosteReduc_HabAtletismo">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Car_CosteReduc_HabAtléticas"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Categoría"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -1161,6 +1139,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Car_CosteReduc_HabBaile">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Car_CosteReduc_HabCreativas"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Categoría"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -1171,6 +1150,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Car_CosteReduc_HabBuscar">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Car_CosteReduc_HabPerceptivas"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Categoría"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -1181,6 +1161,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Car_CosteReduc_HabCerrajería">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Car_CosteReduc_HabSubterfugio"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Categoría"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -1191,6 +1172,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Car_CosteReduc_HabCiencia">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Car_CosteReduc_HabIntelectuales"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Categoría"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -1209,6 +1191,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Car_CosteReduc_HabDisfraz">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Car_CosteReduc_HabSubterfugio"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Categoría"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -1219,6 +1202,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Car_CosteReduc_HabEstilo">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Car_CosteReduc_HabSociales"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Categoría"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -1229,6 +1213,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Car_CosteReduc_HabForja">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Car_CosteReduc_HabCreativas"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Categoría"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -1239,6 +1224,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Car_CosteReduc_HabFrialdad">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Car_CosteReduc_HabVigor"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Categoría"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -1249,6 +1235,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Car_CosteReduc_HabHerbolaria">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Car_CosteReduc_HabIntelectuales"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Categoría"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -1259,6 +1246,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Car_CosteReduc_HabHistoria">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Car_CosteReduc_HabIntelectuales"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Categoría"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -1277,6 +1265,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Car_CosteReduc_HabIntimidar">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Car_CosteReduc_HabSociales"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Categoría"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -1287,6 +1276,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Car_CosteReduc_HabLiderazgo">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Car_CosteReduc_HabSociales"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Categoría"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -1297,6 +1287,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Car_CosteReduc_HabMedicina">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Car_CosteReduc_HabIntelectuales"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Categoría"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -1307,6 +1298,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Car_CosteReduc_HabMemorizar">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Car_CosteReduc_HabIntelectuales"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Categoría"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -1317,6 +1309,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Car_CosteReduc_HabMontar">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Car_CosteReduc_HabAtléticas"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Categoría"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -1327,6 +1320,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Car_CosteReduc_HabMúsica">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Car_CosteReduc_HabCreativas"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Categoría"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -1337,6 +1331,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Car_CosteReduc_HabNadar">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Car_CosteReduc_HabAtléticas"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Categoría"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -1347,6 +1342,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Car_CosteReduc_HabNavegación">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Car_CosteReduc_HabIntelectuales"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Categoría"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -1357,6 +1353,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Car_CosteReduc_HabOcultarse">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Car_CosteReduc_HabSubterfugio"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Categoría"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -1367,6 +1364,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Car_CosteReduc_HabOcultismo">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Car_CosteReduc_HabIntelectuales"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Categoría"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -1385,6 +1383,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Car_CosteReduc_HabPersuasión">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Car_CosteReduc_HabSociales"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Categoría"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -1395,6 +1394,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Car_CosteReduc_HabProezasDeFuerza">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Car_CosteReduc_HabVigor"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Categoría"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -1405,6 +1405,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Car_CosteReduc_HabRastrear">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Car_CosteReduc_HabPerceptivas"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Categoría"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -1415,6 +1416,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Car_CosteReduc_HabResistirElDolor">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Car_CosteReduc_HabVigor"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Categoría"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -1425,6 +1427,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Car_CosteReduc_HabRobo">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Car_CosteReduc_HabSubterfugio"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Categoría"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -1435,6 +1438,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Car_CosteReduc_HabSaltar">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Car_CosteReduc_HabAtléticas"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Categoría"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -1445,6 +1449,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Car_CosteReduc_HabSigilo">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Car_CosteReduc_HabSubterfugio"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Categoría"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -1471,6 +1476,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Car_CosteReduc_HabTasación">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Car_CosteReduc_HabIntelectuales"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Categoría"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -1481,6 +1487,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Car_CosteReduc_HabTrampería">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Car_CosteReduc_HabSubterfugio"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Categoría"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -1491,6 +1498,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Car_CosteReduc_HabTrepar">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Car_CosteReduc_HabAtléticas"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Categoría"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -1501,6 +1509,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Car_CosteReduc_HabTrucosDeManos">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Car_CosteReduc_HabCreativas"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Categoría"/>
     </owl:DatatypeProperty>
     
@@ -1510,6 +1519,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Car_CosteReduc_HabValoraciónMágica">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Car_CosteReduc_HabIntelectuales"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Categoría"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -1520,6 +1530,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Car_CosteReduc_HabVenenos">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Car_CosteReduc_HabSubterfugio"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Categoría"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -1538,6 +1549,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_ACT_Coste">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_HabMísticas_Coste"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Categoría"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -1548,6 +1560,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_BI_HabAcrobacias">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_BI_HabAtléticas"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Categoría"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -1558,6 +1571,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_BI_HabAdvertir">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_BI_HabPerceptivas"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Categoría"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -1568,6 +1582,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_BI_HabAnimales">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_BI_HabIntelectuales"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Categoría"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -1578,6 +1593,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_BI_HabArte">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_BI_HabCreativas"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Categoría"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -1588,6 +1604,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_BI_HabAtaque">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_BI_HabCombate"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Categoría"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -1598,6 +1615,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_BI_HabAtletismo">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_BI_HabAtléticas"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Categoría"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -1616,6 +1634,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_BI_HabBaile">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_BI_HabCreativas"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Categoría"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -1626,6 +1645,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_BI_HabBuscar">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_BI_HabPerceptivas"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Categoría"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -1636,6 +1656,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_BI_HabCerrajería">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_BI_HabSubterfugio"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Categoría"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -1646,6 +1667,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_BI_HabCiencia">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_BI_HabIntelectuales"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Categoría"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -1664,6 +1686,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_BI_HabControlar">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_BI_HabMísticas"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Categoría"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -1682,6 +1705,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_BI_HabDesconvocar">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_BI_HabMísticas"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Categoría"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -1692,6 +1716,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_BI_HabDisfraz">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_BI_HabSubterfugio"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Categoría"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -1702,6 +1727,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_BI_HabEsquiva">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_BI_HabCombate"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Categoría"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -1712,6 +1738,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_BI_HabEstilo">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_BI_HabSociales"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Categoría"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -1722,6 +1749,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_BI_HabForja">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_BI_HabCreativas"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Categoría"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -1732,6 +1760,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_BI_HabFrialdad">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_BI_HabVigor"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Categoría"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -1742,6 +1771,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_BI_HabHerbolaria">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_BI_HabIntelectuales"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Categoría"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -1752,6 +1782,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_BI_HabHistoria">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_BI_HabIntelectuales"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Categoría"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -1770,6 +1801,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_BI_HabIntimidar">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_BI_HabSociales"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Categoría"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -1780,6 +1812,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_BI_HabLiderazgo">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_BI_HabSociales"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Categoría"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -1790,6 +1823,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_BI_HabLlevarArmadura">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_BI_HabCombate"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Categoría"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -1800,6 +1834,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_BI_HabMedicina">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_BI_HabIntelectuales"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Categoría"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -1810,6 +1845,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_BI_HabMemorizar">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_BI_HabIntelectuales"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Categoría"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -1820,6 +1856,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_BI_HabMontar">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_BI_HabAtléticas"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Categoría"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -1838,6 +1875,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_BI_HabMúsica">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_BI_HabCreativas"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Categoría"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -1848,6 +1886,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_BI_HabNadar">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_BI_HabAtléticas"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Categoría"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -1858,6 +1897,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_BI_HabNavegación">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_BI_HabIntelectuales"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Categoría"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -1868,6 +1908,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_BI_HabOcultarse">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_BI_HabSubterfugio"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Categoría"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -1878,6 +1919,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_BI_HabOcultismo">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_BI_HabIntelectuales"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Categoría"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -1888,6 +1930,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_BI_HabParada">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_BI_HabCombate"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Categoría"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -1906,6 +1949,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_BI_HabPersuasión">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_BI_HabSociales"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Categoría"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -1924,6 +1968,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_BI_HabProezasDeFuerza">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_BI_HabVigor"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Categoría"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -1934,6 +1979,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_BI_HabRastrear">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_BI_HabPerceptivas"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Categoría"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -1944,6 +1990,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_BI_HabResistirElDolor">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_BI_HabVigor"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Categoría"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -1954,6 +2001,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_BI_HabRobo">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_BI_HabSubterfugio"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Categoría"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -1964,6 +2012,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_BI_HabSaltar">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_BI_HabAtléticas"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Categoría"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -1982,6 +2031,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_BI_HabSigilo">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_BI_HabSubterfugio"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Categoría"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -2008,6 +2058,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_BI_HabTasación">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_BI_HabIntelectuales"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Categoría"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -2018,6 +2069,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_BI_HabTrampería">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_BI_HabSubterfugio"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Categoría"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -2028,6 +2080,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_BI_HabTrepar">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_BI_HabAtléticas"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Categoría"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -2038,6 +2091,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_BI_HabTrucosDeManos">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_BI_HabCreativas"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Categoría"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -2048,6 +2102,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_BI_HabValoraciónMágica">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_BI_HabIntelectuales"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Categoría"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -2058,6 +2113,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_BI_HabVenenos">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_BI_HabSubterfugio"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Categoría"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -2076,6 +2132,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_BI_PuntosZeon">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_BI_HabMísticas"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Categoría"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -2094,6 +2151,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_CM_Nivel">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#CategoríaTieneValor"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Categoría"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -2112,6 +2170,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_HabAtaque_Coste">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_HabCombate_Coste"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Categoría"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -2122,6 +2181,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_HabAtar_Coste">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_HabMísticas_Coste"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Categoría"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -2132,6 +2192,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_HabAtléticas_Coste">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_HabSec_Coste"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
     
@@ -2149,6 +2210,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_HabConvocar_Coste">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_HabMísticas_Coste"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Categoría"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -2159,6 +2221,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_HabCreativas_Coste">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_HabSec_Coste"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
     
@@ -2168,6 +2231,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_HabDesconvocar_Coste">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_HabMísticas_Coste"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Categoría"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -2178,6 +2242,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_HabDominar_Coste">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_HabMísticas_Coste"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Categoría"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -2188,6 +2253,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_HabEsquiva_Coste">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_HabCombate_Coste"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Categoría"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -2198,6 +2264,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_HabIntelectuales_Coste">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_HabSec_Coste"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
     
@@ -2207,6 +2274,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_HabLlevarArmadura_Coste">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_HabCombate_Coste"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Categoría"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -2225,6 +2293,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_HabParada_Coste">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_HabCombate_Coste"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Categoría"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -2235,6 +2304,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_HabPerceptivas_Coste">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_HabSec_Coste"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
     
@@ -2268,6 +2338,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_HabSociales_Coste">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_HabSec_Coste"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Categoría"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -2278,6 +2349,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_HabSubterfugio_Coste">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_HabSec_Coste"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Categoría"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -2288,6 +2360,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_HabVigor_Coste">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_HabSec_Coste"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Categoría"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -2306,6 +2379,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_Límite_HabCombate">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_Limite_HabPrim"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Categoría"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
     </owl:DatatypeProperty>
@@ -2316,6 +2390,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_Límite_HabMísticas">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_Limite_HabPrim"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Categoría"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
     </owl:DatatypeProperty>
@@ -2326,6 +2401,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_Límite_HabPsíquicas">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_Limite_HabPrim"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Categoría"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
     </owl:DatatypeProperty>
@@ -2336,6 +2412,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_MúltiploAcumKi_Coste">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_HabCombate_Coste"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Categoría"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -2346,6 +2423,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_MúltiploVida_Coste">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#CategoríaTieneValor"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Categoría"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -2356,6 +2434,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_Nivel_CVInnato">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#CategoríaTieneValor"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Categoría"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -2366,6 +2445,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_ProyMágica_Coste">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_HabMísticas_Coste"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Categoría"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -2376,6 +2456,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_ProyPsíquica_Coste">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_HabPsíquicas_Coste"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Categoría"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -2386,6 +2467,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_PuntoCV_Coste">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_HabPsíquicas_Coste"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Categoría"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -2396,6 +2478,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_PuntoKi_Coste">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_HabCombate_Coste"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Categoría"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -2406,6 +2489,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_PuntosVida_Nivel">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#CategoríaTieneValor"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Categoría"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
     </owl:DatatypeProperty>
@@ -2416,6 +2500,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_PuntosZeon_Coste">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_HabMísticas_Coste"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Categoría"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -2426,6 +2511,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_Turno_Nivel">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#CategoríaTieneValor"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Categoría"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
     </owl:DatatypeProperty>
@@ -8578,6 +8664,41 @@ Descripción: Este poder carga un objeto o lugar determinado con un fuerte senti
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Categoría_Maestro_En_Armas">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Categoría"/>
+        <Cat_Arquetipo rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Luchador"/>
+        <Cat_ACT_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">70</Cat_ACT_Coste>
+        <Cat_BI_HabAtaque rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</Cat_BI_HabAtaque>
+        <Cat_BI_HabLlevarArmadura rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Cat_BI_HabLlevarArmadura>
+        <Cat_BI_HabParada rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</Cat_BI_HabParada>
+        <Cat_BI_HabProezasDeFuerza rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</Cat_BI_HabProezasDeFuerza>
+        <Cat_CM_Nivel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Cat_CM_Nivel>
+        <Cat_HabAtaque_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_HabAtaque_Coste>
+        <Cat_HabAtar_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Cat_HabAtar_Coste>
+        <Cat_HabAtléticas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_HabAtléticas_Coste>
+        <Cat_HabConvocar_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Cat_HabConvocar_Coste>
+        <Cat_HabCreativas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_HabCreativas_Coste>
+        <Cat_HabDesconvocar_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Cat_HabDesconvocar_Coste>
+        <Cat_HabDominar_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Cat_HabDominar_Coste>
+        <Cat_HabEsquiva_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_HabEsquiva_Coste>
+        <Cat_HabIntelectuales_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Cat_HabIntelectuales_Coste>
+        <Cat_HabLlevarArmadura_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</Cat_HabLlevarArmadura_Coste>
+        <Cat_HabParada_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_HabParada_Coste>
+        <Cat_HabPerceptivas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_HabPerceptivas_Coste>
+        <Cat_HabSociales_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_HabSociales_Coste>
+        <Cat_HabSubterfugio_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Cat_HabSubterfugio_Coste>
+        <Cat_HabVigor_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</Cat_HabVigor_Coste>
+        <Cat_Límite_HabCombate rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.6</Cat_Límite_HabCombate>
+        <Cat_Límite_HabMísticas rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.5</Cat_Límite_HabMísticas>
+        <Cat_Límite_HabPsíquicas rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.5</Cat_Límite_HabPsíquicas>
+        <Cat_MúltiploAcumKi_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</Cat_MúltiploAcumKi_Coste>
+        <Cat_MúltiploVida_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Cat_MúltiploVida_Coste>
+        <Cat_Nivel_CVInnato rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Cat_Nivel_CVInnato>
+        <Cat_ProyMágica_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Cat_ProyMágica_Coste>
+        <Cat_ProyPsíquica_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Cat_ProyPsíquica_Coste>
+        <Cat_PuntoCV_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</Cat_PuntoCV_Coste>
+        <Cat_PuntoKi_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Cat_PuntoKi_Coste>
+        <Cat_PuntosVida_Nivel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</Cat_PuntosVida_Nivel>
+        <Cat_PuntosZeon_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Cat_PuntosZeon_Coste>
+        <Cat_Turno_Nivel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</Cat_Turno_Nivel>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Son luchadores que se han dedicado a perfeccionar sus habilidades marciales con todo tipo de armas. Se trata de guerreros natos, los cuales han llevado hasta el límite su capacidad combativa por encima de cualquier otra categoría. Opuestamente a los guerreros convencionales, no emplean ninguna otra habilidad en la lucha más que su maestría en el uso de las armas. En una contienda, ignoran el uso de su energía física y de todo aquello que no sea su propia habilidad marcial, pero no por ello dejan de ser los combatientes más hábiles y los más centrados en las verdaderas habilidades marciales. La gran mayoría de caballeros y mercenarios tienen esta categoría.</rdfs:comment>
     </owl:NamedIndividual>
     
