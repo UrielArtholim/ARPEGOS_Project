@@ -8671,6 +8671,41 @@ Descripción: Este poder carga un objeto o lugar determinado con un fuerte senti
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Categoría_Hechicero">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Categoría"/>
+        <Cat_Arquetipo rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Místico"/>
+        <Car_CosteReduc_HabValoraciónMágica rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</Car_CosteReduc_HabValoraciónMágica>
+        <Cat_ACT_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</Cat_ACT_Coste>
+        <Cat_BI_HabOcultismo rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</Cat_BI_HabOcultismo>
+        <Cat_BI_HabValoraciónMágica rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Cat_BI_HabValoraciónMágica>
+        <Cat_BI_PuntosZeon rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100</Cat_BI_PuntosZeon>
+        <Cat_CM_Nivel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Cat_CM_Nivel>
+        <Cat_HabAtaque_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Cat_HabAtaque_Coste>
+        <Cat_HabAtar_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_HabAtar_Coste>
+        <Cat_HabAtléticas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_HabAtléticas_Coste>
+        <Cat_HabConvocar_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_HabConvocar_Coste>
+        <Cat_HabCreativas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_HabCreativas_Coste>
+        <Cat_HabDesconvocar_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_HabDesconvocar_Coste>
+        <Cat_HabDominar_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_HabDominar_Coste>
+        <Cat_HabEsquiva_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_HabEsquiva_Coste>
+        <Cat_HabIntelectuales_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_HabIntelectuales_Coste>
+        <Cat_HabLlevarArmadura_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Cat_HabLlevarArmadura_Coste>
+        <Cat_HabParada_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Cat_HabParada_Coste>
+        <Cat_HabPerceptivas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_HabPerceptivas_Coste>
+        <Cat_HabSociales_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_HabSociales_Coste>
+        <Cat_HabSubterfugio_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_HabSubterfugio_Coste>
+        <Cat_HabVigor_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Cat_HabVigor_Coste>
+        <Cat_Límite_HabCombate rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.5</Cat_Límite_HabCombate>
+        <Cat_Límite_HabMísticas rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.6</Cat_Límite_HabMísticas>
+        <Cat_Límite_HabPsíquicas rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.5</Cat_Límite_HabPsíquicas>
+        <Cat_MúltiploAcumKi_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</Cat_MúltiploAcumKi_Coste>
+        <Cat_MúltiploVida_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</Cat_MúltiploVida_Coste>
+        <Cat_Nivel_CVInnato rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Cat_Nivel_CVInnato>
+        <Cat_ProyMágica_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_ProyMágica_Coste>
+        <Cat_ProyPsíquica_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Cat_ProyPsíquica_Coste>
+        <Cat_PuntoCV_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</Cat_PuntoCV_Coste>
+        <Cat_PuntoKi_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Cat_PuntoKi_Coste>
+        <Cat_PuntosVida_Nivel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</Cat_PuntosVida_Nivel>
+        <Cat_PuntosZeon_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</Cat_PuntosZeon_Coste>
+        <Cat_Turno_Nivel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</Cat_Turno_Nivel>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Los hechiceros no son simplemente aquellos que tienen la increíble capacidad de manejar las energías místicas, sino las personas que se han dedicado en cuerpo y alma a comprender sus entresijos y llegar a dominarlas. Se especializan en el aspecto más puro de la magia: el uso de conjuros con los que son capaces de alterar la realidad a su antojo, enfocando y dominando sus poderes con completa precisión. Sienten también interés por todos los campos del intelecto, pero por desgracia, esta dedicación hace que su desarrollo físico sea por tanto inferior al de otras categorías.</rdfs:comment>
     </owl:NamedIndividual>
     
