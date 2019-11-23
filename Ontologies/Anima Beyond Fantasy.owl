@@ -1611,6 +1611,16 @@
     
 
 
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_BI_HabAtar -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_BI_HabAtar">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_BI_HabMísticas"/>
+        <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Categoría"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_BI_HabAtletismo -->
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_BI_HabAtletismo">
@@ -1682,9 +1692,9 @@
     
 
 
-    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_BI_HabControlar -->
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_BI_HabConvocar -->
 
-    <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_BI_HabControlar">
+    <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_BI_HabConvocar">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_BI_HabMísticas"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Categoría"/>
@@ -1717,6 +1727,16 @@
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_BI_HabDisfraz">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_BI_HabSubterfugio"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Categoría"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_BI_HabDominar -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_BI_HabDominar">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cat_BI_HabMísticas"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Categoría"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -8501,6 +8521,45 @@ Descripción: Este poder carga un objeto o lugar determinado con un fuerte senti
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Categoría_Conjurador">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Categoría"/>
+        <Cat_Arquetipo rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Místico"/>
+        <Car_CosteReduc_HabOcultismo rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</Car_CosteReduc_HabOcultismo>
+        <Cat_ACT_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">60</Cat_ACT_Coste>
+        <Cat_BI_HabAtar rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Cat_BI_HabAtar>
+        <Cat_BI_HabConvocar rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Cat_BI_HabConvocar>
+        <Cat_BI_HabDesconvocar rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Cat_BI_HabDesconvocar>
+        <Cat_BI_HabDominar rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Cat_BI_HabDominar>
+        <Cat_BI_HabOcultismo rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Cat_BI_HabOcultismo>
+        <Cat_BI_HabValoraciónMágica rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</Cat_BI_HabValoraciónMágica>
+        <Cat_BI_PuntosZeon rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</Cat_BI_PuntosZeon>
+        <Cat_CM_Nivel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Cat_CM_Nivel>
+        <Cat_HabAtaque_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Cat_HabAtaque_Coste>
+        <Cat_HabAtar_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</Cat_HabAtar_Coste>
+        <Cat_HabAtléticas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_HabAtléticas_Coste>
+        <Cat_HabConvocar_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</Cat_HabConvocar_Coste>
+        <Cat_HabCreativas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_HabCreativas_Coste>
+        <Cat_HabDesconvocar_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</Cat_HabDesconvocar_Coste>
+        <Cat_HabDominar_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</Cat_HabDominar_Coste>
+        <Cat_HabEsquiva_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_HabEsquiva_Coste>
+        <Cat_HabIntelectuales_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_HabIntelectuales_Coste>
+        <Cat_HabLlevarArmadura_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Cat_HabLlevarArmadura_Coste>
+        <Cat_HabParada_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Cat_HabParada_Coste>
+        <Cat_HabPerceptivas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_HabPerceptivas_Coste>
+        <Cat_HabSociales_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_HabSociales_Coste>
+        <Cat_HabSubterfugio_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_HabSubterfugio_Coste>
+        <Cat_HabVigor_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Cat_HabVigor_Coste>
+        <Cat_Límite_HabCombate rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.5</Cat_Límite_HabCombate>
+        <Cat_Límite_HabMísticas rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.6</Cat_Límite_HabMísticas>
+        <Cat_Límite_HabPsíquicas rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.5</Cat_Límite_HabPsíquicas>
+        <Cat_MúltiploAcumKi_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</Cat_MúltiploAcumKi_Coste>
+        <Cat_MúltiploVida_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</Cat_MúltiploVida_Coste>
+        <Cat_Nivel_CVInnato rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Cat_Nivel_CVInnato>
+        <Cat_ProyMágica_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Cat_ProyMágica_Coste>
+        <Cat_ProyPsíquica_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Cat_ProyPsíquica_Coste>
+        <Cat_PuntoCV_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</Cat_PuntoCV_Coste>
+        <Cat_PuntoKi_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Cat_PuntoKi_Coste>
+        <Cat_PuntosVida_Nivel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</Cat_PuntosVida_Nivel>
+        <Cat_PuntosZeon_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</Cat_PuntosZeon_Coste>
+        <Cat_Turno_Nivel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</Cat_Turno_Nivel>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Los conjuradores son místicos dotados de la capacidad de llamar a criaturas sobrenaturales y someterlas a su voluntad. Aunque, por sí mismos, ni sus poderes mágicos ni sus habilidades físicas son especialmente notables, los seres que convocan a este mundo son capaces de realizar prácticamente cualquier cosa que desee su controlador. Los conjuradores también pueden realizar invocaciones, recurriendo a la ayuda de grandes potencias sobrenaturales durante un tiempo limitado.</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -8972,7 +9031,7 @@ Descripción: Este poder carga un objeto o lugar determinado con un fuerte senti
         <Car_CosteReduc_HabFrialdad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</Car_CosteReduc_HabFrialdad>
         <Cat_ACT_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">60</Cat_ACT_Coste>
         <Cat_BI_HabAtaque rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</Cat_BI_HabAtaque>
-        <Cat_BI_HabControlar rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Cat_BI_HabControlar>
+        <Cat_BI_HabConvocar rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Cat_BI_HabConvocar>
         <Cat_BI_HabEstilo rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</Cat_BI_HabEstilo>
         <Cat_BI_HabFrialdad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Cat_BI_HabFrialdad>
         <Cat_BI_HabIntimidar rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Cat_BI_HabIntimidar>
