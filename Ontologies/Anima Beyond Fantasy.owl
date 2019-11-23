@@ -52,74 +52,9 @@
     
 
 
-    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Ataque_1 -->
-
-    <owl:ObjectProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Ataque_1">
-        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#ArmaTieneObjeto"/>
-        <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma"/>
-        <rdfs:range rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tipo_Ataque"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Ataque_2 -->
-
-    <owl:ObjectProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Ataque_2">
-        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#ArmaTieneObjeto"/>
-        <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma"/>
-        <rdfs:range rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tipo_Ataque"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_DañoBase -->
-
-    <owl:ObjectProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_DañoBase">
-        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#ArmaTieneObjeto"/>
-        <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma"/>
-    </owl:ObjectProperty>
-    
-
-
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Disponibilidad -->
 
     <owl:ObjectProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Disponibilidad">
-        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#ArmaTieneObjeto"/>
-        <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Entereza -->
-
-    <owl:ObjectProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Entereza">
-        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#ArmaTieneObjeto"/>
-        <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Especial -->
-
-    <owl:ObjectProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Especial">
-        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#ArmaTieneObjeto"/>
-        <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_FuerzaRequerida -->
-
-    <owl:ObjectProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_FuerzaRequerida">
-        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#ArmaTieneObjeto"/>
-        <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Presencia -->
-
-    <owl:ObjectProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Presencia">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#ArmaTieneObjeto"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma"/>
     </owl:ObjectProperty>
@@ -151,6 +86,26 @@
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#ArmaTieneObjeto"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma"/>
         <rdfs:range rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tabla_Armas"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_TipoAtaque_1 -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_TipoAtaque_1">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#ArmaTieneObjeto"/>
+        <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma"/>
+        <rdfs:range rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tipo_Ataque"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_TipoAtaque_2 -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_TipoAtaque_2">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#ArmaTieneObjeto"/>
+        <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma"/>
+        <rdfs:range rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tipo_Ataque"/>
     </owl:ObjectProperty>
     
 
