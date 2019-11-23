@@ -8434,7 +8434,6 @@ Descripción: Este poder carga un objeto o lugar determinado con un fuerte senti
         <Cat_HabDesconvocar_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Cat_HabDesconvocar_Coste>
         <Cat_HabDominar_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Cat_HabDominar_Coste>
         <Cat_HabEsquiva_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_HabEsquiva_Coste>
-        <Cat_HabIntelectuales_Coste></Cat_HabIntelectuales_Coste>
         <Cat_HabIntelectuales_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Cat_HabIntelectuales_Coste>
         <Cat_HabLlevarArmadura_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_HabLlevarArmadura_Coste>
         <Cat_HabParada_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_HabParada_Coste>
