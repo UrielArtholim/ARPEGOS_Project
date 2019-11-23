@@ -8418,6 +8418,43 @@ Descripción: Este poder carga un objeto o lugar determinado con un fuerte senti
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Categoría_Guerrero">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Categoría"/>
+        <Cat_Arquetipo rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Luchador"/>
+        <Car_CosteReduc_HabProezasDeFuerza rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</Car_CosteReduc_HabProezasDeFuerza>
+        <Cat_ACT_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">70</Cat_ACT_Coste>
+        <Cat_BI_HabAtaque rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</Cat_BI_HabAtaque>
+        <Cat_BI_HabLlevarArmadura rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</Cat_BI_HabLlevarArmadura>
+        <Cat_BI_HabParada rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</Cat_BI_HabParada>
+        <Cat_BI_HabProezasDeFuerza rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</Cat_BI_HabProezasDeFuerza>
+        <Cat_CM_Nivel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25</Cat_CM_Nivel>
+        <Cat_HabAtaque_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_HabAtaque_Coste>
+        <Cat_HabAtar_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Cat_HabAtar_Coste>
+        <Cat_HabAtléticas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_HabAtléticas_Coste>
+        <Cat_HabConvocar_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Cat_HabConvocar_Coste>
+        <Cat_HabCreativas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_HabCreativas_Coste>
+        <Cat_HabDesconvocar_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Cat_HabDesconvocar_Coste>
+        <Cat_HabDominar_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Cat_HabDominar_Coste>
+        <Cat_HabEsquiva_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_HabEsquiva_Coste>
+        <Cat_HabIntelectuales_Coste></Cat_HabIntelectuales_Coste>
+        <Cat_HabIntelectuales_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Cat_HabIntelectuales_Coste>
+        <Cat_HabLlevarArmadura_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_HabLlevarArmadura_Coste>
+        <Cat_HabParada_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_HabParada_Coste>
+        <Cat_HabPerceptivas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_HabPerceptivas_Coste>
+        <Cat_HabSociales_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_HabSociales_Coste>
+        <Cat_HabSubterfugio_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_HabSubterfugio_Coste>
+        <Cat_HabVigor_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_HabVigor_Coste>
+        <Cat_Límite_HabCombate rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.6</Cat_Límite_HabCombate>
+        <Cat_Límite_HabMísticas rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.5</Cat_Límite_HabMísticas>
+        <Cat_Límite_HabPsíquicas rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.5</Cat_Límite_HabPsíquicas>
+        <Cat_MúltiploAcumKi_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</Cat_MúltiploAcumKi_Coste>
+        <Cat_MúltiploVida_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</Cat_MúltiploVida_Coste>
+        <Cat_Nivel_CVInnato rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Cat_Nivel_CVInnato>
+        <Cat_ProyMágica_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Cat_ProyMágica_Coste>
+        <Cat_ProyPsíquica_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Cat_ProyPsíquica_Coste>
+        <Cat_PuntoCV_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</Cat_PuntoCV_Coste>
+        <Cat_PuntoKi_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_PuntoKi_Coste>
+        <Cat_PuntosVida_Nivel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</Cat_PuntosVida_Nivel>
+        <Cat_PuntosZeon_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Cat_PuntosZeon_Coste>
+        <Cat_Turno_Nivel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</Cat_Turno_Nivel>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El guerrero es el luchador arquetípico por excelencia. Esta categoría engloba a aquellas personas que han dedicado por completo su vida al combate y son capaces de explotar al máximo su habilidad bélica. Esto les lleva no sólo a dominar el manejo de las armas, sino a, llegado el momento, emplear su energía anímica en la lucha. También tienen facilidad para desarrollar un gran conocimiento en el campo de las tácticas militares y convertirse en cabecillas de ejércitos. Tradicionalmente, los guerreros pueden llegar a trabajar casi de cualquier cosa, desde meros mercenarios a caballeros.</rdfs:comment>
     </owl:NamedIndividual>
     
