@@ -8736,6 +8736,7 @@ Descripción: Este poder carga un objeto o lugar determinado con un fuerte senti
         <Cat_BI_HabSigilo rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Cat_BI_HabSigilo>
         <Cat_BI_HabTrucosDeManos rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Cat_BI_HabTrucosDeManos>
         <Cat_BI_HabValoraciónMágica rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</Cat_BI_HabValoraciónMágica>
+        <Cat_BI_PuntosZeon rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">75</Cat_BI_PuntosZeon>
         <Cat_CM_Nivel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</Cat_CM_Nivel>
         <Cat_HabAtaque_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Cat_HabAtaque_Coste>
         <Cat_HabAtar_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Cat_HabAtar_Coste>
