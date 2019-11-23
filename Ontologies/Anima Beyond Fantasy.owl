@@ -8372,11 +8372,8 @@ Descripción: Este poder carga un objeto o lugar determinado con un fuerte senti
         <Cat_BI_HabAdvertir rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">10</Cat_BI_HabAdvertir>
         <Cat_BI_HabAtaque rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">5</Cat_BI_HabAtaque>
         <Cat_BI_HabBuscar rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">10</Cat_BI_HabBuscar>
-        <Cat_BI_HabEstilo rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</Cat_BI_HabEstilo>
         <Cat_BI_HabFrialdad rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">10</Cat_BI_HabFrialdad>
-        <Cat_BI_HabLiderazgo rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Cat_BI_HabLiderazgo>
         <Cat_BI_HabOcultarse rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">10</Cat_BI_HabOcultarse>
-        <Cat_BI_HabResistirElDolor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Cat_BI_HabResistirElDolor>
         <Cat_BI_HabSigilo rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">10</Cat_BI_HabSigilo>
         <Cat_BI_HabTrampería rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">10</Cat_BI_HabTrampería>
         <Cat_BI_HabVenenos rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">10</Cat_BI_HabVenenos>
@@ -8612,8 +8609,11 @@ Descripción: Este poder carga un objeto o lugar determinado con un fuerte senti
         <Car_CosteReduc_HabResistirElDolor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</Car_CosteReduc_HabResistirElDolor>
         <Cat_ACT_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">60</Cat_ACT_Coste>
         <Cat_BI_HabDesconvocar rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Cat_BI_HabDesconvocar>
+        <Cat_BI_HabEstilo rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</Cat_BI_HabEstilo>
+        <Cat_BI_HabLiderazgo rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Cat_BI_HabLiderazgo>
         <Cat_BI_HabLlevarArmadura rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Cat_BI_HabLlevarArmadura>
         <Cat_BI_HabParada rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</Cat_BI_HabParada>
+        <Cat_BI_HabResistirElDolor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Cat_BI_HabResistirElDolor>
         <Cat_BI_PuntosZeon rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</Cat_BI_PuntosZeon>
         <Cat_CM_Nivel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</Cat_CM_Nivel>
         <Cat_HabAtaque_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_HabAtaque_Coste>
