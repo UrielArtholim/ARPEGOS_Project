@@ -57,7 +57,14 @@
 
     <owl:ObjectProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Especial">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#ArmaTieneObjeto"/>
-        <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma"/>
+                    <rdf:Description rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Escudo"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_ReglaEspecial"/>
     </owl:ObjectProperty>
     
@@ -67,7 +74,14 @@
 
     <owl:ObjectProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Rango">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#ArmaTieneObjeto"/>
-        <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma"/>
+                    <rdf:Description rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Escudo"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Rango_Armas"/>
     </owl:ObjectProperty>
     
@@ -88,7 +102,14 @@
     <owl:ObjectProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_TipoAtaque_1">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#ArmaTieneObjeto"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma"/>
+                    <rdf:Description rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Escudo"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tipo_Ataque"/>
     </owl:ObjectProperty>
     
@@ -98,7 +119,14 @@
 
     <owl:ObjectProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_TipoAtaque_2">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#ArmaTieneObjeto"/>
-        <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma"/>
+                    <rdf:Description rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Escudo"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tipo_Ataque"/>
     </owl:ObjectProperty>
     
@@ -108,7 +136,14 @@
 
     <owl:ObjectProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Tipología">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#ArmaTieneObjeto"/>
-        <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma"/>
+                    <rdf:Description rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Escudo"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tipos_Armas"/>
     </owl:ObjectProperty>
     
@@ -925,6 +960,14 @@
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_DañoBase">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#ArmaTieneValor"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma"/>
+                    <rdf:Description rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Escudo"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
     
@@ -935,6 +978,14 @@
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Entereza">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#ArmaTieneValor"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma"/>
+                    <rdf:Description rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Escudo"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
     
@@ -954,7 +1005,14 @@
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Fuerza_1Mano">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_FuerzaRequerida"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma"/>
+                    <rdf:Description rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Escudo"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
     
@@ -965,7 +1023,14 @@
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Fuerza_2Manos">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_FuerzaRequerida"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma"/>
+                    <rdf:Description rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Escudo"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
     
@@ -975,6 +1040,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Presa">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#ArmaTieneValor"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -986,6 +1052,14 @@
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Presencia">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#ArmaTieneValor"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma"/>
+                    <rdf:Description rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Escudo"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
     
@@ -996,6 +1070,14 @@
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Rotura">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#ArmaTieneValor"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma"/>
+                    <rdf:Description rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Escudo"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
     </owl:DatatypeProperty>
     
@@ -1006,6 +1088,14 @@
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Turno">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#ArmaTieneValor"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma"/>
+                    <rdf:Description rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Escudo"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
     </owl:DatatypeProperty>
     
@@ -15214,6 +15304,18 @@ Mantenimiento: 15 / 20 / 25 / 30 Diario</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Escudo_Corporal">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Escudo"/>
+        <Arma_Rango rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Cuerpo_a_Cuerpo"/>
+        <Arma_TipoAtaque_1 rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ataque_Contundente"/>
+        <Arma_Tipología rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tipo_Escudo"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Común"/>
+        <Arma_DañoBase rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25</Arma_DañoBase>
+        <Arma_Entereza rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">18</Arma_Entereza>
+        <Arma_Fuerza_1Mano rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Arma_Fuerza_1Mano>
+        <Arma_Presencia rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25</Arma_Presencia>
+        <Arma_Rotura rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</Arma_Rotura>
+        <Arma_Turno rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-40</Arma_Turno>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50000</Equipo_Coste>
+        <Equipo_Peso rdf:datatype="http://www.w3.org/2001/XMLSchema#float">6.0</Equipo_Peso>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gran escudo pesado que suele alcanzar el tamaño de un hombre. Usados generalmente por los soldados de infantería, tienen una base cuadrada o en punta para clavarla en el suelo por su propio peso.</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -15334,6 +15436,18 @@ Mantenimiento: 5 / 10 / 15 / 15</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Escudo_Normal">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Escudo"/>
+        <Arma_Rango rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Cuerpo_a_Cuerpo"/>
+        <Arma_TipoAtaque_1 rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ataque_Contundente"/>
+        <Arma_Tipología rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tipo_Escudo"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Común"/>
+        <Arma_DañoBase rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</Arma_DañoBase>
+        <Arma_Entereza rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</Arma_Entereza>
+        <Arma_Fuerza_1Mano rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</Arma_Fuerza_1Mano>
+        <Arma_Presencia rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25</Arma_Presencia>
+        <Arma_Rotura rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</Arma_Rotura>
+        <Arma_Turno rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-25</Arma_Turno>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20000</Equipo_Coste>
+        <Equipo_Peso rdf:datatype="http://www.w3.org/2001/XMLSchema#float">2.0</Equipo_Peso>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Superficie de metal o madera reforzada, con asas en su parte posterior para ser blandido. Se utiliza principalmente como medio de defensa.</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -23939,6 +24053,18 @@ Vías Cerradas: Ninguna</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Rodela">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Escudo"/>
+        <Arma_Rango rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Cuerpo_a_Cuerpo"/>
+        <Arma_TipoAtaque_1 rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ataque_Contundente"/>
+        <Arma_Tipología rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tipo_Escudo"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Común"/>
+        <Arma_DañoBase rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</Arma_DañoBase>
+        <Arma_Entereza rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</Arma_Entereza>
+        <Arma_Fuerza_1Mano rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</Arma_Fuerza_1Mano>
+        <Arma_Presencia rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</Arma_Presencia>
+        <Arma_Rotura rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</Arma_Rotura>
+        <Arma_Turno rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-15</Arma_Turno>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5000</Equipo_Coste>
+        <Equipo_Peso rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</Equipo_Peso>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Escudo pequeño de un tamaño no superior a 30 centímetros. La principal ventaja de la rodela es que se acopla directamente al antebrazo, por lo que puede utilizarse incluso con armas a dos manos.</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -25671,6 +25797,14 @@ Mantenimiento: 35 / 60 / 90 / 150</rdfs:comment>
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tipo_Cuerda -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tipo_Cuerda">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tipos_Armas"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tipo_Escudo -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tipo_Escudo">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tipos_Armas"/>
     </owl:NamedIndividual>
     
