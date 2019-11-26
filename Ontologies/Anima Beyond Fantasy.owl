@@ -4364,6 +4364,7 @@
 
     <owl:Class rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_ReglaEspecial">
         <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma"/>
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Características_Arma"/>
     </owl:Class>
     
 
@@ -4542,6 +4543,14 @@
 
     <owl:Class rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Característica_Secundaria">
         <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Característica"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Características_Arma -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Características_Arma">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Armas_Y_Escudos"/>
     </owl:Class>
     
 
@@ -5240,6 +5249,7 @@
 
     <owl:Class rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Rango_Armas">
         <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma"/>
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Características_Arma"/>
     </owl:Class>
     
 
@@ -5377,7 +5387,7 @@
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tipo_Munición -->
 
     <owl:Class rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tipo_Munición">
-        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma"/>
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Características_Arma"/>
     </owl:Class>
     
 
@@ -5385,7 +5395,7 @@
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tipos_Armas -->
 
     <owl:Class rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tipos_Armas">
-        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma"/>
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Características_Arma"/>
     </owl:Class>
     
 
@@ -5533,6 +5543,21 @@
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Abanico_de_Combate">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Exótica"/>
+        <Arma_Especial rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Lanzable"/>
+        <Arma_Especial rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Precisa"/>
+        <Arma_Rango rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Lanzable"/>
+        <Arma_TipoAtaque_1 rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ataque_Filo"/>
+        <Arma_TipoAtaque_2 rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ataque_Contundente"/>
+        <Arma_Tipología rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tipo_Arma_Corta"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Raro"/>
+        <Arma_DañoBase rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</Arma_DañoBase>
+        <Arma_Entereza rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</Arma_Entereza>
+        <Arma_Fuerza_1Mano rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</Arma_Fuerza_1Mano>
+        <Arma_Presencia rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25</Arma_Presencia>
+        <Arma_Rotura rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</Arma_Rotura>
+        <Arma_Turno rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</Arma_Turno>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5000</Equipo_Coste>
+        <Equipo_Peso rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.2</Equipo_Peso>
         <rdfs:comment>Arma oriental especialmente exótica. Su apariencia es la de un abanico en el cual la madera ha sido sustituida por cuchillas afiladas. La parte posterior tiene un gran contrapeso con el que se puede golpear de manera contundente.</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -6136,6 +6161,21 @@ Mantenimiento: No</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Anciano_de_Primavera">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Exótica"/>
+        <Arma_Especial rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#A_dos_manos"/>
+        <Arma_Especial rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Compleja"/>
+        <Arma_Rango rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Cuerpo_a_Cuerpo"/>
+        <Arma_TipoAtaque_1 rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ataque_Filo"/>
+        <Arma_TipoAtaque_2 rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ataque_Penetrante"/>
+        <Arma_Tipología rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tipo_Asta"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Raro"/>
+        <Arma_DañoBase rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">35</Arma_DañoBase>
+        <Arma_Entereza rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</Arma_Entereza>
+        <Arma_Fuerza_2Manos rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</Arma_Fuerza_2Manos>
+        <Arma_Presencia rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25</Arma_Presencia>
+        <Arma_Rotura rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Arma_Rotura>
+        <Arma_Turno rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</Arma_Turno>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15000</Equipo_Coste>
+        <Equipo_Peso rdf:datatype="http://www.w3.org/2001/XMLSchema#float">3.0</Equipo_Peso>
         <rdfs:comment>Arma de diseño oriental que consiste en dos varas largas, unidas por cadenas a una tercera de menor tamaño. Cada uno de los palos largos está rematado en una cuchilla similar a las que tienen las alabardas, pero más pequeñas. Se utiliza situando la vara corta en la espalda mientras se sujetan las otras con cada una de las manos. Para darle mayor potencia al ataque, se le hace girar aprovechando la fuerza centrífuga del movimiento. Aunque requiere utilizar las dos manos, no dobla el bono de Fuerza. Por su forma y empleo, el anciano de primavera permite realizar un segundo ataque por asalto como si se utilizase un arma adicional, pero aplicando únicamente un penalizador de –10 a la habilidad de ataque.</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -8137,6 +8177,20 @@ Beneficio: 2</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Bumerán">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Exótica"/>
+        <Arma_Especial rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Lanzable"/>
+        <Arma_Rango rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Lanzable"/>
+        <Arma_TipoAtaque_1 rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ataque_Contundente"/>
+        <Arma_TipoAtaque_2 rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ataque_Filo"/>
+        <Arma_Tipología rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tipo_Arma_Corta"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Raro"/>
+        <Arma_DañoBase rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</Arma_DañoBase>
+        <Arma_Entereza rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Arma_Entereza>
+        <Arma_Fuerza_1Mano rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</Arma_Fuerza_1Mano>
+        <Arma_Presencia rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</Arma_Presencia>
+        <Arma_Rotura rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</Arma_Rotura>
+        <Arma_Turno rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Arma_Turno>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3000</Equipo_Coste>
+        <Equipo_Peso rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.6</Equipo_Peso>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Palo curvo hecho de madera o metal, diseñado para ser lanzado y regresar en el caso de no impactar. Para recogerlo, se requiere superar un control de Trucos de manos contra una dificultad de Difícil (DIF).</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -12114,6 +12168,21 @@ Mantenimiento: 10 / 15 / 15 / 20</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cuervo">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Exótica"/>
+        <Arma_Especial rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Compleja"/>
+        <Arma_Especial rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Precisa"/>
+        <Arma_Rango rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Cuerpo_a_Cuerpo"/>
+        <Arma_TipoAtaque_1 rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ataque_Contundente"/>
+        <Arma_TipoAtaque_2 rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ataque_Filo"/>
+        <Arma_Tipología rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tipo_Arma_Corta"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Raro"/>
+        <Arma_DañoBase rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">35</Arma_DañoBase>
+        <Arma_Entereza rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</Arma_Entereza>
+        <Arma_Fuerza_1Mano rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</Arma_Fuerza_1Mano>
+        <Arma_Presencia rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25</Arma_Presencia>
+        <Arma_Rotura rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Arma_Rotura>
+        <Arma_Turno rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Arma_Turno>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5000</Equipo_Coste>
+        <Equipo_Peso rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.5</Equipo_Peso>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cuchilla en forma de estrella con un orificio en el centro. Se introduce el pulgar en el agujero y se la hace girar con fuerza. Mientras da vueltas, puede detener proyectiles como si se tratase de una rodela.</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -16527,6 +16596,19 @@ Beneficio: 1</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Garras">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Exótica"/>
+        <Arma_Rango rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Cuerpo_a_Cuerpo"/>
+        <Arma_TipoAtaque_1 rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ataque_Filo"/>
+        <Arma_TipoAtaque_1 rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ataque_Penetrante"/>
+        <Arma_Tipología rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tipo_Arma_Corta"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Raro"/>
+        <Arma_DañoBase rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</Arma_DañoBase>
+        <Arma_Entereza rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</Arma_Entereza>
+        <Arma_Fuerza_1Mano rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</Arma_Fuerza_1Mano>
+        <Arma_Presencia rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</Arma_Presencia>
+        <Arma_Rotura rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Arma_Rotura>
+        <Arma_Turno rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</Arma_Turno>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3000</Equipo_Coste>
+        <Equipo_Peso rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.5</Equipo_Peso>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cuchillas acopladas a un guante con forma de garra de animal.</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -18592,6 +18674,20 @@ Vías Cerradas: Luz</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Katana">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Exótica"/>
+        <Arma_Especial rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#A_una_o_dos_manos"/>
+        <Arma_Rango rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Cuerpo_a_Cuerpo"/>
+        <Arma_TipoAtaque_1 rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ataque_Filo"/>
+        <Arma_Tipología rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tipo_Espada"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Raro"/>
+        <Arma_DañoBase rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</Arma_DañoBase>
+        <Arma_Entereza rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</Arma_Entereza>
+        <Arma_Fuerza_1Mano rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</Arma_Fuerza_1Mano>
+        <Arma_Fuerza_2Manos rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</Arma_Fuerza_2Manos>
+        <Arma_Presencia rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">40</Arma_Presencia>
+        <Arma_Rotura rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Arma_Rotura>
+        <Arma_Turno rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</Arma_Turno>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50000</Equipo_Coste>
+        <Equipo_Peso rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</Equipo_Peso>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Arma de diseño oriental, formada por una hoja curva afilada por un único lado. Similar a un sable, es considerablemente más pesada y efectiva, pero con escasa resistencia.</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -18601,6 +18697,18 @@ Vías Cerradas: Luz</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Katana_de_Doble_Hoja">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Exótica"/>
+        <Arma_Rango rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Cuerpo_a_Cuerpo"/>
+        <Arma_TipoAtaque_1 rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ataque_Filo"/>
+        <Arma_Tipología rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tipo_Espada"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Raro"/>
+        <Arma_DañoBase rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">55</Arma_DañoBase>
+        <Arma_Entereza rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</Arma_Entereza>
+        <Arma_Fuerza_1Mano rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</Arma_Fuerza_1Mano>
+        <Arma_Presencia rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">40</Arma_Presencia>
+        <Arma_Rotura rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Arma_Rotura>
+        <Arma_Turno rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-5</Arma_Turno>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">75000</Equipo_Coste>
+        <Equipo_Peso rdf:datatype="http://www.w3.org/2001/XMLSchema#float">2.0</Equipo_Peso>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Katana doble con un filo en la parte superior y un segundo en la inferior. Tiene un gran mango en el centro por el que se sostiene y se la hace girar. Aunque requiere utilizar las dos manos, no dobla el bono de Fuerza del personaje. Por su forma y empleo, permite realizar un segundo ataque por asalto como si se utilizase un arma adicional, pero aplicando únicamente un penalizador de –10 a la habilidad.</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -18610,6 +18718,20 @@ Vías Cerradas: Luz</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Katar">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Exótica"/>
+        <Arma_Especial rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Compleja"/>
+        <Arma_Rango rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Cuerpo_a_Cuerpo"/>
+        <Arma_TipoAtaque_1 rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ataque_Penetrante"/>
+        <Arma_TipoAtaque_2 rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ataque_Filo"/>
+        <Arma_Tipología rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tipo_Arma_Corta"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Raro"/>
+        <Arma_DañoBase rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">40</Arma_DañoBase>
+        <Arma_Entereza rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</Arma_Entereza>
+        <Arma_Fuerza_1Mano rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</Arma_Fuerza_1Mano>
+        <Arma_Presencia rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25</Arma_Presencia>
+        <Arma_Rotura rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Arma_Rotura>
+        <Arma_Turno rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Arma_Turno>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">40000</Equipo_Coste>
+        <Equipo_Peso rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.6</Equipo_Peso>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Guantelete con cuchillas de 25 a 30 centímetros, que puede estar armado con uno o tres filos.</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -18677,6 +18799,24 @@ Bono: +10 variable.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Kusari-Gama">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Exótica"/>
+        <Arma_Especial rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#A_dos_manos"/>
+        <Arma_Especial rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Presa"/>
+        <Arma_Rango rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Cuerpo_a_Cuerpo"/>
+        <Arma_TipoAtaque_1 rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ataque_Filo"/>
+        <Arma_TipoAtaque_2 rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ataque_Contundente"/>
+        <Arma_Tipología rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tipo_Arma_Corta"/>
+        <Arma_Tipología rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tipo_Cuerda"/>
+        <Arma_Tipología rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tipo_Mixta"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Raro"/>
+        <Arma_DañoBase rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">40</Arma_DañoBase>
+        <Arma_Entereza rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</Arma_Entereza>
+        <Arma_Fuerza_2Manos rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</Arma_Fuerza_2Manos>
+        <Arma_Presa rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</Arma_Presa>
+        <Arma_Presencia rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25</Arma_Presencia>
+        <Arma_Rotura rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</Arma_Rotura>
+        <Arma_Turno rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</Arma_Turno>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10000</Equipo_Coste>
+        <Equipo_Peso rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</Equipo_Peso>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hoz oriental, con una cadena en su parte inferior que se utiliza para apresar a los oponentes. Aunque se usa a dos manos, no dobla el bono de Fuerza. Puede emplearse para atacar de manera convencional, o arrojar la cadena para sujetar al adversario, en cuyo caso sólo provoca un daño base de 10.</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -21075,6 +21215,20 @@ Mantenimiento: 10 / 20 / 25 / 30</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Nodachi">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Exótica"/>
+        <Arma_Especial rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#A_una_o_dos_manos"/>
+        <Arma_Rango rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Cuerpo_a_Cuerpo"/>
+        <Arma_TipoAtaque_1 rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ataque_Filo"/>
+        <Arma_Tipología rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tipo_Mandoble"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Raro"/>
+        <Arma_DañoBase rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">80</Arma_DañoBase>
+        <Arma_Entereza rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</Arma_Entereza>
+        <Arma_Fuerza_1Mano rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Arma_Fuerza_1Mano>
+        <Arma_Fuerza_2Manos rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</Arma_Fuerza_2Manos>
+        <Arma_Presencia rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">40</Arma_Presencia>
+        <Arma_Rotura rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</Arma_Rotura>
+        <Arma_Turno rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-35</Arma_Turno>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">70000</Equipo_Coste>
+        <Equipo_Peso rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.5</Equipo_Peso>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Versión grande de la katana, de forma y funcionamiento similares, pero mucho más larga y gruesa.</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -21142,6 +21296,18 @@ Vías Cerradas: Fuego y Tierra</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Nunchaku">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Exótica"/>
+        <Arma_Rango rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Cuerpo_a_Cuerpo"/>
+        <Arma_TipoAtaque_1 rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ataque_Contundente"/>
+        <Arma_Tipología rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tipo_Cuerda"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Raro"/>
+        <Arma_DañoBase rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</Arma_DañoBase>
+        <Arma_Entereza rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</Arma_Entereza>
+        <Arma_Fuerza_1Mano rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</Arma_Fuerza_1Mano>
+        <Arma_Presencia rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</Arma_Presencia>
+        <Arma_Rotura rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</Arma_Rotura>
+        <Arma_Turno rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</Arma_Turno>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2000</Equipo_Coste>
+        <Equipo_Peso rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.6</Equipo_Peso>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dos palos cortos de madera o metal, sujetos por una cadena.</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -22595,6 +22761,21 @@ Vías Cerradas: Creación</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Quebradora">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Exótica"/>
+        <Arma_Especial rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#A_una_o_dos_manos"/>
+        <Arma_Rango rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Cuerpo_a_Cuerpo"/>
+        <Arma_TipoAtaque_1 rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ataque_Contundente"/>
+        <Arma_TipoAtaque_2 rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ataque_Filo"/>
+        <Arma_Tipología rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tipo_Mandoble"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Raro"/>
+        <Arma_DañoBase rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</Arma_DañoBase>
+        <Arma_Entereza rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</Arma_Entereza>
+        <Arma_Fuerza_1Mano rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Arma_Fuerza_1Mano>
+        <Arma_Fuerza_2Manos rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</Arma_Fuerza_2Manos>
+        <Arma_Presencia rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25</Arma_Presencia>
+        <Arma_Rotura rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</Arma_Rotura>
+        <Arma_Turno rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-20</Arma_Turno>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30000</Equipo_Coste>
+        <Equipo_Peso rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</Equipo_Peso>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La quebradora o rompearmas es una espada corta de gran peso y una anchura superior a 25 centímetros. Dada su enorme contundencia, se utiliza comúnmente para partir las armas y armaduras de los contrincantes.</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -23818,6 +23999,21 @@ Mantenimiento: 10 / 10 / 15 / 15 Diario</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Sai">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Exótica"/>
+        <Arma_Especial rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Precisa"/>
+        <Arma_Especial rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Traba_el_arma"/>
+        <Arma_Rango rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Cuerpo_a_Cuerpo"/>
+        <Arma_TipoAtaque_1 rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ataque_Penetrante"/>
+        <Arma_TipoAtaque_2 rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ataque_Filo"/>
+        <Arma_Tipología rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tipo_Arma_Corta"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Raro"/>
+        <Arma_DañoBase rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">35</Arma_DañoBase>
+        <Arma_Entereza rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</Arma_Entereza>
+        <Arma_Fuerza_1Mano rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</Arma_Fuerza_1Mano>
+        <Arma_Presencia rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25</Arma_Presencia>
+        <Arma_Rotura rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</Arma_Rotura>
+        <Arma_Turno rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</Arma_Turno>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1000</Equipo_Coste>
+        <Equipo_Peso rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4</Equipo_Peso>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cuchillo punzante oriental con forma de tridente para detener los ataques de otras armas.</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -24360,6 +24556,18 @@ Bono: +10 a la habilidad de ataque sin armas.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Shuko">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Exótica"/>
+        <Arma_Rango rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Cuerpo_a_Cuerpo"/>
+        <Arma_TipoAtaque_1 rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ataque_Penetrante"/>
+        <Arma_Tipología rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tipo_Arma_Corta"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Raro"/>
+        <Arma_DañoBase rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</Arma_DañoBase>
+        <Arma_Entereza rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</Arma_Entereza>
+        <Arma_Fuerza_1Mano rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</Arma_Fuerza_1Mano>
+        <Arma_Presencia rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25</Arma_Presencia>
+        <Arma_Rotura rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-2</Arma_Rotura>
+        <Arma_Turno rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Arma_Turno>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3000</Equipo_Coste>
+        <Equipo_Peso rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.3</Equipo_Peso>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Artilugio en forma de garras, que se lleva en la palma de las manos. Se utiliza como arma y como apoyo para trepar, habilidad en la que otorga un bono de +10.</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -24369,6 +24577,20 @@ Bono: +10 a la habilidad de ataque sin armas.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Shuriken">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Exótica"/>
+        <Arma_Especial rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Lanzable"/>
+        <Arma_Rango rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Lanzable"/>
+        <Arma_TipoAtaque_1 rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ataque_Filo"/>
+        <Arma_TipoAtaque_2 rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ataque_Penetrante"/>
+        <Arma_Tipología rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tipo_Arma_Corta"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Raro"/>
+        <Arma_DañoBase rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25</Arma_DañoBase>
+        <Arma_Entereza rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Arma_Entereza>
+        <Arma_Fuerza_1Mano rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</Arma_Fuerza_1Mano>
+        <Arma_Presencia rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</Arma_Presencia>
+        <Arma_Rotura rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</Arma_Rotura>
+        <Arma_Turno rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</Arma_Turno>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">500</Equipo_Coste>
+        <Equipo_Peso rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.1</Equipo_Peso>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pequeñas armas orientales de metal, que se emplean exclusivamente lanzándolas. Pueden tener formas muy diversas, desde superficies afiladas a cuchillas con forma de estrella.</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -25076,6 +25298,19 @@ Mantenimiento: No</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tanto">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Exótica"/>
+        <Arma_Especial rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Precisa"/>
+        <Arma_Rango rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Cuerpo_a_Cuerpo"/>
+        <Arma_TipoAtaque_1 rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ataque_Filo"/>
+        <Arma_Tipología rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tipo_Arma_Corta"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Raro"/>
+        <Arma_DañoBase rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">40</Arma_DañoBase>
+        <Arma_Entereza rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</Arma_Entereza>
+        <Arma_Fuerza_1Mano rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Arma_Fuerza_1Mano>
+        <Arma_Presencia rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">40</Arma_Presencia>
+        <Arma_Rotura rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</Arma_Rotura>
+        <Arma_Turno rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</Arma_Turno>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20000</Equipo_Coste>
+        <Equipo_Peso rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.5</Equipo_Peso>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Arma de diseño oriental. Parecida a la katana, pero menor.</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -25458,6 +25693,19 @@ Militarmente, Tol Rauko tiene un potencial bélico comparable al de un Señor de
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tonfa">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Exótica"/>
+        <Arma_Especial rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Precisa"/>
+        <Arma_Rango rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Cuerpo_a_Cuerpo"/>
+        <Arma_TipoAtaque_1 rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ataque_Contundente"/>
+        <Arma_Tipología rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tipo_Arma_Corta"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Raro"/>
+        <Arma_DañoBase rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</Arma_DañoBase>
+        <Arma_Entereza rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</Arma_Entereza>
+        <Arma_Fuerza_1Mano rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</Arma_Fuerza_1Mano>
+        <Arma_Presencia rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25</Arma_Presencia>
+        <Arma_Rotura rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</Arma_Rotura>
+        <Arma_Turno rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</Arma_Turno>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1000</Equipo_Coste>
+        <Equipo_Peso rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.3</Equipo_Peso>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Porra oriental en forma de L, que se utiliza sujetándola lateralmente al antebrazo.</rdfs:comment>
     </owl:NamedIndividual>
     
