@@ -4743,7 +4743,7 @@
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Escudo -->
 
     <owl:Class rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Escudo">
-        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arte_Y_Decoracion"/>
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Armas_Y_Escudos"/>
     </owl:Class>
     
 
@@ -5924,6 +5924,7 @@ Mantenimiento: 10 / 10 / 15 / 25</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Alabarda">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Común"/>
+        <Arma_Rango rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Cuerpo_a_Cuerpo"/>
         <Arma_TipoAtaque_1 rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ataque_Filo"/>
         <Arma_TipoAtaque_2 rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ataque_Contundente"/>
         <Arma_Tipología rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tipo_Asta"/>
@@ -6853,6 +6854,7 @@ Mantenimiento: 90 / 100 / 105 / 110</rdfs:comment>
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Utiles_Varios"/>
         <Arma_Especial rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#A_una_o_dos_manos"/>
         <Arma_Especial rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Lanzable"/>
+        <Arma_Rango rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Lanzable"/>
         <Arma_TipoAtaque_1 rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ataque_Penetrante"/>
         <Arma_Tipología rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tipo_Asta"/>
         <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Común"/>
@@ -8235,6 +8237,7 @@ permanentemente, de manera que desaparecen y no pueden volver a ser usados. Otro
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Común"/>
         <Arma_Especial rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Compleja"/>
         <Arma_Especial rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Presa"/>
+        <Arma_Rango rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Cuerpo_a_Cuerpo"/>
         <Arma_TipoAtaque_1 rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ataque_Contundente"/>
         <Arma_Tipología rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tipo_Cuerda"/>
         <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Común"/>
@@ -9768,6 +9771,7 @@ Vías Cerradas: Ninguna</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cestus">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Común"/>
+        <Arma_Rango rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Cuerpo_a_Cuerpo"/>
         <Arma_TipoAtaque_1 rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ataque_Penetrante"/>
         <Arma_TipoAtaque_2 rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ataque_Filo"/>
         <Arma_Tipología rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tipo_Arma_Corta"/>
@@ -9851,6 +9855,7 @@ Beneficio: 2</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cimitarra">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Común"/>
+        <Arma_Rango rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Cuerpo_a_Cuerpo"/>
         <Arma_TipoAtaque_1 rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ataque_Filo"/>
         <Arma_Tipología rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tipo_Espada"/>
         <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Raro"/>
@@ -9931,6 +9936,7 @@ Beneficio: 2</rdfs:comment>
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Combate_Desarmado">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Común"/>
         <Arma_Especial rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Precisa"/>
+        <Arma_Rango rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Cuerpo_a_Cuerpo"/>
         <Arma_TipoAtaque_1 rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ataque_Contundente"/>
         <Arma_Tipología rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tipo_Sin_Armas"/>
         <Arma_DañoBase rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Arma_DañoBase>
@@ -12268,6 +12274,7 @@ Descripción: El psíquico crea una cúpula de energía que destruye todo lo que
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Común"/>
         <Arma_Especial rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Lanzable"/>
         <Arma_Especial rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Precisa"/>
+        <Arma_Rango rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Lanzable"/>
         <Arma_TipoAtaque_1 rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ataque_Penetrante"/>
         <Arma_TipoAtaque_2 rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ataque_Filo"/>
         <Arma_Tipología rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tipo_Arma_Corta"/>
@@ -12289,7 +12296,10 @@ Descripción: El psíquico crea una cúpula de energía que destruye todo lo que
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Daga_de_Parada">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Común"/>
+        <Arma_Especial rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Lanzable"/>
         <Arma_Especial rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Precisa"/>
+        <Arma_Especial rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Traba_el_arma"/>
+        <Arma_Rango rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Lanzable"/>
         <Arma_TipoAtaque_1 rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ataque_Penetrante"/>
         <Arma_TipoAtaque_2 rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ataque_Filo"/>
         <Arma_Tipología rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tipo_Arma_Corta"/>
@@ -15499,6 +15509,7 @@ Vías Cerradas: Tierra, Agua</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Espada_Ancha">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Común"/>
+        <Arma_Rango rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Cuerpo_a_Cuerpo"/>
         <Arma_TipoAtaque_1 rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ataque_Filo"/>
         <Arma_Tipología rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tipo_Espada"/>
         <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Común"/>
@@ -15520,6 +15531,7 @@ Vías Cerradas: Tierra, Agua</rdfs:comment>
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Espada_Bastarda">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Común"/>
         <Arma_Especial rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#A_una_o_dos_manos"/>
+        <Arma_Rango rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Cuerpo_a_Cuerpo"/>
         <Arma_TipoAtaque_1 rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ataque_Filo"/>
         <Arma_TipoAtaque_2 rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ataque_Contundente"/>
         <Arma_Tipología rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tipo_Espada"/>
@@ -15545,6 +15557,7 @@ Vías Cerradas: Tierra, Agua</rdfs:comment>
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Espada_Corta">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Común"/>
         <Arma_Especial rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Precisa"/>
+        <Arma_Rango rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Cuerpo_a_Cuerpo"/>
         <Arma_TipoAtaque_1 rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ataque_Penetrante"/>
         <Arma_TipoAtaque_2 rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ataque_Filo"/>
         <Arma_Tipología rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tipo_Arma_Corta"/>
@@ -15564,6 +15577,7 @@ Vías Cerradas: Tierra, Agua</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Espada_Larga">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Común"/>
+        <Arma_Rango rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Cuerpo_a_Cuerpo"/>
         <Arma_TipoAtaque_1 rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ataque_Filo"/>
         <Arma_Tipología rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tipo_Espada"/>
         <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Común"/>
@@ -15763,6 +15777,7 @@ Mantenimiento: 15 / 20 / 25 / 30</rdfs:comment>
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Común"/>
         <Arma_Especial rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Lanzable"/>
         <Arma_Especial rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Precisa"/>
+        <Arma_Rango rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Lanzable"/>
         <Arma_TipoAtaque_1 rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ataque_Penetrante"/>
         <Arma_Tipología rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tipo_Arma_Corta"/>
         <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Común"/>
@@ -15793,6 +15808,7 @@ Mantenimiento: 15 / 20 / 25 / 30</rdfs:comment>
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Estoque">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Común"/>
         <Arma_Especial rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Precisa"/>
+        <Arma_Rango rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Cuerpo_a_Cuerpo"/>
         <Arma_TipoAtaque_1 rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ataque_Penetrante"/>
         <Arma_TipoAtaque_2 rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ataque_Filo"/>
         <Arma_Tipología rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tipo_Espada"/>
@@ -16121,6 +16137,7 @@ Mantenimiento: No</rdfs:comment>
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Florete">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Común"/>
         <Arma_Especial rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Precisa"/>
+        <Arma_Rango rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Cuerpo_a_Cuerpo"/>
         <Arma_TipoAtaque_1 rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ataque_Penetrante"/>
         <Arma_Tipología rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tipo_Arma_Corta"/>
         <Arma_Tipología rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tipo_Espada"/>
@@ -16489,6 +16506,7 @@ Beneficio: 1</rdfs:comment>
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Garfio">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Común"/>
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Utiles_Varios"/>
+        <Arma_Rango rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Cuerpo_a_Cuerpo"/>
         <Arma_TipoAtaque_1 rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ataque_Penetrante"/>
         <Arma_Tipología rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tipo_Arma_Corta"/>
         <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Común"/>
@@ -16518,6 +16536,7 @@ Beneficio: 1</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Garrote">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Común"/>
+        <Arma_Rango rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Cuerpo_a_Cuerpo"/>
         <Arma_TipoAtaque_1 rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ataque_Contundente"/>
         <Arma_Tipología rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tipo_Maza"/>
         <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Común"/>
@@ -16600,6 +16619,7 @@ Mantenimiento: No</rdfs:comment>
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Gran_Martillo_de_Guerra">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Común"/>
         <Arma_Especial rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#A_una_o_dos_manos"/>
+        <Arma_Rango rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Cuerpo_a_Cuerpo"/>
         <Arma_TipoAtaque_1 rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ataque_Contundente"/>
         <Arma_Tipología rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tipo_Maza"/>
         <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Común"/>
@@ -16660,6 +16680,7 @@ Mantenimiento: No</rdfs:comment>
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Guadaña">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Común"/>
         <Arma_Especial rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#A_una_o_dos_manos"/>
+        <Arma_Rango rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Cuerpo_a_Cuerpo"/>
         <Arma_TipoAtaque_1 rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ataque_Filo"/>
         <Arma_TipoAtaque_2 rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ataque_Contundente"/>
         <Arma_Tipología rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tipo_Asta"/>
@@ -16870,6 +16891,7 @@ Mantenimiento: 5 / 5 / 5 / 5</rdfs:comment>
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Hacha_a_2_Manos">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Común"/>
         <Arma_Especial rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#A_una_o_dos_manos"/>
+        <Arma_Rango rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Cuerpo_a_Cuerpo"/>
         <Arma_TipoAtaque_1 rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ataque_Filo"/>
         <Arma_TipoAtaque_2 rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ataque_Contundente"/>
         <Arma_Tipología rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tipo_Hacha"/>
@@ -16895,6 +16917,7 @@ Mantenimiento: 5 / 5 / 5 / 5</rdfs:comment>
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Hacha_de_Guerra">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Común"/>
         <Arma_Especial rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Lanzable"/>
+        <Arma_Rango rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Lanzable"/>
         <Arma_TipoAtaque_1 rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ataque_Filo"/>
         <Arma_TipoAtaque_2 rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ataque_Contundente"/>
         <Arma_Tipología rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tipo_Hacha"/>
@@ -16925,6 +16948,7 @@ Mantenimiento: 5 / 5 / 5 / 5</rdfs:comment>
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Hacha_de_Mano">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Común"/>
         <Arma_Especial rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Lanzable"/>
+        <Arma_Rango rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Lanzable"/>
         <Arma_TipoAtaque_1 rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ataque_Filo"/>
         <Arma_Tipología rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tipo_Hacha"/>
         <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Común"/>
@@ -18531,6 +18555,7 @@ Vías Cerradas: Luz</rdfs:comment>
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Jabalina">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Común"/>
         <Arma_Especial rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Lanzable"/>
+        <Arma_Rango rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Lanzable"/>
         <Arma_TipoAtaque_1 rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ataque_Penetrante"/>
         <Arma_Tipología rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tipo_Asta"/>
         <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Común"/>
@@ -18738,6 +18763,7 @@ La orden fue creada por Zhorne Giovanni, quien otorgó ese título a los caballe
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Común"/>
         <Arma_Especial rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#A_una_o_dos_manos"/>
         <Arma_Especial rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Lanzable"/>
+        <Arma_Rango rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Lanzable"/>
         <Arma_TipoAtaque_1 rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ataque_Penetrante"/>
         <Arma_Tipología rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tipo_Asta"/>
         <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Común"/>
@@ -18759,6 +18785,7 @@ La orden fue creada por Zhorne Giovanni, quien otorgó ese título a los caballe
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Lanza_de_Caballería">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Común"/>
+        <Arma_Rango rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Cuerpo_a_Cuerpo"/>
         <Arma_TipoAtaque_1 rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ataque_Penetrante"/>
         <Arma_Tipología rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tipo_Asta"/>
         <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Raro"/>
@@ -18823,6 +18850,7 @@ Efectos: +1 ataque adicional, +40 al daño.</rdfs:comment>
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Común"/>
         <Arma_Especial rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Compleja"/>
         <Arma_Especial rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Presa"/>
+        <Arma_Rango rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Cuerpo_a_Cuerpo"/>
         <Arma_TipoAtaque_1 rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ataque_Contundente"/>
         <Arma_Tipología rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tipo_Cuerda"/>
         <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Común"/>
@@ -19387,6 +19415,7 @@ Mantenimiento: No</rdfs:comment>
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Común"/>
         <Arma_Especial rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Compleja"/>
         <Arma_Especial rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Presa"/>
+        <Arma_Rango rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Cuerpo_a_Cuerpo"/>
         <Arma_TipoAtaque_1 rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ataque_Filo"/>
         <Arma_TipoAtaque_2 rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ataque_Contundente"/>
         <Arma_Tipología rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tipo_Cuerda"/>
@@ -19696,6 +19725,7 @@ Mantenimiento: 5 / 10 / 15 / 20 Diario</rdfs:comment>
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Mandoble">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Común"/>
         <Arma_Especial rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#A_una_o_dos_manos"/>
+        <Arma_Rango rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Cuerpo_a_Cuerpo"/>
         <Arma_TipoAtaque_1 rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ataque_Penetrante"/>
         <Arma_Tipología rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tipo_Mandoble"/>
         <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Raro"/>
@@ -19718,6 +19748,7 @@ Mantenimiento: 5 / 10 / 15 / 20 Diario</rdfs:comment>
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Mangual">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Común"/>
         <Arma_Especial rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Compleja"/>
+        <Arma_Rango rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Cuerpo_a_Cuerpo"/>
         <Arma_TipoAtaque_1 rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ataque_Contundente"/>
         <Arma_Tipología rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tipo_Mandoble"/>
         <Arma_Tipología rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tipo_Maza"/>
@@ -19883,6 +19914,7 @@ Mantenimiento: 10 / 15 / 20 / 25 Diario</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Martillo_de_Guerra">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Común"/>
+        <Arma_Rango rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Cuerpo_a_Cuerpo"/>
         <Arma_TipoAtaque_1 rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ataque_Contundente"/>
         <Arma_Tipología rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tipo_Maza"/>
         <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Común"/>
@@ -19947,6 +19979,7 @@ Mantenimiento: No</rdfs:comment>
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Mayal">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Común"/>
         <Arma_Especial rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Compleja"/>
+        <Arma_Rango rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Cuerpo_a_Cuerpo"/>
         <Arma_TipoAtaque_1 rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ataque_Contundente"/>
         <Arma_Tipología rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tipo_Cuerda"/>
         <Arma_Tipología rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tipo_Maza"/>
@@ -19969,6 +20002,7 @@ Mantenimiento: No</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Maza">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Común"/>
+        <Arma_Rango rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Cuerpo_a_Cuerpo"/>
         <Arma_TipoAtaque_1 rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ataque_Contundente"/>
         <Arma_Tipología rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tipo_Maza"/>
         <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Común"/>
@@ -19990,6 +20024,7 @@ Mantenimiento: No</rdfs:comment>
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Maza_Pesada_de_Combate">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Común"/>
         <Arma_Especial rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#A_una_o_dos_manos"/>
+        <Arma_Rango rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Cuerpo_a_Cuerpo"/>
         <Arma_TipoAtaque_1 rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ataque_Contundente"/>
         <Arma_Tipología rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tipo_Mandoble"/>
         <Arma_Tipología rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tipo_Maza"/>
@@ -22986,6 +23021,7 @@ Vías Cerradas: Ninguna</rdfs:comment>
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Común"/>
         <Arma_Especial rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Lanzable"/>
         <Arma_Especial rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Presa"/>
+        <Arma_Rango rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Lanzable"/>
         <Arma_TipoAtaque_1 rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ataque_Contundente"/>
         <Arma_TipoAtaque_2 rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ataque_Filo"/>
         <Arma_Tipología rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tipo_Cuerda"/>
@@ -23670,6 +23706,7 @@ Mantenimiento: 10 / 10 / 15 / 15</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Sable">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Común"/>
+        <Arma_Rango rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Cuerpo_a_Cuerpo"/>
         <Arma_TipoAtaque_1 rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ataque_Filo"/>
         <Arma_TipoAtaque_2 rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ataque_Penetrante"/>
         <Arma_Tipología rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tipo_Espada"/>
@@ -25714,6 +25751,7 @@ Descripción: Permite al psíquico proyectar uno de sus sentidos hasta una dista
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Común"/>
         <Arma_Especial rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#A_una_o_dos_manos"/>
         <Arma_Especial rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Lanzable"/>
+        <Arma_Rango rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Lanzable"/>
         <Arma_TipoAtaque_1 rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ataque_Penetrante"/>
         <Arma_Tipología rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tipo_Asta"/>
         <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Común"/>
@@ -26176,6 +26214,7 @@ Mantenimiento: 25 / 40 / 45 / 55</rdfs:comment>
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Vara">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Común"/>
         <Arma_Especial rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#A_dos_manos"/>
+        <Arma_Rango rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Cuerpo_a_Cuerpo"/>
         <Arma_TipoAtaque_1 rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ataque_Contundente"/>
         <Arma_Tipología rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tipo_Asta"/>
         <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Común"/>
