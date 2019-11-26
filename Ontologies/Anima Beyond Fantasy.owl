@@ -6547,6 +6547,18 @@ Beneficio: 2</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arcabuz">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_de_Pólvora"/>
+        <Arma_Especial rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Compleja"/>
+        <Arma_Rango rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_a_distancia"/>
+        <Arma_Tipología rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tipo_Proyectil"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Muy_Raro"/>
+        <Arma_Entereza rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</Arma_Entereza>
+        <Arma_Fuerza rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</Arma_Fuerza>
+        <Arma_Fuerza_1Mano rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</Arma_Fuerza_1Mano>
+        <Arma_Presencia rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</Arma_Presencia>
+        <Arma_Rotura rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-3</Arma_Rotura>
+        <Arma_Turno rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-20</Arma_Turno>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">500000</Equipo_Coste>
+        <Equipo_Peso rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.5</Equipo_Peso>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El arcabuz es un arma de fuego compuesta por un largo tubo metálico, por el que se impulsa una bala gracias a la detonación de la pólvora. Es un cañón lo suficientemente reducido como para que lo lleve y dispare un solo hombre. El nombre de arcabuz significa “cañón de gancho”, debido a que se asociaba con las picas, que eran lanzas acabadas en ganchos. Al igual que las ballestas, no dependen de la Fuerza de quienes las utilicen y no aplican el bono de Fuerza del personaje. Por el contrario tienen su propia característica, que es de 11, por lo que suman un +20 al daño base de sus balas. Si se obtiene una Pifia con el arcabuz de nivel inferior a 80, el arma se encasquilla. Si es superior, estalla. Cada +5 del arma, además de aumentar su precisión, suma un punto a la Fuerza con la que dispara, al igual que aumenta en 15 el nivel de Pifia requerido para que estalle.</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -17515,6 +17527,16 @@ Mantenimiento: 5 / 20 / 25 / 30</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Honda">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Honda"/>
+        <Arma_Rango rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_a_distancia"/>
+        <Arma_Tipología rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tipo_Proyectil"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Común"/>
+        <Arma_Entereza rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Arma_Entereza>
+        <Arma_Fuerza_1Mano rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</Arma_Fuerza_1Mano>
+        <Arma_Presencia rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Arma_Presencia>
+        <Arma_Rotura rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-6</Arma_Rotura>
+        <Arma_Turno rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-40</Arma_Turno>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</Equipo_Coste>
+        <Equipo_Peso rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</Equipo_Peso>
     </owl:NamedIndividual>
     
 
@@ -22578,6 +22600,18 @@ Mantenimiento: 25 / 30 / 30 / 35 Diario</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Pistola_de_Mecha">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_de_Pólvora"/>
+        <Arma_Especial rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Compleja"/>
+        <Arma_Rango rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_a_distancia"/>
+        <Arma_Tipología rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tipo_Proyectil"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Muy_Raro"/>
+        <Arma_Entereza rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</Arma_Entereza>
+        <Arma_Fuerza rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</Arma_Fuerza>
+        <Arma_Fuerza_1Mano rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</Arma_Fuerza_1Mano>
+        <Arma_Presencia rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</Arma_Presencia>
+        <Arma_Rotura rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-3</Arma_Rotura>
+        <Arma_Turno rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</Arma_Turno>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">600000</Equipo_Coste>
+        <Equipo_Peso rdf:datatype="http://www.w3.org/2001/XMLSchema#float">2.0</Equipo_Peso>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Una versión reducida y más compleja del arcabuz, que puede dispararse con una sola mano. Como su hermano mayor, tiene su propia Fuerza, que es de 9, por lo que suma un bono de +10 al daño base de sus balas. Si se obtiene una Pifia con la pistola inferior a 80, el arma se encasquilla. Si es superior, estalla. Cada +5 del arma, además de aumentar su precisión, suma un punto a la Fuerza con la que dispara, al igual que aumenta en 15 el nivel de Pifia requerido para que el arma reviente.</rdfs:comment>
     </owl:NamedIndividual>
     
