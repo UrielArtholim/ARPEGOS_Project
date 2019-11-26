@@ -906,12 +906,20 @@
     
 
 
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#ArmaDistanciaTiene -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#ArmaDistanciaTiene">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#ArmaTieneValor"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#ArmaProy_Alcance -->
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#ArmaProy_Alcance">
-        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#ArmaProyectilesTiene"/>
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#ArmaDistanciaTiene"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_de_Proyectiles"/>
+        <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Distancia"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
     
@@ -920,9 +928,9 @@
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#ArmaProy_CadenciadeFuego -->
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#ArmaProy_CadenciadeFuego">
-        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#ArmaProyectilesTiene"/>
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#ArmaDistanciaTiene"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_de_Proyectiles"/>
+        <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Distancia"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
     
@@ -931,18 +939,10 @@
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#ArmaProy_Recarga -->
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#ArmaProy_Recarga">
-        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#ArmaProyectilesTiene"/>
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#ArmaDistanciaTiene"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_de_Proyectiles"/>
+        <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Distancia"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#ArmaProyectilesTiene -->
-
-    <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#ArmaProyectilesTiene">
-        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#ArmaTieneValor"/>
     </owl:DatatypeProperty>
     
 
@@ -986,6 +986,16 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Fuerza -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Fuerza">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#ArmaDistanciaTiene"/>
+        <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Distancia"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
     
@@ -4405,7 +4415,7 @@
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arcos -->
 
     <owl:Class rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arcos">
-        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_de_Proyectiles"/>
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Distancia"/>
     </owl:Class>
     
 
@@ -4421,6 +4431,14 @@
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Común -->
 
     <owl:Class rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Común">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Distancia -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Distancia">
         <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma"/>
     </owl:Class>
     
@@ -4445,7 +4463,7 @@
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Lanzable -->
 
     <owl:Class rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Lanzable">
-        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_de_Proyectiles"/>
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Distancia"/>
     </owl:Class>
     
 
@@ -4467,18 +4485,10 @@
     
 
 
-    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_de_Proyectiles -->
-
-    <owl:Class rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_de_Proyectiles">
-        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma"/>
-    </owl:Class>
-    
-
-
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_de_Pólvora -->
 
     <owl:Class rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_de_Pólvora">
-        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_de_Proyectiles"/>
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Distancia"/>
     </owl:Class>
     
 
@@ -4548,7 +4558,7 @@
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ballestas -->
 
     <owl:Class rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ballestas">
-        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_de_Proyectiles"/>
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Distancia"/>
     </owl:Class>
     
 
@@ -4662,7 +4672,7 @@
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cerbatana -->
 
     <owl:Class rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cerbatana">
-        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_de_Proyectiles"/>
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Distancia"/>
     </owl:Class>
     
 
@@ -4982,7 +4992,7 @@
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Honda -->
 
     <owl:Class rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Honda">
-        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_de_Proyectiles"/>
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Distancia"/>
     </owl:Class>
     
 
@@ -5211,10 +5221,18 @@
     
 
 
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Munición -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Munición">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Características_Arma"/>
+    </owl:Class>
+    
+
+
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Munición_Arcos -->
 
     <owl:Class rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Munición_Arcos">
-        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tipo_Munición"/>
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Munición"/>
     </owl:Class>
     
 
@@ -5222,7 +5240,7 @@
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Munición_Asedio -->
 
     <owl:Class rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Munición_Asedio">
-        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tipo_Munición"/>
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Munición"/>
     </owl:Class>
     
 
@@ -5230,7 +5248,7 @@
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Munición_Ballesta -->
 
     <owl:Class rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Munición_Ballesta">
-        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tipo_Munición"/>
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Munición"/>
     </owl:Class>
     
 
@@ -5238,7 +5256,7 @@
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Munición_Cerbatana -->
 
     <owl:Class rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Munición_Cerbatana">
-        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tipo_Munición"/>
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Munición"/>
     </owl:Class>
     
 
@@ -5246,7 +5264,7 @@
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Munición_Honda -->
 
     <owl:Class rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Munición_Honda">
-        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tipo_Munición"/>
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Munición"/>
     </owl:Class>
     
 
@@ -5254,7 +5272,7 @@
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Munición_Pólvora -->
 
     <owl:Class rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Munición_Pólvora">
-        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tipo_Munición"/>
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Munición"/>
     </owl:Class>
     
 
@@ -5338,7 +5356,6 @@
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Rango_Armas -->
 
     <owl:Class rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Rango_Armas">
-        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma"/>
         <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Características_Arma"/>
     </owl:Class>
     
@@ -5470,14 +5487,6 @@
 
     <owl:Class rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tipo_Conjuro">
         <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Magia"/>
-    </owl:Class>
-    
-
-
-    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tipo_Munición -->
-
-    <owl:Class rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tipo_Munición">
-        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Características_Arma"/>
     </owl:Class>
     
 
@@ -6657,9 +6666,9 @@ Vías Cerradas: Destrucción</rdfs:comment>
     
 
 
-    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_de_Proyectiles -->
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_a_distancia -->
 
-    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_de_Proyectiles">
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_a_distancia">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Rango_Armas"/>
     </owl:NamedIndividual>
     
@@ -7814,6 +7823,18 @@ Mantenimiento: 10 / 15 / 25 / 35</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ballesta">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ballestas"/>
+        <Arma_Especial rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#A_una_o_dos_manos"/>
+        <Arma_Rango rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_a_distancia"/>
+        <Arma_Tipología rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tipo_Proyectil"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Raro"/>
+        <Arma_Entereza rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</Arma_Entereza>
+        <Arma_Fuerza rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</Arma_Fuerza>
+        <Arma_Fuerza_1Mano rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</Arma_Fuerza_1Mano>
+        <Arma_Fuerza_2Manos rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</Arma_Fuerza_2Manos>
+        <Arma_Presencia rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</Arma_Presencia>
+        <Arma_Rotura rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-2</Arma_Rotura>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50000</Equipo_Coste>
+        <Equipo_Peso rdf:datatype="http://www.w3.org/2001/XMLSchema#float">2.5</Equipo_Peso>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Arco montado sobre una caja con un canal por donde se disparan virotes. Se tensa usando un resorte. Las ballestas no dependen de la Fuerza de quienes las utilicen, por lo que no aplican el bono de Fuerza del personaje. Por el contrario tienen su propia característica, que es de 8, por lo que suman un bono de +10 al daño base de los virotes. Cada +5 del arma, además de aumentar su precisión, suma un punto a la Fuerza con la que dispara. Requiere ambas manos para usarla.</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -7823,6 +7844,19 @@ Mantenimiento: 10 / 15 / 25 / 35</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ballesta_Pesada">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ballestas"/>
+        <Arma_Especial rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#A_una_o_dos_manos"/>
+        <Arma_Rango rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_a_distancia"/>
+        <Arma_Tipología rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tipo_Proyectil"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Raro"/>
+        <Arma_Entereza rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</Arma_Entereza>
+        <Arma_Fuerza rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</Arma_Fuerza>
+        <Arma_Fuerza_1Mano rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Arma_Fuerza_1Mano>
+        <Arma_Fuerza_2Manos rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</Arma_Fuerza_2Manos>
+        <Arma_Presencia rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</Arma_Presencia>
+        <Arma_Rotura rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-1</Arma_Rotura>
+        <Arma_Turno rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-20</Arma_Turno>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">70000</Equipo_Coste>
+        <Equipo_Peso rdf:datatype="http://www.w3.org/2001/XMLSchema#float">350.0</Equipo_Peso>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ballesta de gran tamaño y dimensiones. Tiene el equivalente a una característica de Fuerza de 10, por lo que suma un bono de +15 al daño de sus virotes. Requiere ambas manos para usarla.</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -7832,6 +7866,17 @@ Mantenimiento: 10 / 15 / 25 / 35</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ballesta_de_Mano">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ballestas"/>
+        <Arma_Rango rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_a_distancia"/>
+        <Arma_Tipología rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tipo_Proyectil"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Raro"/>
+        <Arma_Entereza rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</Arma_Entereza>
+        <Arma_Fuerza rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</Arma_Fuerza>
+        <Arma_Fuerza_1Mano rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Arma_Fuerza_1Mano>
+        <Arma_Presencia rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</Arma_Presencia>
+        <Arma_Rotura rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-4</Arma_Rotura>
+        <Arma_Turno rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Arma_Turno>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">250000</Equipo_Coste>
+        <Equipo_Peso rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.5</Equipo_Peso>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ballesta de escasas dimensiones que se puede utilizar con una sola mano. Tiene una característica de Fuerza de 5, por lo que no aplica ningún bono a su daño. A términos de juego, funciona igual que una ballesta convencional, por lo que no es necesario desarrollarla por separado.</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -7841,6 +7886,18 @@ Mantenimiento: 10 / 15 / 25 / 35</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ballesta_de_Repetición">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ballestas"/>
+        <Arma_Especial rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#A_una_o_dos_manos"/>
+        <Arma_Rango rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_a_distancia"/>
+        <Arma_Tipología rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tipo_Proyectil"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Muy_Raro"/>
+        <Arma_Entereza rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</Arma_Entereza>
+        <Arma_Fuerza_1Mano rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</Arma_Fuerza_1Mano>
+        <Arma_Fuerza_2Manos rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</Arma_Fuerza_2Manos>
+        <Arma_Presencia rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</Arma_Presencia>
+        <Arma_Rotura rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-2</Arma_Rotura>
+        <Arma_Turno rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</Arma_Turno>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">200000</Equipo_Coste>
+        <Equipo_Peso rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.0</Equipo_Peso>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">En realidad no es un tipo distinto a la ballesta convencional, por lo que puede usarse con la misma habilidad sin la necesidad de desarrollar una pericia distinta en su uso. Simplemente está dotada de un sistema de engranajes capaz de disparar un mayor número de proyectiles sin la necesidad de recargar. Habitualmente, tiene una recámara de 4 a 8 virotes. Requiere ambas manos para usarla.</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -21072,6 +21129,14 @@ Mantenimiento: 50 / 90 / 140 / 200 Diario</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Munición -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Munición">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Munición_Arcos -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Munición_Arcos">
@@ -24208,6 +24273,13 @@ Mantenimiento: 10 / 10 / 15 / 15 Diario</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Saeta">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Munición_Ballesta"/>
+        <Arma_TipoAtaque_1 rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ataque_Penetrante"/>
+        <Arma_Tipología rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tipo_Munición"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Raro"/>
+        <Arma_DañoBase rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">40</Arma_DañoBase>
+        <Arma_Entereza rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Arma_Entereza>
+        <Arma_Presencia rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</Arma_Presencia>
+        <Arma_Rotura rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</Arma_Rotura>
     </owl:NamedIndividual>
     
 
@@ -25898,7 +25970,15 @@ Mantenimiento: 35 / 60 / 90 / 150</rdfs:comment>
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tipo_Munición -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tipo_Munición">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Definicion_Clases"/>
+        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tipos_Armas"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tipo_Proyectil -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tipo_Proyectil">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tipos_Armas"/>
     </owl:NamedIndividual>
     
 
@@ -28770,6 +28850,9 @@ El poder de la magia no es uniforme. Al mezclarse con las almas, se nutre de su 
 
 No todas las personas son capaces de controlar el poder de las almas. Hacerlo no resulta fácil ni siquiera para los propios espíritus sobrenaturales. Sin embargo, algunos sujetos nacen con la capacidad de sentir la magia, dejarla fluir por su cuerpo y encauzar su energía mediante conjuros. Estos individuos son brujos, aquellos que han nacido con el don de alterar la realidad a su antojo. Los brujos son una luz en las tinieblas para la magia, núcleos en torno a los cuales se acumula su poder. Actúan como portales para que esta se manifieste en el mundo físico: la magia se reúne a su alrededor, penetra en ellos y crece en sus almas hasta que se exterioriza mediante un conjuro. En realidad, los hechizos no son nada más que una manera de controlar la existencia y alterar sus reglas. Los brujos utilizan su energía sobrenatural para tejer sortilegios que se enmarañan en la propia esencia de la realidad. Las gesticulaciones y los versos son palabras que los magos susurran al alma del mundo para canalizar mejor sus energías, pero no son necesarios para alterar la realidad. A un brujo le basta su propia voluntad para manejar la magia y lanzar un conjuro, aunque al utilizar los rituales puede aumentar considerablemente su poder. Cada hechicero conoce sus propias fórmulas para modificar la existencia. Un mago crea sus sortilegios utilizando los conocimientos y medios que tiene a su alcance, porque la ejecución de la magia puede ser muy diferente de una persona a otra.</rdfs:comment>
     </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Munición">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Variedad de proyectil que se utiliza para un tipo de arma concreto.</rdfs:comment>
+    </rdf:Description>
     <rdf:Description rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Munición_Arcos">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Variedad de proyectil que se utiliza para arcos.</rdfs:comment>
     </rdf:Description>
@@ -28856,9 +28939,6 @@ Modificador: Siempre que un psíquico utilice uno de sus poderes telepáticos so
     <rdf:Description rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tipo_Ataque">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">En primer lugar debemos saber que, cuando un arma se utiliza para atacar, lo
 hace empleando un tipo de ataque concreto. Existen siete clases distintas: Filo, Contundente, Penetrante, Calor, Frío, Electricidad y Energía.</rdfs:comment>
-    </rdf:Description>
-    <rdf:Description rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tipo_Munición">
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Variedad de proyectil que se utiliza para un tipo de arma concreto.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tipos_Armas">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Categoría en la que se clasifican las armas.</rdfs:comment>
