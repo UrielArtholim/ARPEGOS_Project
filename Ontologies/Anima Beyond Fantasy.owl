@@ -6226,6 +6226,16 @@ Vías Cerradas: Agua</rdfs:comment>
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Antorcha">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Improvisada"/>
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Utiles_Varios"/>
+        <Arma_Rango rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Cuerpo_a_Cuerpo"/>
+        <Arma_TipoAtaque_1 rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ataque_Contundente"/>
+        <Arma_TipoAtaque_2 rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ataque_Calor"/>
+        <Arma_Tipología rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tipo_Maza"/>
+        <Arma_DañoBase rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</Arma_DañoBase>
+        <Arma_Entereza rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Arma_Entereza>
+        <Arma_Fuerza_1Mano rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</Arma_Fuerza_1Mano>
+        <Arma_Presencia rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</Arma_Presencia>
+        <Arma_Rotura rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-2</Arma_Rotura>
+        <Arma_Turno rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-10</Arma_Turno>
     </owl:NamedIndividual>
     
 
@@ -7644,6 +7654,16 @@ Mantenimiento: 10 / 15 / 25 / 35</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Azada">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Improvisada"/>
+        <Arma_Rango rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Cuerpo_a_Cuerpo"/>
+        <Arma_TipoAtaque_1 rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ataque_Filo"/>
+        <Arma_TipoAtaque_2 rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ataque_Contundente"/>
+        <Arma_Tipología rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tipo_Hacha"/>
+        <Arma_DañoBase rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</Arma_DañoBase>
+        <Arma_Entereza rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Arma_Entereza>
+        <Arma_Fuerza_1Mano rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</Arma_Fuerza_1Mano>
+        <Arma_Presencia rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</Arma_Presencia>
+        <Arma_Rotura rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</Arma_Rotura>
+        <Arma_Turno rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-20</Arma_Turno>
     </owl:NamedIndividual>
     
 
@@ -7784,6 +7804,15 @@ Descripción: Permite al psíquico lanzar con completa precisión objetos emplea
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Barra_Metálica">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Improvisada"/>
+        <Arma_Rango rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Cuerpo_a_Cuerpo"/>
+        <Arma_TipoAtaque_1 rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ataque_Contundente"/>
+        <Arma_Tipología rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tipo_Maza"/>
+        <Arma_DañoBase rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25</Arma_DañoBase>
+        <Arma_Entereza rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</Arma_Entereza>
+        <Arma_Fuerza_1Mano rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</Arma_Fuerza_1Mano>
+        <Arma_Presencia rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</Arma_Presencia>
+        <Arma_Rotura rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Arma_Rotura>
+        <Arma_Turno rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-5</Arma_Turno>
     </owl:NamedIndividual>
     
 
@@ -8095,6 +8124,17 @@ Vías Cerradas: Ninguna</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Botella_Rota">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Improvisada"/>
+        <Arma_Rango rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Cuerpo_a_Cuerpo"/>
+        <Arma_TipoAtaque_1 rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ataque_Filo"/>
+        <Arma_TipoAtaque_2 rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ataque_Contundente"/>
+        <Arma_Tipología rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tipo_Arma_Corta"/>
+        <Arma_DañoBase rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</Arma_DañoBase>
+        <Arma_Entereza rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</Arma_Entereza>
+        <Arma_Fuerza_1Mano rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Arma_Fuerza_1Mano>
+        <Arma_Presencia rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</Arma_Presencia>
+        <Arma_Rotura rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-3</Arma_Rotura>
+        <Arma_Turno rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Arma_Turno>
+        <Equipo_Peso rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</Equipo_Peso>
     </owl:NamedIndividual>
     
 
@@ -12006,6 +12046,15 @@ Mantenimiento: No</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cuchillo_de_Cocina">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Improvisada"/>
+        <Arma_Rango rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Cuerpo_a_Cuerpo"/>
+        <Arma_TipoAtaque_1 rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ataque_Filo"/>
+        <Arma_Tipología rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tipo_Arma_Corta"/>
+        <Arma_DañoBase rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25</Arma_DañoBase>
+        <Arma_Entereza rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</Arma_Entereza>
+        <Arma_Fuerza_1Mano rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</Arma_Fuerza_1Mano>
+        <Arma_Presencia rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Arma_Presencia>
+        <Arma_Rotura rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-1</Arma_Rotura>
+        <Arma_Turno rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Arma_Turno>
     </owl:NamedIndividual>
     
 
@@ -17021,6 +17070,17 @@ Mantenimiento: 5 / 5 / 5 / 5</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Hacha_de_Leñador">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Improvisada"/>
+        <Arma_Especial rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#A_una_o_dos_manos"/>
+        <Arma_Rango rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Cuerpo_a_Cuerpo"/>
+        <Arma_TipoAtaque_1 rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ataque_Filo"/>
+        <Arma_Tipología rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tipo_Hacha"/>
+        <Arma_DañoBase rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">40</Arma_DañoBase>
+        <Arma_Entereza rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</Arma_Entereza>
+        <Arma_Fuerza_1Mano rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</Arma_Fuerza_1Mano>
+        <Arma_Fuerza_2Manos rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</Arma_Fuerza_2Manos>
+        <Arma_Presencia rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</Arma_Presencia>
+        <Arma_Rotura rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Arma_Rotura>
+        <Arma_Turno rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-10</Arma_Turno>
     </owl:NamedIndividual>
     
 
@@ -17228,6 +17288,16 @@ Requisitos: Mantener activo Feuer</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Hoz">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Improvisada"/>
+        <Arma_Rango rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Cuerpo_a_Cuerpo"/>
+        <Arma_TipoAtaque_1 rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ataque_Filo"/>
+        <Arma_TipoAtaque_2 rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ataque_Penetrante"/>
+        <Arma_Tipología rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tipo_Arma_Corta"/>
+        <Arma_DañoBase rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">35</Arma_DañoBase>
+        <Arma_Entereza rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</Arma_Entereza>
+        <Arma_Fuerza_1Mano rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</Arma_Fuerza_1Mano>
+        <Arma_Presencia rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</Arma_Presencia>
+        <Arma_Rotura rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</Arma_Rotura>
+        <Arma_Turno rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-10</Arma_Turno>
     </owl:NamedIndividual>
     
 
@@ -18666,6 +18736,16 @@ Vías Cerradas: Luz</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Jarrón">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Improvisada"/>
+        <Arma_Especial rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Lanzable"/>
+        <Arma_Rango rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Lanzable"/>
+        <Arma_TipoAtaque_1 rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ataque_Contundente"/>
+        <Arma_Tipología rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tipo_Maza"/>
+        <Arma_DañoBase rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</Arma_DañoBase>
+        <Arma_Entereza rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</Arma_Entereza>
+        <Arma_Fuerza_1Mano rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</Arma_Fuerza_1Mano>
+        <Arma_Presencia rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</Arma_Presencia>
+        <Arma_Rotura rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-2</Arma_Rotura>
+        <Arma_Turno rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-10</Arma_Turno>
     </owl:NamedIndividual>
     
 
@@ -20046,6 +20126,15 @@ Mantenimiento: 10 / 15 / 20 / 25 Diario</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Martillo">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Improvisada"/>
+        <Arma_Rango rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Cuerpo_a_Cuerpo"/>
+        <Arma_TipoAtaque_1 rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ataque_Contundente"/>
+        <Arma_Tipología rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tipo_Maza"/>
+        <Arma_DañoBase rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</Arma_DañoBase>
+        <Arma_Entereza rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</Arma_Entereza>
+        <Arma_Fuerza_1Mano rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</Arma_Fuerza_1Mano>
+        <Arma_Presencia rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</Arma_Presencia>
+        <Arma_Rotura rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Arma_Rotura>
+        <Arma_Turno rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-20</Arma_Turno>
     </owl:NamedIndividual>
     
 
@@ -21719,6 +21808,15 @@ Mantenimiento: No</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Palo_de_Madera">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Improvisada"/>
+        <Arma_Rango rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Cuerpo_a_Cuerpo"/>
+        <Arma_TipoAtaque_1 rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ataque_Contundente"/>
+        <Arma_Tipología rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tipo_Maza"/>
+        <Arma_DañoBase rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</Arma_DañoBase>
+        <Arma_Entereza rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</Arma_Entereza>
+        <Arma_Fuerza_1Mano rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</Arma_Fuerza_1Mano>
+        <Arma_Presencia rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Arma_Presencia>
+        <Arma_Rotura rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-1</Arma_Rotura>
+        <Arma_Turno rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</Arma_Turno>
     </owl:NamedIndividual>
     
 
@@ -22144,6 +22242,15 @@ Mantenimiento: 10 / 10 / 15 / 20 Diario</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Pico">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Improvisada"/>
+        <Arma_Rango rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Cuerpo_a_Cuerpo"/>
+        <Arma_TipoAtaque_1 rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ataque_Penetrante"/>
+        <Arma_Tipología rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tipo_Arma_Corta"/>
+        <Arma_DañoBase rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</Arma_DañoBase>
+        <Arma_Entereza rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Arma_Entereza>
+        <Arma_Fuerza_1Mano rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</Arma_Fuerza_1Mano>
+        <Arma_Presencia rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</Arma_Presencia>
+        <Arma_Rotura rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Arma_Rotura>
+        <Arma_Turno rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-10</Arma_Turno>
     </owl:NamedIndividual>
     
 
@@ -24609,6 +24716,16 @@ Bono: +10 a la habilidad de ataque sin armas.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Silla">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Improvisada"/>
+        <Arma_Especial rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#A_dos_manos"/>
+        <Arma_Rango rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Cuerpo_a_Cuerpo"/>
+        <Arma_TipoAtaque_1 rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ataque_Contundente"/>
+        <Arma_Tipología rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tipo_Mandoble"/>
+        <Arma_DañoBase rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25</Arma_DañoBase>
+        <Arma_Entereza rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</Arma_Entereza>
+        <Arma_Fuerza_2Manos rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</Arma_Fuerza_2Manos>
+        <Arma_Presencia rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</Arma_Presencia>
+        <Arma_Rotura rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</Arma_Rotura>
+        <Arma_Turno rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-20</Arma_Turno>
     </owl:NamedIndividual>
     
 
