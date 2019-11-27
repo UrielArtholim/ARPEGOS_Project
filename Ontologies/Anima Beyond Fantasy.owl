@@ -5545,14 +5545,6 @@
     
 
 
-    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Utiles_Varios -->
-
-    <owl:Class rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Utiles_Varios">
-        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Calidad_Vestimenta"/>
-    </owl:Class>
-    
-
-
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Venenos -->
 
     <owl:Class rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Venenos">
@@ -5619,6 +5611,14 @@
 
     <owl:Class rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Yelmo">
         <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Clase_Armadura"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Útiles_Varios -->
+
+    <owl:Class rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Útiles_Varios">
+        <rdfs:subClassOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipamiento"/>
     </owl:Class>
     
 
@@ -5777,7 +5777,10 @@ Vías Cerradas: Ninguna</rdfs:comment>
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Aceite -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Aceite">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Utiles_Varios"/>
+        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Útiles_Varios"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Común"/>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</Equipo_Coste>
+        <Equipo_Peso rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</Equipo_Peso>
     </owl:NamedIndividual>
     
 
@@ -6360,17 +6363,20 @@ Vías Cerradas: Agua</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Antorcha">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Improvisada"/>
-        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Utiles_Varios"/>
+        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Útiles_Varios"/>
         <Arma_Rango rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Cuerpo_a_Cuerpo"/>
         <Arma_TipoAtaque_1 rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ataque_Contundente"/>
         <Arma_TipoAtaque_2 rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ataque_Calor"/>
         <Arma_Tipología rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tipo_Maza"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Común"/>
         <Arma_DañoBase rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</Arma_DañoBase>
         <Arma_Entereza rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Arma_Entereza>
         <Arma_Fuerza_1Mano rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</Arma_Fuerza_1Mano>
         <Arma_Presencia rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</Arma_Presencia>
         <Arma_Rotura rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-2</Arma_Rotura>
         <Arma_Turno rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-10</Arma_Turno>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Equipo_Coste>
+        <Equipo_Peso rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</Equipo_Peso>
     </owl:NamedIndividual>
     
 
@@ -6687,7 +6693,10 @@ Beneficio: 2</rdfs:comment>
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arcón_Grande -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arcón_Grande">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Utiles_Varios"/>
+        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Útiles_Varios"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Común"/>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">250</Equipo_Coste>
+        <Equipo_Peso rdf:datatype="http://www.w3.org/2001/XMLSchema#float">10.0</Equipo_Peso>
     </owl:NamedIndividual>
     
 
@@ -6695,7 +6704,10 @@ Beneficio: 2</rdfs:comment>
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arcón_Pequeño -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arcón_Pequeño">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Utiles_Varios"/>
+        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Útiles_Varios"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Común"/>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</Equipo_Coste>
+        <Equipo_Peso rdf:datatype="http://www.w3.org/2001/XMLSchema#float">2.0</Equipo_Peso>
     </owl:NamedIndividual>
     
 
@@ -7081,7 +7093,7 @@ Mantenimiento: 90 / 100 / 105 / 110</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arpón">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Común"/>
-        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Utiles_Varios"/>
+        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Útiles_Varios"/>
         <Arma_Especial rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#A_una_o_dos_manos"/>
         <Arma_Especial rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Lanzable"/>
         <Arma_Rango rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Lanzamiento"/>
@@ -8174,7 +8186,10 @@ Descripción: Este poder crea una barrera de fuego en el lugar que el psíquico 
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Barril -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Barril">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Utiles_Varios"/>
+        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Útiles_Varios"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Común"/>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100</Equipo_Coste>
+        <Equipo_Peso rdf:datatype="http://www.w3.org/2001/XMLSchema#float">2.0</Equipo_Peso>
     </owl:NamedIndividual>
     
 
@@ -8193,7 +8208,10 @@ Descripción: Este poder crea una barrera de fuego en el lugar que el psíquico 
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Bastón_Normal -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Bastón_Normal">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Utiles_Varios"/>
+        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Útiles_Varios"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Común"/>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Equipo_Coste>
+        <Equipo_Peso rdf:datatype="http://www.w3.org/2001/XMLSchema#float">3.0</Equipo_Peso>
     </owl:NamedIndividual>
     
 
@@ -8362,7 +8380,10 @@ Mantenimiento: No</rdfs:comment>
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Bolsa_Grande -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Bolsa_Grande">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Utiles_Varios"/>
+        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Útiles_Varios"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Común"/>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</Equipo_Coste>
+        <Equipo_Peso rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</Equipo_Peso>
     </owl:NamedIndividual>
     
 
@@ -8393,7 +8414,10 @@ Vías Cerradas: Ninguna</rdfs:comment>
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Bolsa_Pequeña -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Bolsa_Pequeña">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Utiles_Varios"/>
+        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Útiles_Varios"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Común"/>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</Equipo_Coste>
+        <Equipo_Peso rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.25</Equipo_Peso>
     </owl:NamedIndividual>
     
 
@@ -8430,7 +8454,10 @@ Vías Cerradas: Ninguna</rdfs:comment>
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Botella_de_Cristal_Grande -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Botella_de_Cristal_Grande">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Utiles_Varios"/>
+        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Útiles_Varios"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Raro"/>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50000</Equipo_Coste>
+        <Equipo_Peso rdf:datatype="http://www.w3.org/2001/XMLSchema#float">3.0</Equipo_Peso>
     </owl:NamedIndividual>
     
 
@@ -8438,7 +8465,10 @@ Vías Cerradas: Ninguna</rdfs:comment>
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Botella_de_Cristal_Pequeña -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Botella_de_Cristal_Pequeña">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Utiles_Varios"/>
+        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Útiles_Varios"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Raro"/>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20000</Equipo_Coste>
+        <Equipo_Peso rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</Equipo_Peso>
     </owl:NamedIndividual>
     
 
@@ -8649,7 +8679,10 @@ permanentemente, de manera que desaparecen y no pueden volver a ser usados. Otro
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Caja -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Caja">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Utiles_Varios"/>
+        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Útiles_Varios"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Común"/>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</Equipo_Coste>
+        <Equipo_Peso rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</Equipo_Peso>
     </owl:NamedIndividual>
     
 
@@ -8754,7 +8787,10 @@ Vías Cerradas: Destrucción</rdfs:comment>
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Campana -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Campana">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Utiles_Varios"/>
+        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Útiles_Varios"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Común"/>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">250</Equipo_Coste>
+        <Equipo_Peso rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</Equipo_Peso>
     </owl:NamedIndividual>
     
 
@@ -8894,7 +8930,10 @@ Bono: +10 a la habilidad de esquiva.</rdfs:comment>
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Carcaj_de_Flechas -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Carcaj_de_Flechas">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Utiles_Varios"/>
+        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Útiles_Varios"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Común"/>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">250</Equipo_Coste>
+        <Equipo_Peso rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</Equipo_Peso>
     </owl:NamedIndividual>
     
 
@@ -8994,7 +9033,10 @@ Descripción: Este poder carga un objeto o lugar determinado con un fuerte senti
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Catalejo -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Catalejo">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Utiles_Varios"/>
+        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Útiles_Varios"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Raro"/>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150000</Equipo_Coste>
+        <Equipo_Peso rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.5</Equipo_Peso>
     </owl:NamedIndividual>
     
 
@@ -10040,7 +10082,10 @@ Vías Cerradas: Tierra</rdfs:comment>
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cepo_Grande -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cepo_Grande">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Utiles_Varios"/>
+        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Útiles_Varios"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Común"/>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1000</Equipo_Coste>
+        <Equipo_Peso rdf:datatype="http://www.w3.org/2001/XMLSchema#float">5.0</Equipo_Peso>
     </owl:NamedIndividual>
     
 
@@ -10048,7 +10093,10 @@ Vías Cerradas: Tierra</rdfs:comment>
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cepo_Pequeño -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cepo_Pequeño">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Utiles_Varios"/>
+        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Útiles_Varios"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Común"/>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">500</Equipo_Coste>
+        <Equipo_Peso rdf:datatype="http://www.w3.org/2001/XMLSchema#float">3.0</Equipo_Peso>
     </owl:NamedIndividual>
     
 
@@ -10086,7 +10134,10 @@ Descripción: El psíquico disminuye la temperatura a su alrededor hasta el cero
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cerradura_Buena -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cerradura_Buena">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Utiles_Varios"/>
+        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Útiles_Varios"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Raro"/>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5000</Equipo_Coste>
+        <Equipo_Peso rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.5</Equipo_Peso>
     </owl:NamedIndividual>
     
 
@@ -10094,7 +10145,10 @@ Descripción: El psíquico disminuye la temperatura a su alrededor hasta el cero
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cerradura_Excelente -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cerradura_Excelente">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Utiles_Varios"/>
+        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Útiles_Varios"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Raro"/>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">80000</Equipo_Coste>
+        <Equipo_Peso rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.5</Equipo_Peso>
     </owl:NamedIndividual>
     
 
@@ -10102,7 +10156,10 @@ Descripción: El psíquico disminuye la temperatura a su alrededor hasta el cero
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cerradura_Normal -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cerradura_Normal">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Utiles_Varios"/>
+        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Útiles_Varios"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Común"/>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100</Equipo_Coste>
+        <Equipo_Peso rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</Equipo_Peso>
     </owl:NamedIndividual>
     
 
@@ -10181,7 +10238,10 @@ Vías Cerradas: Ninguna</rdfs:comment>
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cesto_Grande -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cesto_Grande">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Utiles_Varios"/>
+        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Útiles_Varios"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Común"/>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Equipo_Coste>
+        <Equipo_Peso rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</Equipo_Peso>
     </owl:NamedIndividual>
     
 
@@ -10189,7 +10249,10 @@ Vías Cerradas: Ninguna</rdfs:comment>
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cesto_Pequeño -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cesto_Pequeño">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Utiles_Varios"/>
+        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Útiles_Varios"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Común"/>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</Equipo_Coste>
+        <Equipo_Peso rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.5</Equipo_Peso>
     </owl:NamedIndividual>
     
 
@@ -12344,7 +12407,10 @@ Descripción: Esta habilidad cristaliza cualquier clase de cuerpo que no supere 
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cruz -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cruz">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Utiles_Varios"/>
+        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Útiles_Varios"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Común"/>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Equipo_Coste>
+        <Equipo_Peso rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.2</Equipo_Peso>
     </owl:NamedIndividual>
     
 
@@ -12404,7 +12470,10 @@ Mantenimiento: No</rdfs:comment>
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cubo -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cubo">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Utiles_Varios"/>
+        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Útiles_Varios"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Común"/>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Equipo_Coste>
+        <Equipo_Peso rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</Equipo_Peso>
     </owl:NamedIndividual>
     
 
@@ -16158,7 +16227,10 @@ Vías Cerradas: Tierra, Agua</rdfs:comment>
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Espejo_Pequeño_de_Cristal -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Espejo_Pequeño_de_Cristal">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Utiles_Varios"/>
+        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Útiles_Varios"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Raro"/>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">200000</Equipo_Coste>
+        <Equipo_Peso rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.5</Equipo_Peso>
     </owl:NamedIndividual>
     
 
@@ -16166,7 +16238,10 @@ Vías Cerradas: Tierra, Agua</rdfs:comment>
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Espejo_Pequeño_de_Metal -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Espejo_Pequeño_de_Metal">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Utiles_Varios"/>
+        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Útiles_Varios"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Común"/>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1000</Equipo_Coste>
+        <Equipo_Peso rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</Equipo_Peso>
     </owl:NamedIndividual>
     
 
@@ -17059,7 +17134,10 @@ Beneficio: 1</rdfs:comment>
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Gafas -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Gafas">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Utiles_Varios"/>
+        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Útiles_Varios"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Común"/>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">180000</Equipo_Coste>
+        <Equipo_Peso rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</Equipo_Peso>
     </owl:NamedIndividual>
     
 
@@ -17067,7 +17145,10 @@ Beneficio: 1</rdfs:comment>
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ganzúas -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ganzúas">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Utiles_Varios"/>
+        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Útiles_Varios"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Común"/>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1000</Equipo_Coste>
+        <Equipo_Peso rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.5</Equipo_Peso>
     </owl:NamedIndividual>
     
 
@@ -17076,7 +17157,7 @@ Beneficio: 1</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Garfio">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Común"/>
-        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Utiles_Varios"/>
+        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Útiles_Varios"/>
         <Arma_Rango rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arma_Cuerpo_a_Cuerpo"/>
         <Arma_TipoAtaque_1 rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ataque_Penetrante"/>
         <Arma_Tipología rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tipo_Arma_Corta"/>
@@ -17087,7 +17168,7 @@ Beneficio: 1</rdfs:comment>
         <Arma_Presencia rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</Arma_Presencia>
         <Arma_Rotura rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-2</Arma_Rotura>
         <Arma_Turno rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Arma_Turno>
-        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1000</Equipo_Coste>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</Equipo_Coste>
         <Equipo_Peso rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.5</Equipo_Peso>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Punzón de forma curva y pequeñas dimensiones.</rdfs:comment>
     </owl:NamedIndividual>
@@ -19198,7 +19279,10 @@ Vías Cerradas: Luz</rdfs:comment>
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Jabón -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Jabón">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Utiles_Varios"/>
+        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Útiles_Varios"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Común"/>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Equipo_Coste>
+        <Equipo_Peso rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.5</Equipo_Peso>
     </owl:NamedIndividual>
     
 
@@ -19920,7 +20004,10 @@ Vías Cerradas: Tierra</rdfs:comment>
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Libro_en_Blanco_Grande -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Libro_en_Blanco_Grande">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Utiles_Varios"/>
+        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Útiles_Varios"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Raro"/>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1000</Equipo_Coste>
+        <Equipo_Peso rdf:datatype="http://www.w3.org/2001/XMLSchema#float">2.0</Equipo_Peso>
     </owl:NamedIndividual>
     
 
@@ -19928,7 +20015,10 @@ Vías Cerradas: Tierra</rdfs:comment>
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Libro_en_Blanco_Pequeño -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Libro_en_Blanco_Pequeño">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Utiles_Varios"/>
+        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Útiles_Varios"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Raro"/>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">200</Equipo_Coste>
+        <Equipo_Peso rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</Equipo_Peso>
     </owl:NamedIndividual>
     
 
@@ -19945,7 +20035,10 @@ Vías Cerradas: Tierra</rdfs:comment>
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Liga_de_Caza -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Liga_de_Caza">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Utiles_Varios"/>
+        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Útiles_Varios"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Común"/>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">250</Equipo_Coste>
+        <Equipo_Peso rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</Equipo_Peso>
     </owl:NamedIndividual>
     
 
@@ -19953,7 +20046,10 @@ Vías Cerradas: Tierra</rdfs:comment>
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Linterna_de_Aceite -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Linterna_de_Aceite">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Utiles_Varios"/>
+        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Útiles_Varios"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Raro"/>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">200</Equipo_Coste>
+        <Equipo_Peso rdf:datatype="http://www.w3.org/2001/XMLSchema#float">2.0</Equipo_Peso>
     </owl:NamedIndividual>
     
 
@@ -19961,7 +20057,10 @@ Vías Cerradas: Tierra</rdfs:comment>
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Linterna_de_Velas -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Linterna_de_Velas">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Utiles_Varios"/>
+        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Útiles_Varios"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Común"/>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">500</Equipo_Coste>
+        <Equipo_Peso rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.25</Equipo_Peso>
     </owl:NamedIndividual>
     
 
@@ -20478,7 +20577,10 @@ Mantenimiento: 5 / 10 / 15 / 20 Diario</rdfs:comment>
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Manta -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Manta">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Utiles_Varios"/>
+        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Útiles_Varios"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Común"/>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Equipo_Coste>
+        <Equipo_Peso rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.2</Equipo_Peso>
     </owl:NamedIndividual>
     
 
@@ -21054,6 +21156,17 @@ Bono: Ninguno.</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Mochila -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Mochila">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Útiles_Varios"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Común"/>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">300</Equipo_Coste>
+        <Equipo_Peso rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</Equipo_Peso>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Modificación_Inorgánica -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Modificación_Inorgánica">
@@ -21202,7 +21315,10 @@ Vías Cerradas: Ilusión</rdfs:comment>
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Monóculo -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Monóculo">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Utiles_Varios"/>
+        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Útiles_Varios"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Común"/>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">200000</Equipo_Coste>
+        <Equipo_Peso rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.1</Equipo_Peso>
     </owl:NamedIndividual>
     
 
@@ -22076,7 +22192,10 @@ Mantenimiento: 10 / 15 / 15 / 20 Diario</rdfs:comment>
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Odre -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Odre">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Utiles_Varios"/>
+        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Útiles_Varios"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Común"/>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</Equipo_Coste>
+        <Equipo_Peso rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.2</Equipo_Peso>
     </owl:NamedIndividual>
     
 
@@ -22373,7 +22492,10 @@ Mantenimiento: 10 / 10 / 15 / 15</rdfs:comment>
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Papel -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Papel">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Utiles_Varios"/>
+        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Útiles_Varios"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Raro"/>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1000</Equipo_Coste>
+        <Equipo_Peso rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</Equipo_Peso>
     </owl:NamedIndividual>
     
 
@@ -22381,7 +22503,10 @@ Mantenimiento: 10 / 10 / 15 / 15</rdfs:comment>
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Papiro -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Papiro">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Utiles_Varios"/>
+        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Útiles_Varios"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Común"/>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">200</Equipo_Coste>
+        <Equipo_Peso rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</Equipo_Peso>
     </owl:NamedIndividual>
     
 
@@ -22624,7 +22749,10 @@ Mantenimiento: 5 / 10 / 15 / 15</rdfs:comment>
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Perfume_Bueno -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Perfume_Bueno">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Utiles_Varios"/>
+        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Útiles_Varios"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Común"/>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2000</Equipo_Coste>
+        <Equipo_Peso rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.2</Equipo_Peso>
     </owl:NamedIndividual>
     
 
@@ -22632,7 +22760,10 @@ Mantenimiento: 5 / 10 / 15 / 15</rdfs:comment>
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Perfume_Excelente -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Perfume_Excelente">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Utiles_Varios"/>
+        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Útiles_Varios"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Raro"/>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100000</Equipo_Coste>
+        <Equipo_Peso rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.5</Equipo_Peso>
     </owl:NamedIndividual>
     
 
@@ -22640,7 +22771,10 @@ Mantenimiento: 5 / 10 / 15 / 15</rdfs:comment>
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Perfume_Normal -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Perfume_Normal">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Utiles_Varios"/>
+        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Útiles_Varios"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Común"/>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">350</Equipo_Coste>
+        <Equipo_Peso rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.2</Equipo_Peso>
     </owl:NamedIndividual>
     
 
@@ -22648,7 +22782,10 @@ Mantenimiento: 5 / 10 / 15 / 15</rdfs:comment>
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Pergamino -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Pergamino">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Utiles_Varios"/>
+        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Útiles_Varios"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Común"/>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">500</Equipo_Coste>
+        <Equipo_Peso rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</Equipo_Peso>
     </owl:NamedIndividual>
     
 
@@ -22783,7 +22920,10 @@ Descripción: La piedra ha sido desde el principio de la historia uno de los mat
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Piedra_de_Afilar -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Piedra_de_Afilar">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Utiles_Varios"/>
+        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Útiles_Varios"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Común"/>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</Equipo_Coste>
+        <Equipo_Peso rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.3</Equipo_Peso>
     </owl:NamedIndividual>
     
 
@@ -24118,7 +24258,10 @@ Mantenimiento: 10 / 20 / 25 / 25</rdfs:comment>
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Reloj_de_Arena -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Reloj_de_Arena">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Utiles_Varios"/>
+        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Útiles_Varios"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Raro"/>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2000</Equipo_Coste>
+        <Equipo_Peso rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.5</Equipo_Peso>
     </owl:NamedIndividual>
     
 
@@ -24566,6 +24709,28 @@ Mantenimiento: 10 / 10 / 15 / 15</rdfs:comment>
         <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20000</Equipo_Coste>
         <Equipo_Peso rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</Equipo_Peso>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hoja curva y ligera de menor tamaño y resistencia que una espada larga, pero mucho más manejable.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Saco_Grande -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Saco_Grande">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Útiles_Varios"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Común"/>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Equipo_Coste>
+        <Equipo_Peso rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4</Equipo_Peso>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Saco_Pequeño -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Saco_Pequeño">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Útiles_Varios"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Común"/>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Equipo_Coste>
+        <Equipo_Peso rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.2</Equipo_Peso>
     </owl:NamedIndividual>
     
 
@@ -25297,6 +25462,17 @@ Bono: +10 a la habilidad de ataque sin armas.</rdfs:comment>
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Sigilo">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Hab_Subterfugio"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Permite realizar acciones sin ser percibido por los demás, como desplazarse, trepar o incluso desenfundar un arma en completo silencio. El Sigilo se enfrenta directamente a la capacidad de Advertir de otros individuos. Si la habilidad de sigilo del personaje es superior a la de Advertir de alguien que no sabe que se encuentra cerca, este sorprenderá a su adversario. Cuando un personaje se mueve en silencio debe restar cuatro puntos a su Tipo de movimiento, o aplicará un penalizador de –80 a su habilidad. También puede usarse para evitar dejar rastros, en cuyo caso se enfrentaría directamente a la pericia de Rastreo de sus perseguidores sin aplicar ningun modificador. Sufre el penalizador por armadura, pero al contrario de lo que ocurre en otras habilidades, el negativo sólo puede reducirse hasta la mitad de su valor mediante la capacidad de Llevar Armadura.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Silbato -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Silbato">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Útiles_Varios"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Común"/>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100</Equipo_Coste>
+        <Equipo_Peso rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.1</Equipo_Peso>
     </owl:NamedIndividual>
     
 
@@ -26216,6 +26392,50 @@ Mantenimiento: 15 / 20 / 25 / 30</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tienda_Grande -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tienda_Grande">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Útiles_Varios"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Común"/>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20000</Equipo_Coste>
+        <Equipo_Peso rdf:datatype="http://www.w3.org/2001/XMLSchema#float">6.0</Equipo_Peso>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tienda_Pabellón -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tienda_Pabellón">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Útiles_Varios"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Común"/>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150000</Equipo_Coste>
+        <Equipo_Peso rdf:datatype="http://www.w3.org/2001/XMLSchema#float">14.0</Equipo_Peso>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tienda_Pequeña -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tienda_Pequeña">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Útiles_Varios"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Común"/>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1000</Equipo_Coste>
+        <Equipo_Peso rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</Equipo_Peso>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tienda_de_Lujo -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tienda_de_Lujo">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Útiles_Varios"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Raro"/>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">200000</Equipo_Coste>
+        <Equipo_Peso rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.0</Equipo_Peso>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tierra_Maldita -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tierra_Maldita">
@@ -26234,6 +26454,17 @@ Intermedio: 10 kilómetro de radio.
 Avanzado: 100 kilómetro de radio.
 Arcano: 1.000 kilómetro de radio.
 Mantenimiento: 35 / 60 / 90 / 150</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tinta_de_Escribir -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tinta_de_Escribir">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Útiles_Varios"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Común"/>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1000</Equipo_Coste>
+        <Equipo_Peso rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.3</Equipo_Peso>
     </owl:NamedIndividual>
     
 
@@ -26400,6 +26631,17 @@ Mantenimiento: 35 / 60 / 90 / 150</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tipos_Armas">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tiza -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tiza">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Útiles_Varios"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Común"/>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</Equipo_Coste>
+        <Equipo_Peso rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.2</Equipo_Peso>
     </owl:NamedIndividual>
     
 
@@ -26995,14 +27237,6 @@ Conocimiento marcial: 10</rdfs:comment>
 
 Requisitos: Ninguno.
 Conocimiento marcial: 40</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Utiles_Varios -->
-
-    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Utiles_Varios">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Definicion_Clases"/>
     </owl:NamedIndividual>
     
 
@@ -28589,6 +28823,17 @@ Apariencia habitual: Frecuentemente aparece bajo la forma de un simple gato negr
     
 
 
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Yesca_y_Pedernal -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Yesca_y_Pedernal">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Útiles_Varios"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Común"/>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Equipo_Coste>
+        <Equipo_Peso rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.3</Equipo_Peso>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Zafiro -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Zafiro">
@@ -28872,6 +29117,14 @@ Mantenimiento: 10 / 10 / 15 / 15</rdfs:comment>
     
 
 
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Útiles_Varios -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Útiles_Varios">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Definicion_Clases"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#0_El_Loco -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#0_El_Loco">
@@ -28935,7 +29188,10 @@ Apariencia habitual: Toma la forma de un vagabundo deforme con un hatillo a su e
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cadena_Ligera_(1_m) -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cadena_Ligera_(1_m)">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Utiles_Varios"/>
+        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Útiles_Varios"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Común"/>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1000</Equipo_Coste>
+        <Equipo_Peso rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</Equipo_Peso>
     </owl:NamedIndividual>
     
 
@@ -28943,7 +29199,10 @@ Apariencia habitual: Toma la forma de un vagabundo deforme con un hatillo a su e
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cadena_Pesada_(1_m) -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cadena_Pesada_(1_m)">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Utiles_Varios"/>
+        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Útiles_Varios"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Común"/>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2000</Equipo_Coste>
+        <Equipo_Peso rdf:datatype="http://www.w3.org/2001/XMLSchema#float">3.0</Equipo_Peso>
     </owl:NamedIndividual>
     
 
@@ -28951,7 +29210,10 @@ Apariencia habitual: Toma la forma de un vagabundo deforme con un hatillo a su e
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cuerda_Buena_(10_m) -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cuerda_Buena_(10_m)">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Utiles_Varios"/>
+        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Útiles_Varios"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Común"/>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">250</Equipo_Coste>
+        <Equipo_Peso rdf:datatype="http://www.w3.org/2001/XMLSchema#float">2.0</Equipo_Peso>
     </owl:NamedIndividual>
     
 
@@ -28959,7 +29221,10 @@ Apariencia habitual: Toma la forma de un vagabundo deforme con un hatillo a su e
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cuerda_Excelente_(10_m) -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cuerda_Excelente_(10_m)">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Utiles_Varios"/>
+        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Útiles_Varios"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Común"/>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5000</Equipo_Coste>
+        <Equipo_Peso rdf:datatype="http://www.w3.org/2001/XMLSchema#float">6.0</Equipo_Peso>
     </owl:NamedIndividual>
     
 
@@ -28967,7 +29232,10 @@ Apariencia habitual: Toma la forma de un vagabundo deforme con un hatillo a su e
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cuerda_Normal_(10_m) -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cuerda_Normal_(10_m)">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Utiles_Varios"/>
+        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Útiles_Varios"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Común"/>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</Equipo_Coste>
+        <Equipo_Peso rdf:datatype="http://www.w3.org/2001/XMLSchema#float">2.0</Equipo_Peso>
     </owl:NamedIndividual>
     
 
@@ -28975,7 +29243,10 @@ Apariencia habitual: Toma la forma de un vagabundo deforme con un hatillo a su e
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Escalera_de_Cuerda_(10_m) -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Escalera_de_Cuerda_(10_m)">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Utiles_Varios"/>
+        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Útiles_Varios"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Común"/>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">200</Equipo_Coste>
+        <Equipo_Peso rdf:datatype="http://www.w3.org/2001/XMLSchema#float">6.0</Equipo_Peso>
     </owl:NamedIndividual>
     
 
@@ -28983,7 +29254,10 @@ Apariencia habitual: Toma la forma de un vagabundo deforme con un hatillo a su e
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Lona_(1_m_cuadrado) -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Lona_(1_m_cuadrado)">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Utiles_Varios"/>
+        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Útiles_Varios"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Común"/>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">200</Equipo_Coste>
+        <Equipo_Peso rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</Equipo_Peso>
     </owl:NamedIndividual>
     
 
@@ -29063,7 +29337,21 @@ El descomunal poder que poseen las almas de los Duk´zarist se manifiesta con fu
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Red_de_Pesca_(1_m) -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Red_de_Pesca_(1_m)">
-        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Utiles_Varios"/>
+        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Útiles_Varios"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Común"/>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100</Equipo_Coste>
+        <Equipo_Peso rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.5</Equipo_Peso>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Reloj de Engranaje -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Reloj de Engranaje">
+        <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Útiles_Varios"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Muy_Raro"/>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">300000</Equipo_Coste>
+        <Equipo_Peso rdf:datatype="http://www.w3.org/2001/XMLSchema#float">20.0</Equipo_Peso>
     </owl:NamedIndividual>
     
 
@@ -29416,9 +29704,6 @@ hace empleando un tipo de ataque concreto. Existen siete clases distintas: Filo,
     <rdf:Description rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Transporte">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tipos de transporte que podemos adquirir.</rdfs:comment>
     </rdf:Description>
-    <rdf:Description rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Utiles_Varios">
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Elementos de utilidad que podemos adquirir.</rdfs:comment>
-    </rdf:Description>
     <rdf:Description rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Venenos">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tipos de veneno que podemos adquirir.</rdfs:comment>
     </rdf:Description>
@@ -29435,6 +29720,9 @@ Al contrario que las habilidades, las ventajas no se adquieren con PD, sino con 
     </rdf:Description>
     <rdf:Description rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Yelmo">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Los yelmos o cascos se utilizan sólo para proteger la cabeza. La TA que ofrecen se emplea únicamente cuando un golpe va dirigido directamente contra ella. Usar un yelmo junto con otra armadura no se considera una combinación, ya que ambas protegen zonas completamente diferentes, aunque sí se suman sus requerimientos y penalizadores. La desventaja de los yelmos se basa en que, al cubrir ojos y oídos, disminuye la capacidad perceptiva del personaje y causa penalizadores a sus habilidades de Advertir y Buscar.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Útiles_Varios">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Elementos de utilidad que podemos adquirir.</rdfs:comment>
     </rdf:Description>
 </rdf:RDF>
 
