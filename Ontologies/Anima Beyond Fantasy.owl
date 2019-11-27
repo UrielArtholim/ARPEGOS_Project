@@ -5666,6 +5666,8 @@
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Abrigo">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Vestimenta"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Común"/>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</Equipo_Coste>
     </owl:NamedIndividual>
     
 
@@ -7982,6 +7984,8 @@ Descripción: Permite al psíquico lanzar con completa precisión objetos emplea
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Barca">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Embarcaciones"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Común"/>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20000</Equipo_Coste>
     </owl:NamedIndividual>
     
 
@@ -7990,6 +7994,8 @@ Descripción: Permite al psíquico lanzar con completa precisión objetos emplea
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Barco_de_Guerra">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Embarcaciones"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Muy_Raro"/>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15000000</Equipo_Coste>
     </owl:NamedIndividual>
     
 
@@ -8353,6 +8359,8 @@ Vías Cerradas: Ninguna</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Botas_de_Viaje">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Calzado"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Común"/>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</Equipo_Coste>
     </owl:NamedIndividual>
     
 
@@ -8438,6 +8446,8 @@ Beneficio: 2</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Buey_de_Carga">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Animales_de_Transporte"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Común"/>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2000</Equipo_Coste>
     </owl:NamedIndividual>
     
 
@@ -8550,6 +8560,8 @@ permanentemente, de manera que desaparecen y no pueden volver a ser usados. Otro
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Caballo">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Animales_de_Transporte"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Común"/>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5000</Equipo_Coste>
     </owl:NamedIndividual>
     
 
@@ -8558,6 +8570,8 @@ permanentemente, de manera que desaparecen y no pueden volver a ser usados. Otro
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Caballo_de_Guerra">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Animales_de_Transporte"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Raro"/>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">250000</Equipo_Coste>
     </owl:NamedIndividual>
     
 
@@ -8607,6 +8621,8 @@ permanentemente, de manera que desaparecen y no pueden volver a ser usados. Otro
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Calzoncillos">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Vestimenta"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Común"/>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Equipo_Coste>
     </owl:NamedIndividual>
     
 
@@ -8683,6 +8699,8 @@ Vías Cerradas: Destrucción</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Camisa">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Vestimenta"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Común"/>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</Equipo_Coste>
     </owl:NamedIndividual>
     
 
@@ -8746,6 +8764,8 @@ Mantenimiento: 70 / 80 / 90 / 100 Diario</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Capa">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Vestimenta"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Común"/>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</Equipo_Coste>
     </owl:NamedIndividual>
     
 
@@ -8845,6 +8865,8 @@ Descripción: Este poder carga un objeto o lugar determinado con un fuerte senti
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Carreta">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Transporte_Terrestre"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Común"/>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1000</Equipo_Coste>
     </owl:NamedIndividual>
     
 
@@ -8853,6 +8875,8 @@ Descripción: Este poder carga un objeto o lugar determinado con un fuerte senti
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Carromato_Vivienda_de_Madera">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Transporte_Terrestre"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Común"/>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30000</Equipo_Coste>
     </owl:NamedIndividual>
     
 
@@ -8861,6 +8885,8 @@ Descripción: Este poder carga un objeto o lugar determinado con un fuerte senti
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Carromato_de_Tela">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Transporte_Terrestre"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Común"/>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5000</Equipo_Coste>
     </owl:NamedIndividual>
     
 
@@ -8869,6 +8895,8 @@ Descripción: Este poder carga un objeto o lugar determinado con un fuerte senti
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Carruaje_Lujoso">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Transporte_Terrestre"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Raro"/>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150000</Equipo_Coste>
     </owl:NamedIndividual>
     
 
@@ -8877,6 +8905,8 @@ Descripción: Este poder carga un objeto o lugar determinado con un fuerte senti
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Carruaje_Normal">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Transporte_Terrestre"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Común"/>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">60000</Equipo_Coste>
     </owl:NamedIndividual>
     
 
@@ -10150,6 +10180,8 @@ Vías Cerradas: Ninguna</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Chaleco">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Vestimenta"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Común"/>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Equipo_Coste>
     </owl:NamedIndividual>
     
 
@@ -10158,6 +10190,8 @@ Vías Cerradas: Ninguna</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Chaqueta">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Vestimenta"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Común"/>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</Equipo_Coste>
     </owl:NamedIndividual>
     
 
@@ -10217,6 +10251,8 @@ Beneficio: 2</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cinturón">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Vestimenta"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Común"/>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Equipo_Coste>
     </owl:NamedIndividual>
     
 
@@ -12215,6 +12251,8 @@ Descripción: Esta habilidad cristaliza cualquier clase de cuerpo que no supere 
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Crucero">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Embarcaciones"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Raro"/>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8000000</Equipo_Coste>
     </owl:NamedIndividual>
     
 
@@ -12223,6 +12261,8 @@ Descripción: Esta habilidad cristaliza cualquier clase de cuerpo que no supere 
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Crucero_Pequeño">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Embarcaciones"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Raro"/>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3500000</Equipo_Coste>
     </owl:NamedIndividual>
     
 
@@ -15253,6 +15293,8 @@ Vías Cerradas: Ninguna</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Común">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Disponibilidad_Equipamiento"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Común"/>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Equipo_Coste>
         <rdfs:comment>El común no está marcado de ninguna manera especial en el listado y, como su nombre indica, puede encontrarse generalmente en cualquier aldea o ciudad.</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -17154,6 +17196,8 @@ Mantenimiento: No</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Guantes">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Vestimenta"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Común"/>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</Equipo_Coste>
     </owl:NamedIndividual>
     
 
@@ -19174,6 +19218,8 @@ Bono: Ninguno.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Kimono_de_Hombre">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Vestimenta"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Raro"/>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</Equipo_Coste>
     </owl:NamedIndividual>
     
 
@@ -19182,6 +19228,8 @@ Bono: Ninguno.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Kimono_de_Mujer">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Vestimenta"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Raro"/>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">200</Equipo_Coste>
     </owl:NamedIndividual>
     
 
@@ -19549,6 +19597,8 @@ Vías Cerradas: Oscuridad</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Lencería">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Vestimenta"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Raro"/>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</Equipo_Coste>
     </owl:NamedIndividual>
     
 
@@ -20880,6 +20930,8 @@ Descripción: Disminuye varias intensidades de un fuego ya existente. Si se usa 
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Mitones">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Vestimenta"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Común"/>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Equipo_Coste>
     </owl:NamedIndividual>
     
 
@@ -21260,6 +21312,8 @@ Descripción: Este poder ataca la mente de una persona, destrozándola completam
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Mula_de_Carga">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Animales_de_Transporte"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Común"/>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1000</Equipo_Coste>
     </owl:NamedIndividual>
     
 
@@ -22205,6 +22259,8 @@ Mantenimiento: 10 / 10 / 15 / 15</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Pantalón">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Vestimenta"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Común"/>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Equipo_Coste>
     </owl:NamedIndividual>
     
 
@@ -22305,6 +22361,8 @@ Vías Cerradas: Luz</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Pañuelo">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Vestimenta"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Común"/>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Equipo_Coste>
     </owl:NamedIndividual>
     
 
@@ -23193,6 +23251,8 @@ proyección mágica no aplica ninguno de los penalizadores de combate ni para at
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Pura_Sangre">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Animales_de_Transporte"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Raro"/>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50000</Equipo_Coste>
     </owl:NamedIndividual>
     
 
@@ -24316,6 +24376,8 @@ Vías Cerradas: Ninguna</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ropa_Interior_Fenenina">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Vestimenta"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Común"/>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</Equipo_Coste>
     </owl:NamedIndividual>
     
 
@@ -24585,6 +24647,8 @@ Bono: +10 a la habilidad de parada sin armas.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#San_Bernardo">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Animales_de_Transporte"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Raro"/>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15000</Equipo_Coste>
     </owl:NamedIndividual>
     
 
@@ -25188,6 +25252,8 @@ Mantenimiento: 5 / 15 / 20 / 25</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Sombrero">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Vestimenta"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Común"/>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</Equipo_Coste>
     </owl:NamedIndividual>
     
 
@@ -26293,6 +26359,8 @@ Mantenimiento: 10 / 10 / 15 / 15</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Toro_de_Carga">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Animales_de_Transporte"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Común"/>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2000</Equipo_Coste>
     </owl:NamedIndividual>
     
 
@@ -26301,6 +26369,8 @@ Mantenimiento: 10 / 10 / 15 / 15</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Toro_de_Monta">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Animales_de_Transporte"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Común"/>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3000</Equipo_Coste>
     </owl:NamedIndividual>
     
 
@@ -26318,6 +26388,8 @@ Mantenimiento: 10 / 10 / 15 / 15</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Traje_de_Gala">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Vestimenta"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Raro"/>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2000</Equipo_Coste>
     </owl:NamedIndividual>
     
 
@@ -26555,6 +26627,8 @@ Descripción: Permite al psíquico proyectar uno de sus sentidos hasta una dista
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Trineo">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Transporte_Terrestre"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Raro"/>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2000</Equipo_Coste>
     </owl:NamedIndividual>
     
 
@@ -26637,6 +26711,8 @@ El uso de una Técnica es un acto pasivo, pero está ligado a la acción que pre
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Túnica">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Vestimenta"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Común"/>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</Equipo_Coste>
     </owl:NamedIndividual>
     
 
@@ -27068,6 +27144,8 @@ Requisitos: Mantener activo Feuer</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Velero_de_1_Palo">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Embarcaciones"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Común"/>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150000</Equipo_Coste>
     </owl:NamedIndividual>
     
 
@@ -27076,6 +27154,8 @@ Requisitos: Mantener activo Feuer</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Velero_de_2_Palos">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Embarcaciones"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Común"/>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">450000</Equipo_Coste>
     </owl:NamedIndividual>
     
 
@@ -27084,6 +27164,8 @@ Requisitos: Mantener activo Feuer</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Velero_de_3_Palos">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Embarcaciones"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Común"/>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1200000</Equipo_Coste>
     </owl:NamedIndividual>
     
 
@@ -27310,6 +27392,8 @@ Mantenimiento: No</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Vestido">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Vestimenta"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Común"/>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</Equipo_Coste>
     </owl:NamedIndividual>
     
 
@@ -27318,6 +27402,8 @@ Mantenimiento: No</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Vestido_de_Gala">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Vestimenta"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Raro"/>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5000</Equipo_Coste>
     </owl:NamedIndividual>
     
 
@@ -28373,6 +28459,8 @@ Apariencia habitual: Frecuentemente aparece bajo la forma de un simple gato negr
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Zapatos">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Calzado"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Común"/>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Equipo_Coste>
     </owl:NamedIndividual>
     
 
@@ -28538,6 +28626,8 @@ Mantenimiento: 35 / 50 / 80 / 150 Diario</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Zuecos">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Calzado"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Común"/>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</Equipo_Coste>
     </owl:NamedIndividual>
     
 
