@@ -7834,6 +7834,15 @@ Mantenimiento: 10 / 15 / 25 / 35</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Bala">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Munición_Pólvora"/>
+        <Arma_TipoAtaque_1 rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ataque_Penetrante"/>
+        <Arma_Tipología rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tipo_Munición"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Raro"/>
+        <Arma_DañoBase rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">60</Arma_DañoBase>
+        <Arma_Entereza rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</Arma_Entereza>
+        <Arma_Presencia rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</Arma_Presencia>
+        <Arma_Rotura rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</Arma_Rotura>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">200</Equipo_Coste>
+        <Equipo_Peso rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</Equipo_Peso>
     </owl:NamedIndividual>
     
 
@@ -7842,6 +7851,15 @@ Mantenimiento: 10 / 15 / 25 / 35</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Bala_de_Cañón">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Munición_Asedio"/>
+        <Arma_TipoAtaque_1 rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ataque_Contundente"/>
+        <Arma_Tipología rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tipo_Munición"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Muy_Raro"/>
+        <Arma_DañoBase rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</Arma_DañoBase>
+        <Arma_Entereza rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</Arma_Entereza>
+        <Arma_Presencia rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</Arma_Presencia>
+        <Arma_Rotura rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</Arma_Rotura>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10000</Equipo_Coste>
+        <Equipo_Peso rdf:datatype="http://www.w3.org/2001/XMLSchema#float">15.0</Equipo_Peso>
     </owl:NamedIndividual>
     
 
@@ -12668,6 +12686,15 @@ Descripción: El psíquico crea una cúpula de energía que destruye todo lo que
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Dardos_de_Cerbatana">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Munición_Cerbatana"/>
+        <Arma_TipoAtaque_1 rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ataque_Penetrante"/>
+        <Arma_Tipología rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tipo_Munición"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Común"/>
+        <Arma_DañoBase rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</Arma_DañoBase>
+        <Arma_Entereza rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Arma_Entereza>
+        <Arma_Presencia rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</Arma_Presencia>
+        <Arma_Rotura rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-4</Arma_Rotura>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">200</Equipo_Coste>
+        <Equipo_Peso rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.1</Equipo_Peso>
     </owl:NamedIndividual>
     
 
@@ -16492,6 +16519,15 @@ Mantenimiento: No</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Flecha_de_Descarga">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Munición_Arcos"/>
+        <Arma_TipoAtaque_1 rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ataque_Penetrante"/>
+        <Arma_Tipología rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tipo_Munición"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Común"/>
+        <Arma_DañoBase rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">40</Arma_DañoBase>
+        <Arma_Entereza rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</Arma_Entereza>
+        <Arma_Presencia rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</Arma_Presencia>
+        <Arma_Rotura rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</Arma_Rotura>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</Equipo_Coste>
+        <Equipo_Peso rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.1</Equipo_Peso>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La flecha más común que se utiliza con los arcos.</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -16501,6 +16537,14 @@ Mantenimiento: No</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Flecha_de_Fajo">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Munición_Arcos"/>
+        <Arma_Tipología rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tipo_Munición"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Común"/>
+        <Arma_DañoBase rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</Arma_DañoBase>
+        <Arma_Entereza rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Arma_Entereza>
+        <Arma_Presencia rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</Arma_Presencia>
+        <Arma_Rotura rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</Arma_Rotura>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</Equipo_Coste>
+        <Equipo_Peso rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.1</Equipo_Peso>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Flecha muy ligera, que añade 20 metros adicionales al alcance máximo del arco.</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -16510,6 +16554,15 @@ Mantenimiento: No</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Flecha_de_Mella">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Munición_Arcos"/>
+        <Arma_TipoAtaque_1 rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ataque_Penetrante"/>
+        <Arma_Tipología rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tipo_Munición"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Común"/>
+        <Arma_DañoBase rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</Arma_DañoBase>
+        <Arma_Entereza rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Arma_Entereza>
+        <Arma_Presencia rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</Arma_Presencia>
+        <Arma_Rotura rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</Arma_Rotura>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">500</Equipo_Coste>
+        <Equipo_Peso rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.1</Equipo_Peso>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Flecha con una punta penetrante, preparada para traspasar armaduras duras. Resta un punto adicional a la TA del defensor.</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -22562,6 +22615,14 @@ Descripción: La piedra ha sido desde el principio de la historia uno de los mat
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Piedra_de_Honda">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Munición_Honda"/>
+        <Arma_TipoAtaque_1 rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ataque_Contundente"/>
+        <Arma_Tipología rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tipo_Munición"/>
+        <Arma_DañoBase rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</Arma_DañoBase>
+        <Arma_Entereza rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</Arma_Entereza>
+        <Arma_Presencia rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Arma_Presencia>
+        <Arma_Rotura rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Arma_Rotura>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</Equipo_Coste>
+        <Equipo_Peso rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</Equipo_Peso>
     </owl:NamedIndividual>
     
 
@@ -24404,6 +24465,15 @@ Mantenimiento: 10 / 10 / 15 / 15 Diario</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Saeta_Ligera">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Munición_Ballesta"/>
+        <Arma_TipoAtaque_1 rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ataque_Penetrante"/>
+        <Arma_Tipología rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tipo_Munición"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Muy_Raro"/>
+        <Arma_DañoBase rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</Arma_DañoBase>
+        <Arma_Entereza rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Arma_Entereza>
+        <Arma_Presencia rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</Arma_Presencia>
+        <Arma_Rotura rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-1</Arma_Rotura>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</Equipo_Coste>
+        <Equipo_Peso rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.1</Equipo_Peso>
     </owl:NamedIndividual>
     
 
@@ -24412,6 +24482,15 @@ Mantenimiento: 10 / 10 / 15 / 15 Diario</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Saeta_Pesada">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Munición_Ballesta"/>
+        <Arma_TipoAtaque_1 rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ataque_Penetrante"/>
+        <Arma_Tipología rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tipo_Munición"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Raro"/>
+        <Arma_DañoBase rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">60</Arma_DañoBase>
+        <Arma_Entereza rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</Arma_Entereza>
+        <Arma_Presencia rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</Arma_Presencia>
+        <Arma_Rotura rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</Arma_Rotura>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Equipo_Coste>
+        <Equipo_Peso rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.2</Equipo_Peso>
     </owl:NamedIndividual>
     
 
@@ -27372,6 +27451,15 @@ Vías Cerradas: Ninguna</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Virote_Ligero">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Munición_Asedio"/>
+        <Arma_TipoAtaque_1 rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ataque_Penetrante"/>
+        <Arma_Tipología rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tipo_Munición"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Común"/>
+        <Arma_DañoBase rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">120</Arma_DañoBase>
+        <Arma_Entereza rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</Arma_Entereza>
+        <Arma_Presencia rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</Arma_Presencia>
+        <Arma_Rotura rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</Arma_Rotura>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100</Equipo_Coste>
+        <Equipo_Peso rdf:datatype="http://www.w3.org/2001/XMLSchema#float">2.0</Equipo_Peso>
     </owl:NamedIndividual>
     
 
@@ -27380,6 +27468,15 @@ Vías Cerradas: Ninguna</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Virote_Pesado">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Munición_Asedio"/>
+        <Arma_TipoAtaque_1 rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ataque_Penetrante"/>
+        <Arma_Tipología rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Tipo_Munición"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Raro"/>
+        <Arma_DañoBase rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</Arma_DañoBase>
+        <Arma_Entereza rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">18</Arma_Entereza>
+        <Arma_Presencia rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</Arma_Presencia>
+        <Arma_Rotura rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</Arma_Rotura>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">500</Equipo_Coste>
+        <Equipo_Peso rdf:datatype="http://www.w3.org/2001/XMLSchema#float">5.0</Equipo_Peso>
     </owl:NamedIndividual>
     
 
