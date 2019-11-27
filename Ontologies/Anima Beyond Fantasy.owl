@@ -2727,6 +2727,28 @@
     
 
 
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_CosteMax -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_CosteMax">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#EquipoTieneValor"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipamiento"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_CosteMín -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_CosteMín">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#EquipoTieneValor"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipamiento"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Nombre -->
 
     <owl:DatatypeProperty rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Nombre">
@@ -5800,6 +5822,8 @@ Descripción: Es una aleación excepcionalmente rara. Se llama así por su color
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Acqua_Toffana">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Venenos"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Raro"/>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25000</Equipo_Coste>
     </owl:NamedIndividual>
     
 
@@ -6045,6 +6069,8 @@ Mantenimiento: 10 / 10 / 15 / 25</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Al-Baladín">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Venenos"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Muy_Raro"/>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">80000</Equipo_Coste>
     </owl:NamedIndividual>
     
 
@@ -7110,6 +7136,8 @@ Mantenimiento: 15 / 30 / 50 / 100 Diario</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Arsénico_Real">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Venenos"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Raro"/>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">280000</Equipo_Coste>
     </owl:NamedIndividual>
     
 
@@ -7552,6 +7580,8 @@ Mantenimiento: 5 / 5 / 10 / 10</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Atropina">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Venenos"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Raro"/>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2000</Equipo_Coste>
     </owl:NamedIndividual>
     
 
@@ -8172,6 +8202,8 @@ Descripción: Este poder crea una barrera de fuego en el lugar que el psíquico 
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Belladona">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Venenos"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Raro"/>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15000</Equipo_Coste>
     </owl:NamedIndividual>
     
 
@@ -8750,6 +8782,8 @@ Vías Cerradas: Destrucción</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cantaridina">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Venenos"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Raro"/>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2000</Equipo_Coste>
     </owl:NamedIndividual>
     
 
@@ -10227,6 +10261,8 @@ Vías Cerradas: Ninguna</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cianuro">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Venenos"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Raro"/>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">80000</Equipo_Coste>
     </owl:NamedIndividual>
     
 
@@ -10288,6 +10324,9 @@ Beneficio: 2</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Circonio">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Gemas"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Raro"/>
+        <Equipo_CosteMax rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50000</Equipo_CosteMax>
+        <Equipo_CosteMín rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5000</Equipo_CosteMín>
     </owl:NamedIndividual>
     
 
@@ -12336,6 +12375,8 @@ Mantenimiento: No</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cuadro_Bueno">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cuadros"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Común"/>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">80000</Equipo_Coste>
     </owl:NamedIndividual>
     
 
@@ -12344,6 +12385,8 @@ Mantenimiento: No</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cuadro_Excelente">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cuadros"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Raro"/>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">125000</Equipo_Coste>
     </owl:NamedIndividual>
     
 
@@ -12352,6 +12395,8 @@ Mantenimiento: No</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cuadro_Normal">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cuadros"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Común"/>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25000</Equipo_Coste>
     </owl:NamedIndividual>
     
 
@@ -12643,6 +12688,8 @@ Vías Cerradas: Destrucción</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Curare">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Venenos"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Muy_Raro"/>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100000</Equipo_Coste>
     </owl:NamedIndividual>
     
 
@@ -14198,6 +14245,9 @@ Mantenimiento: No</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Diamante">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Gemas"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Raro"/>
+        <Equipo_CosteMax rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">320000</Equipo_CosteMax>
+        <Equipo_CosteMín rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100000</Equipo_CosteMín>
     </owl:NamedIndividual>
     
 
@@ -15993,6 +16043,9 @@ Vías Cerradas: Tierra, Agua</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Esmeralda">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Gemas"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Raro"/>
+        <Equipo_CosteMax rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">440000</Equipo_CosteMax>
+        <Equipo_CosteMín rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150000</Equipo_CosteMín>
     </owl:NamedIndividual>
     
 
@@ -17088,6 +17141,9 @@ Beneficio: 1</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Gemas_Varias">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Gemas"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Raro"/>
+        <Equipo_CosteMax rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100000</Equipo_CosteMax>
+        <Equipo_CosteMín rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20000</Equipo_CosteMín>
     </owl:NamedIndividual>
     
 
@@ -21437,6 +21493,8 @@ Mantenimiento: 50 / 90 / 140 / 200 Diario</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Muscarina">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Venenos"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Raro"/>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1000</Equipo_Coste>
     </owl:NamedIndividual>
     
 
@@ -22599,6 +22657,9 @@ Mantenimiento: 5 / 10 / 15 / 15</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Perla">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Gemas"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Raro"/>
+        <Equipo_CosteMax rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150000</Equipo_CosteMax>
+        <Equipo_CosteMín rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50000</Equipo_CosteMín>
     </owl:NamedIndividual>
     
 
@@ -22607,6 +22668,8 @@ Mantenimiento: 5 / 10 / 15 / 15</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Perla_Negra">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Gemas"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Muy_Raro"/>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">650000</Equipo_Coste>
     </owl:NamedIndividual>
     
 
@@ -24478,6 +24541,9 @@ Mantenimiento: 10 / 10 / 15 / 15</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Rubí">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Gemas"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Raro"/>
+        <Equipo_CosteMax rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">300000</Equipo_CosteMax>
+        <Equipo_CosteMín rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100000</Equipo_CosteMín>
     </owl:NamedIndividual>
     
 
@@ -24743,6 +24809,8 @@ Mantenimiento: No</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Savia_de_Ramalen">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Venenos"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Muy_Raro"/>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">800000</Equipo_Coste>
     </owl:NamedIndividual>
     
 
@@ -25912,6 +25980,8 @@ Mantenimiento: No</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Talio">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Venenos"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Raro"/>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">200</Equipo_Coste>
     </owl:NamedIndividual>
     
 
@@ -27317,6 +27387,8 @@ Mantenimiento: No</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Veneno_de_Cobra_Blanca">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Venenos"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Muy_Raro"/>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">500000</Equipo_Coste>
     </owl:NamedIndividual>
     
 
@@ -27325,6 +27397,8 @@ Mantenimiento: No</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Veneno_de_Serpiente">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Venenos"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Raro"/>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5000</Equipo_Coste>
     </owl:NamedIndividual>
     
 
@@ -27548,6 +27622,8 @@ Mantenimiento: 15 / 20 / 30 / 35 Diario</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Vinagre_de_Saturno">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Venenos"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Raro"/>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3000</Equipo_Coste>
     </owl:NamedIndividual>
     
 
@@ -28517,6 +28593,9 @@ Apariencia habitual: Frecuentemente aparece bajo la forma de un simple gato negr
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Zafiro">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Gemas"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Raro"/>
+        <Equipo_CosteMax rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">200000</Equipo_CosteMax>
+        <Equipo_CosteMín rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50000</Equipo_CosteMín>
     </owl:NamedIndividual>
     
 
@@ -28787,6 +28866,8 @@ Mantenimiento: 10 / 10 / 15 / 15</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Ópalo_Negro">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Gemas"/>
+        <Equipo_Disponibilidad rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Equipo_Muy_Raro"/>
+        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">500000</Equipo_Coste>
     </owl:NamedIndividual>
     
 
