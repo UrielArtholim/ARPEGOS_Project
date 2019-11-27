@@ -1,2 +1,2 @@
-# Project_ARPG
-Automatic Roleplaying-game Profile Generator 
+# ARPEGOS Project
+Automatized Roleplaying-game Profile Extensible Generator Ontology based System.
