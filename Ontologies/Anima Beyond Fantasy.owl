@@ -8021,6 +8021,22 @@ Vías Cerradas: Ninguna</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Atravesar_lo_Sólido">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Libro_Tierra"/>
+        <Conjuro_Acción rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Conjuro_Activo"/>
+        <Conjuro_Tipo rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Conjuro_Efecto"/>
+        <Conjuro_Int_Arcano rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</Conjuro_Int_Arcano>
+        <Conjuro_Int_Avanzado rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</Conjuro_Int_Avanzado>
+        <Conjuro_Int_Base rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</Conjuro_Int_Base>
+        <Conjuro_Int_Intermedio rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Conjuro_Int_Intermedio>
+        <Conjuro_Mantenimiento_Arcano rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Conjuro_Mantenimiento_Arcano>
+        <Conjuro_Mantenimiento_Avanzado rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Conjuro_Mantenimiento_Avanzado>
+        <Conjuro_Mantenimiento_Base rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</Conjuro_Mantenimiento_Base>
+        <Conjuro_Mantenimiento_Diario rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</Conjuro_Mantenimiento_Diario>
+        <Conjuro_Mantenimiento_Intermedio rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</Conjuro_Mantenimiento_Intermedio>
+        <Conjuro_Nivel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">32</Conjuro_Nivel>
+        <Conjuro_Zeon_Arcano rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">140</Conjuro_Zeon_Arcano>
+        <Conjuro_Zeon_Avanzado rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">120</Conjuro_Zeon_Avanzado>
+        <Conjuro_Zeon_Base rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">80</Conjuro_Zeon_Base>
+        <Conjuro_Zeon_Intermedio rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100</Conjuro_Zeon_Intermedio>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 32 
 Acción: Activa 
 Tipo: Efecto
@@ -8099,6 +8115,22 @@ Vías Cerradas: Destrucción</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Aumentar_Peso">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Libro_Tierra"/>
+        <Conjuro_Acción rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Conjuro_Activo"/>
+        <Conjuro_Tipo rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Conjuro_Efecto"/>
+        <Conjuro_Int_Arcano rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</Conjuro_Int_Arcano>
+        <Conjuro_Int_Avanzado rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Conjuro_Int_Avanzado>
+        <Conjuro_Int_Base rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</Conjuro_Int_Base>
+        <Conjuro_Int_Intermedio rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</Conjuro_Int_Intermedio>
+        <Conjuro_Mantenimiento_Arcano rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">40</Conjuro_Mantenimiento_Arcano>
+        <Conjuro_Mantenimiento_Avanzado rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</Conjuro_Mantenimiento_Avanzado>
+        <Conjuro_Mantenimiento_Base rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</Conjuro_Mantenimiento_Base>
+        <Conjuro_Mantenimiento_Diario rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</Conjuro_Mantenimiento_Diario>
+        <Conjuro_Mantenimiento_Intermedio rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25</Conjuro_Mantenimiento_Intermedio>
+        <Conjuro_Nivel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Conjuro_Nivel>
+        <Conjuro_Zeon_Arcano rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">320</Conjuro_Zeon_Arcano>
+        <Conjuro_Zeon_Avanzado rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">200</Conjuro_Zeon_Avanzado>
+        <Conjuro_Zeon_Base rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">40</Conjuro_Zeon_Base>
+        <Conjuro_Zeon_Intermedio rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">120</Conjuro_Zeon_Intermedio>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 10 
 Acción: Activa 
 Tipo: Efecto
@@ -8256,6 +8288,23 @@ Coste: 20 CM</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Aumento_de_Gravedad">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Libro_Tierra"/>
+        <Conjuro_Acción rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Conjuro_Activo"/>
+        <Conjuro_Gnosis rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Magia_Alta"/>
+        <Conjuro_Tipo rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Conjuro_Automático"/>
+        <Conjuro_Int_Arcano rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</Conjuro_Int_Arcano>
+        <Conjuro_Int_Avanzado rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</Conjuro_Int_Avanzado>
+        <Conjuro_Int_Base rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Conjuro_Int_Base>
+        <Conjuro_Int_Intermedio rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</Conjuro_Int_Intermedio>
+        <Conjuro_Mantenimiento_Arcano rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">35</Conjuro_Mantenimiento_Arcano>
+        <Conjuro_Mantenimiento_Avanzado rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</Conjuro_Mantenimiento_Avanzado>
+        <Conjuro_Mantenimiento_Base rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</Conjuro_Mantenimiento_Base>
+        <Conjuro_Mantenimiento_Diario rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</Conjuro_Mantenimiento_Diario>
+        <Conjuro_Mantenimiento_Intermedio rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25</Conjuro_Mantenimiento_Intermedio>
+        <Conjuro_Nivel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">86</Conjuro_Nivel>
+        <Conjuro_Zeon_Arcano rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">320</Conjuro_Zeon_Arcano>
+        <Conjuro_Zeon_Avanzado rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">280</Conjuro_Zeon_Avanzado>
+        <Conjuro_Zeon_Base rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">200</Conjuro_Zeon_Base>
+        <Conjuro_Zeon_Intermedio rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">240</Conjuro_Zeon_Intermedio>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 86 
 Acción: Activa 
 Tipo: Automático
@@ -8714,6 +8763,22 @@ Mantenimiento: 5 / 10 / 10 / 15</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Barrera_de_Piedra">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Libro_Tierra"/>
+        <Conjuro_Acción rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Conjuro_Activo"/>
+        <Conjuro_Tipo rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Conjuro_Defensa"/>
+        <Conjuro_Int_Arcano rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</Conjuro_Int_Arcano>
+        <Conjuro_Int_Avanzado rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</Conjuro_Int_Avanzado>
+        <Conjuro_Int_Base rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</Conjuro_Int_Base>
+        <Conjuro_Int_Intermedio rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</Conjuro_Int_Intermedio>
+        <Conjuro_Mantenimiento_Arcano rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</Conjuro_Mantenimiento_Arcano>
+        <Conjuro_Mantenimiento_Avanzado rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25</Conjuro_Mantenimiento_Avanzado>
+        <Conjuro_Mantenimiento_Base rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Conjuro_Mantenimiento_Base>
+        <Conjuro_Mantenimiento_Diario rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</Conjuro_Mantenimiento_Diario>
+        <Conjuro_Mantenimiento_Intermedio rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</Conjuro_Mantenimiento_Intermedio>
+        <Conjuro_Nivel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</Conjuro_Nivel>
+        <Conjuro_Zeon_Arcano rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">300</Conjuro_Zeon_Arcano>
+        <Conjuro_Zeon_Avanzado rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">240</Conjuro_Zeon_Avanzado>
+        <Conjuro_Zeon_Base rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">60</Conjuro_Zeon_Base>
+        <Conjuro_Zeon_Intermedio rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">160</Conjuro_Zeon_Intermedio>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 20 
 Acción: Activa 
 Tipo: Defensa
@@ -11854,6 +11919,23 @@ Vías Cerradas: Ninguna</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Control_Atómico">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Libro_Tierra"/>
+        <Conjuro_Acción rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Conjuro_Activo"/>
+        <Conjuro_Gnosis rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Magia_Divina"/>
+        <Conjuro_Tipo rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Conjuro_Automático"/>
+        <Conjuro_Int_Arcano rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">18</Conjuro_Int_Arcano>
+        <Conjuro_Int_Avanzado rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</Conjuro_Int_Avanzado>
+        <Conjuro_Int_Base rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</Conjuro_Int_Base>
+        <Conjuro_Int_Intermedio rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</Conjuro_Int_Intermedio>
+        <Conjuro_Mantenimiento_Arcano rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">160</Conjuro_Mantenimiento_Arcano>
+        <Conjuro_Mantenimiento_Avanzado rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">120</Conjuro_Mantenimiento_Avanzado>
+        <Conjuro_Mantenimiento_Base rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">45</Conjuro_Mantenimiento_Base>
+        <Conjuro_Mantenimiento_Diario rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</Conjuro_Mantenimiento_Diario>
+        <Conjuro_Mantenimiento_Intermedio rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">80</Conjuro_Mantenimiento_Intermedio>
+        <Conjuro_Nivel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100</Conjuro_Nivel>
+        <Conjuro_Zeon_Arcano rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1600</Conjuro_Zeon_Arcano>
+        <Conjuro_Zeon_Avanzado rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1200</Conjuro_Zeon_Avanzado>
+        <Conjuro_Zeon_Base rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">450</Conjuro_Zeon_Base>
+        <Conjuro_Zeon_Intermedio rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">800</Conjuro_Zeon_Intermedio>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 100 
 Acción: Activa 
 Tipo: Automático
@@ -11914,6 +11996,22 @@ Mantenimiento: 25 / 40 / 50 / 60 Diario</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Control_Magnético">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Libro_Tierra"/>
+        <Conjuro_Acción rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Conjuro_Activo"/>
+        <Conjuro_Tipo rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Conjuro_Efecto"/>
+        <Conjuro_Int_Arcano rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</Conjuro_Int_Arcano>
+        <Conjuro_Int_Avanzado rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</Conjuro_Int_Avanzado>
+        <Conjuro_Int_Base rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</Conjuro_Int_Base>
+        <Conjuro_Int_Intermedio rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</Conjuro_Int_Intermedio>
+        <Conjuro_Mantenimiento_Arcano rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</Conjuro_Mantenimiento_Arcano>
+        <Conjuro_Mantenimiento_Avanzado rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25</Conjuro_Mantenimiento_Avanzado>
+        <Conjuro_Mantenimiento_Base rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Conjuro_Mantenimiento_Base>
+        <Conjuro_Mantenimiento_Diario rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</Conjuro_Mantenimiento_Diario>
+        <Conjuro_Mantenimiento_Intermedio rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</Conjuro_Mantenimiento_Intermedio>
+        <Conjuro_Nivel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">46</Conjuro_Nivel>
+        <Conjuro_Zeon_Arcano rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">320</Conjuro_Zeon_Arcano>
+        <Conjuro_Zeon_Avanzado rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">240</Conjuro_Zeon_Avanzado>
+        <Conjuro_Zeon_Base rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100</Conjuro_Zeon_Base>
+        <Conjuro_Zeon_Intermedio rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">180</Conjuro_Zeon_Intermedio>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 46 
 Acción: Activa 
 Tipo: Efecto
@@ -11948,6 +12046,23 @@ Descripción: El psíquico obtiene un control absoluto sobre la voluntad de un s
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Control_Mineral">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Libro_Tierra"/>
+        <Conjuro_Acción rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Conjuro_Activo"/>
+        <Conjuro_Tipo rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Conjuro_Anímico"/>
+        <Conjuro_Tipo rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Conjuro_Efecto"/>
+        <Conjuro_Int_Arcano rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</Conjuro_Int_Arcano>
+        <Conjuro_Int_Avanzado rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Conjuro_Int_Avanzado>
+        <Conjuro_Int_Base rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</Conjuro_Int_Base>
+        <Conjuro_Int_Intermedio rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</Conjuro_Int_Intermedio>
+        <Conjuro_Mantenimiento_Arcano rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</Conjuro_Mantenimiento_Arcano>
+        <Conjuro_Mantenimiento_Avanzado rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Conjuro_Mantenimiento_Avanzado>
+        <Conjuro_Mantenimiento_Base rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</Conjuro_Mantenimiento_Base>
+        <Conjuro_Mantenimiento_Diario rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</Conjuro_Mantenimiento_Diario>
+        <Conjuro_Mantenimiento_Intermedio rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Conjuro_Mantenimiento_Intermedio>
+        <Conjuro_Nivel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</Conjuro_Nivel>
+        <Conjuro_Zeon_Arcano rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">140</Conjuro_Zeon_Arcano>
+        <Conjuro_Zeon_Avanzado rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100</Conjuro_Zeon_Avanzado>
+        <Conjuro_Zeon_Base rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</Conjuro_Zeon_Base>
+        <Conjuro_Zeon_Intermedio rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">60</Conjuro_Zeon_Intermedio>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 6 
 Acción: Activa 
 Tipo: Efecto, Anímico
@@ -12142,6 +12257,23 @@ Mantenimiento: 10 / 20 / 25 / 35</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Control_de_la_Gravedad">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Libro_Tierra"/>
+        <Conjuro_Acción rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Conjuro_Activo"/>
+        <Conjuro_Gnosis rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Magia_Divina"/>
+        <Conjuro_Tipo rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Conjuro_Efecto"/>
+        <Conjuro_Int_Arcano rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">18</Conjuro_Int_Arcano>
+        <Conjuro_Int_Avanzado rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</Conjuro_Int_Avanzado>
+        <Conjuro_Int_Base rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</Conjuro_Int_Base>
+        <Conjuro_Int_Intermedio rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</Conjuro_Int_Intermedio>
+        <Conjuro_Mantenimiento_Arcano rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">160</Conjuro_Mantenimiento_Arcano>
+        <Conjuro_Mantenimiento_Avanzado rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">130</Conjuro_Mantenimiento_Avanzado>
+        <Conjuro_Mantenimiento_Base rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">70</Conjuro_Mantenimiento_Base>
+        <Conjuro_Mantenimiento_Diario rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</Conjuro_Mantenimiento_Diario>
+        <Conjuro_Mantenimiento_Intermedio rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100</Conjuro_Mantenimiento_Intermedio>
+        <Conjuro_Nivel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">92</Conjuro_Nivel>
+        <Conjuro_Zeon_Arcano rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">800</Conjuro_Zeon_Arcano>
+        <Conjuro_Zeon_Avanzado rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">650</Conjuro_Zeon_Avanzado>
+        <Conjuro_Zeon_Base rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">350</Conjuro_Zeon_Base>
+        <Conjuro_Zeon_Intermedio rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">500</Conjuro_Zeon_Intermedio>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 92 
 Acción: Activa 
 Tipo: Efecto
@@ -12458,6 +12590,22 @@ Descripción: Controla el crecimiento y el tamaño de un fuego que no tenga más
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Coraza">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Libro_Tierra"/>
+        <Conjuro_Acción rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Conjuro_Activo"/>
+        <Conjuro_Tipo rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Conjuro_Efecto"/>
+        <Conjuro_Int_Arcano rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</Conjuro_Int_Arcano>
+        <Conjuro_Int_Avanzado rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</Conjuro_Int_Avanzado>
+        <Conjuro_Int_Base rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</Conjuro_Int_Base>
+        <Conjuro_Int_Intermedio rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Conjuro_Int_Intermedio>
+        <Conjuro_Mantenimiento_Arcano rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Conjuro_Mantenimiento_Arcano>
+        <Conjuro_Mantenimiento_Avanzado rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Conjuro_Mantenimiento_Avanzado>
+        <Conjuro_Mantenimiento_Base rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</Conjuro_Mantenimiento_Base>
+        <Conjuro_Mantenimiento_Diario rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</Conjuro_Mantenimiento_Diario>
+        <Conjuro_Mantenimiento_Intermedio rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</Conjuro_Mantenimiento_Intermedio>
+        <Conjuro_Nivel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">26</Conjuro_Nivel>
+        <Conjuro_Zeon_Arcano rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">140</Conjuro_Zeon_Arcano>
+        <Conjuro_Zeon_Avanzado rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">120</Conjuro_Zeon_Avanzado>
+        <Conjuro_Zeon_Base rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">80</Conjuro_Zeon_Base>
+        <Conjuro_Zeon_Intermedio rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100</Conjuro_Zeon_Intermedio>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 26 
 Acción: Activa 
 Tipo: Efecto
@@ -12606,6 +12754,22 @@ Mantenimiento: 5 / 10 / 10 / 15</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Creación_Mineral">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Libro_Tierra"/>
+        <Conjuro_Acción rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Conjuro_Activo"/>
+        <Conjuro_Tipo rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Conjuro_Efecto"/>
+        <Conjuro_Int_Arcano rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</Conjuro_Int_Arcano>
+        <Conjuro_Int_Avanzado rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</Conjuro_Int_Avanzado>
+        <Conjuro_Int_Base rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</Conjuro_Int_Base>
+        <Conjuro_Int_Intermedio rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Conjuro_Int_Intermedio>
+        <Conjuro_Mantenimiento_Arcano rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</Conjuro_Mantenimiento_Arcano>
+        <Conjuro_Mantenimiento_Avanzado rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25</Conjuro_Mantenimiento_Avanzado>
+        <Conjuro_Mantenimiento_Base rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</Conjuro_Mantenimiento_Base>
+        <Conjuro_Mantenimiento_Diario rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</Conjuro_Mantenimiento_Diario>
+        <Conjuro_Mantenimiento_Intermedio rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</Conjuro_Mantenimiento_Intermedio>
+        <Conjuro_Nivel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">70</Conjuro_Nivel>
+        <Conjuro_Zeon_Arcano rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">300</Conjuro_Zeon_Arcano>
+        <Conjuro_Zeon_Avanzado rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">240</Conjuro_Zeon_Avanzado>
+        <Conjuro_Zeon_Base rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">120</Conjuro_Zeon_Base>
+        <Conjuro_Zeon_Intermedio rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">180</Conjuro_Zeon_Intermedio>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 70 
 Acción: Activa 
 Tipo: Efecto
@@ -12984,6 +13148,23 @@ Descripción: Crea intensidades de fuego o aumenta en la misma cantidad una llam
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Crear_Gólem">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Libro_Tierra"/>
+        <Conjuro_Acción rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Conjuro_Activo"/>
+        <Conjuro_Gnosis rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Magia_Alta"/>
+        <Conjuro_Tipo rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Conjuro_Efecto"/>
+        <Conjuro_Int_Arcano rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</Conjuro_Int_Arcano>
+        <Conjuro_Int_Avanzado rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</Conjuro_Int_Avanzado>
+        <Conjuro_Int_Base rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Conjuro_Int_Base>
+        <Conjuro_Int_Intermedio rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</Conjuro_Int_Intermedio>
+        <Conjuro_Mantenimiento_Arcano rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">140</Conjuro_Mantenimiento_Arcano>
+        <Conjuro_Mantenimiento_Avanzado rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100</Conjuro_Mantenimiento_Avanzado>
+        <Conjuro_Mantenimiento_Base rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</Conjuro_Mantenimiento_Base>
+        <Conjuro_Mantenimiento_Diario rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</Conjuro_Mantenimiento_Diario>
+        <Conjuro_Mantenimiento_Intermedio rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">70</Conjuro_Mantenimiento_Intermedio>
+        <Conjuro_Nivel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">82</Conjuro_Nivel>
+        <Conjuro_Zeon_Arcano rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">700</Conjuro_Zeon_Arcano>
+        <Conjuro_Zeon_Avanzado rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">500</Conjuro_Zeon_Avanzado>
+        <Conjuro_Zeon_Base rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">250</Conjuro_Zeon_Base>
+        <Conjuro_Zeon_Intermedio rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">350</Conjuro_Zeon_Intermedio>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 82 
 Acción: Activa 
 Tipo: Efecto
@@ -13867,6 +14048,22 @@ Mantenimiento: 10 / 10 / 15 / 15 Diario</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Cuerpo_Sólido">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Libro_Tierra"/>
+        <Conjuro_Acción rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Conjuro_Activo"/>
+        <Conjuro_Tipo rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Conjuro_Efecto"/>
+        <Conjuro_Int_Arcano rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</Conjuro_Int_Arcano>
+        <Conjuro_Int_Avanzado rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</Conjuro_Int_Avanzado>
+        <Conjuro_Int_Base rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</Conjuro_Int_Base>
+        <Conjuro_Int_Intermedio rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</Conjuro_Int_Intermedio>
+        <Conjuro_Mantenimiento_Arcano rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</Conjuro_Mantenimiento_Arcano>
+        <Conjuro_Mantenimiento_Avanzado rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</Conjuro_Mantenimiento_Avanzado>
+        <Conjuro_Mantenimiento_Base rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Conjuro_Mantenimiento_Base>
+        <Conjuro_Mantenimiento_Diario rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</Conjuro_Mantenimiento_Diario>
+        <Conjuro_Mantenimiento_Intermedio rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</Conjuro_Mantenimiento_Intermedio>
+        <Conjuro_Nivel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">52</Conjuro_Nivel>
+        <Conjuro_Zeon_Arcano rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">160</Conjuro_Zeon_Arcano>
+        <Conjuro_Zeon_Avanzado rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">140</Conjuro_Zeon_Avanzado>
+        <Conjuro_Zeon_Base rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100</Conjuro_Zeon_Base>
+        <Conjuro_Zeon_Intermedio rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">120</Conjuro_Zeon_Intermedio>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 52 
 Acción: Activa 
 Tipo: Efecto
@@ -15004,6 +15201,22 @@ Descripción: Este poder destroza un cuerpo, haciéndolo estallar en pedazos des
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Destrucción_Gravitacional">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Libro_Tierra"/>
+        <Conjuro_Acción rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Conjuro_Activo"/>
+        <Conjuro_Tipo rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Conjuro_Automático"/>
+        <Conjuro_Int_Arcano rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">17</Conjuro_Int_Arcano>
+        <Conjuro_Int_Avanzado rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</Conjuro_Int_Avanzado>
+        <Conjuro_Int_Base rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</Conjuro_Int_Base>
+        <Conjuro_Int_Intermedio rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</Conjuro_Int_Intermedio>
+        <Conjuro_Mantenimiento_Arcano rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">40</Conjuro_Mantenimiento_Arcano>
+        <Conjuro_Mantenimiento_Avanzado rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">35</Conjuro_Mantenimiento_Avanzado>
+        <Conjuro_Mantenimiento_Base rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</Conjuro_Mantenimiento_Base>
+        <Conjuro_Mantenimiento_Diario rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</Conjuro_Mantenimiento_Diario>
+        <Conjuro_Mantenimiento_Intermedio rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25</Conjuro_Mantenimiento_Intermedio>
+        <Conjuro_Nivel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">80</Conjuro_Nivel>
+        <Conjuro_Zeon_Arcano rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">400</Conjuro_Zeon_Arcano>
+        <Conjuro_Zeon_Avanzado rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">320</Conjuro_Zeon_Avanzado>
+        <Conjuro_Zeon_Base rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">180</Conjuro_Zeon_Base>
+        <Conjuro_Zeon_Intermedio rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">250</Conjuro_Zeon_Intermedio>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 80 
 Acción: Activa 
 Tipo: Automático
@@ -15979,6 +16192,19 @@ Mantenimiento: 10 / 15 / 20 / 20 Diario</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Detectar_Minerales">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Libro_Tierra"/>
+        <Conjuro_Acción rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Conjuro_Activo"/>
+        <Conjuro_Tipo rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Conjuro_Detección"/>
+        <Conjuro_Int_Arcano rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</Conjuro_Int_Arcano>
+        <Conjuro_Int_Avanzado rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Conjuro_Int_Avanzado>
+        <Conjuro_Int_Base rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</Conjuro_Int_Base>
+        <Conjuro_Int_Intermedio rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</Conjuro_Int_Intermedio>
+        <Conjuro_Mantenimiento_Base rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</Conjuro_Mantenimiento_Base>
+        <Conjuro_Mantenimiento_Diario rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</Conjuro_Mantenimiento_Diario>
+        <Conjuro_Nivel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Conjuro_Nivel>
+        <Conjuro_Zeon_Arcano rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">140</Conjuro_Zeon_Arcano>
+        <Conjuro_Zeon_Avanzado rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100</Conjuro_Zeon_Avanzado>
+        <Conjuro_Zeon_Base rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</Conjuro_Zeon_Base>
+        <Conjuro_Zeon_Intermedio rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">60</Conjuro_Zeon_Intermedio>
         <rdfs:comment>Nivel: 2 
 Acción: Activa 
 Tipo: Detección
@@ -17688,6 +17914,19 @@ Vías Cerradas: Creación</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Erudición_del_Terreno">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Libro_Tierra"/>
+        <Conjuro_Acción rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Conjuro_Activo"/>
+        <Conjuro_Tipo rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Conjuro_Efecto"/>
+        <Conjuro_Int_Arcano rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</Conjuro_Int_Arcano>
+        <Conjuro_Int_Avanzado rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</Conjuro_Int_Avanzado>
+        <Conjuro_Int_Base rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</Conjuro_Int_Base>
+        <Conjuro_Int_Intermedio rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Conjuro_Int_Intermedio>
+        <Conjuro_Mantenimiento_Base rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</Conjuro_Mantenimiento_Base>
+        <Conjuro_Mantenimiento_Diario rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</Conjuro_Mantenimiento_Diario>
+        <Conjuro_Nivel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">72</Conjuro_Nivel>
+        <Conjuro_Zeon_Arcano rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">450</Conjuro_Zeon_Arcano>
+        <Conjuro_Zeon_Avanzado rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">360</Conjuro_Zeon_Avanzado>
+        <Conjuro_Zeon_Base rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">120</Conjuro_Zeon_Base>
+        <Conjuro_Zeon_Intermedio rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">270</Conjuro_Zeon_Intermedio>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 72 
 Acción: Activa
 Tipo: Efecto
@@ -17949,6 +18188,22 @@ Mantenimiento: 5 / 15 / 20 / 25</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Escudo_Magnético">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Libro_Tierra"/>
+        <Conjuro_Acción rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Conjuro_Pasivo"/>
+        <Conjuro_Tipo rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Conjuro_Defensa"/>
+        <Conjuro_Int_Arcano rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</Conjuro_Int_Arcano>
+        <Conjuro_Int_Avanzado rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</Conjuro_Int_Avanzado>
+        <Conjuro_Int_Base rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</Conjuro_Int_Base>
+        <Conjuro_Int_Intermedio rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</Conjuro_Int_Intermedio>
+        <Conjuro_Mantenimiento_Arcano rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</Conjuro_Mantenimiento_Arcano>
+        <Conjuro_Mantenimiento_Avanzado rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Conjuro_Mantenimiento_Avanzado>
+        <Conjuro_Mantenimiento_Base rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</Conjuro_Mantenimiento_Base>
+        <Conjuro_Mantenimiento_Diario rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</Conjuro_Mantenimiento_Diario>
+        <Conjuro_Mantenimiento_Intermedio rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Conjuro_Mantenimiento_Intermedio>
+        <Conjuro_Nivel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</Conjuro_Nivel>
+        <Conjuro_Zeon_Arcano rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">160</Conjuro_Zeon_Arcano>
+        <Conjuro_Zeon_Avanzado rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">120</Conjuro_Zeon_Avanzado>
+        <Conjuro_Zeon_Base rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</Conjuro_Zeon_Base>
+        <Conjuro_Zeon_Intermedio rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">90</Conjuro_Zeon_Intermedio>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 30 
 Acción: Pasiva 
 Tipo: Defensa
@@ -18606,6 +18861,19 @@ Vías Cerradas: Tierra, Agua</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Espina_de_la_Tierra">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Libro_Tierra"/>
+        <Conjuro_Acción rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Conjuro_Activo"/>
+        <Conjuro_Tipo rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Conjuro_Ataque"/>
+        <Conjuro_Int_Arcano rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</Conjuro_Int_Arcano>
+        <Conjuro_Int_Avanzado rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</Conjuro_Int_Avanzado>
+        <Conjuro_Int_Base rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</Conjuro_Int_Base>
+        <Conjuro_Int_Intermedio rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Conjuro_Int_Intermedio>
+        <Conjuro_Mantenimiento_Base rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</Conjuro_Mantenimiento_Base>
+        <Conjuro_Mantenimiento_Diario rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</Conjuro_Mantenimiento_Diario>
+        <Conjuro_Nivel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">36</Conjuro_Nivel>
+        <Conjuro_Zeon_Arcano rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">200</Conjuro_Zeon_Arcano>
+        <Conjuro_Zeon_Avanzado rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</Conjuro_Zeon_Avanzado>
+        <Conjuro_Zeon_Base rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">80</Conjuro_Zeon_Base>
+        <Conjuro_Zeon_Intermedio rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">120</Conjuro_Zeon_Intermedio>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 36 
 Acción: Activa 
 Tipo: Ataque
@@ -19105,6 +19373,22 @@ Mantenimiento: No</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Firmeza">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Libro_Tierra"/>
+        <Conjuro_Acción rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Conjuro_Activo"/>
+        <Conjuro_Tipo rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Conjuro_Efecto"/>
+        <Conjuro_Int_Arcano rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</Conjuro_Int_Arcano>
+        <Conjuro_Int_Avanzado rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</Conjuro_Int_Avanzado>
+        <Conjuro_Int_Base rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</Conjuro_Int_Base>
+        <Conjuro_Int_Intermedio rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</Conjuro_Int_Intermedio>
+        <Conjuro_Mantenimiento_Arcano rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</Conjuro_Mantenimiento_Arcano>
+        <Conjuro_Mantenimiento_Avanzado rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</Conjuro_Mantenimiento_Avanzado>
+        <Conjuro_Mantenimiento_Base rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</Conjuro_Mantenimiento_Base>
+        <Conjuro_Mantenimiento_Diario rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</Conjuro_Mantenimiento_Diario>
+        <Conjuro_Mantenimiento_Intermedio rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Conjuro_Mantenimiento_Intermedio>
+        <Conjuro_Nivel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</Conjuro_Nivel>
+        <Conjuro_Zeon_Arcano rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">160</Conjuro_Zeon_Arcano>
+        <Conjuro_Zeon_Avanzado rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">120</Conjuro_Zeon_Avanzado>
+        <Conjuro_Zeon_Base rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</Conjuro_Zeon_Base>
+        <Conjuro_Zeon_Intermedio rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">80</Conjuro_Zeon_Intermedio>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 16 
 Acción: Activa 
 Tipo: Efecto
@@ -19280,6 +19564,19 @@ equipamiento. Efectos: Esta ventaja proporciona una cantidad de dinero inicial o
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Forja">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Libro_Tierra"/>
+        <Conjuro_Acción rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Conjuro_Activo"/>
+        <Conjuro_Tipo rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Conjuro_Efecto"/>
+        <Conjuro_Int_Arcano rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</Conjuro_Int_Arcano>
+        <Conjuro_Int_Avanzado rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</Conjuro_Int_Avanzado>
+        <Conjuro_Int_Base rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</Conjuro_Int_Base>
+        <Conjuro_Int_Intermedio rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</Conjuro_Int_Intermedio>
+        <Conjuro_Mantenimiento_Base rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</Conjuro_Mantenimiento_Base>
+        <Conjuro_Mantenimiento_Diario rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</Conjuro_Mantenimiento_Diario>
+        <Conjuro_Nivel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</Conjuro_Nivel>
+        <Conjuro_Zeon_Arcano rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">450</Conjuro_Zeon_Arcano>
+        <Conjuro_Zeon_Avanzado rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">360</Conjuro_Zeon_Avanzado>
+        <Conjuro_Zeon_Base rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">160</Conjuro_Zeon_Base>
+        <Conjuro_Zeon_Intermedio rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">270</Conjuro_Zeon_Intermedio>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 50 
 Acción: Activa 
 Tipo: Efecto
@@ -19881,6 +20178,19 @@ Bono: Ninguno.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Grieta">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Libro_Tierra"/>
+        <Conjuro_Acción rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Conjuro_Activo"/>
+        <Conjuro_Tipo rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Conjuro_Efecto"/>
+        <Conjuro_Int_Arcano rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</Conjuro_Int_Arcano>
+        <Conjuro_Int_Avanzado rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</Conjuro_Int_Avanzado>
+        <Conjuro_Int_Base rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</Conjuro_Int_Base>
+        <Conjuro_Int_Intermedio rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Conjuro_Int_Intermedio>
+        <Conjuro_Mantenimiento_Base rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</Conjuro_Mantenimiento_Base>
+        <Conjuro_Mantenimiento_Diario rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</Conjuro_Mantenimiento_Diario>
+        <Conjuro_Nivel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">62</Conjuro_Nivel>
+        <Conjuro_Zeon_Arcano rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">300</Conjuro_Zeon_Arcano>
+        <Conjuro_Zeon_Avanzado rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">250</Conjuro_Zeon_Avanzado>
+        <Conjuro_Zeon_Base rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</Conjuro_Zeon_Base>
+        <Conjuro_Zeon_Intermedio rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">200</Conjuro_Zeon_Intermedio>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 62 
 Acción: Activa 
 Tipo: Efecto
@@ -22021,6 +22331,22 @@ Vías Cerradas: Agua</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Invertir_la_Gravedad">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Libro_Tierra"/>
+        <Conjuro_Acción rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Conjuro_Activo"/>
+        <Conjuro_Tipo rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Conjuro_Automático"/>
+        <Conjuro_Int_Arcano rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</Conjuro_Int_Arcano>
+        <Conjuro_Int_Avanzado rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</Conjuro_Int_Avanzado>
+        <Conjuro_Int_Base rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Conjuro_Int_Base>
+        <Conjuro_Int_Intermedio rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</Conjuro_Int_Intermedio>
+        <Conjuro_Mantenimiento_Arcano rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">65</Conjuro_Mantenimiento_Arcano>
+        <Conjuro_Mantenimiento_Avanzado rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">60</Conjuro_Mantenimiento_Avanzado>
+        <Conjuro_Mantenimiento_Base rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">40</Conjuro_Mantenimiento_Base>
+        <Conjuro_Mantenimiento_Diario rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</Conjuro_Mantenimiento_Diario>
+        <Conjuro_Mantenimiento_Intermedio rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</Conjuro_Mantenimiento_Intermedio>
+        <Conjuro_Nivel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">66</Conjuro_Nivel>
+        <Conjuro_Zeon_Arcano rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">320</Conjuro_Zeon_Arcano>
+        <Conjuro_Zeon_Avanzado rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">280</Conjuro_Zeon_Avanzado>
+        <Conjuro_Zeon_Base rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">200</Conjuro_Zeon_Base>
+        <Conjuro_Zeon_Intermedio rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">240</Conjuro_Zeon_Intermedio>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 66 
 Acción: Activa 
 Tipo: Automático
@@ -22725,6 +23051,22 @@ Beneficio: 1</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Lentitud">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Libro_Tierra"/>
+        <Conjuro_Acción rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Conjuro_Activo"/>
+        <Conjuro_Tipo rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Conjuro_Anímico"/>
+        <Conjuro_Int_Arcano rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</Conjuro_Int_Arcano>
+        <Conjuro_Int_Avanzado rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</Conjuro_Int_Avanzado>
+        <Conjuro_Int_Base rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</Conjuro_Int_Base>
+        <Conjuro_Int_Intermedio rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</Conjuro_Int_Intermedio>
+        <Conjuro_Mantenimiento_Arcano rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</Conjuro_Mantenimiento_Arcano>
+        <Conjuro_Mantenimiento_Avanzado rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</Conjuro_Mantenimiento_Avanzado>
+        <Conjuro_Mantenimiento_Base rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Conjuro_Mantenimiento_Base>
+        <Conjuro_Mantenimiento_Diario rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</Conjuro_Mantenimiento_Diario>
+        <Conjuro_Mantenimiento_Intermedio rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Conjuro_Mantenimiento_Intermedio>
+        <Conjuro_Nivel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">22</Conjuro_Nivel>
+        <Conjuro_Zeon_Arcano rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</Conjuro_Zeon_Arcano>
+        <Conjuro_Zeon_Avanzado rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">120</Conjuro_Zeon_Avanzado>
+        <Conjuro_Zeon_Base rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">60</Conjuro_Zeon_Base>
+        <Conjuro_Zeon_Intermedio rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">90</Conjuro_Zeon_Intermedio>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 22 
 Acción: Activa 
 Tipo: Anímico
@@ -24212,6 +24554,20 @@ Mantenimiento: 10 / 10 / 15 / 20 Diario</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Meteoro">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Libro_Tierra"/>
+        <Conjuro_Acción rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Conjuro_Activo"/>
+        <Conjuro_Gnosis rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Magia_Alta"/>
+        <Conjuro_Tipo rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Conjuro_Ataque"/>
+        <Conjuro_Int_Arcano rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">17</Conjuro_Int_Arcano>
+        <Conjuro_Int_Avanzado rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</Conjuro_Int_Avanzado>
+        <Conjuro_Int_Base rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Conjuro_Int_Base>
+        <Conjuro_Int_Intermedio rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</Conjuro_Int_Intermedio>
+        <Conjuro_Mantenimiento_Base rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</Conjuro_Mantenimiento_Base>
+        <Conjuro_Mantenimiento_Diario rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</Conjuro_Mantenimiento_Diario>
+        <Conjuro_Nivel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">90</Conjuro_Nivel>
+        <Conjuro_Zeon_Arcano rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">450</Conjuro_Zeon_Arcano>
+        <Conjuro_Zeon_Avanzado rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">350</Conjuro_Zeon_Avanzado>
+        <Conjuro_Zeon_Base rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">200</Conjuro_Zeon_Base>
+        <Conjuro_Zeon_Intermedio rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">250</Conjuro_Zeon_Intermedio>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 90 
 Acción: Activa 
 Tipo: Ataque
@@ -26506,6 +26862,22 @@ Mantenimiento: No</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Petrificar">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Libro_Tierra"/>
+        <Conjuro_Acción rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Conjuro_Activo"/>
+        <Conjuro_Tipo rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Conjuro_Anímico"/>
+        <Conjuro_Int_Arcano rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</Conjuro_Int_Arcano>
+        <Conjuro_Int_Avanzado rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</Conjuro_Int_Avanzado>
+        <Conjuro_Int_Base rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</Conjuro_Int_Base>
+        <Conjuro_Int_Intermedio rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Conjuro_Int_Intermedio>
+        <Conjuro_Mantenimiento_Arcano rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</Conjuro_Mantenimiento_Arcano>
+        <Conjuro_Mantenimiento_Avanzado rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</Conjuro_Mantenimiento_Avanzado>
+        <Conjuro_Mantenimiento_Base rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Conjuro_Mantenimiento_Base>
+        <Conjuro_Mantenimiento_Diario rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</Conjuro_Mantenimiento_Diario>
+        <Conjuro_Mantenimiento_Intermedio rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Conjuro_Mantenimiento_Intermedio>
+        <Conjuro_Nivel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">60</Conjuro_Nivel>
+        <Conjuro_Zeon_Arcano rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">320</Conjuro_Zeon_Arcano>
+        <Conjuro_Zeon_Avanzado rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">260</Conjuro_Zeon_Avanzado>
+        <Conjuro_Zeon_Base rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">140</Conjuro_Zeon_Base>
+        <Conjuro_Zeon_Intermedio rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">200</Conjuro_Zeon_Intermedio>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 60 
 Acción: Activa 
 Tipo: Anímico
@@ -28388,6 +28760,22 @@ Coste: 2</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Resistencia_Tierra">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Libro_Tierra"/>
+        <Conjuro_Acción rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Conjuro_Activo"/>
+        <Conjuro_Tipo rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Conjuro_Efecto"/>
+        <Conjuro_Int_Arcano rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</Conjuro_Int_Arcano>
+        <Conjuro_Int_Avanzado rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</Conjuro_Int_Avanzado>
+        <Conjuro_Int_Base rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</Conjuro_Int_Base>
+        <Conjuro_Int_Intermedio rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Conjuro_Int_Intermedio>
+        <Conjuro_Mantenimiento_Arcano rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</Conjuro_Mantenimiento_Arcano>
+        <Conjuro_Mantenimiento_Avanzado rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25</Conjuro_Mantenimiento_Avanzado>
+        <Conjuro_Mantenimiento_Base rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Conjuro_Mantenimiento_Base>
+        <Conjuro_Mantenimiento_Diario rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</Conjuro_Mantenimiento_Diario>
+        <Conjuro_Mantenimiento_Intermedio rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</Conjuro_Mantenimiento_Intermedio>
+        <Conjuro_Nivel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">56</Conjuro_Nivel>
+        <Conjuro_Zeon_Arcano rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">300</Conjuro_Zeon_Arcano>
+        <Conjuro_Zeon_Avanzado rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">240</Conjuro_Zeon_Avanzado>
+        <Conjuro_Zeon_Base rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100</Conjuro_Zeon_Base>
+        <Conjuro_Zeon_Intermedio rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">180</Conjuro_Zeon_Intermedio>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 56 
 Acción: Activa 
 Tipo: Efecto
@@ -28689,6 +29077,22 @@ Vías Cerradas: Ninguna</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Rotura">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Libro_Tierra"/>
+        <Conjuro_Acción rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Conjuro_Activo"/>
+        <Conjuro_Tipo rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Conjuro_Efecto"/>
+        <Conjuro_Int_Arcano rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</Conjuro_Int_Arcano>
+        <Conjuro_Int_Avanzado rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</Conjuro_Int_Avanzado>
+        <Conjuro_Int_Base rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</Conjuro_Int_Base>
+        <Conjuro_Int_Intermedio rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</Conjuro_Int_Intermedio>
+        <Conjuro_Mantenimiento_Arcano rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</Conjuro_Mantenimiento_Arcano>
+        <Conjuro_Mantenimiento_Avanzado rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</Conjuro_Mantenimiento_Avanzado>
+        <Conjuro_Mantenimiento_Base rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Conjuro_Mantenimiento_Base>
+        <Conjuro_Mantenimiento_Diario rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</Conjuro_Mantenimiento_Diario>
+        <Conjuro_Mantenimiento_Intermedio rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Conjuro_Mantenimiento_Intermedio>
+        <Conjuro_Nivel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">40</Conjuro_Nivel>
+        <Conjuro_Zeon_Arcano rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</Conjuro_Zeon_Arcano>
+        <Conjuro_Zeon_Avanzado rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">120</Conjuro_Zeon_Avanzado>
+        <Conjuro_Zeon_Base rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">60</Conjuro_Zeon_Base>
+        <Conjuro_Zeon_Intermedio rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">90</Conjuro_Zeon_Intermedio>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 40 
 Acción: Activa 
 Tipo: Efecto
@@ -30526,6 +30930,19 @@ Mantenimiento: No</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Telemetría_Tierra">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Libro_Tierra"/>
+        <Conjuro_Acción rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Conjuro_Activo"/>
+        <Conjuro_Tipo rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Conjuro_Efecto"/>
+        <Conjuro_Int_Arcano rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</Conjuro_Int_Arcano>
+        <Conjuro_Int_Avanzado rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</Conjuro_Int_Avanzado>
+        <Conjuro_Int_Base rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</Conjuro_Int_Base>
+        <Conjuro_Int_Intermedio rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</Conjuro_Int_Intermedio>
+        <Conjuro_Mantenimiento_Base rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</Conjuro_Mantenimiento_Base>
+        <Conjuro_Mantenimiento_Diario rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</Conjuro_Mantenimiento_Diario>
+        <Conjuro_Nivel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">42</Conjuro_Nivel>
+        <Conjuro_Zeon_Arcano rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">300</Conjuro_Zeon_Arcano>
+        <Conjuro_Zeon_Avanzado rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">240</Conjuro_Zeon_Avanzado>
+        <Conjuro_Zeon_Base rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">120</Conjuro_Zeon_Base>
+        <Conjuro_Zeon_Intermedio rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">180</Conjuro_Zeon_Intermedio>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 42 
 Acción: Activa 
 Tipo: Efecto
@@ -30697,6 +31114,22 @@ Vías Cerradas: Piedra</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Terremoto">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Libro_Tierra"/>
+        <Conjuro_Acción rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Conjuro_Activo"/>
+        <Conjuro_Tipo rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Conjuro_Efecto"/>
+        <Conjuro_Int_Arcano rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</Conjuro_Int_Arcano>
+        <Conjuro_Int_Avanzado rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</Conjuro_Int_Avanzado>
+        <Conjuro_Int_Base rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</Conjuro_Int_Base>
+        <Conjuro_Int_Intermedio rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Conjuro_Int_Intermedio>
+        <Conjuro_Mantenimiento_Arcano rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</Conjuro_Mantenimiento_Arcano>
+        <Conjuro_Mantenimiento_Avanzado rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25</Conjuro_Mantenimiento_Avanzado>
+        <Conjuro_Mantenimiento_Base rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</Conjuro_Mantenimiento_Base>
+        <Conjuro_Mantenimiento_Diario rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</Conjuro_Mantenimiento_Diario>
+        <Conjuro_Mantenimiento_Intermedio rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</Conjuro_Mantenimiento_Intermedio>
+        <Conjuro_Nivel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">76</Conjuro_Nivel>
+        <Conjuro_Zeon_Arcano rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">400</Conjuro_Zeon_Arcano>
+        <Conjuro_Zeon_Avanzado rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">300</Conjuro_Zeon_Avanzado>
+        <Conjuro_Zeon_Base rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</Conjuro_Zeon_Base>
+        <Conjuro_Zeon_Intermedio rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">200</Conjuro_Zeon_Intermedio>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 76 
 Acción: Activa 
 Tipo: Efecto
@@ -31157,6 +31590,22 @@ Mantenimiento: 10 / 10 / 15 / 15</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Transformar_Mineral">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Libro_Tierra"/>
+        <Conjuro_Acción rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Conjuro_Pasivo"/>
+        <Conjuro_Tipo rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Conjuro_Efecto"/>
+        <Conjuro_Int_Arcano rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</Conjuro_Int_Arcano>
+        <Conjuro_Int_Avanzado rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</Conjuro_Int_Avanzado>
+        <Conjuro_Int_Base rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</Conjuro_Int_Base>
+        <Conjuro_Int_Intermedio rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</Conjuro_Int_Intermedio>
+        <Conjuro_Mantenimiento_Arcano rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Conjuro_Mantenimiento_Arcano>
+        <Conjuro_Mantenimiento_Avanzado rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</Conjuro_Mantenimiento_Avanzado>
+        <Conjuro_Mantenimiento_Base rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</Conjuro_Mantenimiento_Base>
+        <Conjuro_Mantenimiento_Diario rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</Conjuro_Mantenimiento_Diario>
+        <Conjuro_Mantenimiento_Intermedio rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</Conjuro_Mantenimiento_Intermedio>
+        <Conjuro_Nivel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</Conjuro_Nivel>
+        <Conjuro_Zeon_Arcano rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">160</Conjuro_Zeon_Arcano>
+        <Conjuro_Zeon_Avanzado rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">120</Conjuro_Zeon_Avanzado>
+        <Conjuro_Zeon_Base rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">40</Conjuro_Zeon_Base>
+        <Conjuro_Zeon_Intermedio rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">80</Conjuro_Zeon_Intermedio>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 12 
 Acción: Pasiva 
 Tipo: Efecto
@@ -31666,6 +32115,23 @@ Mantenimiento: 90 / 115 / 130 / 145 Diario</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Uno_con_la_Tierra">
         <rdf:type rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Libro_Tierra"/>
+        <Conjuro_Acción rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Conjuro_Activo"/>
+        <Conjuro_Gnosis rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Magia_Divina"/>
+        <Conjuro_Tipo rdf:resource="urn:absolute:project_arpg/ontologies/anima_beyond_fantasy#Conjuro_Automático"/>
+        <Conjuro_Int_Arcano rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">18</Conjuro_Int_Arcano>
+        <Conjuro_Int_Avanzado rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</Conjuro_Int_Avanzado>
+        <Conjuro_Int_Base rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Conjuro_Int_Base>
+        <Conjuro_Int_Intermedio rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</Conjuro_Int_Intermedio>
+        <Conjuro_Mantenimiento_Arcano rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100</Conjuro_Mantenimiento_Arcano>
+        <Conjuro_Mantenimiento_Avanzado rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">60</Conjuro_Mantenimiento_Avanzado>
+        <Conjuro_Mantenimiento_Base rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</Conjuro_Mantenimiento_Base>
+        <Conjuro_Mantenimiento_Diario rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</Conjuro_Mantenimiento_Diario>
+        <Conjuro_Mantenimiento_Intermedio rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">45</Conjuro_Mantenimiento_Intermedio>
+        <Conjuro_Nivel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">96</Conjuro_Nivel>
+        <Conjuro_Zeon_Arcano rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1000</Conjuro_Zeon_Arcano>
+        <Conjuro_Zeon_Avanzado rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">600</Conjuro_Zeon_Avanzado>
+        <Conjuro_Zeon_Base rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">300</Conjuro_Zeon_Base>
+        <Conjuro_Zeon_Intermedio rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">450</Conjuro_Zeon_Intermedio>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nivel: 96 
 Acción: Activa 
 Tipo: Automático
