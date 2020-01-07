@@ -6,7 +6,10 @@ Problemas del proyecto
         2: Calcular requisitos que requieren valores numéricos de las habilidades
             -> Solución: Utilizar data properties en el personaje para indicar dichos valores
 
+        3: Introducir fichero de información del juego en el proyecto portable 
+            -> Solución: Introducir los ficheros como recursos empotrados al proyecto
+
 
 Posibles mejoras:
     - Añadir más información a la base de datos.
-    - Desarrollar la versión de escritorio
+    - Desarrollar la versión de escritorio: 
