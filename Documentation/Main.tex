@@ -17,18 +17,16 @@
 \usepackage{geometry}
 \usepackage{csquotes}
 \usepackage{ragged2e}
-\usepackage{longtable,tabularx,ltxtable, array}
+\usepackage{longtable,tabularx,ltxtable,array}
 \usepackage{multirow}
 \usepackage{booktabs}
-\usepackage[style=IEEE]{biblatex}
-
-\addbibresource{References.bib}
+\usepackage[dvipsnames]{xcolor}
 
 % Declaration of global commands
 \newcommand{\blankpage}
 {
     \newpage
-    \cleardoublepage
+    \cleardoublepage{}
     \thispagestyle{empty}
     \newpage
 }
@@ -39,12 +37,12 @@
 \newcommand{\proyecto}{Título del proyecto}
 \newcommand{\tipo}{Grado} % Grado / Máster %
 \newcommand{\titulo}{Ingeniería Informática}
-\newcommand{\titulacion}{\tipo en \titulo}
+\newcommand{\titulacion}{\tipo{} en \titulo}
 \newcommand{\dia}{día \textvisiblespace}
 \newcommand{\mes}{mes \textvisiblespace}
 \newcommand{\anno}{año}
-\newcommand{\fecha}{\mes \anno}
-\newcommand{\Fecha}{\dia de \mes de \anno}
+\newcommand{\fecha}{\mes{} \anno}
+\newcommand{\Fecha}{\dia{} de \mes{} de \anno}
 
 \newcommand{\lorem}
 {
@@ -70,7 +68,7 @@
 }
 {
     \end{center}
-    \restoregeometry 
+    \restoregeometry{} 
 }
 
 \begin{document}
@@ -84,12 +82,12 @@
             \Large \MakeUppercase{\titulacion} \\ \vspace{6cm}
             \LARGE \MakeUppercase{\textbf{\proyecto}} \\ \vspace{7cm}
             \Large \MakeUppercase{Autor: \autor} \\ \vspace{0.5cm}
-            Puerto Real, \fecha
+            Puerto Real, \fecha{}
         \end{center}
-        \restoregeometry
+        \restoregeometry{}
     \end{titlepage} % Fin de portada
 
-    \blankpage
+    \blankpage{}
 
         % Second Title Page %
     \begin{portada}
@@ -98,74 +96,74 @@
         \LARGE \MakeUppercase{\textbf{\proyecto}} \\ \vspace{7cm}
         \Large \MakeUppercase{Director: \director} \\
         \Large \MakeUppercase{Autor: \autor} \\ \vspace{0.5cm}
-        Puerto Real, \fecha  
+        Puerto Real, \fecha{}
     \end{portada}
 
-    \blankpage
+    \blankpage{}
     
     % Import Signature
     \input{Signature.tex}
-    \blankpage
+    \blankpage{}
     
     % Import Change History
     \input{Changehistory.tex}
-    \blankpage
+    \blankpage{}
     
     % Import Preface
     \input{Preface.tex}
-    \blankpage
+    \blankpage{}
 
     % Import Table of Contents
     % \tableofcontents
-    \blankpage
+    \blankpage{}
     
     % Import List of Figures
     % \listoffigures
-    \blankpage
+    \blankpage{}
     
     % Import List of Tables
     % \listoftables
-    \blankpage
+    \blankpage{}
     
     % Import Project Overview
     % \input{Overview.tex}
-    \blankpage
+    \blankpage{}
     
     % Import References
     % \input{References.bib}
-    \blankpage
+    \blankpage{}
     
     % Import Definitions
     % \input{Definitions.tex}
-    \blankpage
+    \blankpage{}
     
     % Import Project Context
     % \input{Context.tex}
-    \blankpage
+    \blankpage{}
     
     % Import Project Planning
     % \input{Planning.tex}
-    \blankpage
+    \blankpage{}
     
     % Import Project Assessment And Control
     % \input{Control.tex}
-    \blankpage
+    \blankpage{}
     
     % Import Product Delivery
     % \input{Delivery.tex}
-    \blankpage
+    \blankpage{}
     
     % Import Supporting Process Plans
     % \input{Support.tex}
-    \blankpage
+    \blankpage{}
     
     % Import Additional Plans
     % \input{Additional.tex}
-    \blankpage
+    \blankpage{}
     
     % Import Annexes
     % \input{Annexes.tex}
-    \blankpage
+    \blankpage{}
     
     % Import Index
     % \input{Index.tex}
