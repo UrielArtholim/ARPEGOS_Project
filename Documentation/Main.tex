@@ -20,9 +20,17 @@
 \usepackage{longtable,tabularx,ltxtable,array}
 \usepackage{multirow}
 \usepackage{booktabs}
+\usepackage{fancyhdr}
+%Options: Sonny, Lenny, Glenn, Conny, Rejne, Bjarne, Bjornstrup
+\usepackage[Sonny]{fncychap}
 \usepackage[dvipsnames]{xcolor}
 
+% Setting page numbering %
+
+
 % Declaration of global commands
+
+\newcommand{\net}{.NET}
 \newcommand{\blankpage}
 {
     \newpage
@@ -35,6 +43,7 @@
 \newcommand{\autor}{Alejandro Muñoz Del Álamo}
 \newcommand{\director}{D. Pablo García Sánchez}
 \newcommand{\proyecto}{Título del proyecto}
+\newcommand{\nombre}{ARPEGOS Project}
 \newcommand{\tipo}{Grado} % Grado / Máster %
 \newcommand{\titulo}{Ingeniería Informática}
 \newcommand{\titulacion}{\tipo{} en \titulo}
@@ -46,7 +55,7 @@
 
 \newcommand{\lorem}
 {
-    \\ Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
     Nullam maximus facilisis odio vel dignissim. Integer sed tincidunt neque. 
     Cras vitae nisi odio. Morbi in pellentesque nulla. 
     Nam sagittis leo nec ex ultricies, eget hendrerit velit tincidunt. 
@@ -58,6 +67,23 @@
     eget bibendum enim dolor non ligula. Lorem ipsum dolor sit amet, 
     consectetur adipiscing elit.
 }
+
+% Plain stylepage Definition %
+\fancypagestyle{plain}{\fancyhf{}}
+
+% Header Definition %
+\fancyhead[LE,RO]{}
+\fancyhead[LO,RE]{}
+\fancyhead[RE,LO]{}
+\fancyhead[RO,LE]{}
+
+
+% Footer Definition %
+\fancyfoot[LE,RO]{}
+\fancyfoot[LO,RE]{}
+\fancyfoot[RE,LO]{\textsl{\thepage}}
+\fancyfoot[RO,LE]{}
+\fancyfoot[C]{}
 
 % Environment Definition %
 \newenvironment{portada}
@@ -100,14 +126,15 @@
     \end{portada}
 
     \blankpage{}
-    
+    \frontmatter{}
+    \pagestyle{fancy}
     % Import Signature
     \input{Signature.tex}
-    \blankpage{}
+    %\blankpage{}
     
     % Import Change History
     \input{Changehistory.tex}
-    \blankpage{}
+    %\blankpage{}
     
     % Import Preface
     \input{Preface.tex}
@@ -124,48 +151,15 @@
     % Import List of Tables
     % \listoftables
     \blankpage{}
+    \mainmatter{}
     
-    % Import Project Overview
-    % \input{Overview.tex}
+    % Import Project Introduction
+    \input{Introduction.tex}
     \blankpage{}
-    
-    % Import References
-    % \input{References.bib}
+
+    % Import Basic Concepts
+    \input{Basic_Concepts.tex}
     \blankpage{}
-    
-    % Import Definitions
-    % \input{Definitions.tex}
-    \blankpage{}
-    
-    % Import Project Context
-    % \input{Context.tex}
-    \blankpage{}
-    
-    % Import Project Planning
-    % \input{Planning.tex}
-    \blankpage{}
-    
-    % Import Project Assessment And Control
-    % \input{Control.tex}
-    \blankpage{}
-    
-    % Import Product Delivery
-    % \input{Delivery.tex}
-    \blankpage{}
-    
-    % Import Supporting Process Plans
-    % \input{Support.tex}
-    \blankpage{}
-    
-    % Import Additional Plans
-    % \input{Additional.tex}
-    \blankpage{}
-    
-    % Import Annexes
-    % \input{Annexes.tex}
-    \blankpage{}
-    
-    % Import Index
-    % \input{Index.tex}
+
     
 \end{document}
