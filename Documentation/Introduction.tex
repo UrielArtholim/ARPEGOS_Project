@@ -6,20 +6,123 @@
 
 % Project Overview File %
 
-\part{Prolegómeno} 
+
+\part{Prolegómeno}
 
 \chapter{Introducción}
-\thispagestyle{fancy}
+\thispagestyle{chapterpage}
 
 \section{Motivación}
-\lorem{} % To do 
+El sector de los juegos de rol está creciendo a pasos 
+agigantados. Hoy en día existe un extensísimo 
+catálogo de juegos de rol, que varían en función de la 
+ambientación del ``universo'' en el que nos sumergimos. Por 
+ejemplo, \textit{Dragones y Mazmorras} utiliza una 
+ambientación medieval con elementos fantásticos, tales como 
+magia y dragones, mientras que \textit{Warhammer 40.000} 
+está basado en un futuro distópico en el que se mezclan 
+elementos de ciencia ficción con elementos de fantasía 
+heroica. \medskip
+
+Debido a la expansión de este sector, y gracias al avance 
+de la tecnología, podemos encontrar un sinfín de aplicaciones 
+que tratan de mejorar la experiencia de los jugadores, 
+desde juegos de mesa que hacen uso de sistemas de 
+reproducción (\textit{CD}, \textit{DVD}, 
+\textit{Blu-Ray}) para hacer del juego una experiencia 
+interactiva (\textit{Atmosfear}, \textit{Piratas
+del Caribe: El Cofre del Hombre Muerto}, \textit{Trivial 
+Pursuit}, \textit{Cluedo}), hasta juegos de rol completamente
+virtualizados que nos permiten sumergirnos en ellos, contemplar
+sus parajes, disfrutar de su ambientación, y en algunos casos, 
+nos permiten participar con jugadores de cualquier parte del 
+mundo a través de la red (\textit{World of Warcraft}, \textit{Diablo III}, 
+\textit{Black Desert Online}). \medskip
+
+Dentro de este amplio espectro de posibilidades, los juegos de rol 
+tradicionales también disponen de aplicaciones que enriquecen el 
+transcurso de las partidas, y que proveen prestaciones útiles para las 
+mismas, como lanzadores de dados virtuales, generadores de mazmorras, 
+contadores de iniciativa, compendios de habilidades, etc. \medskip
+
+Entre todas las utilidades que encontramos, cabe destacar las aplicaciones 
+conocidas como \textit{generadores de personaje}. Estas facilitan a los 
+jugadores todo lo necesario para desarrollar rápidamente la información 
+indispensable de un personaje para poder interpretarlo en una partida.
+
+Por otro lado, puesto que la tecnología tiene un ritmo de avance trepidante, 
+y más aún la informática, hoy en día podemos echar cuenta de servicios 
+que simplifican tareas cuya ejecución resultaba impensable en el pasado.
+\medskip
+
+Uno de estos servicios es la Web Semántica, que se basa en la idea de 
+describir el contenido, el significado y la relación 
+de los datos, de manera que sea posible evaluarlos automáticamente por 
+máquinas de procesamiento, como pueden ser los ordenadores o los 
+\textit{smartphones}.
+\medskip
+
+El planteamiento del presente proyecto surge de la concepción de una 
+aplicación informática destinada a ampliar las funcionalidades de 
+los generadores de personaje, innovando en el desarrollo de la misma 
+al aplicar tecnologías de Web Semántica.\medskip
+
+
+\section{Alcance}
+El alcance de este proyecto comprende el desarrollo de una 
+aplicación móvil para generar perfiles de personajes que 
+puedan formar parte de una partida o campaña de un juego 
+de rol, cuya base de datos esté incluida en la aplicación.
+
+No forma parte del alcance de este proyecto el desarrollo 
+de la base de datos del juego de rol, aunque ha sido 
+necesario para poder realizar la sección de pruebas del
+proyecto.
 
 \section{Objetivos}
-\lorem{} % To do 
-\newpage
+Esta aplicación tendrá dos funcionalidades bien diferenciadas:
+\begin{itemize}
+    \item \textbf{Creación/Modificación de personaje}: La 
+    aplicación permitirá al usuario seleccionar la información
+    necesaria para la creación de un personaje a su gusto 
+    mediante un proceso paso a paso con una interfaz intuitiva.
+    En caso de que el personaje ya exista, permitirá 
+    realizar modificaciones a su información.
+
+    \item \textbf{Automatización del proceso de cálculo 
+    de habilidades}: La aplicación facilitará al usuario una 
+    interfaz en la que, al indicar la habilidad que desea 
+    utilizar, y el resultado de su lanzamiento de dados, se 
+    devuelva el resultado total que se debe aplicar en el 
+    combate. También podrá calcular el resultado de tiradas 
+    enfrentadas.
+
+\end{itemize}
+
+
+% Plantilla Tabla Requisitos Funcionales
+%\begin{changemargin}{-1cm}{-1cm}
+%    \begin{table}[h] 
+%        \centering
+%        \begin{tabular}{|l|m{10cm}|}
+%            \hline
+%            [Código objetivo] & [Nombre Objetivo] \\ 
+%            \hline
+%            \hline
+%            Descripción & [Descripción Objetivo] \\
+%            \hline
+%            Comentarios & [Comentarios Objetivo] \\
+%            \hline
+%        \end{tabular}
+%        \caption{Objetivo [Nº]. [\textit{Nombre Objetivo}]}
+%    \end{table}
+%\end{changemargin}
 
 \section{Glosario de Términos}
 \begin{itemize}
+
+    % Añadir WebSemántica
+
     \item \textbf{\textit{Android}}: Sistema operativo que se emplea 
     en dispositivos móviles, por lo general con pantalla táctil. 
     De este modo, es posible encontrar tabletas, teléfonos móviles 
@@ -38,7 +141,7 @@
     \item \textbf{\textit{C\#}}: Lenguaje de programación multiparadigma 
     desarrollado y estandarizado por Microsoft como parte de su 
     plataforma \textbf{\net}, que después fue aprobado como un estándar por la
-    \textbf{ECMA} (\emph{ECMA-334}) e \textbf{ISO} (\emph{ISO/IEC 23270}). 
+    ECMA (\emph{ECMA-334}) e ISO (\emph{ISO/IEC 23270}). 
     C\# es uno de los lenguajes de programación diseñados para la 
     infraestructura de lenguaje común. Su sintaxis básica deriva de 
     \emph{C/C++} y utiliza el modelo de objetos de la plataforma \\net, 
@@ -64,11 +167,11 @@
 
     \item \textbf{\textit{GitHub}}: GitHub es una plataforma de desarrollo 
     colaborativo de software para alojar proyectos utilizando el sistema de 
-    control de versiones Git.
+    control de versiones \textbf{Git}.
     % https://conociendogithub.readthedocs.io/en/latest/data/introduccion/
 
-    \item \textbf{\textit{IDE}}: \emph{Integrated Development Environment} 
-    Programa con numerosas características que se pueden usar para muchos 
+    \item \textbf{\textit{IDE}}: \emph{(Integrated Development Environment)} 
+    Aplicación con numerosas características que se pueden usar para muchos 
     aspectos del desarrollo de software.
     %  https://docs.microsoft.com/es-es/visualstudio/get-started/visual-studio-ide?view=vs-2019
 
@@ -112,7 +215,7 @@
     de la ontología filosófica, con una taxonomía.
     %  https://es.wikipedia.org/wiki/Ontolog%C3%ADa_(inform%C3%A1tica)
 
-    \item \textbf{\textit{OWL}}: \emph{Ontology Web Language} es un lenguaje 
+    \item \textbf{\textit{OWL}}: \emph{(Ontology Web Language)} es un lenguaje 
     de marcado semántico para publicar y compartir ontologías en la 
     World Wide Web. OWL se desarrolla como una extensión de vocabulario 
     de \textbf{RDF} y es derivado del lenguaje DAML + OIL asi.
@@ -123,12 +226,12 @@
     código abierto y gratuito para construir sistemas inteligentes.
     % https://protege.stanford.edu/
 
-    \item \textbf{\textit{RDF}}: Modelo estándar para el 
-    intercambio de datos en la Web. RDF tiene características que 
-    facilitan la fusión de datos incluso si los esquemas subyacentes 
-    difieren, y admite específicamente la evolución de los esquemas a 
-    lo largo del tiempo sin requerir que se cambien todos los 
-    consumidores de datos.
+    \item \textbf{\textit{RDF}}: \emph{(Resource Description Framework)} 
+    Modelo estándar para el intercambio de datos en la Web. RDF 
+    tiene características que facilitan la fusión de datos incluso si 
+    los esquemas subyacentes difieren, y admite específicamente la 
+    evolución de los esquemas a lo largo del tiempo sin requerir que 
+    se cambien todos los consumidores de datos.
     % https://www.w3.org/RDF/
 
     \item \textbf{\textit{RDFS}}: \emph{RDF Schema} es una 
@@ -143,15 +246,15 @@
     % Carmen Lasa Gómez Alonso Alvarez García, Rafael de las Heras del Dedo. 
     % "Métodos Ágiles y Scrum". Anaya Multimedia, 2012.
     
-    \item \textbf{\textit{Sonarqube}}: Herramienta de revisión automática 
+    \item \textbf{\textit{SonarQube}}: Herramienta de revisión automática 
     de código para detectar errores, vulnerabilidades y olores de código 
     en su código. Se puede integrar con su flujo de trabajo existente 
     para permitir la inspección continua de código en todas las ramas 
     de su proyecto y solicitudes de extracción.
     % https://docs.sonarqube.org/latest/
 
-    \item \textbf{\textit{SPARQL}}: \emph{SPARQL Protocol and RDF Query 
-    Language} es un lenguaje y protocolo de consulta para \emph{RDF}. 
+    \item \textbf{\textit{SPARQL}}: \emph{(SPARQL Protocol and RDF Query 
+    Language)} es un lenguaje y protocolo de consulta para \emph{RDF}. 
     % https://www.w3.org/TR/rdf-sparql-protocol/
 
     \item \textbf{\textit{Sprint}}: Período en el cual se lleva el 
@@ -164,7 +267,7 @@
     % Fabio Viola, Luca Roffia, Francesco Antoniazzi, Alfredo D’Elia, Cristiano Aguzzi and Tullio Salmon Cinotti     
     % "Interactive 3D Exploration of RDF Graphs through Semantic Planes" 17 August 2018
 
-    \item \textbf{\textit{UML}}: \emph{Unified Modeling Language} es el 
+    \item \textbf{\textit{UML}}: \emph{(Unified Modeling Language)} es el 
     lenguaje de modelado de sistemas de software más conocido y utilizado 
     en la actualidad.
     % https://es.wikipedia.org/wiki/Lenguaje_unificado_de_modelado
@@ -187,11 +290,11 @@
     características para facilitar el proceso de desarrollo de software.
     % https://docs.microsoft.com/es-es/visualstudio/get-started/visual-studio-ide?view=vs-2019
 
-    \item \textbf{\textit{W3C}}: \emph{World Wide Web Consortium} Consorcio 
+    \item \textbf{\textit{W3C}}: \emph{(World Wide Web Consortium)} Consorcio 
     internacional que produce recomendaciones para la \emph{WWW}.
     % https://www.w3c.es/Consorcio/
 
-    \item \textbf{\textit{WWW}}: \emph{World Wide Web} Sistema de distribución 
+    \item \textbf{\textit{WWW}}: \emph{(World Wide Web)} Sistema de distribución 
     de información basado en hipertexto o hipermedios enlazados y accesibles 
     a través de Internet. 
     % https://es.wikipedia.org/wiki/World_Wide_Web
@@ -207,18 +310,77 @@
     desde un único código base compartido.
     % https://docs.microsoft.com/es-es/xamarin/get-started/what-is-xamarin-forms
 
-    \item \textbf{\textit{XAML}}: \emph{eXtensible Application Markup 
-    Language} Lenguaje basado en XML creado por \emph{Microsoft} como una 
+    \item \textbf{\textit{XAML}}: \emph{(eXtensible Application Markup 
+    Language)} Lenguaje basado en XML creado por \emph{Microsoft} como una 
     alternativa a código de programación para la creación de instancias 
     e inicialización de objetos, y la organización de esos objetos en 
     jerarquías de elementos primarios y secundarios.
     % https://docs.microsoft.com/es-es/xamarin/xamarin-forms/xaml/xaml-basics/
 
+    \item \textbf{\textit{Web Semántica}}: ``\textit{Extensión de la actual 
+    web en la que a la información disponible se le otorga un significado 
+    bien definido que permita a los ordenadores y las personas trabajar en 
+    cooperación. Se basa en la idea de tener datos en la web definidos y 
+    vinculados de modo que puedan usarse para un descubrimiento, 
+    automatización y reutilización entre varias aplicaciones.}''
+    % Hendler, James, Berners-Lee, Tim and Miller, Eric 
+    %"Integrating Applications on the Semantic Web," 
+    % Journal of the Institute of Electrical Engineers of Japan, 
+    % Vol 122(10), October, 2002, p. 676-680.
+
 
 \end{itemize}
 
 \section{Estructuración del documento}
-\lorem{} % To do 
+El documento que se presenta está estructurado en una colección de capítulos, 
+en los que se describen de manera precisa y detallada todas y cada una de 
+las etapas por las que ha pasado el proyecto, desde su inicio hasta su 
+conclusión. A continuación se muestra un breve resumen de los contenidos 
+de cada capítulo:
+
+\begin{itemize}
+    \item \textbf{\emph{Capítulo 1. Introducción}}. El capítulo inicial 
+    consiste en una introducción al proyecto, explicando los antecedentes 
+    a su desarrollo, así como la motivación para ponerlo en práctica, los 
+    objetivos que debe cumplir y un glosario de términos para facilitar 
+    la comprensión del presente documento.
+
+    \item \textbf{\emph{Capítulo 2. Conceptos básicos}}. Tras la introducción,
+    se abordan los fundamentos necesarios para simplificar la lectura de 
+    este documento. A su vez, se exponen las diferentes tecnologías de las 
+    que se han aplicado para la consecución y puesta en marcha de este 
+    proyecto.
+
+    \item \textbf{\emph{Capítulo 3. Planificación del proyecto}}. Este 
+    capítulo engloba toda la información relevante a aspectos de 
+    suma importancia tales como la evaluación de riesgos o la planificación 
+    temporal del proyecto.
+
+    \item \textbf{\emph{Capítulo 4-\@8. Análisis, Diseño, Codificación y 
+    Pruebas}}. Este conjunto de capítulos profundizan en los diversos 
+    aspectos y fases que comprenden el desarrollo de un producto haciendo 
+    uso de una \emph{metodología ágil}. Esto posibilita analizar y 
+    enriquecer el producto en su desarrollo, mejorando así el resultado 
+    final.
+
+    \item \textbf{\emph{Capítulo 9. Manual de Instalación}}. Aquí se 
+    ha desarrollado un documento con las instrucciones necesarias 
+    para realizar la instalación de la aplicación.
+
+    \item \textbf{\emph{Capítulo 10. Manual de Usuario}}. Se ha redactado 
+    un manual de usuario para la aplicación, cuyo objetivo es garantizar un 
+    uso eficiente y responsable de la misma por parte de los usuarios. 
+    
+    \item \textbf{\emph{Capítulo 11. Conclusiones}}. El último capítulo es 
+    un breve repaso sobre el desarrollo del proyecto, que incluye una 
+    opinión personal y un apartado de posibles mejoras que se podrían 
+    realizar al proyecto en un futuro.
+
+    % Incluir Apéndices
+
+\end{itemize}
+
+%\lorem{} % To do 
 
 
 
