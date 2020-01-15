@@ -7,26 +7,30 @@
 % Change History File %
 
 % Environment Definition
-
-\begin{center}
-    \begin{longtable}{m{2cm}lm{10cm}} \toprule
-            \multicolumn{3}{c}{Historial de Cambios}\\ \midrule 
-            \multicolumn{3}{l}{Proyecto: \proyecto} \\ \midrule
-            \multicolumn{3}{l}{Fecha: \fecha} \\ \midrule
-            Cambio No. & Tipo de cambio & Descripcion del cambio\\ \midrule 
-            \endfirsthead{} \\
-
-            \multicolumn{3}{l}{\textit{Continuación de la página anterior}} \\ \toprule
-            Cambio No. & Tipo de cambio & Descripcion del cambio\\ \midrule 
-            \endhead{} \\
-
-            \midrule \multicolumn{3}{l}{\textit{Continúa en la página siguiente}} \\ \midrule
-            \endfoot{} \\
-
-            \bottomrule
-            \endlastfoot{} \\
+\newenvironment{changemargin}[2]
+{%
+    \setlength{\topsep}{0pt}%
+    \setlength{\leftmargin}{#1}%
+    \setlength{\rightmargin}{#2}%
+    \setlength{\listparindent}{\parindent}%
+    \setlength{\itemindent}{\parindent}%
+    \setlength{\parsep}{\parskip}%
+}%
 
 
-        \end{longtable}
-    \end{center}
+\thispagestyle{prefacepage}
+\begin{changemargin}{-1cm}{-1cm}
+    \begin{table}[H] 
+        \begin{tabular}{|l|l|m{8cm}|}
+            \hline
+            \multicolumn{3}{|c|}{Historial de Cambios}\\ \hline 
+            \multicolumn{3}{|l|}{Proyecto: \proyecto} \\ \hline
+            \multicolumn{3}{|l|}{Fecha: \fecha} \\ \hline
+            Cambio No. & Tipo de cambio & Descripción del cambio \\ \hline 
+        \end{tabular}
+    \end{table}
+\end{changemargin}
+
+
+\blankpage{}
 
