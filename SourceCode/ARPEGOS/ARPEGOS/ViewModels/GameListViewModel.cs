@@ -25,7 +25,6 @@ namespace ARPEGOS.ViewModels
             GameList = new ObservableCollection<GameFolder>();
             var exampleGamePath = Path.Combine(gamesRootDirectoryPath, exampleGame);
             exampleGamePath = directoryHelper.CreateDirectory(exampleGamePath);
-            var exampleGameFolderExists = Directory.Exists(exampleGamePath);
             GetGameList();
         }
         public void GetGameList()
