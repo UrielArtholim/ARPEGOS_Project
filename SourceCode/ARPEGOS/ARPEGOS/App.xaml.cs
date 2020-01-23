@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ARPEGOS.Views;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -10,7 +11,7 @@ namespace ARPEGOS
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new NavigationPage(new ExtendedLoadingPage());
         }
 
         protected override void OnStart()
