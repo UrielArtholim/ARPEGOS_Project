@@ -12,6 +12,12 @@ namespace ARPEGOS.Droid
     [Activity(Label = "ARPEGOS", Icon = "@mipmap/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
+        readonly string[] Permissions =
+        {
+            Android.Manifest.Permission.ReadExternalStorage,
+            Android.Manifest.Permission.WriteExternalStorage
+        };
+        const int RequestId = 0;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             TabLayoutResource = Resource.Layout.Tabbar;
@@ -20,6 +26,7 @@ namespace ARPEGOS.Droid
             base.OnCreate(savedInstanceState);
 
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
+            RequestPermissions(Permissions, RequestId);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
             LoadApplication(new App());
         }
