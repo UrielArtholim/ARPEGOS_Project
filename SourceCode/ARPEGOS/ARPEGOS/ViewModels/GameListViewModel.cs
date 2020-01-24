@@ -19,23 +19,22 @@ namespace ARPEGOS.ViewModels
         static readonly IDirectory directoryHelper = DependencyService.Get<IDirectory>();
         static readonly string gamesRootDirectoryPath = directoryHelper.CreateDirectory(gamesRootDirectoryName);
 
-        public ObservableCollection<SimpleListItem> GameList { get; private set; }
+        public IList<GameFolder> GameList { get; private set; }
         public GameListViewModel()
         {
-            GameList = new ObservableCollection<SimpleListItem>();
-            
-
+            GameList = new ObservableCollection<GameFolder>();
+            var exampleGamePath = Path.Combine(gamesRootDirectoryPath, exampleGame);
+            directoryHelper.CreateDirectory(exampleGamePath);
+            GetGameList();
         }
-        public ObservableCollection<SimpleListItem> GetGameList()
+        public void GetGameList()
         {
             DirectoryInfo gamesRootDirectoryInfo = new DirectoryInfo(gamesRootDirectoryPath);
             foreach (DirectoryInfo gameDirectory in gamesRootDirectoryInfo.GetDirectories())
             {
-                GameList.Add(new SimpleListItem(gameDirectory.Name));
+                GameList.Add(new GameFolder(gameDirectory.Name));
             }
-            return GameList;
-        }
 
-        void CheckGames()
+        }
     }
 }

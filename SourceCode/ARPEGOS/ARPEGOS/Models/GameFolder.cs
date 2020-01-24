@@ -4,10 +4,10 @@ using System.Text;
 
 namespace ARPEGOS.Models
 {
-    class SimpleListItem
+    class GameFolder
     {
         public string DisplayName { get; set; }
-        public SimpleListItem(string item)
+        public GameFolder(string item)
         {
             DisplayName = item;
         }
