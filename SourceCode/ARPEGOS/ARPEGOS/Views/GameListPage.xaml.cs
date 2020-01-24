@@ -14,7 +14,7 @@ namespace ARPEGOS.Views
     public partial class GameListPage : ContentPage
     {
 
-        GameListViewModel gameListViewModel;
+        readonly GameListViewModel gameListViewModel;
         public GameListPage()
         {
             InitializeComponent();
