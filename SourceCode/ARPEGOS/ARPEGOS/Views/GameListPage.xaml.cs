@@ -13,7 +13,6 @@ namespace ARPEGOS.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class GameListPage : ContentPage
     {
-
         readonly GameListViewModel gameListViewModel;
         public GameListPage()
         {
@@ -21,7 +20,6 @@ namespace ARPEGOS.Views
             gameListViewModel = new GameListViewModel();
             BindingContext = gameListViewModel;
         }
-
         protected override void OnAppearing()
         {
             base.OnAppearing();
