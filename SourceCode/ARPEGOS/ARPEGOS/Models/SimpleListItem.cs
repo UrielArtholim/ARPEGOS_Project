@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ARPEGOS.Models
 {
-    class SimpleListItem
+    public class SimpleListItem
     {
         public string DisplayName { get; set; }
         public string DisplayDescription { get; set; }
