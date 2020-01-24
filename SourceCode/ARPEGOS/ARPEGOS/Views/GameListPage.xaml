@@ -8,12 +8,20 @@
              Title="Selección de Juego">
     <ContentPage.Content>
         <StackLayout>
-            <ListView ItemsSource="{Binding GameList}" VerticalOptions="FillAndExpand" CachingStrategy="RecycleElement">
+            <ListView x:Name="listGames" 
+                      ItemsSource="{Binding GameList}" 
+                      VerticalOptions="FillAndExpand" 
+                      CachingStrategy="RecycleElement"
+                      ItemTapped="OnItemTapped">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <StackLayout Padding="5,0,5,0" HorizontalOptions="StartAndExpand" Orientation="Horizontal">
-                                <Label Text="{Binding DisplayName}" VerticalTextAlignment="Center" FontSize="Small" />
+                            <StackLayout Padding="5,0,5,0" 
+                                         HorizontalOptions="StartAndExpand" 
+                                         Orientation="Horizontal">
+                                <Label Text="{Binding DisplayName}" 
+                                       VerticalTextAlignment="Center" 
+                                       FontSize="Small" />
                             </StackLayout>
                         </ViewCell>
                     </DataTemplate>
