@@ -11,5 +11,6 @@ namespace ARPEGOS.Interfaces
         string RenameDirectory(string oldDirectoryName, string newDirectoryName);
         void RemoveDirectory(string directoryName);
         void ClearBaseDirectory();
+        string GetBaseDirectory();
     }
 }
