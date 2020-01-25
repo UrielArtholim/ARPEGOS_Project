@@ -23,7 +23,7 @@ namespace ARPEGOS.Views
         }
         private async Task<Boolean> DelayedNavigation()
         {
-            await Task.Delay(5000);
+            await Task.Delay(1000);
             await Navigation.PushAsync(new GameListPage()); // Go to the first app page
             return true;
         }
