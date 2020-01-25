@@ -51,6 +51,11 @@ namespace ARPEGOS.Droid.Services
             return directoryPath;
         }
 
+        public string GetBaseDirectory()
+        {
+            return baseDirectoryPath;
+        }
+
         public void RemoveDirectory(string directoryName)
         {
             var directoryPath = Path.Combine(baseDirectoryPath, directoryName);
