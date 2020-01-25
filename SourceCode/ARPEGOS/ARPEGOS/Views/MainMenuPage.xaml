@@ -4,10 +4,11 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="ARPEGOS.Views.MainMenuPage">
+             x:Class="ARPEGOS.Views.MainMenuPage"
+             Title="Menú Principal">
     <ContentPage.Content>
         <StackLayout Margin="10">
-            <ListView ItemsSource="{Binding OptionsList}" VerticalOptions="FillAndExpand" CachingStrategy="RecycleElement">
+            <ListView ItemsSource="{Binding MenuOptions}" VerticalOptions="FillAndExpand" CachingStrategy="RecycleElement">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
