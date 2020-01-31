@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ARPEGOS.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -24,7 +25,7 @@ namespace ARPEGOS.Views
         private async Task<Boolean> DelayedNavigation()
         {
             await Task.Delay(1000);
-            await Navigation.PushAsync(new GameListPage()); // Go to the first app page
+            await Navigation.PushAsync(new MainPage()); // Go to the first app page
             return true;
         }
     }

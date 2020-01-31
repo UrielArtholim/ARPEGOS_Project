@@ -1,39 +1,70 @@
-﻿using ARPEGOS.Models;
-using ARPEGOS.ViewModels;
-using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Text;
-
-namespace ARPEGOS.ViewModels
+﻿namespace ARPEGOS.ViewModels
 {
-    public class MainMenuViewModel : BaseViewModel
-    {
-        public static ObservableCollection<ItemGroup> MenuOptions { get; private set; }
+    using ARPEGOS.Models;
+    using System.Collections.Generic;
+    using System.Collections.ObjectModel;
+    using System.Linq;
+    using System.Windows.Input;
+    using Xamarin.Essentials;
+    using Xamarin.Forms;
 
+    public class MainMenuViewModel
+    {
         public MainMenuViewModel()
         {
-            ObservableCollection<ItemGroup> MainMenuOptions = new ObservableCollection<ItemGroup>
+            ExpandCommand = new Command<ItemGroupViewModel>(t =>
             {
-                new ItemGroup("Juegos")
+                MainThread.BeginInvokeOnMainThread(() =>
                 {
-                    new SimpleListItem("Añadir Juego"),
-                    new SimpleListItem("Seleccionar Juego")
+                    var a = this.ItemsList.FirstOrDefault(x => x.Title == t.Title);
+                    a.Expanded = !a.Expanded;
+                    this.UpdateListContent();
+                });
+            });
+            this.ItemsList = new List<ItemGroupViewModel>
+            {
+                new ItemGroupViewModel("Juego") 
+                { 
+                    new ListItem("Seleccionar juego") 
                 },
-                new ItemGroup("Personaje")
-                {
-                    new SimpleListItem("Ver personaje"),
-                    new SimpleListItem("Añadir personaje"),
-                    new SimpleListItem("Modificar personaje"),
-                    new SimpleListItem("Eliminar personaje")
-                },
-                new ItemGroup("Habilidades")
-                {
-                    new SimpleListItem("Cálculo de habilidad"),
-                    new SimpleListItem("Tirada enfrentada"),
-                }
+                new ItemGroupViewModel("Personaje")
+                    {
+                        new ListItem ("Añadir personaje"),
+                        new ListItem ("Ver personaje"),
+                        new ListItem ("Editar personaje"),
+                        new ListItem ("Eliminar personaje")
+                    },
+                new ItemGroupViewModel("Habilidad")
+                    {
+                        new ListItem ("Calcular tirada de habilidad"),
+                        new ListItem ("Calcular tirada enfentada")
+                    }
             };
-            MenuOptions = MainMenuOptions;
+            this.Data = new ObservableCollection<ItemGroupViewModel>();
+            this.UpdateListContent();
+        }
+
+        public ICommand ExpandCommand { get; }
+
+        public List<ItemGroupViewModel> ItemsList { get; }
+
+        public ObservableCollection<ItemGroupViewModel> Data { get; }
+
+        private void UpdateListContent()
+        {
+            this.Data.Clear();
+            foreach (var group in this.ItemsList)
+            {
+                var elements = new ItemGroupViewModel(group.Title, group.Expanded);
+                if (group.Expanded)
+                {
+                    foreach (var element in group)
+                    {
+                        elements.Add(element);
+                    }
+                }
+                this.Data.Add(elements);
+            }
         }
     }
 }

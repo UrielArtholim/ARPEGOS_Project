@@ -15,14 +15,14 @@ using Xamarin.Forms;
 
 namespace ARPEGOS.ViewModels
 {
-    class GameListViewModel : ListViewModel
+    class GameListViewModel : DirectoryViewModel
     {
         static readonly string rootDirectoryName = "Games";
         readonly string gamesRootDirectoryPath;
-        public IList<SimpleListItem> GameList { get; private set; }
+        public IList<ListItem> GameList { get; private set; }
         public GameListViewModel()
         {
-            GameList = new ObservableCollection<SimpleListItem>();
+            GameList = new ObservableCollection<ListItem>();
             gamesRootDirectoryPath = Path.Combine(directoryHelper.GetBaseDirectory(), rootDirectoryName);
 
             if (!Directory.Exists(gamesRootDirectoryPath))
@@ -42,17 +42,14 @@ namespace ARPEGOS.ViewModels
             foreach (var game in gamefiles)
             {
                 var filefullPath = game.Split('.');
-                Debug.WriteLine("");
                 var folderName = filefullPath[2].Replace('_',' ');
                 var fileName = filefullPath[3] + "." + filefullPath[4];
-                var folderPath = Path.Combine(gamesRootDirectoryPath, folderName);
-                var filePath = Path.Combine(gamesRootDirectoryPath, folderName, fileName);
 
-                if (!Directory.Exists(folderPath))
-                    directoryHelper.CreateDirectory(folderPath);
+                if (!Directory.Exists(Path.Combine(gamesRootDirectoryPath, folderName)))
+                    directoryHelper.CreateDirectory(Path.Combine(gamesRootDirectoryPath, folderName));
 
-                if (!File.Exists(filePath))
-                    WriteResourceToFile(game, filePath);
+                if (!File.Exists(Path.Combine(gamesRootDirectoryPath, folderName, fileName)))
+                    WriteResourceToFile(game, Path.Combine(gamesRootDirectoryPath, folderName, fileName));
             }
         }
 
@@ -71,7 +68,7 @@ namespace ARPEGOS.ViewModels
             DirectoryInfo gamesRootDirectoryInfo = new DirectoryInfo(gamesRootDirectoryPath);
             foreach (DirectoryInfo gameDirectory in gamesRootDirectoryInfo.GetDirectories())
             {
-                GameList.Add(new SimpleListItem(gameDirectory.Name));
+                GameList.Add(new ListItem(gameDirectory.Name));
             }
         }
     }

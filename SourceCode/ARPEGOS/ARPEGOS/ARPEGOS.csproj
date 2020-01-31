@@ -16,16 +16,18 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="DefaultGames\Anima Beyond Fantasy\Core Exxet.owl">
+    <EmbeddedResource Include="DefaultGames\Anima Beyond Fantasy\Gamefiles\Core Exxet.owl">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
-    <EmbeddedResource Include="DefaultGames\Nanatsu No Taizai\Nanatsu No Taizai.owl">
+    <EmbeddedResource Include="DefaultGames\Nanatsu No Taizai\Gamefiles\Nanatsu No Taizai.owl">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Refractored.MvvmHelpers" Version="1.3.0" />
     <PackageReference Include="SkiaSharp" Version="1.68.1.1" />
+    <PackageReference Include="Xam.Plugins.Forms.ImageCircle" Version="3.0.0.5" />
     <PackageReference Include="Xamarin.FFImageLoading" Version="2.4.11.982" />
     <PackageReference Include="Xamarin.Forms" Version="4.4.0.991537" />
     <PackageReference Include="Xamarin.Essentials" Version="1.3.1" />
@@ -44,5 +46,10 @@
     <EmbeddedResource Update="Views\WelcomePage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="DefaultGames\Anima Beyond Fantasy\Characters\" />
+    <Folder Include="DefaultGames\Nanatsu No Taizai\Characters\" />
   </ItemGroup>
 </Project>
