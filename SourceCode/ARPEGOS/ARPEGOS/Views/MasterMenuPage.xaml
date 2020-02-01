@@ -5,19 +5,21 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Name="Master"
-             x:Class="ARPEGOS.Views.MainMenuPage"
-             Title="Menú Principal">
-
+             x:Class="ARPEGOS.Views.MasterMenuPage"
+             Title="Menú principal">
     <ContentPage.Content>
         <ListView Margin="5,5,5,5" GroupDisplayBinding="{Binding Title}" ItemsSource="{Binding Data}"
-                  HasUnevenRows="true" SeparatorVisibility="None" IsGroupingEnabled="true">
+                      HasUnevenRows="true" SeparatorVisibility="None" IsGroupingEnabled="true">             
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
                         <Frame BorderColor="#e6e6e6" CornerRadius="0" HasShadow="false" Padding="10,10,10,10">
                             <ScrollView>
                                 <StackLayout>
-                                    <Label TextColor="#888888" VerticalTextAlignment="Start" Text="{Binding ItemName}"/>
+                                    <StackLayout.GestureRecognizers>
+                                        <TapGestureRecognizer Command="{Binding Source={x:Reference Master}, Path=BindingContext.SelectPageCommand}" CommandParameter="{Binding .}"/>
+                                    </StackLayout.GestureRecognizers>
+                                    <Label TextColor="#888888" HorizontalOptions="FillAndExpand" Text="{Binding ItemName}"/>
                                 </StackLayout>
                             </ScrollView>
                         </Frame>
@@ -29,12 +31,12 @@
                     <ViewCell Height="50">
                         <Frame HasShadow="false" BorderColor="#e6e6e6" CornerRadius="0" Padding="10,0,10,0" >
                             <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand" >
+                                <StackLayout.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding Source={x:Reference Master}, Path=BindingContext.ExpandCommand}" CommandParameter="{Binding .}" />
+                                </StackLayout.GestureRecognizers>
                                 <Label Text="{Binding Title}" VerticalTextAlignment="Center" TextColor="#888888" VerticalOptions="CenterAndExpand"/>
                                 <StackLayout Orientation="Horizontal" Padding="5,5,5,5" VerticalOptions="CenterAndExpand" HorizontalOptions="EndAndExpand">
                                     <Image HorizontalOptions="EndAndExpand" Source="{Binding StateIcon}" VerticalOptions="CenterAndExpand" BackgroundColor="Transparent" >
-                                        <Image.GestureRecognizers>
-                                            <TapGestureRecognizer Command="{Binding Source={x:Reference Master}, Path=BindingContext.ExpandCommand}" CommandParameter="{Binding .}" />
-                                        </Image.GestureRecognizers>
                                     </Image>
                                 </StackLayout>
                             </StackLayout>

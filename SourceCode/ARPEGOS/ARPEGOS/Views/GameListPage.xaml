@@ -4,7 +4,8 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="ARPEGOS.Views.GameListPage">
+             x:Class="ARPEGOS.Views.GameListPage"
+             Title="Lista de juegos">
     <ContentPage.Content>
         <StackLayout>
             <ListView ItemsSource="{Binding GameList}" VerticalOptions="FillAndExpand" CachingStrategy="RecycleElement">
@@ -12,7 +13,7 @@
                     <DataTemplate>
                         <ViewCell>
                             <StackLayout Padding="5,0,5,0" HorizontalOptions="StartAndExpand" Orientation="Horizontal">
-                                <Label Text="{Binding DisplayName}" VerticalTextAlignment="Center" FontSize="Small" />
+                                <Label Text="{Binding ItemName}" VerticalTextAlignment="Center" />
                             </StackLayout>
                         </ViewCell>
                     </DataTemplate>
