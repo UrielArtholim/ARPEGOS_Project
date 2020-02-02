@@ -5,12 +5,12 @@ using System.Text;
 
 namespace ARPEGOS.Models
 {
-    public class GameFile
+    public class File
     {
         public string Name { get; private set; }
         public string GamePath { get; private set; }
 
-        public GameFile(string path)
+        public File(string path)
         {
             GamePath = path;
             Name = Path.GetDirectoryName(GamePath);
