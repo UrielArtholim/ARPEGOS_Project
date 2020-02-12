@@ -16,10 +16,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="DefaultGames\Anima Beyond Fantasy\Gamefiles\Core Exxet.owl">
+    <EmbeddedResource Include="DefaultGames\Anima Beyond Fantasy\gamefiles\Core Exxet.owl">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
-    <EmbeddedResource Include="DefaultGames\Nanatsu No Taizai\Gamefiles\Nanatsu No Taizai.owl">
+    <EmbeddedResource Include="DefaultGames\Nanatsu No Taizai\gamefiles\Nanatsu No Taizai.owl">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
   </ItemGroup>
@@ -43,13 +43,16 @@
     <EmbeddedResource Update="Views\MasterMenuPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Update="Views\VersionListPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Views\WelcomePage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="DefaultGames\Anima Beyond Fantasy\Characters\" />
-    <Folder Include="DefaultGames\Nanatsu No Taizai\Characters\" />
+    <Folder Include="DefaultGames\Anima Beyond Fantasy\characters\" />
+    <Folder Include="DefaultGames\Nanatsu No Taizai\characters\" />
   </ItemGroup>
 </Project>

@@ -11,13 +11,14 @@ using Xamarin.Forms.Xaml;
 namespace ARPEGOS.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class GameListPage : ContentPage
+    public partial class VersionListPage : ContentPage
     {
-        readonly GameListViewModel viewModel;
-        public GameListPage()
+        readonly VersionListViewModel viewModel;
+        public VersionListPage()
         {
-            InitializeComponent();
-            viewModel = new GameListViewModel();
+            this.InitializeComponent();
+            viewModel = new VersionListViewModel();
+            this.
             BindingContext = viewModel;
         }
     }

@@ -15,8 +15,8 @@
         public static readonly IDirectory directoryHelper = DependencyService.Get<IDirectory>();
         static readonly Dictionary<Guid, bool> ActiveGames = new Dictionary<Guid, bool>();
         static readonly Dictionary<Guid, string> Games = new Dictionary<Guid, string>();
-        static readonly string rootDirectoryName = "Games";
-        static readonly string gamesRootDirectoryPath = Path.Combine(directoryHelper.GetBaseDirectory(), rootDirectoryName);
+        static readonly string gamesRootDirectoryPath = directoryHelper.GetBaseDirectory();
+
 
         public static void UpdateGames()
         {
@@ -38,8 +38,8 @@
                 if (!Directory.Exists(Path.Combine(gamesRootDirectoryPath, folderName)))
                 {
                     directoryHelper.CreateDirectory(Path.Combine(gamesRootDirectoryPath, folderName));
-                    directoryHelper.CreateDirectory(Path.Combine(gamesRootDirectoryPath, folderName, "Characters"));
-                    directoryHelper.CreateDirectory(Path.Combine(gamesRootDirectoryPath, folderName, "GameFiles"));
+                    directoryHelper.CreateDirectory(Path.Combine(gamesRootDirectoryPath, folderName, "characters"));
+                    directoryHelper.CreateDirectory(Path.Combine(gamesRootDirectoryPath, folderName, "gamefiles"));
                 }
 
                 Guid currentGameID = Guid.NewGuid();

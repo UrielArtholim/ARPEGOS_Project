@@ -11,6 +11,7 @@
             <Label Text="Welcome to ARPEGOS Project"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
+            
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

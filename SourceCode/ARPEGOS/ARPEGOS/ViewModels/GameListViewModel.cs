@@ -1,5 +1,6 @@
 ﻿using ARPEGOS.Interfaces;
 using ARPEGOS.Models;
+using ARPEGOS.Views;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -11,6 +12,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Windows.Input;
 using Xamarin.Forms;
 
 namespace ARPEGOS.ViewModels
@@ -20,8 +22,17 @@ namespace ARPEGOS.ViewModels
         public ObservableCollection<ListItem> GameList { get; private set; }
         public GameListViewModel() 
         {
+            SelectGameCommand = new Command<ListItem>(item =>
+            {
+                var selectedItem = this.GameList.FirstOrDefault(currentVar => currentVar.ItemName == item.ItemName);
+                SystemControl.UpdateActiveGame(selectedItem.ItemName);
+                Xamarin.Forms.Application.Current.MainPage.Navigation.PushAsync(new VersionListPage());
+            });
+
             SystemControl.UpdateGames();
             GameList = SystemControl.GetGameList();
         }
+
+        public ICommand SelectGameCommand { get; }
     }
 }

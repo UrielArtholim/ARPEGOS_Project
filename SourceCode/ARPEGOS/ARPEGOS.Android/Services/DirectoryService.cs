@@ -19,7 +19,7 @@ namespace ARPEGOS.Droid.Services
 {
     class DirectoryService : IDirectory
     {
-        static string packageName = Android.App.Application.Context.PackageName;
+        readonly static string packageName = Android.App.Application.Context.PackageName;
         public string baseDirectoryPath = Path.Combine(Android.OS.Environment.ExternalStorageDirectory.AbsolutePath, "Android/data", packageName, "files");
 
         public int Permision { get; private set; }
