@@ -74,13 +74,20 @@
             return Games.FirstOrDefault(name => name.Key == activeGameID).Value;
         }
 
+        public static void UpdateActiveGame(string selectedGame)
+        {
+            var activeGameID = ActiveGames.FirstOrDefault(game => game.Value == true).Key;
+            ActiveGames[activeGameID] = false;
+            activeGameID = Games.FirstOrDefault(game => game.Value == selectedGame).Key;
+            ActiveGames[activeGameID] = true;
+        }
+
         public static ObservableCollection<ListItem> GetGameList()
         {
             ObservableCollection<ListItem> GamesList = new ObservableCollection<ListItem>();
             foreach(var game in Games)
             {
-                string currentGameName = "";
-                Games.TryGetValue(game.Key, out currentGameName);
+                Games.TryGetValue(game.Key, out string currentGameName);
                 GamesList.Add(new ListItem(currentGameName));
             }
             return GamesList;
