@@ -13,7 +13,7 @@
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <Frame BorderColor="#e6e6e6" CornerRadius="0" HasShadow="false" Padding="10,10,10,10">
+                        <Frame BorderColor="#e6e6e6" BackgroundColor="LightGray" CornerRadius="0" HasShadow="false" Padding="10,10,10,10">
                             <ScrollView>
                                 <StackLayout>
                                     <StackLayout.GestureRecognizers>
@@ -35,10 +35,6 @@
                                     <TapGestureRecognizer Command="{Binding Source={x:Reference Master}, Path=BindingContext.ExpandCommand}" CommandParameter="{Binding .}" />
                                 </StackLayout.GestureRecognizers>
                                 <Label Text="{Binding Title}" VerticalTextAlignment="Center" TextColor="#888888" VerticalOptions="CenterAndExpand"/>
-                                <StackLayout Orientation="Horizontal" Padding="5,5,5,5" VerticalOptions="CenterAndExpand" HorizontalOptions="EndAndExpand">
-                                    <Image HorizontalOptions="EndAndExpand" Source="{Binding StateIcon}" VerticalOptions="CenterAndExpand" BackgroundColor="Transparent" >
-                                    </Image>
-                                </StackLayout>
                             </StackLayout>
                         </Frame>
                     </ViewCell>
