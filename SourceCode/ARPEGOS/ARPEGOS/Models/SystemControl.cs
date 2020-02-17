@@ -5,6 +5,7 @@
     using System;
     using System.Collections.Generic;
     using System.Collections.ObjectModel;
+    using System.Diagnostics;
     using System.IO;
     using System.Linq;
     using System.Reflection;
@@ -16,7 +17,8 @@
         static readonly Dictionary<Guid, bool> ActiveGames = new Dictionary<Guid, bool>();
         static readonly Dictionary<Guid, string> Games = new Dictionary<Guid, string>();
         static readonly string gamesRootDirectoryPath = directoryHelper.GetBaseDirectory();
-
+        static readonly ObservableCollection<ListItem> GamesList = new ObservableCollection<ListItem>();
+        static string GameVersion { get; set; }
 
         public static void UpdateGames()
         {
@@ -74,6 +76,16 @@
             return Games.FirstOrDefault(name => name.Key == activeGameID).Value;
         }
 
+        public static string GetActiveVersion()
+        {
+            return GameVersion;
+        }
+
+        public static void UpdateActiveVersion(string selectedVersion)
+        {
+            GameVersion = selectedVersion;
+        }
+
         public static void UpdateActiveGame(string selectedGame)
         {
             var activeGameID = ActiveGames.FirstOrDefault(game => game.Value == true).Key;
@@ -84,11 +96,13 @@
 
         public static ObservableCollection<ListItem> GetGameList()
         {
-            ObservableCollection<ListItem> GamesList = new ObservableCollection<ListItem>();
-            foreach(var game in Games)
+            GamesList.Clear();
+            List<string> GamesValues = Games.Values.ToList();
+            foreach (var game in GamesValues)
             {
-                Games.TryGetValue(game.Key, out string currentGameName);
-                GamesList.Add(new ListItem(currentGameName));
+                ListItem gameItem = GamesList.FirstOrDefault(item => item.ItemName == game);
+                if (gameItem == null)
+                    GamesList.Add(new ListItem(game));
             }
             return GamesList;
         }

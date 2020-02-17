@@ -4,12 +4,15 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="ARPEGOS.Views.WelcomePage"
-             Title="Bienvenido">
+             x:Class="ARPEGOS.Views.HomePage"
+             Title="Inicio">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to ARPEGOS Project!"
-                VerticalOptions="CenterAndExpand" 
+            <Label Text="{Binding CurrentGameName, StringFormat='El juego actual es \n {0}'}"
+                VerticalOptions="Fill" 
+                HorizontalOptions="CenterAndExpand" />
+            <Label Text="{Binding CurrentGameVersion, StringFormat='La versión actual del juego es \n {0}'}"
+                VerticalOptions="Start" 
                 HorizontalOptions="CenterAndExpand" />
         </StackLayout>
     </ContentPage.Content>

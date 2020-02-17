@@ -6,6 +6,7 @@ namespace ARPEGOS.Models
 {
     public enum PageType
     {
+        Welcome,
         Home,
         GamesList,
         CreateCharacter,

@@ -4,6 +4,7 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
+             x:Name="Versionlist"
              x:Class="ARPEGOS.Views.VersionListPage"
              Title="Selección de versión">
     <ContentPage.Content>
@@ -13,6 +14,9 @@
                     <DataTemplate>
                         <ViewCell>
                             <StackLayout Padding="5,0,5,0" HorizontalOptions="StartAndExpand" Orientation="Horizontal">
+                                <StackLayout.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding Source={x:Reference Versionlist}, Path=BindingContext.SelectVersionCommand}" CommandParameter="{Binding .}"/>
+                                </StackLayout.GestureRecognizers>
                                 <Label Text="{Binding ItemName}" VerticalTextAlignment="Center" />
                             </StackLayout>
                         </ViewCell>
