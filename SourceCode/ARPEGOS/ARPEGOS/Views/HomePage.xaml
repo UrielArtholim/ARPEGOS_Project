@@ -8,10 +8,10 @@
              Title="Inicio">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="{Binding CurrentGameName, StringFormat='El juego actual es \n {0}'}"
+            <Label Text="{Binding CurrentGameName}"
                 VerticalOptions="Fill" 
                 HorizontalOptions="CenterAndExpand" />
-            <Label Text="{Binding CurrentGameVersion, StringFormat='La versión actual del juego es \n {0}'}"
+            <Label Text="{Binding CurrentGameVersion}"
                 VerticalOptions="Start" 
                 HorizontalOptions="CenterAndExpand" />
         </StackLayout>

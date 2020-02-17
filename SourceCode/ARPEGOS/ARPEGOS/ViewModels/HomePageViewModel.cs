@@ -12,8 +12,8 @@
 
         public HomePageViewModel()
         {
-            CurrentGameName = SystemControl.GetActiveGame();
-            CurrentGameVersion = SystemControl.GetActiveVersion();
+            CurrentGameName = "Juego activo: " + SystemControl.GetActiveGame();
+            CurrentGameVersion = "Versión: " +SystemControl.GetActiveVersion();
         }
     }
 }
