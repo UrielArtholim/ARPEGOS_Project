@@ -6,8 +6,12 @@ namespace ARPEGOS.Models
 {
     public class ListItem
     {
+        #region Properties
         public string ItemName { get; set; }
         public string ItemDescription { get; set; }
+        #endregion
+
+        #region Constructors
         public ListItem() { }
         public ListItem(string name)
         {
@@ -18,5 +22,6 @@ namespace ARPEGOS.Models
             ItemName = name;
             ItemDescription = description;
         }
+        #endregion
     }
 }

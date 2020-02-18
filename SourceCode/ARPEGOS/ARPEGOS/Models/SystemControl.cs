@@ -13,19 +13,25 @@
 
     public static class SystemControl
     {
-        public static readonly IDirectory directoryHelper = DependencyService.Get<IDirectory>();
+        #region Properties
+        public static readonly IDirectory DirectoryHelper = DependencyService.Get<IDirectory>();
         static readonly Dictionary<Guid, bool> ActiveGames = new Dictionary<Guid, bool>();
         static readonly Dictionary<Guid, string> Games = new Dictionary<Guid, string>();
-        static readonly string gamesRootDirectoryPath = directoryHelper.GetBaseDirectory();
+        static readonly string GamesRootDirectoryPath = DirectoryHelper.GetBaseDirectory();
         static readonly ObservableCollection<ListItem> GamesList = new ObservableCollection<ListItem>();
-        static string GameVersion { get; set; }
 
+        static string ActiveGameVersion { get; set; }
+        static string ActiveCharacter { get; set; }
+        public static GameDB ActiveGameDB { get; set; }
+        #endregion
+
+        #region Methods
         public static void UpdateGames()
         {
-            if (!Directory.Exists(gamesRootDirectoryPath))
-                directoryHelper.CreateDirectory(gamesRootDirectoryPath);
+            if (!Directory.Exists(GamesRootDirectoryPath))
+                DirectoryHelper.CreateDirectory(GamesRootDirectoryPath);
 
-            DirectoryInfo gamesRootDirectoryInfo = new DirectoryInfo(gamesRootDirectoryPath);
+            DirectoryInfo gamesRootDirectoryInfo = new DirectoryInfo(GamesRootDirectoryPath);
             var subdirectories = gamesRootDirectoryInfo.GetDirectories();
             var assembly = IntrospectionExtensions.GetTypeInfo(typeof(App)).Assembly;
             var ResourceNames = assembly.GetManifestResourceNames();
@@ -35,13 +41,13 @@
             {
                 var filefullPath = game.Split('.');
                 var folderName = filefullPath[2].Replace('_', ' ');
-                var fileName = filefullPath[3] + "." + filefullPath[4];
+                var fileName = filefullPath[4];
 
-                if (!Directory.Exists(Path.Combine(gamesRootDirectoryPath, folderName)))
+                if (!Directory.Exists(Path.Combine(GamesRootDirectoryPath, folderName)))
                 {
-                    directoryHelper.CreateDirectory(Path.Combine(gamesRootDirectoryPath, folderName));
-                    directoryHelper.CreateDirectory(Path.Combine(gamesRootDirectoryPath, folderName, "characters"));
-                    directoryHelper.CreateDirectory(Path.Combine(gamesRootDirectoryPath, folderName, "gamefiles"));
+                    DirectoryHelper.CreateDirectory(Path.Combine(GamesRootDirectoryPath, folderName));
+                    DirectoryHelper.CreateDirectory(Path.Combine(GamesRootDirectoryPath, folderName, "characters"));
+                    DirectoryHelper.CreateDirectory(Path.Combine(GamesRootDirectoryPath, folderName, "gamefiles"));
                 }
 
                 Guid currentGameID = Guid.NewGuid();
@@ -54,8 +60,8 @@
                 SystemControl.Games.Add(currentGameID, folderName);
                 SystemControl.ActiveGames.Add(currentGameID, false);
 
-                if (!System.IO.File.Exists(Path.Combine(gamesRootDirectoryPath, folderName, fileName)))
-                    WriteResourceToFile(game, Path.Combine(gamesRootDirectoryPath, folderName, "GameFiles", fileName));
+                if (!System.IO.File.Exists(Path.Combine(GamesRootDirectoryPath, folderName, fileName)))
+                    WriteResourceToFile(game, Path.Combine(GamesRootDirectoryPath, folderName, "gamefiles", fileName));
             }
         }
 
@@ -68,30 +74,6 @@
                     resource.CopyTo(file);
                 }
             }
-        }
-
-        public static string GetActiveGame()
-        {
-            var activeGameID = ActiveGames.FirstOrDefault(key => key.Value == true).Key;
-            return Games.FirstOrDefault(name => name.Key == activeGameID).Value;
-        }
-
-        public static string GetActiveVersion()
-        {
-            return GameVersion;
-        }
-
-        public static void UpdateActiveVersion(string selectedVersion)
-        {
-            GameVersion = selectedVersion;
-        }
-
-        public static void UpdateActiveGame(string selectedGame)
-        {
-            var activeGameID = ActiveGames.FirstOrDefault(game => game.Value == true).Key;
-            ActiveGames[activeGameID] = false;
-            activeGameID = Games.FirstOrDefault(game => game.Value == selectedGame).Key;
-            ActiveGames[activeGameID] = true;
         }
 
         public static ObservableCollection<ListItem> GetGameList()
@@ -107,6 +89,40 @@
             return GamesList;
         }
 
-        
+        public static string GetActiveGame()
+        {
+            var activeGameID = ActiveGames.FirstOrDefault(key => key.Value == true).Key;
+            return Games.FirstOrDefault(name => name.Key == activeGameID).Value;
+        }
+
+        public static string GetActiveVersion()
+        {
+            return ActiveGameVersion;
+        }
+
+        public static string GetActiveCharacter()
+        {
+            return ActiveCharacter;
+        }
+
+        public static void UpdateActiveCharacter(string selectedCharacter)
+        {
+            ActiveCharacter = selectedCharacter;
+        }
+
+        public static void UpdateActiveVersion(string selectedVersion)
+        {
+            ActiveGameVersion = selectedVersion;
+        }
+
+        public static void UpdateActiveGame(string selectedGame)
+        {
+            var activeGameID = ActiveGames.FirstOrDefault(game => game.Value == true).Key;
+            ActiveGames[activeGameID] = false;
+            activeGameID = Games.FirstOrDefault(game => game.Value == selectedGame).Key;
+            ActiveGames[activeGameID] = true;
+        }
+        #endregion
+
     }
 }
