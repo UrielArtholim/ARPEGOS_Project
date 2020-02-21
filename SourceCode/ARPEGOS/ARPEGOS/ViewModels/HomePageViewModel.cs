@@ -14,6 +14,7 @@
         {
             CurrentGameName = "Juego activo: " + SystemControl.GetActiveGame();
             CurrentGameVersion = "Versión: " +SystemControl.GetActiveVersion();
+
         }
     }
 }

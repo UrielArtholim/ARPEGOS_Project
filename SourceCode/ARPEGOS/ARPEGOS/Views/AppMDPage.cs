@@ -8,17 +8,18 @@ using Xamarin.Forms;
 
 namespace ARPEGOS.Views
 {
-    class MainPage : MasterDetailPage
+    class AppMDPage : MasterDetailPage
     {
-        public MainPage()
+        public AppMDPage()
         {
             Xamarin.Forms.NavigationPage.SetHasNavigationBar(this, false);
 
-            this.Master = new MasterMenuPage();
+            this.Master = new AppMasterMenuPage();
             this.Detail = new NavigationPage(new WelcomePage());
             this.MasterBehavior = MasterBehavior.Popover;
 
-            MasterMenuViewModel masterViewModel = Master.BindingContext as MasterMenuViewModel;
+            AppMasterMenuViewModel masterViewModel = Master.BindingContext as AppMasterMenuViewModel;
+
             masterViewModel.PageSelected += MasterPageSelected;
             PresentDetailPage(PageType.Welcome);
         }
@@ -31,7 +32,7 @@ namespace ARPEGOS.Views
                 case PageType.Welcome: NextPage = new WelcomePage(); break;
                 case PageType.Home: NextPage = new HomePage(); break;
                 case PageType.GamesList: NextPage = new GameListPage(); break;
-                case PageType.CreateCharacter: NextPage = new WelcomePage(); break;
+                case PageType.CreateCharacter: NextPage = new SelectCharacterClassPage(); break;
                 case PageType.ViewCharacter: NextPage = new WelcomePage(); break;
                 case PageType.EditCharacter: NextPage = new WelcomePage(); break;
                 case PageType.RemoveCharacter: NextPage = new WelcomePage(); break;

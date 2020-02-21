@@ -11,7 +11,7 @@ namespace ARPEGOS
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new MainPage());
+            MainPage = new NavigationPage(new AppMDPage()); ;
         }
 
         protected override void OnStart()
