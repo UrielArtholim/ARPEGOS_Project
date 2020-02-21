@@ -16,13 +16,13 @@
         {
             SelectVersionCommand = new Command<ListItem>(item =>
             {
+                SystemControl.ShowLoadingPopupPage("Cargando información del juego...");
                 var selectedItem = this.VersionList.FirstOrDefault(currentVar => currentVar.ItemName == item.ItemName);
                 SystemControl.UpdateActiveVersion(selectedItem.ItemName);
                 // Load game ontology
-                SystemControl.ActiveGameDB = new GameDB(SystemControl.GetActiveGame(), SystemControl.GetActiveVersion());
-                var game = SystemControl.ActiveGameDB;
-                Debug.WriteLine(SystemControl.ActiveGameDB);
-                Xamarin.Forms.Application.Current.MainPage.Navigation.PopToRootAsync();
+                SystemControl.ActiveGameDB = new GameDB();
+                SystemControl.CloseLoadingPopupPage();
+                Xamarin.Forms.Application.Current.MainPage.Navigation.PushAsync(new HomePage());
                 
             });
 
