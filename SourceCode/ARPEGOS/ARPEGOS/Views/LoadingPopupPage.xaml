@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup" xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="ARPEGOS.Views.LoadingPopupPage">
+    <StackLayout BackgroundColor="White" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" Padding="20,20,20,20">
+        <ActivityIndicator IsRunning="True" IsVisible="True" IsEnabled="True" Color="BlueViolet" HorizontalOptions="CenterAndExpand" VerticalOptions="Center"/>
+        <Label Text="{Binding LoadingText}"/>
+    </StackLayout>
+
+</ContentPage>
