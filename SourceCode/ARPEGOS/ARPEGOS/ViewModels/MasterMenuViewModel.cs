@@ -13,6 +13,7 @@
 
     public class MasterMenuViewModel
     {
+        #region Properties
         public event EventHandler<PageType> PageSelected;
 
         public Page NextPage { get; private set; }
@@ -24,8 +25,14 @@
         const string removeCharacter = "Eliminar personaje";
         const string characterSkillCalculator = "Calcular habilidad de personaje";
         const string confrontedSkillCalculator = "Calcular tirada enfentada";
-        
 
+        public ICommand ExpandCommand { get; }
+        public ICommand SelectPageCommand { get; }
+        public List<ItemGroupViewModel> ItemsList { get; }
+        public ObservableCollection<ItemGroupViewModel> Data { get; }
+        #endregion
+
+        #region Constructor
         public MasterMenuViewModel()
         {
             ExpandCommand = new Command<ItemGroupViewModel>(itemgroup =>
@@ -68,6 +75,10 @@
             this.UpdateListContent();
         }
 
+        #endregion
+
+        #region Methods
+
         private void GetNextPageType(ListItem item)
         {
             switch (item.ItemName)
@@ -82,13 +93,6 @@
                 default: PageSelected?.Invoke(this, PageType.Home); break;
             }
         }
-                
-
-        public ICommand ExpandCommand { get; }
-        public ICommand SelectPageCommand { get; }
-        public List<ItemGroupViewModel> ItemsList { get; }
-
-        public ObservableCollection<ItemGroupViewModel> Data { get; }
 
         private void UpdateListContent()
         {
@@ -106,5 +110,11 @@
                 this.Data.Add(elements);
             }
         }
+
+        async void NotifyGameNotSelected()
+        {
+            await Xamarin.Forms.Application.Current.MainPage.DisplayAlert("Parece que ha habido un error", "Debe seleccionar un juego antes de crear un personaje", "De acuerdo");
+        }
+        #endregion
     }
 }
