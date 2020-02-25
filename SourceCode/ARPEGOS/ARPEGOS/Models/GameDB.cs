@@ -19,26 +19,16 @@
         static readonly RDFModelEnums.RDFFormats RdfFormat = RDFModelEnums.RDFFormats.RdfXml;
         public RDFGraph GameGraph { get; internal set; }
         public List<RDFTriple> TripleList { get; internal set; }
-        public string DBFile { get; internal set; }
+        public string GameFile { get; internal set; }
         #endregion
 
         #region Constructors
-        public GameDB()
-        {
-            DBFile = Path.Combine(SystemControl.DirectoryHelper.GetBaseDirectory(), SystemControl.GetActiveGame(), "gamefiles", SystemControl.GetActiveVersion());
-            GameGraph = RDFGraph.FromFile(RdfFormat, DBFile);
-            GameGraph.SetContext(new Uri(GameGraph.Context.ToString() + "#"));
-        }
 
-        public GameDB(string name)
+        public GameDB(string game, string title)
         {
-            // Solicitar nombre de fichero
-            DBFile = Path.Combine(SystemControl.DirectoryHelper.GetBaseDirectory(), SystemControl.GetActiveGame(), "characters", name);
-            var CharacterGraph = new RDFGraph();
-            var CharacterContextUri = SystemControl.ActiveGameDB.GameGraph.Context.ToString();
-            CharacterContextUri = CharacterContextUri.Insert(CharacterContextUri.IndexOf('#'), name);
-            CharacterGraph.SetContext(new Uri(CharacterContextUri));
-            CharacterGraph.ToFile(RdfFormat, Path.Combine(DBFile, ".owl"));
+            GameFile = Path.Combine(SystemControl.DirectoryHelper.GetBaseDirectory(), game, "gamefiles", title);
+            GameGraph = RDFGraph.FromFile(RdfFormat, GameFile);
+            GameGraph.SetContext(new Uri(GameGraph.Context.ToString() + "#"));
         }
         #endregion
 
@@ -49,8 +39,8 @@
             foreach (var statement in TripleList)
                 GameGraph.AddTriple(statement);
 
-            Console.WriteLine("Saving data into file " +DBFile);
-            GameGraph.ToFile(RdfFormat,DBFile);
+            Console.WriteLine("Saving data into file " +GameFile);
+            GameGraph.ToFile(RdfFormat,GameFile);
             Console.WriteLine("Data saved");
             Console.WriteLine("----------------------------\n");
         }
