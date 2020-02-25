@@ -1,17 +1,18 @@
-﻿using ARPEGOS.Views;
-using System;
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
-
-namespace ARPEGOS
+﻿namespace ARPEGOS
 {
+    using ARPEGOS.ViewModels;
+    using ARPEGOS.Views;
+    using System;
+    using System.Diagnostics;
+    using Xamarin.Forms;
+    using Xamarin.Forms.Xaml;
     public partial class App : Application
     {
         public App()
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new MainPage());
+            MainPage = new MainPage();
         }
 
         protected override void OnStart()

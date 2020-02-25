@@ -22,8 +22,9 @@
                 SystemControl.ActiveGameDB = new GameDB(SystemControl.GetActiveGame(), SystemControl.GetActiveVersion());
                 var game = SystemControl.ActiveGameDB;
                 Debug.WriteLine(SystemControl.ActiveGameDB);
-                Xamarin.Forms.Application.Current.MainPage.Navigation.PopToRootAsync();
-                
+                MainPage mainpage = Xamarin.Forms.Application.Current.MainPage as MainPage;
+                MainPageViewModel mainViewModel = mainpage.BindingContext as MainPageViewModel;
+                mainpage.Detail = mainViewModel.PresentDetailPage(PageType.Home);
             });
 
             VersionList = new ObservableCollection<ListItem>();

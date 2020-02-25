@@ -15,17 +15,16 @@
     {
         #region Properties
         public event EventHandler<PageType> PageSelected;
-
         public Page NextPage { get; private set; }
         const string home = "Inicio";
         const string selectGame = "Seleccionar juego";
         const string addCharacter = "Añadir personaje";
+        const string selectCharacter = "Seleccionar personaje";
         const string viewCharacter = "Ver personaje";
         const string editCharacter = "Editar personaje";
         const string removeCharacter = "Eliminar personaje";
         const string characterSkillCalculator = "Calcular habilidad de personaje";
         const string confrontedSkillCalculator = "Calcular tirada enfentada";
-
         public ICommand ExpandCommand { get; }
         public ICommand SelectPageCommand { get; }
         public List<ItemGroupViewModel> ItemsList { get; }
@@ -40,14 +39,30 @@
                 MainThread.BeginInvokeOnMainThread(() =>
                 {
                     var selectedGroup = this.ItemsList.FirstOrDefault(currentVar => currentVar.Title == itemgroup.Title);
-                    selectedGroup.Expanded = !selectedGroup.Expanded;
-                    this.UpdateListContent();
+                    if(selectedGroup.Title == "Personaje")
+                    {
+                        if(SystemControl.GetActiveVersion() == null)
+                        {
+                            NotifyGameNotSelected();
+                            GetNextPageType(selectGame);
+                        }
+                        else
+                        {
+                            selectedGroup.Expanded = !selectedGroup.Expanded;
+                            this.UpdateListContent();
+                        }
+                    }
+                    else 
+                    {
+                        selectedGroup.Expanded = !selectedGroup.Expanded;
+                        this.UpdateListContent();
+                    }
                 });
             });
 
             SelectPageCommand = new Command<ListItem>(listitem =>
             {
-                    this.GetNextPageType(listitem);
+                    this.GetNextPageType(listitem.ItemName);
             });
 
             this.ItemsList = new List<ItemGroupViewModel>
@@ -60,6 +75,7 @@
                 new ItemGroupViewModel("Personaje")
                     {
                         new ListItem (addCharacter),
+                        new ListItem (selectCharacter),
                         new ListItem (viewCharacter),
                         new ListItem (editCharacter),
                         new ListItem (removeCharacter)
@@ -74,14 +90,12 @@
             this.NextPage = new WelcomePage();
             this.UpdateListContent();
         }
-
         #endregion
 
         #region Methods
-
-        private void GetNextPageType(ListItem item)
+        private void GetNextPageType(string itemName)
         {
-            switch (item.ItemName)
+            switch (itemName)
             {
                 case selectGame: PageSelected?.Invoke(this, PageType.GamesList); break;
                 case addCharacter: PageSelected?.Invoke(this, PageType.CreateCharacter); break;

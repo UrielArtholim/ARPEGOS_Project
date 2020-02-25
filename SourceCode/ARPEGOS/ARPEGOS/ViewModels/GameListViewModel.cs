@@ -26,7 +26,9 @@ namespace ARPEGOS.ViewModels
             {
                 var selectedItem = this.GameList.FirstOrDefault(currentVar => currentVar.ItemName == item.ItemName);
                 SystemControl.UpdateActiveGame(selectedItem.ItemName);
-                Xamarin.Forms.Application.Current.MainPage.Navigation.PushAsync(new VersionListPage());
+                MainPage main = Xamarin.Forms.Application.Current.MainPage as MainPage;
+                NavigationPage navPage = main.Detail as NavigationPage; 
+                navPage.PushAsync(new VersionListPage());
             });
 
             SystemControl.UpdateGames();
