@@ -11,7 +11,7 @@
     using Xamarin.Essentials;
     using Xamarin.Forms;
 
-    public class AppMasterMenuViewModel
+    public class MasterMenuViewModel
     {
         public event EventHandler<PageType> PageSelected;
 
@@ -26,39 +26,21 @@
         const string confrontedSkillCalculator = "Calcular tirada enfentada";
         
 
-        public AppMasterMenuViewModel()
+        public MasterMenuViewModel()
         {
             ExpandCommand = new Command<ItemGroupViewModel>(itemgroup =>
             {
                 MainThread.BeginInvokeOnMainThread(() =>
                 {
                     var selectedGroup = this.ItemsList.FirstOrDefault(currentVar => currentVar.Title == itemgroup.Title);
-                    if(selectedGroup.Title == "Personaje")
-                    {
-                        bool GameHasBeenSelected = SystemControl.ActiveGameDB != null;
-                        if(!GameHasBeenSelected)
-                        {
-                            NotifyGameNotSelected();
-                            this.GetNextPageType(selectGame);
-                        }
-                        else 
-                        {
-                            selectedGroup.Expanded = !selectedGroup.Expanded;
-                            this.UpdateListContent();
-                        }
-                    }
-                    else
-                    {
-                        selectedGroup.Expanded = !selectedGroup.Expanded;
-                        this.UpdateListContent();
-                    }
-                    
+                    selectedGroup.Expanded = !selectedGroup.Expanded;
+                    this.UpdateListContent();
                 });
             });
 
             SelectPageCommand = new Command<ListItem>(listitem =>
             {
-                    this.GetNextPageType(listitem.ItemName);
+                    this.GetNextPageType(listitem);
             });
 
             this.ItemsList = new List<ItemGroupViewModel>
@@ -86,14 +68,9 @@
             this.UpdateListContent();
         }
 
-        async void NotifyGameNotSelected()
+        private void GetNextPageType(ListItem item)
         {
-            await Xamarin.Forms.Application.Current.MainPage.DisplayAlert("Parece que ha habido un error", "Debe seleccionar un juego antes de crear un personaje", "De acuerdo");
-        }
-
-        private void GetNextPageType(string itemName)
-        {
-            switch (itemName)
+            switch (item.ItemName)
             {
                 case selectGame: PageSelected?.Invoke(this, PageType.GamesList); break;
                 case addCharacter: PageSelected?.Invoke(this, PageType.CreateCharacter); break;

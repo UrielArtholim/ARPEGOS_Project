@@ -2,7 +2,6 @@
 {
     using ARPEGOS.Interfaces;
     using ARPEGOS.ViewModels;
-    using ARPEGOS.Views;
     using System;
     using System.Collections.Generic;
     using System.Collections.ObjectModel;
@@ -21,11 +20,9 @@
         static readonly string GamesRootDirectoryPath = DirectoryHelper.GetBaseDirectory();
         static readonly ObservableCollection<ListItem> GamesList = new ObservableCollection<ListItem>();
 
-        static LoadingPopupPage LoadingPage { get; set; }
-        static string ActiveGameVersion { get; set; } 
-        public static string ActiveCharacter { get; set; }
-        public static GameDB ActiveCharacterDB { get; set; }
-        public static GameDB ActiveGameDB { get; set; } = null;
+        static string ActiveGameVersion { get; set; }
+        static string ActiveCharacter { get; set; }
+        public static GameDB ActiveGameDB { get; set; }
         #endregion
 
         #region Methods
@@ -63,7 +60,7 @@
                 SystemControl.Games.Add(currentGameID, folderName);
                 SystemControl.ActiveGames.Add(currentGameID, false);
 
-                if (!System.IO.File.Exists(Path.Combine(GamesRootDirectoryPath, folderName, "gamefiles", fileName)))
+                if (!System.IO.File.Exists(Path.Combine(GamesRootDirectoryPath, folderName, fileName)))
                     WriteResourceToFile(game, Path.Combine(GamesRootDirectoryPath, folderName, "gamefiles", fileName));
             }
         }
@@ -103,6 +100,16 @@
             return ActiveGameVersion;
         }
 
+        public static string GetActiveCharacter()
+        {
+            return ActiveCharacter;
+        }
+
+        public static void UpdateActiveCharacter(string selectedCharacter)
+        {
+            ActiveCharacter = selectedCharacter;
+        }
+
         public static void UpdateActiveVersion(string selectedVersion)
         {
             ActiveGameVersion = selectedVersion;
@@ -115,26 +122,6 @@
             activeGameID = Games.FirstOrDefault(game => game.Value == selectedGame).Key;
             ActiveGames[activeGameID] = true;
         }
-
-        public static void ShowLoadingPopupPage(string text)
-        {
-            LoadingPage = new LoadingPopupPage(text);
-            Xamarin.Forms.Application.Current.MainPage.Navigation.PushModalAsync(LoadingPage);
-        }
-
-        public static void CloseLoadingPopupPage()
-        {
-            Xamarin.Forms.Application.Current.MainPage.Navigation.PopModalAsync();
-        }
-
-        public static void ClearNavigationStack()
-        {
-            var navigationStackPagesList = Xamarin.Forms.Application.Current.MainPage.Navigation.NavigationStack.ToList();
-
-            foreach (var page in navigationStackPagesList)
-                Xamarin.Forms.Application.Current.MainPage.Navigation.RemovePage(page);
-        }
-
         #endregion
 
     }

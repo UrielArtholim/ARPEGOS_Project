@@ -7,14 +7,14 @@
     using Xamarin.Forms.Xaml;
 
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class AppMasterMenuPage : ContentPage
+    public partial class MasterMenuPage : ContentPage
     {
-        readonly AppMasterMenuViewModel viewModel;
-        public AppMasterMenuPage()
+        public MasterMenuPage()
         {
             this.InitializeComponent();
-            viewModel = new AppMasterMenuViewModel();
-            this.BindingContext = viewModel;
+            this.BindingContext = new MasterMenuViewModel();
+
+
         }
     }
 }
