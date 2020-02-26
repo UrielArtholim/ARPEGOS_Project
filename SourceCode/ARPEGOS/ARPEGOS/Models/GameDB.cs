@@ -113,6 +113,69 @@
             Console.ReadLine();
             return (resultList.Count() != 0) ? resultList : null;
         }
+
+        public List<string> getObjectPropertyOfElement(string elementName)
+        {
+            RDFSelectQuery selectQuery = new RDFSelectQuery();
+            RDFVariable x = new RDFVariable("x");
+            RDFRegexFilter regexFilter = new RDFRegexFilter(x, new Regex("tiene" + elementName));
+
+            // Triple: x rdf:type owl:ObjectProperty
+            var rdfType = new RDFResource(RDFVocabulary.RDF.BASE_URI + "type");
+            var x_fromClass = new RDFPattern(x, rdfType, RDFVocabulary.OWL.OBJECT_PROPERTY);
+            var selectPatternGroup = new RDFPatternGroup("selectPatternGroup");
+
+            selectPatternGroup.AddPattern(x_fromClass);
+            selectPatternGroup.AddFilter(regexFilter);
+            selectQuery.AddPatternGroup(selectPatternGroup);
+
+            RDFSelectQueryResult selectResult = selectQuery.ApplyToGraph(gameGraph);
+            Console.WriteLine("Query result count: " + selectResult.SelectResultsCount);
+            DataRowCollection rows = selectResult.SelectResults.Rows;
+            List<string> resultList = new List<string>();
+
+            foreach (DataRow row in rows)
+                foreach (var item in row.ItemArray)
+                {
+                    resultList.Add(item.ToString());
+                }
+
+            Console.ReadLine();
+            return (resultList.Count() != 0) ? resultList : null;
+        }
+
+        public List<string> getDatatypePropertyOfElement(string elementName)
+        {
+            RDFSelectQuery selectQuery = new RDFSelectQuery();
+            RDFVariable x = new RDFVariable("x");
+            RDFRegexFilter regexFilter = new RDFRegexFilter(x, new Regex("Per_" + elementName));
+
+            // Triple: x rdf:type owl:ObjectProperty
+            var rdfType = new RDFResource(RDFVocabulary.RDF.BASE_URI + "type");
+            var x_fromClass = new RDFPattern(x, rdfType, RDFVocabulary.OWL.DATATYPE_PROPERTY);
+            var selectPatternGroup = new RDFPatternGroup("selectPatternGroup");
+
+            // Triple: x contains elementName in its name
+
+            selectPatternGroup.AddPattern(x_fromClass);
+            selectPatternGroup.AddFilter(regexFilter);
+            selectQuery.AddPatternGroup(selectPatternGroup);
+
+            RDFSelectQueryResult selectResult = selectQuery.ApplyToGraph(gameGraph);
+            Console.WriteLine("Query result count: " + selectResult.SelectResultsCount);
+            DataRowCollection rows = selectResult.SelectResults.Rows;
+            List<string> resultList = new List<string>();
+
+            foreach (DataRow row in rows)
+                foreach (var item in row.ItemArray)
+                {
+                    resultList.Add(item.ToString());
+                }
+
+            Console.ReadLine();
+            return (resultList.Count() != 0) ? resultList : null;
+        }
+
         #endregion
     }
 }

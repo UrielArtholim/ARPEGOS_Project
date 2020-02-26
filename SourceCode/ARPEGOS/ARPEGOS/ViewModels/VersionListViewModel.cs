@@ -11,7 +11,12 @@
 
     class VersionListViewModel
     {
+        #region Properties
         public ObservableCollection<ListItem> VersionList { get; private set; }
+        public ICommand SelectVersionCommand { get; }
+        #endregion
+
+        #region Constructor
         public VersionListViewModel()
         {
             SelectVersionCommand = new Command<ListItem>(item =>
@@ -37,8 +42,7 @@
                 VersionList.Add(new ListItem(file.Name));
             }
         }
-
-        public ICommand SelectVersionCommand { get; }
+        #endregion
 
     }
 }
