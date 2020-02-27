@@ -11,6 +11,7 @@
     using System.Linq;
     using System.Reflection;
     using System.Text;
+    using System.Text.RegularExpressions;
     using System.Threading.Tasks;
 
     public class GameDB
@@ -129,7 +130,7 @@
             selectPatternGroup.AddFilter(regexFilter);
             selectQuery.AddPatternGroup(selectPatternGroup);
 
-            RDFSelectQueryResult selectResult = selectQuery.ApplyToGraph(gameGraph);
+            RDFSelectQueryResult selectResult = selectQuery.ApplyToGraph(GameGraph);
             Console.WriteLine("Query result count: " + selectResult.SelectResultsCount);
             DataRowCollection rows = selectResult.SelectResults.Rows;
             List<string> resultList = new List<string>();
@@ -161,7 +162,7 @@
             selectPatternGroup.AddFilter(regexFilter);
             selectQuery.AddPatternGroup(selectPatternGroup);
 
-            RDFSelectQueryResult selectResult = selectQuery.ApplyToGraph(gameGraph);
+            RDFSelectQueryResult selectResult = selectQuery.ApplyToGraph(GameGraph);
             Console.WriteLine("Query result count: " + selectResult.SelectResultsCount);
             DataRowCollection rows = selectResult.SelectResults.Rows;
             List<string> resultList = new List<string>();
