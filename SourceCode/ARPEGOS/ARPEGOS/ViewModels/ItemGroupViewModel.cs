@@ -3,7 +3,7 @@
     using System.Collections.ObjectModel;
     using System.ComponentModel;
     using ARPEGOS.Models;
-    public class ItemGroupViewModel : ObservableCollection<ListItem>, INotifyPropertyChanged
+    public class ItemGroupViewModel : ObservableCollection<SimpleListItem>, INotifyPropertyChanged
     {
         private bool _expanded;
         public string Title { get; set; }

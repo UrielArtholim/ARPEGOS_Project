@@ -60,7 +60,7 @@
                 });
             });
 
-            SelectPageCommand = new Command<ListItem>(listitem =>
+            SelectPageCommand = new Command<SimpleListItem>(listitem =>
             {
                     this.GetNextPageType(listitem.ItemName);
             });
@@ -69,21 +69,21 @@
             {
                 new ItemGroupViewModel("General") 
                 {
-                    new ListItem(home),
-                    new ListItem(selectGame) 
+                    new SimpleListItem(home),
+                    new SimpleListItem(selectGame) 
                 },
                 new ItemGroupViewModel("Personaje")
                     {
-                        new ListItem (addCharacter),
-                        new ListItem (selectCharacter),
-                        new ListItem (viewCharacter),
-                        new ListItem (editCharacter),
-                        new ListItem (removeCharacter)
+                        new SimpleListItem (addCharacter),
+                        new SimpleListItem (selectCharacter),
+                        new SimpleListItem (viewCharacter),
+                        new SimpleListItem (editCharacter),
+                        new SimpleListItem (removeCharacter)
                     },
                 new ItemGroupViewModel("Habilidad")
                     {
-                        new ListItem (characterSkillCalculator),
-                        new ListItem (confrontedSkillCalculator)
+                        new SimpleListItem (characterSkillCalculator),
+                        new SimpleListItem (confrontedSkillCalculator)
                     }
             };
             this.Data = new ObservableCollection<ItemGroupViewModel>();

@@ -19,10 +19,10 @@ namespace ARPEGOS.ViewModels
 {
     class GameListViewModel
     {
-        public ObservableCollection<ListItem> GameList { get; private set; }
+        public ObservableCollection<SimpleListItem> GameList { get; private set; }
         public GameListViewModel() 
         {
-            SelectGameCommand = new Command<ListItem>(item =>
+            SelectGameCommand = new Command<SimpleListItem>(item =>
             {
                 var selectedItem = this.GameList.FirstOrDefault(currentVar => currentVar.ItemName == item.ItemName);
                 SystemControl.UpdateActiveGame(selectedItem.ItemName);
