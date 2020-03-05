@@ -18,11 +18,11 @@
         static readonly Dictionary<Guid, bool> ActiveGames = new Dictionary<Guid, bool>();
         static readonly Dictionary<Guid, string> Games = new Dictionary<Guid, string>();
         static readonly string GamesRootDirectoryPath = DirectoryHelper.GetBaseDirectory();
-        static readonly ObservableCollection<ListItem> GamesList = new ObservableCollection<ListItem>();
+        static readonly ObservableCollection<SimpleListItem> GamesList = new ObservableCollection<SimpleListItem>();
 
         static string ActiveGameVersion { get; set; }
         static string ActiveCharacter { get; set; }
-        public static GameDB ActiveGameDB { get; set; }
+        public static Game ActiveGame { get; set; }
         #endregion
 
         #region Methods
@@ -76,15 +76,15 @@
             }
         }
 
-        public static ObservableCollection<ListItem> GetGameList()
+        public static ObservableCollection<SimpleListItem> GetGameList()
         {
             GamesList.Clear();
             List<string> GamesValues = Games.Values.ToList();
             foreach (var game in GamesValues)
             {
-                ListItem gameItem = GamesList.FirstOrDefault(item => item.ItemName == game);
+                SimpleListItem gameItem = GamesList.FirstOrDefault(item => item.ItemName == game);
                 if (gameItem == null)
-                    GamesList.Add(new ListItem(game));
+                    GamesList.Add(new SimpleListItem(game));
             }
             return GamesList;
         }
