@@ -1,5 +1,6 @@
 ﻿using RDFSharp.Model;
 using RDFSharp.Query;
+using RDFSharp.Semantics;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -17,15 +18,14 @@ namespace ARPEGOS.Models
     {
         #region Properties
         static readonly RDFModelEnums.RDFFormats RdfFormat = RDFModelEnums.RDFFormats.RdfXml;
-        public string GameTitle { get; internal set; }
-        public RDFGraph GameGraph { get; internal set; }
-        public RDFGraph CharacterGraph { get; set; }
-        public List<List<RDFTriple>> CharacterCreationStagedData { get; set; }
-        public List<RDFTriple> CurrentStage { get; internal set; }
-        public string CharacterFile { get; internal set; }
-        int CurrentStageNumber { get; set; }
-       
-
+        public string CurrentGameName { get; set; }
+        public string CurrentGameContext { get; internal set; }
+        public string GameDBFile { get; internal set; }
+        public string CurrentCharacterFile { get; internal set; }
+        public string CurrentCharacterName { get; set; }
+        public string CurrentCharacterContext { get; internal set; }
+        public RDFOntology GameOntology { get; internal set; }
+        public RDFOntology CharacterOntology { get; set; }
         #endregion
 
         #region Constructor
