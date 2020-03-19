@@ -2,6 +2,7 @@
 {
     using ARPEGOS.Interfaces;
     using ARPEGOS.ViewModels;
+    using RDFSharp.Model;
     using System;
     using System.Collections.Generic;
     using System.Collections.ObjectModel;
@@ -19,7 +20,6 @@
         static readonly Dictionary<Guid, string> Games = new Dictionary<Guid, string>();
         static readonly string GamesRootDirectoryPath = DirectoryHelper.GetBaseDirectory();
         static readonly ObservableCollection<SimpleListItem> GamesList = new ObservableCollection<SimpleListItem>();
-
         static string ActiveGameVersion { get; set; }
         static string ActiveCharacter { get; set; }
         public static Game ActiveGame { get; set; }

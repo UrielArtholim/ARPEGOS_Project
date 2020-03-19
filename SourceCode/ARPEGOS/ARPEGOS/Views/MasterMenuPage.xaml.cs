@@ -13,8 +13,6 @@
         {
             this.InitializeComponent();
             this.BindingContext = new MasterMenuViewModel();
-
-
         }
     }
 }

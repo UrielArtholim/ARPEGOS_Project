@@ -1118,6 +1118,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:anima_beyond_fantasy#Arcano_Dificultad">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:anima_beyond_fantasy#ArcanoTieneValor"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:anima_beyond_fantasy#Arcano"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -1128,6 +1129,9 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:anima_beyond_fantasy#Arcano_HabAtaque">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:anima_beyond_fantasy#ArcanoTieneValor"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="urn:absolute:anima_beyond_fantasy#Arcano"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
     
 
@@ -1136,6 +1140,9 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:anima_beyond_fantasy#Arcano_HabDefensa">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:anima_beyond_fantasy#ArcanoTieneValor"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="urn:absolute:anima_beyond_fantasy#Arcano"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
     
 
@@ -1144,6 +1151,9 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:anima_beyond_fantasy#Arcano_Zeon">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:anima_beyond_fantasy#ArcanoTieneValor"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="urn:absolute:anima_beyond_fantasy#Arcano"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
     
 
@@ -1237,6 +1247,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:anima_beyond_fantasy#Arma_Fuerza">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:anima_beyond_fantasy#ArmaDistanciaTiene"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:anima_beyond_fantasy#Arma_Distancia"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -1365,6 +1376,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:anima_beyond_fantasy#Armadura_Entereza">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:anima_beyond_fantasy#ArmaduraTieneValor"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:anima_beyond_fantasy#Armadura"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -1375,6 +1387,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:anima_beyond_fantasy#Armadura_PenalizadorNatural">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:anima_beyond_fantasy#ArmaduraTieneValor"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:anima_beyond_fantasy#Armadura"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -1385,6 +1398,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:anima_beyond_fantasy#Armadura_Presencia">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:anima_beyond_fantasy#ArmaduraTieneValor"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:anima_beyond_fantasy#Armadura"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -1395,6 +1409,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:anima_beyond_fantasy#Armadura_Requerimiento">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:anima_beyond_fantasy#ArmaduraTieneValor"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:anima_beyond_fantasy#Armadura"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -1405,6 +1420,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:anima_beyond_fantasy#Armadura_RestricciónMovimiento">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:anima_beyond_fantasy#ArmaduraTieneValor"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:anima_beyond_fantasy#Armadura"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -1415,6 +1431,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:anima_beyond_fantasy#Armadura_TA_Calor">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:anima_beyond_fantasy#ArmaduraTieneValor"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:anima_beyond_fantasy#Armadura"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -1425,6 +1442,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:anima_beyond_fantasy#Armadura_TA_Contundente">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:anima_beyond_fantasy#ArmaduraTieneValor"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:anima_beyond_fantasy#Armadura"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -1435,6 +1453,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:anima_beyond_fantasy#Armadura_TA_Energía">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:anima_beyond_fantasy#ArmaduraTieneValor"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:anima_beyond_fantasy#Armadura"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -1445,6 +1464,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:anima_beyond_fantasy#Armadura_TA_Filo">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:anima_beyond_fantasy#ArmaduraTieneValor"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:anima_beyond_fantasy#Armadura"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -1455,6 +1475,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:anima_beyond_fantasy#Armadura_TA_Frío">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:anima_beyond_fantasy#ArmaduraTieneValor"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:anima_beyond_fantasy#Armadura"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -1465,6 +1486,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:anima_beyond_fantasy#Armadura_TA_Penetrante">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:anima_beyond_fantasy#ArmaduraTieneValor"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:anima_beyond_fantasy#Armadura"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -2706,6 +2728,7 @@
     <owl:DatatypeProperty rdf:about="urn:absolute:anima_beyond_fantasy#Cat_HabAtléticas_Coste">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:anima_beyond_fantasy#Cat_HabSec_Coste"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="urn:absolute:anima_beyond_fantasy#Categoría"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
     
@@ -2735,6 +2758,7 @@
     <owl:DatatypeProperty rdf:about="urn:absolute:anima_beyond_fantasy#Cat_HabCreativas_Coste">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:anima_beyond_fantasy#Cat_HabSec_Coste"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="urn:absolute:anima_beyond_fantasy#Categoría"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
     
@@ -2778,6 +2802,7 @@
     <owl:DatatypeProperty rdf:about="urn:absolute:anima_beyond_fantasy#Cat_HabIntelectuales_Coste">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:anima_beyond_fantasy#Cat_HabSec_Coste"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="urn:absolute:anima_beyond_fantasy#Categoría"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
     
@@ -2818,6 +2843,7 @@
     <owl:DatatypeProperty rdf:about="urn:absolute:anima_beyond_fantasy#Cat_HabPerceptivas_Coste">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:anima_beyond_fantasy#Cat_HabSec_Coste"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="urn:absolute:anima_beyond_fantasy#Categoría"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
     
@@ -3232,6 +3258,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:anima_beyond_fantasy#Equipo_Calidad">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:anima_beyond_fantasy#EquipoTieneValor"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:anima_beyond_fantasy#Equipamiento"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
     </owl:DatatypeProperty>
@@ -3242,6 +3269,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:anima_beyond_fantasy#Equipo_Coste">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:anima_beyond_fantasy#EquipoTieneValor"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:anima_beyond_fantasy#Equipamiento"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -3274,6 +3302,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:anima_beyond_fantasy#Equipo_Nombre">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:anima_beyond_fantasy#EquipoTieneValor"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:anima_beyond_fantasy#Equipamiento"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
@@ -3284,6 +3313,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:anima_beyond_fantasy#Equipo_Peso">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:anima_beyond_fantasy#EquipoTieneValor"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:anima_beyond_fantasy#Equipamiento"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
     </owl:DatatypeProperty>
@@ -3294,6 +3324,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:anima_beyond_fantasy#Hab_RequisitoValor1">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:anima_beyond_fantasy#HabilidadTieneRequisitoValor"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:anima_beyond_fantasy#Habilidad"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -3304,6 +3335,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:anima_beyond_fantasy#Hab_RequisitoValor2">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:anima_beyond_fantasy#HabilidadTieneRequisitoValor"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:anima_beyond_fantasy#Habilidad"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -3314,6 +3346,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:anima_beyond_fantasy#Hab_RequisitoValor3">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:anima_beyond_fantasy#HabilidadTieneRequisitoValor"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:anima_beyond_fantasy#Habilidad"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -3324,6 +3357,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:anima_beyond_fantasy#Hab_RequisitoValor4">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:anima_beyond_fantasy#HabilidadTieneRequisitoValor"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:anima_beyond_fantasy#Habilidad"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -3334,6 +3368,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:anima_beyond_fantasy#Hab_RequisitoValor5">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:anima_beyond_fantasy#HabilidadTieneRequisitoValor"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:anima_beyond_fantasy#Habilidad"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -3344,6 +3379,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:anima_beyond_fantasy#Hab_RequisitoValor6">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:anima_beyond_fantasy#HabilidadTieneRequisitoValor"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:anima_beyond_fantasy#Habilidad"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -3354,6 +3390,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:anima_beyond_fantasy#Hab_RequisitoValor7">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:anima_beyond_fantasy#HabilidadTieneRequisitoValor"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:anima_beyond_fantasy#Habilidad"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -3364,6 +3401,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:anima_beyond_fantasy#Hab_RequisitoValor8">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:anima_beyond_fantasy#HabilidadTieneRequisitoValor"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:anima_beyond_fantasy#Habilidad"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -3374,6 +3412,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:anima_beyond_fantasy#Hab_RequisitoValor9">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:anima_beyond_fantasy#HabilidadTieneRequisitoValor"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:anima_beyond_fantasy#Habilidad"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -3396,6 +3435,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:anima_beyond_fantasy#Habilidad_AcumKi_AGI">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:anima_beyond_fantasy#HabilidadTieneValor"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:anima_beyond_fantasy#Habilidad_Combate"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -3483,6 +3523,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:anima_beyond_fantasy#Habilidad_CM">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:anima_beyond_fantasy#HabilidadTieneValor"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:anima_beyond_fantasy#Habilidad_Combate"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -3553,6 +3594,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:anima_beyond_fantasy#Per_ACT">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:anima_beyond_fantasy#Per_HabMística"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -3582,6 +3624,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:anima_beyond_fantasy#Per_AcumKi_AGI">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:anima_beyond_fantasy#Per_AcumKi"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -3592,6 +3635,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:anima_beyond_fantasy#Per_AcumKi_CON">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:anima_beyond_fantasy#Per_AcumKi"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -3602,6 +3646,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:anima_beyond_fantasy#Per_AcumKi_DES">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:anima_beyond_fantasy#Per_AcumKi"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -3612,6 +3657,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:anima_beyond_fantasy#Per_AcumKi_FUE">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:anima_beyond_fantasy#Per_AcumKi"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -3622,6 +3668,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:anima_beyond_fantasy#Per_AcumKi_POD">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:anima_beyond_fantasy#Per_AcumKi"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -3632,6 +3679,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:anima_beyond_fantasy#Per_AcumKi_VOL">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:anima_beyond_fantasy#Per_AcumKi"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -3653,6 +3701,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:anima_beyond_fantasy#Per_Agilidad">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:anima_beyond_fantasy#Per_CarPrimaria"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -3663,6 +3712,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:anima_beyond_fantasy#Per_Agilidad_BonoTemporal">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:anima_beyond_fantasy#Per_CarPrimaria"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -3673,6 +3723,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:anima_beyond_fantasy#Per_Agilidad_ValorBase">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:anima_beyond_fantasy#Per_CarPrimaria"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -3694,6 +3745,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:anima_beyond_fantasy#Per_Apariencia">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:anima_beyond_fantasy#Per_CarSecundaria"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -3704,6 +3756,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:anima_beyond_fantasy#Per_Armad_TA_Calor">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:anima_beyond_fantasy#Personaje_Armadura"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -3714,6 +3767,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:anima_beyond_fantasy#Per_Armad_TA_Contundente">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:anima_beyond_fantasy#Personaje_Armadura"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -3724,6 +3778,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:anima_beyond_fantasy#Per_Armad_TA_Energía">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:anima_beyond_fantasy#Personaje_Armadura"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -3734,6 +3789,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:anima_beyond_fantasy#Per_Armad_TA_Filo">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:anima_beyond_fantasy#Personaje_Armadura"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -3744,6 +3800,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:anima_beyond_fantasy#Per_Armad_TA_Frío">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:anima_beyond_fantasy#Personaje_Armadura"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -3754,6 +3811,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:anima_beyond_fantasy#Per_Armad_TA_Penetrante">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:anima_beyond_fantasy#Personaje_Armadura"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -3775,6 +3833,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:anima_beyond_fantasy#Per_Atar">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:anima_beyond_fantasy#Per_HabMística"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
     </owl:DatatypeProperty>
     
 
@@ -3805,6 +3864,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:anima_beyond_fantasy#Per_BonoAgilidad">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:anima_beyond_fantasy#Per_CarPrimaria"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
     </owl:DatatypeProperty>
@@ -3815,6 +3875,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:anima_beyond_fantasy#Per_BonoConstitución">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:anima_beyond_fantasy#Per_CarPrimaria"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -3825,6 +3886,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:anima_beyond_fantasy#Per_BonoDestreza">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:anima_beyond_fantasy#Per_CarPrimaria"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -3835,6 +3897,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:anima_beyond_fantasy#Per_BonoFuerza">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:anima_beyond_fantasy#Per_CarPrimaria"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -3845,6 +3908,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:anima_beyond_fantasy#Per_BonoInteligencia">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:anima_beyond_fantasy#Per_CarPrimaria"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -3855,6 +3919,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:anima_beyond_fantasy#Per_BonoPercepción">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:anima_beyond_fantasy#Per_CarPrimaria"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -3865,6 +3930,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:anima_beyond_fantasy#Per_BonoPoder">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:anima_beyond_fantasy#Per_CarPrimaria"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -3875,6 +3941,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:anima_beyond_fantasy#Per_BonoVoluntad">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:anima_beyond_fantasy#Per_CarPrimaria"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -3896,6 +3963,9 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:anima_beyond_fantasy#Per_CM">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:anima_beyond_fantasy#Per_HabCombate"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="urn:absolute:anima_beyond_fantasy#Personaje"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
     
 
@@ -3904,6 +3974,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:anima_beyond_fantasy#Per_CV">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:anima_beyond_fantasy#Per_HabPsíquica"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -3914,6 +3985,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:anima_beyond_fantasy#Per_CV_Innatos">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:anima_beyond_fantasy#Per_HabPsíquica"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -3924,6 +3996,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:anima_beyond_fantasy#Per_Cansancio">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:anima_beyond_fantasy#Personaje_General"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -3983,6 +4056,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:anima_beyond_fantasy#Per_Constitución">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:anima_beyond_fantasy#Per_CarPrimaria"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -3993,6 +4067,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:anima_beyond_fantasy#Per_Constitución_BonoTemporal">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:anima_beyond_fantasy#Per_CarPrimaria"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -4003,6 +4078,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:anima_beyond_fantasy#Per_Constitución_ValorBase">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:anima_beyond_fantasy#Per_CarPrimaria"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -4013,6 +4089,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:anima_beyond_fantasy#Per_Convocar">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:anima_beyond_fantasy#Per_HabMística"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
     </owl:DatatypeProperty>
     
 
@@ -4021,6 +4098,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:anima_beyond_fantasy#Per_Desconvocar">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:anima_beyond_fantasy#Per_HabMística"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
     </owl:DatatypeProperty>
     
 
@@ -4029,6 +4107,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:anima_beyond_fantasy#Per_Destreza">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:anima_beyond_fantasy#Per_CarPrimaria"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -4039,6 +4118,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:anima_beyond_fantasy#Per_Destreza_BonoTemporal">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:anima_beyond_fantasy#Per_CarPrimaria"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -4049,6 +4129,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:anima_beyond_fantasy#Per_Destreza_ValorBase">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:anima_beyond_fantasy#Per_CarPrimaria"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -4070,6 +4151,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:anima_beyond_fantasy#Per_Dominar">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:anima_beyond_fantasy#Per_HabMística"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
     </owl:DatatypeProperty>
     
 
@@ -4111,6 +4193,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:anima_beyond_fantasy#Per_Fuerza">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:anima_beyond_fantasy#Per_CarPrimaria"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -4121,6 +4204,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:anima_beyond_fantasy#Per_Fuerza_BonoTemporal">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:anima_beyond_fantasy#Per_CarPrimaria"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -4131,6 +4215,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:anima_beyond_fantasy#Per_Fuerza_ValorBase">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:anima_beyond_fantasy#Per_CarPrimaria"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -4141,6 +4226,9 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:anima_beyond_fantasy#Per_Gnosis">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:anima_beyond_fantasy#Personaje_General"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="urn:absolute:anima_beyond_fantasy#Personaje"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
     
 
@@ -4149,6 +4237,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:anima_beyond_fantasy#Per_HabAtaque">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:anima_beyond_fantasy#Per_HabCombate"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
     </owl:DatatypeProperty>
@@ -4183,6 +4272,9 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:anima_beyond_fantasy#Per_HabEsquiva">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:anima_beyond_fantasy#Per_HabCombate"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="urn:absolute:anima_beyond_fantasy#Personaje"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
     </owl:DatatypeProperty>
     
 
@@ -4207,6 +4299,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:anima_beyond_fantasy#Per_HabParada">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:anima_beyond_fantasy#Per_HabCombate"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
     </owl:DatatypeProperty>
@@ -4295,6 +4388,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:anima_beyond_fantasy#Per_Inteligencia">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:anima_beyond_fantasy#Per_CarPrimaria"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -4305,6 +4399,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:anima_beyond_fantasy#Per_Inteligencia_BonoTemporal">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:anima_beyond_fantasy#Per_CarPrimaria"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -4315,6 +4410,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:anima_beyond_fantasy#Per_Inteligencia_ValorBase">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:anima_beyond_fantasy#Per_CarPrimaria"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -4347,6 +4443,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:anima_beyond_fantasy#Per_LlevarArmadura">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:anima_beyond_fantasy#Per_HabCombate"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
     </owl:DatatypeProperty>
@@ -4390,6 +4487,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:anima_beyond_fantasy#Per_Movimiento">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:anima_beyond_fantasy#Personaje_General"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -4400,6 +4498,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:anima_beyond_fantasy#Per_MúltiploReg">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:anima_beyond_fantasy#Per_HabMística"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
     </owl:DatatypeProperty>
     
 
@@ -4441,6 +4540,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:anima_beyond_fantasy#Per_Nivel">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:anima_beyond_fantasy#Personaje_General"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -4451,6 +4551,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:anima_beyond_fantasy#Per_NivelLibro_Agua">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:anima_beyond_fantasy#Per_NivelVía"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -4461,6 +4562,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:anima_beyond_fantasy#Per_NivelLibro_Aire">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:anima_beyond_fantasy#Per_NivelVía"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -4471,6 +4573,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:anima_beyond_fantasy#Per_NivelLibro_Creación">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:anima_beyond_fantasy#Per_NivelVía"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -4481,6 +4584,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:anima_beyond_fantasy#Per_NivelLibro_Destrucción">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:anima_beyond_fantasy#Per_NivelVía"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -4491,6 +4595,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:anima_beyond_fantasy#Per_NivelLibro_Esencia">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:anima_beyond_fantasy#Per_NivelVía"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -4501,6 +4606,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:anima_beyond_fantasy#Per_NivelLibro_Fuego">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:anima_beyond_fantasy#Per_NivelVía"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -4511,6 +4617,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:anima_beyond_fantasy#Per_NivelLibro_Ilusión">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:anima_beyond_fantasy#Per_NivelVía"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -4521,6 +4628,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:anima_beyond_fantasy#Per_NivelLibro_Luz">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:anima_beyond_fantasy#Per_NivelVía"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -4531,6 +4639,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:anima_beyond_fantasy#Per_NivelLibro_Nigromancia">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:anima_beyond_fantasy#Per_NivelVía"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -4541,6 +4650,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:anima_beyond_fantasy#Per_NivelLibro_Oscuridad">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:anima_beyond_fantasy#Per_NivelVía"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -4551,6 +4661,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:anima_beyond_fantasy#Per_NivelLibro_Tierra">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:anima_beyond_fantasy#Per_NivelVía"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -4561,6 +4672,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:anima_beyond_fantasy#Per_NivelMagia">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:anima_beyond_fantasy#Per_HabMística"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
     </owl:DatatypeProperty>
     
 
@@ -4599,6 +4711,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:anima_beyond_fantasy#Per_PD">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:anima_beyond_fantasy#Personaje_General"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -4664,6 +4777,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:anima_beyond_fantasy#Per_Percepción">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:anima_beyond_fantasy#Per_CarPrimaria"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -4674,6 +4788,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:anima_beyond_fantasy#Per_Percepción_BonoTemporal">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:anima_beyond_fantasy#Per_CarPrimaria"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -4684,6 +4799,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:anima_beyond_fantasy#Per_Percepción_ValorBase">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:anima_beyond_fantasy#Per_CarPrimaria"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -4705,6 +4821,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:anima_beyond_fantasy#Per_Poder">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:anima_beyond_fantasy#Per_CarPrimaria"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -4715,6 +4832,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:anima_beyond_fantasy#Per_Poder_BonoTemporal">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:anima_beyond_fantasy#Per_CarPrimaria"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -4725,6 +4843,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:anima_beyond_fantasy#Per_Poder_ValorBase">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:anima_beyond_fantasy#Per_CarPrimaria"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -4735,6 +4854,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:anima_beyond_fantasy#Per_PotencialPsíquico">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:anima_beyond_fantasy#Per_HabPsíquica"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -4745,6 +4865,9 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:anima_beyond_fantasy#Per_Presencia">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:anima_beyond_fantasy#Personaje_General"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="urn:absolute:anima_beyond_fantasy#Personaje"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
     </owl:DatatypeProperty>
     
 
@@ -4764,6 +4887,9 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:anima_beyond_fantasy#Per_ProyMágica">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:anima_beyond_fantasy#Per_HabMística"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="urn:absolute:anima_beyond_fantasy#Personaje"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
     </owl:DatatypeProperty>
     
 
@@ -4772,6 +4898,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:anima_beyond_fantasy#Per_ProyPsíquica">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:anima_beyond_fantasy#Per_HabPsíquica"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -4782,6 +4909,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:anima_beyond_fantasy#Per_PuntosCreación">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:anima_beyond_fantasy#Personaje_General"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -4800,6 +4928,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:anima_beyond_fantasy#Per_PuntosKi_AGI">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:anima_beyond_fantasy#Per_PuntosKi"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -4810,6 +4939,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:anima_beyond_fantasy#Per_PuntosKi_CON">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:anima_beyond_fantasy#Per_PuntosKi"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -4820,6 +4950,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:anima_beyond_fantasy#Per_PuntosKi_DES">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:anima_beyond_fantasy#Per_PuntosKi"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -4830,6 +4961,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:anima_beyond_fantasy#Per_PuntosKi_FUE">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:anima_beyond_fantasy#Per_PuntosKi"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -4840,6 +4972,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:anima_beyond_fantasy#Per_PuntosKi_POD">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:anima_beyond_fantasy#Per_PuntosKi"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -4850,6 +4983,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:anima_beyond_fantasy#Per_PuntosKi_VOL">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:anima_beyond_fantasy#Per_PuntosKi"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -4860,6 +4994,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:anima_beyond_fantasy#Per_PuntosVida">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:anima_beyond_fantasy#Personaje_General"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
     </owl:DatatypeProperty>
@@ -4881,6 +5016,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:anima_beyond_fantasy#Per_Regeneración">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:anima_beyond_fantasy#Personaje_General"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -4891,6 +5027,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:anima_beyond_fantasy#Per_ResistenciaEnfermedad">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:anima_beyond_fantasy#Per_Resistencias"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -4901,6 +5038,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:anima_beyond_fantasy#Per_ResistenciaFísica">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:anima_beyond_fantasy#Per_Resistencias"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -4911,6 +5049,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:anima_beyond_fantasy#Per_ResistenciaMágica">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:anima_beyond_fantasy#Per_Resistencias"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -4921,6 +5060,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:anima_beyond_fantasy#Per_ResistenciaPsíquica">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:anima_beyond_fantasy#Per_Resistencias"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -4931,6 +5071,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:anima_beyond_fantasy#Per_ResistenciaVeneno">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:anima_beyond_fantasy#Per_Resistencias"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -4993,6 +5134,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:anima_beyond_fantasy#Per_Tamaño">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:anima_beyond_fantasy#Per_CarSecundaria"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -5058,6 +5200,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:anima_beyond_fantasy#Per_Turno">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:anima_beyond_fantasy#Personaje_General"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
     </owl:DatatypeProperty>
@@ -5068,6 +5211,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:anima_beyond_fantasy#Per_TurnoBase">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:anima_beyond_fantasy#Personaje_General"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
     </owl:DatatypeProperty>
@@ -5100,6 +5244,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:anima_beyond_fantasy#Per_Voluntad">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:anima_beyond_fantasy#Per_CarPrimaria"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -5110,6 +5255,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:anima_beyond_fantasy#Per_Voluntad_BonoTemporal">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:anima_beyond_fantasy#Per_CarPrimaria"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -5120,6 +5266,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:anima_beyond_fantasy#Per_Voluntad_ValorBase">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:anima_beyond_fantasy#Per_CarPrimaria"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -5130,6 +5277,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:anima_beyond_fantasy#Per_Zeon">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:anima_beyond_fantasy#Per_HabMística"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
     </owl:DatatypeProperty>
@@ -5194,6 +5342,7 @@
 
     <owl:DatatypeProperty rdf:about="urn:absolute:anima_beyond_fantasy#Personaje_PactoArcanoCumplido">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:anima_beyond_fantasy#Personaje_Arcano"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
     </owl:DatatypeProperty>
@@ -44900,6 +45049,9 @@ No todas las personas son capaces de controlar el poder de las almas. Hacerlo no
     <rdf:Description rdf:about="urn:absolute:anima_beyond_fantasy#Organización">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gaïa es una tierra llena de sociedades, órdenes y grupos que ejercen una gran
 influencia en su desarrollo. Algunas de ellas son secretas y se mueven en las sombras, mientras que otras son grandes agrupaciones conocidas por todos.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:anima_beyond_fantasy#Personaje">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sujeto que forma parte del mundo de Gaïa. Este tiene personalidad, características y habilidades propias.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="urn:absolute:anima_beyond_fantasy#Personaje_Jugador">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Personaje interpretado por un jugador durante una partida.</rdfs:comment>
