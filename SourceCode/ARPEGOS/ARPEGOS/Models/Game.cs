@@ -293,7 +293,7 @@ namespace ARPEGOS.Models
                 else
                     DomainClass = CharacterClassModel.SelectClass(new RDFOntologyClass(new RDFResource(CurrentCharacterContext + DomainName)).ToString());
                 CharacterDatatypeProperty.SetDomain(DomainClass);
-                CharacterDatatypeProperty.SetRange(GetClassFromDatatype(CheckDatatypeFromString(RangeName)));
+                CharacterDatatypeProperty.SetRange(CheckClassFromDatatype(CheckDatatypeFromString(RangeName)));
                 CharacterDatatypeProperty.SetFunctional(GameDatatypeProperty.Functional);
                 CharacterPropertyModel.AddProperty(CharacterDatatypeProperty);
             }
