@@ -338,7 +338,7 @@ namespace ARPEGOS.Models
         /// </summary>
         /// <param name="datatype">Semantic datatype</param>
         /// <returns></returns>
-        internal RDFOntologyClass GetClassFromDatatype(RDFModelEnums.RDFDatatypes datatype)
+        internal RDFOntologyClass CheckClassFromDatatype(RDFModelEnums.RDFDatatypes datatype)
         {
             if (datatype.Equals(RDFModelEnums.RDFDatatypes.RDF_XMLLITERAL))
                 return new RDFOntologyClass(RDFVocabulary.RDF.XML_LITERAL);
