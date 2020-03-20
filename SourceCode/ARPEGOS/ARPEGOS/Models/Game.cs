@@ -31,20 +31,28 @@ namespace ARPEGOS.Models
         #region Constructor
         public Game(string GamePath, string GameVersion)
         {
-            GameTitle = GamePath;
-            GameGraph = RDFGraph.FromFile(RdfFormat, Path.Combine(GameTitle, GameVersion));
-            GameGraph.SetContext(new Uri(GameGraph.Context.ToString() + "#"));
-            CharacterCreationStagedData = new List<List<RDFTriple>>();
-            CurrentStage = new List<RDFTriple>();
-            CurrentStageNumber = 0;
-            CharacterFile = Path.Combine(SystemControl.DirectoryHelper.GetBaseDirectory(), GameTitle, "Character");
-        }
-        #endregion
+            CurrentGameName = GamePath.Substring(GamePath.LastIndexOf('/') + 1);
+            CurrentCharacterName = "TestCharacter";
+            CurrentCharacterFile = Path.Combine("F:/Alejandro/Xamarin/OWL Project/characters", CurrentCharacterName + ".owl");
+            CurrentCharacterContext = "http://ARPEGOS_Project/Games/" + CurrentGameName + "/characters/" + CurrentCharacterName + "#";
+            string CurrentGamePrefix = string.Concat(Regex.Matches(CurrentGameName, "[A-Z]").OfType<Match>().Select(match => match.Value)).ToLower();
 
-        #region Methods
-        #region Game_Methods
-        #region SPARQL_Select_Methods
-        public List<string> GetIndividualsOfClass(string className)
+            GameDBFile = GamePath + GameVersion;
+            RDFGraph GameGraph = RDFGraph.FromFile(RdfFormat, GameDBFile);
+            CurrentGameContext = GameGraph.Context.ToString() + '#';
+            GameGraph.SetContext(new Uri(CurrentGameContext));
+            RDFNamespaceRegister.AddNamespace(new RDFNamespace(CurrentGamePrefix, GameGraph.Context.ToString()));
+            GameOntology = RDFOntology.FromRDFGraph(GameGraph);
+
+            RDFGraph CharacterGraph = new RDFGraph();
+            CharacterGraph.SetContext(new Uri(CurrentCharacterContext));
+            CharacterOntology = RDFOntology.FromRDFGraph(CharacterGraph);
+            #endregion
+
+            #region Methods
+            #region Game_Methods
+            #region SPARQL_Select_Methods
+            public List<string> GetIndividualsOfClass(string className)
         {
             RDFVariable individual = new RDFVariable("individual");
             RDFResource classResource = new RDFResource(GameGraph.Context + className);
