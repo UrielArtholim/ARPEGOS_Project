@@ -33,7 +33,7 @@ namespace ARPEGOS.Models
         /// <summary>
         /// Path of the current game file
         /// </summary>
-        public string GameDBFile { get; internal set; }
+        public string CurrentGameFile { get; internal set; }
 
         
         public string CurrentGameContext { get; internal set; }
@@ -78,8 +78,8 @@ namespace ARPEGOS.Models
             CurrentCharacterContext = "http://ARPEGOS_Project/Games/" + CurrentGameName + "/characters/" + CurrentCharacterName + "#";
             string CurrentGamePrefix = string.Concat(Regex.Matches(CurrentGameName, "[A-Z]").OfType<Match>().Select(match =>match.Value)).ToLower();
 
-            GameDBFile = GameName + GameVersion;
-            RDFGraph GameGraph = RDFGraph.FromFile(RdfFormat, GameDBFile);
+            CurrentGameFile = GameName + GameVersion;
+            RDFGraph GameGraph = RDFGraph.FromFile(RdfFormat, CurrentGameFile);
             CurrentGameContext = GameGraph.Context.ToString() + '#';
             GameGraph.SetContext(new Uri(CurrentGameContext));
             RDFNamespaceRegister.AddNamespace(new RDFNamespace(CurrentGamePrefix, GameGraph.Context.ToString()));
@@ -103,7 +103,7 @@ namespace ARPEGOS.Models
             CurrentCharacterContext = "http://ARPEGOS_Project/Games/" + CurrentGameName + "/characters/" + CurrentCharacterName + "#";
             string CurrentGamePrefix = string.Concat(Regex.Matches(CurrentGameName, "[A-Z]").OfType<Match>().Select(match =>match.Value)).ToLower();
 
-            GameDBFile = gamepath;
+            CurrentGameFile = gamepath;
             RDFGraph GameGraph = RDFGraph.FromFile(RdfFormat, gamepath);
             CurrentGameContext = GameGraph.Context.ToString() + '#';
             GameGraph.SetContext(new Uri(CurrentGameContext));
