@@ -68,15 +68,15 @@ namespace ARPEGOS.Models
         /// <summary>
         /// Ctor to build a game given the name of the game and its version
         /// </summary>
-        /// <param name="GameName"> Name of the selected game </param>
-        /// <param name="GameVersion"> Version of the selected game </param>
+        /// <param name="GameName">Name of the selected game </param>
+        /// <param name="GameVersion">Version of the selected game </param>
         public Game(string GameName, string GameVersion)
         {
             CurrentGameName = GameName.Substring(GameName.LastIndexOf('/') + 1);
             CurrentCharacterName = "TestCharacter";
             CurrentCharacterFile = Path.Combine("F:/Alejandro/Xamarin/OWL Project/characters", CurrentCharacterName + ".owl");
             CurrentCharacterContext = "http://ARPEGOS_Project/Games/" + CurrentGameName + "/characters/" + CurrentCharacterName + "#";
-            string CurrentGamePrefix = string.Concat(Regex.Matches(CurrentGameName, "[A-Z]").OfType<Match>().Select(match => match.Value)).ToLower();
+            string CurrentGamePrefix = string.Concat(Regex.Matches(CurrentGameName, "[A-Z]").OfType<Match>().Select(match =>match.Value)).ToLower();
 
             GameDBFile = GameName + GameVersion;
             RDFGraph GameGraph = RDFGraph.FromFile(RdfFormat, GameDBFile);
@@ -101,7 +101,7 @@ namespace ARPEGOS.Models
             CurrentCharacterName = "TestCharacter";
             CurrentCharacterFile = Path.Combine("F:/Alejandro/Xamarin/OWL Project/characters", CurrentCharacterName + ".owl");
             CurrentCharacterContext = "http://ARPEGOS_Project/Games/" + CurrentGameName + "/characters/" + CurrentCharacterName + "#";
-            string CurrentGamePrefix = string.Concat(Regex.Matches(CurrentGameName, "[A-Z]").OfType<Match>().Select(match => match.Value)).ToLower();
+            string CurrentGamePrefix = string.Concat(Regex.Matches(CurrentGameName, "[A-Z]").OfType<Match>().Select(match =>match.Value)).ToLower();
 
             GameDBFile = gamepath;
             RDFGraph GameGraph = RDFGraph.FromFile(RdfFormat, gamepath);
@@ -116,7 +116,22 @@ namespace ARPEGOS.Models
         }
         #endregion
 
+        #region Methods
 
+        #region Save
+        /// <summary>
+        /// Saves current character info
+        /// </summary>
+        public void SaveCharacter()
+        {
+            RDFGraph CharacterGraph = CharacterOntology.ToRDFGraph(RDFSemanticsEnums.RDFOntologyInferenceExportBehavior.ModelAndData);
+            CharacterGraph.ToFile(RdfFormat, CurrentCharacterFile);
+        }
+        #endregion
+
+
+
+        #endregion
     }
 }
 
