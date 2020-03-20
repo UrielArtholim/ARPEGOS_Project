@@ -784,7 +784,43 @@ namespace ARPEGOS.Models
         }
         #endregion
 
+        #region Select
+        /// <summary>
+        /// Selects a game from the app
+        /// </summary>
+        /// <param name="name"></param>
+        /// <param name="version"></param>
+        public void SelectGame(string name, string version)
+        {
+            string GamesFolder = "F:/Alejandro/Xamarin/ARPEGOS Test Suite/Files/Arpegos_Source_Files/Games";
+            CurrentGameName = name.Replace(' ', '_');
+            CurrentGameFile = GamesFolder + "/" + name + "/" + version + ".owl";
+            CurrentGameContext = "http://ARPEGOS_Project/Games/" + name + "#";
+            string CurrentGamePrefix = string.Concat(Regex.Matches(name, "[A-Z]").OfType<Match>().Select(match => match.Value)).ToLower();
 
+            RDFGraph GameGraph = RDFGraph.FromFile(RdfFormat, CurrentGameFile);
+            CurrentGameContext = GameGraph.Context.ToString() + '#';
+            GameGraph.SetContext(new Uri(CurrentGameContext));
+            RDFNamespaceRegister.AddNamespace(new RDFNamespace(CurrentGamePrefix, GameGraph.Context.ToString()));
+            GameOntology = RDFOntology.FromRDFGraph(GameGraph);
+        }
+
+        /// <summary>
+        /// Selects an existing character from the current game
+        /// </summary>
+        /// <param name="name"></param>
+        public void SelectCharacter(string name)
+        {
+            name = name.Replace(' ', '_');
+            CurrentCharacterName = name;
+            CurrentCharacterFile = Path.Combine("F:/Alejandro/Xamarin/OWL Project/characters", name + ".owl");
+            CurrentCharacterContext = "http://ARPEGOS_Project/Games/" + CurrentGameName + "/characters/" + name + "#";
+
+            RDFGraph CharacterGraph = new RDFGraph();
+            CharacterGraph.SetContext(new Uri(CurrentCharacterContext));
+            CharacterOntology = RDFOntology.FromRDFGraph(CharacterGraph);
+        }
+        #endregion
 
         #endregion
     }
