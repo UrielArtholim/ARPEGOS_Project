@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="urn:absolute:anima_beyond_fantasy#"
      xml:base="urn:absolute:anima_beyond_fantasy"
+     xmlns:Des="urn:absolute:anima_beyond_fantasy#Des/"
      xmlns:abf="urn:absolute:anima_beyond_fantasy#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -5366,6 +5367,23 @@
     
 
 
+    <!-- urn:absolute:anima_beyond_fantasy#Des/VentajaTieneValor -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:anima_beyond_fantasy#Des/VentajaTieneValor">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="urn:absolute:anima_beyond_fantasy#Desventaja"/>
+                    <rdf:Description rdf:about="urn:absolute:anima_beyond_fantasy#Ventaja"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -5468,8 +5486,7 @@
     <!-- urn:absolute:anima_beyond_fantasy#Arma_ReglaEspecial -->
 
     <owl:Class rdf:about="urn:absolute:anima_beyond_fantasy#Arma_ReglaEspecial">
-        <rdfs:subClassOf rdf:resource="urn:absolute:anima_beyond_fantasy#Arma"/>
-        <rdfs:subClassOf rdf:resource="urn:absolute:anima_beyond_fantasy#Características_Arma"/>
+        <rdfs:subClassOf rdf:resource="urn:absolute:anima_beyond_fantasy#Propiedades_Arma"/>
     </owl:Class>
     
 
@@ -5683,7 +5700,7 @@
     <!-- urn:absolute:anima_beyond_fantasy#Calidad_Armadura -->
 
     <owl:Class rdf:about="urn:absolute:anima_beyond_fantasy#Calidad_Armadura">
-        <rdfs:subClassOf rdf:resource="urn:absolute:anima_beyond_fantasy#Armadura"/>
+        <rdfs:subClassOf rdf:resource="urn:absolute:anima_beyond_fantasy#Propiedades_Armadura"/>
     </owl:Class>
     
 
@@ -5796,14 +5813,6 @@
     
 
 
-    <!-- urn:absolute:anima_beyond_fantasy#Características_Arma -->
-
-    <owl:Class rdf:about="urn:absolute:anima_beyond_fantasy#Características_Arma">
-        <rdfs:subClassOf rdf:resource="urn:absolute:anima_beyond_fantasy#Armas_Y_Escudos"/>
-    </owl:Class>
-    
-
-
     <!-- urn:absolute:anima_beyond_fantasy#Características_Magia -->
 
     <owl:Class rdf:about="urn:absolute:anima_beyond_fantasy#Características_Magia">
@@ -5867,7 +5876,7 @@
     <!-- urn:absolute:anima_beyond_fantasy#Comida_Y_Bebida -->
 
     <owl:Class rdf:about="urn:absolute:anima_beyond_fantasy#Comida_Y_Bebida">
-        <rdfs:subClassOf rdf:resource="urn:absolute:anima_beyond_fantasy#Materiales_Forja"/>
+        <rdfs:subClassOf rdf:resource="urn:absolute:anima_beyond_fantasy#Equipamiento"/>
     </owl:Class>
     
 
@@ -6041,7 +6050,7 @@
     <!-- urn:absolute:anima_beyond_fantasy#Dureza -->
 
     <owl:Class rdf:about="urn:absolute:anima_beyond_fantasy#Dureza">
-        <rdfs:subClassOf rdf:resource="urn:absolute:anima_beyond_fantasy#Armadura"/>
+        <rdfs:subClassOf rdf:resource="urn:absolute:anima_beyond_fantasy#Propiedades_Armadura"/>
     </owl:Class>
     
 
@@ -6589,7 +6598,7 @@
     <!-- urn:absolute:anima_beyond_fantasy#Munición -->
 
     <owl:Class rdf:about="urn:absolute:anima_beyond_fantasy#Munición">
-        <rdfs:subClassOf rdf:resource="urn:absolute:anima_beyond_fantasy#Características_Arma"/>
+        <rdfs:subClassOf rdf:resource="urn:absolute:anima_beyond_fantasy#Propiedades_Arma"/>
     </owl:Class>
     
 
@@ -6605,7 +6614,7 @@
     <!-- urn:absolute:anima_beyond_fantasy#Munición_Asedio -->
 
     <owl:Class rdf:about="urn:absolute:anima_beyond_fantasy#Munición_Asedio">
-        <rdfs:subClassOf rdf:resource="urn:absolute:anima_beyond_fantasy#Munición"/>
+        <rdfs:subClassOf rdf:resource="urn:absolute:anima_beyond_fantasy#Munición_Arcos"/>
     </owl:Class>
     
 
@@ -6734,6 +6743,28 @@
     
 
 
+    <!-- urn:absolute:anima_beyond_fantasy#Propiedades -->
+
+    <owl:Class rdf:about="urn:absolute:anima_beyond_fantasy#Propiedades"/>
+    
+
+
+    <!-- urn:absolute:anima_beyond_fantasy#Propiedades_Arma -->
+
+    <owl:Class rdf:about="urn:absolute:anima_beyond_fantasy#Propiedades_Arma">
+        <rdfs:subClassOf rdf:resource="urn:absolute:anima_beyond_fantasy#Propiedades"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:anima_beyond_fantasy#Propiedades_Armadura -->
+
+    <owl:Class rdf:about="urn:absolute:anima_beyond_fantasy#Propiedades_Armadura">
+        <rdfs:subClassOf rdf:resource="urn:absolute:anima_beyond_fantasy#Propiedades"/>
+    </owl:Class>
+    
+
+
     <!-- urn:absolute:anima_beyond_fantasy#Puntos_Proyección_Psíquica -->
 
     <owl:Class rdf:about="urn:absolute:anima_beyond_fantasy#Puntos_Proyección_Psíquica">
@@ -6769,7 +6800,7 @@
     <!-- urn:absolute:anima_beyond_fantasy#Rango_Armas -->
 
     <owl:Class rdf:about="urn:absolute:anima_beyond_fantasy#Rango_Armas">
-        <rdfs:subClassOf rdf:resource="urn:absolute:anima_beyond_fantasy#Características_Arma"/>
+        <rdfs:subClassOf rdf:resource="urn:absolute:anima_beyond_fantasy#Propiedades_Arma"/>
     </owl:Class>
     
 
@@ -7011,7 +7042,7 @@
     <!-- urn:absolute:anima_beyond_fantasy#Tipos_Armas -->
 
     <owl:Class rdf:about="urn:absolute:anima_beyond_fantasy#Tipos_Armas">
-        <rdfs:subClassOf rdf:resource="urn:absolute:anima_beyond_fantasy#Características_Arma"/>
+        <rdfs:subClassOf rdf:resource="urn:absolute:anima_beyond_fantasy#Propiedades_Arma"/>
     </owl:Class>
     
 
@@ -7231,6 +7262,7 @@ Vías Cerradas: Ninguna</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Acceso_Libre_a_Cualquier_Disciplina_Psíquica">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Ventaja_Común"/>
+        <Des:VentajaTieneValor rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">2</Des:VentajaTieneValor>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El personaje está dotado de la capacidad de emplear cualquier tipo de disciplina psíquica y sus habilidades. Efectos: Esta ventaja capacita al personaje a acceder libremente a tantas disciplinas psíquicas como desee empleando sus CV. Coste: 2</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -7240,6 +7272,7 @@ Vías Cerradas: Ninguna</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Acceso_a_Poderes_Psíquicos_Naturales_1">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Ventaja_Común"/>
+        <Des:VentajaTieneValor rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">1</Des:VentajaTieneValor>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El personaje está dotado de una limitada capacidad psíquica que le permite utilizar inconscientemente una habilidad determinada. En realidad no tiene conocimiento del origen de su poder ni un completo control sobre él, pero es capaz de utilizarlo siempre que lo requiera. Efectos: El personaje es capaz de utilizar de manera natural un único poder mental determinado. En realidad no es un verdadero psíquico, por lo que no puede emplear CVs para adquirir nuevas habilidades ni para potenciar el poder que posee. Su potencial psíquico no se basa en su Voluntad ni requiere lanzar dados para calcularlo, sino que tiene automáticamente un valor de Difícil (DIF). El poder elegido puede ser de cualquier nivel, pero si tiene un requerimiento base superior a Difícil no es posible utilizarlo. Puede usarse una vez por minuto sin que el personaje sufra ningún tipo de penalización, pero cada uso adicional sin el periodo de descanso requerido causa la pérdida de un punto de Cansancio. Coste: 1</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -7249,6 +7282,7 @@ Vías Cerradas: Ninguna</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Acceso_a_Poderes_Psíquicos_Naturales_2">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Ventaja_Común"/>
+        <Des:VentajaTieneValor rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">2</Des:VentajaTieneValor>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El personaje está dotado de una limitada capacidad psíquica que le permite utilizar inconscientemente una habilidad determinada. En realidad no tiene conocimiento del origen de su poder ni un completo control sobre él, pero es capaz de utilizarlo siempre que lo requiera. Efectos: El personaje es capaz de utilizar de manera natural un único poder mental determinado. En realidad no es un verdadero psíquico, por lo que no puede emplear CVs para adquirir nuevas habilidades ni para potenciar el poder que posee. Su potencial psíquico no se basa en su Voluntad ni requiere lanzar dados para calcularlo, sino que tiene automáticamente un valor de Muy Difícil (MDF). El poder elegido puede ser de cualquier nivel, pero si tiene un requerimiento base superior a Muy Difícil no es posible utilizarlo. Puede usarse una vez por minuto sin que el personaje sufra ningún tipo de penalización, pero cada uso adicional sin el periodo de descanso requerido causa la pérdida de un punto de Cansancio. Coste: 2</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -7258,6 +7292,7 @@ Vías Cerradas: Ninguna</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Acceso_a_Poderes_Psíquicos_Naturales_3">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Ventaja_Común"/>
+        <Des:VentajaTieneValor rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">3</Des:VentajaTieneValor>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El personaje está dotado de una limitada capacidad psíquica que le permite utilizar inconscientemente una habilidad determinada. En realidad no tiene conocimiento del origen de su poder ni un completo control sobre él, pero es capaz de utilizarlo siempre que lo requiera. Efectos: El personaje es capaz de utilizar de manera natural un único poder mental determinado. En realidad no es un verdadero psíquico, por lo que no puede emplear CVs para adquirir nuevas habilidades ni para potenciar el poder que posee. Su potencial psíquico no se basa en su Voluntad ni requiere lanzar dados para calcularlo, sino que tiene automáticamente un valor de Absurdo (ABS). El poder elegido puede ser de cualquier nivel, pero si tiene un requerimiento base superior a Absurdo no es posible utilizarlo. Puede usarse una vez por minuto sin que el personaje sufra ningún tipo de penalización, pero cada uso adicional sin el periodo de descanso requerido causa la pérdida de un punto de Cansancio. Coste: 3</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -7267,6 +7302,7 @@ Vías Cerradas: Ninguna</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Acceso_a_una_Disciplina_Psíquica">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Ventaja_Común"/>
+        <Des:VentajaTieneValor rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">1</Des:VentajaTieneValor>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El personaje está dotado de la capacidad de utilizar los poderes de una disciplina psíquica. Sus habilidades están limitadas a un único campo y, por mucho que aumente su potencial, no tendrá acceso a poderes que están más allá de sus capacidades naturales. Efectos: Esta ventaja permite utilizar un CV para adquirir afinidad a una única disciplina psíquica y a los poderes matriciales. Coste: 1</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -7390,6 +7426,7 @@ El ACT también se basa en la característica de Poder.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Adicción_o_vicio_grave">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Desventaja_Común"/>
+        <Des:VentajaTieneValor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-1</Des:VentajaTieneValor>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Representa que se tiene una necesidad imperiosa de realizar algún tipo de acción concreta o de consumir una sustancia específica a diario. Un personaje con esta desventaja hará lo que sea necesario para conseguir satisfacer su vicio, puesto que en caso contrario empezará a sentirse muy nervioso y a entrar en crisis.
 
 Efectos: El personaje aplicará un penalizador acumulativo de –10 por cada día que transcurra sin satisfacer su vicio.
@@ -7535,6 +7572,7 @@ Mantenimiento: 20 / 40 / 50 / 60</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Afinidad_Animal">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Ventaja_Común"/>
+        <Des:VentajaTieneValor rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">1</Des:VentajaTieneValor>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Quien posea esta ventaja tiene un vínculo especial hacia los animales que le permite obtener una reacción positiva por su parte. Incomprensiblemente es incluso capaz de comunicarse de un modo limitado con ellos, entendiendo a rasgos generales cuáles son sus intenciones y viceversa. Efectos: El alcance de esta ventaja debe de ser interpretada por el Director de Juego. De cualquier modo, hay que explicar que un animal entrenado para atacar acabará haciéndolo a pesar de esta ventaja, pero probablemente lo hará tras una advertencia y dando siempre la oportunidad de escapar al personaje. En caso de que se fuerce un combate contra un animal, el personaje con esta ventaja será siempre la última persona a la que atacará si se encuentra en un grupo.
 Coste: 1</rdfs:comment>
     </owl:NamedIndividual>
@@ -7592,6 +7630,7 @@ Mantenimiento: 5 / 10 / 10 / 15 Diario</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Afortunado">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Ventaja_Común"/>
+        <Des:VentajaTieneValor rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">1</Des:VentajaTieneValor>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Una persona afortunada es alguien que goza de verdadera suerte. En muchas ocasiones, podrá salir de situaciones difíciles utilizando únicamente su buena estrella. Efectos: El alcance de esta ventaja debe de ser interpretada por el Director de Juego. En cualquier caso, nunca sufrirá los efectos negativos de una trampa o de un ataque que se determinen mediante el azar. Coste: 1</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -7740,6 +7779,7 @@ Mantenimiento: 10 / 10 / 15 / 25</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Alergia_grave">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Desventaja_Común"/>
+        <Des:VentajaTieneValor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-1</Des:VentajaTieneValor>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El personaje tiene algún tipo de alergia hacia algo, tan grave que, por el mero contacto o inhalación, recibirá una terrible reacción alérgica que perdurará durante horas. Algunos ejemplos de alergias habituales son hacia el metal, al polen, o incluso hacia la luz solar.
 
 Efectos: Los negativos a toda acción por entrar en contacto con dicha sustancia variarán entre un –40 y un –80, dependiendo de la gravedad o del tiempo que se haya permanecido en contacto con dicho elemento.
@@ -7953,6 +7993,7 @@ Mantenimiento: No</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Ambidestría">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Ventaja_Común"/>
+        <Des:VentajaTieneValor rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">1</Des:VentajaTieneValor>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Una persona que goza de ambidestria tiene un perfecto control sobre ambas manos y puede utilizarlas con la misma habilidad. Efectos: Un personaje ambidiestro podrá efectuar maniobras con cualquier mano con idéntica habilidad. En combate, permite reducir a –10 los ataques efectuados con un arma adicional. Coste: 1</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -8252,6 +8293,7 @@ Vías Cerradas: Destrucción y Fuego</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Aprendizaje_1">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Ventaja_Común"/>
+        <Des:VentajaTieneValor rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">1</Des:VentajaTieneValor>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El personaje tiene una enorme capacidad de aprendizaje para desarrollar su potencial, y saca siempre el máximo provecho a lo que ha visto o hecho. Efectos: Obtiene un beneficio adicional de 3 puntos de experiencia a la cantidad que le otorgue el Director de Juego al finalizar cada sesión de juego. Coste: 1</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -8261,6 +8303,7 @@ Vías Cerradas: Destrucción y Fuego</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Aprendizaje_2">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Ventaja_Común"/>
+        <Des:VentajaTieneValor rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">2</Des:VentajaTieneValor>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El personaje tiene una enorme capacidad de aprendizaje para desarrollar su potencial, y saca siempre el máximo provecho a lo que ha visto o hecho. Efectos: Obtiene un beneficio adicional de 6 puntos de experiencia a la cantidad que le otorgue el Director de Juego al finalizar cada sesión de juego. Coste: 2</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -8270,6 +8313,7 @@ Vías Cerradas: Destrucción y Fuego</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Aprendizaje_3">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Ventaja_Común"/>
+        <Des:VentajaTieneValor rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">3</Des:VentajaTieneValor>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El personaje tiene una enorme capacidad de aprendizaje para desarrollar su potencial, y saca siempre el máximo provecho a lo que ha visto o hecho. Efectos: Obtiene un beneficio adicional de 9 puntos de experiencia a la cantidad que le otorgue el Director de Juego al finalizar cada sesión de juego. Coste: 3</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -8279,6 +8323,7 @@ Vías Cerradas: Destrucción y Fuego</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Aprendizaje_Innato_1">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Ventaja_Común"/>
+        <Des:VentajaTieneValor rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">1</Des:VentajaTieneValor>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El personaje tiene una capacidad innata para mejorar en una habilidad secundaria. Sin esforzarse o practicarla, va perfeccionándola poco a poco. Efectos: Otorga un bono de categoría de +10 por nivel en una habilidad secundaria. Este bono se suma a cualquier otro bonificador innato que pudiera obtener el personaje gracias a su categoría. 
 Coste: 1</rdfs:comment>
     </owl:NamedIndividual>
@@ -8289,6 +8334,7 @@ Coste: 1</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Aprendizaje_Innato_2">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Ventaja_Común"/>
+        <Des:VentajaTieneValor rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">2</Des:VentajaTieneValor>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El personaje tiene una capacidad innata para mejorar en una habilidad secundaria. Sin esforzarse o practicarla, va perfeccionándola poco a poco. Efectos: Otorga un bono de categoría de +20 por nivel en una habilidad secundaria. Este bono se suma a cualquier otro bonificador innato que pudiera obtener el personaje gracias a su categoría. Coste: 1</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -8298,6 +8344,7 @@ Coste: 1</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Aprendizaje_Innato_en_un_Campo_1">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Ventaja_Común"/>
+        <Des:VentajaTieneValor rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">2</Des:VentajaTieneValor>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Igual que en el anterior, salvo que en este caso el personaje mejora en todas las habilidades secundarias que pertenezcan a un campo determinado. Efectos: Otorga un bono de categoría de +5 por nivel a todas las habilidades de un campo. Estos bonificadores se suman a cualquier otro bono innato que pudiera obtener el personaje por su categoría. Coste: 2</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -8307,6 +8354,7 @@ Coste: 1</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Aprendizaje_Innato_en_un_Campo_2">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Ventaja_Común"/>
+        <Des:VentajaTieneValor rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">3</Des:VentajaTieneValor>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Igual que en el anterior, salvo que en este caso el personaje mejora en todas las habilidades secundarias que pertenezcan a un campo determinado. Efectos: Otorga un bono de categoría de +10 por nivel a todas las habilidades de un campo. Estos bonificadores se suman a cualquier otro bono innato que pudiera obtener el personaje por su categoría. Coste: 3</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -8316,6 +8364,7 @@ Coste: 1</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Aprendizaje_Lento_1">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Desventaja_Común"/>
+        <Des:VentajaTieneValor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-1</Des:VentajaTieneValor>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La habilidad de aprendizaje del personaje es mucho más limitada que la de un individuo normal. No significa que sea menos inteligente que el resto, sino que no aprende tanto de sus errores ni saca realmente todo el provecho que puede de sus éxitos.
 
 Efectos: El personaje tiene un penalizador de 4 puntos de experiencia a los
@@ -8330,6 +8379,7 @@ Beneficio: 1</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Aprendizaje_Lento_2">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Desventaja_Común"/>
+        <Des:VentajaTieneValor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-2</Des:VentajaTieneValor>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La habilidad de aprendizaje del personaje es mucho más limitada que la de un individuo normal. No significa que sea menos inteligente que el resto, sino que no aprende tanto de sus errores ni saca realmente todo el provecho que puede de sus éxitos.
 
 Efectos: El personaje tiene un penalizador de 8 puntos de experiencia a los
@@ -8344,6 +8394,7 @@ Beneficio: 2</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Apto_en_un_Campo">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Ventaja_Común"/>
+        <Des:VentajaTieneValor rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">2</Des:VentajaTieneValor>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Igual que la anterior, sólo que en este caso el personaje tiene una gran capacidad de aprendizaje en los costes de todo un campo de habilidades secundarias. Efectos: El coste de desarrollo de un campo de habilidades secundarias se reduce en un punto. Si se da el caso de que la categoría del personaje posee una habilidad secundaria concreta dentro de dicho campo con un coste inferior al del resto de habilidades, este valor también se reducirá. Limitación: Los costes de desarrollo no pueden reducirse por debajo de 1. Esta ventaja sólo funciona con los costes de las habilidades secundarias. Coste: 2</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -8353,6 +8404,7 @@ Beneficio: 2</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Apto_en_una_Materia">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Ventaja_Común"/>
+        <Des:VentajaTieneValor rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">1</Des:VentajaTieneValor>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Representa que el personaje tiene una enorme capacidad de aprendizaje en una habilidad secundaria que le permite desarrollarla con muy poco esfuerzo, por debajo incluso de lo que su categoría indica. Efectos: Esta ventaja reduce un punto el coste de desarrollo de una habilidad secundaria. Limitación: Los costes de desarrollo no pueden reducirse por debajo de 1. Esta ventaja sólo funciona con los costes de las habilidades secundarias. Coste: 1</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -8362,6 +8414,7 @@ Beneficio: 2</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Apto_en_una_Materia_2">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Ventaja_Común"/>
+        <Des:VentajaTieneValor rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">2</Des:VentajaTieneValor>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Representa que el personaje tiene una enorme capacidad de aprendizaje en una habilidad secundaria que le permite desarrollarla con muy poco esfuerzo, por debajo incluso de lo que su categoría indica. Efectos: Esta ventaja reduce dos puntos el coste de desarrollo de una habilidad secundaria. Limitación: Los costes de desarrollo no pueden reducirse por debajo de 1. Esta ventaja sólo funciona con los costes de las habilidades secundarias. Coste: 2</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -8371,6 +8424,7 @@ Beneficio: 2</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Apto_en_una_Materia_3">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Ventaja_Común"/>
+        <Des:VentajaTieneValor rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">3</Des:VentajaTieneValor>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Representa que el personaje tiene una enorme capacidad de aprendizaje en una habilidad secundaria que le permite desarrollarla con muy poco esfuerzo, por debajo incluso de lo que su categoría indica. Efectos: Esta ventaja reduce tres punto el coste de desarrollo de una habilidad secundaria por cada Punto de Creación que se invierta. Limitación: Los costes de desarrollo no pueden reducirse por debajo de 1. Esta ventaja sólo funciona con los costes de las habilidades secundarias. Coste: 3</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -8380,6 +8434,7 @@ Beneficio: 2</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Apto_para_el_Desarrollo_de_la_Magia">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Ventaja_Mistica"/>
+        <Des:VentajaTieneValor rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">1</Des:VentajaTieneValor>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dota al personaje de la capacidad de comprender y alcanzar con sus conjuros niveles de poder muy superiores al que le permite su Inteligencia. Efectos: El personaje añade 3 puntos a su característica de Inteligencia para calcular la Inteligencia Requerida de los conjuros. Este bonificador no se aplica para ninguna otra habilidad, ni siquiera para calcular su nivel de magia. Coste: 1</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -8390,7 +8445,7 @@ Beneficio: 2</rdfs:comment>
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Arcabuz">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Arma_de_Pólvora"/>
         <Arma_Especial rdf:resource="urn:absolute:anima_beyond_fantasy#Compleja"/>
-        <Arma_Rango rdf:resource="urn:absolute:anima_beyond_fantasy#Arma_a_distancia"/>
+        <Arma_Rango rdf:resource="urn:absolute:anima_beyond_fantasy#Arma_de_disparo"/>
         <Arma_Tipología rdf:resource="urn:absolute:anima_beyond_fantasy#Tipo_Proyectil"/>
         <Equipo_Disponibilidad rdf:resource="urn:absolute:anima_beyond_fantasy#Equipo_Muy_Raro"/>
         <Arma_Entereza rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</Arma_Entereza>
@@ -8435,7 +8490,7 @@ Beneficio: 2</rdfs:comment>
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Arco_Compuesto">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Arcos"/>
         <Arma_Especial rdf:resource="urn:absolute:anima_beyond_fantasy#A_dos_manos"/>
-        <Arma_Rango rdf:resource="urn:absolute:anima_beyond_fantasy#Arma_a_distancia"/>
+        <Arma_Rango rdf:resource="urn:absolute:anima_beyond_fantasy#Arma_de_disparo"/>
         <Arma_Tipología rdf:resource="urn:absolute:anima_beyond_fantasy#Tipo_Proyectil"/>
         <Equipo_Disponibilidad rdf:resource="urn:absolute:anima_beyond_fantasy#Equipo_Raro"/>
         <Arma_Entereza rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</Arma_Entereza>
@@ -8455,7 +8510,7 @@ Beneficio: 2</rdfs:comment>
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Arco_Corto">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Arcos"/>
         <Arma_Especial rdf:resource="urn:absolute:anima_beyond_fantasy#A_dos_manos"/>
-        <Arma_Rango rdf:resource="urn:absolute:anima_beyond_fantasy#Arma_a_distancia"/>
+        <Arma_Rango rdf:resource="urn:absolute:anima_beyond_fantasy#Arma_de_disparo"/>
         <Arma_Tipología rdf:resource="urn:absolute:anima_beyond_fantasy#Tipo_Proyectil"/>
         <Equipo_Disponibilidad rdf:resource="urn:absolute:anima_beyond_fantasy#Equipo_Común"/>
         <Arma_Entereza rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</Arma_Entereza>
@@ -8475,7 +8530,7 @@ Beneficio: 2</rdfs:comment>
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Arco_Largo">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Arcos"/>
         <Arma_Especial rdf:resource="urn:absolute:anima_beyond_fantasy#A_dos_manos"/>
-        <Arma_Rango rdf:resource="urn:absolute:anima_beyond_fantasy#Arma_a_distancia"/>
+        <Arma_Rango rdf:resource="urn:absolute:anima_beyond_fantasy#Arma_de_disparo"/>
         <Arma_Tipología rdf:resource="urn:absolute:anima_beyond_fantasy#Tipo_Proyectil"/>
         <Equipo_Disponibilidad rdf:resource="urn:absolute:anima_beyond_fantasy#Equipo_Común"/>
         <Arma_Entereza rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</Arma_Entereza>
@@ -8575,10 +8630,11 @@ Vías Cerradas: Destrucción</rdfs:comment>
     
 
 
-    <!-- urn:absolute:anima_beyond_fantasy#Arma_a_distancia -->
+    <!-- urn:absolute:anima_beyond_fantasy#Arma_de_disparo -->
 
-    <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Arma_a_distancia">
+    <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Arma_de_disparo">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Rango_Armas"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Las armas de proyectiles son las que los personajes emplean para atacar a distancia, sin la necesidad de estar trabados en combate cuerpo a cuerpo. De entre ellas, as de disparo son artilugios que despiden proyectiles por sí mismos, con los que su usuario se limita únicamente a apuntar.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -8587,6 +8643,7 @@ Vías Cerradas: Destrucción</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Arma_exclusiva">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Desventaja_Común"/>
+        <Des:VentajaTieneValor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-1</Des:VentajaTieneValor>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Esta desventaja representa que el personaje está acostumbrado a luchar exclusivamente con un arma concreta y su habilidad empleando cualquier otra,
 incluso del mismo tipo, será mucho menor. 
 
@@ -8765,6 +8822,7 @@ Mantenimiento: 5 / 10 / 10 / 15</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Armadura_Mística">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Ventaja_Común"/>
+        <Des:VentajaTieneValor rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">1</Des:VentajaTieneValor>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El aura del personaje forma una capa de energía mística a su alrededor que le protege contra los ataques sobrenaturales. Efectos: Otorga un Tipo de Armadura natural de 4 contra los ataques basados en Energía. Aunque cuenta como una armadura, no se aplican penalizadores al turno por emplear capas de protección adicionales. Coste: 1</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -8774,6 +8832,7 @@ Mantenimiento: 5 / 10 / 10 / 15</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Armadura_Natural">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Ventaja_Común"/>
+        <Des:VentajaTieneValor rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">1</Des:VentajaTieneValor>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El personaje tiene una piel extremadamente resistente y unos músculos muy duros, lo suficiente como para que sea muy difícil traspasarlos. Efectos: Otorga un Tipo de Armadura natural de 2 contra todas las clases de ataques salvo las de energía. Aunque cuenta como una protección, no se aplican penalizadores al turno por emplear capas de armaduras adicionales. Coste: 1</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -9153,6 +9212,7 @@ Mantenimiento: 15 / 30 / 50 / 100 Diario</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Artefacto_1">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Ventaja_Común"/>
+        <Des:VentajaTieneValor rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">1</Des:VentajaTieneValor>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El personaje posee un artefacto místico de enorme poder. Efectos: El jugador y el Director de Juego deberán ponerse de acuerdo con las habilidades del artefacto. Coste: 1</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -9162,6 +9222,7 @@ Mantenimiento: 15 / 30 / 50 / 100 Diario</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Artefacto_2">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Ventaja_Común"/>
+        <Des:VentajaTieneValor rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">2</Des:VentajaTieneValor>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El personaje posee un artefacto místico de enorme poder. Efectos: El jugador y el Director de Juego deberán ponerse de acuerdo con las habilidades del artefacto. Coste: 2</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -9171,6 +9232,7 @@ Mantenimiento: 15 / 30 / 50 / 100 Diario</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Artefacto_3">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Ventaja_Común"/>
+        <Des:VentajaTieneValor rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">3</Des:VentajaTieneValor>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El personaje posee un artefacto místico de enorme poder. Efectos: El jugador y el Director de Juego deberán ponerse de acuerdo con las habilidades del artefacto. Coste: 3</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -9346,6 +9408,7 @@ Vías Cerradas: Ninguna</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Aspecto_desagradable">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Desventaja_Común"/>
+        <Des:VentajaTieneValor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-1</Des:VentajaTieneValor>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El personaje tiene terribles deformaciones que vuelven su aspecto muy desagradable a la vista.
 
 Efectos: Reduce la apariencia del personaje a 2.
@@ -10122,7 +10185,6 @@ Mantenimiento: 10 / 15 / 25 / 35</rdfs:comment>
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Bala">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Munición_Pólvora"/>
         <Arma_TipoAtaque_1 rdf:resource="urn:absolute:anima_beyond_fantasy#Ataque_Penetrante"/>
-        <Arma_Tipología rdf:resource="urn:absolute:anima_beyond_fantasy#Tipo_Munición"/>
         <Equipo_Disponibilidad rdf:resource="urn:absolute:anima_beyond_fantasy#Equipo_Raro"/>
         <Arma_DañoBase rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">60</Arma_DañoBase>
         <Arma_Entereza rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</Arma_Entereza>
@@ -10139,7 +10201,6 @@ Mantenimiento: 10 / 15 / 25 / 35</rdfs:comment>
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Bala_de_Cañón">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Munición_Asedio"/>
         <Arma_TipoAtaque_1 rdf:resource="urn:absolute:anima_beyond_fantasy#Ataque_Contundente"/>
-        <Arma_Tipología rdf:resource="urn:absolute:anima_beyond_fantasy#Tipo_Munición"/>
         <Equipo_Disponibilidad rdf:resource="urn:absolute:anima_beyond_fantasy#Equipo_Muy_Raro"/>
         <Arma_DañoBase rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</Arma_DañoBase>
         <Arma_Entereza rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</Arma_Entereza>
@@ -10174,7 +10235,7 @@ Mantenimiento: 10 / 15 / 25 / 35</rdfs:comment>
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Ballesta">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Ballestas"/>
         <Arma_Especial rdf:resource="urn:absolute:anima_beyond_fantasy#A_una_o_dos_manos"/>
-        <Arma_Rango rdf:resource="urn:absolute:anima_beyond_fantasy#Arma_a_distancia"/>
+        <Arma_Rango rdf:resource="urn:absolute:anima_beyond_fantasy#Arma_de_disparo"/>
         <Arma_Tipología rdf:resource="urn:absolute:anima_beyond_fantasy#Tipo_Proyectil"/>
         <Equipo_Disponibilidad rdf:resource="urn:absolute:anima_beyond_fantasy#Equipo_Raro"/>
         <Arma_Entereza rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</Arma_Entereza>
@@ -10195,7 +10256,7 @@ Mantenimiento: 10 / 15 / 25 / 35</rdfs:comment>
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Ballesta_Pesada">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Ballestas"/>
         <Arma_Especial rdf:resource="urn:absolute:anima_beyond_fantasy#A_una_o_dos_manos"/>
-        <Arma_Rango rdf:resource="urn:absolute:anima_beyond_fantasy#Arma_a_distancia"/>
+        <Arma_Rango rdf:resource="urn:absolute:anima_beyond_fantasy#Arma_de_disparo"/>
         <Arma_Tipología rdf:resource="urn:absolute:anima_beyond_fantasy#Tipo_Proyectil"/>
         <Equipo_Disponibilidad rdf:resource="urn:absolute:anima_beyond_fantasy#Equipo_Raro"/>
         <Arma_Entereza rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</Arma_Entereza>
@@ -10216,7 +10277,7 @@ Mantenimiento: 10 / 15 / 25 / 35</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Ballesta_de_Mano">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Ballestas"/>
-        <Arma_Rango rdf:resource="urn:absolute:anima_beyond_fantasy#Arma_a_distancia"/>
+        <Arma_Rango rdf:resource="urn:absolute:anima_beyond_fantasy#Arma_de_disparo"/>
         <Arma_Tipología rdf:resource="urn:absolute:anima_beyond_fantasy#Tipo_Proyectil"/>
         <Equipo_Disponibilidad rdf:resource="urn:absolute:anima_beyond_fantasy#Equipo_Raro"/>
         <Arma_Entereza rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</Arma_Entereza>
@@ -10237,7 +10298,7 @@ Mantenimiento: 10 / 15 / 25 / 35</rdfs:comment>
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Ballesta_de_Repetición">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Ballestas"/>
         <Arma_Especial rdf:resource="urn:absolute:anima_beyond_fantasy#A_una_o_dos_manos"/>
-        <Arma_Rango rdf:resource="urn:absolute:anima_beyond_fantasy#Arma_a_distancia"/>
+        <Arma_Rango rdf:resource="urn:absolute:anima_beyond_fantasy#Arma_de_disparo"/>
         <Arma_Tipología rdf:resource="urn:absolute:anima_beyond_fantasy#Tipo_Proyectil"/>
         <Equipo_Disponibilidad rdf:resource="urn:absolute:anima_beyond_fantasy#Equipo_Muy_Raro"/>
         <Arma_Entereza rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</Arma_Entereza>
@@ -10787,7 +10848,7 @@ Mantenimiento: No</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Bolas">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Arma_Lanzamiento"/>
-        <Arma_Rango rdf:resource="urn:absolute:anima_beyond_fantasy#Arma_a_distancia"/>
+        <Arma_Rango rdf:resource="urn:absolute:anima_beyond_fantasy#Arma_de_disparo"/>
         <Arma_TipoAtaque_1 rdf:resource="urn:absolute:anima_beyond_fantasy#Ataque_Contundente"/>
         <Arma_Tipología rdf:resource="urn:absolute:anima_beyond_fantasy#Tipo_Lanzamiento"/>
         <Equipo_Disponibilidad rdf:resource="urn:absolute:anima_beyond_fantasy#Equipo_Común"/>
@@ -10810,7 +10871,7 @@ Mantenimiento: No</rdfs:comment>
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Arma_Lanzamiento"/>
         <Arma_Especial rdf:resource="urn:absolute:anima_beyond_fantasy#Compleja"/>
         <Arma_Especial rdf:resource="urn:absolute:anima_beyond_fantasy#Presa"/>
-        <Arma_Rango rdf:resource="urn:absolute:anima_beyond_fantasy#Arma_a_distancia"/>
+        <Arma_Rango rdf:resource="urn:absolute:anima_beyond_fantasy#Arma_de_disparo"/>
         <Arma_TipoAtaque_1 rdf:resource="urn:absolute:anima_beyond_fantasy#Ataque_Contundente"/>
         <Arma_Tipología rdf:resource="urn:absolute:anima_beyond_fantasy#Tipo_Lanzamiento"/>
         <Equipo_Disponibilidad rdf:resource="urn:absolute:anima_beyond_fantasy#Equipo_Común"/>
@@ -10976,6 +11037,7 @@ Descripción: El bronce fue el primero de los metales con los que empezaron a fo
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Brujería">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Desventaja_Mistica"/>
+        <Des:VentajaTieneValor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-2</Des:VentajaTieneValor>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La magia practicada por el hechicero tiene un carácter tribal y chamánico, en cuyos principios basa la esencia misma de su energía. Sus poderes sobrenaturales están terriblemente atados al mundo material, por lo que necesitará ciertos componentes para canalizarlos y realizar conjuros.
 
 Efectos: El hechicero requiere obligatoriamente emplear componentes materiales para lanzar hechizos. Cada conjuro requerirá un componente distinto determinado por el Director de Juego, según su origen y los conocimientos del brujo.
@@ -10989,6 +11051,7 @@ Beneficio: 2</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Buena_Suerte">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Ventaja_Común"/>
+        <Des:VentajaTieneValor rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">1</Des:VentajaTieneValor>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El personaje tiene mucha suerte a la hora de poner en práctica cualquier cosa que se proponga y resulta muy raro que cometa un grave error. Efectos: Se reduce un punto la cifra requerida para pifiar. En circunstancias normales el personaje pifiará con un 2. Si alcanza la maestría en una habilidad, sólo pifiará con un 1. Coste: 1</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -11125,14 +11188,6 @@ permanentemente, de manera que desaparecen y no pueden volver a ser usados. Otro
     
 
 
-    <!-- urn:absolute:anima_beyond_fantasy#CaC_AtaqueFinal -->
-
-    <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#CaC_AtaqueFinal">
-        <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Cálculo"/>
-    </owl:NamedIndividual>
-    
-
-
     <!-- urn:absolute:anima_beyond_fantasy#Caballo -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Caballo">
@@ -11192,6 +11247,7 @@ permanentemente, de manera que desaparecen y no pueden volver a ser usados. Otro
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Calibre">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Ventaja_Psiquica"/>
+        <Des:VentajaTieneValor rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">1</Des:VentajaTieneValor>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El psíquico es capaz de potenciar más de lo normal su habilidad para enfocar sus poderes sobre un objetivo. Efectos: Los CV invertidos para mejorar la Proyección Psíquica aumentarán su habilidad en +20 en lugar de +10. Coste: 1</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -13252,7 +13308,7 @@ Vías Cerradas: Tierra</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Cerbatana">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Cerbatana"/>
-        <Arma_Rango rdf:resource="urn:absolute:anima_beyond_fantasy#Arma_a_distancia"/>
+        <Arma_Rango rdf:resource="urn:absolute:anima_beyond_fantasy#Arma_de_disparo"/>
         <Arma_Tipología rdf:resource="urn:absolute:anima_beyond_fantasy#Tipo_Proyectil"/>
         <Equipo_Disponibilidad rdf:resource="urn:absolute:anima_beyond_fantasy#Equipo_Común"/>
         <Arma_Entereza rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Arma_Entereza>
@@ -13523,6 +13579,7 @@ Vías Cerradas: Ninguna</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Ciego">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Desventaja_Común"/>
+        <Des:VentajaTieneValor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-2</Des:VentajaTieneValor>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Por alguna razón el personaje está privado del sentido de la vista, o lo que es lo mismo, está completamente ciego.
 
 Efectos: El personaje no podrá usar ninguna habilidad que requiera ver. Aplicará en todo momento el penalizador de cegado.
@@ -13894,6 +13951,7 @@ Mantenimiento: 10 / 20 / 20 / 25 Diario</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Concentración_Extrema">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Ventaja_Psiquica"/>
+        <Des:VentajaTieneValor rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">2</Des:VentajaTieneValor>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El personaje puede concentrarse mucho más que el resto de los psíquicos y sacar mayor rendimiento de sus habilidades. Efectos: El psíquico dobla el bono que le reporta la concentración a su potencial. Por ejemplo, si se concentra un asalto completo obtiene un +20 en lugar de un +10. Coste: 2</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -13903,6 +13961,7 @@ Mantenimiento: 10 / 20 / 20 / 25 Diario</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Concentración_Pasiva">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Ventaja_Psiquica"/>
+        <Des:VentajaTieneValor rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">2</Des:VentajaTieneValor>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El psíquico es capaz de concentrarse en cualquier situación, sin importar su dificultad o complicación. Efectos: El psíquico puede concentrarse para potenciar un poder incluso mientras ejecuta acciones activas. Coste: 2</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -14374,6 +14433,7 @@ Vías Cerradas: Ninguna</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Conocedor_de_Todas_las_Materias">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Ventaja_Común"/>
+        <Des:VentajaTieneValor rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">2</Des:VentajaTieneValor>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El personaje es un individuo que posee la excepcional habilidad de adaptarse a cualquier necesidad que se le presente y desarrolla conocimientos en todos los campos y materias. No importa lo rara o inusual que sea la habilidad secundaria que requiera utilizar, siempre tendrá algún conocimiento o pericia que le será útil en esa situación. Efecto: El personaje no aplica nunca el penalizador de –30 por no haber invertido PD en una habilidad secundaria y tiene un bonificador natural de 10 en todas sus habilidades secundarias, que se suma directamente al bono que le otorgue su característica. Coste: 2</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -14430,6 +14490,7 @@ Mantenimiento: No</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Conocimiento_Natural_de_Vía">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Ventaja_Mistica"/>
+        <Des:VentajaTieneValor rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">1</Des:VentajaTieneValor>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El personaje ha nacido dotado de la capacidad de realizar ciertos conjuros de manera natural sin la necesidad de haberlos estudiado. De un modo inconsciente puede tejer los poderes del flujo de almas de una vía, como si simplemente esta fuera capaz de responder a sus habilidades. El personaje sabe utilizar perfectamente los sortilegios, pero no comprende su teoría ni podría explicarla a los demás. Efectos: Esta ventaja otorga conocimientos innatos de una vía a nivel 40 sin invertir en ella puntos de nivel de magia. Al ser un conocimiento natural, el hechicero puede seguir desarrollandola a partir de nivel 40 gastando en ella nuevos puntos de nivel de magia. Limitación: Esta ventaja puede adquirirse nuevamente en vías distintas. Coste: 1</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -14448,6 +14509,7 @@ Mantenimiento: No</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Consumición_psíquica">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Desventaja_Psiquica"/>
+        <Des:VentajaTieneValor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-2</Des:VentajaTieneValor>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cuando los poderes del psíquico no funcionan, la reacción adversa causa una seria repercusión en su cuerpo, provocando daños internos.
 
 Efectos: Si un psíquico sufre un fracaso psíquico, pierde automáticamente los mismos puntos de vida que la cantidad por la que no alcanzó el potencial mínimo requerido.
@@ -17405,6 +17467,7 @@ Vías Cerradas: Destrucción</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Curtido_1">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Ventaja_Común"/>
+        <Des:VentajaTieneValor rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">1</Des:VentajaTieneValor>
         <owl:backwardCompatibleWith rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El personaje ya ha tenido varias experiencias en el mundo real, de las que ha aprendido grandes lecciones. Efectos: El personaje comienza con 50 puntos de experiencia añadidos. Coste: 1</owl:backwardCompatibleWith>
     </owl:NamedIndividual>
     
@@ -17414,6 +17477,7 @@ Vías Cerradas: Destrucción</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Curtido_2">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Ventaja_Común"/>
+        <Des:VentajaTieneValor rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">2</Des:VentajaTieneValor>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El personaje ya ha tenido varias experiencias en el mundo real, de las que ha aprendido grandes lecciones. Efectos: El personaje comienza con 100 puntos de experiencia añadidos. Coste: 2</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -17423,6 +17487,7 @@ Vías Cerradas: Destrucción</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Curtido_3">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Ventaja_Común"/>
+        <Des:VentajaTieneValor rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">3</Des:VentajaTieneValor>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El personaje ya ha tenido varias experiencias en el mundo real, de las que ha aprendido grandes lecciones. Efectos: El personaje comienza con 150 puntos de experiencia añadidos. Coste: 3</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -17549,7 +17614,6 @@ Descripción: El psíquico crea una cúpula de energía que destruye todo lo que
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Dardos_de_Cerbatana">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Munición_Cerbatana"/>
         <Arma_TipoAtaque_1 rdf:resource="urn:absolute:anima_beyond_fantasy#Ataque_Penetrante"/>
-        <Arma_Tipología rdf:resource="urn:absolute:anima_beyond_fantasy#Tipo_Munición"/>
         <Equipo_Disponibilidad rdf:resource="urn:absolute:anima_beyond_fantasy#Equipo_Común"/>
         <Arma_DañoBase rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</Arma_DañoBase>
         <Arma_Entereza rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Arma_Entereza>
@@ -17565,7 +17629,7 @@ Descripción: El psíquico crea una cúpula de energía que destruye todo lo que
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Dardos_de_Mano">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Arma_Lanzamiento"/>
-        <Arma_Rango rdf:resource="urn:absolute:anima_beyond_fantasy#Arma_a_distancia"/>
+        <Arma_Rango rdf:resource="urn:absolute:anima_beyond_fantasy#Arma_de_disparo"/>
         <Arma_TipoAtaque_1 rdf:resource="urn:absolute:anima_beyond_fantasy#Ataque_Penetrante"/>
         <Arma_Tipología rdf:resource="urn:absolute:anima_beyond_fantasy#Tipo_Lanzamiento"/>
         <Equipo_Disponibilidad rdf:resource="urn:absolute:anima_beyond_fantasy#Equipo_Común"/>
@@ -17737,6 +17801,7 @@ Vías Cerradas: Creación</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Debilidad_física">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Desventaja_Común"/>
+        <Des:VentajaTieneValor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-1</Des:VentajaTieneValor>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El personaje es excepcionalmente débil ante los daños físicos, por lo que cada vez que recibe una herida crítica tiene serias posibilidades de morir o sufrir daños irreversibles.
 
 Efectos: La RF del personaje queda reducida a la mitad.
@@ -17750,6 +17815,7 @@ Beneficio: 1</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Desafortunado">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Desventaja_Común"/>
+        <Des:VentajaTieneValor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-1</Des:VentajaTieneValor>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La desgracia acompaña al personaje allí donde va. Esté donde esté, siempre le pasarán cosas terribles por mucho que se esfuerce por evitarlo. 
 
 Efectos: El Director de Juego deberá interpretar el alcance de esta desventaja. En un grupo, alguien desafortunado será siempre el que caiga en la trampa aleatoria y el primero al que ataquen cuando el azar decida quién recibe el primer impacto.
@@ -18187,6 +18253,7 @@ Vías Cerradas: Creación</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Desequilibrio_Elemental">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Ventaja_Mistica"/>
+        <Des:VentajaTieneValor rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">1</Des:VentajaTieneValor>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Representa que el personaje es naturalmente afín a los poderes de una vía mágica específica, siendo a la vez más débil en la opuesta. Su esencia está fuertemente ligada a este elemento y, por tanto, la magia fluye de un modo mucho más poderoso cuando utiliza esos conjuros. Efectos: El personaje dispone de un bono especial de +20 a su ACT y un +20 a su RM en la vía mágica que elija. Cuando utilice conjuros de la vía opuesta, aplicará un penalizador de –20 a su ACT y un –20 a su RM. Si la vía elegida es la nigromancia, el penalizador se aplicará a todas las demás. Coste: 1</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -18196,6 +18263,7 @@ Vías Cerradas: Creación</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Desequilibrio_Psíquico">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Ventaja_Psiquica"/>
+        <Des:VentajaTieneValor rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">2</Des:VentajaTieneValor>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Una de las disciplinas del psíquico está potenciada muy por encima del resto de sus habilidades. Efectos: El psíquico obtiene automáticamente un nivel de dificultad superior al que ha obtenido con su potencial al utilizar los poderes de una disciplina determinada. Coste: 2</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -18205,6 +18273,7 @@ Vías Cerradas: Creación</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Desequilibrio_Sephirótico">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Ventaja_Mistica"/>
+        <Des:VentajaTieneValor rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">2</Des:VentajaTieneValor>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Representa que el personaje es naturalmente afín a la magia de una mitad del árbol místico, siendo a la vez más débil en la opuesta.  Efectos: El brujo dispone de un bono especial de +20 a su ACT y un +20 en su RM en las cinco vías mágicas de un segmento del árbol que elija. En el resto aplicará un penalizador de –20 a su ACT y un –20 a su RM. Limitación: La nigromancia no está incluida en esta ventaja, al encontrarse fuera del árbol. Coste: 2</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -20522,6 +20591,7 @@ Mantenimiento: 60 / 75 / 85 / 100 Diario</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Don">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Ventaja_Común"/>
+        <Des:VentajaTieneValor rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">2</Des:VentajaTieneValor>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El personaje puede sentir y manejar las energías sobrenaturales del flujo de almas. La magia fluye a través de su espíritu, y con los conocimientos apropiados, será capaz de lanzar conjuros. Efectos: El personaje está dotado de la capacidad de ver y utilizar la magia. Añadirá además un bonificador especial de +10 a su RM, puesto que su naturaleza sobrenatural resiste mejor los efectos místicos. Nota: Ten en cuenta que tanto los hechiceros como otras categorías especializadas en el lanzamiento de conjuros requieren escoger esta ventaja para poder usar sortilegios. Coste: 2</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -20991,6 +21061,7 @@ Vías Cerradas: Ninguna</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Elan_1">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Ventaja_Común"/>
+        <Des:VentajaTieneValor rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">1</Des:VentajaTieneValor>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">De manera inconsciente, el personaje ha conseguido atraer la atención de un Shajad o de una Beryl. Generalmente representa que la estirpe del personaje estuvo ligada a la potencia y mantiene aún algún tipo de vínculo con todos los miembros de la familia. También es posible que dicha atención se deba a alguna de las acciones que haya realizado. De momento, goza de sus favores, aunque a partir del instante en el que el jugador tome control de su personaje, la relación dependerá de cómo se comporte. Efectos: El personaje tiene Elan de 20 de la entidad que elija. Coste: 1</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -21000,6 +21071,7 @@ Vías Cerradas: Ninguna</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Elan_2">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Ventaja_Común"/>
+        <Des:VentajaTieneValor rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">2</Des:VentajaTieneValor>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">De manera inconsciente, el personaje ha conseguido atraer la atención de un Shajad o de una Beryl. Generalmente representa que la estirpe del personaje estuvo ligada a la potencia y mantiene aún algún tipo de vínculo con todos los miembros de la familia. También es posible que dicha atención se deba a alguna de las acciones que haya realizado. De momento, goza de sus favores, aunque a partir del instante en el que el jugador tome control de su personaje, la relación dependerá de cómo se comporte. Efectos: El personaje tiene Elan de 40 de la entidad que elija. Coste: 2</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -21009,6 +21081,7 @@ Vías Cerradas: Ninguna</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Elan_3">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Ventaja_Común"/>
+        <Des:VentajaTieneValor rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">3</Des:VentajaTieneValor>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">De manera inconsciente, el personaje ha conseguido atraer la atención de un Shajad o de una Beryl. Generalmente representa que la estirpe del personaje estuvo ligada a la potencia y mantiene aún algún tipo de vínculo con todos los miembros de la familia. También es posible que dicha atención se deba a alguna de las acciones que haya realizado. De momento, goza de sus favores, aunque a partir del instante en el que el jugador tome control de su personaje, la relación dependerá de cómo se comporte. Efectos: El personaje tiene Elan de 50 de la entidad que elija. Coste: 3</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -21503,6 +21576,7 @@ Vías Cerradas: Ninguna</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Encanto">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Ventaja_Común"/>
+        <Des:VentajaTieneValor rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">1</Des:VentajaTieneValor>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El personaje tiene cierto encanto personal que le vuelve carismático ante los demás. Siempre causa una reacción positiva a la gente que no le conoce, e incluso condiciona parcialmente a algunos individuos a ser ligeramente más permisivos con él. Efectos: El alcance de esta ventaja debe de ser interpretada por el Director de Juego. Coste: 1</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -21580,6 +21654,7 @@ Descripción: Versión incrementada del poder de primer nivel Crear energía, ca
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Enfermedad_grave">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Desventaja_Común"/>
+        <Des:VentajaTieneValor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-2</Des:VentajaTieneValor>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El personaje sufre algún tipo de enfermedad degenerativa que acabará matándole. Suele quedarle una media de poco más de un año de vida al empezar la partida, pero el periodo de tiempo puede ser menor o mayor si el Director de Juego lo necesita para encajar con los límites temporales de su campaña. Al contrario de lo que pueda parecer, un personaje con esta desventaja no sólo es perfectamente jugable, sino que precisamente puede tener como objetivo adicional encontrar algún medio para curarse.
 
 Efectos: El personaje aplicará un penalizador acumulativo de –10 a toda acción por cada mes que transcurra. El Director de Juego determinará una fecha en secreto, llegada la cual morirá.
@@ -21852,8 +21927,6 @@ Vías Cerradas: Ninguna</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Equipo_Común">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Disponibilidad_Equipamiento"/>
-        <Equipo_Disponibilidad rdf:resource="urn:absolute:anima_beyond_fantasy#Equipo_Común"/>
-        <Equipo_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Equipo_Coste>
         <rdfs:comment>El común no está marcado de ninguna manera especial en el listado y, como su nombre indica, puede encontrarse generalmente en cualquier aldea o ciudad.</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -22276,7 +22349,6 @@ Mantenimiento: 15 / 20 / 25 / 30 Diario</rdfs:comment>
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Escudo"/>
         <Arma_Rango rdf:resource="urn:absolute:anima_beyond_fantasy#Arma_Cuerpo_a_Cuerpo"/>
         <Arma_TipoAtaque_1 rdf:resource="urn:absolute:anima_beyond_fantasy#Ataque_Contundente"/>
-        <Arma_Tipología rdf:resource="urn:absolute:anima_beyond_fantasy#Tipo_Escudo"/>
         <Equipo_Disponibilidad rdf:resource="urn:absolute:anima_beyond_fantasy#Equipo_Común"/>
         <Arma_DañoBase rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25</Arma_DañoBase>
         <Arma_Entereza rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">18</Arma_Entereza>
@@ -22488,7 +22560,6 @@ Mantenimiento: 5 / 10 / 15 / 15</rdfs:comment>
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Escudo"/>
         <Arma_Rango rdf:resource="urn:absolute:anima_beyond_fantasy#Arma_Cuerpo_a_Cuerpo"/>
         <Arma_TipoAtaque_1 rdf:resource="urn:absolute:anima_beyond_fantasy#Ataque_Contundente"/>
-        <Arma_Tipología rdf:resource="urn:absolute:anima_beyond_fantasy#Tipo_Escudo"/>
         <Equipo_Disponibilidad rdf:resource="urn:absolute:anima_beyond_fantasy#Equipo_Común"/>
         <Arma_DañoBase rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</Arma_DañoBase>
         <Arma_Entereza rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</Arma_Entereza>
@@ -23482,6 +23553,7 @@ Efectos: +75 a la habilidad de ataque, +125 al turno.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Exhausto">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Desventaja_Común"/>
+        <Des:VentajaTieneValor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-1</Des:VentajaTieneValor>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Un personaje con esta desventaja es muy vulnerable a los efectos del Cansancio. No solo se cansa con mayor facilidad que los demás, sino que sufre especialmente los efectos de la fatiga.
 
 Efectos: Dobla los penalizadores a la acción provocados por la fatiga y resta un punto el Cansancio base del personaje.
@@ -23582,6 +23654,7 @@ Conocimiento marcial: 10</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Extenuación_mágica">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Desventaja_Mistica"/>
+        <Des:VentajaTieneValor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-1</Des:VentajaTieneValor>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La tensión de la magia provoca una intensa fatiga en el hechicero cuando maneja grandes energías místicas. Los magos se agotarán si realizan conjuros de gran poder, pudiendo llegar incluso a desfallecer si fuerzan demasiado sus habilidades.
 
 Efectos: El mago perderá un punto de Cansancio al lanzar un conjuro con un potencial superior a 100, dos si es mayor a 300 y tres si lo es de 500.
@@ -23595,6 +23668,7 @@ Beneficio: 1</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Extenuación_psíquica">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Desventaja_Psiquica"/>
+        <Des:VentajaTieneValor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-1</Des:VentajaTieneValor>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El uso de sus poderes psíquicos causa sobre el personaje una gran repercusión física, dejándole terriblemente agotado incluso al emplear habilidades psíquicas de bajo nivel.
 
 Efectos: El personaje pierde el doble de puntos de Cansancio de lo que indique su fatiga psíquica
@@ -23610,6 +23684,7 @@ Beneficio: 1</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Extremidad_atrofiada">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Desventaja_Común"/>
+        <Des:VentajaTieneValor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-1</Des:VentajaTieneValor>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El personaje tiene un serio problema controlando uno de sus miembros. Esta extremidad le tiembla terriblemente en todo momento o deja de responderle en la situación en la que más lo requiera. 
 
 Efectos: El personaje aplica un penalizador de –80 a todas las acciones físicas que requieran el uso del miembro atrofiado.
@@ -23900,7 +23975,6 @@ Mantenimiento: No</rdfs:comment>
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Flecha_de_Descarga">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Munición_Arcos"/>
         <Arma_TipoAtaque_1 rdf:resource="urn:absolute:anima_beyond_fantasy#Ataque_Penetrante"/>
-        <Arma_Tipología rdf:resource="urn:absolute:anima_beyond_fantasy#Tipo_Munición"/>
         <Equipo_Disponibilidad rdf:resource="urn:absolute:anima_beyond_fantasy#Equipo_Común"/>
         <Arma_DañoBase rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">40</Arma_DañoBase>
         <Arma_Entereza rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</Arma_Entereza>
@@ -23917,7 +23991,6 @@ Mantenimiento: No</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Flecha_de_Fajo">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Munición_Arcos"/>
-        <Arma_Tipología rdf:resource="urn:absolute:anima_beyond_fantasy#Tipo_Munición"/>
         <Equipo_Disponibilidad rdf:resource="urn:absolute:anima_beyond_fantasy#Equipo_Común"/>
         <Arma_DañoBase rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</Arma_DañoBase>
         <Arma_Entereza rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Arma_Entereza>
@@ -23935,7 +24008,6 @@ Mantenimiento: No</rdfs:comment>
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Flecha_de_Mella">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Munición_Arcos"/>
         <Arma_TipoAtaque_1 rdf:resource="urn:absolute:anima_beyond_fantasy#Ataque_Penetrante"/>
-        <Arma_Tipología rdf:resource="urn:absolute:anima_beyond_fantasy#Tipo_Munición"/>
         <Equipo_Disponibilidad rdf:resource="urn:absolute:anima_beyond_fantasy#Equipo_Común"/>
         <Arma_DañoBase rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</Arma_DañoBase>
         <Arma_Entereza rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Arma_Entereza>
@@ -23976,6 +24048,7 @@ Mantenimiento: No</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Fobia_grave">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Desventaja_Común"/>
+        <Des:VentajaTieneValor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-1</Des:VentajaTieneValor>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El personaje siente un terrible temor hacia algo, que le obliga a comportarse de manera irracional en su presencia. Algunos buenos ejemplos de fobias conocidas serían la hidrofobia, el miedo al agua, la hemofobia, el miedo a la sangre o la claustrofobia, el miedo a los espacios cerrados. Naturalmente, una fobia hacia un elemento demasiado concreto no debería permitirse y quedará a discreción del Director de Juego su fijación exacta. 
 
 Efectos: El personaje aplicará el estado de miedo siempre que se encuentre con el objeto de su fobia.
@@ -23989,6 +24062,7 @@ Beneficio: 1</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Fondos_Iniciales_1">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Ventaja_Común"/>
+        <Des:VentajaTieneValor rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">1</Des:VentajaTieneValor>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El personaje es un individuo que posee una gran fortuna en material y equipamiento. Efectos: Esta ventaja proporciona una cantidad de dinero inicial o equipo valorado en 2.000 Escudos de Oro (MO). Limitación: Es posible que el Director de Juego prefiera dar una cantidad de dinero distinta a la recomendada, para encajar mejor al personaje dentro de los objetivos de su partida. En dicho caso, ambos deberéis acordar la nueva cantidad. Coste: 1</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -23998,6 +24072,7 @@ Beneficio: 1</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Fondos_Iniciales_2">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Ventaja_Común"/>
+        <Des:VentajaTieneValor rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">2</Des:VentajaTieneValor>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El personaje es un individuo que posee una gran fortuna en material y
 equipamiento. Efectos: Esta ventaja proporciona una cantidad de dinero inicial o equipo valorado en 5.000 Escudos de Oro (MO). Limitación: Es posible que el Director de Juego prefiera dar una cantidad de dinero distinta a la recomendada, para encajar mejor al personaje dentro de los objetivos de su partida. En dicho caso, ambos deberéis acordar la nueva cantidad. Coste: 2</rdfs:comment>
     </owl:NamedIndividual>
@@ -24008,6 +24083,7 @@ equipamiento. Efectos: Esta ventaja proporciona una cantidad de dinero inicial o
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Fondos_Iniciales_3">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Ventaja_Común"/>
+        <Des:VentajaTieneValor rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">3</Des:VentajaTieneValor>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El personaje es un individuo que posee una gran fortuna en material y equipamiento. Efectos: Esta ventaja proporciona una cantidad de dinero inicial o equipo valorado en 10.000 Escudos de Oro (MO). Limitación: Es posible que el Director de Juego prefiera dar una cantidad de dinero distinta a la recomendada, para encajar mejor al personaje dentro de los objetivos de su partida. En dicho caso, ambos deberéis acordar la nueva cantidad. Coste: 3</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -24629,6 +24705,7 @@ Vías Cerradas: Destrucción</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Fácil_posesión">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Desventaja_Común"/>
+        <Des:VentajaTieneValor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-1</Des:VentajaTieneValor>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aunque su voluntad sea fuerte, el personaje es muy propenso a ser dominado por cualquier entidad con la capacidad de afectar a su mente o alterar su personalidad.
 
 Efectos: El personaje aplica un negativo de –50 a cualquier RP o RM que realice contra algún tipo de dominio o posesión capaz de modificar su conducta.
@@ -25468,7 +25545,7 @@ Mantenimiento: 5 / 20 / 25 / 30</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Honda">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Honda"/>
-        <Arma_Rango rdf:resource="urn:absolute:anima_beyond_fantasy#Arma_a_distancia"/>
+        <Arma_Rango rdf:resource="urn:absolute:anima_beyond_fantasy#Arma_de_disparo"/>
         <Arma_Tipología rdf:resource="urn:absolute:anima_beyond_fantasy#Tipo_Proyectil"/>
         <Equipo_Disponibilidad rdf:resource="urn:absolute:anima_beyond_fantasy#Equipo_Común"/>
         <Arma_Entereza rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Arma_Entereza>
@@ -27005,6 +27082,7 @@ Mantenimiento: 25 / 30 / 40 / 50 Diario</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Infatigable_1">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Ventaja_Común"/>
+        <Des:VentajaTieneValor rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">1</Des:VentajaTieneValor>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El aguante a la fatiga del personaje es muy superior al que debería permitirle su Constitución. Efectos: Aumenta tres puntos el Cansancio del personaje. Coste: 1</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -27014,6 +27092,7 @@ Mantenimiento: 25 / 30 / 40 / 50 Diario</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Infatigable_2">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Ventaja_Común"/>
+        <Des:VentajaTieneValor rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">2</Des:VentajaTieneValor>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El aguante a la fatiga del personaje es muy superior al que debería permitirle su Constitución. Efectos: Aumenta seis puntos el Cansancio del personaje. Coste: 2</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -27023,6 +27102,7 @@ Mantenimiento: 25 / 30 / 40 / 50 Diario</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Infatigable_3">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Ventaja_Común"/>
+        <Des:VentajaTieneValor rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">3</Des:VentajaTieneValor>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El aguante a la fatiga del personaje es muy superior al que debería permitirle su Constitución. Efectos: Aumenta nueve puntos el Cansancio del personaje. Coste: 3</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -27366,6 +27446,7 @@ Vías Cerradas: Esencia</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Inmunidad_al_Dolor_y_al_Cansancio">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Ventaja_Común"/>
+        <Des:VentajaTieneValor rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">1</Des:VentajaTieneValor>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El personaje es especialmente resistente a los los efectos del dolor y de la fatiga. Efectos: Los penalizadores provocados por el dolor y el Cansancio se reducen a la mitad. Coste: 1</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -27438,6 +27519,7 @@ Descripción: Permite al psíquico, o al individuo designado por este, ser inmun
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Inquietante">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Ventaja_Común"/>
+        <Des:VentajaTieneValor rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">1</Des:VentajaTieneValor>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El personaje tiene la capacidad de poner nerviosas a las personas siempre que lo desee. Incluso el individuo más pequeño y enclenque puede inquietar a otro si goza de esta ventaja. De este modo, podrá desanimar muchas acciones violentas en su contra o forzar el consentimiento de personas intimidables. Efectos: El personaje puede resultar inquietante si lo desea. El alcance de esta ventaja debe de ser interpretado por el Director de Juego. Coste: 1</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -27614,6 +27696,7 @@ Vías Cerradas: Agua</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Inutilidad_Oral">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Ventaja_Mistica"/>
+        <Des:VentajaTieneValor rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">1</Des:VentajaTieneValor>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El brujo no necesita realizar gestos físicos para desarrollar su magia, por lo que puede hacer cualquier tipo de acción corporal sin ver por ello reducida la capacidad de controlar sus poderes. Efectos: El personaje no reduce su ACT por no ser capaz de gesticular. Coste: 1</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -27623,6 +27706,7 @@ Vías Cerradas: Agua</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Inutilidad_Somática">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Ventaja_Mistica"/>
+        <Des:VentajaTieneValor rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">1</Des:VentajaTieneValor>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El brujo no necesita realizar gestos físicos para desarrollar su magia, por lo que puede hacer cualquier tipo de acción corporal sin ver por ello reducida la capacidad de controlar sus poderes. Efectos: El personaje no reduce su ACT por no ser capaz de gesticular. Coste: 1</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -28239,10 +28323,11 @@ Efectos: +1 ataque adicional, +40 al daño.</rdfs:comment>
     
 
 
-    <!-- urn:absolute:anima_beyond_fantasy#Lazo_existencial -->
+    <!-- urn:absolute:anima_beyond_fantasy#Lazo_Existencial -->
 
-    <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Lazo_existencial">
+    <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Lazo_Existencial">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Desventaja_Mistica"/>
+        <Des:VentajaTieneValor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-1</Des:VentajaTieneValor>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Los poderes del mago están atados a las mismas raíces de las vías de magia, por lo que su capacidad de desarrollar o especificar sus propios conjuros le resulta prácticamente imposible. El hechicero obtiene tan sólo conocimientos de sus vías, de las que ni siquiera podrá investigar sus propios sortilegios.
 
 Efectos: El mago no podrá elegir los conjuros de Libre Acceso de sus vías de magia y será incapaz de acceder a conjuros elegidos libremente.
@@ -28458,26 +28543,28 @@ Vías Cerradas: Oscuridad</rdfs:comment>
     
 
 
-    <!-- urn:absolute:anima_beyond_fantasy#Lenta_curación -->
+    <!-- urn:absolute:anima_beyond_fantasy#Lenta_Recuperación_De_Magia -->
 
-    <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Lenta_curación">
-        <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Desventaja_Común"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Por alguna causa, la capacidad regenerativa del cuerpo del personaje está terriblemente mermada y este se recupera de las heridas que sufre con gran dificultad, incluso mediante medios sobrenaturales.
+    <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Lenta_Recuperación_De_Magia">
+        <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Desventaja_Mistica"/>
+        <Des:VentajaTieneValor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-1</Des:VentajaTieneValor>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La magia encuentra problemas para filtrarse a través de la esencia del hechicero, por lo que este tendrá serias dificultades para recuperar el poder que haya utilizado.
 
-Efectos: El personaje recupera sólo la mitad de puntos de vida de cualquier cantidad que debiera recobrar, ya sea mediante regeneración normal o medios místicos.
+Efectos: La regeneración zeónica del personaje se reduce a la mitad.
 
 Beneficio: 1</rdfs:comment>
     </owl:NamedIndividual>
     
 
 
-    <!-- urn:absolute:anima_beyond_fantasy#Lenta_recuperación_de_magia -->
+    <!-- urn:absolute:anima_beyond_fantasy#Lenta_curación -->
 
-    <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Lenta_recuperación_de_magia">
-        <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Desventaja_Mistica"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La magia encuentra problemas para filtrarse a través de la esencia del hechicero, por lo que este tendrá serias dificultades para recuperar el poder que haya utilizado.
+    <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Lenta_curación">
+        <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Desventaja_Común"/>
+        <Des:VentajaTieneValor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-1</Des:VentajaTieneValor>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Por alguna causa, la capacidad regenerativa del cuerpo del personaje está terriblemente mermada y este se recupera de las heridas que sufre con gran dificultad, incluso mediante medios sobrenaturales.
 
-Efectos: La regeneración zeónica del personaje se reduce a la mitad.
+Efectos: El personaje recupera sólo la mitad de puntos de vida de cualquier cantidad que debiera recobrar, ya sea mediante regeneración normal o medios místicos.
 
 Beneficio: 1</rdfs:comment>
     </owl:NamedIndividual>
@@ -29070,6 +29157,7 @@ Descripción: La madera de Ghestal se obtiene de los árboles de Ramalen de los 
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Maestro_Marcial_1">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Ventaja_Común"/>
+        <Des:VentajaTieneValor rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">1</Des:VentajaTieneValor>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El conocimiento marcial del personaje es muy superior al de uno de su nivel. Generalmente, ha recibido un entrenamiento especial que le ha permitido explorar sus habilidades del Ki, aunque también es posible que simplemente haya nacido dotado de una enorme habilidad natural. Efectos:Añade 40 puntos al Conocimiento Marcial base. Coste: 1</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -29079,6 +29167,7 @@ Descripción: La madera de Ghestal se obtiene de los árboles de Ramalen de los 
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Maestro_Marcial_2">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Ventaja_Común"/>
+        <Des:VentajaTieneValor rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">2</Des:VentajaTieneValor>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El conocimiento marcial del personaje es muy superior al de uno de su nivel. Generalmente, ha recibido un entrenamiento especial que le ha permitido explorar sus habilidades del Ki, aunque también es posible que simplemente haya nacido dotado de una enorme habilidad natural. Efectos:Añade 80 puntos al Conocimiento Marcial base. Coste: 2</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -29088,6 +29177,7 @@ Descripción: La madera de Ghestal se obtiene de los árboles de Ramalen de los 
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Maestro_Marcial_3">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Ventaja_Común"/>
+        <Des:VentajaTieneValor rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">3</Des:VentajaTieneValor>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El conocimiento marcial del personaje es muy superior al de uno de su nivel. Generalmente, ha recibido un entrenamiento especial que le ha permitido explorar sus habilidades del Ki, aunque también es posible que simplemente haya nacido dotado de una enorme habilidad natural. Efectos:Añade 120 puntos al Conocimiento Marcial base. Coste: 3</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -29109,6 +29199,20 @@ Descripción: La madera de Ghestal se obtiene de los árboles de Ramalen de los 
     
 
 
+    <!-- urn:absolute:anima_beyond_fantasy#Magia_Atada_A_Acción -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Magia_Atada_A_Acción">
+        <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Desventaja_Mistica"/>
+        <Des:VentajaTieneValor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-1</Des:VentajaTieneValor>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El control que posee el personaje de los poderes del flujo de almas es caprichoso y sólo responde ante él mientras realiza una acción determinada. Si, por ejemplo, su magia está atada al baile, sus conjuros sólo serán lanzados mientras dance, o si lo están a la lucha, mientras está combatiendo. En algunos casos, es también posible que los poderes mágicos funcionen únicamente en situaciones o condiciones determinadas, como ser de día o estar con los pies en el suelo.
+
+Efectos: Sólo es posible usar magia si se realiza la acción o se cumple la condición determinada por la desventaja. En el caso de que la acción sea una habilidad secundaria, el mago deberá superar un control contra Difícil (DIF) para lanzar sus conjuros.
+
+Beneficio: 1</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:anima_beyond_fantasy#Magia_Baja -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Magia_Baja">
@@ -29121,6 +29225,22 @@ Descripción: La madera de Ghestal se obtiene de los árboles de Ramalen de los 
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Magia_Divina">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Gnosis_Conjuro"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:anima_beyond_fantasy#Magia_Estanca -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Magia_Estanca">
+        <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Desventaja_Mistica"/>
+        <Des:VentajaTieneValor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-2</Des:VentajaTieneValor>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La magia no fluye de un modo natural a través del cuerpo y alma del personaje. Existe algún tipo de bloqueo que le impide canalizar los poderes del ambiente y su propia alma tampoco regenera magia. Cuando consume su poder, el brujo jamás lo recupera por sí mismo. El único método a su alcance será alimentarse de las energías místicas de otros seres mágicos u objetos.
+
+Efectos: El personaje carece de regeneración zeónica, por lo que no recuperará naturalmente los puntos de Zeon que consuma. Sólo podrá volver a conseguir magia drenándola de objetos que lo permitan o de seres vivos con el Don.
+
+Limitación: Esta desventaja no puede combinarse a la de lenta recuperación de magia.
+
+Beneficio: 2</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -29274,34 +29394,6 @@ Mantenimiento: 30 / 40 / 55 / 80</rdfs:comment>
     
 
 
-    <!-- urn:absolute:anima_beyond_fantasy#Magia_atada_a_acción -->
-
-    <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Magia_atada_a_acción">
-        <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Desventaja_Mistica"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El control que posee el personaje de los poderes del flujo de almas es caprichoso y sólo responde ante él mientras realiza una acción determinada. Si, por ejemplo, su magia está atada al baile, sus conjuros sólo serán lanzados mientras dance, o si lo están a la lucha, mientras está combatiendo. En algunos casos, es también posible que los poderes mágicos funcionen únicamente en situaciones o condiciones determinadas, como ser de día o estar con los pies en el suelo.
-
-Efectos: Sólo es posible usar magia si se realiza la acción o se cumple la condición determinada por la desventaja. En el caso de que la acción sea una habilidad secundaria, el mago deberá superar un control contra Difícil (DIF) para lanzar sus conjuros.
-
-Beneficio: 1</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- urn:absolute:anima_beyond_fantasy#Magia_estanca -->
-
-    <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Magia_estanca">
-        <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Desventaja_Mistica"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La magia no fluye de un modo natural a través del cuerpo y alma del personaje. Existe algún tipo de bloqueo que le impide canalizar los poderes del ambiente y su propia alma tampoco regenera magia. Cuando consume su poder, el brujo jamás lo recupera por sí mismo. El único método a su alcance será alimentarse de las energías místicas de otros seres mágicos u objetos.
-
-Efectos: El personaje carece de regeneración zeónica, por lo que no recuperará naturalmente los puntos de Zeon que consuma. Sólo podrá volver a conseguir magia drenándola de objetos que lo permitan o de seres vivos con el Don.
-
-Limitación: Esta desventaja no puede combinarse a la de lenta recuperación de magia.
-
-Beneficio: 2</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
     <!-- urn:absolute:anima_beyond_fantasy#Magia_por_Capacidades -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Magia_por_Capacidades">
@@ -29365,6 +29457,7 @@ Efectos: Ataque en área: 10 metros de radio, +150 al turno.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Mala_suerte">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Desventaja_Común"/>
+        <Des:VentajaTieneValor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-1</Des:VentajaTieneValor>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El personaje tiene muy mala suerte a la hora de hacer lo que se propone y suele fracasar estrepitosamente mucho más de lo que le gustaría. 
 
 Efectos: La cifra requerida para pifiar aumenta en dos puntos. En las habilidades normales pifiará con un resultado de 5 y, si es maestro, lo hará con 4.
@@ -29571,6 +29664,7 @@ Mantenimiento: No</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Mantenimiento_Añadido">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Ventaja_Psiquica"/>
+        <Des:VentajaTieneValor rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">2</Des:VentajaTieneValor>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El personaje tiene la capacidad de mantener sus poderes psíquicos por encima de lo que le permite su potencial. Efectos: Los poderes mantenidos innatamente se hallan un nivel de dificultad por encima de lo que le permite su potencial psíquico. Coste: 2</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -30251,6 +30345,7 @@ Mantenimiento: 20 / 40 / 50 / 60 Diario</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Miopía">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Desventaja_Común"/>
+        <Des:VentajaTieneValor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-1</Des:VentajaTieneValor>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La vista del personaje esta afectada por un problema que no le deja ver bien. Para él, muchas cosas permanecerán borrosas y tendrá dificultades incluso para leer, por lo que necesitará la ayuda de algún instrumento para suplir su carencia.
 
 Efectos: Aplicará un negativo de –50 a cualquier tirada de la habilidad Advertir o Buscar en la que se emplee la vista y un –3 a cualquier control de Percepción que la requiera. Este penalizador también se aplicará a la puntería. Si consigue unas gafas, el negativo penalizador se reduciría como el Director de Juego considere conveniente.
@@ -30897,6 +30992,7 @@ Vías Cerradas: Creación</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Mudo">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Desventaja_Común"/>
+        <Des:VentajaTieneValor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-1</Des:VentajaTieneValor>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">De alguna manera, el personaje está privado de la capacidad física de hablar.
 
 Efectos: El personaje no puede hablar.
@@ -31697,6 +31793,7 @@ Mantenimiento: 15 / 20 / 25 / 30</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Obligación_Oral">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Desventaja_Mistica"/>
+        <Des:VentajaTieneValor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-1</Des:VentajaTieneValor>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Los vocablos místicos son un elemento fundamental en la magia del personaje. Sólo puede realizar conjuros si es capaz de entonar sus ensalmos.
 
 Efectos: El personaje debe de tener la capacidad de hablar para acumular magia y realizar sus conjuros.
@@ -31706,10 +31803,11 @@ Beneficio: 1</rdfs:comment>
     
 
 
-    <!-- urn:absolute:anima_beyond_fantasy#Obligación_somática -->
+    <!-- urn:absolute:anima_beyond_fantasy#Obligación_Somática -->
 
-    <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Obligación_somática">
+    <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Obligación_Somática">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Desventaja_Mistica"/>
+        <Des:VentajaTieneValor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-1</Des:VentajaTieneValor>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La gesticulación es necesaria para que el personaje teja la magia. Si no tiene libertad completa de movimientos, será incapaz de manejar sus poderes y, por ello, no podrá emplear su poder.
 
 Efectos: El personaje debe moverse libremente para acumular magia y realizar sus conjuros.
@@ -33090,7 +33188,6 @@ Descripción: La piedra ha sido desde el principio de la historia uno de los mat
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Piedra_de_Honda">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Munición_Honda"/>
         <Arma_TipoAtaque_1 rdf:resource="urn:absolute:anima_beyond_fantasy#Ataque_Contundente"/>
-        <Arma_Tipología rdf:resource="urn:absolute:anima_beyond_fantasy#Tipo_Munición"/>
         <Arma_DañoBase rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</Arma_DañoBase>
         <Arma_Entereza rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</Arma_Entereza>
         <Arma_Presencia rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Arma_Presencia>
@@ -33153,7 +33250,7 @@ Mantenimiento: 25 / 30 / 30 / 35 Diario</rdfs:comment>
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Pistola_de_Mecha">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Arma_de_Pólvora"/>
         <Arma_Especial rdf:resource="urn:absolute:anima_beyond_fantasy#Compleja"/>
-        <Arma_Rango rdf:resource="urn:absolute:anima_beyond_fantasy#Arma_a_distancia"/>
+        <Arma_Rango rdf:resource="urn:absolute:anima_beyond_fantasy#Arma_de_disparo"/>
         <Arma_Tipología rdf:resource="urn:absolute:anima_beyond_fantasy#Tipo_Proyectil"/>
         <Equipo_Disponibilidad rdf:resource="urn:absolute:anima_beyond_fantasy#Equipo_Muy_Raro"/>
         <Arma_Entereza rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</Arma_Entereza>
@@ -33227,6 +33324,7 @@ Vías Cerradas: Ilusión</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Poder_único">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Desventaja_Psiquica"/>
+        <Des:VentajaTieneValor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-1</Des:VentajaTieneValor>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Los poderes psíquicos del personaje no le permiten utilizar varias habilidades al unísono. Mientras emplea una, se centra tanto que pierde la capacidad de proyectar otras, salvo las que estuviese manteniendo inconscientemente.
 
 Efectos: El psíquico sólo podrá utilizar un único poder psíquico por asalto. Ello no le impide seguir usando otros mantenidos, siempre que los originara en asaltos anteriores.
@@ -33355,6 +33453,7 @@ Vías Cerradas: Ninguna</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Potencial_Enfrentado">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Ventaja_Mistica"/>
+        <Des:VentajaTieneValor rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">1</Des:VentajaTieneValor>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Los poderes místicos del personaje son superiores cuando chocan directamente contra otra habilidad sobrenatural. Efectos: El personaje aplica un bonificador de +50 a sus tiradas para calcular el resultado del choque de conjuros. Coste: 1</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -34346,6 +34445,7 @@ Mantenimiento: No</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Reacción_Lenta_1">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Desventaja_Común"/>
+        <Des:VentajaTieneValor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-1</Des:VentajaTieneValor>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Los reflejos del personaje están poco preparados para responder con velocidad a los acontecimientos.
 
 Efectos: El personaje aplicará un penalizador especial de –30 a su turno.
@@ -34359,6 +34459,7 @@ Beneficio: 1</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Reacción_Lenta_2">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Desventaja_Común"/>
+        <Des:VentajaTieneValor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-2</Des:VentajaTieneValor>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Los reflejos del personaje están poco preparados para responder con velocidad a los acontecimientos.
 
 Efectos: El personaje aplicará un penalizador especial de –50 a su turno.
@@ -34535,6 +34636,7 @@ Coste: 20 CM</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Recuperación_Superior_de_Magia_1">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Ventaja_Mistica"/>
+        <Des:VentajaTieneValor rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">1</Des:VentajaTieneValor>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La esencia del personaje actúa como un imán para la magia y es capaz de regenerar su poder a un ritmo muy superior que el de otros individuos dotados de capacidades místicas. Efectos: El personaje recupera sus puntos de Zeon al doble de su regeneración zeónica. Coste: 1</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -34544,6 +34646,7 @@ Coste: 20 CM</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Recuperación_Superior_de_Magia_2">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Ventaja_Mistica"/>
+        <Des:VentajaTieneValor rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">2</Des:VentajaTieneValor>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La esencia del personaje actúa como un imán para la magia y es capaz de regenerar su poder a un ritmo muy superior que el de otros individuos dotados de capacidades místicas. Efectos: El personaje recupera sus puntos de Zeon al triple de su regeneración zeónica. Coste: 2</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -34553,6 +34656,7 @@ Coste: 20 CM</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Recuperación_Superior_de_Magia_3">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Ventaja_Mistica"/>
+        <Des:VentajaTieneValor rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">3</Des:VentajaTieneValor>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La esencia del personaje actúa como un imán para la magia y es capaz de regenerar su poder a un ritmo muy superior que el de otros individuos dotados de capacidades místicas. Efectos: El personaje recupera sus puntos de Zeon al cuádruple de su regeneración zeónica. Coste: 3</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -34562,6 +34666,7 @@ Coste: 20 CM</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Recuperación_de_CVs_1">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Ventaja_Psiquica"/>
+        <Des:VentajaTieneValor rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">1</Des:VentajaTieneValor>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El psíquico tiene la capacidad de recuperarse con facilidad de la tensión provocada por el uso potenciado de sus habilidades. Efectos: El índice de recuperación de CVs libres es de un punto por cada 10 minutos transcurridos. Coste: 1</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -34571,6 +34676,7 @@ Coste: 20 CM</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Recuperación_de_CVs_2">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Ventaja_Psiquica"/>
+        <Des:VentajaTieneValor rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">2</Des:VentajaTieneValor>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El psíquico tiene la capacidad de recuperarse con facilidad de la tensión provocada por el uso potenciado de sus habilidades. Efectos: El índice de recuperación de CVs libres es de un punto por cada 5 minutos transcurridos. Coste: 2</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -34580,6 +34686,7 @@ Coste: 20 CM</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Recuperación_de_CVs_3">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Ventaja_Psiquica"/>
+        <Des:VentajaTieneValor rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">3</Des:VentajaTieneValor>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El psíquico tiene la capacidad de recuperarse con facilidad de la tensión provocada por el uso potenciado de sus habilidades. Efectos: El índice de recuperación de CVs libres es de un punto por cada minuto transcurrido. Coste: 3</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -34589,6 +34696,7 @@ Coste: 20 CM</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Recuperación_de_Ki_1">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Ventaja_Común"/>
+        <Des:VentajaTieneValor rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">1</Des:VentajaTieneValor>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La energía espiritual del personaje se recupera a un índice superior al normal. Efectos: El personaje recupera un punto de Ki por característica cada 10 minutos, en lugar de uno por hora. Coste: 1</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -34598,6 +34706,7 @@ Coste: 20 CM</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Recuperación_de_Ki_2">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Ventaja_Común"/>
+        <Des:VentajaTieneValor rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">2</Des:VentajaTieneValor>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La energía espiritual del personaje se recupera a un índice superior al normal. Efectos: El personaje recupera un punto de Ki por característica cada 5 minutos, en lugar de uno por hora. Coste: 2</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -34607,6 +34716,7 @@ Coste: 20 CM</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Recuperación_de_Ki_3">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Ventaja_Común"/>
+        <Des:VentajaTieneValor rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">3</Des:VentajaTieneValor>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La energía espiritual del personaje se recupera a un índice superior al normal. Efectos: El personaje recupera un punto de Ki por característica cada minuto, en lugar de uno por hora. Coste: 3</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -34789,6 +34899,7 @@ Mantenimiento: 5 / 15 / 25 / 35 Diario</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Reducir_dos_puntos_a_una_característica">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Desventaja_Común"/>
+        <Des:VentajaTieneValor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-1</Des:VentajaTieneValor>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Uno de los atributos del personaje ha sido desarrollado menos de lo que potencialmente debía.
 
 Efectos: Reduce en dos puntos una de las características básicas.
@@ -34905,6 +35016,7 @@ Mantenimiento: 20 / 30 / 35 / 40</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Reflejos_Rápidos_1">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Ventaja_Común"/>
+        <Des:VentajaTieneValor rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">1</Des:VentajaTieneValor>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El personaje posee unos reflejos excepcionales que le permiten responder con enorme velocidad ante cualquier situación. Efectos: Otorga un bonificador especial de +25 al turno.  Coste: 1</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -34914,6 +35026,7 @@ Mantenimiento: 20 / 30 / 35 / 40</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Reflejos_Rápidos_2">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Ventaja_Común"/>
+        <Des:VentajaTieneValor rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">2</Des:VentajaTieneValor>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El personaje posee unos reflejos excepcionales que le permiten responder con enorme velocidad ante cualquier situación. Efectos: Otorga un bonificador especial de +45 al turno. Coste: 2</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -34923,6 +35036,7 @@ Mantenimiento: 20 / 30 / 35 / 40</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Reflejos_Rápidos_3">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Ventaja_Común"/>
+        <Des:VentajaTieneValor rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">3</Des:VentajaTieneValor>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El personaje posee unos reflejos excepcionales que le permiten responder con enorme velocidad ante cualquier situación. Efectos: Otorga un bonificador especial de +60 al turno. Coste: 3</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -34970,6 +35084,7 @@ Mantenimiento: 10 / 10 / 15 / 25 Diario</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Regeneración_Avanzada">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Ventaja_Común"/>
+        <Des:VentajaTieneValor rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">2</Des:VentajaTieneValor>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Las heridas sufridas por el personaje sanan con mucha facilidad, ya que su
 cuerpo posee un factor de curación muy elevado. Efectos: Aumenta cuatro niveles la Regeneración del personaje.  Coste: 2</rdfs:comment>
     </owl:NamedIndividual>
@@ -34980,6 +35095,7 @@ cuerpo posee un factor de curación muy elevado. Efectos: Aumenta cuatro niveles
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Regeneración_Básica">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Ventaja_Común"/>
+        <Des:VentajaTieneValor rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">1</Des:VentajaTieneValor>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Las heridas sufridas por el personaje sanan con mucha facilidad, ya que su cuerpo posee un factor de curación muy elevado. Efectos: Aumenta dos niveles la Regeneración del personaje. Coste: 1</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -34989,6 +35105,7 @@ cuerpo posee un factor de curación muy elevado. Efectos: Aumenta cuatro niveles
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Regeneración_Mayor">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Ventaja_Común"/>
+        <Des:VentajaTieneValor rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">3</Des:VentajaTieneValor>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Las heridas sufridas por el personaje sanan con mucha facilidad, ya que su cuerpo posee un factor de curación muy elevado. Efectos: Aumenta seis niveles la Regeneración del personaje. Coste: 3</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -35184,6 +35301,7 @@ Vías Cerradas: Destrucción e Ilusión</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Repetir_una_Tirada_de_Características">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Ventaja_Común"/>
+        <Des:VentajaTieneValor rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">1</Des:VentajaTieneValor>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El azar permite a tu personaje modificar una de sus características básicas. Efectos: Te permite lanzar un dado adicional una vez que has generado las características de tu personaje, y utilizar el resultado obtenido en lugar de uno de los anteriores. La nueva cifra no podrá ser inferior al valor de tu tirada más baja. Limitación: Esta ventaja no es compatible con el cuarto método de generación de características. Puede adquirirse tantas veces como se desee. Coste: 1</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -35240,6 +35358,7 @@ Descripción: Crea una barrera que rechaza violentamente cualquier cuerpo físic
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Resistencia_Física_Excepcional_1">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Ventaja_Común"/>
+        <Des:VentajaTieneValor rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">1</Des:VentajaTieneValor>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La Resistencia física del personaje es muy elevada. Los daños, venenos o enfermedades no tienen tanto efecto en él como podrían tenerlos en otros sujetos normales. Efectos: Añade un bonificador especial de +25 a la Resistencia física (RF), Resistencia contra venenos (RV) y Resistencia contra enfermedades (RE). Coste: 1</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -35249,6 +35368,7 @@ Descripción: Crea una barrera que rechaza violentamente cualquier cuerpo físic
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Resistencia_Física_Excepcional_2">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Ventaja_Común"/>
+        <Des:VentajaTieneValor rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">2</Des:VentajaTieneValor>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La Resistencia física del personaje es muy elevada. Los daños, venenos o enfermedades no tienen tanto efecto en él como podrían tenerlos en otros sujetos normales. Efectos: Añade un bonificador especial de +50 a la Resistencia física (RF), Resistencia contra venenos (RV) y Resistencia contra enfermedades (RE). 
 Coste: 2</rdfs:comment>
     </owl:NamedIndividual>
@@ -35259,6 +35379,7 @@ Coste: 2</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Resistencia_Mágica_Excepcional_1">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Ventaja_Común"/>
+        <Des:VentajaTieneValor rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">1</Des:VentajaTieneValor>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El personaje aguanta especialmente los efectos de carácter místico. Efectos: Añade un bonificador especial de +25 a la Resistencia mágica (RM).  Coste: 1</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -35268,6 +35389,7 @@ Coste: 2</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Resistencia_Mágica_Excepcional_2">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Ventaja_Común"/>
+        <Des:VentajaTieneValor rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">2</Des:VentajaTieneValor>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El personaje aguanta especialmente los efectos de carácter místico. Efectos: Añade un bonificador especial de +50 a la Resistencia mágica (RM).  Coste: 2</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -35277,6 +35399,7 @@ Coste: 2</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Resistencia_Psíquica_Excepcional_1">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Ventaja_Común"/>
+        <Des:VentajaTieneValor rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">1</Des:VentajaTieneValor>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La mente del personaje posee unas barreras muy fuertes, que hacen especialmente difícil poder acceder hasta ella. Efectos: Esta ventaja añade un bonificador especial de +25 a la Resistencia mental (RP) del personaje.  Coste: 1</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -35286,6 +35409,7 @@ Coste: 2</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Resistencia_Psíquica_Excepcional_2">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Ventaja_Común"/>
+        <Des:VentajaTieneValor rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">2</Des:VentajaTieneValor>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La mente del personaje posee unas barreras muy fuertes, que hacen especialmente difícil poder acceder hasta ella. Efectos: Esta ventaja añade un bonificador especial de +50 a la Resistencia mental (RP) del personaje.  Coste: 2</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -35334,6 +35458,7 @@ Mantenimiento: 10 / 20 / 25 / 30</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Resistencia_a_la_Fatiga_Psíquica">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Ventaja_Psiquica"/>
+        <Des:VentajaTieneValor rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">2</Des:VentajaTieneValor>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El uso de habilidades psíquicas no causa ningún tipo de repercusión en el cuerpo del personaje, por lo que el uso de sus habilidades no lo deja nunca agotado. Efectos: Si el psíquico obtiene un fracaso en el uso de uno de sus poderes, no pierde puntos de Cansancio una vez que se ha quedado sin CVs libres por gastar. Los poderes de tercer nivel no son afectados por esta ventaja. Coste: 2</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -35736,7 +35861,6 @@ Vías Cerradas: Ninguna</rdfs:comment>
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Escudo"/>
         <Arma_Rango rdf:resource="urn:absolute:anima_beyond_fantasy#Arma_Cuerpo_a_Cuerpo"/>
         <Arma_TipoAtaque_1 rdf:resource="urn:absolute:anima_beyond_fantasy#Ataque_Contundente"/>
-        <Arma_Tipología rdf:resource="urn:absolute:anima_beyond_fantasy#Tipo_Escudo"/>
         <Equipo_Disponibilidad rdf:resource="urn:absolute:anima_beyond_fantasy#Equipo_Común"/>
         <Arma_DañoBase rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</Arma_DañoBase>
         <Arma_Entereza rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</Arma_Entereza>
@@ -35986,7 +36110,6 @@ Mantenimiento: 10 / 10 / 15 / 15 Diario</rdfs:comment>
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Saeta">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Munición_Ballesta"/>
         <Arma_TipoAtaque_1 rdf:resource="urn:absolute:anima_beyond_fantasy#Ataque_Penetrante"/>
-        <Arma_Tipología rdf:resource="urn:absolute:anima_beyond_fantasy#Tipo_Munición"/>
         <Equipo_Disponibilidad rdf:resource="urn:absolute:anima_beyond_fantasy#Equipo_Raro"/>
         <Arma_DañoBase rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">40</Arma_DañoBase>
         <Arma_Entereza rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Arma_Entereza>
@@ -36003,7 +36126,6 @@ Mantenimiento: 10 / 10 / 15 / 15 Diario</rdfs:comment>
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Saeta_Ligera">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Munición_Ballesta"/>
         <Arma_TipoAtaque_1 rdf:resource="urn:absolute:anima_beyond_fantasy#Ataque_Penetrante"/>
-        <Arma_Tipología rdf:resource="urn:absolute:anima_beyond_fantasy#Tipo_Munición"/>
         <Equipo_Disponibilidad rdf:resource="urn:absolute:anima_beyond_fantasy#Equipo_Muy_Raro"/>
         <Arma_DañoBase rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</Arma_DañoBase>
         <Arma_Entereza rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Arma_Entereza>
@@ -36020,7 +36142,6 @@ Mantenimiento: 10 / 10 / 15 / 15 Diario</rdfs:comment>
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Saeta_Pesada">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Munición_Ballesta"/>
         <Arma_TipoAtaque_1 rdf:resource="urn:absolute:anima_beyond_fantasy#Ataque_Penetrante"/>
-        <Arma_Tipología rdf:resource="urn:absolute:anima_beyond_fantasy#Tipo_Munición"/>
         <Equipo_Disponibilidad rdf:resource="urn:absolute:anima_beyond_fantasy#Equipo_Raro"/>
         <Arma_DañoBase rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">60</Arma_DañoBase>
         <Arma_Entereza rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</Arma_Entereza>
@@ -36109,6 +36230,7 @@ Vías Cerradas: Tierra</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Salud_enfermiza">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Desventaja_Común"/>
+        <Des:VentajaTieneValor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-1</Des:VentajaTieneValor>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El personaje tiene una salud terriblemente débil y es propenso a enfermar con facilidad.
 
 Efectos: La RE del personaje queda reducida a la mitad.
@@ -36291,6 +36413,7 @@ Vías Cerradas: Ninguna</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Sentido_del_Peligro">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Ventaja_Común"/>
+        <Des:VentajaTieneValor rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">2</Des:VentajaTieneValor>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dota de un sexto sentido al personaje, que le permite presentir cuando algo peligroso se acerca o le amenaza. No será capaz de detectar el origen o la naturaleza del peligro hasta que este se cierna sobre él, pero sí de intuir su presencia. Efectos: El personaje no puede ser cogido por sorpresa, salvo por una diferencia de 150 en turno contra su adversario. Coste: 2</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -36300,6 +36423,7 @@ Vías Cerradas: Ninguna</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Sentidos_Agudos">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Ventaja_Común"/>
+        <Des:VentajaTieneValor rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">1</Des:VentajaTieneValor>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Los sentidos del personaje están tan desarrollados como los de un animal. Efectos: Añade un punto a la Percepción del personaje a la hora de realizar controles de características y un bonificador especial de +50 a sus habilidades secundarias de Advertir y Buscar. Coste: 1</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -36988,6 +37112,7 @@ Bono: +10 a la habilidad de ataque sin armas.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Sin_concentración">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Desventaja_Psiquica"/>
+        <Des:VentajaTieneValor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-1</Des:VentajaTieneValor>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Los poderes del personaje no dependen en absoluto de su capacidad de concentración, ya que son demasiado inconstantes como para que este pueda prepararse para potenciar sus habilidades.
 
 Efectos: Un psíquico con esta desventaja no podrá aplicar bonificadores a su potencial psíquico concentrándose.
@@ -37105,6 +37230,7 @@ Vías Cerradas: Creación</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Sordo">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Desventaja_Común"/>
+        <Des:VentajaTieneValor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-1</Des:VentajaTieneValor>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Como su nombre indica, el personaje está completamente sordo, es decir, carece de capacidad auditiva.
 
 Efectos: El personaje no podrá emplear ninguna habilidad que requiera el uso del oído.
@@ -37154,6 +37280,7 @@ Mantenimiento: No</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Sueño_Ligero">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Ventaja_Común"/>
+        <Des:VentajaTieneValor rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">1</Des:VentajaTieneValor>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El personaje permanece parcialmente consciente mientras duerme y es capaz de despertarse al más mínimo ruido o movimiento. Efecto: El personaje sólo aplica un penalizador de –20 a su habilidad de Advertir mientras duerme. Coste: 1</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -37163,6 +37290,7 @@ Mantenimiento: No</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Sueño_profundo">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Desventaja_Común"/>
+        <Des:VentajaTieneValor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-1</Des:VentajaTieneValor>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Representa una terrible desventaja para alguien cuya vida puede estar en peligro incluso mientras duerme. El personaje tiene un sueño muy profundo y resulta muy difícil que se despierte. Aguantará sin despertarse incluso un contacto físico ligero, y cuando finalmente lo haga permanecerá aturdido durante varios minutos.
 
 Efectos: El personaje aplicará un penalizador de –200 a cualquier tirada de percepción mientras duerme. Durante los diez asaltos posteriores a su despertar, aplicará un penalizador de –40 a toda acción.
@@ -37176,6 +37304,7 @@ Beneficio: 1</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Sumar_un_Punto_a_una_Característica">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Ventaja_Común"/>
+        <Des:VentajaTieneValor rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">1</Des:VentajaTieneValor>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Uno de los atributos del personaje es superior a su valor original. Efectos: Añade un punto al valor de una característica. Limitación: Las características físicas no podrán superar el once usando esta ventaja. Puede adquirirse tantas veces como se desee. Coste: 1</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -37241,6 +37370,9 @@ Mantenimiento: No</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Sustituir_una_Característica_por_un_Nueve">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Ventaja_Común"/>
+        <Des:VentajaTieneValor rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">2</Des:VentajaTieneValor>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sustituye el valor de uno de los atributos del personaje. Efectos: Sustituye una característica por un nueve sin importar cuál fuese su valor original. 
+Limitación: Esta ventaja puede comprarse tantas veces como se desee. Coste: 2</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -37897,6 +38029,7 @@ Mantenimiento: No</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Tamaño_no_Natural">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Ventaja_Común"/>
+        <Des:VentajaTieneValor rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">1</Des:VentajaTieneValor>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El personaje tiene un Tamaño inusual para su Fuerza y Constitución, permitiendo que quien debería ser una colosal masa de músculos sea una persona pequeña o viceversa. Efectos: El personaje puede aumentar o disminuir hasta cinco puntos su Tamaño en el momento de su creación. Coste: 1</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -38351,6 +38484,7 @@ Mantenimiento: 35 / 60 / 90 / 150</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Tipo_Arma_Corta">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Tipos_Armas"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Son las de escasas dimensiones, como espadas cortas, armas físicas o dagas. Suelen ser fáciles de usar, y comúnmente se utilizan para cortar y pinchar. Son de tamaño Pequeño (P).</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -38376,14 +38510,7 @@ Mantenimiento: 35 / 60 / 90 / 150</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Tipo_Cuerda">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Tipos_Armas"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- urn:absolute:anima_beyond_fantasy#Tipo_Escudo -->
-
-    <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Tipo_Escudo">
-        <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Tipos_Armas"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aquellas que están compuestas de eslabones, cadenas o cuerdas. Generalmente son de tamaño Medio (M).</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -38392,6 +38519,7 @@ Mantenimiento: 35 / 60 / 90 / 150</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Tipo_Espada">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Tipos_Armas"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Se comprende como espada todas las armas que tienen un largo filo metálico. Son armas de tamaño Medio (M).</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -38400,6 +38528,7 @@ Mantenimiento: 35 / 60 / 90 / 150</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Tipo_Hacha">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Tipos_Armas"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Todos los tipos de hachas entran dentro de esta tipología. Son armas de tamaño Medio (M).</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -38444,6 +38573,7 @@ Mantenimiento: 35 / 60 / 90 / 150</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Tipo_Lanzamiento">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Tipos_Armas"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Son armas que están equilibradas o pensadas para ser usadas a distancia. Los personajes que tengan habilidad con ellas podrán emplearlas tanto físicamente como arrojándolas</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -38452,6 +38582,7 @@ Mantenimiento: 35 / 60 / 90 / 150</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Tipo_Mandoble">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Tipos_Armas"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Son aquellas que por sus dimensiones y peso necesitan ser usadas con ambas manos. Son las de mayor tamaño, Grandes (G).</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -38460,6 +38591,7 @@ Mantenimiento: 35 / 60 / 90 / 150</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Tipo_Maza">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Tipos_Armas"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">En esta categoría se comprenden las armas romas o sin filo que causan daño por aplastamiento. Son armas de tamaño Medio (M).</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -38468,6 +38600,7 @@ Mantenimiento: 35 / 60 / 90 / 150</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Tipo_Mixta">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Tipos_Armas"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Son armas que reúnen características de dos o más tipologías, como Maza y Mandoble al mismo tiempo. Su tamaño es el de la categoría más grande de las dos clases que la componen.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -38643,18 +38776,11 @@ Mantenimiento: 35 / 60 / 90 / 150</rdfs:comment>
     
 
 
-    <!-- urn:absolute:anima_beyond_fantasy#Tipo_Munición -->
-
-    <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Tipo_Munición">
-        <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Tipos_Armas"/>
-    </owl:NamedIndividual>
-    
-
-
     <!-- urn:absolute:anima_beyond_fantasy#Tipo_Proyectil -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Tipo_Proyectil">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Tipos_Armas"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Son armas que requieren el uso de proyectiles para poder atacar.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -38663,6 +38789,7 @@ Mantenimiento: 35 / 60 / 90 / 150</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Tipo_Sin_Armas">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Tipos_Armas"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cuando un luchador combate con todo su cuerpo, se considera que lucha sin armas. Esta habilidad puede ser modificada por conocimientos de artes marciales</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -39342,7 +39469,7 @@ Mantenimiento: No</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Turcus">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Arma_Lanzamiento"/>
-        <Arma_Rango rdf:resource="urn:absolute:anima_beyond_fantasy#Arma_a_distancia"/>
+        <Arma_Rango rdf:resource="urn:absolute:anima_beyond_fantasy#Arma_de_disparo"/>
         <Arma_TipoAtaque_1 rdf:resource="urn:absolute:anima_beyond_fantasy#Ataque_Filo"/>
         <Arma_Tipología rdf:resource="urn:absolute:anima_beyond_fantasy#Tipo_Lanzamiento"/>
         <Equipo_Disponibilidad rdf:resource="urn:absolute:anima_beyond_fantasy#Equipo_Raro"/>
@@ -40378,6 +40505,7 @@ Mantenimiento: No</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Ver_lo_Sobrenatural">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Ventaja_Común"/>
+        <Des:VentajaTieneValor rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">1</Des:VentajaTieneValor>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Los ojos del personaje pueden llegar a ver los telares del flujo de las almas y al mismo tiempo percibir la energía de las matrices psíquicas. Efectos: El personaje ve lo sobrenatural, tanto magia y matrices psíquicas como criaturas espirituales. Por tanto, no aplica el penalizador de cegado en ninguna de dichas situaciones. Coste: 1</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -40599,7 +40727,6 @@ Vías Cerradas: Ninguna</rdfs:comment>
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Virote_Ligero">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Munición_Asedio"/>
         <Arma_TipoAtaque_1 rdf:resource="urn:absolute:anima_beyond_fantasy#Ataque_Penetrante"/>
-        <Arma_Tipología rdf:resource="urn:absolute:anima_beyond_fantasy#Tipo_Munición"/>
         <Equipo_Disponibilidad rdf:resource="urn:absolute:anima_beyond_fantasy#Equipo_Común"/>
         <Arma_DañoBase rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">120</Arma_DañoBase>
         <Arma_Entereza rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</Arma_Entereza>
@@ -40616,7 +40743,6 @@ Vías Cerradas: Ninguna</rdfs:comment>
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Virote_Pesado">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Munición_Asedio"/>
         <Arma_TipoAtaque_1 rdf:resource="urn:absolute:anima_beyond_fantasy#Ataque_Penetrante"/>
-        <Arma_Tipología rdf:resource="urn:absolute:anima_beyond_fantasy#Tipo_Munición"/>
         <Equipo_Disponibilidad rdf:resource="urn:absolute:anima_beyond_fantasy#Equipo_Raro"/>
         <Arma_DañoBase rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</Arma_DañoBase>
         <Arma_Entereza rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">18</Arma_Entereza>
@@ -40632,6 +40758,7 @@ Vías Cerradas: Ninguna</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Visión_Nocturna">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Ventaja_Común"/>
+        <Des:VentajaTieneValor rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">1</Des:VentajaTieneValor>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Esta ventaja permite al personaje ver en la oscuridad y adaptarse a enorme velocidad a cualquier cambio en la intensidad de la luz. Efectos: Permite ignorar cualquier penalizador causado por la oscuridad, siempre que no se trate de un lugar con carencia absoluta de luz o algún tipo de oscuridad mágica, en cuyo caso, sólo quedan reducidos a la mitad. Coste: 1</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -41032,6 +41159,7 @@ Descripción: El psíquico puede moverse libremente por el aire, con el Tipo de 
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Vulnerabilidad_a_la_magia">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Desventaja_Común"/>
+        <Des:VentajaTieneValor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-1</Des:VentajaTieneValor>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Esta desventaja representa que el personaje es muy propenso a verse afectado por las energías mágicas.
 
 Efectos: La RM del personaje queda reducida a la mitad.
@@ -41045,6 +41173,7 @@ Beneficio: 1</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Vulnerabilidad_a_los_venenos">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Desventaja_Común"/>
+        <Des:VentajaTieneValor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-1</Des:VentajaTieneValor>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El cuerpo del personaje no es capaz de soportar los venenos, puesto que sus defensas biológicas no están preparadas para combatir ningún tipo de sustancia nociva.
 
 Efectos: La RV del personaje queda reducida a la mitad.
@@ -41058,6 +41187,7 @@ Beneficio: 1</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Vulnerable_al_calor">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Desventaja_Común"/>
+        <Des:VentajaTieneValor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-1</Des:VentajaTieneValor>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El calor afecta terriblemente al personaje causándole muchos problemas físicos. Su cuerpo se ve seriamente perjudicado si se pone en contacto con algo muy caliente, al igual que si visita lugares con temperaturas extremas, como volcanes.</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -41067,6 +41197,7 @@ Beneficio: 1</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Vulnerable_al_dolor">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Desventaja_Común"/>
+        <Des:VentajaTieneValor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-1</Des:VentajaTieneValor>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El personaje no es capaz de resistir el dolor físico, que le aterra y perjudica excepcionalmente.
 
 Efectos: Dobla cualquier penalizador causado por el dolor, ya sea producido por críticos o efectos místicos.
@@ -41080,6 +41211,7 @@ Beneficio: 1</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Vulnerable_al_frío">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Desventaja_Común"/>
+        <Des:VentajaTieneValor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-1</Des:VentajaTieneValor>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El frío afecta terriblemente al personaje causándole muchos problemas físicos. Su cuerpo se ve seriamente perjudicado si se pone en contacto con algo muy frío, al igual que si visita lugares con temperaturas extremas, como zonas heladas.</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -44805,6 +44937,9 @@ Coste: 30 PD</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="urn:absolute:anima_beyond_fantasy#Arma">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cuando un personaje combate, suele utilizar generalmente algún tipo de arma en lugar de sólo sus puños y piernas. Las armas son objetos creados con el fin de esgrimirse, de algún modo, como un medio de ataque y defensa efectivo. Un arma puede ser considerada prácticamente cualquier cosa, desde una mera rama de árbol hasta el más sofisticado arcabuz.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:anima_beyond_fantasy#Arma_Lanzamiento">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Las armas de proyectiles son las que los personajes emplean para atacar a distancia, sin la necesidad de estar trabados en combate cuerpo a cuerpo. De entre ellas, las de lanzamiento son aquellas que el personaje arroja empleando sus propias manos.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="urn:absolute:anima_beyond_fantasy#Armadura">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Un personaje puede equiparse con una armadura para evitar sufrir daño si entra en combate o cae en una trampa. Estas protecciones son un conjunto de piezas o ropajes que tienen como objetivo disminuir la potencia de los impactos recibidos.
