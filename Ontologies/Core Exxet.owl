@@ -10498,6 +10498,11 @@ Mantenimiento: 10 / 15 / 25 / 35</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Balista_Ligera">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Arma_de_Asedio"/>
+        <Arma_Especial rdf:resource="urn:absolute:anima_beyond_fantasy#Fuerza_12"/>
+        <Arma_Tipología rdf:resource="urn:absolute:anima_beyond_fantasy#Arma_de_disparo"/>
+        <Arma_Entereza rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">18</Arma_Entereza>
+        <Arma_Presencia rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25</Arma_Presencia>
+        <Arma_Turno rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-80</Arma_Turno>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La balista es una ballesta de enormes proporciones que se usa como arma de asedio. Se mueven mediante ruedas, ya que su desproporcionado tamaño impide que nadie las transporte manualmente. Las balistas ligeras son usadas por tres individuos, dos que la mueven lateralmente y un tercero que apunta y dispara. Las balistas no dependen de la Fuerza de quienes las utilicen, por lo que no aplican el bono de Fuerza de ninguno de los personajes. Por el contrario tienen su propia característica, que es de 12, por lo que suman un bono de +20 al daño base de sus virotes. Cada +5 del arma, además de aumentar su precisión, suma un punto a la Fuerza con la que dispara. Como regla especial, la enorme capacidad de penetración de las balistas les permite hacer un Ataque en área, pero en una línea recta de 3 metros desde que impactan por primera vez.</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -10507,6 +10512,11 @@ Mantenimiento: 10 / 15 / 25 / 35</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Balista_Pesada">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Arma_de_Asedio"/>
+        <Arma_Especial rdf:resource="urn:absolute:anima_beyond_fantasy#Fuerza_13"/>
+        <Arma_Tipología rdf:resource="urn:absolute:anima_beyond_fantasy#Arma_de_disparo"/>
+        <Arma_Entereza rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</Arma_Entereza>
+        <Arma_Presencia rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</Arma_Presencia>
+        <Arma_Turno rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-100</Arma_Turno>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Versión de mayor tamaño de las anteriores, que requiere cinco personas para controlarla. Tienen Fuerza 13, por lo que suman un bono de +25 al daño base de sus virotes. Cada +5 del arma, además de aumentar su precisión, suma un punto a la Fuerza con la que dispara. Su Ataque en área alcanza una línea de 5 metros desde que impactan por primera vez.</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -13472,6 +13482,11 @@ Vías Cerradas: Luz</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Cañón">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Arma_de_Asedio"/>
+        <Arma_Especial rdf:resource="urn:absolute:anima_beyond_fantasy#Arma_de_disparo"/>
+        <Arma_Especial rdf:resource="urn:absolute:anima_beyond_fantasy#Fuerza_14"/>
+        <Arma_Entereza rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">24</Arma_Entereza>
+        <Arma_Presencia rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</Arma_Presencia>
+        <Arma_Turno rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-100</Arma_Turno>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Arma de fuego compuesta por un enorme tubo metálico, por el que se impulsa una gran bala gracias a la pólvora. La munición está preparada para que estalle formando una nube de metralla en una zona de 5 a 10 metros de radio. Aunque la bala ataca de modo convencional, la explosión no; la puntería mide si se impacta el lugar que se pretende afectar. Después, si pretende esquivarse o detenerse, hay que superar un control de esquiva o Atletismo contra Absurdo, en el caso de que el personaje se encuentre a más de la mitad del radio de la explosión, o contra Casi Imposible en el contrario. Los cañones no dependen de la Fuerza de quienes los utilicen, ya que tienen su propia característica, que es de 13, por lo que suman un bono de +25 al daño base de las balas. Si se obtiene una Pifia con el cañón de nivel inferior a 70, el arma se bloquea. Si es superior, el arma estalla. Cada +5 que posea, además de aumentar su precisión, suma un punto a la Fuerza con la que dispara, e incrementa en 15 el nivel de Pifia requerido para que el arma reviente.</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -24772,6 +24787,14 @@ Descripción: Versión amplificada del poder de primer nivel de Crear fuego, que
     <!-- urn:absolute:anima_beyond_fantasy#Fuerza_12 -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Fuerza_12">
+        <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Tipo_de_Fuerza_Psíquica"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:anima_beyond_fantasy#Fuerza_13 -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Fuerza_13">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Tipo_de_Fuerza_Psíquica"/>
     </owl:NamedIndividual>
     
