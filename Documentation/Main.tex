@@ -21,6 +21,7 @@
     urlcolor=black,
 }
 \usepackage{graphicx}
+\usepackage{amsmath}
 \usepackage{emptypage}
 \usepackage{geometry}
 \usepackage{csquotes}
@@ -47,9 +48,10 @@
 
 \newcommand{\DNI}{77396804-X}
 \newcommand{\autor}{Alejandro Muñoz Del Álamo}
-\newcommand{\director}{D. Pablo García Sánchez}
-\newcommand{\proyecto}{Título del proyecto}
-\newcommand{\nombre}{ARPEGOS Project}
+\newcommand{\director}{D. Alberto Gabriel Salguero Hidalgo}
+\newcommand{\codirector}{D. Pablo García Sánchez}
+\newcommand{\proyecto}{ARPEGOS\@:  Automatized Roleplaying-game Profile Extensible Generator Ontology based System}
+\newcommand{\nombre}{ARPEGOS}
 \newcommand{\tipo}{Grado} % Grado / Máster %
 \newcommand{\titulo}{Ingeniería Informática}
 \newcommand{\titulacion}{\tipo{} en \titulo}
@@ -152,6 +154,7 @@
         \Large \MakeUppercase{\titulacion} \\ \vspace{6cm}
         \LARGE \MakeUppercase{\textbf{\proyecto}} \\ \vspace{7cm}
         \Large \MakeUppercase{Director: \director} \\
+        \Large \MakeUppercase{Codirector: \codirector} \\
         \Large \MakeUppercase{Autor: \autor} \\ \vspace{0.5cm}
         Puerto Real, \fecha{}
     \end{portada}
@@ -196,6 +199,10 @@
 
     % Import Basic Concepts
     \input{Basic_Concepts.tex}
+    \blankpage{}
+
+    % Import Problem Analysis
+    \input{Problem_Analysis.tex}
     \blankpage{}
 
     

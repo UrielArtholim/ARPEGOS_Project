@@ -1,0 +1,197 @@
+% Project Management Plan Documentation Template %
+% Template made following ISO/IEC/IEEE 16326:2009 %
+
+% Author : Alejandro Muñoz Del Álamo %
+% Copyright 2019 %
+
+% Problem Analysis %
+
+\chapter{Análisis de requisitos del sistema}
+A la vista de lo expuesto previamente en el apartado 
+\textit{Crítica al estado del arte}, se hace necesario el 
+planteamiento de un análisis de la problemática razonada para 
+poder esbozar una propuesta que permita resolver los aspectos 
+descritos en el apartado anteriormente mencionado.\medskip
+
+\section{Catálogo de actores}
+A causa de que el sistema se define como una aplicación móvil, 
+se alcanza la conclusión de sólo considerar un único actor en 
+este proyecto, que es el usuario de la aplicación.
+
+En la presente sección vamos a proceder a realizar un análisis de 
+requisitos del sistema, que recoge y describe el conjunto 
+de requisitos específicos del sistema que se va a desarrollar.\medskip
+
+En primera instancia, se presentarán los requisitos agrupados en 
+conjuntos funcionales del sistema. Posteriormente, se describirán 
+los casos de uso en el próximo capítulo. \medskip
+
+Para ello, se hará una diferenciación entre 
+\textit{requisitos funcionales}, que son aquellos que detallan 
+la funcionalidad del sistema, y \textit{requisitos no funcionales},
+que refieren a otros aspectos del software que deben ser satisfechos.
+
+
+\section{Requisitos funcionales}
+Un requisito funcional especifica una función concreta del sistema o 
+de alguno de sus componentes. A continuación se muestran los requisitos 
+funcionales, estructurados según el módulo del sistema al que refieren.
+%\begin{itemize}
+    %\item \textbf{\textit{OBJ-001}}: \textbf{Almacenamiento de información}.
+    %La aplicación debe disponer de una estructura que permita almacenar y 
+    %clasificar la información contenida.
+    %\begin{itemize}
+        
+    %    \item El sistema debe disponer de un conjunto de directorios, en el que 
+    %    cada directorio hace referencia a un juego diferente.
+
+    %    \item Cada directorio de juego estará a su vez compuesto por dos 
+    %    directorios: uno para almacenar los ficheros referentes a la información 
+    %    del juego (\textit{gamefiles}), y otro para almacenar los personajes generados con ese juego
+    %    (\textit{characters}).
+
+    %    \item El directorio \textit{gamefiles} contendrá un fichero en formato \textbf{OWL} 
+    %    por cada versión accesible del juego en cuestión.
+        
+    %    \item El directorio \textit{characters} sólo contendrá los ficheros de personaje 
+    %    generados por el sistema durante el proceso de creación de personaje.
+        
+    %\end{itemize}
+
+    %\item \textbf{\textit{OBJ-001}}: \textbf{Lógica de la aplicación}.
+    El sistema precisa de una lógica estructurada y compleja que permita procesar 
+    información de diferentes fuentes, de manera que los procesos del sistema se 
+    adecuen a su contenido.
+    \begin{itemize}
+        
+        \item \textbf{\textit{OBJ-001}}: El usuario podrá seleccionar un juego concreto 
+        (juego activo) para poder acceder a la información relacionada con el mismo.
+
+        \item \textbf{\textit{OBJ-002}}: El usuario podrá crear un personaje para el juego activo,
+        mediante un proceso guiado paso a paso
+        
+        \item \textbf{\textit{OBJ-003}}: El usuario podrá seleccionar un personaje (personaje activo) 
+        de todos los existentes para el juego activo
+        
+        \item \textbf{\textit{OBJ-004}}: El usuario podrá visualizar la información del 
+        personaje seleccionado del juego activo.
+        
+        \item \textbf{\textit{OBJ-005}}: El usuario podrá eliminar un personaje ya creado 
+        del juego activo.
+        
+        \item \textbf{\textit{OBJ-006}}: El usuario podrá realizar cálculos con los valores 
+        de las habilidades del personaje activo.
+
+    \end{itemize}
+%\end{itemize}
+
+
+\section{Requisitos no funcionales}
+Un requisito no funcional es una propiedad o cualidad que no forma parte de los 
+fundamentos del sistema, pero es necesario para que el producto cumpla con su
+cometido apropiadamente. \medskip
+
+Para la declaración de requisitos no funcionales, se establecerán como base los 
+requisitos indicados en las normas \textit{IEEE Std. 830} e \textit{ISO/IEC 25010 (SQuaRE)}:
+
+\begin{itemize}
+    
+    \item \textbf{Adecuación funcional}: La aplicación debe cumplir con todos los requisitos necesarios, 
+    de manera que sea completo y correcto funcionalmente.
+
+    \item \textbf{Seguridad}: El sistema no requiere asegurar la información que procesa, debido a que 
+    no contiene información sensible del usuario en ningún momento, ni realiza conexión externa alguna 
+    para obtener información.
+    
+    \item \textbf{Compatibilidad}: La aplicación deberá ser compatible con los ficheros que contienen
+    la información de los juegos que formarán parte del sistema.
+    
+    \item \textbf{Usabilidad}: El sistema debe disponer de una interfaz de usuario intuitiva y fácil de 
+    manejar, de manera que pueda ser utilizado por usuarios sin conocimientos técnicos ni avanzados de 
+    informática. La curva de aprendizaje deberá ser lo más reducida posible, de manera que personas de 
+    cualquier ámbito puedan hacer uso del mismo.
+
+    \item \textbf{Fiabilidad}: La aplicación deberá estar libre de errores que influyan negativamente 
+    en su uso normal. Debido a que la aplicación depende de información incluida por terceros, será 
+    necesario comprobar que dicha información es compatible con la aplicación.
+    
+    \item \textbf{Eficiencia}: El sistema debe evitar en la medida de lo posible el uso de información 
+    redundante para poder asegurar su funcionamiento cuando se introduzcan juegos de alta complejidad 
+    que requieran un elevado uso de recursos.
+
+    \item \textbf{Mantenibilidad}: Este apartado representa la capacidad del producto software para 
+    ser modificado efectiva y eficientemente. Esto será posible debido al desarrollo de código 
+    limpio y bien documentado, al diseño y la implementación modular del mismo. Se plantea el uso 
+    de patrones de arquitectura de software, tales como \textbf{MVVM}.
+
+    \item \textbf{Portabilidad}: El sistema está diseñado para su uso en dispositivos móviles, 
+    aunque no se descarta una futura ampliación para introducirlo en otro tipo de dispositivos.
+    La implementación está realizada únicamente para sistemas \textit{Android}, ya que no 
+    se dispone de las herramientas necesarias para el despliegue en \textit{Mac OS}. 
+
+\end{itemize}
+
+\section{Reglas de negocio}
+Toda funcionalidad está relacionada con el único actor del proyecto, el usuario de la aplicación.
+
+\section{Análisis de las soluciones}
+En esta sección, se ofrece un estudio del arte de las diferentes alternativas tecnológicas que permitan satisfacer 
+los requerimientos del sistema, para optar por una de las opciones planteadas, que será dispuesta como base 
+para el software a desarrollar.\medskip
+
+Con este motivo, hemos optado por recoger algunas de las tecnologías existentes para realizar desarrollo de aplicaciones 
+móviles.
+
+\subsection{Android Studio}
+Android Studio es el entorno de desarrollo integrado (\textit{IDE}) oficial para el desarrollo de apps para Android, 
+basado en \textit{IntelliJ IDEA} de \textit{JetBrains} y ha sido publicado gratuitamente a través de la Licencia Apache 2.0.
+Disponible para las plataformas \textit{Windows}, \textit{macOS} y \textit{GNU/Linux}. Basado en el lenguanje \textit{Java},
+no tiene herramientas nativas para trabajar directamente con \textit{RDF} y \textit{OWL}. Para suplir este obstáculo, 
+haríamos uso del framework libre \textit{Apache Jena}, cuya API permite trabajar con RDF, consiguiendo vincular 
+el desarrollo en aplicaciones móviles con el uso de ontologías.
+% https://es.wikipedia.org/wiki/Android_Studio
+% https://jena.apache.org/
+
+\subsection{React Native}
+React Native es un \textit{framework} para el desarrollo de aplicaciones móviles de código abierto desarrollado por 
+\textit{Facebook}. Se utiliza para desarrollar aplicaciones para \textit{Android}, \textit{iOS}, \textit{Web} y 
+\textit{UWP} permitiendo a los desarrolladores usar \textit{React} con funcionalidades nativas de las plataformas.
+Al igual que \textit{Android Studio}, React Native no tiene herramientas nativas para el desarrollo de ontologías, de 
+manera que haríamos uso de bibliotecas tales como \textit{rdflib.js} para poder proceder al tratamiento de las ontologías.
+% https://en.wikipedia.org/wiki/React_Native
+% https://github.com/linkeddata/rdflib.js
+
+\subsection{Xamarin}
+Xamarin es una plataforma de código abierto para compilar aplicaciones modernas y con mejor rendimiento para \textit{iOS}, 
+\textit{Android} y \textit{Windows} con \textbf{.NET}. Xamarin es una capa de abstracción que administra la comunicación 
+de código compartido con el código de plataforma subyacente. Xamarin dispone de una biblioteca conocida como 
+\textit{RDFSharp}, que permite generar y procesar ontologías en formatos \textit{RDF} y \textit{OWL}.
+% https://docs.microsoft.com/es-es/xamarin/get-started/what-is-xamarin
+% https://github.com/mdesalvo/RDFSharp
+
+
+\section{Solución propuesta}
+Tras considerar las opciones planteadas en el apartado anterior, se ha considerado descartar \textit{Android Studio} en 
+primer lugar, ya que sólo permite el desarrollo en \textit{Android}, mientras que las otras soluciones permiten realizar 
+el desarrollo en varias plataformas. \medskip
+
+Una vez desechada una de las opciones, se ha comprobado que las soluciones restantes son compatibles con el proyecto, y 
+prácticamente generan el mismo resultado. Por ello, en vez de considerar las plataformas, se ha realizado una comparación 
+en función al lenguaje de programación con el que se trabaja en cada una de ellas, que son \textit{\textbf{JavaScript}} en 
+\textit{React Native}, y \textit{\textbf{C\#}} para \textit{Xamarin}. Esta comparativa se realizará en forma tabular.\bigskip
+
+\begin{table}{htb}
+\centering
+\caption{Comparativa entre \textit{JavaScript} y \textit{C\#}}
+\begin{tabular}{|c|c|}
+    \hline
+    
+    
+\end{tabular}
+\end{table}  
+
+
+
+
+
+
