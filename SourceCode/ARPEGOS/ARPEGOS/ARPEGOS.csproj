@@ -25,45 +25,30 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="RDFSharp" Version="2.9.0" />
+    <PackageReference Include="RDFSharp" Version="2.13.0" />
     <PackageReference Include="RDFSharp.Semantics" Version="2.1.1" />
-    <PackageReference Include="Refractored.MvvmHelpers" Version="1.3.0" />
-    <PackageReference Include="SkiaSharp" Version="1.68.1.1" />
     <PackageReference Include="Xam.Plugins.Forms.ImageCircle" Version="3.0.0.5" />
     <PackageReference Include="Xamarin.FFImageLoading" Version="2.4.11.982" />
-    <PackageReference Include="Xamarin.Forms" Version="4.5.0.396" />
-    <PackageReference Include="Xamarin.Essentials" Version="1.5.1" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <EmbeddedResource Update="Views\GameListPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Views\HomePage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Views\IndividualListView.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Views\MasterMenuPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Views\VersionListPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Views\WelcomePage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
+    <PackageReference Include="Xamarin.Forms" Version="4.7.0.968" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.5.3.2" />
+    <PackageReference Include="Xamarin.Forms.Visual.Material" Version="4.7.0.968" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="DefaultGames\Anima Beyond Fantasy\characters\" />
     <Folder Include="DefaultGames\Nanatsu No Taizai\characters\" />
+    <Folder Include="ViewModels\" />
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="Views\GameListPAge.xaml.cs">
-      <DependentUpon>GameListPage.xaml</DependentUpon>
-    </Compile>
+    <EmbeddedResource Update="Views\MasterDetailPage1.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\MasterDetailPage1Detail.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\MasterDetailPage1Master.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>

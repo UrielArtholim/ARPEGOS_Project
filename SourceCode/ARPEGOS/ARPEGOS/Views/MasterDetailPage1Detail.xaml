@@ -4,13 +4,9 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="ARPEGOS.Views.WelcomePage"
-             Title="Bienvenido">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to ARPEGOS Project!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
-    </ContentPage.Content>
+             x:Class="ARPEGOS.Views.MasterDetailPage1Detail"
+             Title="Detail">
+  <StackLayout Padding="10">
+    <Label Text="This is a detail page. To get the 'triple' line icon on each platform add a icon to each platform and update the 'Master' page with an Icon that references it."/>
+  </StackLayout>
 </ContentPage>

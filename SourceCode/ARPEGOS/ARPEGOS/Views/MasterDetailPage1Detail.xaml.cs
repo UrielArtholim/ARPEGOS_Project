@@ -1,5 +1,4 @@
-﻿using ARPEGOS.ViewModels;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,14 +10,11 @@ using Xamarin.Forms.Xaml;
 namespace ARPEGOS.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class GameListPage : ContentPage
+    public partial class MasterDetailPage1Detail : ContentPage
     {
-        readonly GameListViewModel viewModel;
-        public GameListPage()
+        public MasterDetailPage1Detail()
         {
             InitializeComponent();
-            viewModel = new GameListViewModel();
-            BindingContext = viewModel;
         }
     }
 }
