@@ -13,7 +13,7 @@ using System.Text.RegularExpressions;
 using System.Threading;
 using Group = Arpegos_Test.Group;
 
-namespace ARPEGOS_Test.Models
+namespace ARPEGOS.Models
 {
     /// <summary>
     /// Game represents the information container of any game within the app
