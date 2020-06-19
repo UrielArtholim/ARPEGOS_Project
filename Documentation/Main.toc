@@ -1,0 +1,36 @@
+\babel@toc {spanish}{}
+\contentsline {part}{I\hspace {1em}Prolegómeno}{1}{part.1}%
+\contentsline {chapter}{\numberline {1}Introducción}{3}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Motivación}{3}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Alcance}{4}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Objetivos}{4}{section.1.3}%
+\contentsline {section}{\numberline {1.4}Glosario de Términos}{5}{section.1.4}%
+\contentsline {section}{\numberline {1.5}Metodología}{7}{section.1.5}%
+\contentsline {section}{\numberline {1.6}Estructuración del documento}{8}{section.1.6}%
+\contentsline {chapter}{\numberline {2}Antecedentes}{9}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Estado del Arte}{9}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Situación actual de la tecnología}{9}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}Crítica al estado del arte}{12}{subsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.1.3}Propuesta}{12}{subsection.2.1.3}%
+\contentsline {part}{II\hspace {1em}Desarrollo}{13}{part.2}%
+\contentsline {chapter}{\numberline {3}Análisis del problema}{15}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Catálogo de actores}{15}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Análisis de requisitos del sistema}{15}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Requisitos funcionales}{16}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Requisitos no funcionales}{16}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Reglas de negocio}{17}{section.3.5}%
+\contentsline {section}{\numberline {3.6}Análisis de las soluciones}{17}{section.3.6}%
+\contentsline {section}{\numberline {3.7}Solución propuesta}{18}{section.3.7}%
+\contentsline {section}{\numberline {3.8}Análisis de seguridad}{18}{section.3.8}%
+\contentsline {section}{\numberline {3.9}Análisis de la protección de datos}{19}{section.3.9}%
+\contentsline {section}{\numberline {3.10}Presupuesto}{19}{section.3.10}%
+\contentsline {chapter}{\numberline {4}Diseño del sistema}{21}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Análisis de las herramientas}{21}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Android Studio}{21}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}React Native}{22}{subsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.1.3}Xamarin}{22}{subsection.4.1.3}%
+\contentsline {section}{\numberline {4.2}Solución propuesta}{22}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Arquitectura software}{23}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Arquitectura física}{23}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Arquitectura lógica}{23}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}Diseño Lógico de Datos}{24}{subsection.4.3.3}%

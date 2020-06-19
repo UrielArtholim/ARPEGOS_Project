@@ -6,7 +6,8 @@
 
 % Problem Analysis %
 
-\chapter{Análisis de requisitos del sistema}
+\part{Desarrollo}
+\chapter{Análisis del problema}
 A la vista de lo expuesto previamente en el apartado 
 \textit{Crítica al estado del arte}, se hace necesario el 
 planteamiento de un análisis de la problemática razonada para 
@@ -18,6 +19,7 @@ A causa de que el sistema se define como una aplicación móvil,
 se alcanza la conclusión de sólo considerar un único actor en 
 este proyecto, que es el usuario de la aplicación.
 
+\section{Análisis de requisitos del sistema}
 En la presente sección vamos a proceder a realizar un análisis de 
 requisitos del sistema, que recoge y describe el conjunto 
 de requisitos específicos del sistema que se va a desarrollar.\medskip
@@ -30,7 +32,6 @@ Para ello, se hará una diferenciación entre
 \textit{requisitos funcionales}, que son aquellos que detallan 
 la funcionalidad del sistema, y \textit{requisitos no funcionales},
 que refieren a otros aspectos del software que deben ser satisfechos.
-
 
 \section{Requisitos funcionales}
 Un requisito funcional especifica una función concreta del sistema o 
@@ -135,60 +136,75 @@ requisitos indicados en las normas \textit{IEEE Std. 830} e \textit{ISO/IEC 2501
 Toda funcionalidad está relacionada con el único actor del proyecto, el usuario de la aplicación.
 
 \section{Análisis de las soluciones}
-En esta sección, se ofrece un estudio del arte de las diferentes alternativas tecnológicas que permitan satisfacer 
-los requerimientos del sistema, para optar por una de las opciones planteadas, que será dispuesta como base 
-para el software a desarrollar.\medskip
+Una vez se han indicado los requisitos del proyecto, es necesario considerar de qué maneras se puede 
+realizar una aplicación que cumpla con dichas cláusulas. Para ello, se realizarán propuestas en base a 
+las opciones disponibles, y tras realizar una comparativa, se seleccionará la mejor opción como la 
+solución propuesta. \medskip
 
-Con este motivo, hemos optado por recoger algunas de las tecnologías existentes para realizar desarrollo de aplicaciones 
-móviles.
+Hoy en día, la informática dispone de multitud de herramientas para realizar proyectos de diversa envergadura.
+Como no se puede abarcar un conjunto tan amplio de posibilidades, se ha optado por seleccionar algunas de estas, 
+en base a dos criterios: plataforma en la que se realiza la ejecución y el sistema de almacenamiento de la información 
+de la aplicación. \medskip
 
-\subsection{Android Studio}
-Android Studio es el entorno de desarrollo integrado (\textit{IDE}) oficial para el desarrollo de apps para Android, 
-basado en \textit{IntelliJ IDEA} de \textit{JetBrains} y ha sido publicado gratuitamente a través de la Licencia Apache 2.0.
-Disponible para las plataformas \textit{Windows}, \textit{macOS} y \textit{GNU/Linux}. Basado en el lenguanje \textit{Java},
-no tiene herramientas nativas para trabajar directamente con \textit{RDF} y \textit{OWL}. Para suplir este obstáculo, 
-haríamos uso del framework libre \textit{Apache Jena}, cuya API permite trabajar con RDF, consiguiendo vincular 
-el desarrollo en aplicaciones móviles con el uso de ontologías.
-% https://es.wikipedia.org/wiki/Android_Studio
-% https://jena.apache.org/
+En primer lugar, haremos referencia a las posibilidades seleccionadas en base al criterio de la plataforma en la que 
+se realiza la ejecución de la aplicación: 
+\begin{itemize}
+    \item \textbf{Aplicación de escritorio}: Una aplicación de escritorio es aquella que se encuentra instalado en el 
+    ordenador o sistema de almacenamiento (USB) y podemos ejecutarlo sin internet en nuestro sistema operativo, 
+    al contrario que las aplicaciones en la nube que se encuentran en otro ordenador (servidor) al que accedemos 
+    a través de la red o internet a su software.
+    % https://es.wikipedia.org/wiki/Aplicación_de_escritorio
 
-\subsection{React Native}
-React Native es un \textit{framework} para el desarrollo de aplicaciones móviles de código abierto desarrollado por 
-\textit{Facebook}. Se utiliza para desarrollar aplicaciones para \textit{Android}, \textit{iOS}, \textit{Web} y 
-\textit{UWP} permitiendo a los desarrolladores usar \textit{React} con funcionalidades nativas de las plataformas.
-Al igual que \textit{Android Studio}, React Native no tiene herramientas nativas para el desarrollo de ontologías, de 
-manera que haríamos uso de bibliotecas tales como \textit{rdflib.js} para poder proceder al tratamiento de las ontologías.
-% https://en.wikipedia.org/wiki/React_Native
-% https://github.com/linkeddata/rdflib.js
+    \item \textbf{Aplicación Web}: Se denomina aplicación web a aquellas herramientas que los usuarios pueden utilizar 
+    accediendo a un servidor web a través de internet o de una intranet mediante un navegador.
+    % https://es.wikipedia.org/wiki/Aplicación_web 
 
-\subsection{Xamarin}
-Xamarin es una plataforma de código abierto para compilar aplicaciones modernas y con mejor rendimiento para \textit{iOS}, 
-\textit{Android} y \textit{Windows} con \textbf{.NET}. Xamarin es una capa de abstracción que administra la comunicación 
-de código compartido con el código de plataforma subyacente. Xamarin dispone de una biblioteca conocida como 
-\textit{RDFSharp}, que permite generar y procesar ontologías en formatos \textit{RDF} y \textit{OWL}.
-% https://docs.microsoft.com/es-es/xamarin/get-started/what-is-xamarin
-% https://github.com/mdesalvo/RDFSharp
+    \item \textbf{Aplicación multiplataforma}: Se denomina multiplataforma a un atributo conferido a programas informáticos 
+    o métodos y conceptos de cómputo que son implementados, y operan internamente en múltiples plataformas informáticas.
+    % https://es.wikipedia.org/wiki/Multiplataforma
 
+    %Buscar definiciones diferentes
+\end{itemize}
+
+En segundo lugar, se mostrarán las opciones basadas en el criterio del sistema de almacenamiento de la información:
+\begin{itemize}
+    \item \textbf{Sistema de bases de datos}: C \textit{Un sistema de bases de datos es una colección de datos almacenados conjuntamente
+    con su descripción \textnormal{(base de datos)} y un sistema harware/software para la gestión de su fiabilidad, seguridad, 
+    modificación y recuperación \textnormal{{(sistema gestor de bases de datos , SGBD)}}}. Los sistemas de bases de datos
+    % Object-oriented Database Systems: the Notion and the Issues
+    \item \textbf{Ontología}:
+\end{itemize}
+
+% TO DO
+% Ask for HEEEEEEEEEEEEEEELP
 
 \section{Solución propuesta}
-Tras considerar las opciones planteadas en el apartado anterior, se ha considerado descartar \textit{Android Studio} en 
-primer lugar, ya que sólo permite el desarrollo en \textit{Android}, mientras que las otras soluciones permiten realizar 
-el desarrollo en varias plataformas. \medskip
+\lorem
 
-Una vez desechada una de las opciones, se ha comprobado que las soluciones restantes son compatibles con el proyecto, y 
-prácticamente generan el mismo resultado. Por ello, en vez de considerar las plataformas, se ha realizado una comparación 
-en función al lenguaje de programación con el que se trabaja en cada una de ellas, que son \textit{\textbf{JavaScript}} en 
-\textit{React Native}, y \textit{\textbf{C\#}} para \textit{Xamarin}. Esta comparativa se realizará en forma tabular.\bigskip
+\section{Análisis de seguridad}
+En todo proyecto deben tenerse en cuenta todos los posibles accesos al sistema. Por 
+esto mismo, se recomienda realizar un estudio de las conexiones al mismo, que permita reconocer las 
+posibles vulnerabilidades que puedan darse a causa de éstas, y poder emplear las medidas necesarias 
+para evitar dichas vulnerabilidades. \medskip
 
-\begin{table}{htb}
-\centering
-\caption{Comparativa entre \textit{JavaScript} y \textit{C\#}}
-\begin{tabular}{|c|c|}
-    \hline
-    
-    
-\end{tabular}
-\end{table}  
+El proyecto actual no requiere ningún tipo de conexión externa o entre sistemas para poder operar, y 
+debido a esto, no procede realizar este análisis, aunque no se descarta que deba realizarse tras 
+incorporar alguna funcionalidad que las requiera.
+
+\section{Análisis de la protección de datos}
+Al igual que en el apartado \textit{Análisis de seguridad}, todos los proyectos deben tener constancia 
+de la información que procesan y de la sensibilidad de la misma, con motivo de evitar una posible filtración 
+de la misma. \medskip
+
+Dada la naturaleza del proyecto, no hay información que requiera un control específico 
+de seguridad, ya que toda la información disponible en el sistema, está disponible en los libros de los
+juegos que se utilicen en la aplicación. Por tanto, no procede realizar un análisis de seguridad para 
+el presente proyecto, aunque en caso de introducir información sensible en alguna mejora futura, este 
+análisis debería realizarse para protegerla.
+
+\section{Presupuesto}
+% TO DO
+
 
 
 
