@@ -1,7 +1,6 @@
 ﻿namespace ARPEGOS.Models
 {
     using ARPEGOS.Interfaces;
-    using ARPEGOS.ViewModels;
     using RDFSharp.Model;
     using System;
     using System.Collections.Generic;
