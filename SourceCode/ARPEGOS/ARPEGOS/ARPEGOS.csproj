@@ -26,7 +26,6 @@
 
   <ItemGroup>
     <PackageReference Include="RDFSharp" Version="2.13.0" />
-    <PackageReference Include="RDFSharp.Semantics" Version="2.1.1" />
     <PackageReference Include="Xam.Plugins.Forms.ImageCircle" Version="3.0.0.5" />
     <PackageReference Include="Xamarin.FFImageLoading" Version="2.4.11.982" />
     <PackageReference Include="Xamarin.Forms" Version="4.7.0.968" />
