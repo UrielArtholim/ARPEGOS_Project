@@ -1048,8 +1048,8 @@ namespace ARPEGOS.Models
 
                                         while (CharacterDatatatypePropertyFound == false)
                                         {
-                                            RDFOntologyProperty Property = Program.Game.CharacterOntology.Model.PropertyModel.ElementAtOrDefault(index);
-                                            if (Program.Game.CheckDatatypeProperty(Property.ToString().Substring(Property.ToString().LastIndexOf('#') + 1)))
+                                            RDFOntologyProperty Property = this.CharacterOntology.Model.PropertyModel.ElementAtOrDefault(index);
+                                            if (this.CheckDatatypeProperty(Property.ToString().Substring(Property.ToString().LastIndexOf('#') + 1)))
                                             {
                                                 RDFOntologyDatatypeProperty DatatypeProperty = Property as RDFOntologyDatatypeProperty;
                                                 if (DatatypeProperty.Domain != null)
@@ -1475,7 +1475,7 @@ namespace ARPEGOS.Models
                 if (string.IsNullOrEmpty(AnnotationValue))
                     return null;
 
-                RDFOntologyProperty GeneralCostProperty = GamePropertyModel.SelectProperty(Program.Game.CurrentGameContext + AnnotationValue);
+                RDFOntologyProperty GeneralCostProperty = GamePropertyModel.SelectProperty(this.CurrentGameContext + AnnotationValue);
                 ResultProperties.Add(GeneralCostProperty);
                 FilterResultsCounter = ResultProperties.Count();
             }
@@ -1806,14 +1806,14 @@ namespace ARPEGOS.Models
         /// <returns></returns>
         internal SortedList<int, string> GetOrderedSubstages(string stage)
         {
-            ObservableCollection<Group> Substages = Program.Game.GetSubClasses(stage);
+            ObservableCollection<Group> Substages = this.GetSubClasses(stage);
             Dictionary<int, string> SubstagesAndOrder = new Dictionary<int, string>();
 
             foreach (Group substage in Substages)
             {
                 string SubstageName = "Def_" + substage.Title;
-                RDFOntologyFact SubstageDefinitionFact = Program.Game.GameOntology.Data.SelectFact(Program.Game.CurrentGameContext + SubstageName);
-                RDFOntologyTaxonomyEntry SubstageOrderEntry = Program.Game.GameOntology.Data.Annotations.CustomAnnotations.SelectEntriesBySubject(SubstageDefinitionFact).Where(entry => entry.TaxonomyPredicate.ToString().Contains("SubstageOrder")).SingleOrDefault();
+                RDFOntologyFact SubstageDefinitionFact = this.GameOntology.Data.SelectFact(this.CurrentGameContext + SubstageName);
+                RDFOntologyTaxonomyEntry SubstageOrderEntry = this.GameOntology.Data.Annotations.CustomAnnotations.SelectEntriesBySubject(SubstageDefinitionFact).Where(entry => entry.TaxonomyPredicate.ToString().Contains("SubstageOrder")).SingleOrDefault();
                 if (SubstageOrderEntry != null)
                     SubstagesAndOrder.Add(Convert.ToInt32(SubstageOrderEntry.TaxonomyObject.ToString().Substring(0, SubstageOrderEntry.TaxonomyObject.ToString().IndexOf('^'))), substage.Title);
             }
@@ -2296,7 +2296,7 @@ namespace ARPEGOS.Models
                                 propertyName += propertyWords.ElementAtOrDefault(i) + "_";
                             propertyName += propertyWords.LastOrDefault();
 
-                            if (Program.Game.CheckDatatypeProperty(propertyName, false) == true)
+                            if (this.CheckDatatypeProperty(propertyName, false) == true)
                             {
                                 elementFound = true;
                                 currentProperty = GameOntology.Model.PropertyModel.SelectProperty(CurrentGameContext + propertyName);

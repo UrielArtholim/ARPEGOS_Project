@@ -1,21 +1,12 @@
-﻿using Arpegos_Test.ViewModels;
-using Arpegos_Test.Views;
-using ARPEGOS_Test.Models;
-using RDFSharp.Model;
-using RDFSharp.Semantics;
+﻿using RDFSharp.Semantics;
 using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Globalization;
-using System.IO;
 using System.Linq;
-using System.Reflection;
-using System.Runtime.Remoting;
-using System.Text.RegularExpressions;
-using System.Threading;
 
 namespace Arpegos_Test
 {
+    using ARPEGOS.Models;
+
     /// <summary>
     /// Console Application to test ARPEGOS PROJECT functionality
     /// </summary>

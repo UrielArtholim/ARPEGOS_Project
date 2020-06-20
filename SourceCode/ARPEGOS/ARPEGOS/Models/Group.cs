@@ -1,12 +1,5 @@
-﻿using ARPEGOS_Test.Models;
-using RDFSharp.Semantics;
-using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
+﻿using System;
 using System.ComponentModel;
-using System.Runtime.Remoting;
-using System.Text;
-using System.Linq;
 
 namespace Arpegos_Test
 {
@@ -58,7 +51,7 @@ namespace Arpegos_Test
         public Group(string groupTitle, bool expanded = false)
         {
             Title = groupTitle;
-            FormattedTitle = groupTitle.Replace('_',' ').Trim();
+            FormattedTitle = groupTitle.Replace('_', ' ').Trim();
             Expanded = expanded;
             Description = Program.Game.GetElementDescription(groupTitle);
             GroupList = Program.Game.GetIndividualsGrouped(groupTitle);

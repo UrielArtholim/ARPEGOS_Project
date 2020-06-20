@@ -11,6 +11,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Models\Program.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Remove="DefaultGames\Anima Beyond Fantasy\Nanatsu No Taizai.owl" />
     <None Remove="DefaultGames\Core Exxet.owl" />
   </ItemGroup>
@@ -25,6 +29,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
     <PackageReference Include="RDFSharp" Version="2.13.0" />
     <PackageReference Include="Xam.Plugins.Forms.ImageCircle" Version="3.0.0.5" />
     <PackageReference Include="Xamarin.FFImageLoading" Version="2.4.11.982" />
@@ -37,6 +42,10 @@
     <Folder Include="DefaultGames\Anima Beyond Fantasy\characters\" />
     <Folder Include="DefaultGames\Nanatsu No Taizai\characters\" />
     <Folder Include="ViewModels\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Models\Program.cs" />
   </ItemGroup>
 
   <ItemGroup>
