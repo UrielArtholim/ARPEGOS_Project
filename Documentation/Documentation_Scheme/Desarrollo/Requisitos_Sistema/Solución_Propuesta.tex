@@ -1,0 +1,41 @@
+% ARPEGOS:  Automatized Roleplaying-game Profile Extensible Generator Ontology based System %
+% Author : Alejandro Muñoz Del Álamo %
+% Copyright 2019 %
+
+% Section 3.5: Solución Propuesta %
+\section{Solución propuesta}
+Tras considerar las opciones planteadas en el apartado anterior, se ha considerado descartar \textit{Android Studio} en 
+primer lugar, ya que sólo permite el desarrollo en \textit{Android}, mientras que las otras soluciones permiten realizar 
+el desarrollo en varias plataformas. \medskip
+
+Una vez desechada una de las opciones, se ha comprobado que las soluciones restantes son compatibles con el proyecto, y 
+prácticamente generan el mismo resultado. Por ello, en vez de considerar las plataformas, se ha realizado una comparación 
+en función al lenguaje de programación con el que se trabaja en cada una de ellas, que son \textit{\textbf{JavaScript}} en 
+\textit{React Native}, y \textit{\textbf{C\#}} para \textit{Xamarin}. Esta comparativa se realizará en forma de tabla.\bigskip
+
+\begin{table}[htb]
+\centering
+\caption{Comparativa entre \textit{JavaScript} y \textit{C\#}}
+\bigskip
+\begin{tabular}{|c|c|c|}
+    \hline
+    & \textit{\textbf{JavaScript}} & \textbf{\textit{C\#}} \\ \hline \hline
+    \textbf{Tipo de Lenguaje} & Scripting & Orientado a Objetos \\ \hline
+    \textbf{Tipado} & Débil & Fuerte \\ \hline
+    \textbf{Detección de errores} & Ejecución & Compilación y ejecución \\ \hline
+    \textbf{Compilación} & No & Sí \\ \hline
+    \textbf{Mantenibilidad} & Complejo & Sencillo \\ \hline
+    \textbf{Soporte de IDE} & No & Microsoft Visual Studio \\ \hline
+    \textbf{Sintaxis} & OBSL & OOP \\ \hline
+\end{tabular}
+\end{table}  
+
+En la comparativa se puede observar que JavaScript es un lenguaje de scripting débilmente tipado que 
+no requiere ser compilado, pero resulta difícil de mantener en sistemas complejos. Por otro lado, 
+C\# es un lenguaje orientado a objetos fuertemente tipado que requiere ser compilado, que permite 
+una mayor facilidad a la hora de mantener el código en sistemas de alta complejidad.
+
+Dado que la aplicación a desarrollar es de una complejidad considerable y que puede ser propensa 
+a generar errores, uno de los factores que más peso ha tenido ha sido 
+de que la mejor herramienta para el desarrollo del presente proyecto es \textit{\textbf{Xamarin}} con 
+la biblioteca \textit{\textbf{RDFSharp}}.

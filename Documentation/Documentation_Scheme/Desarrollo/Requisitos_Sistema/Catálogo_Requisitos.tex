@@ -1,0 +1,114 @@
+% ARPEGOS:  Automatized Roleplaying-game Profile Extensible Generator Ontology based System %
+% Author : Alejandro Muñoz Del Álamo %
+% Copyright 2019 %
+
+% Section 3.3: Catálogo de Requisitos %
+En la presente sección vamos a proceder a realizar un análisis de 
+requisitos del sistema, que recoge y describe el conjunto 
+de requisitos específicos del sistema que se va a desarrollar.\medskip
+
+En primera instancia, se presentarán los requisitos agrupados en 
+conjuntos funcionales del sistema. Posteriormente, se describirán 
+los casos de uso en el próximo capítulo. \medskip
+
+Para ello, se hará una diferenciación entre 
+\textit{requisitos funcionales}, que son aquellos que detallan 
+la funcionalidad del sistema, y \textit{requisitos no funcionales},
+que refieren a otros aspectos del software que deben ser satisfechos.
+
+\subsection{Requisitos funcionales}
+Un requisito funcional especifica una función concreta del sistema o 
+de alguno de sus componentes. A continuación se muestran los requisitos 
+funcionales, estructurados según el módulo del sistema al que refieren.
+%\begin{itemize}
+    %\item \textbf{\textit{OBJ-001}}: \textbf{Almacenamiento de información}.
+    %La aplicación debe disponer de una estructura que permita almacenar y 
+    %clasificar la información contenida.
+    %\begin{itemize}
+        
+    %    \item El sistema debe disponer de un conjunto de directorios, en el que 
+    %    cada directorio hace referencia a un juego diferente.
+
+    %    \item Cada directorio de juego estará a su vez compuesto por dos 
+    %    directorios: uno para almacenar los ficheros referentes a la información 
+    %    del juego (\textit{gamefiles}), y otro para almacenar los personajes generados con ese juego
+    %    (\textit{characters}).
+
+    %    \item El directorio \textit{gamefiles} contendrá un fichero en formato \textbf{OWL} 
+    %    por cada versión accesible del juego en cuestión.
+        
+    %    \item El directorio \textit{characters} sólo contendrá los ficheros de personaje 
+    %    generados por el sistema durante el proceso de creación de personaje.
+        
+    %\end{itemize}
+
+    %\item \textbf{\textit{OBJ-001}}: \textbf{Lógica de la aplicación}.
+    El sistema precisa de una lógica estructurada y compleja que permita procesar 
+    información de diferentes fuentes, de manera que los procesos del sistema se 
+    adecuen a su contenido.
+    \begin{itemize}
+        
+        \item \textbf{\textit{OBJ-001}}: El usuario podrá seleccionar un juego concreto 
+        (juego activo) para poder acceder a la información relacionada con el mismo.
+
+        \item \textbf{\textit{OBJ-002}}: El usuario podrá crear un personaje para el juego activo,
+        mediante un proceso guiado paso a paso
+        
+        \item \textbf{\textit{OBJ-003}}: El usuario podrá seleccionar un personaje (personaje activo) 
+        de todos los existentes para el juego activo
+        
+        \item \textbf{\textit{OBJ-004}}: El usuario podrá visualizar la información del 
+        personaje seleccionado del juego activo.
+        
+        \item \textbf{\textit{OBJ-005}}: El usuario podrá eliminar un personaje ya creado 
+        del juego activo.
+        
+        \item \textbf{\textit{OBJ-006}}: El usuario podrá realizar cálculos con los valores 
+        de las habilidades del personaje activo.
+
+    \end{itemize}
+%\end{itemize}
+
+
+\subsection{Requisitos no funcionales}
+Un requisito no funcional es una propiedad o cualidad que no forma parte de los 
+fundamentos del sistema, pero es necesario para que el producto cumpla con su
+cometido apropiadamente. \medskip
+
+Para la declaración de requisitos no funcionales, se establecerán como base los 
+requisitos indicados en las normas \textit{IEEE Std. 830} e \textit{ISO/IEC 25010 (SQuaRE)}:
+
+\begin{itemize}   
+    \item \textbf{Adecuación funcional}: La aplicación debe cumplir con todos los requisitos necesarios, 
+    de manera que sea completo y correcto funcionalmente.
+
+    \item \textbf{Seguridad}: El sistema no requiere asegurar la información que procesa, debido a que 
+    no contiene información sensible del usuario en ningún momento, ni realiza conexión externa alguna 
+    para obtener información.
+    
+    \item \textbf{Compatibilidad}: La aplicación deberá ser compatible con los ficheros que contienen
+    la información de los juegos que formarán parte del sistema.
+    
+    \item \textbf{Usabilidad}: El sistema debe disponer de una interfaz de usuario intuitiva y fácil de 
+    manejar, de manera que pueda ser utilizado por usuarios sin conocimientos técnicos ni avanzados de 
+    informática. La curva de aprendizaje deberá ser lo más reducida posible, de manera que personas de 
+    cualquier ámbito puedan hacer uso del mismo.
+
+    \item \textbf{Fiabilidad}: La aplicación deberá estar libre de errores que influyan negativamente 
+    en su uso normal. Debido a que la aplicación depende de información incluida por terceros, será 
+    necesario comprobar que dicha información es compatible con la aplicación.
+    
+    \item \textbf{Eficiencia}: El sistema debe evitar en la medida de lo posible el uso de información 
+    redundante para poder asegurar su funcionamiento cuando se introduzcan juegos de alta complejidad 
+    que requieran un elevado uso de recursos.
+
+    \item \textbf{Mantenibilidad}: Este apartado representa la capacidad del producto software para 
+    ser modificado efectiva y eficientemente. Esto será posible debido al desarrollo de código 
+    limpio y bien documentado, al diseño y la implementación modular del mismo. Se plantea el uso 
+    de patrones de arquitectura de software, tales como \textbf{MVVM}.
+
+    \item \textbf{Portabilidad}: El sistema está diseñado para su uso en dispositivos móviles, 
+    aunque no se descarta una futura ampliación para introducirlo en otro tipo de dispositivos.
+    La implementación está realizada únicamente para sistemas \textit{Android}, ya que no 
+    se dispone de las herramientas necesarias para el despliegue en \textit{Mac OS}. 
+\end{itemize}
