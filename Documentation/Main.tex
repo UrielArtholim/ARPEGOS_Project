@@ -13,30 +13,35 @@
 \usepackage[utf8]{inputenc}
 \usepackage[spanish]{babel}
 \usepackage{float}
-\usepackage{hyperref}
-\hypersetup{
-    colorlinks=true,
-    linkcolor=black,
-    filecolor=black,
-    urlcolor=black,
-}
+\usepackage[hidelinks]{hyperref}
+\usepackage{bookmark}
 \usepackage{enumerate}
 \usepackage{graphicx}
 \usepackage{amsmath}
 \usepackage{emptypage}
 \usepackage{eurosym}
 \usepackage{geometry}
-\usepackage{csquotes}
+\usepackage[autopunct]{csquotes}
 \usepackage{ragged2e}
 \usepackage{longtable,tabularx,ltxtable,array}
 \usepackage{multirow}
 \usepackage{fancyhdr}
 \usepackage{changepage}
+\usepackage{epigraph}
 %Options: Sonny, Lenny, Glenn, Conny, Rejne, Bjarne, Bjornstrup
 \usepackage[Sonny]{fncychap}
 \usepackage[dvipsnames]{xcolor}
+\usepackage[sorting=none, style=ieee]{biblatex}
+\usepackage{tocbibind}
+\addbibresource{ARPEGOS.bib}
 
-% Setting page numbering %
+% Declaration of quoting commands
+%\SetCiteCommand{\parencite}
+
+% Declaration of epigraph details
+\renewcommand{\epigraphflush}{center}
+\setlength{\epigraphwidth}{10cm}
+
 % Declaration of global commands
 
 \newcommand{\vsep}{\hfil\kern\arraycolsep\vline\kern-\arraycolsep\hfilneg}
@@ -54,7 +59,7 @@
 \newcommand{\autor}{Alejandro Muñoz Del Álamo}
 \newcommand{\director}{D. Alberto Gabriel Salguero Hidalgo}
 \newcommand{\codirector}{D. Pablo García Sánchez}
-\newcommand{\proyecto}{ARPEGOS\@:  Automatized Roleplaying-game Profile Extensible Generator Ontology based System}
+\newcommand{\proyecto}{ARPEGOS\@: Automatized Roleplaying-game Profile Extensible Generator Ontology based System}
 \newcommand{\nombre}{ARPEGOS}
 \newcommand{\tipo}{Grado} % Grado / Máster %
 \newcommand{\titulo}{Ingeniería Informática}
@@ -135,7 +140,6 @@
 }
 
 \begin{document}
-
     % Title Page  %
     \begin{titlepage} % Portada del documento %
         \newgeometry{left=2cm,right=2cm,top=2cm,bottom=1cm}
@@ -204,5 +208,5 @@
     % Import Part III
     \input{Documentation_Scheme/Epílogo.tex}
     \blankpage{}
-    
+
 \end{document}

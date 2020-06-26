@@ -3,57 +3,68 @@
 % Copyright 2019 %
 
 % Section 1.1: Motivación %
+
+\vspace*{\fill}
+\epigraph{\textit{“En Arrswyd, la oscuridad ha consumido las estrellas en el cielo, 
+dejando nada más que una sola ciudad en medio del olvido. Arrswyd es una nación amurallada 
+donde permanece la última población del mundo. El día ha sido olvidado hace mucho tiempo, 
+los miedos se hacen realidad, y entre las torcidas espirales, merodeando entre las sombras, 
+hay horrores que se alimentan del miedo. El terror es todo lo que Arrswyd sabe ya que su gente 
+es perseguida por criaturas y oprimida por el Señor inmortal, Yomon Ecuro. Algunos se animan a 
+luchar contra el abismo y las maquinaciones del Ministerio y del Instituto, mientras que otros 
+simplemente quieren vivir los últimos días del mundo hasta que se apague la última luz.”}}{\textit{Arrswyd, Regnum Ex Nihilo}}
+\vspace*{\fill}
+
+\newpage
+
 \section{Motivación}
-El sector de los juegos de rol está creciendo a pasos 
-agigantados. Hoy en día existe un extensísimo 
-catálogo de juegos de rol, que varían en función de la 
-ambientación del ``universo'' en el que nos sumergimos. Por 
-ejemplo, \textit{Dragones y Mazmorras} utiliza una 
-ambientación medieval con elementos fantásticos, tales como 
-magia y dragones, mientras que \textit{Warhammer 40.000} 
-está basado en un futuro distópico en el que se mezclan 
-elementos de ciencia ficción con elementos de fantasía 
-heroica. \medskip
+Los juegos de rol se pueden definir como un sistema de creación de historias que, basándose en un conjunto de reglas, 
+permite a un grupo de jugadores y un director de juego determinar cómo se resuelven las interacciones entre los personajes que 
+interpretan \autocite{Ramos-Villagrasa2010}. Los jugadores se sumergen en la ambientación de un mundo ficticio, donde sus personajes 
+interaccionan entre sí y con el mundo que les rodea, permitiendo a los jugadores vivir a aventuras fantásticas y experiencias inolvidables 
+con el único uso de papel, lápiz, unos dados y su imaginación. \medskip
 
-Debido a la expansión de este sector, y gracias al avance 
-de la tecnología, podemos encontrar un sinfín de aplicaciones 
-que tratan de mejorar la experiencia de los jugadores, 
-desde juegos de mesa que hacen uso de sistemas de 
-reproducción (\textit{CD}, \textit{DVD}, 
-\textit{Blu-Ray}) para hacer del juego una experiencia 
-interactiva (\textit{Atmosfear}, \textit{Piratas
-del Caribe: El Cofre del Hombre Muerto}, \textit{Trivial 
-Pursuit}, \textit{Cluedo}), hasta juegos de rol completamente
-virtualizados que nos permiten sumergirnos en ellos, contemplar
-sus parajes, disfrutar de su ambientación, y en algunos casos, 
-nos permiten participar con jugadores de cualquier parte del 
-mundo a través de la red (\textit{World of Warcraft}, \textit{Diablo III}, 
-\textit{Black Desert Online}). \medskip
+Uno de los aspectos más importantes de los juegos de rol son los personajes, ya que estos son la manifestación de los jugadores 
+dentro del universo del juego. Como dicen Ramos y Sueiro~\autocite{Ramos-Villagrasa2010}, a diferencia del teatro, donde la elección de un personaje puede depender de las características 
+físicas del intérprete, en los juegos de rol cualquier persona puede interpretar cualquier personaje, siempre que esté dentro de las 
+posibilidades que ofrezca el juego en que se esté jugando. Los personajes deben definirse dentro de los limites establecidos por 
+las reglas del juego, y en una historia como si se tratara de su biografía, explicando cómo ha sido la vida del personaje en 
+la ambientación hasta el momento de comenzar la historia. A este proceso de definir un personaje 
+para un jugador se conoce como \textbf{creación de personaje}. \medskip
 
-Dentro de este amplio espectro de posibilidades, los juegos de rol 
-tradicionales también disponen de aplicaciones que enriquecen el 
-transcurso de las partidas, y que proveen prestaciones útiles para las 
-mismas, como lanzadores de dados virtuales, generadores de mazmorras, 
-contadores de iniciativa, compendios de habilidades, etc. \medskip
+Hay un amplio rango de posibilidades cuando tratamos la creación de personajes en diferentes mundos. En algunos juegos, el jugador 
+sólo puede seleccionar algunas características predefinidas para el personaje, mientras que en otros juegos el usuario puede cambiar cada
+elemento del avatar \autocite*{Isaksson2012}. Esto hace que la creación de personajes sea un proceso arduo y complejo, pues es necesario 
+tener amplios conocimientos del juego para conocer todas las opciones de personalización disponibles para el jugador, y sus correspondientes 
+características. \medskip
 
-Entre todas las utilidades que encontramos, cabe destacar las aplicaciones 
-conocidas como \textit{generadores de personaje}. Estas facilitan a los 
-jugadores todo lo necesario para desarrollar rápidamente la información 
-indispensable de un personaje para poder interpretarlo en una partida. \medskip
+En el blog \textit{Ars Rolica}~\autocite*{ArsRolica} comenta que una de las novedades que se están popularizando más es la de los 
+generadores de personajes, que son herramientas que permiten crear personajes de juegos sin necesidad de invertir grandes cantidades 
+de tiempo, evitando posibles errores y deslices. Estos generadores pueden ser bastante útiles tanto para jugadores novatos que no 
+conocen el sistema del juego, como para jugadores más experimentados que no puedan utilizar tiempo para documentarse completamente 
+antes de crear su álter ego. \medskip
 
-Por otro lado, puesto que la tecnología tiene un ritmo de avance trepidante, 
-y más aún la informática, hoy en día podemos echar cuenta de servicios 
-que simplifican tareas cuya ejecución resultaba impensable en el pasado.
-\medskip
+El objetivo de este proyecto consiste en diseñar e implementar un generador de personajes de juegos de rol de mesa, para lo que se 
+perseguirán los siguientes subobjetivos:
+\begin{itemize}
 
-Uno de estos servicios es la Web Semántica, que se basa en la idea de 
-describir el contenido, el significado y la relación 
-de los datos, de manera que sea posible evaluarlos automáticamente por 
-máquinas de procesamiento, como pueden ser los ordenadores o los 
-\textit{smartphones}.
-\medskip
+    \item Realizar un estudio del arte de los generadores de personaje existentes, que permita conocer el estado actual de las herramientas
+    que se encuentran en uso en la actualidad.
 
-El planteamiento del presente proyecto surge de la concepción de una 
-aplicación informática destinada a ampliar las funcionalidades de 
-los generadores de personaje, innovando en el desarrollo de la misma 
-al aplicar tecnologías de Web Semántica.\medskip
+    \item Desarrollar un sistema que permita trabajar con diferentes juegos de rol, sin tener que salir de la aplicación, siempre y 
+    cuando se disponga de los ficheros que contengan la información de dichos juegos.
+
+    \item Diseñar un esquema del sistema de información que permita a la aplicación poder adaptarse de la forma más completa posible a 
+    cada juego, permitiendo profundizar de la misma manera en juegos de alta complejidad que en juegos sencillos.
+
+    \item Crear una interfaz de usuario intuitiva, que facilite al usuario la interacción con la aplicación y ésta resulte cómoda y 
+    agradable de utilizar.
+
+\end{itemize}
+
+
+
+
+
+
+
