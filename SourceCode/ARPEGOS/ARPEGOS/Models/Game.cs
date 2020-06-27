@@ -4,7 +4,6 @@ using RDFSharp.Semantics;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Data;
 using System.Globalization;
 using System.IO;
 using System.Linq;
@@ -183,8 +182,8 @@ namespace ARPEGOS.Models
             RDFOntologyFact subjectFact;
             RDFOntologyProperty predicate;
             RDFOntologyLiteral objectLiteral;
-            string subjectName = subjectFullName.ToString().Substring(subjectFullName.ToString().LastIndexOf('#') + 1);
-            string predicateName = predicateFullName.ToString().Substring(predicateFullName.ToString().LastIndexOf('#') + 1);
+            string subjectName = subjectFullName.Substring(subjectFullName.LastIndexOf('#') + 1);
+            string predicateName = predicateFullName.Substring(predicateFullName.LastIndexOf('#') + 1);
 
             if (!CheckIndividual(subjectName))
                 subjectFact = CreateIndividual(subjectName);

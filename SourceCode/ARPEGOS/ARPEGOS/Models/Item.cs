@@ -32,14 +32,14 @@ namespace Arpegos_Test
         #endregion
 
         #region Constructor
-        public Item(string name)
+        public Item(string name, string Class = "", string description = "")
         {
             Name = name;
-            Class = Program.Game.GetElementClass(name);
+            Class = Class;
             if (name.Contains(Class))
                 name = name.Replace(Class,"").Trim();
             FormattedName = name.Replace('_',' ').Trim();
-            Description = Program.Game.GetElementDescription(name);
+            Description = description;
         }
         #endregion
 

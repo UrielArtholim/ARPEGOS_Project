@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 namespace ARPEGOS.Views
 {
 
-    public class MasterDetailPage1MasterMenuItem
+    public class MainViewMasterMenuItem
     {
-        public MasterDetailPage1MasterMenuItem()
+        public MainViewMasterMenuItem()
         {
-            TargetType = typeof(MasterDetailPage1MasterMenuItem);
+            TargetType = typeof(MainViewMasterMenuItem);
         }
         public int Id { get; set; }
         public string Title { get; set; }

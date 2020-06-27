@@ -3,6 +3,8 @@ using System.ComponentModel;
 
 namespace Arpegos_Test
 {
+    using System.Collections.ObjectModel;
+
     /// <summary>
     /// ItemGroup models a collection of items which belong to a group
     /// </summary>
@@ -48,13 +50,13 @@ namespace Arpegos_Test
         /// </summary>
         /// <param name="groupTitle">Name of the group</param>
         /// <param name="expanded">State of expansion of the group</param>
-        public Group(string groupTitle, bool expanded = false)
+        public Group(string groupTitle, string description = "", dynamic groupList = null, bool expanded = false)
         {
             Title = groupTitle;
             FormattedTitle = groupTitle.Replace('_', ' ').Trim();
             Expanded = expanded;
-            Description = Program.Game.GetElementDescription(groupTitle);
-            GroupList = Program.Game.GetIndividualsGrouped(groupTitle);
+            Description = description;
+            GroupList = groupList;
         }
         #endregion
 

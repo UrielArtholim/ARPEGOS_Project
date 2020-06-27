@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace ARPEGOS.Interfaces
+﻿namespace ARPEGOS.Interfaces
 {
     public interface IDirectory
     {

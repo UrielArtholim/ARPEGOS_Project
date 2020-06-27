@@ -9,12 +9,17 @@ using Xamarin.Forms.Xaml;
 
 namespace ARPEGOS.Views
 {
+    using ARPEGOS.ViewModels;
+
+    using Autofac;
+
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class MasterDetailPage1Detail : ContentPage
+    public partial class CreationView : ContentPage
     {
-        public MasterDetailPage1Detail()
+        public CreationView()
         {
             InitializeComponent();
+            this.BindingContext = App.Container.Resolve<CreationViewModel>();
         }
     }
 }

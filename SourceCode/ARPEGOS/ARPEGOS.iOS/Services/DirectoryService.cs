@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using ARPEGOS.Interfaces;
+﻿using ARPEGOS.Interfaces;
 using ARPEGOS.iOS.Services;
-using Foundation;
-using UIKit;
+
 using Xamarin.Forms;
 
 [assembly: Dependency(typeof(DirectoryService))]
@@ -27,6 +22,11 @@ namespace ARPEGOS.iOS.Services
         public string CreateDirectory(string rootDirectoryName, string directoryName)
         {
             return null;
+        }
+
+        public string GetBaseDirectory()
+        {
+            throw new System.NotImplementedException();
         }
 
         public void RemoveDirectory(string directoryName)

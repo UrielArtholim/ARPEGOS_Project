@@ -10,9 +10,9 @@ using Xamarin.Forms.Xaml;
 namespace ARPEGOS.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class MasterDetailPage1 : MasterDetailPage
+    public partial class MainView : MasterDetailPage
     {
-        public MasterDetailPage1()
+        public MainView()
         {
             InitializeComponent();
             MasterPage.ListView.ItemSelected += ListView_ItemSelected;
@@ -20,7 +20,7 @@ namespace ARPEGOS.Views
 
         private void ListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
-            var item = e.SelectedItem as MasterDetailPage1MasterMenuItem;
+            var item = e.SelectedItem as MainViewMasterMenuItem;
             if (item == null)
                 return;
 
