@@ -17,7 +17,12 @@ namespace ARPEGOS.Views
         public CheckItemView()
         {
             InitializeComponent();
-            this.BindingContext = App.Container.Resolve<CheckItemViewModel>();
+        }
+
+        protected override void OnBindingContextChanged()
+        {
+            var a = this.BindingContext;
+            base.OnBindingContextChanged();
         }
     }
 }

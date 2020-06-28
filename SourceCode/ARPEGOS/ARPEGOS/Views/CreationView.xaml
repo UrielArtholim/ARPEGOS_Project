@@ -19,14 +19,14 @@
                    Text="StageName"/>
             <views:ProgressBarView/>
             <views:SliderItemView/>
-            <views:ItemListView/>
+            <!--<views:ItemListView/>
             <CarouselView IndicatorView="Indicator" ItemsSource="{Binding Data}">
                 <CarouselView.ItemTemplate>
                     <DataTemplate>
                         <Label Text="{Binding .}"/>
                     </DataTemplate>
                 </CarouselView.ItemTemplate>
-            </CarouselView>
+            </CarouselView>-->
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

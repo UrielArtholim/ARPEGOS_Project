@@ -29,7 +29,7 @@
                 <ImageButton x:Name="InformationButton"
                          Grid.Row="0"
                          Grid.Column="2" 
-                         Source=""/>
+                         />
             </Grid>
         </Frame>
     </ContentView.Content>
