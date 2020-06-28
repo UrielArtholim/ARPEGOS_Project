@@ -22,7 +22,7 @@
             <CarouselView IndicatorView="Indicator" ItemsSource="{Binding Data}">
                 <CarouselView.ItemTemplate>
                     <DataTemplate>
-                        <views:CheckItemView/>
+                        <views:ItemListView/>
                     </DataTemplate>
                 </CarouselView.ItemTemplate>
             </CarouselView>
