@@ -1,4 +1,5 @@
 ﻿using ARPEGOS.ViewModels;
+using Autofac;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,15 +11,13 @@ using Xamarin.Forms.Xaml;
 
 namespace ARPEGOS.Views
 {
-    using Autofac;
-
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class SidebarView : ContentView
+    public partial class ProgressBarView : ContentView
     {
-        public SidebarView()
+        public ProgressBarView()
         {
             InitializeComponent();
-            this.BindingContext = App.Container.Resolve<SidebarViewModel>();
+            this.BindingContext = App.Container.Resolve<ProgressBarViewModel>();
         }
     }
 }

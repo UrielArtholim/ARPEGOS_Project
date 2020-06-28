@@ -1,5 +1,4 @@
-﻿using Arpegos_Test;
-using RDFSharp.Model;
+﻿using RDFSharp.Model;
 using RDFSharp.Semantics;
 using System;
 using System.Collections.Generic;
@@ -10,8 +9,6 @@ using System.Linq;
 using System.Reflection;
 using System.Text.RegularExpressions;
 using System.Threading;
-using Group = Arpegos_Test.Group;
-
 namespace ARPEGOS.Models
 {
     /// <summary>
@@ -19,7 +16,6 @@ namespace ARPEGOS.Models
     /// </summary>
     public class Game
     {
-
         public static string ProjectPath { get; internal set; } = "F:/Alejandro/Xamarin/Arpegos Test/";
         public string GameFolder { get; internal set; } = ProjectPath + "Games/";
         public string CharacterFolder { get; internal set; } = ProjectPath +"Characters/";
@@ -1463,7 +1459,7 @@ namespace ARPEGOS.Models
             RDFOntologyFact ElementDefinitionFact = GameOntology.Data.SelectFact(CurrentGameContext + ElementDefinitionIndividual);
             RDFOntologyTaxonomy ElementDefinitionAnnotations = GameOntology.Data.Annotations.CustomAnnotations.SelectEntriesBySubject(ElementDefinitionFact);
             RDFOntologyTaxonomyEntry ElementGeneralCostAnnotation = ElementDefinitionAnnotations.Where(entry => entry.TaxonomyPredicate.ToString().Contains("GeneralCostDefinedBy")).SingleOrDefault();
-            bool generalCostAnnotationFound = (ElementGeneralCostAnnotation != null) ? true : false;
+            bool generalCostAnnotationFound = (ElementGeneralCostAnnotation != null);
             
             if(ElementGeneralCostAnnotation != null)
             {

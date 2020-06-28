@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Arpegos_Test
+namespace ARPEGOS
 {
     using ARPEGOS.Models;
 
@@ -104,7 +104,7 @@ namespace Arpegos_Test
 
         internal static void ShowOptions(dynamic options)
         {
-            if (options.GetType().ToString().Contains("Arpegos_Test.Item"))
+            if (options.GetType().ToString().Contains("ARPEGOS.Item"))
             {
                 foreach (var item in options)
                 {

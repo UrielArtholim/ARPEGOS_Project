@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Arpegos_Test
+namespace ARPEGOS
 {
     /// <summary>
     /// Item represents a generic element obtained from an ontology

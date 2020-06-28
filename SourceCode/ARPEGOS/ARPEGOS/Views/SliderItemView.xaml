@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             Visual="Material"
+             x:Class="ARPEGOS.Views.SliderItemView">
+  <ContentView.Content>
+        <Frame x:Name="ItemFrame"
+               VerticalOptions="Start"
+               Margin="20,20,20,20"
+               BorderColor="DarkViolet">
+            <Grid x:Name="SliderItem" 
+            HorizontalOptions="FillAndExpand"
+            RowDefinitions="Auto,Auto"
+            ColumnDefinitions="2*,*,*,*">
+                <Label x:Name="ItemNameLabel"
+                       Grid.Row="0"
+                       Grid.Column="0"
+                       VerticalOptions="Center"
+                       HorizontalTextAlignment="Center"
+                       Text="Item Name"/>
+                <Label x:Name="SliderValueLabel"
+                       Grid.Row="0"
+                       Grid.Column="1"
+                       VerticalOptions="Center"
+                       HorizontalTextAlignment="Center"
+                       Text="Slider Value"/>
+                <Label x:Name="ItemValueLabel"
+                       Grid.Row="0"
+                       Grid.Column="2"
+                       VerticalOptions="Center"
+                       HorizontalTextAlignment="Center"
+                       Text="Item Value"/>
+                <ImageButton x:Name="InformationButton"
+                             Grid.Row="0"
+                             Grid.Column="3"
+                             Source=""/>
+                <Slider x:Name="UserInputSlider"
+                    Grid.Row="1"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="4"/>
+            </Grid>
+        </Frame>
+    </ContentView.Content>
+</ContentView>

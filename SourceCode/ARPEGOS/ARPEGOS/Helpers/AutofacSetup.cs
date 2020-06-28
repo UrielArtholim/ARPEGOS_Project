@@ -20,8 +20,10 @@
 
         private void RegisterViewModels(ContainerBuilder builder)
         {
-            builder.RegisterType<SidebarViewModel>();
+            builder.RegisterType<ProgressBarViewModel>();
             builder.RegisterType<CreationViewModel>();
+            builder.RegisterType<SliderItemViewModel>();
+            builder.RegisterType<CheckItemViewModel>();
         }
     }
 }

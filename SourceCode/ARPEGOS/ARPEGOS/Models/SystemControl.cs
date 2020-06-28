@@ -18,7 +18,7 @@
         static readonly Dictionary<Guid, bool> ActiveGames = new Dictionary<Guid, bool>();
         static readonly Dictionary<Guid, string> Games = new Dictionary<Guid, string>();
         static readonly string GamesRootDirectoryPath = DirectoryHelper.GetBaseDirectory();
-        static readonly ObservableCollection<SimpleListItem> GamesList = new ObservableCollection<SimpleListItem>();
+        static readonly ObservableCollection<Item> GamesList = new ObservableCollection<Item>();
         static string ActiveGameVersion { get; set; }
         static string ActiveCharacter { get; set; }
         public static Game ActiveGame { get; set; }
@@ -66,24 +66,20 @@
 
         private static void WriteResourceToFile(string resourcePath, string filePath)
         {
-            using (var resource = Assembly.GetExecutingAssembly().GetManifestResourceStream(resourcePath))
-            {
-                using (var file = new FileStream(filePath, FileMode.Create, FileAccess.Write))
-                {
-                    resource.CopyTo(file);
-                }
-            }
+            using var resource = Assembly.GetExecutingAssembly().GetManifestResourceStream(resourcePath);
+            using var file = new FileStream(filePath, FileMode.Create, FileAccess.Write);
+            resource.CopyTo(file);
         }
 
-        public static ObservableCollection<SimpleListItem> GetGameList()
+        public static ObservableCollection<Item> GetGameList()
         {
             GamesList.Clear();
             List<string> GamesValues = Games.Values.ToList();
             foreach (var game in GamesValues)
             {
-                SimpleListItem gameItem = GamesList.FirstOrDefault(item => item.ItemName == game);
+                Item gameItem = GamesList.FirstOrDefault(item => item.Name == game);
                 if (gameItem == null)
-                    GamesList.Add(new SimpleListItem(game));
+                    GamesList.Add(new Item(game));
             }
             return GamesList;
         }

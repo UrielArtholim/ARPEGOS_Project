@@ -15,7 +15,7 @@
         public MainViewMaster()
         {
             this.InitializeComponent();
-            this.BindingContext = App.Container.Resolve<SidebarViewModel>();
+            this.BindingContext = App.Container.Resolve<ProgressBarViewModel>();
         }
     }
 }

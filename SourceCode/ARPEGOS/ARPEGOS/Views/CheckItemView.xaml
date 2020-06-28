@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             Visual="Material"
+             x:Class="ARPEGOS.Views.CheckItemView">
+  <ContentView.Content>
+        <Frame x:Name="ItemFrame"
+               VerticalOptions="Start"
+               Margin="20,20,20,20"
+               BorderColor="DarkViolet">
+            <Grid x:Name="SliderItem" 
+                  HorizontalOptions="FillAndExpand"
+                  VerticalOptions="Start"
+                  RowDefinitions="Auto"                   
+                  ColumnDefinitions="1*,3*,1*">
+                <CheckBox x:Name="CheckItem"
+                   Grid.Row="0"
+                   Grid.Column="0"
+                   IsChecked="{Binding Selected}"
+                   Color="Black"/>
+                <Label x:Name="ItemNameLabel"
+                   Grid.Row="0"
+                   Grid.Column="1"
+                   VerticalOptions="Center"
+                   HorizontalTextAlignment="Center"
+                   Text="ItemName"/>
+                <ImageButton x:Name="InformationButton"
+                         Grid.Row="0"
+                         Grid.Column="2" 
+                         Source=""/>
+            </Grid>
+        </Frame>
+    </ContentView.Content>
+</ContentView>

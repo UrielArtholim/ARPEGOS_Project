@@ -6,17 +6,23 @@
              xmlns:views="clr-namespace:ARPEGOS.Views"
              mc:Ignorable="d"
              Title="{Binding Title}"
+             Visual="Material"
              x:Class="ARPEGOS.Views.CreationView">
     <ContentPage.Content>
         <StackLayout Spacing="5" Padding="0,20,0,0" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand">
             <IndicatorView x:Name="Indicator" IndicatorColor="DarkSlateGray" IndicatorSize="20"
                 SelectedIndicatorColor="Red"
                 HorizontalOptions="Center"/>
-            <views:SidebarView/>
+            <Label x:Name="StageNameLabel"
+                   Padding="0,20,0,0"
+                   HorizontalOptions="CenterAndExpand"
+                   Text="StageName"/>
+            <views:ProgressBarView/>
+            <views:SliderItemView/>
             <CarouselView IndicatorView="Indicator" ItemsSource="{Binding Data}">
                 <CarouselView.ItemTemplate>
                     <DataTemplate>
-                        <Label Text="{Binding .}"/>
+                        <views:CheckItemView/>
                     </DataTemplate>
                 </CarouselView.ItemTemplate>
             </CarouselView>

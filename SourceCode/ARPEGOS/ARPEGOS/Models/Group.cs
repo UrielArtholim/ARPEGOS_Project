@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel;
 
-namespace Arpegos_Test
+namespace ARPEGOS
 {
     using System.Collections.ObjectModel;
 
