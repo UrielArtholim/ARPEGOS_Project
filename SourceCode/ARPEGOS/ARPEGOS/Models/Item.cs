@@ -32,7 +32,7 @@ namespace ARPEGOS
         #endregion
 
         #region Constructor
-        public Item(string name, string Class = "", string description = "")
+        public Item(string name, string Class = "ClassName", string description = "")
         {
             Name = name;
             this.Class = Class;

@@ -24,6 +24,7 @@
             builder.RegisterType<CreationViewModel>();
             builder.RegisterType<SliderItemViewModel>();
             builder.RegisterType<CheckItemViewModel>();
+            builder.RegisterType<ItemListViewModel>();
         }
     }
 }
