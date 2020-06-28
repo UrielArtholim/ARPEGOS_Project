@@ -18,6 +18,15 @@ namespace ARPEGOS.Views
         {
             InitializeComponent();
             this.BindingContext = App.Container.Resolve<SliderItemViewModel>();
+            
+            UserInputSlider.ValueChanged += OnSliderValueChanged;
+        }
+
+        void OnSliderValueChanged(object sender, ValueChangedEventArgs e)
+        {
+            int step = ((SliderItemViewModel)this.BindingContext).Step;
+            int newStep = Convert.ToInt32(Math.Round(e.NewValue / step));
+            UserInputSlider.Value = newStep * step;
         }
     }
 }

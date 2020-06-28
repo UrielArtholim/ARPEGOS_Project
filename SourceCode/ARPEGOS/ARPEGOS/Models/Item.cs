@@ -35,7 +35,7 @@ namespace ARPEGOS
         public Item(string name, string Class = "", string description = "")
         {
             Name = name;
-            Class = Class;
+            this.Class = Class;
             if (name.Contains(Class))
                 name = name.Replace(Class,"").Trim();
             FormattedName = name.Replace('_',' ').Trim();

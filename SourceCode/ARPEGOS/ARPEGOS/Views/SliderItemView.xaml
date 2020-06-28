@@ -19,27 +19,29 @@
                        Grid.Column="0"
                        VerticalOptions="Center"
                        HorizontalTextAlignment="Center"
-                       Text="Item Name"/>
+                       Text="{Binding Name}"/>
                 <Label x:Name="SliderValueLabel"
                        Grid.Row="0"
                        Grid.Column="1"
                        VerticalOptions="Center"
                        HorizontalTextAlignment="Center"
-                       Text="Slider Value"/>
+                       Text="{Binding Source={x:Reference UserInputSlider},Path=Value}"/>
                 <Label x:Name="ItemValueLabel"
                        Grid.Row="0"
                        Grid.Column="2"
                        VerticalOptions="Center"
                        HorizontalTextAlignment="Center"
-                       Text="Item Value"/>
+                       Text="Final Value"/>
                 <ImageButton x:Name="InformationButton"
                              Grid.Row="0"
                              Grid.Column="3"
                              Source=""/>
-                <Slider x:Name="UserInputSlider"
-                    Grid.Row="1"
-                    Grid.Column="0"
-                    Grid.ColumnSpan="4"/>
+                <Slider x:Name="UserInputSlider" 
+                        Grid.Row="1" 
+                        Grid.Column="0" 
+                        Grid.ColumnSpan="4"
+                        Minimum="0"
+                        Maximum="{Binding Maximum}"/>
             </Grid>
         </Frame>
     </ContentView.Content>

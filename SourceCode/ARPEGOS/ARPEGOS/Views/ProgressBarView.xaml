@@ -14,14 +14,15 @@
             <Label HorizontalOptions="Start" 
                    VerticalOptions="Center"
                    HorizontalTextAlignment="Center"
-                   Text="{Binding ProgressBarName}"/>
+                   Text="{Binding Name}"/>
             <ProgressBar HorizontalOptions="FillAndExpand" 
-                         Progress="{Binding ProgressBarValue}"
+                         Progress="{Binding Progress}"
                          ProgressColor="Red"/>
             <Label HorizontalOptions="End" 
                    VerticalOptions="Center"
                    HorizontalTextAlignment="Center"
-                   Text="{Binding ProgressBarValue}"/>
+                   Text="{Binding Info}"/>
+
         </StackLayout>
     </ContentView.Content>
 </ContentView>
