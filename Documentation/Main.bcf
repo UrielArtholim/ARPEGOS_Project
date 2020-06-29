@@ -2183,10 +2183,15 @@
     <bcf:datasource type="file" datatype="bibtex">ARPEGOS.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
-    <bcf:citekey order="1">Adams2010</bcf:citekey>
-    <bcf:citekey order="2">Ramos-Villagrasa2010</bcf:citekey>
-    <bcf:citekey order="3">Isaksson2012</bcf:citekey>
-    <bcf:citekey order="4">ArsRolica</bcf:citekey>
+    <bcf:citekey order="2">Adams2010</bcf:citekey>
+    <bcf:citekey order="3">Ramos-Villagrasa2010</bcf:citekey>
+    <bcf:citekey order="4">Isaksson2012</bcf:citekey>
+    <bcf:citekey order="5">Egri1960</bcf:citekey>
+    <bcf:citekey order="6">Lankoski2003</bcf:citekey>
+    <bcf:citekey order="7">Lankoski2003</bcf:citekey>
+    <bcf:citekey order="8">Lankoski2003</bcf:citekey>
+    <bcf:citekey order="9">Tychsen2008</bcf:citekey>
+    <bcf:citekey order="10">ArsRolica</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

@@ -28,6 +28,8 @@
 \usepackage{fancyhdr}
 \usepackage{changepage}
 \usepackage{epigraph}
+\usepackage{array}
+\usepackage{makecell}
 %Options: Sonny, Lenny, Glenn, Conny, Rejne, Bjarne, Bjornstrup
 \usepackage[Sonny]{fncychap}
 \usepackage[dvipsnames]{xcolor}
@@ -41,6 +43,12 @@
 % Declaration of epigraph details
 \renewcommand{\epigraphflush}{center}
 \setlength{\epigraphwidth}{10cm}
+
+% Declaration of makecell commands
+\renewcommand{\cellalign}{\theadalign{cl}}
+\renewcommand\theadfont{\bfseries}
+\renewcommand\theadgape{\Gape[2pt]}
+\renewcommand\cellgape{\Gape[2pt]}
 
 % Declaration of global commands
 
