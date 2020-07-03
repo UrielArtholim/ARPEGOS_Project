@@ -12,12 +12,12 @@
 % Declaration of packages for this document
 \usepackage[utf8]{inputenc}
 \usepackage[spanish]{babel}
+\usepackage{amsmath}
 \usepackage{float}
 \usepackage[hidelinks]{hyperref}
 \usepackage{bookmark}
 \usepackage{enumerate}
 \usepackage{graphicx}
-\usepackage{amsmath}
 \usepackage{emptypage}
 \usepackage{eurosym}
 \usepackage{geometry}
@@ -30,13 +30,14 @@
 \usepackage{epigraph}
 \usepackage{array}
 \usepackage{makecell}
+\usepackage[dvipsnames]{xcolor}
+
 %Options: Sonny, Lenny, Glenn, Conny, Rejne, Bjarne, Bjornstrup
 \usepackage[Sonny]{fncychap}
-\usepackage[dvipsnames]{xcolor}
-\usepackage[sorting=none, style=ieee]{biblatex}
+\usepackage[sorting=none]{biblatex}
 \usepackage{tocbibind}
 \addbibresource{ARPEGOS.bib}
-
+ 
 % Declaration of quoting commands
 %\SetCiteCommand{\parencite}
 
@@ -116,9 +117,6 @@
     \fancyfoot[RE,LO]{}
 }
 
-
-
-
 % Header Definition %
 \setlength{\headheight}{15pt}
 \fancyhead[LO]{\textbf{\textsl{\leftmark}}}
@@ -186,7 +184,7 @@
     % Import Preface
     \input{Documentation_Scheme/Portada/Preface.tex}
     \blankpage{}
-
+    
     \pagestyle{fancy}
 
     % Import Table of Contents

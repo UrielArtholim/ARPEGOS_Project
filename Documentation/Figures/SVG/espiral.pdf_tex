@@ -1,0 +1,104 @@
+%% Creator: Inkscape 1.0 (4035a4fb49, 2020-05-01), www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'espiral.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{568.5bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,1.02770449)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{espiral.pdf}}%
+    \put(0.50791557,0.44591029){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Concepción...\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{espiral.pdf}}%
+    \put(0.41556728,0.44591029){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Concepción...\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{espiral.pdf}}%
+    \put(0.60158311,0.50263852){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Prototipo 1\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{espiral.pdf}}%
+    \put(0.69920844,0.52902375){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Prototipo 2\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=5]{espiral.pdf}}%
+    \put(0.7994723,0.55540897){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Prototipo...\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=6]{espiral.pdf}}%
+    \put(0.55936675,0.37730871){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Requisitos\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=7]{espiral.pdf}}%
+    \put(0.52242744,0.23218997){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Verificación \&...\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=8]{espiral.pdf}}%
+    \put(0.34828496,0.37730871){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Plan de...\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=9]{espiral.pdf}}%
+    \put(0.69920844,0.43403694){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Borrador\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=10]{espiral.pdf}}%
+    \put(0.24802111,0.31134565){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Plan de...\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=11]{espiral.pdf}}%
+    \put(0.81266491,0.43403694){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Diseño...\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=12]{espiral.pdf}}%
+    \put(0.78627968,0.34168865){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Código\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=13]{espiral.pdf}}%
+    \put(0.73350923,0.2585752){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Integración\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=14]{espiral.pdf}}%
+    \put(0.63852243,0.17941953){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Pruebas\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=15]{espiral.pdf}}%
+    \put(0.52506596,0.12664908){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Implementación\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=16]{espiral.pdf}}%
+    \put(0.37467018,0.12664908){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Lanzamiento\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=17]{espiral.pdf}}%
+    \put(0.58575198,0.97097625){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\textbf{Progreso}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=18]{espiral.pdf}}%
+    \put(0.89050132,0.88522427){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}2...\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=19]{espiral.pdf}}%
+    \put(0.1055409,0.87203166){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}1...\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=20]{espiral.pdf}}%
+    \put(0.91029024,0.12005277){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}3...\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=21]{espiral.pdf}}%
+    \put(0.1055409,0.12664908){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}4...\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=22]{espiral.pdf}}%
+    \put(0.40105541,0.50923483){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Plan de...\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=23]{espiral.pdf}}%
+    \put(0.07387863,0.51978892){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Revisión\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=24]{espiral.pdf}}%
+  \end{picture}%
+\endgroup%
