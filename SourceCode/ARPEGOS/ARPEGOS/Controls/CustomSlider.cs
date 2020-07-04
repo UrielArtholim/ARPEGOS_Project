@@ -7,7 +7,7 @@ namespace ARPEGOS.Controls
 
     public class CustomSlider : Slider
     {
-        public static readonly BindableProperty StepValueProperty =
+        public static readonly BindableProperty StepProperty =
             BindableProperty.Create(nameof(Step), typeof(int), typeof(CustomSlider), 1, BindingMode.OneTime);
 
         public CustomSlider()

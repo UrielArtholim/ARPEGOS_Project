@@ -3,6 +3,7 @@
     using ARPEGOS.ViewModels;
 
     using Autofac;
+    using System;
 
     public class AutofacSetup
     {
@@ -24,6 +25,11 @@
             builder.RegisterType<CreationViewModel>();
             builder.RegisterType<SliderItemViewModel>();
             builder.RegisterType<CheckItemViewModel>();
+            try { builder.RegisterType<ItemListViewModel>(); }catch(Exception e) 
+            { 
+                System.Console.WriteLine(e);
+                System.Console.ReadLine();
+            }
         }
     }
 }

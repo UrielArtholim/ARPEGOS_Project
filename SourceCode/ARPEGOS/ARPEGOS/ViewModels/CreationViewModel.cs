@@ -3,14 +3,22 @@
     using System.Collections.ObjectModel;
 
     using ARPEGOS.ViewModels.Base;
+    using ARPEGOS.Views;
 
     public class CreationViewModel : BaseViewModel
     {
-        public ObservableCollection<string> Data { get; set; }
+        public ObservableCollection<ItemListViewModel> Data { get; set; }
 
         public CreationViewModel()
         {
-            this.Data = new ObservableCollection<string>() { "primer", "segundo", "tercero" };
+            this.Data = new ObservableCollection<ItemListViewModel>()
+            {
+                new ItemListViewModel(),
+                new ItemListViewModel(),
+                new ItemListViewModel(),
+                new ItemListViewModel(),
+                new ItemListViewModel(),
+            };
             this.Title = "Creation";
         }
     }
