@@ -7,9 +7,45 @@
 \section{Propuesta} \label{Propuesta}
 Tras analizar el estado del arte, y destacar algunos de los aspectos negativos de éste, lo que prosigue es diseñar una 
 propuesta que permita recoger las mejores ideas de las herramientas actuales, y que además pueda dar solución a los 
-problemas comentados en el apartado \ref{Critica_Estado_Arte}.
+problemas comentados en el apartado \ref{Critica_Estado_Arte} (\textit{Crítica al estado del arte}). \medskip
 
-La propeusta a diseñar debe considerar los siguientes elementos:
-\begin{itemize}
-    \item La aplicación debe ser genérica
-\end{itemize}
+\subsection{Plataforma} \label{Plataforma}
+En primer lugar, se debe considerar cuál será la plataforma en la que se implementará la aplicación, puesto que es la base 
+sobre la que se realiza el desarrollo, y que condiciona las herramientas que se pueden utilizar para la elaboración del proyecto. 
+\medskip
+
+Como se puede apreciar en la sección \ref{Estado_Arte} (\textit{Estado del arte}), muchas de las aplicaciones existentes 
+se desarrollan en entornos móviles, lo que supone que la aplicación pueda ser accesible desde cualquier sitio. Por otro lado, 
+se considera una opción plausible el poder extender la aplicación a otros entornos, tales como sistemas de sobremesa, o el entorno 
+web. Teniendo todo esto en consideración, se ha tomado la decisión de realizar una \textbf{aplicación móvil}, haciendo uso de 
+\textbf{herramientas de desarrollo multiplataforma}, de manera que en un futuro sea posible extender el proyecto a otras plataformas.
+
+\subsection{Arquitectura} \label{Arquitectura}
+Después de seleccionar la plataforma principal de desarrollo, el siguiente paso es definir la arquitectura de la aplicación, 
+que hace referencia a \textit{“la estructura general de este y a las formas en las que ésta da integridad conceptual a un 
+sistema.”} \autocite*{Shaw1995}. Como explica \textit{Cardacci} \autocite*{Addati2013}, con el tiempo se han ideado una amplia 
+variedad de formas arquitectónicas, con el objetivo de separar los diferentes desafíos que plantea el desarrollo de software 
+conceptualmente, y lograr cierto grado de independencia entre los elementos que componen el software, de manera que los cambios 
+realizados en uno no tenga efecto en el resto. \medskip
+
+De entre todas las posibilidades existentes, hemos optado por utilizar el patrón \textit{Modelo-Vista-Modelo de Vista} (\textbf{MVVM})
+\autocite*{MicrosoftMVVM}, que separa el software en tres componentes: \textit{modelo}, \textit{modelo de vista} y \textit{vista}.\medskip
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=10cm]{Images/mvvm.png}
+    \caption{Patrón MVVM: \textit{Modelo-Vista-Modelo de Vista} \autocite*{MicrosoftMVVM}}
+\end{figure}
+
+\subsection{Modelo de datos} \label{Modelo_Datos}
+Como definen Pérez y Gardey \autocite*{Perez2017}, \textit{“un modelo de datos es una estructura abstracta que 
+documenta y organiza la información [\dots] Se centra en el planeamiento del desarrollo de aplicaciones y la decisión de 
+cómo se almacenarán los datos y cómo se accederá a ellos. A menudo especificados en un lenguaje, los modelos de datos 
+determinan la estructura de la información, con el objetivo de mejorar la comunicación y la precisión en aplicaciones 
+que usan e intercambian datos [\dots] Estos modelos deben tener una única interpretación.”} \medskip
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=5cm]{Figures/modelo_datos.jpg}
+    \caption{Esquema de un modelo de datos \autocite*{Perez2017}}
+\end{figure}
