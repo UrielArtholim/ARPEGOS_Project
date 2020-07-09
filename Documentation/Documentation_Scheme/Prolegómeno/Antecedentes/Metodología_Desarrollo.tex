@@ -22,36 +22,37 @@ Actualmente existe un gran abanico de metodologías, las cuales se adaptan en ma
 que se pretende desarrollar. La gran mayoría de ellas están basadas en alguno de los siguientes modelos de desarrollo 
 de software:
 \begin{itemize}
-    \item \textbf{Desarrollo en cascada}: \textit{“Enfoque metodológico que ordena rigurosamente las etapas de proceso para el 
-    desarrollo de software, de forma que el inicio de cada etapa debe esperar a la finalización de la etapa anterior”} \autocite*{Pressman1988}
+
+    \item \textbf{Desarrollo en cascada}: Pressman \autocite*{Pressman1988} plantea el desarrollo en cascada como el 
+    método que ordena las etapas de desarrollo de forma directa, de manera que cada etapa se inicia tras la finalización 
+    de la anterior.
     
-    Como expresa Prieto \autocite*{PrietoAlvarez2013}: \textit{“De acuerdo a \textbf{Winston Royce}, que propuso dicho modelo, los beneficios de esta metodología surgen cuando no existen 
-    fechas inmediatas de implementación, de manera que se dispone del tiempo apropiado para desarrollar cada fase.
-    Cabe destacar que para que este modelo tenga un índice de riesgo bajo, los requerimientos deben ser claros y deben 
-    haberse establecido oficialmente en la primera parte del proyecto.”} \medskip
+    Como expresa Prieto \autocite*{PrietoAlvarez2013}, aplicar esta metodología muestra beneficios cuando cada fase de desarrollo 
+    dispone del tiempo necesario para llevarse a cabo. Prieto también comenta que para reducir los riesgos, es necesario tener 
+    establecidos los requisitos del proyecto claramente desde el principio del proyecto.
+
     \begin{figure}[H]
         \centering
         \includegraphics[width=5cm]{Figures/modelo_cascada.jpg}
-        \caption{Modelo de desarrollo en cascada}
+        \caption{Modelo de desarrollo en cascada. Extraido de \textit{(IONOS)}\autocite*{Cascada}}
     \end{figure}
 
-    \item \textbf{Desarrollo en espiral}: \textit{“Este modelo, presentado por \textbf{Barry Boehm}, permite analizar con mayor profundidad 
-    las etapas comprendidas en el desarrollo de un producto software. Las actividades de este modelo se conforman en una espiral, 
-    en la que cada bucle o iteración representa un conjunto de actividades. Las actividades no están fijadas a ninguna prioridad, 
-    sino que las siguientes se eligen en función del análisis de riesgo, comenzando por el bucle interior.} \autocite*{PrietoAlvarez2013} \medskip 
+    \item \textbf{Desarrollo en espiral}: Este modelo permite un análisis más profundo de las etapas del desarrollo del 
+    producto, de acuerdo con Prieto \autocite*{PrietoAlvarez2013}. Las actividades del modelo están dispuestas en espiral, en la que cada iteración o vuelta representa 
+    un conjunto de actividades acorde a una etapa del desarrollo. El orden de las actividades queda determinado por el 
+    análisis del riesgo, comenzando por el bucle interior, \medskip 
 
 
     \begin{figure}[H]
         \centering
         \includegraphics[width=5cm]{Figures/SVG/espiral.png}
-        \caption{Modelo de desarrollo en espiral}
+        \caption{Modelo de desarrollo en espiral. Extraído de \textit{freepng.es} \autocite*{Espiral}}
     \end{figure}
 
-    \item \textbf{Desarrollo con prototipos}: \textit{El desarrollo de software basado en prototipos promueve la comunicación entre el cliente
-    y el equipo de programadoroes, a la vez que logra una rápida integración de cambios y acorta el tiempo de desarrollo del proyecto.}
-    \autocite*{RoqueHernandez2015} El paradigma de desarrollo basado en prototipos consiste en un proceso iterativo que tiene cinco 
-    fases:
-    \newpage
+    \item \textbf{Desarrollo con prototipos}: Desde el punto de vista de Roque y col. \autocite*{RoqueHernandez2015}, el desarrollo con 
+    prototipos mejora la comunicación entre el equipo de desarrollo y el cliente. Esto permite que se puedan introducir cambios con 
+    facilidad y disminuya el tiempo de desarrollo. Consiste en un proceso iterativo que tiene cinco fases:
+
     % RAMÓN VENTURA ROQUE HERNÁNDEZ, JUAN MANUEL SALINAS ESCANDÓN, CALEB ALFREDO ÁLAMOS ACOSTA, ROBERTO ARREOLA RIVERA
     %Comparación empírica entre el proceso unificado y el desarrollo de software por prototipos. 
     \begin{enumerate}
@@ -67,28 +68,27 @@ de software:
     \begin{figure}[H]
         \centering
         \includegraphics[width=5cm]{Figures/modelo_prototipos.jpeg}
-        \caption{Modelo de desarrollo con prototipos \autocite*{ModeloPrototipos}}
+        \caption{Modelo de desarrollo con prototipos. Extraído de \textit{sites.google.com} \autocite*{Prototipos}}
     \end{figure}
 
-    \item \textbf{Desarrollo incremental}: \textit{Se basa en el desarrollo a partir del incremento de la funcionabilidad 
-    del programa, se puede considerar un precursor de las modernas metodologías iterativas. El primer incremento es 
-    a menudo un desarrollo esencial, apenas con los requisitos básicos, cada incremento representa una entrega
-    escalable. Los primeros incrementos son versiones incompletas del producto final, pero proporcionan al 
-    usuario la funcionalidad.} \autocite*{Zumba2018} \medskip
+    \item \textbf{Desarrollo incremental}: Zumba \autocite*{Zumba2018} postula que el desarrollo incremental 
+    está basado en la introducción por etapas (o iteraciones) de funcionalidades de la aplicación. La primera 
+    iteración suele ser básica, con los elementos mínimos requeridos, y cada iteración posterior es una versión 
+    entregable del proyecto, que introduce alguna funcionalidad nueva. \medskip
 
     \begin{figure}[H]
         \centering
         \includegraphics[width=8cm]{Figures/modelo_incremental.png}
-        \caption{Modelo de desarrollo incremental \autocite*{Alarcon2016}}
+        \caption{Modelo de desarrollo incremental. Extraído de \textit{researchgate.net} \autocite*{Alarcon2016}}
     \end{figure}
 \end{itemize}
 
 \subsection{Metodologías Ágiles}
-\textit{En febrero de 2001 nace el término \textbf{ágil} aplicado al desarrollo de software, tras una reunión celebrada en 
+\textit{“En febrero de 2001 nace el término \textbf{ágil} aplicado al desarrollo de software, tras una reunión celebrada en 
 \textnormal{Utah (EEUU)}. El objetivo de la misma fue esbozar valores y principios que deberían permitir desarrollar 
 software de manera rápida, dando respuesta a los cambios surgidos durante el desarrollo del proyecto. Se pretende 
 con esto ofrecer alternativas a los procesos de desarrollo software tradicionales, rígidos y dirigidos por la documentación 
-que se generaba en cada una de las etapas del proceso.} \autocite*{AmayaBalaguera2015} \medskip
+que se generaba en cada una de las etapas del proceso.”} \autocite*{AmayaBalaguera2015} \medskip
 
 El punto de partida para ello fue el \textbf{Manifiesto Ágil} \autocite*{Beck2001}: 
 documento que resume la filosofía ágil, en el cual se valoran los siguientes elementos:
@@ -121,7 +121,7 @@ es posible que sea necesario realizar cambios en el planteamiento del proyecto d
 
 \subsection{SCRUM}
 \subsubsection{Introducción}
-\textit{“\textbf{SCRUM} es una de las metodologías de desarrollo ágil más reconocidas a nivel mundial, su concepción resulta de unos 
+Empleando las palabras de Rodríguez, \textit{“\textbf{SCRUM} es una de las metodologías de desarrollo ágil más reconocidas a nivel mundial, su concepción resulta de unos 
 análisis realizados por \textbf{Ikujiro} \textbf{Nonaka} e \textbf{Hirotaka} \textbf{Takeuchi} en los años 80, resaltando el trabajo en equipo para el 
 desarrollo de productos y la autonomía que estos deben tener (Takeuchi \& Nonaka, 1986). Su diseño se debe a que 
 en los años 90, \textbf{Jeff} \textbf{Sutherland} y \textbf{Ken} \textbf{Schwaber} formalizaron un marco de trabajo y unas reglas aplicadas 
@@ -130,7 +130,7 @@ particularmente al desarrollo de software de productos complejos.”} \autocite*
 \begin{figure}[H]
     \centering
     \includegraphics[width=5cm]{Images/Logo_Scrum.jpeg}
-    \caption{Logo de \textit{Scrum} \autocite*{ScrumLogo}}
+    \caption{Logo de \textit{Scrum}. Extraído de \textit{worldvectorlogo.com} \autocite*{ScrumLogo}}
 \end{figure}
 
 \subsubsection{Características}
@@ -169,7 +169,7 @@ Para entender el ciclo de desarrollo de \textit{Scrum} es necesario conocer las 
 \begin{figure}[H]
     \centering
     \includegraphics[width=14cm]{Images/Ciclo_Scrum.jpg}
-    \caption{Ciclo de desarrollo de \textit{Scrum} \autocite*{TrigasGallego2012}}
+    \caption{Ciclo de desarrollo de \textit{Scrum}. Extraído de \textit{Metodología Scrum} \autocite*{TrigasGallego2012}}
 \end{figure}
 
 \subsubsection{Roles}
@@ -196,5 +196,5 @@ Los roles presentes en \textit{Scrum} son los siguientes:
 \begin{figure}[H]
     \centering
     \includegraphics[width=10cm]{Images/roles.png}
-    \caption{Roles en \textit{Scrum} \autocite*{ScrumRoles}}
+    \caption{Roles en \textit{Scrum}. Extraido de \textit{herizont.com} \autocite*{ScrumRoles}}
 \end{figure}

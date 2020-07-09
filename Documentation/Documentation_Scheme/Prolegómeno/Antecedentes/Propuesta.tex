@@ -20,12 +20,10 @@ se considera una opción plausible el poder extender la aplicación a otros ento
 web. Teniendo todo esto en consideración, se ha tomado la decisión de realizar una \textbf{aplicación móvil}, haciendo uso de 
 \textbf{herramientas de desarrollo multiplataforma}, de manera que en un futuro sea posible extender el proyecto a otras plataformas.
 
-\newpage
-
 \subsection{Arquitectura} \label{Arquitectura}
 Después de seleccionar la plataforma principal de desarrollo, el siguiente paso es definir la arquitectura de la aplicación, 
 que hace referencia a \textit{“la estructura general de este y a las formas en las que ésta da integridad conceptual a un 
-sistema.”} \autocite*{Shaw1995}. Como explica \textit{Cardacci} \autocite*{Addati2013}, con el tiempo se han ideado una amplia 
+sistema.”} \autocite*{Shaw1995}. Como explica Cardacci \autocite*{Addati2013}, con el tiempo se han ideado una amplia 
 variedad de formas arquitectónicas, con el objetivo de separar los diferentes desafíos que plantea el desarrollo de software 
 conceptualmente, y lograr cierto grado de independencia entre los elementos que componen el software, de manera que los cambios 
 realizados en uno no tenga efecto en el resto. \medskip
@@ -40,11 +38,9 @@ De entre todas las posibilidades existentes, hemos optado por utilizar el patró
 \end{figure}
 
 \subsection{Modelo de datos} \label{Modelo_Datos}
-Como definen Pérez y Gardey \autocite*{Perez2017}, \textit{“un modelo de datos es una estructura abstracta que 
-documenta y organiza la información [\dots] Se centra en el planeamiento del desarrollo de aplicaciones y la decisión de 
-cómo se almacenarán los datos y cómo se accederá a ellos. A menudo especificados en un lenguaje, los modelos de datos 
-determinan la estructura de la información, con el objetivo de mejorar la comunicación y la precisión en aplicaciones 
-que usan e intercambian datos [\dots] Estos modelos deben tener una única interpretación.”} \medskip
+Como definen Pérez y Gardey \autocite*{Perez2017}, un modelo de datos es un esqueleto estructural que permite organizar 
+y documentar la información. Esta estructura busca definir el acceso y el almacenamiento de los datos de forma 
+unívoca, de manera que permitan la comunicación entre las aplicaciones que hagan uso de los datos del modelo.  \medskip
 
 \begin{figure}[H]
     \centering
@@ -53,9 +49,7 @@ que usan e intercambian datos [\dots] Estos modelos deben tener una única inter
 \end{figure}
 
 Para este proyecto hace falta un modelo de datos que permita representar diversos mundos, y establecer relación entre sus elementos.
-Por ello, se ha tomado la decisión de plantear un modelo \textbf{ontológico}. \textit{“Una ontología es una base de datos que 
-describe los conceptos del mundo en un dominio específico, algunas de sus propiedades y cómo estos conceptos se relacionan entre 
-sí”}. \autocite*{Munoz2009}
+Por ello, se ha tomado la decisión de plantear un modelo \textbf{ontológico}. Citando a Muñoz y Aguilar \autocite*{Munoz2009}, 
+\textit{“una ontología es una base de datos que describe los conceptos del mundo en un dominio específico, algunas de sus 
+propiedades y cómo estos conceptos se relacionan entre sí”}. \autocite*{Munoz2009}
  
-
-
