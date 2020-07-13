@@ -6,31 +6,159 @@
 
 \section{Costes}
 \subsection{Costes humanos}
-
-Para calcular los costes humanos, debemos tener alguna referencia salarial de un desarrollador, 
-utilizándolo como base para realizar los cálculos en tiempo de desarrollo. Hemos considerado como 
-una referencia aceptable las \textit{tablas salariales para personal investigador encargado del desarrollo 
-de proyectos de investigación científica o técnica a través de un contrato por obra y servicio}.
-Estas tablas indican que el \textit{coste anual total} de un ingeniero son 27.664,14 \euro, que al 
-dividirse en 14 pagas (12 meses y 2 pagas extra), resulta que el coste mensual sería de 2.305,35 \euro. \medskip
-
-La duración del proyecto ha sido de ``introducir número aquí`` días, resultando en 12 meses aproximadamente.
-A continuación se muestra una tabla comparativa entre los costes estimados y los costes reales:
+Para calcular los costes humanos del proyecto, es necesario conocer el sueldo del equipo de desarrollo.
+Para tomar una referencia lo más realista posible, se ha desglosado el trabajo realizado en roles según 
+las funciones que se han desempeñado y el tiempo que se ha dedicado a esas funciones. Además, se ha buscado 
+el sueldo medio anual de cada rol y se han calculado el coste medio mensual con 14 pagas (12 pagas mensuales 
+y 2 pagas extra), y el coste medio diario. \medskip
 
 \begin{table}[H]
     \centering
-    \begin{tabular}{|c|c|c|}
-        \hline 
-        & Tiempo (días) & Coste \\
-        \hline \hline
-        Estimado & & \\ \hline 
-        Real & & \\ \hline 
-    \end{tabular}
-    \caption{Comparativa entre coste humano estimado y coste humano real}
+    \STautoround{0}
+    \STsetdecimalsep{,}
+    \begin{spreadtab}{{tabular}{|c|c|c|c|}}
+        \hline
+        \multirow{2}{*}{@\textbf{Rol}} & @\textbf{Salario medio} & @\textbf{Salario medio} & @\textbf{Salario medio}\\
+        & @\textbf{anual} & @\textbf{mensual} & @\textbf{diario} \\\hline \hline 
+        @Business Analyst & \EUR{:={32417}} & \EUR{:={b3/14}} & \EUR{:={c3/30}} \\\hline %\EUR{:={}}\\\hline
+        @Solution Architect & \EUR{:={31700}} & \EUR{:={b4/14}} & \EUR{:={c4/30}} \\\hline
+        @UX Designer & \EUR{:={26600}} & \EUR{:={b5/14}} & \EUR{:={c5/30}} \\\hline
+        @Developer & \EUR{:={27138}} & \EUR{:={b6/14}} & \EUR{:={c6/30}} \\\hline
+        @Tester & \EUR{:={26324}} & \EUR{:={b7/14}} & \EUR{:={c7/30}} \\\hline
+        @Documentalist & \EUR{:={31165}} & \EUR{:={b8/14}} & \EUR{:={c8/30}} \\\hline
+    \end{spreadtab}\par\smallskip
+    \caption{Tabla de sueldos basados en roles}
+    \label{Tabla_sueldos}
+\end{table}
+
+Una vez que ya disponemos del salario diario según los roles, procedemos a calcular los costes humanos en función 
+del tiempo empleado en las funciones de cada rol. \medskip
+
+\begin{table}[H]
+    \centering
+    \STautoround{0}
+    \STsetdecimalsep{,}
+    \begin{spreadtab}{{tabular}{|c|c|c|c|}}
+        \hline
+        @\textbf{Rol} & @\textbf{Salario diario} & @\textbf{Tiempo (días)} & @\textbf{Coste/día}\\\hline \hline 
+        @Business Analyst & {:={3}} & \EUR{:={77}} & \EUR{:={b2*c2}} \\\hline 
+        @Solution Architect & {:={158}} & \EUR{:={75}} & \EUR{:={b3*c3}} \\\hline
+        @UX Designer & {:={5}} & \EUR{:={63}} & \EUR{:={b4*c4}} \\\hline
+        @Developer & {:={34}} & \EUR{:={65}} & \EUR{:={b5*c5}} \\\hline
+        @Tester & {:={4}} & \EUR{:={63}} & \EUR{:={b6*c6}} \\\hline
+        @Documentalist & {:={9}} & \EUR{:={75}} & \EUR{:={b7*c7}} \\\hline \hline
+        @\textbf{Total} & \textbf{{:={sum(b2:b7)}}} &  & \textbf{\EUR{:={sum(d2:d7)}}} \\ \hline
+    \end{spreadtab}\par\smallskip
+    \caption{Costes humanos del proyecto}
+    \label{Costes humanos}
+\end{table}
+
+\subsection{Costes materiales}
+Para el cálculo de los costes materiales se han tenido en cuenta los siguientes elementos:\medskip
+
+\begin{itemize}
+    \item \textit{Hardware}: Elementos físicos que se han utilizado para el desarrollo del proyecto
+    \item \textit{Software}: Programas de los que se han hecho uso para la elaboración de la aplicación
+    \item \textit{Varios}: Costes varios de elementos necesarios para poder realizar el trabajo 
+    correctamente, tales como el gasto de luz o el coste de internet.
+\end{itemize}
+
+\subsubsection{Hardware}
+
+Para calcular el coste del hardware, hemos contemplado el valor que queda por amortizar 
+del ordenador que se ha utilizado para trabajar. \medskip
+
+\begin{table}[H]
+    \centering
+    \STautoround{0}
+    \STsetdecimalsep{,}
+    \begin{spreadtab}{{tabular}{|c|c|c|c|c|c|}}
+        \hline
+        @\textbf{Elemento} & @\textbf{Valor} & @\textbf{Vida útil} & @\textbf{Tiempo de vida} & @\textbf{Valor/año} \\\hline \hline 
+        @Ordenador & \EUR{:={1726}} & {:={5}} & {:={4}} & \EUR{:={(b2/c2)*(c2-d2)}} \\\hline \hline
+        @\textbf{Total} & & & & \textbf{\EUR{:={e2}}} \\ \hline
+    \end{spreadtab}\par\smallskip
+    \caption{Costes de hardware}
+    \label{Coste_hardware}
+\end{table}
+
+\subsubsection{Software}
+Como todo el software que se ha utilizado es de uso gratuito, el coste en este apartado es de \EUR{0}.\medskip
+
+\begin{table}[H]
+    \centering
+    \STautoround{0}
+    \STsetdecimalsep{,}
+    \begin{spreadtab}{{tabular}{|c|c|}}
+        \hline
+        @\textbf{Software} & @\textbf{Coste/día}\\\hline \hline 
+        @Visual Studio 2019 Community & \EUR{:={0}}  \\\hline 
+        @Xamarin Forms & \EUR{:={0}}  \\\hline
+        @Protégé & \EUR{:={0}}  \\\hline
+        @Visual Studio Code & \EUR{:={0}}  \\\hline
+        @\LaTeX Workshop & \EUR{:={0}}  \\\hline
+        @MiKTeX & \EUR{:={0}} \\\hline \hline
+        @\textbf{Total} & \textbf{\EUR{:={sum(b2:b7)}}} \\ \hline
+    \end{spreadtab}\par\smallskip
+    \caption{Costes de software}
+    \label{Coste_software}
+\end{table}
+
+\subsubsection{Varios}
+En este apartado se han considerado los gastos de electricidad y conexión a Internet, que han 
+sido indispensables para llevar a cabo el trabajo.\medskip
+
+\begin{table}[H]
+    \centering
+    \STautoround{0}
+    \STsetdecimalsep{,}
+    \begin{spreadtab}{{tabular}{|c|c|c|c|}}
+        \hline
+        @\textbf{Software} & @\textbf{Coste/mes} & @\textbf{Coste/día} & @\textbf{Coste total} \\\hline \hline 
+        @Luz & \EUR{:={57}} & \EUR{:={b2/30}} & \EUR{:={c2*215}} \\\hline 
+        @Internet & \EUR{:={50}} & \EUR{:={b3/30}} & \EUR{:={c3*215}} \\\hline \hline
+        @\textbf{Total} & & & \textbf{\EUR{:={sum(d2:d3)}}} \\ \hline
+    \end{spreadtab}\par\smallskip
+    \caption{Costes varios}
+    \label{Coste_varios}
+\end{table}
+
+Tras calcular los diferentes costes materiales por separado, solo falta sumar sus valores para obtener el coste material total.
+\medskip
+
+\begin{table}[H]
+    \centering
+    \STautoround{0}
+    \STsetdecimalsep{,}
+    \begin{spreadtab}{{tabular}{|c|c|c|c|}}
+        \hline
+        @\textbf{Elementos} & @\textbf{Coste}  \\\hline \hline 
+        @Hardware & \EUR{:={345}} \\\hline 
+        @Software & \EUR{:={0}} \\\hline 
+        @Varios & \EUR{:={860}}\\\hline \hline
+        @\textbf{Total} & \textbf{\EUR{:={sum(b2:b4)}}} \\ \hline
+    \end{spreadtab}\par\smallskip
+    \caption{Costes varios}
+    \label{Coste_material}
+\end{table}
+
+\subsection{Costes totales}
+Calculados los costes humanos y materiales, podemos obtener el coste total del proyecto realizando la suma 
+de estos. \medskip
+
+\begin{table}[H]
+    \centering
+    \STautoround{0}
+    \STsetdecimalsep{,}
+    \begin{spreadtab}{{tabular}{|c|c|c|c|}}
+        \hline
+        @\textbf{Elementos} & @\textbf{Coste}  \\\hline \hline 
+        @Costes humanos & \EUR{:={15533}} \\\hline 
+        @Costes materiales & \EUR{:={1205}} \\\hline 
+        @\textbf{Total} & \textbf{\EUR{:={sum(b2:b3)}}} \\ \hline
+    \end{spreadtab}\par\smallskip
+    \caption{Coste total del proyecto}
+    \label{Coste_total}
 \end{table}
 
 
-\subsection{Costes materiales}
-Como los dispositivos empleados son propiedad del equipo de desarrollo y el software utilizado 
-en el proceso de elaboración del proyecto es gratuito, se asume un coste de 0 \euro{} en cuanto a costes materiales
-se refiere.

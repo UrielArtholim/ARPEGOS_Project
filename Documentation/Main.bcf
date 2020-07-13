@@ -2194,6 +2194,12 @@
     <bcf:citekey order="73">ScrumLogo</bcf:citekey>
     <bcf:citekey order="74">TrigasGallego2012</bcf:citekey>
     <bcf:citekey order="75">ScrumRoles</bcf:citekey>
+    <bcf:citekey order="76">businessAnalyst</bcf:citekey>
+    <bcf:citekey order="77">solutionArchitect</bcf:citekey>
+    <bcf:citekey order="78">UXDesigner</bcf:citekey>
+    <bcf:citekey order="79">Developer</bcf:citekey>
+    <bcf:citekey order="80">Tester</bcf:citekey>
+    <bcf:citekey order="81">Documentalist</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">
