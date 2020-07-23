@@ -1,0 +1,143 @@
+% ARPEGOS:  Automatized Roleplaying-game Profile Extensible Generator Ontology based System %
+% Author : Alejandro Muñoz Del Álamo %
+% Copyright 2019 %
+
+% Section 1.1: Motivación %
+
+\vspace*{\fill}
+\epigraph{\textit{“En Arrswyd, la oscuridad ha consumido las estrellas en el cielo, 
+dejando nada más que una sola ciudad en medio del olvido. Arrswyd es una nación amurallada 
+donde permanece la última población del mundo. El día ha sido olvidado hace mucho tiempo, 
+los miedos se hacen realidad, y entre las torcidas espirales, merodeando entre las sombras, 
+hay horrores que se alimentan del miedo. El terror es todo lo que Arrswyd sabe ya que su gente 
+es perseguida por criaturas y oprimida por el Señor inmortal, Yomon Ecuro. Algunos se animan a 
+luchar contra el abismo y las maquinaciones del Ministerio y del Instituto, mientras que otros 
+simplemente quieren vivir los últimos días del mundo hasta que se apague la última luz.”}}{\textit{Arrswyd, Regnum Ex Nihilo}}
+\vspace*{\fill}
+
+\newpage
+
+\section{Motivación} \label{Motivacion}
+Los juegos de rol, a los que llamaremos \textbf{\textit{RPG}} (\textit{\textbf{R}ole-\textbf{P}laying \textbf{G}ame}) a 
+partir de ahora, son juegos con una meta particular, que es \textit{“El objetivo de ambos tipos de juegos, computerizados y 
+de otro tipo, es experimentar una serie de aventuras en un mundo imaginario, a través de un personaje avatar o un pequeño grupo de 
+personajes cuyas habilidades y poderes crecen conforme el tiempo pasa.”} \autocite*{Adams2010}. \medskip
+
+Uno de los aspectos más importantes de los \textit{RPG} son los personajes, ya que estos son la manifestación de los jugadores 
+dentro del universo del juego, que a partir de ahora llamaremos \textbf{personajes jugadores} o \textbf{\textit{PJs}}. 
+Ramos y Sueiro~\autocite*{Ramos-Villagrasa2010} plantean que, a diferencia del teatro, donde la elección de un personaje puede depender de las características 
+físicas del intérprete, en los juegos de rol cualquier persona puede interpretar cualquier personaje, siempre que esté dentro de las 
+posibilidades que ofrezca el juego en que se esté jugando. Los personajes deben definirse dentro de los limites establecidos por 
+las reglas del juego, y en una historia como si se tratara de su biografía, explicando cómo ha sido la vida del personaje en 
+la ambientación hasta el momento de comenzar la historia. A este proceso de definir un personaje 
+para un jugador se conoce como \textbf{creación de personaje}. \medskip
+
+Hay un amplio rango de posibilidades cuando tratamos la creación de \textit{PJs} en diferentes mundos. En algunos juegos, el jugador 
+sólo puede seleccionar algunas características predefinidas para el personaje, mientras que en otros juegos el usuario puede cambiar cada
+elemento del avatar \autocite*{Isaksson2012}. Esto hace que la creación de personajes sea un proceso arduo y complejo, pues es necesario 
+tener amplios conocimientos del juego para conocer todas las opciones de personalización disponibles para el jugador, y sus correspondientes 
+características. \medskip
+
+Egri \autocite*{Egri1960} afirma en su libro \textit{The Art of Dramatic Writing: Its Basis in the Creative Interpretation 
+of Human Motives} que mientras todo objeto tiene tres dimensiones: profundidad, altura y anchura, los seres humanos tienen 
+tres dimensiones adicionales: \textbf{fisiología}, \textbf{sociología} y \textbf{psicología}, y que sin el conocimiento de estas dimensiones, no se puede
+valorar a un ser humano. La primera dimensión, la \textbf{fisiología}, da color al punto de vista humano y le influye infinitamente, 
+facilitando a una persona ser tolerante, desafiante, humilde o arrogante. La \textbf{sociología}, hace referencia a que no es posible 
+realizar un análisis exacto de las diferencias entre una persona y el vecino de la puerta de al lado si no se tiene suficiente 
+información de las circunstancias de ambas personas. La tercera dimensión, la \textbf{psicología}, es el producto de las otras dos, cuya 
+influencia da vida a la ambición, la frustración, el temperamento, las actitudes y los complejos.\medskip
+
+En base a esto, Lankoski, Heliö y Ekman \autocite*{Lankoski2003} presentan una tabla, que se muestra a continuación, definiendo los aspectos de esta 
+estructura definida por Egri, modificando y añadiendo algunos aspectos de la misma.\medskip
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|c|c|c|}
+        \hline
+        \thead{\textit{\textbf{Fisiología}}} & \thead{\textit{\textbf{Sociología}}} & \thead{\textit{\textbf{Psicología}}} \\
+        \hline
+        \hline 
+        \makecell{Sexo} & \makecell{Clase} & \makecell{Estándares morales y \\ vida sexual} \\
+        \makecell{Edad} & \makecell{Ocupación} & \makecell{Metas y ambiciones} \\
+        \makecell{Altura y anchura} & \makecell{Educación} & \makecell{Frustraciones y decepciones} \\
+        \makecell{Color de pelo, ojos y piel} & \makecell{Vida familiar} & \makecell{Temperamento} \\
+        \makecell{Postura} & \makecell{Religión} & \makecell{Actitud frente a la vida} \\
+        \makecell{Apariencia y \\ rasgos distintivos} & \makecell{Raza y nacionalidad} & \makecell{Complejos y obsesiones} \\
+        \makecell{Defectos} & \makecell{Posición social} & \makecell{Imaginación, juicios, \\ sabiduría, gustos y \\ estabilidad} \\
+        \makecell{Rasgos hereditarios} & \makecell{Afiliaciones políticas} & \makecell{Extroversión, \\ introversión  y ambiversión} \\
+        \makecell{Físico} & \makecell{Entretenimientos y \\ aficiones} & \makecell{Inteligencia} \\
+        \hline
+    \end{tabular}
+    \caption{\textit{Lankoski, Heliö y Ekman}: Estructura ósea de una persona tridimensional. \autocite*{Lankoski2003}}
+\end{table}
+% Hablar del proceso de creación %
+
+En lo referido a juegos de rol, \textit{Tychsen}, \textit{Hitchens} y \textit{Brolund} sostienen que 
+\textit{“el diseño de personajes está dividido en cuatro componentes: \textbf{personalidad}, \textbf{integración}, \textbf{apariencia}
+y \textbf{reglas}, que tienen su propio conjunto de restricciones para asegurar consitencia metodológica”.} \autocite*{Tychsen2008}
+
+\begin{itemize}
+    \item Son las características basadas en las reglas del juego, tales como 
+    \textit{atributos}, \textit{aptitudes}, \textit{habilidades} y \textit{clase}. Los \textit{RPG} proveen estas características 
+    en plantillas conocidas como \textit{hojas de personaje}, que detallan todos los componentes basados en reglas del personaje, 
+    referentes al juego al que pertenezca el \textit{PJ} en cuestión.
+    
+    \item \textbf{\textit{Integración}}: Los componentes de integración son aquellos que explican las 
+    circunstancias del personaje. Algunos de estos componentes son:
+    
+    \begin{itemize}
+        \item \textit{Ubicación}: ¿Dónde está el personaje y por qué?
+        
+        \item \textit{Trasfondo}: ¿Cual es la historia detrás del personaje y qué eventos lo llevan al 
+        punto de inicio del juego?
+
+        \item \textit{Contactos}: ¿Que contactos y relaciones tiene el personaje con otros personajes no controlados por 
+        jugadores (conocidos como \textit{personajes no jugadores} o \textbf{\textit{PNJs}})?
+
+        \item \textit{Conexiones}: ¿Cuál es la relación entre el personaje y los demás \textit{PJs}?
+    \end{itemize}
+
+    \item \textbf{\textit{Apariencia}}: El personaje requiere una definición de su apariencia, para lo que son necesarios 
+    algunos rasgos de importancia:
+
+    \begin{itemize}    
+        \item \textit{Representación}: ¿Cómo luce el personaje?
+    
+        \item \textit{Comportamiento físico}: ¿Cómo se comporta el personaje? ¿Cómo puede su interacción con el mundo 
+        modificar su personalidad o comportamiento?
+        
+        \item \textit{Interación}:¿Cómo interactua el personaje con el entorno y como interacciona con otros personajes?
+    \end{itemize}   
+
+    \item \textbf{\textit{Personalidad}}: Este componente incluye descripciones de la psique del personaje (emociones, 
+    comportamiento) y metas, con algunos rasgos de personalidad muy definidos enfáticamente (normalmente más sutiles y 
+    que dan lugar a la interpretación personal del jugador).
+\end{itemize}
+
+De todos los apartados previos, hay uno que destaca por estar plenamente orientado a la información del juego, que es el apartado 
+de \textit{Reglas}, ya que es el único que tiene información objetiva del personaje, y que sigue una estructura, dada por el 
+\textit{RPG} al que vaya a pertenecer el personaje, que posibilita establecer un conjunto de elementos estructurado, que unido a la
+normativa del juego, permita establecer las características técnicas de cualquier personaje. \medskip
+
+En relación con lo comentado previamente, y de acuerdo con el autor del blog \textit{Ars Rolica}~\autocite*{ArsRolica}, 
+una de las novedades que se están popularizando más es la de los \textbf{generadores de personajes}, que son herramientas que permiten 
+crear personajes de juegos sin necesidad de invertir grandes cantidades de tiempo, evitando posibles errores y deslices. 
+Estos generadores pueden ser bastante útiles tanto para jugadores novatos que no conocen el sistema del juego, como para 
+jugadores más experimentados que no puedan utilizar tiempo para documentarse completamente antes de crear su álter ego. \medskip
+
+El objetivo de este proyecto consiste en diseñar e implementar un generador de personajes de juegos de rol de mesa, para lo que se 
+perseguirán los siguientes subobjetivos:
+\begin{itemize}
+    \item Realizar un estudio del arte de los \textit{generadores de personaje} existentes, que permita conocer el estado actual de las herramientas
+    que se encuentran en uso en la actualidad.
+
+    \item Desarrollar un sistema que permita trabajar con diferentes \textit{RPGs}, sin tener que salir de la aplicación, siempre y 
+    cuando se disponga de los ficheros que contengan la información de dichos juegos.
+
+    \item Diseñar una estructura genérica para el sistema de información, de forma que permita a la aplicación poder adaptarse de la forma más completa posible a 
+    cada juego, permitiendo profundizar de la misma manera en juegos de alta complejidad que en juegos sencillos.
+
+    \item Crear una interfaz de usuario intuitiva, que facilite al usuario la interacción con la aplicación y ésta resulte cómoda y 
+    agradable de utilizar.
+
+\end{itemize}

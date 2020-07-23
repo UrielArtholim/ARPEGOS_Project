@@ -7,12 +7,12 @@
 % Main File %
 
 % Define document type 
-\documentclass[a4paper, 11pt]{book}
+\documentclass[a4paper, 11pt, dvipsnames]{book}
 
 % Declaration of packages for this document
 \usepackage[utf8]{inputenc}
 \usepackage[spanish]{babel}
-\usepackage{amsmath}
+\usepackage{xcolor}
 \usepackage{float}
 \usepackage[hidelinks]{hyperref}
 \usepackage{bookmark}
@@ -33,13 +33,13 @@
 \usepackage{lscape}
 \usepackage{makecell}
 \usepackage{enumitem}
-\usepackage[dvipsnames]{xcolor}
-%Options: Sonny, Lenny, Glenn, Conny, Rejne, Bjarne, Bjornstrup
+\usepackage{svg}
+\usepackage{amsmath}
 \usepackage[Sonny]{fncychap}
+%Options: Sonny, Lenny, Glenn, Conny, Rejne, Bjarne, Bjornstrup
 \usepackage{tocbibind}
 \usepackage[sorting=none]{biblatex}
 \addbibresource{ARPEGOS.bib}
- 
 % Declaration of quoting commands
 %\SetCiteCommand{\parencite}
 
@@ -181,11 +181,11 @@
     \pagenumbering{Roman}
     \pagestyle{fancy}
     % Import Signature
-    \input{Documentation_Scheme/Portada/Signature.tex}
+    \input{Documentation-Scheme/Portada/Signature.tex}
     \blankpage{}
     
     % Import Preface
-    \input{Documentation_Scheme/Portada/Preface.tex}
+    \input{Documentation-Scheme/Portada/Preface.tex}
     \blankpage{}
     
     \pagestyle{fancy}
@@ -199,7 +199,7 @@
     \blankpage{}
     
     % Import List of Tables
-    \listoftables
+    \listoftables 
     \blankpage{}
     
     %\mainmatter{}
@@ -207,15 +207,15 @@
     \pagestyle{fancy}
 
     % Import Part I
-    \input{Documentation_Scheme/Prolegómeno.tex}
+    \input{Documentation-Scheme/Prolegómeno.tex}
     \blankpage{}
 
     % Import Part II
-    \input{Documentation_Scheme/Desarrollo.tex}
+    \input{Documentation-Scheme/Desarrollo.tex}
     \blankpage{}
 
     % Import Part III
-    \input{Documentation_Scheme/Epílogo.tex}
+    \input{Documentation-Scheme/Epílogo.tex}
     \blankpage{}
 
 \end{document}

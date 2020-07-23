@@ -1,0 +1,93 @@
+% ARPEGOS:  Automatized Roleplaying-game Profile Extensible Generator Ontology based System %
+% Author : Alejandro Muñoz Del Álamo %
+% Copyright 2019 %
+
+% Section 3.3: Catálogo de Requisitos %
+\section{Catálogo de requisitos} \label{Requisitos}
+Como dice Távora \autocite*{Tavora2014}, un requisito es una cláusula 
+que debe cumplir una aplicación de manera que se logre un objetivo 
+o se solvente algún problema. \medskip
+
+En la presente sección se procederá a realizar un análisis de 
+requisitos del sistema, que recoge y describe el conjunto 
+de requisitos específicos del sistema que se va a desarrollar.
+Posteriormente, se describirán los casos de uso en el próximo capítulo. \medskip
+
+Para catalogar los requisitos del sistema, se hará una diferenciación entre 
+\textit{requisitos funcionales}, que son aquellos que detallan 
+la funcionalidad del sistema, y \textit{requisitos no funcionales},
+que refieren a otros aspectos del software que deben ser satisfechos.
+
+\subsection{Requisitos funcionales} \label{Requisitos_funcionales}
+Citando a Wiegers y Beatty \autocite*{Wiegers2013}, \textit{“los requisitos funcionales 
+detallan los comportamientos observables que el sistema mostrará bajo ciertas condiciones 
+y las acciones que el sistema dejará tomar a los usuarios.”} A continuación se muestran 
+los requisitos funcionales de este proyecto \medskip
+
+\begin{table}[htb]
+    \begin{tabular}{|c|l|}
+    \hline
+    \thead{\textit{\textbf{Código}}} & \thead{\textit{\textbf{Requisito}}} \\ \hline \hline
+    \makecell{\textbf{RF-01}} & \makecell{El sistema debe permitir al usuario seleccionar un juego del \\ 
+    conjunto de juegos incluidos.} \\ \hline
+    \makecell{\textbf{RF-02}} & \makecell{El sistema debe permitir al usuario crear paso a paso un \\
+    personaje para el juego seleccionado.} \\ \hline
+    \makecell{\textbf{RF-03}} & \makecell{El sistema debe adaptar el proceso de creación de personajes \\
+    al juego seleccionado, sin importar su complejidad.} \\ \hline
+    \makecell{\textbf{RF-04}} & \makecell{El sistema debe permitir la visualización de la información de \\
+    un personaje creado por el usuario.} \\ \hline
+    \makecell{\textbf{RF-05}} & \makecell{El sistema debe permitir la modificación parcial o total de la \\
+    información de un personaje creado por el usuario.} \\ \hline
+    \makecell{\textbf{RF-06}} & \makecell{El sistema debe permitir la eliminación de un personaje \\
+    creado por el usuario} \\ \hline
+    \makecell{\textbf{RF-07}} & \makecell{El sistema debe permitir realizar cálculos con la información de \\
+    un personaje creado por el usuario.} \\ \hline
+    \end{tabular}
+    \caption{Tabla de requisitos funcionales}
+    \label{Req_funcionales}
+\end{table}
+
+\subsection{Requisitos no funcionales}
+Los usuarios pueden tener ideas sobre cómo funcionará la aplicación, 
+tales como la fiabilidad, la rápidez de ejecución, la facilidad de uso, etc.
+Estos aspectos quedan definidos por los \textit{requisitos no funcionales}, como expresan 
+Stellman y Greene \autocite*{Stellman2005}.
+\medskip
+
+Para la declaración de requisitos no funcionales, se establecerán como base los 
+requisitos indicados en las normas \textit{IEEE Std. 830} e \textit{ISO/IEC 25010 (SQuaRE)}:
+
+\begin{itemize}   
+    \item \textbf{Adecuación funcional}: La aplicación debe cumplir con todos los requisitos necesarios, 
+    de manera que sea completo y correcto funcionalmente.
+
+    \item \textbf{Seguridad}: El sistema no requiere asegurar la información que procesa, debido a que 
+    no contiene información sensible del usuario en ningún momento, ni realiza conexión externa alguna 
+    para obtener información.
+    
+    \item \textbf{Compatibilidad}: La aplicación deberá ser compatible con los ficheros que contienen
+    la información de los juegos que formarán parte del sistema.
+    
+    \item \textbf{Usabilidad}: El sistema debe disponer de una interfaz de usuario intuitiva y fácil de 
+    manejar, de manera que pueda ser utilizado por usuarios sin conocimientos técnicos ni avanzados de 
+    informática. La curva de aprendizaje deberá ser lo más reducida posible, de manera que personas de 
+    cualquier ámbito puedan hacer uso del mismo.
+
+    \item \textbf{Fiabilidad}: La aplicación deberá estar libre de errores que influyan negativamente 
+    en su uso normal. Debido a que la aplicación depende de información incluida por terceros, será 
+    necesario comprobar que dicha información es compatible con la aplicación.
+    
+    \item \textbf{Eficiencia}: El sistema debe evitar en la medida de lo posible el uso de información 
+    redundante para poder asegurar su funcionamiento cuando se introduzcan juegos de alta complejidad 
+    que requieran un elevado uso de recursos.
+
+    \item \textbf{Mantenibilidad}: Este apartado representa la capacidad del producto software para 
+    ser modificado efectiva y eficientemente. Esto será posible debido al desarrollo de código 
+    limpio y bien documentado, al diseño y la implementación modular del mismo. Se plantea el uso 
+    de patrones de arquitectura de software, tales como \textbf{MVVM}.
+
+    \item \textbf{Portabilidad}: El sistema está diseñado para su uso en dispositivos móviles, 
+    aunque no se descarta una futura ampliación para introducirlo en otro tipo de dispositivos.
+    La implementación está realizada únicamente para sistemas \textit{Android}, ya que no 
+    se dispone de las herramientas necesarias para el despliegue en \textit{Mac OS}. 
+\end{itemize}

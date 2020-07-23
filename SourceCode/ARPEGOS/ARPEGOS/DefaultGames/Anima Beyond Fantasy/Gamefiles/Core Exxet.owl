@@ -24150,7 +24150,7 @@ Vías Cerradas: Destrucción</rdfs:comment>
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Curtido_1">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Ventaja_Común"/>
         <VentajaTieneValor rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">1</VentajaTieneValor>
-        <owl:backwardCompatibleWith rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El personaje ya ha tenido varias experiencias en el mundo real, de las que ha aprendido grandes lecciones. Efectos: El personaje comienza con 50 puntos de experiencia añadidos. Coste: 1</owl:backwardCompatibleWith>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El personaje ya ha tenido varias experiencias en el mundo real, de las que ha aprendido grandes lecciones. Efectos: El personaje comienza con 50 puntos de experiencia añadidos. Coste: 1</rdfs:comment>
     </owl:NamedIndividual>
     
 

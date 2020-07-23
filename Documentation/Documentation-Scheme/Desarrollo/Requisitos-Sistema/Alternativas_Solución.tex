@@ -1,0 +1,96 @@
+% ARPEGOS:  Automatized Roleplaying-game Profile Extensible Generator Ontology based System %
+% Author : Alejandro Muñoz Del Álamo %
+% Copyright 2019 %
+
+% Section 3.4: Alternativas de Solución %
+
+\section{Alternativas de Solución}
+En esta sección, se ofrece un estudio del arte de las diferentes alternativas tecnológicas que permitan satisfacer 
+los requerimientos del sistema, para optar por una de las opciones planteadas, que será dispuesta como base 
+para el software a desarrollar.\medskip
+
+Con este motivo, hemos optado por recoger algunas de las tecnologías existentes para realizar desarrollo de aplicaciones 
+móviles.
+
+\subsection{Entorno de desarrollo integrado}
+Se conoce por \textit{Entorno de Desarrollo Integrado} o \textit{IDE} a las aplicaciones visuales que se utilizan para 
+la elaboración de aplicaciones a partir de componentes, según explican Fuentes, Troya y Vallecillo. \autocite*{Fuentes}
+Estas aplicaciones suelen disponer de ciertos elementos comunes, tales como:
+
+\begin{itemize}
+    \item Colecciones que muestran los componentes disponibles mediante iconos.
+    \item Un elemento central en el que se posicionan los componentes y se interrelacionan entre sí.
+    \item Editores específicos para personalizar los componentes.
+    \item Buscadores para localizar componentes.
+    \item Directorios de componentes.
+    \item Capacidad de desarrollo de nuevos componentes mediante el uso de los componentes ya disponibles.
+    \item Acceso a herramientas de control y gestión de proyectos.
+\end{itemize}
+
+A continuación, mostramos los \textit{IDEs} que se han tomado en consideración para el desarrollo del presente proyecto.
+
+\subsubsection{Android Studio}
+Citando la página oficial, \textit{“Android Studio es el entorno de desarrollo integrado (\textnormal{IDE}) oficial para el desarrollo 
+de apps para Android, basado en \textnormal{IntelliJ IDEA}.”} \autocite*{AndroidStudio2019}
+Disponible para las plataformas \textit{Windows}, \textit{macOS} y \textit{GNU/Linux}. Basado en el lenguanje \textit{Java},
+no tiene herramientas nativas para trabajar directamente con \textit{RDF} y \textit{OWL}. Para suplir este obstáculo, 
+haríamos uso del framework libre \textit{Apache Jena}, cuya API permite trabajar con RDF, consiguiendo vincular 
+el desarrollo en aplicaciones móviles con el uso de ontologías.
+
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{5cm}
+        \centering
+        \includegraphics[width=5cm]{Images/Logo_Android_Studio.png}
+        \caption{Logo de \textit{Android Studio}}  
+    \end{minipage}
+    \hfill
+    \begin{minipage}{5cm}
+        \centering
+        \includegraphics[width=5cm]{Images/Logo_Jena.png}
+        \caption{Logo de \textit{Apache Jena}}  
+    \end{minipage}
+\end{figure}
+% https://es.wikipedia.org/wiki/Android_Studio
+% https://jena.apache.org/
+
+\subsubsection{React Native}
+Según indica Wikipedia \autocite*{ReactNative}, \textit{“React Native es un \textit{framework} para el desarrollo de aplicaciones móviles de código abierto desarrollado por 
+\textit{Facebook}. Se utiliza para desarrollar aplicaciones para \textit{Android}, \textit{iOS}, \textit{Web} y 
+\textit{U} permitiendo a los desarrolladores usar \textit{React} con funcionalidades nativas de las plataformas.”}
+Al igual que \textit{Android Studio}, React Native no tiene herramientas nativas para el desarrollo de ontologías, de 
+manera que haríamos uso de bibliotecas tales como \textit{rdflib.js} para poder proceder al tratamiento de las ontologías.
+
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{5cm}
+        \centering
+        \includegraphics[width=5cm]{Images/Logo_React.jpeg}
+        \caption{Logo de \textit{React Native}}  
+    \end{minipage}
+    \hfill
+    \begin{minipage}{5cm}
+        \centering
+        \includegraphics[width=5cm]{Images/Logo_Rdflib.jpeg}
+        \caption{Logo de \textit{rdflib.js}}  
+    \end{minipage}
+\end{figure}
+% https://en.wikipedia.org/wiki/React_Native
+% https://github.com/linkeddata/rdflib.js
+
+\subsubsection{Xamarin}
+Microsoft define Xamarin como una plataforma de código abierto para compilar aplicaciones modernas para \textit{iOS}, 
+\textit{Android} y \textit{Windows} con \textit{\dotnet} \autocite*{Xamarin}. Xamarin es una capa de abstracción que administra la comunicación 
+de código compartido con el código de plataforma subyacente. Xamarin dispone de varias bibliotecas que permiten trabajar con 
+el formato \textit{RDF}, como pueden ser \textbf{dotNetRDF}, \textbf{FSharp.RDF}, \textbf{LITEQRDF} o \textbf{RdfMapperNet}, 
+pero muy pocas trabajan con el formato \textit{OWL}, lo que hace que resulte fácil realizar un filtro de entre todas las 
+posibilidades existentes, y optemos por la biblioteca \textit{\textbf{RDFSharp}}, creada por Marco de Salvo, que permite 
+trabajar con ambos formatos, necesarios para el desarrollo de nuestro modelo ontológico.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=5cm]{Images/Logo_Xamarin.png}
+    \caption{Logo de \textit{Xamarin}}
+\end{figure}
+% https://docs.microsoft.com/es-es/xamarin/get-started/what-is-xamarin
+% https://github.com/mdesalvo/RDFSharp
