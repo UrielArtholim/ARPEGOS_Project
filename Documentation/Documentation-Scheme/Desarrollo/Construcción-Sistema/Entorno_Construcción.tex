@@ -2,4 +2,105 @@
 % Author : Alejandro Muñoz Del Álamo %
 % Copyright 2019 %
 
-% Section 6.2: Código Fuente %
+% Section 6.1: Entorno de construcción %
+\section{Entorno de construcción}
+En esta sección se explican de qué herramientas se van a utilizar para la consecución de este proyecto.
+
+\subsection{Framework}
+Este proyecto hará uso de \textit{Xamarin}, un \textit{framework} para el desarrollo de aplicaciones multiplataforma, que 
+utiliza \textit{C\#} como lenguaje de programación. \textit{Xamarin} posibilita de que dichas aplicaciones 
+compartan el código base mediante \textit{Xamarin.Forms}, que permite crear interfaces de usuario en \textit{XAML} con 
+código subyacente en \textit{C\#}, las cuales son representadas como controles nativos para cada plataforma.
+
+\subsection{Entorno de desarrollo integrado}
+El entorno de desarrollo integrado a utilizar es \textit{Visual Studio}, en su versión gratuita más actualizada hasta el momento
+(\textit{Community 2019}). A continuación se muestran algunos de los motivos que impulsan al equipo de desarrollo a optar por este IDE:
+
+\begin{itemize}
+    \item Soporte oficial de Xamarin para \textit{Visual Studio}
+    \item Biblioteca \textit{RDFSharp} disponible mediante el administrador de paquetes \textit{Nuget}.
+    \item Disponibilidad de la herramienta \textit{IntelliSense}, que permite una mayor maniobrabilidad con el código.
+\end{itemize}
+
+\begin{figure}
+    \centering
+    \includegraphics[scale=0.2]{Figures/Logo_VisualStudio.png}
+    \caption{Logo de \textit{Visual Studio}}
+    \label{Logo_VS}
+\end{figure}
+
+\subsection{Editor de ontologías}
+\label{Editor_ontologias}
+Para la construcción de ontologías se ha utilizado el editor 
+\textit{Protégé} en su versión \textit{5.5.0}.
+
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.38\textwidth}
+        \centering
+        \includegraphics[width=0.4\textwidth]{Figures/Logo_Protege.pdf}
+        \caption{Logo de \textit{Protégé}}
+    \end{minipage}
+\end{figure}
+
+\subsection{Control de versiones}
+Se conoce como \textit{control de versiones} a la gestión de las modificaciones que se producen en los componentes de un producto, o en 
+su configuración. Aunque puede hacerse manualmente, hoy en día existen herramientas que hacen este proceso más sencillo, cómodo y 
+seguro. Estas herramientas se conocen como \textit{sistemas de control de versiones (\textbf{VCS})}.\medskip
+
+Para realizar el control de versiones de este proyecto, se hará uso del VCS \textit{Git}. Además se utilizará la 
+plataforma de desarrollo colaborativo \textit{GitHub} como repositorio remoto del proyecto. Así, en caso de que 
+se corrompa la versión local del proyecto, será posible recuperar la versión más actualizada del proyecto.
+
+% Insertar imagen Git & GitHub
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.38\textwidth}
+        \centering
+        \includegraphics[width=0.5\textwidth]{Figures/Logo_Git.png}
+        \caption{Logo de \textit{Git}}
+    \end{minipage} \hspace{2cm}
+    \begin{minipage}{0.38\textwidth}
+        \centering
+        \includegraphics[width=0.8\textwidth]{Figures/Logo_GitHub.jpg}
+        \caption{Logo de \textit{GitHub}}
+    \end{minipage}
+\end{figure}
+
+\subsection{Memoria}
+En lo referente a la elaboración de la memoria, se ha realizado en \LaTeX, utilizando \textit{Visual Studio Code} como editor 
+de texto, con la extensión \textit{\LaTeX Workshop}. Esta última requiere disponer de la distribución \textit{MiKTeX}. 
+
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.38\textwidth}
+        \centering
+        \includegraphics[width=0.3\textwidth]{Figures/Logo_VSCode.png}
+        \caption{Logo de \textit{Git}}
+    \end{minipage} \hspace{2cm}
+    \begin{minipage}{0.38\textwidth}
+        \centering
+        \includegraphics[width=0.8\textwidth]{Figures/Logo_MikTex.png}
+        \caption{Logo de \textit{GitHub}}
+    \end{minipage}
+\end{figure}
+
+Por otro lado, para el diseño de diagramas se ha hecho uso de la aplicación \textit{Draw.io} en su versión de 
+escritorio y el programa \textit{InkScape} para el tratamiento de imágenes.
+
+% Insertar imagen VSCode, Latex, MikTex, Draw.io & InkScape
+
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.38\textwidth}
+        \centering
+        \includegraphics[width=0.4\textwidth]{Figures/Logo_Draw.png}
+        \caption{Logo de \textit{Git}}
+    \end{minipage} \hspace{2cm}
+    \begin{minipage}{0.38\textwidth}
+        \centering
+        \includegraphics[width=0.4\textwidth]{Figures/Logo_Inkscape.png}
+        \caption{Logo de \textit{GitHub}}
+    \end{minipage}
+\end{figure}
+

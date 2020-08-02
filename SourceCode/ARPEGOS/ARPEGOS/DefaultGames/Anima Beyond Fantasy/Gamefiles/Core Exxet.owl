@@ -25083,7 +25083,6 @@ Per_Item_Total, numerical: true, user_edit: false, Per_Item_Base:+:Per_Item_Bono
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Def_Habilidad_Natural">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#ClassDefinition"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Las habilidades naturales son una serie de bonos que el personaje obtiene en sus habilidades secundarias.</rdfs:comment>
-        <GeneralCostDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></GeneralCostDefinedBy>
         <SubstageOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">2</SubstageOrder>
         <ValuedListInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Item_Base, numerical: true, user_edit: true
 Per_Item_Bono, numerical: true, user_edit: false, Per_Item_Base:*:10</ValuedListInfo>
