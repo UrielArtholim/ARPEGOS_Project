@@ -18,13 +18,13 @@ complejidad puedan ser desarrollados y utilizados asegurando la fiabilidad y com
 
 Por consiguiente, y tras realizar búsquedas de juegos de rol en base a su complejidad, el equipo de 
 desarrollo ha tomado la decisión de utilizar como juego de ejemplo \textit{\textbf{Ánima: Beyond Fantasy}}.
-\textit{Ánima} es un juego de rol de mesa que transcurre en un mundo de magia y fantasía, con un sistema
+\anima es un juego de rol de mesa que transcurre en un mundo de magia y fantasía, con un sistema
 bastante detallado y una complejidad muy elevada, hasta el punto de que hay jugadores que lo evitan 
 debido a la larga duración del proceso de creación de personaje, por lo que hace de este juego un caso 
 perfecto para demostrar la eficacia de este proyecto.
 
 \subsection{Metodología}
-Antes de proceder al desarrollo de la ontología de \textit{Ánima}, se ha considerado fundamental plantear 
+Antes de proceder al desarrollo de la ontología de \anima, se ha considerado fundamental plantear 
 que es imposible abordar una fuente de información tan compleja como un \textit{RPG} directamente. En consecuencia, 
 el equipo de desarrollo ha procedido a modular el diseño de la ontología, de modo que se aborden los diferentes 
 elementos de la ontología por separado, y poco a poco se vayan acoplando hasta que se obtenga el resultado final. \medskip
@@ -32,7 +32,7 @@ elementos de la ontología por separado, y poco a poco se vayan acoplando hasta 
 \subsubsection{Individuos}
 Como se ha indicado previamente en el apartado \ref*{Elementos_modelo_conceptual} de la sección \ref*{Modelo_conceptual}, 
 un individuo es la \textit{la representacion de un objeto real en el dominio}. Para la elaboración de la ontología de 
-\textit{Ánima}, se considerará que un individuo es \textit{la representación de un elemento del dominio, y por tanto, 
+\anima, se considerará que un individuo es \textit{la representación de un elemento del dominio, y por tanto, 
 tiene una o varias propiedades que lo definen}.
 
 \subsubsection{Clase}
@@ -119,10 +119,10 @@ Uno de los objetivos del proyecto es que a la hora de crear el personaje, el usu
 pasos que requiere el juego para crear el personaje de la forma más completa posible. A estos pasos los llamaremos 
 \textit{etapas de creación}.\medskip
 
-Para poder definir las etapas de creación de \textit{Ánima}, se han planteado las siguientes preguntas:
+Para poder definir las etapas de creación de \anima, se han planteado las siguientes preguntas:
 
 \begin{enumerate}
-    \item ¿Cuáles son las etapas de creación de personajes del \textit{Ánima}?
+    \item ¿Cuáles son las etapas de creación de personajes del \anima?
     \item ¿Se pueden dividir esas etapas en subetapas más pequeñas?
     \item ¿Cuál debe ser la etapa inicial del proceso de creación?
     \item ¿Son necesarias todas las etapas de creación para cada personaje?
@@ -130,8 +130,8 @@ Para poder definir las etapas de creación de \textit{Ánima}, se han planteado 
 \end{enumerate}
 
 La primera respuesta suele encontrarse en los libros de los juegos de rol, ya que es una información 
-fundamental para poder crear los personajes. Así sucede en el caso de \textit{Ánima}, de manera que 
-echando un ojo rápido al libro, podemos saber que las etapas de creación de un personaje en \textit{Ánima}
+fundamental para poder crear los personajes. Así sucede en el caso de \anima, de manera que 
+echando un ojo rápido al libro, podemos saber que las etapas de creación de un personaje en \anima
 son las siguientes: \medskip
 
 \begin{figure}[H]
@@ -141,7 +141,7 @@ son las siguientes: \medskip
     \label{Etapas_anima}
 \end{figure}
 
-Aunque el proceso aparenta ser rápido y sencillo en un principio, cabe recordar que \textit{Ánima} es conocido 
+Aunque el proceso aparenta ser rápido y sencillo en un principio, cabe recordar que \anima es conocido 
 entre los jugadores de rol por su gran complejidad en la creación de personajes, llegando al punto de frustrar a 
 los jugadores debido a la inmensidad de información necesaria para completar el personaje. En consecuencia, se 
 ha considerado inviable abordar el proceso de creación de forma directa, y se ha planteado modular el proceso en 
@@ -149,14 +149,14 @@ un mayor número de etapas, que sean más sencillas e intuitivas. Así, el equip
 \textbf{preferible un proceso largo de etapas sencillas} a un proceso corto de etapas complejas. \medskip
 
 Después de investigar sobre el juego en profundidad, el equipo de desarrollo ha desglosado las etapas de 
-creación de personajes de \textit{Ánima} en subetapas que pueden ser mostradas en una única vista y que 
+creación de personajes de \anima en subetapas que pueden ser mostradas en una única vista y que 
 facilitan una interacción intuitiva por parte de los usuarios, y por consiguiente, 
 serán las \textbf{etapas de creación} de nuestra aplicación. El diagrama de flujo resultante se puede 
 observar en la figura \ref*{Diagrama_creacion_anima} \footnote[1]{Se adjunta una versión ampliada como anexo 
 para poder leer el diagrama adecuadamente.}.\medskip
 
 Durante la investigación sobre el juego se observa que hay diferentes tipos de personajes, definidos por 
-reglas y que presentan una lista de propiedades y habilidades a las que pueden tener acceso. En \textit{Ánima}, 
+reglas y que presentan una lista de propiedades y habilidades a las que pueden tener acceso. En \anima, 
 a estos tipos se les conoce como \textit{Categorías}. En consecuencia, la \textit{Categoría} de un personaje 
 determinará las etapas de creación del mismo y es por esto que el primer elemento del proceso deberá ser 
 la elección de \textit{Categoría}. \medskip
@@ -168,7 +168,7 @@ de cada juego. \medskip
 
 La propuesta del equipo de desarrollo para salvar este obstáculo consiste en \textbf{generalizar los tipos de interacción} que pueden 
 requerir las etapas de creación de cualquier juego. Esto permite diseñar sólo una vista por cada tipo de interacción, y posteriormente 
-vincular cada etapa con el tipo de interacción más adecuado. En el caso de \textit{Ánima}, se han contemplado los siguientes 
+vincular cada etapa con el tipo de interacción más adecuado. En el caso de \anima, se han contemplado los siguientes 
 tipos de interacción: 
 
 \begin{itemize}
