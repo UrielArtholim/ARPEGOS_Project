@@ -42,13 +42,27 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="DefaultGames\Anima Beyond Fantasy\characters\" />
     <Folder Include="DefaultGames\Nanatsu No Taizai\characters\" />
     <Folder Include="Services\" />
   </ItemGroup>
 
   <ItemGroup>
     <None Include="Models\Program.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Views\SkillListView.xaml.cs">
+      <DependentUpon>SkillListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\CharacterListView.xaml.cs">
+      <DependentUpon>CharacterListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\ItemCheckListView.xaml.cs">
+      <DependentUpon>ItemCheckListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\SkillView.xaml.cs">
+      <DependentUpon>SkillView.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
 
   <ItemGroup>
@@ -64,7 +78,7 @@
     <EmbeddedResource Update="Views\CreationView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\ItemListView.xaml">
+    <EmbeddedResource Update="Views\ItemCheckListView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\MainView.xaml">
@@ -77,6 +91,9 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\ProgressBarView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\SkillView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\SliderItemView.xaml">

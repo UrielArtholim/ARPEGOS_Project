@@ -17,7 +17,7 @@
         {
             this.InitializeComponent();
             Container = new AutofacSetup().CreateContainer();
-            this.MainPage = new NavigationPage(new CreationView());
+            this.MainPage = new NavigationPage(new SkillView());
         }
 
         protected override void OnStart()

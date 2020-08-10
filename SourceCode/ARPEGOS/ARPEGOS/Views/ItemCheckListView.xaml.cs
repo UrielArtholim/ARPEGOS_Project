@@ -12,9 +12,9 @@ using Xamarin.Forms.Xaml;
 namespace ARPEGOS.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class ItemListView : ContentView
+    public partial class ItemCheckListView : ContentView
     {
-        public ItemListView()
+        public ItemCheckListView()
         {
             InitializeComponent();
             this.BindingContext = App.Container.Resolve<ItemListViewModel>();
