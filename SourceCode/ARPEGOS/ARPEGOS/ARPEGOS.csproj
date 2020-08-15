@@ -13,19 +13,25 @@
 
   <ItemGroup>
     <Compile Remove="Models\Program.cs" />
+    <Compile Remove="Models\Temp.cs" />
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="DefaultGames\Anima Beyond Fantasy\characters\Ctuchik.owl" />
+    <None Remove="DefaultGames\Anima Beyond Fantasy\characters\Glenn Radars.owl" />
     <None Remove="DefaultGames\Anima Beyond Fantasy\Nanatsu No Taizai.owl" />
     <None Remove="DefaultGames\Core Exxet.owl" />
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Include="DefaultGames\Anima Beyond Fantasy\characters\Glenn Radars.owl">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
     <EmbeddedResource Include="DefaultGames\Anima Beyond Fantasy\gamefiles\Core Exxet.owl">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="DefaultGames\Nanatsu No Taizai\gamefiles\Nanatsu No Taizai.owl">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </EmbeddedResource>
   </ItemGroup>
 
@@ -37,9 +43,9 @@
     <PackageReference Include="Xam.Plugins.Forms.ImageCircle" Version="3.0.0.5" />
     <PackageReference Include="Xamarin.FFImageLoading" Version="2.4.11.982" />
     <PackageReference Include="Xamarin.FFImageLoading.Forms" Version="2.4.11.982" />
-    <PackageReference Include="Xamarin.Forms" Version="4.7.0.1080" />
+    <PackageReference Include="Xamarin.Forms" Version="4.7.0.1260" />
     <PackageReference Include="Xamarin.Essentials" Version="1.5.3.2" />
-    <PackageReference Include="Xamarin.Forms.Visual.Material" Version="4.7.0.1080" />
+    <PackageReference Include="Xamarin.Forms.Visual.Material" Version="4.7.0.1260" />
   </ItemGroup>
 
   <ItemGroup>
@@ -49,6 +55,11 @@
 
   <ItemGroup>
     <None Include="Models\Program.cs" />
+    <None Include="Models\Temp.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="DefaultGames\Anima Beyond Fantasy\characters\Ctuchik.owl" />
   </ItemGroup>
 
   <ItemGroup>

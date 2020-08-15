@@ -1,5 +1,9 @@
 ﻿namespace ARPEGOS
 {
+    using System;
+    using System.IO;
+    using System.Reflection;
+
     using ARPEGOS.Helpers;
     using ARPEGOS.Views;
 
@@ -17,19 +21,13 @@
         {
             this.InitializeComponent();
             Container = new AutofacSetup().CreateContainer();
-            this.MainPage = new NavigationPage(new SkillView());
-        }
-
-        protected override void OnStart()
-        {
-        }
-
-        protected override void OnSleep()
-        {
-        }
-
-        protected override void OnResume()
-        {
+            var assembly = IntrospectionExtensions.GetTypeInfo(typeof(MainView)).Assembly;
+            foreach (var res in assembly.GetManifestResourceNames()) {
+                System.Diagnostics.Debug.WriteLine("found resource: " + res);
+            }
+            string path = Environment.GetFolderPath (Environment.SpecialFolder.LocalApplicationData);
+            var files = Directory.GetFiles(path);
+            this.MainPage = new MainView();
         }
     }
 }

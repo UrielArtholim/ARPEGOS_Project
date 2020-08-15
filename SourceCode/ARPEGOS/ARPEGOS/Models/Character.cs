@@ -3,7 +3,7 @@ namespace ARPEGOS.Models
 {
     using RDFSharp.Semantics;
 
-    public class Game
+    public class Character
     {
         /// <summary>
         /// Name of the element
@@ -21,8 +21,10 @@ namespace ARPEGOS.Models
         public string Context { get; set; }
 
         /// <summary>
-        /// Semantic representation of the current game
+        /// Semantic representation of the current character
         /// </summary>
         public RDFOntology Ontology { get; set; }
+
+        public Game Game { get; set; }
     }
 }
