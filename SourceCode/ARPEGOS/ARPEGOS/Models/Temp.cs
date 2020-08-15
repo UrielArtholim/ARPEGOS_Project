@@ -97,7 +97,7 @@ namespace ARPEGOS.Models
         {
             var path = Path.Combine(GameFolder, name, "gamefiles", version);
             var graph = RDFGraph.FromFile(RdfFormat, path);
-            var context = $"{graph.Context}#;";
+            var context = $"{graph.Context}#";
             graph.SetContext(new Uri(context));
             var prefix = string.Concat(Regex.Matches(name, "[A-Z]").OfType<Match>().Select(match =>match.Value)).ToLower();
             RDFNamespaceRegister.AddNamespace(new RDFNamespace(prefix, graph.Context.ToString()));
@@ -120,21 +120,59 @@ namespace ARPEGOS.Models
 
         public Character LoadCharacter(Game game, string name)
         {
-            CurrentCharacterName = "TestCharacter";
-            CurrentCharacterFile = Path.Combine(CharacterFolder, CurrentCharacterName + ".owl");
+            var path = Path.Combine(CharacterFolder, name + ".owl");
+            var context = "http://arpegos_project/Games/" + game.Name + "/characters/" + name + "#";
+            var graph = RDFGraph.FromFile(RdfFormat, path);
+            graph.SetContext(new Uri(context));
+            return new Character
+                       {
+                           Game = game,
+                           File = path,
+                           Context = context,
+                           Name = name,
+                           Ontology = RDFOntology.FromRDFGraph(graph)
+                       };
+        }
+
+        public Character CreateCharacter(Game game, string name)
+        {
+            var path = Path.Combine(CharacterFolder, name + ".owl");
+            var context = "http://arpegos_project/Games/" + game.Name + "/characters/" + name + "#";
+            var graph = new RDFGraph();
+            return new Character
+                       {
+                           Game = game,
+                           File = path,
+                           Context = context,
+                           Name = name,
+                           Ontology = RDFOntology.FromRDFGraph(graph)
+                       };
+        }
+
+        /// <summary>
+        /// Creates new character for the current game selected given its name
+        /// </summary>
+        /// <param name="name">Name of the character </param>
+        internal void CreateCharacter(string name)
+        {
+            CurrentCharacterName = Text.ToTitleCase(name.Replace(" ", "_"));
+            CurrentCharacterFile = CharacterFolder + CurrentCharacterName.Replace("_", " ") + ".owl";
             CurrentCharacterContext = "http://arpegos_project/Games/" + CurrentGameName + "/characters/" + CurrentCharacterName + "#";
-            string CurrentGamePrefix = string.Concat(Regex.Matches(CurrentGameName, "[A-Z]").OfType<Match>().Select(match =>match.Value)).ToLower();
-
-            CurrentGameFile = GameName + GameVersion;
-            RDFGraph GameGraph = RDFGraph.FromFile(RdfFormat, CurrentGameFile);
-            CurrentGameContext = GameGraph.Context.ToString() + '#';
-            GameGraph.SetContext(new Uri(CurrentGameContext));
-            RDFNamespaceRegister.AddNamespace(new RDFNamespace(CurrentGamePrefix, GameGraph.Context.ToString()));
-            GameOntology = RDFOntology.FromRDFGraph(GameGraph);
-
             RDFGraph CharacterGraph = new RDFGraph();
             CharacterGraph.SetContext(new Uri(CurrentCharacterContext));
             CharacterOntology = RDFOntology.FromRDFGraph(CharacterGraph);
+            if (File.Exists(CurrentCharacterFile))
+                File.Delete(CurrentCharacterFile);
+            string CurrentCharacterPrefix;
+            if (CurrentCharacterName.Contains('_'))
+                CurrentCharacterPrefix = CurrentCharacterName.Substring(0, CurrentCharacterName.IndexOf("_"));
+            else
+                CurrentCharacterPrefix = CurrentCharacterName;
+            if (RDFNamespaceRegister.GetByPrefix(CurrentCharacterPrefix) == null)
+                RDFNamespaceRegister.AddNamespace(new RDFNamespace(CurrentCharacterPrefix, CurrentCharacterContext));
+
+            CreateIndividual(CurrentCharacterName);
+            SaveCharacter();
         }
 
         #region Methods
@@ -2968,6 +3006,7 @@ namespace ARPEGOS.Models
             SaveCharacter();
         }
         #endregion
+
         #region Save
         /// <summary>
         /// Saves current character info
