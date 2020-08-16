@@ -248,6 +248,39 @@ namespace ARPEGOS.Models
             CharacterDataModel.AddAssertionRelation(subjectFact, predicate as RDFOntologyDatatypeProperty, objectLiteral);
             SaveCharacter();
         }
+
+        internal void AddGame(string name, string path)
+        {
+            string GameName = Path.GetFileName(path);
+            var AppDirectory = SystemControl.DirectoryHelper.GetBaseDirectory();
+            if (!Directory.Exists(Path.Combine(AppDirectory, name)))
+            {
+                DirectoryHelper.CreateDirectory(Path.Combine(AppDirectory, name));
+                DirectoryHelper.CreateDirectory(Path.Combine(AppDirectory, name, "characters"));
+                DirectoryHelper.CreateDirectory(Path.Combine(AppDirectory, name, "gamefiles"));
+            }
+
+            string GameNewPath = Path.Combine(AppDirectory, name, "gamefiles", GameName);
+            if (!File.Exists(GameNewPath))
+                File.Copy(path, GameNewPath);
+        }
+
+        internal void DeleteGame(string game)
+        {
+            var AppDirectory = SystemControl.DirectoryHelper.GetBaseDirectory();
+            var GamePath = Path.Combine(AppDirectory, game);
+            if(Directory.Exists(Path.Combine(AppDirectory, game)))
+                Directory.Delete(GamePath, true);
+        }
+
+        internal void DeleteVersion(string game, string version)
+        {
+            var AppDirectory = SystemControl.DirectoryHelper.GetBaseDirectory();
+            var GamePath = Path.Combine(AppDirectory, name);
+            var VersionPath = Path.Combine(GamePath, "gamefiles", version);
+            if(File.Exists(VersionPath))
+                File.Delete(VersionPath);
+        }
         #endregion
 
         #region Create
@@ -2904,8 +2937,6 @@ namespace ARPEGOS.Models
             };
             return ReturnType;
         }
-
-        
 
         #endregion
 
