@@ -24,5 +24,6 @@ namespace ARPEGOS.Models
         /// Semantic representation of the current game
         /// </summary>
         public RDFOntology Ontology { get; set; }
+
     }
 }

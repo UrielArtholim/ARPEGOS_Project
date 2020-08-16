@@ -88,6 +88,8 @@ namespace ARPEGOS.Models
         }
         #endregion
 
+        #region Editing
+
         public IEnumerable<string> GetGames()
         {
             throw new NotImplementedException();
@@ -139,6 +141,7 @@ namespace ARPEGOS.Models
             var path = Path.Combine(CharacterFolder, name + ".owl");
             var context = "http://arpegos_project/Games/" + game.Name + "/characters/" + name + "#";
             var graph = new RDFGraph();
+
             return new Character
                        {
                            Game = game,
@@ -148,6 +151,7 @@ namespace ARPEGOS.Models
                            Ontology = RDFOntology.FromRDFGraph(graph)
                        };
         }
+
 
         /// <summary>
         /// Creates new character for the current game selected given its name
@@ -174,6 +178,8 @@ namespace ARPEGOS.Models
             CreateIndividual(CurrentCharacterName);
             SaveCharacter();
         }
+
+        #endregion
 
         #region Methods
 
@@ -636,23 +642,18 @@ namespace ARPEGOS.Models
         {
             bool LiteralExists = false;
             RDFTypedLiteral Literal;
-
-            if (applyOnCharacter)
-            {
-                RDFOntologyData CharacterDataModel = CharacterOntology.Data;
-                var LiteralType = CheckDatatypeFromString(type);
-                Literal = new RDFTypedLiteral(value, LiteralType);
-                if (CharacterDataModel.SelectLiteral(Literal.ToString()) != null)
-                    LiteralExists = true;
-            }
+            RDFOntology CurrentOntology;
+            if (applyOnCharacter == true)
+                CurrentOntology = CharacterOntology;
             else
-            {
-                RDFOntologyData GameDataModel = GameOntology.Data;
-                var LiteralType = CheckDatatypeFromString(type);
-                Literal = new RDFTypedLiteral(value, LiteralType);
-                if (GameDataModel.SelectLiteral(Literal.ToString()) != null)
-                    LiteralExists = true;
-            }
+                CurrentOntology = GameOntology;
+            
+            RDFOntologyData DataModel = CurrentOntology.Data;
+            var LiteralType = CheckDatatypeFromString(type);
+            Literal = new RDFTypedLiteral(value, LiteralType);
+            if ( DataModel.SelectLiteral(Literal.ToString()) != null)
+                LiteralExists = true;
+
             return LiteralExists;
         }
 
@@ -666,19 +667,16 @@ namespace ARPEGOS.Models
         {
             name = name.Replace(" ", "_");
             bool FactExists = false;
-
-            if (applyOnCharacter)
-            {
-                RDFOntologyData CharacterDataModel = CharacterOntology.Data;
-                if (CharacterDataModel.SelectFact(CurrentCharacterContext + name) != null)
-                    FactExists = true;
-            }
+            RDFOntology CurrentOntology;
+            if ( applyOnCharacter == true )
+                CurrentOntology = CharacterOntology;
             else
-            {
-                RDFOntologyData GameDataModel = GameOntology.Data;
-                if (GameDataModel.SelectFact(CurrentGameContext + name) != null)
-                    FactExists = true;
-            }
+                CurrentOntology = GameOntology;
+
+            RDFOntologyData DataModel = CurrentOntology.Data;
+            if (DataModel.SelectFact(CurrentGameContext + name) != null)
+                FactExists = true;
+            
             return FactExists;
         }
 
@@ -692,18 +690,16 @@ namespace ARPEGOS.Models
         {
             name = name.Replace(" ", "_");
             bool ClassExists = false;
-            if (applyOnCharacter)
-            {
-                RDFOntologyClassModel CharacterClassModel = CharacterOntology.Model.ClassModel;
-                if (CharacterClassModel.SelectClass(CurrentCharacterContext + name) != null)
-                    ClassExists = true;
-            }
+            RDFOntology CurrentOntology;
+            if ( applyOnCharacter == true )
+                CurrentOntology = CharacterOntology;
             else
-            {
-                RDFOntologyClassModel GameClassModel = GameOntology.Model.ClassModel;
-                if (GameClassModel.SelectClass(CurrentGameContext + name) != null)
-                    ClassExists = true;
-            }
+                CurrentOntology = GameOntology;
+
+            RDFOntologyClassModel ClassModel = CurrentOntology.Model.ClassModel;
+            if ( ClassModel.SelectClass(CurrentCharacterContext + name) != null)
+                ClassExists = true;
+
             return ClassExists;
         }
 
@@ -717,39 +713,34 @@ namespace ARPEGOS.Models
         {
             name = name.Replace(" ", "_");
             bool PropertyExists = false;
+            RDFOntology CurrentOntology;
+            string CurrentContext;
 
-            if (applyOnCharacter)
+            if (applyOnCharacter == true)
             {
-                RDFOntologyPropertyModel CharacterPropertyModel = CharacterOntology.Model.PropertyModel;
-                RDFOntologyProperty CharacterProperty = CharacterPropertyModel.SelectProperty(CurrentCharacterContext + name);
-                if (CharacterProperty != null)
-                {
-                    IEnumerator<RDFOntologyObjectProperty> ObjectEnumerator = CharacterPropertyModel.ObjectPropertiesEnumerator;
-                    while (PropertyExists == false && ObjectEnumerator.MoveNext())
-                    {
-                        RDFOntologyObjectProperty property = ObjectEnumerator.Current;
-                        string currentProperty = property.ToString().Substring(property.ToString().LastIndexOf('#') + 1);
-                        if (currentProperty == name)
-                            PropertyExists = true;
-                    }
-                }
+                CurrentOntology = CharacterOntology;
+                CurrentContext = CurrentCharacterContext;
             }
             else
             {
-                RDFOntologyPropertyModel GamePropertyModel = GameOntology.Model.PropertyModel;
-                RDFOntologyProperty GameProperty = GamePropertyModel.SelectProperty(CurrentGameContext + name);
-                if (GameProperty != null)
+                CurrentOntology = GameOntology;
+                CurrentContext = CurrentGameContext;
+            }
+
+            RDFOntologyPropertyModel PropertyModel = CurrentOntology.Model.PropertyModel;
+            RDFOntologyProperty Property = PropertyModel.SelectProperty(CurrentContext + name);
+            if ( Property != null)
+            {
+                IEnumerator<RDFOntologyObjectProperty> ObjectEnumerator = PropertyModel.ObjectPropertiesEnumerator;
+                while (PropertyExists == false && ObjectEnumerator.MoveNext())
                 {
-                    IEnumerator<RDFOntologyObjectProperty> ObjectEnumerator = GamePropertyModel.ObjectPropertiesEnumerator;
-                    while (PropertyExists == false && ObjectEnumerator.MoveNext())
-                    {
-                        RDFOntologyObjectProperty property = ObjectEnumerator.Current;
-                        string currentProperty = property.ToString().Substring(property.ToString().LastIndexOf('#') + 1);
-                        if (currentProperty == name)
-                            PropertyExists = true;
-                    }
+                    RDFOntologyObjectProperty property = ObjectEnumerator.Current;
+                    string currentProperty = property.ToString().Substring(property.ToString().LastIndexOf('#') + 1);
+                    if (currentProperty == name)
+                        PropertyExists = true;
                 }
             }
+            
             return PropertyExists;
         }
 
@@ -763,38 +754,31 @@ namespace ARPEGOS.Models
         {
             name = name.Replace(" ", "_");
             bool PropertyExists = false;
+            RDFOntology CurrentOntology;
+            string CurrentContext;
 
-            if (applyOnCharacter)
+            if ( applyOnCharacter==true )
             {
-                RDFOntologyPropertyModel CharacterPropertyModel = CharacterOntology.Model.PropertyModel;
-                RDFOntologyProperty CharacterProperty = CharacterPropertyModel.SelectProperty(CurrentCharacterContext + name);
-                if (CharacterProperty != null)
-                {
-                    IEnumerator<RDFOntologyDatatypeProperty> DatatypeEnumerator = CharacterPropertyModel.DatatypePropertiesEnumerator;
-                    while (PropertyExists == false && DatatypeEnumerator.MoveNext())
-                    {
-                        RDFOntologyDatatypeProperty property = DatatypeEnumerator.Current;
-                        string currentProperty = property.ToString().Substring(property.ToString().LastIndexOf('#') + 1);
-                        if (currentProperty == name)
-                            PropertyExists = true;
-                    }
-                    
-                }
+                CurrentOntology=CharacterOntology;
+                CurrentContext=CurrentCharacterContext;
             }
             else
             {
-                RDFOntologyPropertyModel GamePropertyModel = GameOntology.Model.PropertyModel;
-                RDFOntologyProperty GameProperty = GamePropertyModel.SelectProperty(CurrentGameContext + name);
-                if (GameProperty != null)
+                CurrentOntology=GameOntology;
+                CurrentContext=CurrentGameContext;
+            }
+
+            RDFOntologyPropertyModel PropertyModel = CurrentOntology.Model.PropertyModel;
+            RDFOntologyProperty Property = PropertyModel.SelectProperty(CurrentContext + name);
+            if ( Property!= null)
+            {
+                IEnumerator<RDFOntologyDatatypeProperty> DatatypeEnumerator = PropertyModel.DatatypePropertiesEnumerator;
+                while (PropertyExists == false && DatatypeEnumerator.MoveNext())
                 {
-                    IEnumerator<RDFOntologyDatatypeProperty> DatatypeEnumerator = GamePropertyModel.DatatypePropertiesEnumerator;
-                    while (PropertyExists == false && DatatypeEnumerator.MoveNext())
-                    {
-                        RDFOntologyDatatypeProperty property = DatatypeEnumerator.Current;
-                        string currentProperty = property.ToString().Substring(property.ToString().LastIndexOf('#') + 1);
-                        if (currentProperty == name)
-                            PropertyExists = true;
-                    }
+                    RDFOntologyDatatypeProperty property = DatatypeEnumerator.Current;
+                    string currentProperty = property.ToString().Substring(property.ToString().LastIndexOf('#') + 1);
+                    if (currentProperty == name)
+                        PropertyExists = true;
                 }
             }
             return PropertyExists;
@@ -816,8 +800,22 @@ namespace ARPEGOS.Models
         /// </summary>
         /// <param name="stage">Name of the stage</param>
         /// <returns></returns>
-        internal string CheckGeneralCost(string stage)
+        internal string CheckGeneralCost(string stage, bool applyOnCharacter = false)
         {
+            RDFOntology CurrentOntology;
+            string CurrentContext;
+
+            if ( applyOnCharacter==true )
+            {
+                CurrentOntology=CharacterOntology;
+                CurrentContext=CurrentCharacterContext;
+            }
+            else
+            {
+                CurrentOntology=GameOntology;
+                CurrentContext=CurrentGameContext;
+            }
+
             string GeneralCostPredicateName = "";
             List<string> StageWords = stage.Split('_').ToList();
             int FilterCounter = 2;
@@ -826,15 +824,15 @@ namespace ARPEGOS.Models
             {
                 if (wordCounter > 0)
                 {
-                    string SubjectFactName = "Def_";
+                    string SubjectFactName = "";
                     for (int i = 0; i < wordCounter - 1; ++i)
                         SubjectFactName += StageWords.ElementAtOrDefault(i) + "_";
                     SubjectFactName += StageWords.LastOrDefault();
 
-                    RDFOntologyFact SubjectFact = GameOntology.Data.SelectFact(CurrentGameContext + SubjectFactName);
+                    RDFOntologyClass SubjectFact = CurrentOntology.Model.ClassModel.SelectClass(CurrentContext + SubjectFactName);
                     if (SubjectFact != null)
                     {
-                        IEnumerable<RDFOntologyTaxonomyEntry> SubjectFactCostAnnotations = GameOntology.Data.Annotations.CustomAnnotations.SelectEntriesBySubject(SubjectFact);
+                        IEnumerable<RDFOntologyTaxonomyEntry> SubjectFactCostAnnotations = CurrentOntology.Data.Annotations.CustomAnnotations.SelectEntriesBySubject(SubjectFact);
                         SubjectFactCostAnnotations = SubjectFactCostAnnotations.Where(entry => entry.ToString().Contains("GeneralCostDefinedBy"));
                         if (SubjectFactCostAnnotations.Count() == 1)
                         {
@@ -879,10 +877,24 @@ namespace ARPEGOS.Models
         /// <returns></returns>
         internal bool CheckEquipmentClass (string elementClassName)
         {
+            RDFOntology CurrentOntology;
+            string CurrentContext;
+
+            if ( applyOnCharacter==true )
+            {
+                CurrentOntology=CharacterOntology;
+                CurrentContext=CurrentCharacterContext;
+            }
+            else
+            {
+                CurrentOntology=GameOntology;
+                CurrentContext=CurrentGameContext;
+            }
+
             bool isEquipment = false;
             List<string> EquipmentWords = new List<string> { "Equipamiento", "Equipment", "Équipement" };
-            RDFOntologyClass ElementClass = GameOntology.Model.ClassModel.SelectClass(CurrentGameContext + elementClassName);
-            RDFOntologyTaxonomyEntry ElementClassTypeEntry = GameOntology.Model.ClassModel.Relations.SubClassOf.SelectEntriesBySubject(ElementClass).SingleOrDefault();
+            RDFOntologyClass ElementClass = CurrentOntology.Model.ClassModel.SelectClass(CurrentContext + elementClassName);
+            RDFOntologyTaxonomyEntry ElementClassTypeEntry = CurrentOntology.Model.ClassModel.Relations.SubClassOf.SelectEntriesBySubject(ElementClass).SingleOrDefault();
             if(ElementClassTypeEntry != null)
             {
                 string elementSuperClass = ElementClassTypeEntry.TaxonomyObject.ToString().Substring(ElementClassTypeEntry.TaxonomyObject.ToString().LastIndexOf('#') + 1);
@@ -900,13 +912,26 @@ namespace ARPEGOS.Models
         /// </summary>
         /// <param name="stage">Name of the stage stage</param>
         /// <returns></returns>
-        internal string CheckValueListInfo(string stage)
+        internal string CheckValueListInfo(string stage, bool applyOnCharacter = false)
         {
+            RDFOntology CurrentOntology;
+            string CurrentContext;
+
+            if ( applyOnCharacter==true )
+            {
+                CurrentOntology=CharacterOntology;
+                CurrentContext=CurrentCharacterContext;
+            }
+            else
+            {
+                CurrentOntology=GameOntology;
+                CurrentContext=CurrentGameContext;
+            }
+
             string Info = null;
 
-            string StageDefinitionName = "Def_" + stage;
-            RDFOntologyFact StageDefinitionIndividual = GameOntology.Data.SelectFact(CurrentGameContext + StageDefinitionName);
-            RDFOntologyTaxonomy StageAnnotations = GameOntology.Data.Annotations.CustomAnnotations.SelectEntriesBySubject(StageDefinitionIndividual);
+            RDFOntologyFact StageDefinitionIndividual = CurrentOntology.Data.SelectFact(CurrentContext + stage);
+            RDFOntologyTaxonomy StageAnnotations = CurrentOntology.Model.ClassModel.Annotations.CustomAnnotations.SelectEntriesBySubject(StageDefinitionIndividual);
             RDFOntologyTaxonomyEntry StageDefinitionAnnotation = StageAnnotations.Where(entry => entry.TaxonomyPredicate.ToString().Contains("ValuedListInfo")).SingleOrDefault();
             if(StageDefinitionAnnotation != null)
             {
@@ -1357,26 +1382,54 @@ namespace ARPEGOS.Models
         /// </summary>
         /// <param name="elementName">Name of the element</param>
         /// <returns></returns>
-        internal string GetElementClass(string elementName)
+        internal string GetElementClass(string elementName, bool applyOnCharacter = false)
         {
-            RDFOntologyData GameDataModel = GameOntology.Data;
-            RDFOntologyTaxonomyEntry elementClassType = GameDataModel.Relations.ClassType.FirstOrDefault(entry => entry.TaxonomySubject.ToString().Contains(elementName));
+            RDFOntology CurrentOntology;
+            string CurrentContext;
+
+            if ( applyOnCharacter==true )
+            {
+                CurrentOntology=CharacterOntology;
+                CurrentContext=CurrentCharacterContext;
+            }
+            else
+            {
+                CurrentOntology=GameOntology;
+                CurrentContext=CurrentGameContext;
+            }
+
+            RDFOntologyData DataModel = CurrentOntology.Data;
+            RDFOntologyTaxonomyEntry elementClassType = DataModel.Relations.ClassType.FirstOrDefault(entry => entry.TaxonomySubject.ToString().Contains(elementName));
             string elementClass = elementClassType.TaxonomyObject.ToString().Substring(elementClassType.TaxonomyObject.ToString().LastIndexOf('#') + 1);
             return elementClass;
         }
-
         /// <summary>
         /// Returns description of the element
         /// </summary>
         /// <param name="elementName">Name of the element</param>
         /// <returns></returns>
-        internal string GetElementDescription(string elementName)
+        internal string GetElementDescription(string elementName, bool applyOnCharacter = false)
         {
+            RDFOntology CurrentOntology;
+            string CurrentContext;
+
+            if ( applyOnCharacter==true )
+            {
+                CurrentOntology=CharacterOntology;
+                CurrentContext=CurrentCharacterContext;
+            }
+            else
+            {
+                CurrentOntology=GameOntology;
+                CurrentContext=CurrentGameContext;
+            }
+
             string elementDesc = null;
-            RDFOntologyData GameDataModel = GameOntology.Data;
-            RDFOntologyTaxonomyEntry elementCommentAnnotation = GameDataModel.Annotations.Comment.FirstOrDefault(entry => entry.TaxonomySubject.ToString().Contains(elementName));
+            RDFOntologyData DataModel = CurrentOntology.Data;
+            RDFOntologyTaxonomyEntry elementCommentAnnotation = DataModel.Annotations.Comment.FirstOrDefault(entry => entry.TaxonomySubject.ToString().Contains(elementName));
             if (elementCommentAnnotation != null)
                 elementDesc = elementCommentAnnotation.TaxonomyObject.ToString().Replace("^^http://www.w3.org/2001/XMLSchema#string", "");
+
             return elementDesc;
         }
 
@@ -1388,34 +1441,33 @@ namespace ARPEGOS.Models
         /// <returns></returns>
         internal ObservableCollection<Item> GetIndividuals(string className, bool applyOnCharacter = false)
         {
-            ObservableCollection<Item> individuals = new ObservableCollection<Item>();
-            if (applyOnCharacter)
+            RDFOntology CurrentOntology;
+            string CurrentContext;
+
+            if ( applyOnCharacter==true )
             {
-                RDFOntologyClassModel CharacterClassModel = CharacterOntology.Model.ClassModel;
-                RDFOntologyData GameDataModel = CharacterOntology.Data;
-                RDFOntologyClass currentClass = CharacterClassModel.SelectClass(CurrentGameContext + className);
-                RDFOntologyTaxonomy classAssertions = GameDataModel.Relations.ClassType.SelectEntriesByObject(currentClass);
-                foreach (RDFOntologyTaxonomyEntry assertion in classAssertions)
-                {
-                    RDFOntologyResource individual = assertion.TaxonomySubject;
-                    string individualName = individual.ToString().Substring(individual.ToString().LastIndexOf('#') + 1);
-                    individuals.Add(new Item(individualName));
-                }
+                CurrentOntology=CharacterOntology;
+                CurrentContext=CurrentCharacterContext;
             }
             else
             {
-                RDFOntologyClassModel GameClassModel = GameOntology.Model.ClassModel;
-                RDFOntologyData GameDataModel = GameOntology.Data;
-
-                RDFOntologyClass currentClass = GameClassModel.SelectClass(CurrentGameContext + className);
-                RDFOntologyTaxonomy classAssertions = GameDataModel.Relations.ClassType.SelectEntriesByObject(currentClass);
-                foreach (RDFOntologyTaxonomyEntry assertion in classAssertions)
-                {
-                    RDFOntologyResource individual = assertion.TaxonomySubject;
-                    string individualName = individual.ToString().Substring(individual.ToString().LastIndexOf('#') + 1);
-                    individuals.Add(new Item(individualName));
-                }
+                CurrentOntology=GameOntology;
+                CurrentContext=CurrentGameContext;
             }
+
+            ObservableCollection<Item> individuals = new ObservableCollection<Item>();
+
+            RDFOntologyClassModel ClassModel = CurrentOntology.Model.ClassModel;
+            RDFOntologyData DataModel = CurrentOntology.Data;
+            RDFOntologyClass currentClass = ClassModel.SelectClass(CurrentContext + className);
+            RDFOntologyTaxonomy classAssertions = DataModel.Relations.ClassType.SelectEntriesByObject(currentClass);
+            foreach (RDFOntologyTaxonomyEntry assertion in classAssertions)
+            {
+                RDFOntologyResource individual = assertion.TaxonomySubject;
+                string individualName = individual.ToString().Substring(individual.ToString().LastIndexOf('#') + 1);
+                individuals.Add(new Item(individualName));
+            }
+            
             return individuals;
         }
 
@@ -1448,34 +1500,6 @@ namespace ARPEGOS.Models
             string creationSchemeRootUri  = GameOntology.Data.Annotations.CustomAnnotations.SelectEntriesByPredicate(new RDFOntologyAnnotationProperty(new RDFResource(CurrentGameContext + "CreationSchemeRoot"))).Single().TaxonomySubject.ToString();
             return creationSchemeRootUri.Substring(creationSchemeRootUri.LastIndexOf('#') + 1).Replace("Def_", "");
         }
-        /// <summary>
-        /// Returns the class of the given fact
-        /// </summary>
-        /// <param name="factName">Name of the fact</param>
-        /// <param name="applyOnCharacter">Check in character file</param>
-        /// <returns></returns>
-        internal string GetClass(string factName, bool applyOnCharacter = false)
-        {
-            string resultFact;
-            if(applyOnCharacter)
-            {
-                RDFOntologyData CharacterDataModel = CharacterOntology.Data;
-                RDFOntologyFact SubjectFact = CharacterDataModel.SelectFact(CurrentCharacterContext + factName);
-
-                RDFOntologyTaxonomyEntry SubjectFactEntry = CharacterDataModel.Relations.ClassType.SelectEntriesBySubject(SubjectFact).SingleOrDefault();
-                resultFact = SubjectFactEntry.TaxonomyObject.ToString().Substring(SubjectFactEntry.TaxonomyObject.ToString().LastIndexOf('#')+1);
-            }
-            else
-            {
-                RDFOntologyData GameDataModel = GameOntology.Data;
-                RDFOntologyFact SubjectFact = GameDataModel.SelectFact(CurrentGameContext + factName);
-
-                RDFOntologyTaxonomy SubjectFactClassTypeAssertions = GameDataModel.Relations.ClassType.SelectEntriesBySubject(SubjectFact);
-                RDFOntologyTaxonomyEntry SubjectFactEntry = SubjectFactClassTypeAssertions.SingleOrDefault();
-                resultFact = SubjectFactEntry.TaxonomyObject.ToString().Substring(SubjectFactEntry.TaxonomyObject.ToString().LastIndexOf('#') + 1);
-            }
-            return resultFact;
-        }
 
         /// <summary>
         /// Returns true if the given element has available points
@@ -1501,9 +1525,8 @@ namespace ARPEGOS.Models
             List<string> CompareList = new List<string>();
             List<RDFOntologyProperty> ResultProperties = new List<RDFOntologyProperty>();
 
-            string ElementDefinitionIndividual = "Def_" + ElementName;
-            RDFOntologyFact ElementDefinitionFact = GameOntology.Data.SelectFact(CurrentGameContext + ElementDefinitionIndividual);
-            RDFOntologyTaxonomy ElementDefinitionAnnotations = GameOntology.Data.Annotations.CustomAnnotations.SelectEntriesBySubject(ElementDefinitionFact);
+            RDFOntologyClass ElementDefinitionFact = GameOntology.Model.ClassModel.SelectClass(CurrentGameContext +ElementName );
+            RDFOntologyTaxonomy ElementDefinitionAnnotations = GameOntology.Model.ClassModel.Annotations.CustomAnnotations.SelectEntriesBySubject(ElementDefinitionFact);
             RDFOntologyTaxonomyEntry ElementGeneralCostAnnotation = ElementDefinitionAnnotations.Where(entry => entry.TaxonomyPredicate.ToString().Contains("GeneralCostDefinedBy")).SingleOrDefault();
             bool generalCostAnnotationFound = (ElementGeneralCostAnnotation != null);
             
@@ -1562,8 +1585,7 @@ namespace ARPEGOS.Models
                     else
                         currentResultPropertiesCount = 0;
                 }
-                    
-
+                
                 if (currentResultPropertiesCount != 0)
                 {
                     RDFOntologyProperty LimitProperty = ResultProperties.SingleOrDefault();
@@ -1852,13 +1874,18 @@ namespace ARPEGOS.Models
 
             foreach (Group substage in Substages)
             {
-                string SubstageName = "Def_" + substage.Title;
-                RDFOntologyFact SubstageDefinitionFact = this.GameOntology.Data.SelectFact(this.CurrentGameContext + SubstageName);
-                RDFOntologyTaxonomyEntry SubstageOrderEntry = this.GameOntology.Data.Annotations.CustomAnnotations.SelectEntriesBySubject(SubstageDefinitionFact).Where(entry => entry.TaxonomyPredicate.ToString().Contains("SubstageOrder")).SingleOrDefault();
+                RDFOntologyClass SubstageDefinitionClass = GameOntology.Model.ClassModel.SelectClass(CurrentGameContext +substage.Title );
+                RDFOntologyTaxonomyEntry SubstageOrderEntry = GameOntology.Model.ClassModel.Annotations.CustomAnnotations.SelectEntriesBySubject( SubstageDefinitionClass ).Where(entry => entry.TaxonomyPredicate.ToString().Contains("SubstageOrder")).SingleOrDefault();
                 if (SubstageOrderEntry != null)
                     SubstagesAndOrder.Add(Convert.ToInt32(SubstageOrderEntry.TaxonomyObject.ToString().Substring(0, SubstageOrderEntry.TaxonomyObject.ToString().IndexOf('^'))), substage.Title);
+                else
+                {
+                    RDFOntologyFact SubstageDefinitionFact = this.GameOntology.Data.SelectFact(this.CurrentGameContext+SubstageName );
+                    SubstageOrderEntry = this.GameOntology.Data.Annotations.CustomAnnotations.SelectEntriesBySubject ( SubstageDefinitionFact ).Where ( entry => entry.TaxonomyPredicate.ToString ().Contains ( "SubstageOrder" ) ).SingleOrDefault ();
+                    if ( SubstageOrderEntry!=null )
+                        SubstagesAndOrder.Add ( Convert.ToInt32 ( SubstageOrderEntry.TaxonomyObject.ToString ().Substring ( 0 , SubstageOrderEntry.TaxonomyObject.ToString ().IndexOf ( '^' ) ) ) , substage.Title );
+                }
             }
-
             return new SortedList<int, string>(SubstagesAndOrder);
         }
 
@@ -1867,13 +1894,27 @@ namespace ARPEGOS.Models
         /// </summary>
         /// <param name="elementName">Name of the element</param>
         /// <returns></returns>
-        internal string GetParentClasses(string elementName)
+        internal string GetParentClasses(string elementName, bool applyOnCharacter = false)
         {
+            RDFOntology CurrentOntology;
+            string CurrentContext;
+
+            if ( applyOnCharacter==true )
+            {
+                CurrentOntology=CharacterOntology;
+                CurrentContext=CurrentCharacterContext;
+            }
+            else
+            {
+                CurrentOntology=GameOntology;
+                CurrentContext=CurrentGameContext;
+            }
+
             string parent = null;
-            RDFOntologyClass elementClass = GameOntology.Model.ClassModel.SelectClass(CurrentGameContext + elementName);
+            RDFOntologyClass elementClass = CurrentOntology.Model.ClassModel.SelectClass(CurrentContext + elementName);
             if(elementClass != null)
             {
-                RDFOntologyTaxonomy elementClassEntries = GameOntology.Model.ClassModel.Relations.SubClassOf.SelectEntriesBySubject(elementClass);
+                RDFOntologyTaxonomy elementClassEntries = CurrentOntology.Model.ClassModel.Relations.SubClassOf.SelectEntriesBySubject(elementClass);
                 foreach (RDFOntologyTaxonomyEntry entry in elementClassEntries)
                     parent += entry.TaxonomyObject.ToString().Substring(entry.TaxonomyObject.ToString().LastIndexOf('#') + 1) + ":";
                 if (parent != null)
@@ -1882,8 +1923,8 @@ namespace ARPEGOS.Models
             }
             else
             {
-                RDFOntologyFact elementFact = GameOntology.Data.SelectFact(CurrentGameContext + elementName);
-                RDFOntologyTaxonomy ElementClassAssertions = GameOntology.Data.Relations.ClassType.SelectEntriesBySubject(elementFact);
+                RDFOntologyFact elementFact = CurrentOntology.Data.SelectFact( CurrentContext+ elementName);
+                RDFOntologyTaxonomy ElementClassAssertions = CurrentOntology.Data.Relations.ClassType.SelectEntriesBySubject(elementFact);
                 foreach(RDFOntologyTaxonomyEntry entry in ElementClassAssertions)
                     parent += entry.TaxonomyObject.ToString().Substring(entry.TaxonomyObject.ToString().LastIndexOf('#') + 1) + ":";
                 if (parent != null)
@@ -2775,51 +2816,43 @@ namespace ARPEGOS.Models
 
         internal ObservableCollection<Group> GetSubClasses(string className, bool applyOnCharacter = false)
         {
-            ObservableCollection<Group> subclasses = new ObservableCollection<Group>();
+            RDFOntology CurrentOntology;
+            string CurrentContext;
 
-            if (applyOnCharacter)
+            if ( applyOnCharacter==true )
             {
-                RDFOntologyClassModel CharacterClassModel = CharacterOntology.Model.ClassModel;
-                RDFOntologyClass RootClass = CharacterClassModel.SelectClass(CurrentGameContext + className);
-                RDFOntologyTaxonomy SubClassesOfRoot = CharacterClassModel.Relations.SubClassOf.SelectEntriesByObject(RootClass);
-
-                if (SubClassesOfRoot.EntriesCount != 0)
-                    foreach (RDFOntologyTaxonomyEntry currentEntry in SubClassesOfRoot)
-                    {
-                        string groupName = currentEntry.TaxonomySubject.ToString().Substring(currentEntry.TaxonomySubject.ToString().LastIndexOf('#') + 1);
-                        RDFOntologyClass currentClass = CharacterClassModel.SelectClass(CurrentGameContext + groupName);
-                        RDFOntologyTaxonomy UpperClassesOfCurrent = CharacterClassModel.Relations.SubClassOf.SelectEntriesBySubject(currentClass);
-
-                        foreach (RDFOntologyTaxonomyEntry currentUpperClassEntry in UpperClassesOfCurrent)
-                        {
-                            string upperClass = currentUpperClassEntry.TaxonomyObject.ToString().Substring(currentUpperClassEntry.TaxonomyObject.ToString().LastIndexOf('#') + 1);
-                            if (CharacterClassModel.SelectClass(CurrentCharacterContext + upperClass) == RootClass)
-                                subclasses.Add(new Group(groupName));
-                        }
-                    }
-                else
-                    subclasses = null;
+                CurrentOntology=CharacterOntology;
+                CurrentContext=CurrentCharacterContext;
             }
             else
             {
-                RDFOntologyClassModel GameClassModel = GameOntology.Model.ClassModel;
-                RDFOntologyClass RootClass = GameClassModel.SelectClass(CurrentGameContext + className);
-                RDFOntologyTaxonomy SubClassesOfRoot = GameClassModel.Relations.SubClassOf.SelectEntriesByObject(RootClass);
+                CurrentOntology = GameOntology;
+                CurrentContext = CurrentGameContext;
+            }
 
-                if (SubClassesOfRoot.EntriesCount != 0)
-                    foreach (RDFOntologyTaxonomyEntry currentEntry in SubClassesOfRoot)
+            ObservableCollection<Group> subclasses = new ObservableCollection<Group>();
+
+            RDFOntologyClassModel ClassModel = CurrentOntology.Model.ClassModel;
+            RDFOntologyClass RootClass = ClassModel.SelectClass(CurrentContext + className);
+            RDFOntologyTaxonomy SubClassesOfRoot = ClassModel.Relations.SubClassOf.SelectEntriesByObject(RootClass);
+
+            if (SubClassesOfRoot.EntriesCount != 0)
+                foreach (RDFOntologyTaxonomyEntry currentEntry in SubClassesOfRoot)
+                {
+                    string groupName = currentEntry.TaxonomySubject.ToString().Substring(currentEntry.TaxonomySubject.ToString().LastIndexOf('#') + 1);
+                    RDFOntologyClass currentClass = ClassModel.SelectClass(CurrentContext + groupName);
+                    RDFOntologyTaxonomy UpperClassesOfCurrent = ClassModel.Relations.SubClassOf.SelectEntriesBySubject(currentClass);
+
+                    foreach (RDFOntologyTaxonomyEntry currentUpperClassEntry in UpperClassesOfCurrent)
                     {
-                        string groupName = currentEntry.TaxonomySubject.ToString().Substring(currentEntry.TaxonomySubject.ToString().LastIndexOf('#') + 1);
-                        RDFOntologyClass currentClass = GameClassModel.SelectClass(CurrentGameContext + groupName);
-                        RDFOntologyTaxonomyEntry UpperClassesOfCurrent = GameClassModel.Relations.SubClassOf.SelectEntriesBySubject(currentClass).SingleOrDefault();
-
-                        string upperClass = UpperClassesOfCurrent.TaxonomyObject.ToString().Substring(UpperClassesOfCurrent.TaxonomyObject.ToString().LastIndexOf('#') + 1);
-                        if (GameClassModel.SelectClass(CurrentGameContext + upperClass) == RootClass)
+                        string upperClass = currentUpperClassEntry.TaxonomyObject.ToString().Substring(currentUpperClassEntry.TaxonomyObject.ToString().LastIndexOf('#') + 1);
+                        if ( ClassModel.SelectClass(CurrentCharacterContext + upperClass) == RootClass)
                             subclasses.Add(new Group(groupName));
                     }
-                else
-                    subclasses = null;
-            }
+                }
+            else
+                subclasses = null;
+            
             return subclasses;
         }
 
@@ -2872,45 +2905,7 @@ namespace ARPEGOS.Models
             return ReturnType;
         }
 
-        /// <summary>
-        /// Shows in console the information tree of the current character
-        /// </summary>
-        internal void ShowCharacterFile()
-        {
-            SortedDictionary<string, Group> CharacterGroups = new SortedDictionary<string, Group>();
-            SortedSet<RDFOntologyClass> CharacterClasses = new SortedSet<RDFOntologyClass>();
-            SortedSet<RDFOntologyClass> CharacterSubclasses = new SortedSet<RDFOntologyClass>();
-
-            RDFOntologyClassModel CharacterClassModel = CharacterOntology.Model.ClassModel;
-            RDFOntologyData CharacterDataModel = CharacterOntology.Data;
-            RDFOntologyTaxonomy Classes = CharacterDataModel.Relations.ClassType;
-            foreach (RDFOntologyTaxonomyEntry entry in Classes)
-            {
-                RDFOntologyClass currentClass = CharacterClassModel.SelectClass(entry.TaxonomySubject.ToString());
-                CharacterClasses.Add(currentClass);
-            }
-
-            RDFOntologyTaxonomy Subclasses = CharacterClassModel.Relations.SubClassOf;
-            foreach (RDFOntologyTaxonomyEntry entry in Subclasses)
-            {
-                RDFOntologyClass currentClass = CharacterClassModel.SelectClass(entry.TaxonomySubject.ToString());
-                CharacterSubclasses.Add(currentClass);
-            }
-
-            foreach (RDFOntologyClass item in CharacterClasses)
-                if (!CharacterSubclasses.Contains(item))
-                    CharacterClasses.Remove(item);
-
-            //Para cada elemento en RootClasses, crear un grupo con el nombre de la clase
-            foreach (RDFOntologyClass item in CharacterClasses)
-            {
-                string groupName = item.ToString().Substring(item.ToString().LastIndexOf('#') + 1);
-                CharacterGroups.Add(groupName, new Group(groupName));
-            }
-
-            foreach (Group group in CharacterGroups.Values)
-                group.ShowGroup();
-        }
+        
 
         #endregion
 
@@ -2959,7 +2954,6 @@ namespace ARPEGOS.Models
                     RDFOntologyFact entrySubject = entry.TaxonomySubject as RDFOntologyFact;
                     RDFOntologyLiteral entryLiteral = entry.TaxonomyObject as RDFOntologyLiteral;
                     CharacterOntology.Data.RemoveAssertionRelation(entrySubject, predicate, entryLiteral);
-                    SaveCharacter();
                 }
             }
             else
@@ -2970,7 +2964,6 @@ namespace ARPEGOS.Models
                 {
                     RDFOntologyFact entrySubject = entry.TaxonomySubject as RDFOntologyFact;
                     CharacterOntology.Data.RemoveAssertionRelation(entrySubject, predicate, entryLiteral);
-                    SaveCharacter();
                 }
             }
             SaveCharacter();
@@ -2992,7 +2985,6 @@ namespace ARPEGOS.Models
                     RDFOntologyFact entrySubject = entry.TaxonomySubject as RDFOntologyFact;
                     RDFOntologyFact entryObject = entry.TaxonomyObject as RDFOntologyFact;
                     CharacterOntology.Data.RemoveAssertionRelation(entrySubject, predicate, entryObject);
-                    SaveCharacter();
                 }
             }
             else
@@ -3001,7 +2993,6 @@ namespace ARPEGOS.Models
                 RDFOntologyTaxonomyEntry entry = CharacterOntology.Data.Relations.Assertions.SelectEntriesByPredicate(predicate).SelectEntriesByObject(entryObject).SingleOrDefault();
                 RDFOntologyFact entrySubject = entry.TaxonomySubject as RDFOntologyFact;
                 CharacterOntology.Data.RemoveAssertionRelation(entrySubject, predicate, entryObject);
-                SaveCharacter();
             }
             SaveCharacter();
         }
