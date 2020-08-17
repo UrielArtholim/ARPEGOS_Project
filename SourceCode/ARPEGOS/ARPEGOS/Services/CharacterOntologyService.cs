@@ -1,10 +1,9 @@
 ﻿
 namespace ARPEGOS.Services
 {
-    using RDFSharp.Model;
     using RDFSharp.Semantics;
 
-    public class CharacterOntologyService : OntologyService
+    public partial class CharacterOntologyService : OntologyService
     {
         public GameOntologyService Game { get; }
 

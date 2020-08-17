@@ -50,6 +50,42 @@ namespace ARPEGOS.Services
             return true;
         }
 
+        public static bool DeleteGame(string name)
+        {
+            var path = GetGameBasePath(name);
+            if (Directory.Exists(path))
+            {
+                Directory.Delete(path, true);
+                return true;
+            }
+
+            return false;
+        }
+
+        public static bool DeleteGameVersion(string game, string version)
+        {
+            var path = GetGameFilePath(game, version);
+            if (File.Exists(path))
+            {
+                File.Delete(path);
+                return true;
+            }
+
+            return false;
+        }
+
+        public static bool DeleteCharacter(string name, string game)
+        {
+            var path = GetCharacterFilePath(name, game);
+            if (File.Exists(path))
+            {
+                File.Delete(path);
+                return true;
+            }
+
+            return false;
+        }
+
         public static string GetGameBasePath(string name)
         {
             return Path.Combine(BaseFolder, EscapedName(name));
