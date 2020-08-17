@@ -171,7 +171,7 @@ namespace ARPEGOS.Services
         /// </summary>
         /// <param name="elementClassName"></param>
         /// <returns></returns>
-        internal bool CheckEquipmentClass (string elementClassName)
+        public bool CheckEquipmentClass (string elementClassName)
         {
             var equipmentWords = new List<string> { "Equipamiento", "Equipment", "Équipement" };
             var elementClass = this.Ontology.Model.ClassModel.SelectClass($"{this.Context}{elementClassName}");
@@ -191,7 +191,7 @@ namespace ARPEGOS.Services
         /// </summary>
         /// <param name="stage">Name of the stage stage</param>
         /// <returns></returns>
-        internal string CheckValueListInfo(string stage, bool applyOnCharacter = false)
+        public string CheckValueListInfo(string stage, bool applyOnCharacter = false)
         {
             string info = null;
 

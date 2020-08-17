@@ -17,7 +17,7 @@ namespace ARPEGOS.Services
         /// <param name="GeneralLimitValue">Value of the general limit</param>
         /// <param name="PartialLimitValue">Value of the partial limit</param>
         /// <returns></returns>
-        internal List<string> CheckAvailableOptions(string stage, bool hasGeneralLimitValue, float? generalLimitValue, float? partialLimitValue)
+        public List<string> CheckAvailableOptions(string stage, bool hasGeneralLimitValue, float? generalLimitValue, float? partialLimitValue)
         {
             var costWords = new List<string> { "Coste", "Cost", "Coût" };
             var requirementWords = new List<string> {"Requisito", "Requirement", "Requisite", "Prérequis" };
