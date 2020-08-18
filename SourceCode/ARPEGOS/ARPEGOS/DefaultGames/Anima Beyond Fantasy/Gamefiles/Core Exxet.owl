@@ -863,7 +863,7 @@
     <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tieneClaseSocial -->
 
     <owl:ObjectProperty rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tieneClaseSocial">
-        <rdfs:subPropertyOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#PersonajeTieneObjeto"/>
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tieneGeneral"/>
         <rdfs:domain rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Clase_Social"/>
     </owl:ObjectProperty>
@@ -53965,8 +53965,8 @@ el potencial psíquico al usar esta disciplina.</rdfs:comment>
         <SubstageOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</SubstageOrder>
     </rdf:Description>
     <rdf:Description rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Libro_Esencia">
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La Esencia controla la vida y las almas. Esta vía tiene el poder sobre los espíritus y los seres naturales que pertenecen al mundo. Es también la vía de la naturaleza y los conjuros de origen druídicos. La vía opuesta a Esencia es Ilusión.</rdfs:comment>
         <SubstageOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</SubstageOrder>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La Esencia controla la vida y las almas. Esta vía tiene el poder sobre los espíritus y los seres naturales que pertenecen al mundo. Es también la vía de la naturaleza y los conjuros de origen druídicos. La vía opuesta a Esencia es Ilusión.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Libro_Fuego">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La primera de las cuatro vías elementales menores tiene el control sobre las altas temperaturas. Sus conjuros crean calor, fuego y arrasan grandes cantidades de terreno. También reúne conjuros de sacrificio, que permiten consumir ciertos aspectos de un individuo para potenciar a cambio otros. Es una vía muy ofensiva. La vía opuesta a Fuego es Agua.</rdfs:comment>
