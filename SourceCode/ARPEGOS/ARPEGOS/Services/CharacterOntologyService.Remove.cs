@@ -12,28 +12,28 @@ namespace ARPEGOS.Services
         /// <param name="literal">Value of the property</param>
         internal void RemoveDatatypeProperty(string predicateName, string literal = null)
         {
-            RDFOntologyDatatypeProperty predicate = CharacterOntology.Model.PropertyModel.SelectProperty(CurrentCharacterContext + predicateName) as RDFOntologyDatatypeProperty;
-            RDFOntologyTaxonomy CharacterPredicateAssertions = CharacterOntology.Data.Relations.Assertions.SelectEntriesByPredicate(predicate);
+            var predicate = this.Ontology.Model.PropertyModel.SelectProperty($"{this.Context}{predicateName}") as RDFOntologyDatatypeProperty;
+            var CharacterPredicateAssertions = this.Ontology.Data.Relations.Assertions.SelectEntriesByPredicate(predicate);
             if(literal == null)
             {
-                foreach(RDFOntologyTaxonomyEntry entry in CharacterPredicateAssertions)
+                foreach(var entry in CharacterPredicateAssertions)
                 {
-                    RDFOntologyFact entrySubject = entry.TaxonomySubject as RDFOntologyFact;
-                    RDFOntologyLiteral entryLiteral = entry.TaxonomyObject as RDFOntologyLiteral;
-                    CharacterOntology.Data.RemoveAssertionRelation(entrySubject, predicate, entryLiteral);
+                    var entrySubject = entry.TaxonomySubject as RDFOntologyFact;
+                    var entryLiteral = entry.TaxonomyObject as RDFOntologyLiteral;
+                    this.Ontology.Data.RemoveAssertionRelation(entrySubject, predicate, entryLiteral);
                 }
             }
             else
             {
-                RDFOntologyLiteral entryLiteral = CharacterOntology.Data.SelectLiteral(literal);
-                RDFOntologyTaxonomy entries = CharacterOntology.Data.Relations.Assertions.SelectEntriesByPredicate(predicate).SelectEntriesByObject(entryLiteral);
-                foreach(RDFOntologyTaxonomyEntry entry in entries)
+                var entryLiteral = this.Ontology.Data.SelectLiteral(literal);
+                var entries = this.Ontology.Data.Relations.Assertions.SelectEntriesByPredicate(predicate).SelectEntriesByObject(entryLiteral);
+                foreach(var entry in entries)
                 {
-                    RDFOntologyFact entrySubject = entry.TaxonomySubject as RDFOntologyFact;
-                    CharacterOntology.Data.RemoveAssertionRelation(entrySubject, predicate, entryLiteral);
+                    var entrySubject = entry.TaxonomySubject as RDFOntologyFact;
+                    this.Ontology.Data.RemoveAssertionRelation(entrySubject, predicate, entryLiteral);
                 }
             }
-            SaveCharacter();
+            this.Save();
         }
 
         /// <summary>
@@ -43,25 +43,25 @@ namespace ARPEGOS.Services
         /// <param name="objectFactName"></param>
         internal void RemoveObjectProperty(string predicateName, string objectFactName = null)
         {
-            RDFOntologyObjectProperty predicate = CharacterOntology.Model.PropertyModel.SelectProperty(CurrentCharacterContext + predicateName) as RDFOntologyObjectProperty;
-            RDFOntologyTaxonomy CharacterPredicateAssertions = CharacterOntology.Data.Relations.Assertions.SelectEntriesByPredicate(predicate);
+            var predicate = this.Ontology.Model.PropertyModel.SelectProperty($"{this.Context}{predicateName}") as RDFOntologyObjectProperty;
+            var CharacterPredicateAssertions = this.Ontology.Data.Relations.Assertions.SelectEntriesByPredicate(predicate);
             if (objectFactName == null)
             {
-                foreach (RDFOntologyTaxonomyEntry entry in CharacterPredicateAssertions)
+                foreach (var entry in CharacterPredicateAssertions)
                 {
-                    RDFOntologyFact entrySubject = entry.TaxonomySubject as RDFOntologyFact;
-                    RDFOntologyFact entryObject = entry.TaxonomyObject as RDFOntologyFact;
-                    CharacterOntology.Data.RemoveAssertionRelation(entrySubject, predicate, entryObject);
+                    var entrySubject = entry.TaxonomySubject as RDFOntologyFact;
+                    var entryObject = entry.TaxonomyObject as RDFOntologyFact;
+                    this.Ontology.Data.RemoveAssertionRelation(entrySubject, predicate, entryObject);
                 }
             }
             else
             {
-                RDFOntologyFact entryObject = CharacterOntology.Data.SelectFact(CurrentCharacterContext + objectFactName);
-                RDFOntologyTaxonomyEntry entry = CharacterOntology.Data.Relations.Assertions.SelectEntriesByPredicate(predicate).SelectEntriesByObject(entryObject).SingleOrDefault();
-                RDFOntologyFact entrySubject = entry.TaxonomySubject as RDFOntologyFact;
-                CharacterOntology.Data.RemoveAssertionRelation(entrySubject, predicate, entryObject);
+                var entryObject = this.Ontology.Data.SelectFact(this.Context + objectFactName);
+                var entry = this.Ontology.Data.Relations.Assertions.SelectEntriesByPredicate(predicate).SelectEntriesByObject(entryObject).SingleOrDefault();
+                var entrySubject = entry.TaxonomySubject as RDFOntologyFact;
+                this.Ontology.Data.RemoveAssertionRelation(entrySubject, predicate, entryObject);
             }
-            SaveCharacter();
+            this.Save();
         }
     }
 }
