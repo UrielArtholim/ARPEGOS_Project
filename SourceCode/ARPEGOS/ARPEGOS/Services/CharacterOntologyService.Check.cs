@@ -31,8 +31,6 @@ namespace ARPEGOS.Services
                     {
                         var itemFact = this.Game.Ontology.Data.SelectFact($"{this.Game.Context}{item.Name}");
                         var itemFactAssertions = this.Game.Ontology.Data.Relations.Assertions.SelectEntriesBySubject(itemFact);
-
-                        //Check it has requisites
                         var itemRequirements = itemFactAssertions.Where(entry => requirementWords.Any(word => entry.ToString().Contains(word)));
                         string datatypeRequirementName;
                         var allRequirementsFulfilled = true;
@@ -48,7 +46,6 @@ namespace ARPEGOS.Services
                                     continue;
                                 requirementsChecked.Add(datatypeRequirementName);
                                 var isDatatype = this.CheckDatatypeProperty(datatypeRequirementName);
-
                                 if (isDatatype)
                                 {
                                     var requirementNumber = datatypeRequirementName.Split('_').ToList().LastOrDefault();
@@ -56,8 +53,8 @@ namespace ARPEGOS.Services
                                     itemObjectRequirements = itemObjectRequirements.Where(entry => entry.ToString().Contains("_" + requirementNumber));
                                     foreach (var requirementEntry in itemObjectRequirements)
                                     {
-                                        var predicate = requirementEntry.TaxonomyPredicate.ToString().Substring(requirementEntry.TaxonomyPredicate.ToString().LastIndexOf('#') + 1);
-                                        var name = requirementEntry.TaxonomyObject.ToString().Substring(requirementEntry.TaxonomyObject.ToString().LastIndexOf('#') + 1);
+                                        var predicate = requirementEntry.TaxonomyPredicate.ToString().Split('#').Last();
+                                        var name = requirementEntry.TaxonomyObject.ToString().Split('#').Last();
                                         objectRequirementNameList.Add(name);
                                         requirementsChecked.Add(predicate);
                                     }
@@ -85,7 +82,7 @@ namespace ARPEGOS.Services
                                         if (isDatatype)
                                         {
                                             var requirementAssertion = characterAssertions.SingleOrDefault(entry => entry.TaxonomyPredicate.ToString().Contains(objectFactName));
-                                            var requirementValue = Convert.ToSingle(entry.TaxonomyObject.ToString().Substring(0, entry.TaxonomyObject.ToString().IndexOf('^')));
+                                            var requirementValue = Convert.ToSingle(entry.TaxonomyObject.ToString().Split('^').First());
                                             var characterValue = Convert.ToSingle(requirementAssertion.TaxonomyObject.ToString().Split('#').First());
                                             var result = ConvertToOperator("<", characterValue, requirementValue);
                                             objectRequirementNameDictionary.Add(name, result != true);
@@ -102,8 +99,8 @@ namespace ARPEGOS.Services
                                             if (isDatatype)
                                             {
                                                 var requirementAssertion = requirementAssertions.SingleOrDefault();
-                                                var RequirementValue = Convert.ToSingle(entry.TaxonomyObject.ToString().Substring(0, entry.TaxonomyObject.ToString().IndexOf('^')));
-                                                var CharacterValue = Convert.ToSingle(requirementAssertion.TaxonomyObject.ToString().Split('#').First());
+                                                var RequirementValue = Convert.ToSingle(entry.TaxonomyObject.ToString().Split('^').First());
+                                                var CharacterValue = Convert.ToSingle(requirementAssertion.TaxonomyObject.ToString().Split('^').First());
                                                 var result = ConvertToOperator("<", CharacterValue, RequirementValue);
                                                 objectRequirementNameDictionary.Add(name, result != true);
                                             }
@@ -112,7 +109,6 @@ namespace ARPEGOS.Services
                                             allRequirementsFulfilled = false;
                                     }
                                 }
-
                                 if (objectRequirementNameDictionary.Values.All(value => value == false))
                                     allRequirementsFulfilled = false;
                             }
@@ -120,7 +116,6 @@ namespace ARPEGOS.Services
 
                         if (allRequirementsFulfilled)
                         {
-                            //Check it has costs
                             var itemCosts = itemFactAssertions.Where(entry => costWords.Any(word => entry.ToString().Contains(word)));
                             RDFOntologyTaxonomyEntry itemCostEntry = null;
 
@@ -148,7 +143,6 @@ namespace ARPEGOS.Services
                                     var costMatchPartialLimit = CheckCostAndLimit(itemCostEntryPredicate, partialLimitName);
                                     if (itemCostEntryPredicate != partialLimitName)
                                     {
-                                        // Buscar límite K
                                         var itemCostWords = itemCostEntryPredicate.Split('_').ToList();
                                         var characterClass = new List<string> { "Personaje", "Character", "Personnage" };
                                         var characterDatatatypePropertyFound = false;
@@ -196,7 +190,7 @@ namespace ARPEGOS.Services
                                         }
 
                                         var entry = this.Ontology.Data.Relations.Assertions.SelectEntriesBySubject(characterFact).SelectEntriesByPredicate(requirementCostProperty).SingleOrDefault();
-                                        var entryValue = Convert.ToSingle(entry.TaxonomyObject.ToString().Substring(0, entry.TaxonomyObject.ToString().IndexOf('^')));
+                                        var entryValue = Convert.ToSingle(entry.TaxonomyObject.ToString().Split('^').First());
                                         if (entryValue >= costValue)
                                             availableOptions.Add(item.Name);
                                     }
