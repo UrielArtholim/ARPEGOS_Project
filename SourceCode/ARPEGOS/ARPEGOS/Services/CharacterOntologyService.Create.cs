@@ -39,9 +39,8 @@ namespace ARPEGOS.Services
             var CharacterFact = new RDFOntologyFact(new RDFResource(this.Context + name));
             if (!CheckFact(name))
                 CharacterDataModel.AddFact(CharacterFact);
-
             var GameAnnotations = GameDataModel.Annotations;
-            foreach (PropertyInfo propertyInfo in GameAnnotations.GetType().GetProperties())
+            foreach (var propertyInfo in GameAnnotations.GetType().GetProperties())
             {
                 var AnnotationsList = new List<RDFOntologyTaxonomyEntry>();
                 var propertyTaxonomy = GameAnnotations.GetType().GetProperty(propertyInfo.Name).GetValue(GameAnnotations) as RDFOntologyTaxonomy;
@@ -110,6 +109,42 @@ namespace ARPEGOS.Services
             }
             if (CharacterPreviousClass != null)
                 CharacterClassModel.AddSubClassOfRelation(CharacterClass, CharacterPreviousClass);
+
+            var GameAnnotations = GameClassModel.Annotations;
+            foreach (var propertyInfo in GameAnnotations.GetType().GetProperties())
+            {
+                var AnnotationsList = new List<RDFOntologyTaxonomyEntry>();
+                var propertyTaxonomy = GameAnnotations.GetType().GetProperty(propertyInfo.Name).GetValue(GameAnnotations) as RDFOntologyTaxonomy;
+                if (propertyTaxonomy.EntriesCount > 0)
+                {
+                    foreach (var entry in propertyTaxonomy)
+                        if (entry.TaxonomySubject == GameClass)
+                            AnnotationsList.Add(entry);
+                    if (propertyInfo.Name != "CustomAnnotations")
+                    {
+                        foreach (var entry in AnnotationsList)
+                        {
+                            var type = (RDFSemanticsEnums.RDFOntologyStandardAnnotation) Enum.Parse(typeof(RDFSemanticsEnums.RDFOntologyStandardAnnotation), propertyInfo.Name);
+                            CharacterClassModel.AddStandardAnnotation(type, CharacterClass, entry.TaxonomyObject);
+                        }
+                    }
+                    else
+                    {
+                        foreach (var entry in AnnotationsList)
+                        {
+                            var AnnotationType = entry.TaxonomyPredicate.ToString().Substring(entry.TaxonomyPredicate.ToString().LastIndexOf('#') + 1);
+                            RDFOntologyAnnotationProperty AnnotationProperty = this.Ontology.Model.PropertyModel.SelectProperty(this.Context + AnnotationType) as RDFOntologyAnnotationProperty;
+                            if (AnnotationProperty == null)
+                            {
+                                var annotation = new RDFOntologyAnnotationProperty(new RDFResource(this.Context + AnnotationType));
+                                this.Ontology.Model.PropertyModel.AddProperty(annotation);
+                                AnnotationProperty = annotation;
+                            }
+                            CharacterClassModel.AddCustomAnnotation(AnnotationProperty, CharacterClass, entry.TaxonomyObject);
+                        }
+                    }
+                }
+            }
             this.Save();
             return CharacterClass;
         }
@@ -124,10 +159,7 @@ namespace ARPEGOS.Services
             var GamePropertyModel = this.Game.Ontology.Model.PropertyModel;
             var CharacterPropertyModel = this.Ontology.Model.PropertyModel;
             var CharacterClassModel = this.Ontology.Model.ClassModel;
-
             var GameObjectProperty = GamePropertyModel.SelectProperty(this.Game.Context + name) as RDFOntologyObjectProperty;
-            RDFOntologyObjectProperty CharacterPreviousObjectProperty = null;
-
             var CharacterObjectProperty = new RDFOntologyObjectProperty(new RDFResource(this.Context + name));
             if (!CheckObjectProperty(name))
             {
@@ -152,13 +184,12 @@ namespace ARPEGOS.Services
                         RangeClass = CharacterClassModel.SelectClass(this.Context + RangeName);
                     CharacterObjectProperty.SetRange(RangeClass);
                 }
-
                 CharacterObjectProperty.SetFunctional(GameObjectProperty.Functional);
                 CharacterPropertyModel.AddProperty(CharacterObjectProperty);
             }
-
             var GameSuperProperties = GamePropertyModel.GetSuperPropertiesOf(GameObjectProperty).ToList();
             GameSuperProperties.Reverse();
+            RDFOntologyObjectProperty CharacterPreviousObjectProperty = null;
             foreach (var item in GameSuperProperties)
             {
                 var superproperty = item as RDFOntologyObjectProperty;
@@ -172,7 +203,41 @@ namespace ARPEGOS.Services
             }
             if (CharacterPreviousObjectProperty != null)
                 CharacterPropertyModel.AddSubPropertyOfRelation(CharacterObjectProperty, CharacterPreviousObjectProperty);
-
+            var GameAnnotations = GamePropertyModel.Annotations;
+            foreach (var propertyInfo in GameAnnotations.GetType().GetProperties())
+            {
+                var AnnotationsList = new List<RDFOntologyTaxonomyEntry>();
+                var propertyTaxonomy = GameAnnotations.GetType().GetProperty(propertyInfo.Name).GetValue(GameAnnotations) as RDFOntologyTaxonomy;
+                if (propertyTaxonomy.EntriesCount > 0)
+                {
+                    foreach (var entry in propertyTaxonomy)
+                        if (entry.TaxonomySubject == GameObjectProperty)
+                            AnnotationsList.Add(entry);
+                    if (propertyInfo.Name != "CustomAnnotations")
+                    {
+                        foreach (var entry in AnnotationsList)
+                        {
+                            RDFSemanticsEnums.RDFOntologyStandardAnnotation type = (RDFSemanticsEnums.RDFOntologyStandardAnnotation) Enum.Parse(typeof(RDFSemanticsEnums.RDFOntologyStandardAnnotation), propertyInfo.Name);
+                            CharacterPropertyModel.AddStandardAnnotation(type, CharacterObjectProperty, entry.TaxonomyObject);
+                        }
+                    }
+                    else
+                    {
+                        foreach (var entry in AnnotationsList)
+                        {
+                            var AnnotationType = entry.TaxonomyPredicate.ToString().Substring(entry.TaxonomyPredicate.ToString().LastIndexOf('#') + 1);
+                            RDFOntologyAnnotationProperty AnnotationProperty = CharacterPropertyModel.SelectProperty(this.Context + AnnotationType) as RDFOntologyAnnotationProperty;
+                            if (AnnotationProperty == null)
+                            {
+                                var annotation = new RDFOntologyAnnotationProperty(new RDFResource(this.Context + AnnotationType));
+                                CharacterPropertyModel.AddProperty(annotation);
+                                AnnotationProperty = annotation;
+                            }
+                            CharacterPropertyModel.AddCustomAnnotation(AnnotationProperty, CharacterObjectProperty, entry.TaxonomyObject);
+                        }
+                    }
+                }
+            }
             this.Save();
             return CharacterObjectProperty;
         }
@@ -188,7 +253,6 @@ namespace ARPEGOS.Services
             var CharacterPropertyModel = this.Ontology.Model.PropertyModel;
             var CharacterClassModel = this.Ontology.Model.ClassModel;
             var GameDatatypeProperty = GamePropertyModel.SelectProperty(this.Game.Context + name) as RDFOntologyDatatypeProperty;
-            RDFOntologyDatatypeProperty CharacterPreviousDatatypeProperty = null;
             var GameSuperProperties = GamePropertyModel.GetSuperPropertiesOf(GameDatatypeProperty).ToList();
             GameSuperProperties.Reverse();
             var CharacterDatatypeProperty = new RDFOntologyDatatypeProperty(new RDFResource(this.Context + name));
@@ -212,7 +276,7 @@ namespace ARPEGOS.Services
                 CharacterDatatypeProperty.SetFunctional(GameDatatypeProperty.Functional);
                 CharacterPropertyModel.AddProperty(CharacterDatatypeProperty);
             }
-
+            RDFOntologyDatatypeProperty CharacterPreviousDatatypeProperty = null;
             foreach (var item in GameSuperProperties)
             {
                 var superproperty = item as RDFOntologyDatatypeProperty;
@@ -226,7 +290,44 @@ namespace ARPEGOS.Services
             }
             if (CharacterPreviousDatatypeProperty != null)
                 CharacterPropertyModel.AddSubPropertyOfRelation(CharacterDatatypeProperty, CharacterPreviousDatatypeProperty);
+            var GameAnnotations = GamePropertyModel.Annotations;
+            foreach (var propertyInfo in GameAnnotations.GetType().GetProperties())
+            {
+                var AnnotationsList = new List<RDFOntologyTaxonomyEntry>();
+                var propertyTaxonomy = GameAnnotations.GetType().GetProperty(propertyInfo.Name).GetValue(GameAnnotations) as RDFOntologyTaxonomy;
+                if (propertyTaxonomy.EntriesCount > 0)
+                {
+                    foreach (var entry in propertyTaxonomy)
+                    {
+                        if (entry.TaxonomySubject == GameDatatypeProperty)
+                            AnnotationsList.Add(entry);
+                    }
 
+                    if (propertyInfo.Name != "CustomAnnotations")
+                    {
+                        foreach (var entry in AnnotationsList)
+                        {
+                            var type = (RDFSemanticsEnums.RDFOntologyStandardAnnotation) Enum.Parse(typeof(RDFSemanticsEnums.RDFOntologyStandardAnnotation), propertyInfo.Name);
+                            CharacterPropertyModel.AddStandardAnnotation(type, CharacterDatatypeProperty, entry.TaxonomyObject);
+                        }
+                    }
+                    else
+                    {
+                        foreach (var entry in AnnotationsList)
+                        {
+                            var AnnotationType = entry.TaxonomyPredicate.ToString().Substring(entry.TaxonomyPredicate.ToString().LastIndexOf('#') + 1);
+                            RDFOntologyAnnotationProperty AnnotationProperty = CharacterPropertyModel.SelectProperty(this.Context + AnnotationType) as RDFOntologyAnnotationProperty;
+                            if (AnnotationProperty == null)
+                            {
+                                var annotation = new RDFOntologyAnnotationProperty(new RDFResource(this.Context + AnnotationType));
+                                CharacterPropertyModel.AddProperty(annotation);
+                                AnnotationProperty = annotation;
+                            }
+                            CharacterPropertyModel.AddCustomAnnotation(AnnotationProperty, CharacterDatatypeProperty, entry.TaxonomyObject);
+                        }
+                    }
+                }
+            }
             this.Save();
             return CharacterDatatypeProperty;
         }
