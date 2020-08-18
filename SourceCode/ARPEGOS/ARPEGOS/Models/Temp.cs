@@ -184,6 +184,65 @@ namespace ARPEGOS.Models
         #region Methods
 
         #region Add
+
+        internal void AddClassification(string propertyName)
+        {
+            string text = string.Empty;
+            string descriptionType = "string";
+
+            List<string> hierarchy = new List<string>();
+            RDFOntologyProperty currentProperty = CharacterOntology.Model.PropertyModel.SelectProperty(CurrentCharacterContext + propertyName);
+            List<RDFOntologyProperty> propertyParents = CharacterOntology.Model.PropertyModel.GetSuperPropertiesOf(currentProperty).ToList();
+            propertyParents.Reverse();
+
+            foreach (var parent in propertyParents)
+            {
+                string parentName = parent.ToString().Substring(parent.ToString().LastIndexOf('#') + 1);
+                string groupName = parentName.Replace("tiene", "").Replace("Personaje", "").Replace("Per", "").Replace("_", " ");
+                groupName = System.Text.RegularExpressions.Regex.Replace(groupName, "([A-Z])", " $1", System.Text.RegularExpressions.RegexOptions.Compiled).Trim();
+                hierarchy.Add(groupName);
+            }
+
+            hierarchy.Remove(hierarchy.FirstOrDefault());
+            if (hierarchy.Count > 1)
+            {
+                for (int i = 0; i < hierarchy.Count; ++i)
+                {
+                    List<string> words = hierarchy[i].Split(" ").ToList();
+                    if (words.Contains(""))
+                        words.Remove("");
+
+                    for (int j = i + 1; j < hierarchy.Count; ++j)
+                    {
+                        if (words.Any(word => hierarchy[j].Contains(word)))
+                        {
+                            List<string> temp = hierarchy[j].Split(" ").ToList();
+                            List<string> newTemp = new List<string>();
+                            for(int k = 0; k < temp.Count; ++k)
+                            {
+                                if (words.All(word => temp[k] != word))
+                                    newTemp.Add(temp[k]);
+                            }
+                            hierarchy[j] = string.Join(" ", newTemp);
+                        }
+                    }
+                }
+            }
+
+            text = string.Join(":", hierarchy).Replace(" ","");
+
+            RDFOntologyLiteral description = CreateLiteral(text, descriptionType);
+            string AnnotationType = "Visualization";
+            RDFOntologyProperty annotation = CharacterOntology.Model.PropertyModel.SelectProperty(CurrentCharacterContext + AnnotationType);
+            if (annotation == null)
+            {
+                annotation = new RDFOntologyAnnotationProperty(new RDFResource(CurrentCharacterContext + AnnotationType));
+                CharacterOntology.Model.PropertyModel.AddProperty(annotation);
+            }
+            CharacterOntology.Model.PropertyModel.AddCustomAnnotation(annotation as RDFOntologyAnnotationProperty, currentProperty, description);
+            SaveCharacter();
+        }
+        
         /// <summary>
         /// Asserts the object property between subject and object inside the character
         /// </summary>
