@@ -15,21 +15,18 @@ namespace ARPEGOS.Services
         /// <param name="update">Updated value of the limit</param>
         internal bool UpdateAvailablePoints(string stage, float? update)
         {
-            bool hasUpdated = false;
-            List<string> AvailableWords = new List<string>()
+            var hasUpdated = false;
+            var AvailableWords = new List<string>()
             {
                 "Disponible",
                 "Available"
             };
-
-            RDFOntologyPropertyModel GamePropertyModel = GameOntology.Model.PropertyModel;
-
-            IEnumerable<RDFOntologyProperty> ResultProperties = GamePropertyModel.Where(entry => AvailableWords.Any(word => entry.ToString().Contains(word)));
-            List<string> ElementWords = stage.Split('_').ToList();
-            List<string> CompareList = new List<string>();
-            int index = 0;
-            int FilterResultsCounter = ResultProperties.Count();
-
+            var GamePropertyModel = this.Game.Ontology.Model.PropertyModel;
+            var ResultProperties = GamePropertyModel.Where(entry => AvailableWords.Any(word => entry.ToString().Contains(word)));
+            var ElementWords = stage.Split('_').ToList();
+            var CompareList = new List<string>();
+            var index = 0;
+            var FilterResultsCounter = ResultProperties.Count();
             while (FilterResultsCounter > 1)
             {
                 CompareList.Add(ElementWords.ElementAtOrDefault(index));
@@ -40,24 +37,22 @@ namespace ARPEGOS.Services
 
             if (FilterResultsCounter > 0)
             {
-                RDFOntologyProperty LimitProperty = ResultProperties.SingleOrDefault();
-                string propertyName = LimitProperty.ToString().Substring(LimitProperty.ToString().LastIndexOf('#') + 1);
+                var LimitProperty = ResultProperties.SingleOrDefault();
+                var propertyName = LimitProperty.ToString().Split('#').Last();
                 UpdateDatatypeAssertion(propertyName, update.ToString());
             }
             else
             {
-                string parents = GetParentClasses(stage);
+                var parents = GetParentClasses(stage);
                 if(parents != null)
                 {
-                    List<string> parentList = parents.Split(':').ToList();
+                    var parentList = parents.Split(':').ToList();
                     foreach (string parent in parentList)
-                    {
                         if (hasUpdated == false)
                             hasUpdated = UpdateAvailablePoints(parent, update);
-                    }
                 }                
             }
-            SaveCharacter();
+            this.Save();
             return hasUpdated;
         }
 
@@ -68,38 +63,38 @@ namespace ARPEGOS.Services
         /// <param name="value">New value of the assertion</param>
         internal void UpdateDatatypeAssertion(string predicateName, string value)
         {
-            bool hasPredicate = CheckDatatypeProperty(predicateName);
+            var hasPredicate = CheckDatatypeProperty(predicateName);
             RDFOntologyDatatypeProperty predicate;
             if (hasPredicate == false)
                 predicate = CreateDatatypeProperty(predicateName);
             else
-                predicate = CharacterOntology.Model.PropertyModel.SelectProperty(CurrentCharacterContext + predicateName) as RDFOntologyDatatypeProperty;
+                predicate = this.Ontology.Model.PropertyModel.SelectProperty($"{this.Context}{predicateName}") as RDFOntologyDatatypeProperty;
 
             string subject, valuetype;
 
             if (hasPredicate == true)
             {
-                RDFOntologyTaxonomyEntry CharacterPredicateAssertions = CharacterOntology.Data.Relations.Assertions.SelectEntriesByPredicate(predicate).SingleOrDefault();
+                var CharacterPredicateAssertions = this.Ontology.Data.Relations.Assertions.SelectEntriesByPredicate(predicate).SingleOrDefault();
                 if(CharacterPredicateAssertions != null)
                 {
-                    valuetype = CharacterPredicateAssertions.TaxonomyObject.ToString().Substring(CharacterPredicateAssertions.TaxonomyObject.ToString().LastIndexOf('#') + 1);
+                    valuetype = CharacterPredicateAssertions.TaxonomyObject.ToString().Split('#').Last();
                     subject = CharacterPredicateAssertions.TaxonomySubject.ToString();
                     RemoveDatatypeProperty(predicateName);
-                    SaveCharacter();
+                    this.Save();
                 }
                 else
                 {
-                    subject = CurrentCharacterContext + CurrentCharacterName;
-                    valuetype = predicate.Range.Value.ToString().Substring(predicate.Range.Value.ToString().LastIndexOf('#') + 1);
+                    subject = $"{this.Context}{this.Name}";
+                    valuetype = predicate.Range.Value.ToString().Split('#').Last();
                 }
             }
             else
             {
-                subject = CurrentCharacterContext + CurrentCharacterName;
-                valuetype = predicate.Range.Value.ToString().Substring(predicate.Range.Value.ToString().LastIndexOf('#') + 1);
+                subject = $"{this.Context}{this.Name}";
+                valuetype = predicate.Range.Value.ToString().Split('#').Last();
             }
-            AddDatatypeProperty(subject, CurrentCharacterContext + predicateName, value, valuetype);
-            SaveCharacter();
+            AddDatatypeProperty(subject, $"{this.Context}{predicateName}", value, valuetype);
+            this.Save();
         }
 
         /// <summary>
@@ -109,50 +104,47 @@ namespace ARPEGOS.Services
         /// <param name="objectName">New object of the assertion</param>
         internal void UpdateObjectAssertion(string predicateName, string objectName)
         {
-            bool hasPredicate = CheckObjectProperty(predicateName);
+            var hasPredicate = CheckObjectProperty(predicateName);
             RDFOntologyObjectProperty predicate;
             if (hasPredicate == false)
                 predicate = CreateObjectProperty(predicateName);
             else
-                predicate = CharacterOntology.Model.PropertyModel.SelectProperty(CurrentCharacterContext + predicateName) as RDFOntologyObjectProperty;
-
+                predicate = this.Ontology.Model.PropertyModel.SelectProperty($"{this.Context}{predicateName}") as RDFOntologyObjectProperty;
             string subject;
 
             if (hasPredicate == true)
             {
-                RDFOntologyTaxonomyEntry CharacterPredicateAssertions = CharacterOntology.Data.Relations.Assertions.SelectEntriesByPredicate(predicate).SingleOrDefault();
+                var CharacterPredicateAssertions = this.Ontology.Data.Relations.Assertions.SelectEntriesByPredicate(predicate).SingleOrDefault();
                 if(CharacterPredicateAssertions != null)
                 {
                     subject = CharacterPredicateAssertions.TaxonomySubject.ToString();
                     RemoveDatatypeProperty(predicateName);
-                    SaveCharacter();
+                    this.Save();
                 }
                 else
-                    subject = CurrentCharacterContext + CurrentCharacterName;
+                    subject = $"{this.Context}{this.Name}";
             }
             else
-                subject = CurrentCharacterContext + CurrentCharacterName;
-            AddObjectProperty(subject, CurrentCharacterContext + predicateName, CurrentCharacterContext + objectName);
-            SaveCharacter();
+                subject = $"{this.Context}{this.Name}";
+            AddObjectProperty(subject, $"{this.Context}{predicateName}", $"{this.Context}{objectName}");
+            this.Save();
         }
 
         internal bool UpdateLimit(string ElementName, float? update)
         {
-            bool hasUpdated = false;
-            List<string> LimitWords = new List<string>()
+            var hasUpdated = false;
+            var LimitWords = new List<string>()
             {
                 "Límite",
                 "Limit",
                 "Limite"
             };
-
-            RDFOntologyPropertyModel GamePropertyModel = GameOntology.Model.PropertyModel;
-
-            IEnumerable<RDFOntologyProperty> ResultProperties = GamePropertyModel.Where(entry => LimitWords.Any(word => entry.ToString().Contains(word)));
-            List<string> ElementWords = ElementName.Split('_').ToList();
-            List<string> CompareList = new List<string>();
-            int index = 0;
-            int FilterResultsCounter = ResultProperties.Count();
+            var GamePropertyModel = this.Game.Ontology.Model.PropertyModel;
+            var ResultProperties = GamePropertyModel.Where(entry => LimitWords.Any(word => entry.ToString().Contains(word)));
+            var ElementWords = ElementName.Split('_').ToList();
+            var CompareList = new List<string>();
+            var index = 0;
+            var FilterResultsCounter = ResultProperties.Count();
 
             while (FilterResultsCounter > 1)
             {
@@ -164,17 +156,17 @@ namespace ARPEGOS.Services
 
             if (FilterResultsCounter > 0)
             {
-                RDFOntologyDatatypeProperty LimitProperty = ResultProperties.SingleOrDefault() as RDFOntologyDatatypeProperty;
-                string propertyName = LimitProperty.ToString().Substring(LimitProperty.ToString().LastIndexOf('#') + 1);
+                var LimitProperty = ResultProperties.SingleOrDefault() as RDFOntologyDatatypeProperty;
+                var propertyName = LimitProperty.ToString().Split('#').Last();
                 UpdateDatatypeAssertion(propertyName, update.ToString());
                 hasUpdated = true;
             }
             else
             {
-                string parents = GetParentClasses(ElementName);
+                var parents = GetParentClasses(ElementName);
                 if (parents != null)
                 {
-                    List<string> parentList = parents.Split(':').ToList();
+                    var parentList = parents.Split(':').ToList();
                     foreach (string parent in parentList)
                     {
                         if (hasUpdated == false)
@@ -182,7 +174,7 @@ namespace ARPEGOS.Services
                     }
                 }
             }
-            SaveCharacter();
+            this.Save();
             return hasUpdated;
         }
     }
