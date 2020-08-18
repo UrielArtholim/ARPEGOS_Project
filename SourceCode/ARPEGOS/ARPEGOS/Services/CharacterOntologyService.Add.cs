@@ -92,9 +92,9 @@ namespace ARPEGOS.Services
             text = string.Join(":", hierarchy).Replace(" ", "");
             RDFOntologyLiteral description = CreateLiteral(text, descriptionType);
             string AnnotationType = "Visualization";
-            RDFOntologyProperty annotation = this.Ontology.Model.PropertyModel.SelectProperty(this.Context + AnnotationType);
+            RDFOntologyProperty annotation = this.Ontology.Model.PropertyModel.SelectProperty($"{this.Context}{AnnotationType}");
             if (annotation == null)
-                this.Ontology.Model.PropertyModel.AddProperty(new RDFOntologyAnnotationProperty(new RDFResource(this.Context + AnnotationType)));
+                this.Ontology.Model.PropertyModel.AddProperty(new RDFOntologyAnnotationProperty(new RDFResource($"{this.Context}{AnnotationType}")));
             this.Ontology.Model.PropertyModel.AddCustomAnnotation(annotation as RDFOntologyAnnotationProperty, currentProperty, description);
             this.Save();
         }
