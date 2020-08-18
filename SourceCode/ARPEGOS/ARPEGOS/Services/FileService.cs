@@ -150,5 +150,14 @@ namespace ARPEGOS.Services
         {
             return $"{FormatName(name)}.owl";
         }
+
+        /// <summary>
+        /// Returns invariant culture info
+        /// </summary>
+        /// <returns></returns>
+        public static CultureInfo Culture()
+        {
+            return CultureInfo.InvariantCulture;
+        }
     }
 }

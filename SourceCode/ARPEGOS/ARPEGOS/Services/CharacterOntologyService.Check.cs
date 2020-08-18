@@ -4,11 +4,275 @@ namespace ARPEGOS.Services
     using System;
     using System.Collections.Generic;
     using System.Linq;
-
+    using RDFSharp.Model;
     using RDFSharp.Semantics;
 
     public partial class CharacterOntologyService
     {
+        /// <summary>
+        /// Check if literal exists inside the current ontology
+        /// </summary>
+        /// <param name="value">Value of the literal</param>
+        /// <param name="type">Semantic datatype of the literal</param>
+        /// <returns></returns>
+        public bool CheckLiteral (string value, string type, bool applyOnCharacter = true)
+        {
+            RDFOntology CurrentOntology;
+            if (applyOnCharacter)
+                CurrentOntology = this.Ontology;
+            else
+                CurrentOntology = this.Game.Ontology;
+
+            var dataModel = CurrentOntology.Data;
+            var literalType = CheckDatatypeFromString(type);
+            var literal = new RDFTypedLiteral(value, literalType);
+            return dataModel.SelectLiteral(literal.ToString()) != null;
+        }
+
+        /// <summary>
+        /// Check if fact exists inside the current ontology
+        /// </summary>
+        /// <param name="name">Name of the fact</param>
+        /// <returns></returns>
+        public bool CheckFact (string name, bool applyOnCharacter = true)
+        {
+            RDFOntology CurrentOntology;
+            if (applyOnCharacter)
+                CurrentOntology = this.Ontology;
+            else
+                CurrentOntology = this.Game.Ontology;
+
+            var escapedName = FileService.EscapedName(name);
+            var dataModel = CurrentOntology.Data;
+            return dataModel.SelectFact($"{this.Context}{escapedName}") != null;
+        }
+
+        /// <summary>
+        /// Check if class exists inside the current ontology
+        /// </summary>
+        /// <param name="name">Name of the class</param>
+        /// <returns></returns>
+        public bool CheckClass (string name, bool applyOnCharacter = true)
+        {
+            RDFOntology CurrentOntology;
+            string CurrentContext;
+            if (applyOnCharacter)
+            {
+                CurrentOntology = this.Ontology;
+                CurrentContext = this.Context;
+            }
+            else
+            {
+                CurrentOntology = this.Game.Ontology;
+                CurrentContext = this.Game.Context;
+            }
+
+            var escapedName = FileService.EscapedName(name);
+            var classModel = CurrentOntology.Model.ClassModel;
+            return classModel.SelectClass($"{CurrentContext}{escapedName}") != null;
+        }
+
+        /// <summary>
+        /// Check if object property exists inside the current ontology
+        /// </summary>
+        /// <param name="name">Name of the object property</param>
+        /// <returns></returns>
+        public bool CheckObjectProperty (string name, bool applyOnCharacter = true)
+        {
+            RDFOntology CurrentOntology;
+            string CurrentContext;
+            if (applyOnCharacter)
+            {
+                CurrentOntology = this.Ontology;
+                CurrentContext = this.Context;
+            }
+            else
+            {
+                CurrentOntology = this.Game.Ontology;
+                CurrentContext = this.Game.Context;
+            }
+
+            var escapedName = FileService.EscapedName(name);
+            var exists = false;
+            var propertyModel = CurrentOntology.Model.PropertyModel;
+            var property = propertyModel.SelectProperty($"{CurrentContext}{escapedName}");
+
+            if (property != null)
+            {
+                var objectEnumerator = propertyModel.ObjectPropertiesEnumerator;
+                while (objectEnumerator.MoveNext())
+                {
+                    // performance doesn't change drastically from lastindexof + substring, and with split is more readable
+                    if (objectEnumerator.Current?.ToString().Split('#').Last() == escapedName)
+                    {
+                        exists = true;
+                        break;
+                    }
+                }
+            }
+
+            return exists;
+        }
+
+        /// <summary>
+        /// Check if datatype property exists inside the current ontology
+        /// </summary>
+        /// <param name="name">Name of the datatype property</param>
+        /// <returns></returns>
+        public bool CheckDatatypeProperty (string name, bool applyOnCharacter = true)
+        {
+            RDFOntology CurrentOntology;
+            string CurrentContext;
+            if (applyOnCharacter)
+            {
+                CurrentOntology = this.Ontology;
+                CurrentContext = this.Context;
+            }
+            else
+            {
+                CurrentOntology = this.Game.Ontology;
+                CurrentContext = this.Game.Context;
+            }
+
+            var escapedName = FileService.EscapedName(name);
+            var exists = false;
+            var propertyModel = CurrentOntology.Model.PropertyModel;
+            var property = propertyModel.SelectProperty($"{CurrentContext}{escapedName}");
+
+            if (property != null)
+            {
+                var datatypeEnumerator = propertyModel.DatatypePropertiesEnumerator;
+                while (datatypeEnumerator.MoveNext())
+                {
+                    // performance doesn't change drastically from lastindexof + substring, and with split is more readable
+                    if (datatypeEnumerator.Current?.ToString().Split('#').Last() == escapedName)
+                    {
+                        exists = true;
+                        break;
+                    }
+                }
+            }
+
+            return exists;
+        }
+
+        /// <summary>
+        /// Check if individual exists inside the current ontology
+        /// </summary>
+        /// <param name="name">Name of the individual</param>
+        /// <returns></returns>
+        public bool CheckIndividual (string name, bool applyOnCharacter = true)
+        {
+            return this.CheckFact(name, applyOnCharacter);
+        }
+
+        /// <summary>
+        /// Returns the general cost associated to the given stage
+        /// </summary>
+        /// <param name="stage">Name of the stage</param>
+        /// <returns></returns>
+        public string CheckGeneralCost (string stage, bool applyOnCharacter = false)
+        {
+            RDFOntology CurrentOntology;
+            string CurrentContext;
+            if (applyOnCharacter)
+            {
+                CurrentOntology = this.Ontology;
+                CurrentContext = this.Context;
+            }
+            else
+            {
+                CurrentOntology = this.Game.Ontology;
+                CurrentContext = this.Game.Context;
+            }
+
+            var generalCostPredicateName = string.Empty;
+            var stageWords = stage.Split('_');
+            var filterCounter = 2;
+            var wordCounter = stageWords.Length;
+
+            while (filterCounter > 1)
+            {
+                if (wordCounter > 0)
+                {
+                    var subjectFactName = string.Join('_', stageWords.Take(wordCounter));
+                    var subjectFact = CurrentOntology.Model.ClassModel.SelectClass($"{CurrentContext}{subjectFactName}");
+                    if (subjectFact != null)
+                    {
+                        var subjectFactCostAnnotations = CurrentOntology.Model.ClassModel.Annotations.CustomAnnotations.SelectEntriesBySubject(subjectFact).Where(entry => entry.ToString().Contains("GeneralCostDefinedBy"));
+                        if (subjectFactCostAnnotations.Count() == 1)
+                        {
+                            filterCounter = 1;
+                            generalCostPredicateName = subjectFactCostAnnotations.Single().TaxonomyObject.ToString().Split('^').First();
+                        }
+                    }
+                    --wordCounter;
+                }
+                else
+                    filterCounter = 0;
+            }
+
+            if (filterCounter != 1)
+            {
+                var parents = this.GetParentClasses(stage);
+                if (parents != null)
+                {
+                    foreach (var parent in parents.Split(':'))
+                    {
+                        generalCostPredicateName = this.CheckGeneralCost(parent);
+                        if (generalCostPredicateName != null)
+                            break;
+                    }
+                }
+            }
+            return generalCostPredicateName;
+        }
+
+        /// <summary>
+        /// Returns the description of a valued list view given the stage
+        /// </summary>
+        /// <param name="stage">Name of the stage stage</param>
+        /// <returns></returns>
+        public string CheckValueListInfo (string stage, bool applyOnCharacter = false)
+        {
+            RDFOntology CurrentOntology;
+            string CurrentContext;
+            if (applyOnCharacter)
+            {
+                CurrentOntology = this.Ontology;
+                CurrentContext = this.Context;
+            }
+            else
+            {
+                CurrentOntology = this.Game.Ontology;
+                CurrentContext = this.Game.Context;
+            }
+
+            string info = null;
+
+            var stageClass = CurrentOntology.Model.ClassModel.SelectClass($"{CurrentContext}{stage}");
+            var stageAnnotations = CurrentOntology.Model.ClassModel.Annotations.CustomAnnotations.SelectEntriesBySubject(stageClass);
+            var stageDefinitionAnnotation = stageAnnotations.Single(entry => entry.TaxonomyPredicate.ToString().Contains("ValuedListInfo"));
+            if (stageDefinitionAnnotation != null)
+                info = stageDefinitionAnnotation.TaxonomyObject.ToString().Split('^').First();
+            else
+            {
+                var parents = this.GetParentClasses(stage, applyOnCharacter);
+                if (parents != null)
+                {
+                    var parentList = parents.Split(':').ToList();
+                    foreach (var parent in parentList)
+                    {
+                        info = this.CheckValueListInfo(parent, applyOnCharacter);
+                        if (info != null)
+                            break;
+                    }
+                }
+            }
+
+            return info;
+        }
+
         /// <summary>
         /// Returns a list of elements available given the current stage, true if the stage has a general limit, the general limit and the partial limit
         /// </summary>
