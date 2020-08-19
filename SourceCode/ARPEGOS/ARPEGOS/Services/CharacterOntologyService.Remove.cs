@@ -2,6 +2,7 @@
 namespace ARPEGOS.Services
 {
     using RDFSharp.Semantics;
+    using System.Linq;
 
     public partial class CharacterOntologyService
     {
@@ -57,7 +58,7 @@ namespace ARPEGOS.Services
             else
             {
                 var entryObject = this.Ontology.Data.SelectFact(this.Context + objectFactName);
-                var entry = this.Ontology.Data.Relations.Assertions.SelectEntriesByPredicate(predicate).SelectEntriesByObject(entryObject).SingleOrDefault();
+                var entry = this.Ontology.Data.Relations.Assertions.SelectEntriesByPredicate(predicate).SelectEntriesByObject(entryObject).Single();
                 var entrySubject = entry.TaxonomySubject as RDFOntologyFact;
                 this.Ontology.Data.RemoveAssertionRelation(entrySubject, predicate, entryObject);
             }
