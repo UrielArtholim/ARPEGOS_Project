@@ -1,12 +1,31 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             mc:Ignorable="d"
              x:Class="ARPEGOS.Views.MainViewDetail"
-             Title="Detail">
-  <StackLayout Padding="10">
-    <Label Text="This is a detail page. To get the 'triple' line icon on each platform add a icon to each platform and update the 'Master' page with an Icon that references it."/>
-  </StackLayout>
+             Visual="Material"
+             Title="{Binding Title}"
+             x:Name="P">
+    <Grid>
+        <ScrollView Grid.Row="0" BackgroundColor="{DynamicResource SecondaryBackgroundColor}">
+            <FlexLayout Direction="Row" AlignItems="Center" JustifyContent="SpaceEvenly" Wrap="Wrap" BindableLayout.ItemsSource="{Binding SelectableElements}" Padding="20">
+                <BindableLayout.ItemTemplate>
+                    <DataTemplate>
+                        <Frame CornerRadius="5" BorderColor="{DynamicResource SeparatorColor}" Padding="5" WidthRequest="130">
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding Path=BindingContext.SelectItemCommand, Source={x:Reference P}}" CommandParameter="{Binding .}" />
+                            </Frame.GestureRecognizers>
+                            <StackLayout Padding="10">
+                                <Image Source="{Binding ., Converter={StaticResource GetInitialsImageConverter}}" />
+                                <Label Text="{Binding .}" TextColor="{DynamicResource PrimaryTextColor}" HorizontalTextAlignment="Center" LineBreakMode="WordWrap" />
+                            </StackLayout>
+                        </Frame>
+                    </DataTemplate>
+                </BindableLayout.ItemTemplate>
+            </FlexLayout>
+        </ScrollView>
+        <Frame Grid.Row="0" BackgroundColor="Black" Opacity="0.7" HasShadow="False" CornerRadius="0" IsVisible="{Binding IsBusy}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <ActivityIndicator Color="White" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" IsRunning="{Binding IsBusy}"
+                               WidthRequest="50" HeightRequest="50" />
+        </Frame>
+    </Grid>
 </ContentPage>

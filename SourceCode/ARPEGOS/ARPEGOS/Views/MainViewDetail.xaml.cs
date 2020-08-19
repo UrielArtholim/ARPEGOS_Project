@@ -1,4 +1,5 @@
-﻿namespace ARPEGOS.Views
+﻿
+namespace ARPEGOS.Views
 {
     using ARPEGOS.ViewModels;
 
@@ -12,7 +13,17 @@
     {
         public MainViewDetail()
         {
-            InitializeComponent();
+            this.InitializeComponent();
+            this.BindingContext = App.Container.Resolve<MainViewModel>();
+        }
+
+        protected override async void OnAppearing()
+        {
+            base.OnAppearing();
+            if (this.BindingContext is MainViewModel vm)
+            {
+                await vm.Init();
+            }
         }
     }
 }

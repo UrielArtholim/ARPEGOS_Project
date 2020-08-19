@@ -6,6 +6,7 @@ namespace ARPEGOS.Services
     using System.Linq;
     using System.Text.RegularExpressions;
     using System.Threading;
+    using System.Threading.Tasks;
 
     using ARPEGOS.Configuration;
 
@@ -51,7 +52,7 @@ namespace ARPEGOS.Services
         // file path => .../Glenn_Radars.owl
         // los path van a usar el escapado, aunk los nombres guardados en las ontologias van a ser los formateados, por ser mas userfriendly
 
-        public static GameOntologyService LoadGame(string name, string version)
+        public static async Task<GameOntologyService> LoadGame(string name, string version)
         {
             var path = FileService.GetGameFilePath(name, version);
             var graph = RDFGraph.FromFile(RDFFormat, path);
@@ -64,7 +65,7 @@ namespace ARPEGOS.Services
             return new GameOntologyService(name, path, context, ontology);
         }
 
-        public static CharacterOntologyService LoadCharacter(string name, GameOntologyService game)
+        public static async Task<CharacterOntologyService> LoadCharacter(string name, GameOntologyService game)
         {
             var path = FileService.GetCharacterFilePath(name, game);
             var context = $"http://arpegos_project/Games/{FileService.EscapedName(game.Name)}/characters/{FileService.EscapedName(name)}#";
@@ -75,7 +76,7 @@ namespace ARPEGOS.Services
             return new CharacterOntologyService(name, path, context, ontology, game);
         }
 
-        public static CharacterOntologyService CreateCharacter(string name, GameOntologyService game)
+        public static async Task<CharacterOntologyService> CreateCharacter(string name, GameOntologyService game)
         {
             var path = FileService.GetCharacterFilePath(name, game);
             if (File.Exists(path))

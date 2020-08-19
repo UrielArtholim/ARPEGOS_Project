@@ -25,7 +25,19 @@ namespace ARPEGOS.Services
         public static IEnumerable<string> ListGames()
         {
             var games = Directory.GetDirectories(BaseFolder);
-            return games.Select(s => s.Replace("_", " "));
+            return games.Select(s => s.Split('/').Last().Split('.').First().Replace("_", " "));
+        }
+
+        /// <summary>
+        /// Gets the formatted name of the versions stored in the device for the given game
+        /// </summary>
+        /// <param name="game"> Game from which we want to recover the versions </param>
+        /// <returns> Formatted names </returns>
+        public static IEnumerable<string> ListVersions(string game)
+        {
+            var path = Path.Combine(BaseFolder, EscapedName(game), GamesPath);
+            var versions = Directory.GetFiles(path);
+            return versions.Select(s => s.Split('/').Last().Split('.').First().Replace("_", " "));
         }
 
         /// <summary>
@@ -37,7 +49,7 @@ namespace ARPEGOS.Services
         {
             var path = Path.Combine(BaseFolder, EscapedName(game), CharactersPath);
             var characters = Directory.GetFiles(path);
-            return characters.Select(s => s.Replace("_", " "));
+            return characters.Select(s => s.Split('/').Last().Split('.').First().Replace("_", " "));
         }
 
         public static bool CreateGameFolderStructure(string game)
@@ -148,7 +160,7 @@ namespace ARPEGOS.Services
         /// <returns> Name of the file </returns>
         public static string FileName(string name)
         {
-            return $"{FormatName(name)}.owl";
+            return $"{EscapedName(name)}.owl";
         }
 
         /// <summary>

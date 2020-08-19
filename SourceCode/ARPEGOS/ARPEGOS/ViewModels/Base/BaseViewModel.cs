@@ -1,4 +1,5 @@
-﻿namespace ARPEGOS.ViewModels.Base
+﻿
+namespace ARPEGOS.ViewModels.Base
 {
     using System.Collections.Generic;
     using System.ComponentModel;
@@ -14,6 +15,8 @@
         private bool _isBusy;
 
         private string _title;
+
+        protected bool initialized;
 
         /// <summary>
         /// Gets or Sets IsBusy property

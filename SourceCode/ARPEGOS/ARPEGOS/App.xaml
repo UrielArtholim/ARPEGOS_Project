@@ -1,11 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Application xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             mc:Ignorable="d"
+             xmlns:converter="clr-namespace:ARPEGOS.Converter;assembly=ARPEGOS"
              x:Class="ARPEGOS.App">
     <Application.Resources>
-
+        <ResourceDictionary>
+            <Color x:Key="Primary">#4899de</Color>
+            <Color x:Key="Contrast">#ffffff</Color>
+            <Color x:Key="PrimaryTextColor">#0e1723</Color>
+            <Color x:Key="SecondaryTextColor">#6b7380</Color>
+            <Color x:Key="PrimaryBackgroundColor">#ffffff</Color>
+            <Color x:Key="SecondaryBackgroundColor">#f2f4f8</Color>
+            <Color x:Key="SeparatorColor">#d3d3d3</Color>
+            <converter:GetInitialsImageConverter x:Key="GetInitialsImageConverter" />
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

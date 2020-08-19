@@ -3,7 +3,6 @@
     using ARPEGOS.ViewModels;
 
     using Autofac;
-    using System;
 
     public class AutofacSetup
     {
@@ -16,20 +15,18 @@
 
         protected virtual void RegisterDependencies(ContainerBuilder builder)
         {
+            this.RegisterServices(builder);
             this.RegisterViewModels(builder);
+        }
+
+        private void RegisterServices(ContainerBuilder builder)
+        {
+
         }
 
         private void RegisterViewModels(ContainerBuilder builder)
         {
-            builder.RegisterType<ProgressBarViewModel>();
-            builder.RegisterType<CreationViewModel>();
-            builder.RegisterType<SliderItemViewModel>();
-            builder.RegisterType<CheckItemViewModel>();
-            try { builder.RegisterType<ItemListViewModel>(); }catch(Exception e) 
-            { 
-                System.Console.WriteLine(e);
-                System.Console.ReadLine();
-            }
+            builder.RegisterType<MainViewModel>().SingleInstance();
         }
     }
 }
