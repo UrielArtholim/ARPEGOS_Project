@@ -1,6 +1,8 @@
 ﻿
 namespace ARPEGOS.Services
 {
+    using System.Linq;
+
     using RDFSharp.Semantics;
 
     public partial class CharacterOntologyService

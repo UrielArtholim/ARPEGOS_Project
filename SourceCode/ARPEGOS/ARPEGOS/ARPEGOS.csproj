@@ -12,11 +12,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Models\Program.cs" />
-    <Compile Remove="Models\Temp.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
     <None Remove="DefaultGames\Anima Beyond Fantasy\characters\Ctuchik.owl" />
     <None Remove="DefaultGames\Anima Beyond Fantasy\characters\Glenn Radars.owl" />
     <None Remove="DefaultGames\Anima Beyond Fantasy\Nanatsu No Taizai.owl" />
@@ -28,9 +23,6 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="DefaultGames\Anima Beyond Fantasy\gamefiles\Core Exxet.owl">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="DefaultGames\Nanatsu No Taizai\gamefiles\Nanatsu No Taizai.owl">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </EmbeddedResource>
   </ItemGroup>
@@ -53,26 +45,18 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="Models\Program.cs" />
-    <None Include="Models\Temp.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Resource Include="DefaultGames\Anima Beyond Fantasy\characters\Ctuchik.owl" />
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="Views\SkillListView.xaml.cs">
-      <DependentUpon>SkillListView.xaml</DependentUpon>
+    <Compile Update="Views\MainView.xaml.cs">
+      <DependentUpon>%(Filename)</DependentUpon>
     </Compile>
-    <Compile Update="Views\CharacterListView.xaml.cs">
-      <DependentUpon>CharacterListView.xaml</DependentUpon>
+    <Compile Update="Views\MainViewDetail.xaml.cs">
+      <DependentUpon>%(Filename)</DependentUpon>
     </Compile>
-    <Compile Update="Views\ItemCheckListView.xaml.cs">
-      <DependentUpon>ItemCheckListView.xaml</DependentUpon>
-    </Compile>
-    <Compile Update="Views\SkillView.xaml.cs">
-      <DependentUpon>SkillView.xaml</DependentUpon>
+    <Compile Update="Views\MainViewMaster.xaml.cs">
+      <DependentUpon>%(Filename)</DependentUpon>
     </Compile>
   </ItemGroup>
 
@@ -83,32 +67,11 @@
     <EmbeddedResource Update="Controls\CustomSliderCell.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\CheckItemView.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Views\CreationView.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Views\ItemCheckListView.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Views\MainView.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Views\MainViewDetail.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Views\MainViewMaster.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Views\ProgressBarView.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Views\SkillView.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Views\SliderItemView.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="DefaultGames\Nanatsu No Taizai\Gamefiles\Nanatsu No Taizai.owl">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 </Project>

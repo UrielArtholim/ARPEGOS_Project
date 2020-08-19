@@ -17,7 +17,6 @@ namespace ARPEGOS.Controls
         public CustomCheckCell()
         {
             InitializeComponent();
-            this.BindingContext = App.Container.Resolve<CheckItemViewModel>();
         }
     }
 }

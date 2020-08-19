@@ -17,7 +17,6 @@ namespace ARPEGOS.Controls
         public CustomSliderCell()
         {
             InitializeComponent();
-            this.BindingContext = App.Container.Resolve<SliderItemViewModel>();
         }
     }
 }

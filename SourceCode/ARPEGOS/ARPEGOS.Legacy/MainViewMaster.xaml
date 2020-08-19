@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="ARPEGOS.Views.MainViewMaster"
+             Title="Master">
+  <ScrollView BackgroundColor="White" VerticalScrollBarVisibility="Never" >
+      <StackLayout Orientation="Vertical" BackgroundColor="White" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+          <StackLayout Orientation="Horizontal" HorizontalOptions="Fill" Margin="0,0,0,10" Padding="60,10,0,10">
+              <StackLayout.GestureRecognizers>
+                  <TapGestureRecognizer Command="{Binding HomeCommand}" NumberOfTapsRequired="1" />
+              </StackLayout.GestureRecognizers>
+              <Label Text=">" VerticalOptions="Center" />
+              <Label Margin="10,0,0,0" Text="My profile" VerticalOptions="Center" />
+          </StackLayout>
+
+          <BoxView BackgroundColor="Black" HeightRequest="2" />
+
+          <StackLayout Orientation="Horizontal" HorizontalOptions="Fill" Margin="0,0,0,10" Padding="60,10,0,10">
+              <StackLayout.GestureRecognizers>
+                  <TapGestureRecognizer Command="{Binding ShowGamesCommand}" NumberOfTapsRequired="1" />
+              </StackLayout.GestureRecognizers>
+              <Label Text=">" VerticalOptions="Center" />
+              <Label Margin="10,0,0,0" Text="Settings" VerticalOptions="Center" />
+          </StackLayout>
+
+          <BoxView BackgroundColor="Black" HeightRequest="2" />
+
+          <StackLayout Orientation="Horizontal" HorizontalOptions="Fill" Margin="0,0,0,10" Padding="60,10,0,10">
+              <StackLayout.GestureRecognizers>
+                  <TapGestureRecognizer Command="{Binding ShowCharactersCommand}" NumberOfTapsRequired="1" />
+              </StackLayout.GestureRecognizers>
+              <Label Text=">" VerticalOptions="Center" />
+              <Label Margin="10,0,0,0" Text="Support" VerticalOptions="Center" />
+          </StackLayout>
+
+          <BoxView BackgroundColor="Black" HeightRequest="2" />
+
+          <StackLayout Orientation="Horizontal" HorizontalOptions="Fill" Margin="0,0,0,10" Padding="60,10,0,10" IsVisible="{Binding Diag}">
+              <StackLayout.GestureRecognizers>
+                  <TapGestureRecognizer Command="{Binding SettingsCommand}" NumberOfTapsRequired="1" />
+              </StackLayout.GestureRecognizers>
+              <Label Text=">" VerticalOptions="Center" />
+              <Label Margin="10,0,0,0" Text="Push Notifications Diagnostics" VerticalOptions="Center" />
+          </StackLayout>
+      </StackLayout>
+  </ScrollView>
+</ContentPage>
