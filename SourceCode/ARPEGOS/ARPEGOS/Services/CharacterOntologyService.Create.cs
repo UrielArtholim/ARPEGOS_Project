@@ -88,7 +88,7 @@ namespace ARPEGOS.Services
         {
             var GameClassModel = this.Game.Ontology.Model.ClassModel;
             var CharacterClassModel = this.Ontology.Model.ClassModel;
-            name = FileService.FormatName(FileService.EscapedName(name));
+            name = FileService.FormatName(FileService.EscapedName(name);
             var GameClass = GameClassModel.SelectClass(this.Game.Context + name);
             var CharacterClass = new RDFOntologyClass(new RDFResource(this.Context + name));
             if (!CheckClass(name))

@@ -12,12 +12,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="ViewModels\CreationProcess\**" />
-    <EmbeddedResource Remove="ViewModels\CreationProcess\**" />
-    <None Remove="ViewModels\CreationProcess\**" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Compile Remove="Models\Program.cs" />
     <Compile Remove="Models\Temp.cs" />
   </ItemGroup>
