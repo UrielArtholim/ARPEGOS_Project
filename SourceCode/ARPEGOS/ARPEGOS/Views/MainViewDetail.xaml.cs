@@ -1,6 +1,7 @@
 ﻿
 namespace ARPEGOS.Views
 {
+    using ARPEGOS.Helpers;
     using ARPEGOS.ViewModels;
 
     using Autofac;
@@ -14,7 +15,7 @@ namespace ARPEGOS.Views
         public MainViewDetail()
         {
             this.InitializeComponent();
-            this.BindingContext = App.Container.Resolve<MainViewModel>();
+            this.BindingContext = DependencyHelper.Container.Resolve<MainViewModel>();
         }
 
         protected override async void OnAppearing()

@@ -91,7 +91,9 @@ namespace ARPEGOS.Services
             RDFNamespaceRegister.AddNamespace(new RDFNamespace(prefix, graph.Context.ToString()));
             var ontology = RDFOntology.FromRDFGraph(graph);
 
-            return new CharacterOntologyService(name, path, context, ontology, game);
+            var character = new CharacterOntologyService(name, path, context, ontology, game);
+            character.Save();
+            return character;
         }
     }
 }

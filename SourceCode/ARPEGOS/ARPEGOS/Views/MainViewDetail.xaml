@@ -7,15 +7,15 @@
              x:Name="P">
     <Grid>
         <ScrollView Grid.Row="0" BackgroundColor="{DynamicResource SecondaryBackgroundColor}">
-            <FlexLayout Direction="Row" AlignItems="Center" JustifyContent="SpaceEvenly" Wrap="Wrap" BindableLayout.ItemsSource="{Binding SelectableElements}" Padding="20">
+            <FlexLayout Direction="Row" AlignItems="Start" JustifyContent="SpaceEvenly" Wrap="Wrap" BindableLayout.ItemsSource="{Binding SelectableElements}" Padding="5, 20, 5, 0" AlignContent="Start" AlignSelf="Auto"  >
                 <BindableLayout.ItemTemplate>
                     <DataTemplate>
-                        <Frame CornerRadius="5" BorderColor="{DynamicResource SeparatorColor}" Padding="5" WidthRequest="130">
+                        <Frame CornerRadius="5" BorderColor="{DynamicResource SeparatorColor}" Padding="5" WidthRequest="110" HeightRequest="110" Margin="0, 0, 0, 20">
                             <Frame.GestureRecognizers>
                                 <TapGestureRecognizer Command="{Binding Path=BindingContext.SelectItemCommand, Source={x:Reference P}}" CommandParameter="{Binding .}" />
                             </Frame.GestureRecognizers>
                             <StackLayout Padding="10">
-                                <Image Source="{Binding ., Converter={StaticResource GetInitialsImageConverter}}" />
+                                <Image Source="{Binding ., Converter={StaticResource GetInitialsImageConverter}, ConverterParameter=128}" />
                                 <Label Text="{Binding .}" TextColor="{DynamicResource PrimaryTextColor}" HorizontalTextAlignment="Center" LineBreakMode="WordWrap" />
                             </StackLayout>
                         </Frame>

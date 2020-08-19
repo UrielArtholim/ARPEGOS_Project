@@ -8,6 +8,7 @@ namespace ARPEGOS.ViewModels
 
     using ARPEGOS.Helpers;
     using ARPEGOS.Services;
+    using ARPEGOS.Services.Interfaces;
     using ARPEGOS.ViewModels.Base;
     using ARPEGOS.Views;
 
@@ -19,6 +20,8 @@ namespace ARPEGOS.ViewModels
         private SelectionStatus _selectionStatus;
 
         private string selectedGame;
+
+        private IDialogService dialogService;
 
         public ICommand SelectItemCommand { get; }
 
@@ -48,11 +51,12 @@ namespace ARPEGOS.ViewModels
             }
         }
 
-        public MainViewModel()
+        public MainViewModel(IDialogService dialogService)
         {
             this.SelectableElements = new ObservableCollection<string>();
             this.SelectItemCommand = new Command<string>(s => Task.Factory.StartNew(async () => await this.SelectItem(s)));
             this.CurrentStatus = SelectionStatus.SelectingGame;
+            this.dialogService = dialogService;
         }
 
         public async Task Init()
@@ -87,21 +91,29 @@ namespace ARPEGOS.ViewModels
                     this.Load(this.CurrentStatus);
                     break;
                 case SelectionStatus.SelectingVersion:
-                    App.CurrentContext.CurrentGame = await OntologyService.LoadGame(this.selectedGame, item);
+                    DependencyHelper.CurrentContext.CurrentGame = await OntologyService.LoadGame(this.selectedGame, item);
                     this.CurrentStatus = SelectionStatus.SelectingCharacter;
                     this.Load(this.CurrentStatus);
                     break;
                 case SelectionStatus.SelectingCharacter:
-                    if (item == string.Empty)
+                    if (string.IsNullOrWhiteSpace(item))
                     {
-                        MainThread.BeginInvokeOnMainThread(
-                            async() =>
-                                {
-                                    item = await (Application.Current.MainPage as MainView).Detail.DisplayPromptAsync("Crear nuevo personaje", "Introduce el nombre:");
-                                });
+                        item = await this.dialogService.DisplayTextPrompt("Crear nuevo personaje", "Introduce el nombre:", "Crear");
+                        if (string.IsNullOrWhiteSpace(item))
+                            break;
+
+                        DependencyHelper.CurrentContext.CurrentCharacter = await OntologyService.CreateCharacter(item, DependencyHelper.CurrentContext.CurrentGame);
                     }
-                    App.CurrentContext.CurrentCharacter = await OntologyService.LoadCharacter(item, App.CurrentContext.CurrentGame);
+                    else
+                    {
+                        DependencyHelper.CurrentContext.CurrentCharacter = await OntologyService.LoadCharacter(item, DependencyHelper.CurrentContext.CurrentGame);
+                    }
+                    
                     this.CurrentStatus = SelectionStatus.Done;
+                    this.Load(this.CurrentStatus);
+                    break;
+                default:
+                    this.CurrentStatus = SelectionStatus.SelectingGame;
                     this.Load(this.CurrentStatus);
                     break;
             }
@@ -125,6 +137,9 @@ namespace ARPEGOS.ViewModels
                     break;
                 case SelectionStatus.Done:
                     items = new string[0];
+                    #if DEBUG
+                    items = new List<string> { "Volver a empezar" };
+                    #endif
                     break;
                 default:
                     return;

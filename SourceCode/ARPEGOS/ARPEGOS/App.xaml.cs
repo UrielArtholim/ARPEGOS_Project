@@ -5,12 +5,9 @@ namespace ARPEGOS
     using System.Linq;
     using System.Reflection;
 
-    using ARPEGOS.Configuration;
     using ARPEGOS.Helpers;
     using ARPEGOS.Services;
     using ARPEGOS.Views;
-
-    using Autofac;
 
     using Xamarin.Essentials;
     using Xamarin.Forms;
@@ -19,15 +16,10 @@ namespace ARPEGOS
     {
         public static INavigation Navigation => (App.Current.MainPage as MainView)?.Detail?.Navigation;
 
-        public static IContainer Container { get; private set; }
-
-        public static Context CurrentContext { get; private set; }
-
         public App()
         {
             this.InitializeComponent();
-            CurrentContext = new Context();
-            Container = new AutofacSetup().CreateContainer();
+            _ = new DependencyHelper();
 
             if (VersionTracking.IsFirstLaunchEver)
                 this.CreateTestGame();
