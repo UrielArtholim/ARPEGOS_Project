@@ -78,6 +78,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Xamarin.Plugin.FilePicker" Version="2.1.41" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Compile Update="CharacterListView.xaml.cs">
       <SubType>Code</SubType>
       <DependentUpon>%(Filename)</DependentUpon>
