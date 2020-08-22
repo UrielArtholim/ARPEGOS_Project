@@ -13,6 +13,39 @@ namespace ARPEGOS.Services
     public partial class CharacterOntologyService
     {
         /// <summary>
+        /// Returns the hierarchy of the property given
+        /// </summary>
+        /// <param name="property"> Name of the property given </param>
+        /// <returns> String with the hierarchy of the property given </returns>
+        public string GetPropertyVisualizationPosition(string property)
+        {
+            var CurrentProperty = this.Ontology.Model.PropertyModel.SelectProperty($"{this.Context}{property}");
+            var AnnotationProperty = this.Ontology.Model.PropertyModel.SelectProperty($"{this.Context}{ "Visualization"}");
+            var CharacterVisualizationAnnotations = this.Ontology.Model.PropertyModel.Annotations.CustomAnnotations.SelectEntriesByPredicate(AnnotationProperty);
+            var CharacterVisualizationAnnotation = CharacterVisualizationAnnotations.SelectEntriesBySubject(CurrentProperty).Single();
+            return CharacterVisualizationAnnotation.TaxonomyObject.ToString().Split('^').First();
+        }
+
+        /// <summary>
+        /// Returns all the properties of the current character 
+        /// </summary>
+        /// <returns> Dictionary with the properties of the current character and its values</returns>
+        public Dictionary<string,string> GetCharacterProperties()
+        {
+            var CharacterProperties = new Dictionary<string, string>();
+            var CharacterFact = this.Ontology.Data.SelectFact("{this.Context}{this.Name}");
+            var CharacterAssertions = this.Ontology.Data.Relations.Assertions.SelectEntriesBySubject(CharacterFact); 
+            foreach(var assertion in CharacterAssertions)
+            {
+                var property = assertion.TaxonomyPredicate.ToString().Split('#').Last();
+                var value = assertion.TaxonomyObject.ToString().Split('#').Last();
+                CharacterProperties.Add(property, value);
+            }
+
+            return CharacterProperties;
+        }
+
+        /// <summary>
         /// Returns class of the given element, choosing if the element is from the character or not
         /// </summary>
         /// <param name="elementName">Name of the element given</param>
