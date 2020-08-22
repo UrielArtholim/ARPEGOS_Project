@@ -1,5 +1,5 @@
 ﻿using RDFSharp.Model;
-using RDFSharp.Semantics;
+using RDFSharp.Semantics.OWL;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;

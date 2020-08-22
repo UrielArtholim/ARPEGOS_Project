@@ -18,7 +18,7 @@
                 <CheckBox x:Name="CheckItemBox"
                    Grid.Row="0"
                    Grid.Column="0"
-                   IsChecked="{Binding Selected}"
+                   IsChecked="{Binding Source={x:Reference CreationRootList}, Path=SelectedItem}"
                    Color="Black"/>
                 <Label x:Name="ItemNameLabel"
                        Grid.Row="0"

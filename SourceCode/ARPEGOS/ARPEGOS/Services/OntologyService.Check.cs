@@ -6,9 +6,9 @@ namespace ARPEGOS.Services
     using System.Text;
 
     using RDFSharp.Model;
-    using RDFSharp.Semantics;
+    using RDFSharp.Semantics.OWL;
 
-    public partial class OntologyService
+    public abstract partial class OntologyService
     {
         /// <summary>
         /// Returns true if an element belongs to Equipment given its class

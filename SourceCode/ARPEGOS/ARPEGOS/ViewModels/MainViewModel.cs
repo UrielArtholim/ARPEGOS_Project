@@ -3,6 +3,7 @@ namespace ARPEGOS.ViewModels
 {
     using System.Collections.Generic;
     using System.Collections.ObjectModel;
+    using System.Net.Http.Headers;
     using System.Threading.Tasks;
     using System.Windows.Input;
 
@@ -57,6 +58,7 @@ namespace ARPEGOS.ViewModels
             this.SelectItemCommand = new Command<string>(s => Task.Factory.StartNew(async () => await this.SelectItem(s)));
             this.CurrentStatus = SelectionStatus.SelectingGame;
             this.dialogService = dialogService;
+            this.AddGameButtonCommand = new Command(async () => { await App.Navigation.PushAsync(new AddGameView()); });
         }
 
         public async Task Init()
@@ -161,5 +163,7 @@ namespace ARPEGOS.ViewModels
             SelectingCharacter,
             Done
         }
+
+        public ICommand AddGameButtonCommand { get; set; }
     }
 }

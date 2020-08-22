@@ -1,7 +1,7 @@
 ﻿
 namespace ARPEGOS.Services
 {
-    using RDFSharp.Semantics;
+    using RDFSharp.Semantics.OWL;
 
     public partial class CharacterOntologyService : OntologyService
     {

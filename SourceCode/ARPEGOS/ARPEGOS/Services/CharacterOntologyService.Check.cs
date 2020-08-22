@@ -5,7 +5,7 @@ namespace ARPEGOS.Services
     using System.Collections.Generic;
     using System.Linq;
     using RDFSharp.Model;
-    using RDFSharp.Semantics;
+    using RDFSharp.Semantics.OWL;
 
     public partial class CharacterOntologyService
     {

@@ -1,4 +1,4 @@
-﻿using RDFSharp.Semantics;
+﻿using RDFSharp.Semantics.OWL;
 using System;
 using System.Collections.Generic;
 using System.Linq;

@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:ARPEGOS.Controls"
+             x:Class="ARPEGOS.Views.CreationRootView">
+    <ContentPage.Content>
+        <StackLayout Spacing="5" 
+                     Padding="0,20,0,0" 
+                     VerticalOptions="FillAndExpand" 
+                     HorizontalOptions="FillAndExpand">
+            <CollectionView x:Name="CreationRootList" 
+                            ItemsSource="{Binding Data}" 
+                            ItemsLayout="VerticalList">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <controls:CustomCheckCell/>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+            <Button Text="Continue" 
+                    Command="{Binding ContinueCommand}" 
+                    VerticalOptions="EndAndExpand" 
+                    HorizontalOptions="EndAndExpand"/>
+        </StackLayout>
+        
+        
+    </ContentPage.Content>
+</ContentPage>

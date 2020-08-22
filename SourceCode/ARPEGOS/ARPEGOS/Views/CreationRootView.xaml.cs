@@ -1,4 +1,5 @@
-﻿using ARPEGOS.ViewModels;
+﻿using ARPEGOS.Helpers;
+using ARPEGOS.ViewModels;
 using Autofac;
 using System;
 using System.Collections.Generic;
@@ -9,15 +10,15 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace ARPEGOS.Controls
+namespace ARPEGOS.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class CustomCheckCell : ViewCell
+    public partial class CreationRootView: ContentPage
     {
-        public CustomCheckCell()
+        public CreationRootView ()
         {
             InitializeComponent();
-            
+            this.BindingContext = new CreationRootViewModel();
         }
     }
 }

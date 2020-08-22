@@ -10,13 +10,13 @@ namespace ARPEGOS.Services
 
     public static class FileService
     {
-        private static TextInfo textInfo => Thread.CurrentThread.CurrentCulture.TextInfo;
+        private static TextInfo ti => Thread.CurrentThread.CurrentCulture.TextInfo;
 
         private static string BaseFolder => Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
 
-        public static string GamesPath = "GameFiles";
+        public static string GamesPath = "gamefiles";
 
-        public static string CharactersPath = "Characters";
+        public static string CharactersPath = "characters";
 
         /// <summary>
         /// Gets the formatted name of the games stored in the device
@@ -140,7 +140,7 @@ namespace ARPEGOS.Services
         /// <returns> Formatted Name </returns>
         public static string FormatName(string name)
         {
-            return textInfo.ToTitleCase(name);
+            return ti.ToTitleCase(name);
         }
 
         /// <summary>

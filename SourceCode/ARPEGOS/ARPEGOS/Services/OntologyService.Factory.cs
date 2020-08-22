@@ -11,7 +11,7 @@ namespace ARPEGOS.Services
     using ARPEGOS.Configuration;
 
     using RDFSharp.Model;
-    using RDFSharp.Semantics;
+    using RDFSharp.Semantics.OWL;
 
     public abstract partial class OntologyService
     {
@@ -54,8 +54,9 @@ namespace ARPEGOS.Services
 
         public static async Task<GameOntologyService> LoadGame(string name, string version)
         {
+            name = FileService.FormatName(name);
             var path = FileService.GetGameFilePath(name, version);
-            var graph = RDFGraph.FromFile(RDFFormat, path);
+            var graph =  RDFGraph.FromFile(RDFFormat, path);
             var context = $"{graph.Context}#";
             graph.SetContext(new Uri(context));
             var prefix = string.Concat(Regex.Matches(FileService.EscapedName(name), "[A-Z]").Select(match => match.Value)).ToLower();

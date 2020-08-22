@@ -1,5 +1,5 @@
 ﻿using RDFSharp.Model;
-using RDFSharp.Semantics;
+using RDFSharp.Semantics.OWL;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +7,7 @@ using System.Text;
 
 namespace ARPEGOS.Services
 {
-    public partial class OntologyService
+    public abstract partial class OntologyService
     {
         /// <summary>
         /// Returns the root class of the creation scheme of the active game

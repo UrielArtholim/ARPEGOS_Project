@@ -16,7 +16,7 @@
     <None Remove="DefaultGames\Anima Beyond Fantasy\characters\Glenn Radars.owl" />
     <None Remove="DefaultGames\Anima Beyond Fantasy\Nanatsu No Taizai.owl" />
     <None Remove="DefaultGames\Core Exxet.owl" />
-    <None Remove="DefaultGames\Nanatsu No Taizai\Gamefiles\Nanatsu No Taizai.owl" />
+    <None Remove="DefaultGames\Nanatsu No Taizai\gamefiles\Nanatsu No Taizai.owl" />
   </ItemGroup>
 
   <ItemGroup>
@@ -26,7 +26,7 @@
     <EmbeddedResource Include="DefaultGames\Anima Beyond Fantasy\gamefiles\Core Exxet.owl">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </EmbeddedResource>
-    <EmbeddedResource Include="DefaultGames\Nanatsu No Taizai\Gamefiles\Nanatsu No Taizai.owl">
+    <EmbeddedResource Include="DefaultGames\Nanatsu No Taizai\gamefiles\Nanatsu No Taizai.owl">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </EmbeddedResource>
   </ItemGroup>
@@ -104,6 +104,15 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\AddGameView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\CreationRootView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\CreationView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Templates\SingleChoiceView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>

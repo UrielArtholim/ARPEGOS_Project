@@ -5,6 +5,9 @@
              Visual="Material"
              Title="{Binding Title}"
              x:Name="P">
+    <NavigationPage.TitleView>
+        <Button BackgroundColor="Chocolate" Command="{Binding AddGameButtonCommand}" HorizontalOptions="End"/>
+    </NavigationPage.TitleView>
     <Grid>
         <ScrollView Grid.Row="0" BackgroundColor="{DynamicResource SecondaryBackgroundColor}">
             <FlexLayout Direction="Row" AlignItems="Start" JustifyContent="SpaceEvenly" Wrap="Wrap" BindableLayout.ItemsSource="{Binding SelectableElements}" Padding="5, 20, 5, 0" AlignContent="Start" AlignSelf="Auto"  >

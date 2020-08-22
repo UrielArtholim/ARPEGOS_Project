@@ -6,7 +6,7 @@ namespace ARPEGOS.Services
     using System.Linq;
 
     using RDFSharp.Model;
-    using RDFSharp.Semantics;
+    using RDFSharp.Semantics.OWL;
 
     public abstract partial class OntologyService
     {

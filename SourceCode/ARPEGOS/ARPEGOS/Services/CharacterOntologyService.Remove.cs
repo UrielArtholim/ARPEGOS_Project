@@ -3,7 +3,7 @@ namespace ARPEGOS.Services
 {
     using System.Linq;
 
-    using RDFSharp.Semantics;
+    using RDFSharp.Semantics.OWL;
 
     public partial class CharacterOntologyService
     {
