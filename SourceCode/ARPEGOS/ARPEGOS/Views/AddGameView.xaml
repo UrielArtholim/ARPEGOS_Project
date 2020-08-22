@@ -7,11 +7,11 @@
     <ContentPage.Content>
         <StackLayout Spacing="10" Padding="20,20,20,20" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
             <Entry Text ="{Binding Game}" Placeholder="Enter game name" HorizontalOptions="FillAndExpand" />
-            <Button Text="Check game" Command="{Binding CheckCommand}" HorizontalOptions="CenterAndExpand"/>
+            <Button Text="Comprobar juego" Command="{Binding CheckCommand}" HorizontalOptions="CenterAndExpand"/>
             <Label Text="{Binding CheckMessage}" HorizontalOptions="CenterAndExpand" />
-            <Button Text="Select file" Command="{Binding SelectCommand}" HorizontalOptions="CenterAndExpand"/>
+            <Button Text="Seleccionar fichero" Command="{Binding SelectCommand}" HorizontalOptions="CenterAndExpand"/>
             <Label Text="{Binding SelectMessage}" HorizontalOptions="CenterAndExpand" />
-            <Button Text="Add file" Command="{Binding AddCommand}" HorizontalOptions="CenterAndExpand"/>
+            <Button Text="Añadir fichero" Command="{Binding AddCommand}" HorizontalOptions="CenterAndExpand"/>
             <Label Text="{Binding AddMessage}" HorizontalOptions="CenterAndExpand" />
         </StackLayout>
     </ContentPage.Content>

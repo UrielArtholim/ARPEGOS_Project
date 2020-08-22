@@ -5,30 +5,49 @@
              Visual="Material"
              Title="{Binding Title}"
              x:Name="P">
-    <NavigationPage.TitleView>
-        <Button BackgroundColor="Chocolate" Command="{Binding AddGameButtonCommand}" HorizontalOptions="End"/>
-    </NavigationPage.TitleView>
     <Grid>
-        <ScrollView Grid.Row="0" BackgroundColor="{DynamicResource SecondaryBackgroundColor}">
-            <FlexLayout Direction="Row" AlignItems="Start" JustifyContent="SpaceEvenly" Wrap="Wrap" BindableLayout.ItemsSource="{Binding SelectableElements}" Padding="5, 20, 5, 0" AlignContent="Start" AlignSelf="Auto"  >
-                <BindableLayout.ItemTemplate>
-                    <DataTemplate>
-                        <Frame CornerRadius="5" BorderColor="{DynamicResource SeparatorColor}" Padding="5" WidthRequest="110" HeightRequest="110" Margin="0, 0, 0, 20">
-                            <Frame.GestureRecognizers>
-                                <TapGestureRecognizer Command="{Binding Path=BindingContext.SelectItemCommand, Source={x:Reference P}}" CommandParameter="{Binding .}" />
-                            </Frame.GestureRecognizers>
-                            <StackLayout Padding="10">
-                                <Image Source="{Binding ., Converter={StaticResource GetInitialsImageConverter}, ConverterParameter=128}" />
-                                <Label Text="{Binding .}" TextColor="{DynamicResource PrimaryTextColor}" HorizontalTextAlignment="Center" LineBreakMode="WordWrap" />
-                            </StackLayout>
-                        </Frame>
-                    </DataTemplate>
-                </BindableLayout.ItemTemplate>
-            </FlexLayout>
-        </ScrollView>
-        <Frame Grid.Row="0" BackgroundColor="Black" Opacity="0.7" HasShadow="False" CornerRadius="0" IsVisible="{Binding IsBusy}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
-            <ActivityIndicator Color="White" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" IsRunning="{Binding IsBusy}"
+        <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="{DynamicResource SecondaryBackgroundColor}">
+            <StackLayout Spacing="80" Padding="5" Margin="20,20,20,0" Orientation="Horizontal" VerticalOptions="Start" HorizontalOptions="CenterAndExpand">
+                <Button Text="Añadir" BackgroundColor="ForestGreen" Command="{Binding AddGameButtonCommand}" HorizontalOptions="CenterAndExpand"/>
+                <Button Text="Eliminar" BackgroundColor="DarkRed" Command="{Binding DeleteGameButtonCommand}" HorizontalOptions="CenterAndExpand"/>
+            </StackLayout>
+            <StackLayout Padding="5" Margin="20,20,20,0" Orientation="Horizontal" VerticalOptions="Start" HorizontalOptions="CenterAndExpand" IsVisible="{Binding ClearCheckEnabled}">
+                <Button Text="Cancelar" BackgroundColor="DarkGray" Command="{Binding CancelButtonCommand}" HorizontalOptions="Center"/>
+            </StackLayout>
+            <Frame CornerRadius="5" Padding="10" WidthRequest="20" HeightRequest="20" Margin="20,20,20,0" BorderColor="{DynamicResource SeparatorColor}" IsEnabled="{Binding ClearCheckEnabled}" VerticalOptions="Start" IsVisible="{Binding ClearCheckEnabled}"> 
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding Path=BindingContext.ClearCheckCommand, Source={x:Reference P}}" CommandParameter="{Binding .}"/>
+                </Frame.GestureRecognizers>
+                <StackLayout IsVisible="{Binding ClearCheckEnabled}" Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand">
+                    <Label Text="Eliminar juego completo" TextColor="{DynamicResource PrimaryTextColor}" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" HorizontalTextAlignment="Center" />
+                    <CheckBox IsChecked="{Binding ClearSelected}"/>
+                </StackLayout>
+            </Frame>
+            <ScrollView Grid.Row="0" BackgroundColor="{DynamicResource SecondaryBackgroundColor}" VerticalOptions="FillAndExpand">
+                <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                    <FlexLayout Direction="Row" AlignItems="Start" JustifyContent="SpaceEvenly" Wrap="Wrap" BindableLayout.ItemsSource="{Binding SelectableElements}" Padding="5, 20, 5, 0" AlignContent="Start" AlignSelf="Auto"  >
+                        <BindableLayout.ItemTemplate>
+                            <DataTemplate>
+                                <Frame CornerRadius="5" BorderColor="{DynamicResource SeparatorColor}" Padding="5" WidthRequest="110" HeightRequest="110" Margin="0, 0, 0, 20">
+                                    <Frame.GestureRecognizers>
+                                        <TapGestureRecognizer Command="{Binding Path=BindingContext.SelectItemCommand, Source={x:Reference P}}" CommandParameter="{Binding .}" />
+                                    </Frame.GestureRecognizers>
+                                    <StackLayout Padding="10">
+                                        <Image Source="{Binding ., Converter={StaticResource GetInitialsImageConverter}, ConverterParameter=128}" />
+                                        <Label Text="{Binding .}" TextColor="{DynamicResource PrimaryTextColor}" HorizontalTextAlignment="Center" LineBreakMode="WordWrap" />
+                                    </StackLayout>
+                                </Frame>
+                            </DataTemplate>
+                        </BindableLayout.ItemTemplate>
+                    </FlexLayout>
+                </StackLayout>
+            </ScrollView>
+            <Frame Grid.Row="0" BackgroundColor="Black" Opacity="0.7" HasShadow="False" CornerRadius="0" IsVisible="{Binding IsBusy}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                <ActivityIndicator Color="White" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" IsRunning="{Binding IsBusy}"
                                WidthRequest="50" HeightRequest="50" />
-        </Frame>
+            </Frame>
+        </StackLayout>
+        
+        
     </Grid>
 </ContentPage>
