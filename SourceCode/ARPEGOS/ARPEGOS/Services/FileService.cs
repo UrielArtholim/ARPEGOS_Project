@@ -1,6 +1,7 @@
 ﻿
 namespace ARPEGOS.Services
 {
+    using ARPEGOS.Helpers;
     using System;
     using System.Collections.Generic;
     using System.Globalization;
@@ -105,7 +106,7 @@ namespace ARPEGOS.Services
 
         public static string GetGameBasePath(CharacterOntologyService character)
         {
-            return GetGameBasePath(character.Game.Name);
+            return GetGameBasePath(DependencyHelper.CurrentContext.CurrentGame.Name);
         }
 
         public static string GetGameBasePath(GameOntologyService game)
@@ -130,7 +131,7 @@ namespace ARPEGOS.Services
 
         public static string GetCharacterFilePath(CharacterOntologyService character)
         {
-            return GetCharacterFilePath(character.Name, character.Game.Name);
+            return GetCharacterFilePath(character.Name, DependencyHelper.CurrentContext.CurrentGame.Name);
         }
 
         /// <summary>

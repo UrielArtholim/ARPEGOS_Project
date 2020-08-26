@@ -9,7 +9,7 @@ namespace ARPEGOS.Services
     using System.Threading.Tasks;
 
     using ARPEGOS.Configuration;
-
+    using ARPEGOS.Helpers;
     using RDFSharp.Model;
     using RDFSharp.Semantics.OWL;
 
@@ -54,6 +54,12 @@ namespace ARPEGOS.Services
 
         public static async Task<GameOntologyService> LoadGame(string name, string version)
         {
+            if(DependencyHelper.CurrentContext.CurrentGame != null)
+            {
+                var currentGamePath = DependencyHelper.CurrentContext.CurrentGame.Path;
+                if (currentGamePath.Contains(FileService.EscapedName(version)))
+                    return DependencyHelper.CurrentContext.CurrentGame;
+            }
             name = FileService.FormatName(name);
             var path = FileService.GetGameFilePath(name, version);
             var graph =  RDFGraph.FromFile(RDFFormat, path);
@@ -68,13 +74,20 @@ namespace ARPEGOS.Services
 
         public static async Task<CharacterOntologyService> LoadCharacter(string name, GameOntologyService game)
         {
+            if (DependencyHelper.CurrentContext.CurrentCharacter != null)
+            {
+                var currentCharacterPath = DependencyHelper.CurrentContext.CurrentCharacter.Path;
+                if (currentCharacterPath.Contains(FileService.EscapedName(name)))
+                    return DependencyHelper.CurrentContext.CurrentCharacter;
+            }
+
             var path = FileService.GetCharacterFilePath(name, game);
             var context = $"http://arpegos_project/Games/{FileService.EscapedName(game.Name)}/characters/{FileService.EscapedName(name)}#";
-            var graph = RDFGraph.FromFile(RDFFormat, path);
+            var graph = await Task.Run(() => RDFGraph.FromFile(RDFFormat, path));
             graph.SetContext(new Uri(context));
             var ontology = RDFOntology.FromRDFGraph(graph);
 
-            return new CharacterOntologyService(name, path, context, ontology, game);
+            return new CharacterOntologyService(name, path, context, ontology);
         }
 
         public static async Task<CharacterOntologyService> CreateCharacter(string name, GameOntologyService game)
@@ -92,7 +105,7 @@ namespace ARPEGOS.Services
             RDFNamespaceRegister.AddNamespace(new RDFNamespace(prefix, graph.Context.ToString()));
             var ontology = RDFOntology.FromRDFGraph(graph);
 
-            var character = new CharacterOntologyService(name, path, context, ontology, game);
+            var character = new CharacterOntologyService(name, path, context, ontology);
             character.Save();
             return character;
         }

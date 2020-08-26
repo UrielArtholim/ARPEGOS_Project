@@ -19,37 +19,32 @@ namespace ARPEGOS.ViewModels
 
     public class MainViewModel : BaseViewModel
     {
-        private SelectionStatus _selectionStatus;
+        private SelectionStatus _selectionStatus,_previousStatus;
 
         private string selectedGame;
 
         private IDialogService dialogService;
 
-        private bool _clearSelected, _clearCheckEnabled, _clearCheckDisabled;
+        private bool _cancelEnabled;
 
-        public bool ClearSelected
+        public bool CancelEnabled
         { 
-            get => _clearSelected;
-            set => this.SetProperty(ref this._clearSelected, value);
+            get => _cancelEnabled;
+            set => this.SetProperty(ref this._cancelEnabled, value);
         }
 
-        public bool ClearCheckEnabled
-        {
-            get => _clearCheckEnabled;
-            set => this.SetProperty(ref this._clearCheckEnabled, value); 
-        }
-
-        public bool ClearCheckDisabled
-        {
-            get => _clearCheckDisabled;
-            set => this.SetProperty(ref this._clearCheckDisabled, !ClearCheckEnabled);
-        }
-
-        public ICommand AddGameButtonCommand { get; set; }
+        public ICommand AddButtonCommand { get; set; }
         public ICommand ClearCheckCommand { get; }
-        public ICommand DeleteGameButtonCommand { get; }
+        public ICommand DeleteButtonCommand { get; }
         public ICommand CancelButtonCommand { get; }
         public ICommand SelectItemCommand { get; }
+        public ICommand PushSkillViewCommand { get; }
+
+        public string SelectedGame
+        {
+            get => this.selectedGame;
+            set => this.SetProperty(ref this.selectedGame, value);
+        }
 
         public ObservableCollection<string> SelectableElements { get; }
 
@@ -63,6 +58,16 @@ namespace ARPEGOS.ViewModels
             }
         }
 
+        public SelectionStatus PreviousStatus
+        {
+            get => this._previousStatus;
+            set
+            {
+                this.SetProperty(ref this._previousStatus, value);
+                this.OnPropertyChanged(nameof(this.Title));
+            }
+        }
+
         public new string Title
         {
             get
@@ -70,25 +75,58 @@ namespace ARPEGOS.ViewModels
                 return this.CurrentStatus switch
                     {
                         SelectionStatus.SelectingGame => "Selecciona el juego",
-                        SelectionStatus.SelectingVersion => "Selecciona la versión",
                         SelectionStatus.SelectingCharacter => "Selecciona el personaje",
                         SelectionStatus.DeletingGame => "Selecciona el juego",
-                        SelectionStatus.DeletingVersion => "Selecciona la versión",
                         _ => "Carga completada!"
                     };
             }
         }
 
-        public MainViewModel(IDialogService dialogService)
+        public MainViewModel (IDialogService dialogService)
         {
             this.SelectableElements = new ObservableCollection<string>();
             this.SelectItemCommand = new Command<string>(s => Task.Factory.StartNew(async () => await this.SelectItem(s)));
             this.CurrentStatus = SelectionStatus.SelectingGame;
+            this.PreviousStatus = this.CurrentStatus;
             this.dialogService = dialogService;
-            this.AddGameButtonCommand = new Command(async () => { await App.Navigation.PushAsync(new AddGameView()); this.CurrentStatus = SelectionStatus.SelectingGame; this.ClearSelected = false; this.ClearCheckEnabled = false; this.ClearCheckDisabled = !this.ClearCheckEnabled; this.Load(CurrentStatus); });
-            this.DeleteGameButtonCommand = new Command(()=> { this.CurrentStatus = SelectionStatus.DeletingGame; this.ClearSelected = false; this.ClearCheckEnabled = true; this.ClearCheckDisabled = !this.ClearCheckEnabled; this.Load(CurrentStatus); });
-            this.ClearCheckCommand = new Command(() => { this.ClearSelected = !this.ClearSelected; });
-            this.CancelButtonCommand = new Command(() => { this.CurrentStatus = SelectionStatus.SelectingGame; this.ClearSelected = false; this.ClearCheckEnabled = false; this.ClearCheckDisabled = !this.ClearCheckEnabled; this.Load(CurrentStatus); });
+            this.CancelEnabled = false;
+            this.AddButtonCommand = new Command(async() => 
+            {
+                switch(this.CurrentStatus)
+                {
+                    case SelectionStatus.SelectingGame:
+                        await App.Navigation.PushAsync(new AddGameView());
+                        this.Load(this.CurrentStatus);
+                        break;
+                    case SelectionStatus.SelectingCharacter:
+                        var item = await this.dialogService.DisplayTextPrompt("Crear nuevo personaje", "Introduce el nombre:", "Crear");
+                        if (!string.IsNullOrWhiteSpace(item))
+                            DependencyHelper.CurrentContext.CurrentCharacter = await OntologyService.CreateCharacter(item, DependencyHelper.CurrentContext.CurrentGame);
+                        this.Load(this.CurrentStatus);
+                        break;
+                }
+            });
+
+            this.DeleteButtonCommand = new Command(() => 
+            {
+                this.PreviousStatus = this.CurrentStatus;
+                switch(this.PreviousStatus)
+                {
+                    case SelectionStatus.SelectingGame: this.CurrentStatus = SelectionStatus.DeletingGame; break;
+                    case SelectionStatus.SelectingCharacter: this.CurrentStatus = SelectionStatus.DeletingCharacter; break;
+                    case SelectionStatus.DeletingGame: this.CurrentStatus = SelectionStatus.SelectingGame; break;
+                    case SelectionStatus.DeletingCharacter: this.CurrentStatus = SelectionStatus.SelectingCharacter; break;
+                }
+                this.CancelEnabled = !this.CancelEnabled;
+                this.Load(CurrentStatus); 
+            });
+
+            this.CancelButtonCommand = new Command(() => 
+            {
+                this.CancelEnabled = false;
+                this.CurrentStatus = this.PreviousStatus;  
+                this.Load(CurrentStatus); 
+            });
         }
 
         public async Task Init()
@@ -118,13 +156,10 @@ namespace ARPEGOS.ViewModels
             switch (this.CurrentStatus)
             {
                 case SelectionStatus.SelectingGame:
-                    this.selectedGame = item;
-                    this.CurrentStatus = SelectionStatus.SelectingVersion;
-                    this.Load(this.CurrentStatus);
-                    break;
-                case SelectionStatus.SelectingVersion:
-                    DependencyHelper.CurrentContext.CurrentGame = await OntologyService.LoadGame(this.selectedGame, item);
-                    this.CurrentStatus = SelectionStatus.SelectingCharacter;
+                    this.SelectedGame = item;
+                    MainThread.BeginInvokeOnMainThread(async() => await App.Navigation.PushAsync(new SelectVersionView(dialogService)));
+                    this.PreviousStatus = this.CurrentStatus;
+                    this.CurrentStatus = SelectionStatus.SelectingGame;
                     this.Load(this.CurrentStatus);
                     break;
 
@@ -134,55 +169,37 @@ namespace ARPEGOS.ViewModels
                         item = await this.dialogService.DisplayTextPrompt("Crear nuevo personaje", "Introduce el nombre:", "Crear");
                         if (string.IsNullOrWhiteSpace(item))
                             break;
-
                         DependencyHelper.CurrentContext.CurrentCharacter = await OntologyService.CreateCharacter(item, DependencyHelper.CurrentContext.CurrentGame);
                     }
                     else
                         DependencyHelper.CurrentContext.CurrentCharacter = await OntologyService.LoadCharacter(item, DependencyHelper.CurrentContext.CurrentGame);
-                    
+                    await MainThread.InvokeOnMainThreadAsync(async() => await App.Navigation.PushAsync(new SkillView()));
+                    this.PreviousStatus = this.CurrentStatus;
                     this.CurrentStatus = SelectionStatus.Done;
                     this.Load(this.CurrentStatus);
                     break;
 
                 case SelectionStatus.DeletingGame:
-                    if (this.ClearSelected == false)
-                    {
-                        this.selectedGame = item;
-                        this.CurrentStatus = SelectionStatus.SelectingVersion;
-                        this.Load(this.CurrentStatus);
-                        break;
-                    }
-                    else
-                    {
-                        this.selectedGame = item;
-                        var deleteGameConfirmed = await this.dialogService.DisplayAcceptableAlert("Advertencia", $"¿Desea eliminar {this.selectedGame} completamente? Una vez hecho no podrá ser recuperado", "Confirmar", "Cancelar");
-                        if (deleteGameConfirmed == true)
-                        {
-                            FileService.DeleteGame(this.selectedGame);
-                            this.CurrentStatus = SelectionStatus.SelectingGame; 
-                            this.ClearSelected = false; 
-                            this.ClearCheckEnabled = false; 
-                            this.ClearCheckDisabled = !this.ClearCheckEnabled; 
-                            this.Load(CurrentStatus);
-                        }
-                        break;
-                    }
+                    this.CancelEnabled = true;
+                    var confirmation = await this.dialogService.DisplayAcceptableAlert("Advertencia", $"¿Desea eliminar {item}? Una vez hecho no podrá ser recuperado", "Confirmar", "Cancelar");
+                    if (confirmation == true)
+                        await MainThread.InvokeOnMainThreadAsync(()=> FileService.DeleteGame(this.selectedGame));
+                    this.PreviousStatus = this.CurrentStatus;
+                    this.CurrentStatus = SelectionStatus.SelectingGame;
+                    this.Load(CurrentStatus);
+                    break;                    
 
-                case SelectionStatus.DeletingVersion:
-                    var selectedVersion = item;
-                    var deleteVersionConfirmed = await this.dialogService.DisplayAcceptableAlert("Advertencia", $"¿Desea eliminar {selectedVersion} completamente? Una vez hecho no podrá ser recuperado", "Confirmar", "Cancelar");
-                    if (deleteVersionConfirmed == true)
-                    {
-                        FileService.DeleteGameVersion(this.selectedGame, selectedVersion);
-                        this.CurrentStatus = SelectionStatus.SelectingGame;
-                        this.ClearSelected = false;
-                        this.ClearCheckEnabled = false;
-                        this.ClearCheckDisabled = !this.ClearCheckEnabled;
-                        this.Load(CurrentStatus);
-                    }
+                case SelectionStatus.DeletingCharacter:
+                    this.CancelEnabled = true;
+                    confirmation = await this.dialogService.DisplayAcceptableAlert("Advertencia", $"¿Desea eliminar {item}? Una vez hecho no podrá ser recuperado", "Confirmar", "Cancelar");
+                    if(confirmation == true)
+                        await MainThread.InvokeOnMainThreadAsync(() => FileService.DeleteCharacter(item, this.selectedGame));                    
+                    this.CurrentStatus = SelectionStatus.SelectingCharacter;
+                    this.Load(this.CurrentStatus);
                     break;
 
                 default:
+                    this.PreviousStatus = this.CurrentStatus;
                     this.CurrentStatus = SelectionStatus.SelectingGame;
                     this.Load(this.CurrentStatus);
                     break;
@@ -199,11 +216,8 @@ namespace ARPEGOS.ViewModels
                 case SelectionStatus.SelectingGame:
                     items = FileService.ListGames();
                     break;
-                case SelectionStatus.SelectingVersion:
-                    items = FileService.ListVersions(this.selectedGame);
-                    break;
                 case SelectionStatus.SelectingCharacter:
-                    items = FileService.ListCharacters(this.selectedGame);
+                    items = FileService.ListCharacters(this.SelectedGame);
                     break;
                 case SelectionStatus.Done:
                     items = new string[0];
@@ -214,25 +228,29 @@ namespace ARPEGOS.ViewModels
                 default:
                     return;
             }
-            MainThread.BeginInvokeOnMainThread(
-                () =>
-                    {
-                        this.SelectableElements.Clear();
-                        this.SelectableElements.AddRange(items);
-                        if (status == SelectionStatus.SelectingCharacter)
-                            this.SelectableElements.Add(string.Empty);
-                    });
+            MainThread.BeginInvokeOnMainThread(() =>
+            {
+                if(items != null)
+                {
+                    this.SelectableElements.Clear();
+                    this.CancelEnabled = false;
+                    this.SelectableElements.AddRange(items);
+                    if (status == SelectionStatus.SelectingCharacter)
+                        this.SelectableElements.Add(string.Empty);
+                }
+            });
         }
 
         public enum SelectionStatus
         {
+            AddGame,
+            AddCharacter,
             SelectingGame,
             SelectingVersion,
             SelectingCharacter,
             DeletingGame,
-            DeletingVersion,            
+            DeletingCharacter,
             Done
         }
-
     }
 }

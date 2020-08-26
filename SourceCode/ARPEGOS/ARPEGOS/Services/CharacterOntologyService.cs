@@ -5,13 +5,7 @@ namespace ARPEGOS.Services
 
     public partial class CharacterOntologyService : OntologyService
     {
-        public GameOntologyService Game { get; }
-
-        public CharacterOntologyService(string name, string path, string context, RDFOntology ontology, GameOntologyService game)
-            : base(name, path, context, ontology)
-        {
-            this.Game = game;
-        }
+        public CharacterOntologyService (string name, string path, string context, RDFOntology ontology) : base(name, path, context, ontology) { }
 
         public void Save()
         {

@@ -17,6 +17,10 @@
     <None Remove="DefaultGames\Anima Beyond Fantasy\Nanatsu No Taizai.owl" />
     <None Remove="DefaultGames\Core Exxet.owl" />
     <None Remove="DefaultGames\Nanatsu No Taizai\gamefiles\Nanatsu No Taizai.owl" />
+    <None Remove="Resources\Fonts\OldLondon.ttf" />
+    <None Remove="Resources\Fonts\OldLondonAlternate.ttf" />
+    <None Remove="Resources\Fonts\Olondona.otf" />
+    <None Remove="Resources\Fonts\Olondon_.otf" />
   </ItemGroup>
 
   <ItemGroup>
@@ -29,6 +33,9 @@
     <EmbeddedResource Include="DefaultGames\Nanatsu No Taizai\gamefiles\Nanatsu No Taizai.owl">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Fonts\OldLondon.ttf" />
+    <EmbeddedResource Include="Resources\Fonts\OldLondonAlternate.ttf" />
+    <EmbeddedResource Include="Resources\Fonts\Olondon_.otf" />
   </ItemGroup>
 
   <ItemGroup>
@@ -51,9 +58,13 @@
 
   <ItemGroup>
     <Resource Include="DefaultGames\Anima Beyond Fantasy\characters\Ctuchik.owl" />
+    <Resource Include="Resources\Fonts\Olondona.otf" />
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="Views\SkillListView.xaml.cs">
+      <DependentUpon>SkillListView.xaml</DependentUpon>
+    </Compile>
     <Compile Update="Views\MainView.xaml.cs">
       <DependentUpon>%(Filename)</DependentUpon>
     </Compile>
@@ -110,6 +121,15 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\CreationView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\SelectVersionView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\SkillListView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\SkillView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\Templates\SingleChoiceView.xaml">

@@ -3,7 +3,7 @@ namespace ARPEGOS.Services
 {
     using System.Collections.Generic;
     using System.Linq;
-
+    using ARPEGOS.Helpers;
     using RDFSharp.Semantics.OWL;
 
     public partial class CharacterOntologyService
@@ -21,7 +21,7 @@ namespace ARPEGOS.Services
                 "Disponible",
                 "Available"
             };
-            var GamePropertyModel = this.Game.Ontology.Model.PropertyModel;
+            var GamePropertyModel = DependencyHelper.CurrentContext.CurrentGame.Ontology.Model.PropertyModel;
             var ResultProperties = GamePropertyModel.Where(entry => AvailableWords.Any(word => entry.ToString().Contains(word)));
             var ElementWords = stage.Split('_').ToList();
             var CompareList = new List<string>();
@@ -139,7 +139,7 @@ namespace ARPEGOS.Services
                 "Limit",
                 "Limite"
             };
-            var GamePropertyModel = this.Game.Ontology.Model.PropertyModel;
+            var GamePropertyModel = DependencyHelper.CurrentContext.CurrentGame.Ontology.Model.PropertyModel;
             var ResultProperties = GamePropertyModel.Where(entry => LimitWords.Any(word => entry.ToString().Contains(word)));
             var ElementWords = ElementName.Split('_').ToList();
             var CompareList = new List<string>();

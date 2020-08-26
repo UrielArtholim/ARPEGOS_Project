@@ -40,6 +40,7 @@
         private void RegisterViewModels(ContainerBuilder builder)
         {
             builder.RegisterType<MainViewModel>().SingleInstance();
+            builder.RegisterType<SelectVersionViewModel>().SingleInstance();
         }
     }
 }

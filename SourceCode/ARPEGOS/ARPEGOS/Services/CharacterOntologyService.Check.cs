@@ -4,6 +4,7 @@ namespace ARPEGOS.Services
     using System;
     using System.Collections.Generic;
     using System.Linq;
+    using ARPEGOS.Helpers;
     using RDFSharp.Model;
     using RDFSharp.Semantics.OWL;
 
@@ -21,7 +22,7 @@ namespace ARPEGOS.Services
             if (applyOnCharacter)
                 CurrentOntology = this.Ontology;
             else
-                CurrentOntology = this.Game.Ontology;
+                CurrentOntology = DependencyHelper.CurrentContext.CurrentGame.Ontology;
 
             var dataModel = CurrentOntology.Data;
             var literalType = CheckDatatypeFromString(type);
@@ -40,7 +41,7 @@ namespace ARPEGOS.Services
             if (applyOnCharacter)
                 CurrentOntology = this.Ontology;
             else
-                CurrentOntology = this.Game.Ontology;
+                CurrentOntology = DependencyHelper.CurrentContext.CurrentGame.Ontology;
 
             var escapedName = FileService.EscapedName(name);
             var dataModel = CurrentOntology.Data;
@@ -63,8 +64,8 @@ namespace ARPEGOS.Services
             }
             else
             {
-                CurrentOntology = this.Game.Ontology;
-                CurrentContext = this.Game.Context;
+                CurrentOntology = DependencyHelper.CurrentContext.CurrentGame.Ontology;
+                CurrentContext = DependencyHelper.CurrentContext.CurrentGame.Context;
             }
 
             var escapedName = FileService.EscapedName(name);
@@ -88,8 +89,8 @@ namespace ARPEGOS.Services
             }
             else
             {
-                CurrentOntology = this.Game.Ontology;
-                CurrentContext = this.Game.Context;
+                CurrentOntology = DependencyHelper.CurrentContext.CurrentGame.Ontology;
+                CurrentContext = DependencyHelper.CurrentContext.CurrentGame.Context;
             }
 
             var escapedName = FileService.EscapedName(name);
@@ -130,8 +131,8 @@ namespace ARPEGOS.Services
             }
             else
             {
-                CurrentOntology = this.Game.Ontology;
-                CurrentContext = this.Game.Context;
+                CurrentOntology = DependencyHelper.CurrentContext.CurrentGame.Ontology;
+                CurrentContext = DependencyHelper.CurrentContext.CurrentGame.Context;
             }
 
             var escapedName = FileService.EscapedName(name);
@@ -182,8 +183,8 @@ namespace ARPEGOS.Services
             }
             else
             {
-                CurrentOntology = this.Game.Ontology;
-                CurrentContext = this.Game.Context;
+                CurrentOntology = DependencyHelper.CurrentContext.CurrentGame.Ontology;
+                CurrentContext = DependencyHelper.CurrentContext.CurrentGame.Context;
             }
 
             var generalCostPredicateName = string.Empty;
@@ -244,8 +245,8 @@ namespace ARPEGOS.Services
             }
             else
             {
-                CurrentOntology = this.Game.Ontology;
-                CurrentContext = this.Game.Context;
+                CurrentOntology = DependencyHelper.CurrentContext.CurrentGame.Ontology;
+                CurrentContext = DependencyHelper.CurrentContext.CurrentGame.Context;
             }
 
             string info = null;
@@ -293,8 +294,8 @@ namespace ARPEGOS.Services
                 {
                     if (partialLimitValue > 0)
                     {
-                        var itemFact = this.Game.Ontology.Data.SelectFact($"{this.Game.Context}{item.Name}");
-                        var itemFactAssertions = this.Game.Ontology.Data.Relations.Assertions.SelectEntriesBySubject(itemFact);
+                        var itemFact = DependencyHelper.CurrentContext.CurrentGame.Ontology.Data.SelectFact($"{DependencyHelper.CurrentContext.CurrentGame.Context}{item.Name}");
+                        var itemFactAssertions = DependencyHelper.CurrentContext.CurrentGame.Ontology.Data.Relations.Assertions.SelectEntriesBySubject(itemFact);
                         var itemRequirements = itemFactAssertions.Where(entry => requirementWords.Any(word => entry.ToString().Contains(word)));
                         string datatypeRequirementName;
                         var allRequirementsFulfilled = true;

@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ARPEGOS.Views.SkillView"
+             Title="Cálculo de habilidades">
+    <ContentPage.Content>
+        <StackLayout Padding="5" Margin="20,20,20,0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <Button Text="Selecciona habilidad" Command="{Binding SelectSkillCommand}" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand"/>
+            <Label Text="{Binding SkillSelected}" VerticalOptions="StartAndExpand" HorizontalOptions="CenterAndExpand" />
+            <Entry Text ="{Binding Dice}" Keyboard="Numeric" Placeholder="Introduzca el valor de la tirada" HorizontalOptions="FillAndExpand"  VerticalOptions="CenterAndExpand" />
+            <Button Text="Calcular habilidad" Command="{Binding CalculateSkillCommand}" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand"/>
+            <Label Text="{Binding SkillValue}" FontSize="Large" FontFamily="OldLondon" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

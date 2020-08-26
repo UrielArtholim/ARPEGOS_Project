@@ -1,4 +1,5 @@
-﻿using RDFSharp.Model;
+﻿using ARPEGOS.Helpers;
+using RDFSharp.Model;
 using RDFSharp.Semantics.OWL;
 using System;
 using System.Collections.Generic;
@@ -7,6 +8,7 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Text.RegularExpressions;
+using Xamarin.Forms;
 
 namespace ARPEGOS.Services
 {
@@ -15,11 +17,11 @@ namespace ARPEGOS.Services
         /// <summary>
         /// Returns the hierarchy of the property given
         /// </summary>
-        /// <param name="property"> Name of the property given </param>
+        /// <param name="propertyName"> Name of the property given </param>
         /// <returns> String with the hierarchy of the property given </returns>
-        public string GetPropertyVisualizationPosition(string property)
+        public string GetPropertyVisualizationPosition(string propertyName)
         {
-            var CurrentProperty = this.Ontology.Model.PropertyModel.SelectProperty($"{this.Context}{property}");
+            var CurrentProperty = this.Ontology.Model.PropertyModel.SelectProperty($"{this.Context}{propertyName}");
             var AnnotationProperty = this.Ontology.Model.PropertyModel.SelectProperty($"{this.Context}{ "Visualization"}");
             var CharacterVisualizationAnnotations = this.Ontology.Model.PropertyModel.Annotations.CustomAnnotations.SelectEntriesByPredicate(AnnotationProperty);
             var CharacterVisualizationAnnotation = CharacterVisualizationAnnotations.SelectEntriesBySubject(CurrentProperty).Single();
@@ -46,6 +48,141 @@ namespace ARPEGOS.Services
         }
 
         /// <summary>
+        /// Returns the properties that represent the skills of the character
+        /// </summary>
+        /// <returns> Set of string which contains the names of the skills</returns>
+        public IEnumerable<string> GetCharacterSkills()
+        {
+            var skillObjectClass = "Habilidad";
+            var skillDataClass = "Personaje_Habilidad";
+            var characterProperties = GetCharacterProperties();
+            var skills = new ObservableCollection<string>();
+            foreach(var property in characterProperties)
+            {
+                if(this.CheckIndividual(property.Value, true))
+                {
+                    var parents = this.GetParentClasses(property.Value, true).Split(':').ToList();
+                    if (parents.Any(p => p.Contains(skillObjectClass)))
+                        skills.Add(property.Value);
+                }
+                else
+                {
+                    if(this.GetTopParentProperty(property.Key)==skillDataClass)
+                    {
+                        var formatedName = FileService.FormatName(property.Key.Split("Per_").Last());
+                        skills.Add(property.Key);
+                    }                    
+                }
+            }
+            return skills;
+        }
+
+        /// <summary>
+        /// Returns the top parent of the property given
+        /// </summary>
+        /// <param name="propertyName"> String that contains the name of the property given </param>
+        /// <returns> Name of the top parent property </returns>
+        public string GetTopParentProperty(string propertyName)
+        {
+            var parentName = string.Empty;
+            var currentProperty = this.Ontology.Model.PropertyModel.SelectProperty($"{this.Context}{propertyName}");
+            var hasParent = true;
+            while (hasParent == true)
+            {
+                var parentTaxonomy = this.Ontology.Model.PropertyModel.Relations.SubPropertyOf.SelectEntriesBySubject(currentProperty);
+                if(parentTaxonomy == null)
+                {
+                    hasParent = false;
+                    parentName = currentProperty.ToString().Split('#').Last();
+                }
+                else
+                    currentProperty = parentTaxonomy.Single().TaxonomyObject as RDFOntologyProperty;
+            }
+            return parentName;
+        }
+
+        public int GetSkillValue(string skillName)
+        {
+            int skillValue = 0;
+            var character = this.Ontology.Data.SelectFact($"{this.Context}{this.Name}");
+            var currentProperty = this.Ontology.Model.PropertyModel.SelectProperty($"{this.Context}{skillName}");
+            if(this.CheckIndividual(skillName) == true)
+            {
+                var annotationPropertyName = "SkillValue";
+                var annotationProperty = this.Ontology.Model.PropertyModel.SelectProperty($"{this.Context}{annotationPropertyName}");
+                var skillValueAssertionFound = false;
+                var parentClass = this.Ontology.Model.ClassModel.SelectClass($"{this.Context}{this.GetElementClass(skillName, true)}");
+                var annotationValue = string.Empty;
+
+                var skillFact = this.Ontology.Data.SelectFact($"{this.Context}{skillName}");
+                var skillValueAnnotationTaxonomy = this.Ontology.Data.Annotations.CustomAnnotations.SelectEntriesBySubject(character).SelectEntriesByPredicate(annotationProperty);
+                if(skillValueAnnotationTaxonomy != null)
+                {
+                    skillValueAssertionFound = true;
+                    annotationValue = skillValueAnnotationTaxonomy.Single().TaxonomyObject.ToString().Split('^').First();
+                }
+
+                while(skillValueAssertionFound == false)
+                {
+                    skillValueAnnotationTaxonomy = this.Ontology.Model.ClassModel.Annotations.CustomAnnotations.SelectEntriesBySubject(parentClass);
+                    foreach(var assertion in skillValueAnnotationTaxonomy)
+                    {
+                        if(assertion.TaxonomyPredicate.ToString().Contains(annotationPropertyName))
+                        {
+                            annotationValue = assertion.TaxonomyObject.ToString().Split('^').First();
+                            skillValueAssertionFound = true;
+                            break;
+                        }
+                    }
+                    if (skillValueAssertionFound == false)
+                    {
+                        var parentClassName = parentClass.Value.ToString().Split('#').Last();
+                        parentClass = this.Ontology.Model.ClassModel.SelectClass($"{this.Context}{this.GetElementClass(parentClassName, true)}"); ;
+                    }
+                }
+
+                var annotationElements = annotationValue.Split(':').ToList();
+                var operators = new List<string>() { "+", "-", "*", "/" };
+                for (var index = 0; index < annotationElements.Count(); ++index)
+                {
+                    var element = annotationElements[index];
+                    if (operators.Any(op => element == op))
+                    {
+                        var nextElement = annotationElements[index + 1];
+                        if ((Regex.IsMatch(nextElement, @"\d") && (!Regex.IsMatch(nextElement, @"\D"))))
+                            skillValue = OntologyService.ConvertToOperator(element, skillValue, Convert.ToInt32(nextElement));
+                        else
+                        {
+                            var nextElementProperty = this.Ontology.Model.PropertyModel.SelectProperty($"{this.Context}{nextElement}");
+                            var nextElementPropertyValue = this.Ontology.Data.Relations.Assertions.SelectEntriesByPredicate(nextElementProperty).Single().TaxonomyObject.ToString().Split('^').First();
+                            skillValue = OntologyService.ConvertToOperator(element, skillValue, Convert.ToInt32(nextElementPropertyValue));
+                        }
+                    }
+                    else if ((Regex.IsMatch(element, @"\d") && (!Regex.IsMatch(element, @"\D"))))
+                    {
+                        if(index == 0)
+                            skillValue = Convert.ToInt32(element);
+                    }
+                    else
+                    {
+                        if(index == 0)
+                        {
+                            var elementProperty = this.Ontology.Model.PropertyModel.SelectProperty($"{this.Context}{element}");
+                            var elementPropertyValue = this.Ontology.Data.Relations.Assertions.SelectEntriesByPredicate(elementProperty).Single().TaxonomyObject.ToString().Split('^').First();
+                            skillValue = Convert.ToInt32(elementPropertyValue);
+                        }
+                    }
+                }
+            }
+            else if(this.CheckDatatypeProperty(skillName) == true)
+            {
+                var assertion = this.Ontology.Data.Relations.Assertions.SelectEntriesBySubject(character).SelectEntriesByPredicate(currentProperty).Single();
+                skillValue = Convert.ToInt32(assertion.TaxonomyObject.ToString().Split('^').First());
+            }
+            return skillValue;
+        }
+
+        /// <summary>
         /// Returns class of the given element, choosing if the element is from the character or not
         /// </summary>
         /// <param name="elementName">Name of the element given</param>
@@ -62,8 +199,8 @@ namespace ARPEGOS.Services
             }
             else
             {
-                CurrentOntology = this.Game.Ontology;
-                CurrentContext = this.Game.Context;
+                CurrentOntology = DependencyHelper.CurrentContext.CurrentGame.Ontology;
+                CurrentContext = DependencyHelper.CurrentContext.CurrentGame.Context;
             }
 
             var DataModel = CurrentOntology.Data;
@@ -89,8 +226,8 @@ namespace ARPEGOS.Services
             }
             else
             {
-                CurrentOntology = this.Game.Ontology;
-                CurrentContext = this.Game.Context;
+                CurrentOntology = DependencyHelper.CurrentContext.CurrentGame.Ontology;
+                CurrentContext = DependencyHelper.CurrentContext.CurrentGame.Context;
             }
 
             var DataModel = CurrentOntology.Data;
@@ -118,8 +255,8 @@ namespace ARPEGOS.Services
             }
             else
             {
-                CurrentOntology = this.Game.Ontology;
-                CurrentContext = this.Game.Context;
+                CurrentOntology = DependencyHelper.CurrentContext.CurrentGame.Ontology;
+                CurrentContext = DependencyHelper.CurrentContext.CurrentGame.Context;
             }
 
             var ClassModel = CurrentOntology.Model.ClassModel;
@@ -185,8 +322,8 @@ namespace ARPEGOS.Services
             }
             else
             {
-                CurrentOntology = this.Game.Ontology;
-                CurrentContext = this.Game.Context;
+                CurrentOntology = DependencyHelper.CurrentContext.CurrentGame.Ontology;
+                CurrentContext = DependencyHelper.CurrentContext.CurrentGame.Context;
             }
 
             var PropertyModel = CurrentOntology.Model.PropertyModel;
@@ -354,8 +491,8 @@ namespace ARPEGOS.Services
             }
             else
             {
-                CurrentOntology = this.Game.Ontology;
-                CurrentContext = this.Game.Context;
+                CurrentOntology = DependencyHelper.CurrentContext.CurrentGame.Ontology;
+                CurrentContext = DependencyHelper.CurrentContext.CurrentGame.Context;
             }
 
             var PropertyModel = CurrentOntology.Model.PropertyModel;
@@ -501,8 +638,8 @@ namespace ARPEGOS.Services
             }
             else
             {
-                CurrentOntology = this.Game.Ontology;
-                CurrentContext = this.Game.Context;
+                CurrentOntology = DependencyHelper.CurrentContext.CurrentGame.Ontology;
+                CurrentContext = DependencyHelper.CurrentContext.CurrentGame.Context;
             }
 
             var propertyName = string.Empty;
@@ -566,8 +703,8 @@ namespace ARPEGOS.Services
             }
             else
             {
-                CurrentOntology = this.Game.Ontology;
-                CurrentContext = this.Game.Context;
+                CurrentOntology = DependencyHelper.CurrentContext.CurrentGame.Ontology;
+                CurrentContext = DependencyHelper.CurrentContext.CurrentGame.Context;
             }
             var Substages = GetSubClasses(stage);
             var SubstagesAndOrder = new Dictionary<int, string>();
@@ -599,8 +736,8 @@ namespace ARPEGOS.Services
             }
             else
             {
-                CurrentOntology = this.Game.Ontology;
-                CurrentContext = this.Game.Context;
+                CurrentOntology = DependencyHelper.CurrentContext.CurrentGame.Ontology;
+                CurrentContext = DependencyHelper.CurrentContext.CurrentGame.Context;
             }
 
             var parent = string.Empty;
@@ -646,8 +783,8 @@ namespace ARPEGOS.Services
             }
             else
             {
-                CurrentOntology = this.Game.Ontology;
-                CurrentContext = this.Game.Context;
+                CurrentOntology = DependencyHelper.CurrentContext.CurrentGame.Ontology;
+                CurrentContext = DependencyHelper.CurrentContext.CurrentGame.Context;
             }
 
             var GeneralCostName = string.Empty;
@@ -686,8 +823,8 @@ namespace ARPEGOS.Services
             }
             else
             {
-                CurrentOntology = this.Game.Ontology;
-                CurrentContext = this.Game.Context;
+                CurrentOntology = DependencyHelper.CurrentContext.CurrentGame.Ontology;
+                CurrentContext = DependencyHelper.CurrentContext.CurrentGame.Context;
             }
 
             partialCost = 0;
@@ -726,8 +863,8 @@ namespace ARPEGOS.Services
             }
             else
             {
-                CurrentOntology = this.Game.Ontology;
-                CurrentContext = this.Game.Context;
+                CurrentOntology = DependencyHelper.CurrentContext.CurrentGame.Ontology;
+                CurrentContext = DependencyHelper.CurrentContext.CurrentGame.Context;
             }
 
             ObservableCollection<Group> subclasses = new ObservableCollection<Group>();
@@ -827,8 +964,8 @@ namespace ARPEGOS.Services
             }
             else
             {
-                CurrentOntology = this.Game.Ontology;
-                CurrentContext = this.Game.Context;
+                CurrentOntology = DependencyHelper.CurrentContext.CurrentGame.Ontology;
+                CurrentContext = DependencyHelper.CurrentContext.CurrentGame.Context;
             }
 
             var SubjectRef = string.Empty;
