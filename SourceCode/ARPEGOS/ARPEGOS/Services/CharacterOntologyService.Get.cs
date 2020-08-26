@@ -21,8 +21,10 @@ namespace ARPEGOS.Services
         /// <returns> String with the hierarchy of the property given </returns>
         public string GetPropertyVisualizationPosition(string propertyName)
         {
-            var CurrentProperty = this.Ontology.Model.PropertyModel.SelectProperty($"{this.Context}{propertyName}");
-            var AnnotationProperty = this.Ontology.Model.PropertyModel.SelectProperty($"{this.Context}{ "Visualization"}");
+            var propertyURI = $"{this.Context}{propertyName}";
+            var CurrentProperty = this.Ontology.Model.PropertyModel.SelectProperty(propertyURI);
+            var annotationPropertyURI = $"{this.Context}Visualization";
+            var AnnotationProperty = this.Ontology.Model.PropertyModel.SelectProperty(annotationPropertyURI);
             var CharacterVisualizationAnnotations = this.Ontology.Model.PropertyModel.Annotations.CustomAnnotations.SelectEntriesByPredicate(AnnotationProperty);
             var CharacterVisualizationAnnotation = CharacterVisualizationAnnotations.SelectEntriesBySubject(CurrentProperty).Single();
             return CharacterVisualizationAnnotation.TaxonomyObject.ToString().Split('^').First();
@@ -35,13 +37,14 @@ namespace ARPEGOS.Services
         public Dictionary<string,string> GetCharacterProperties()
         {
             var CharacterProperties = new Dictionary<string, string>();
-            var CharacterFact = this.Ontology.Data.SelectFact("{this.Context}{this.Name}");
+            var CharacterFact = this.Ontology.Data.SelectFact($"{this.Context}{FileService.EscapedName(this.Name)}");
             var CharacterAssertions = this.Ontology.Data.Relations.Assertions.SelectEntriesBySubject(CharacterFact); 
             foreach(var assertion in CharacterAssertions)
             {
                 var property = assertion.TaxonomyPredicate.ToString().Split('#').Last();
                 var value = assertion.TaxonomyObject.ToString().Split('#').Last();
-                CharacterProperties.Add(property, value);
+                if(!CharacterProperties.ContainsKey(property))
+                    CharacterProperties.Add(property, value);
             }
 
             return CharacterProperties;
@@ -85,7 +88,8 @@ namespace ARPEGOS.Services
         public string GetTopParentProperty(string propertyName)
         {
             var parentName = string.Empty;
-            var currentProperty = this.Ontology.Model.PropertyModel.SelectProperty($"{this.Context}{propertyName}");
+            var propertyURI = $"{this.Context}{propertyName}";
+            var currentProperty = this.Ontology.Model.PropertyModel.SelectProperty(propertyURI);
             var hasParent = true;
             while (hasParent == true)
             {
@@ -104,14 +108,18 @@ namespace ARPEGOS.Services
         public int GetSkillValue(string skillName)
         {
             int skillValue = 0;
-            var character = this.Ontology.Data.SelectFact($"{this.Context}{this.Name}");
-            var currentProperty = this.Ontology.Model.PropertyModel.SelectProperty($"{this.Context}{skillName}");
+            var characterURI = $"{this.Context}{FileService.EscapedName(this.Name)}";
+            var character = this.Ontology.Data.SelectFact(characterURI);
+            var propertyURI = $"{this.Context}{skillName}";
+            var currentProperty = this.Ontology.Model.PropertyModel.SelectProperty(propertyURI);
             if(this.CheckIndividual(skillName) == true)
             {
                 var annotationPropertyName = "SkillValue";
-                var annotationProperty = this.Ontology.Model.PropertyModel.SelectProperty($"{this.Context}{annotationPropertyName}");
+                var annotationPropertyURI = $"{this.Context}{annotationPropertyName}";
+                var annotationProperty = this.Ontology.Model.PropertyModel.SelectProperty(annotationPropertyURI);
                 var skillValueAssertionFound = false;
-                var parentClass = this.Ontology.Model.ClassModel.SelectClass($"{this.Context}{this.GetElementClass(skillName, true)}");
+                var parentClassURI = $"{this.Context}{this.GetElementClass(skillName, true)}";
+                var parentClass = this.Ontology.Model.ClassModel.SelectClass(parentClassURI);
                 var annotationValue = string.Empty;
 
                 var skillFact = this.Ontology.Data.SelectFact($"{this.Context}{skillName}");
@@ -587,7 +595,7 @@ namespace ARPEGOS.Services
         public string GetLimitByValue (string stage, string value)
         {
             var Limit = string.Empty;
-            var CharacterFact = this.Ontology.Data.SelectFact($"{this.Context}{this.Name}");
+            var CharacterFact = this.Ontology.Data.SelectFact($"{this.Context}{FileService.EscapedName(this.Name)}");
             var CharacterAssertions = this.Ontology.Data.Relations.Assertions.SelectEntriesBySubject(CharacterFact);
             var CharacterAssertionsValueEntries = CharacterAssertions.Where(entry => entry.TaxonomyObject.ToString().Contains(value));
             if (CharacterAssertionsValueEntries.Count() == 1)
@@ -1023,7 +1031,7 @@ namespace ARPEGOS.Services
                     var isFloat = false;
                     if (isValue == false)
                     {
-                        var CharacterFact = this.Ontology.Data.SelectFact($"{this.Context}{this.Name}");
+                        var CharacterFact = this.Ontology.Data.SelectFact($"{this.Context}{FileService.EscapedName(this.Name)}");
                         if (CheckObjectProperty(NextElement))
                         {
                             var row_index = index;
@@ -1194,7 +1202,7 @@ namespace ARPEGOS.Services
                                     CharacterFact = this.Ontology.Data.SelectFact($"{this.Context}{CharacterNextElementFactName}");
                             }
                             else
-                                CharacterFact = this.Ontology.Data.SelectFact($"{this.Context}{this.Name}");
+                                CharacterFact = this.Ontology.Data.SelectFact($"{this.Context}{FileService.EscapedName(this.Name)}");
 
                             if (!CheckDatatypeProperty(NextElement))
                                 predicate = CreateDatatypeProperty(NextElement);
@@ -1312,7 +1320,7 @@ namespace ARPEGOS.Services
                             ItemClassName = GetElementClass(itemName, applyOnCharacter);
                         var elementFirstWord = element.Split('_').ToList().First();
 
-                        var CharacterFact = this.Ontology.Data.SelectFact($"{this.Context}{this.Name}");
+                        var CharacterFact = this.Ontology.Data.SelectFact($"{this.Context}{FileService.EscapedName(this.Name)}");
                         var CharacterAssertions = this.Ontology.Data.Relations.Assertions.SelectEntriesBySubject(CharacterFact);
                         var datatypeAssertionFound = false;
                         var characterDatatypePropertyFirstWord = string.Empty;
@@ -1433,7 +1441,7 @@ namespace ARPEGOS.Services
                             var characterClassName = GetElementClass(this.Name, true);
                             var nextPropertyFirstWord = nextProperty.Split('_').ToList().First();
                             if (characterClassName.Contains(nextPropertyFirstWord))
-                                CharacterFact = this.Ontology.Data.SelectFact($"{this.Context}{this.Name}");
+                                CharacterFact = this.Ontology.Data.SelectFact($"{this.Context}{FileService.EscapedName(this.Name)}");
                             else
                                 CharacterFact = this.Ontology.Data.SelectFact(this.Context + SubjectRef);
 
@@ -1542,7 +1550,7 @@ namespace ARPEGOS.Services
                 {
                     if (index == 0)
                     {
-                        var CharacterFact = this.Ontology.Data.SelectFact($"{this.Context}{this.Name}");
+                        var CharacterFact = this.Ontology.Data.SelectFact($"{this.Context}{FileService.EscapedName(this.Name)}");
                         RDFOntologyDatatypeProperty predicate;
                         if (!CheckDatatypeProperty(element))
                             predicate = CreateDatatypeProperty(element);

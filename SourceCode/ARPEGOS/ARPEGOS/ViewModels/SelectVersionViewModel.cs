@@ -82,7 +82,7 @@ namespace ARPEGOS.ViewModels
                     var previousViewModel = App.Navigation.NavigationStack.First().BindingContext as MainViewModel;
                     selectedGame = previousViewModel.SelectedGame;
                     DependencyHelper.CurrentContext.CurrentGame = await OntologyService.LoadGame(selectedGame, item);
-                    previousViewModel.CurrentStatus = MainViewModel.SelectionStatus.SelectingCharacter;
+                    previousViewModel.LoadNewStateCommand.Execute(MainViewModel.SelectionStatus.SelectingCharacter);
                     this.CurrentStatus = SelectionStatus.Done;
                     this.Load(this.CurrentStatus);
                     break;

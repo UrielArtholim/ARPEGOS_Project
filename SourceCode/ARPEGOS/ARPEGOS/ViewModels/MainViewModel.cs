@@ -40,6 +40,8 @@ namespace ARPEGOS.ViewModels
         public ICommand SelectItemCommand { get; }
         public ICommand PushSkillViewCommand { get; }
 
+        public ICommand LoadNewStateCommand { get; set; }
+
         public string SelectedGame
         {
             get => this.selectedGame;
@@ -127,6 +129,8 @@ namespace ARPEGOS.ViewModels
                 this.CurrentStatus = this.PreviousStatus;  
                 this.Load(CurrentStatus); 
             });
+
+            this.LoadNewStateCommand = new Command<SelectionStatus>(status => {this.PreviousStatus = this.CurrentStatus; this.CurrentStatus = status;  this.Load(status); });
         }
 
         public async Task Init()

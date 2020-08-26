@@ -10,28 +10,40 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace ARPEGOS.ViewModels
 {
     public class SkillListViewModel: BaseViewModel
     {
-        public ObservableCollection<string> Data;
+        private ObservableCollection<string> data;
+        public ObservableCollection<string> Data
+        {
+            get => data;
+            set => this.SetProperty(ref this.data, value);
+        }
 
         public ICommand SelectItemCommand { get; private set; }
+        public ICommand ReturnCommand { get; private set; }
 
         public SkillListViewModel()
         {
+            var character = DependencyHelper.CurrentContext.CurrentCharacter;
+            Data = new ObservableCollection<string>(character.GetCharacterSkills());
+
             this.SelectItemCommand = new Command<string>(item =>  
             {
                 this.IsBusy = true;
                 var skillViewContext = App.Navigation.NavigationStack[App.Navigation.NavigationStack.Count - 2].BindingContext as SkillViewModel;
                 skillViewContext.SkillSelected = item;
                 this.IsBusy = false;
+                ReturnCommand.Execute(null);
             });
 
-            var character = DependencyHelper.CurrentContext.CurrentCharacter;
-            Data = new ObservableCollection<string>(character.GetCharacterSkills());
+            this.ReturnCommand = new Command(async () => await MainThread.InvokeOnMainThreadAsync(async()=> await App.Navigation.PopAsync()));
+
+            
         }
     }
 }
