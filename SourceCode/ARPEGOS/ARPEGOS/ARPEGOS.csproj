@@ -21,6 +21,8 @@
     <None Remove="Resources\Fonts\OldLondonAlternate.ttf" />
     <None Remove="Resources\Fonts\Olondona.otf" />
     <None Remove="Resources\Fonts\Olondon_.otf" />
+    <None Remove="Resources\Icons\Add.png" />
+    <None Remove="Resources\Icons\Delete.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -59,6 +61,8 @@
   <ItemGroup>
     <Resource Include="DefaultGames\Anima Beyond Fantasy\characters\Ctuchik.owl" />
     <Resource Include="Resources\Fonts\Olondona.otf" />
+    <Resource Include="Resources\Icons\Add.png" />
+    <Resource Include="Resources\Icons\Delete.png" />
   </ItemGroup>
 
   <ItemGroup>
