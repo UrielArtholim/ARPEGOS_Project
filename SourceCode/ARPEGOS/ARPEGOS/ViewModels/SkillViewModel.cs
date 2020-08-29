@@ -15,21 +15,14 @@ namespace ARPEGOS.Views
 {
     public class SkillViewModel: BaseViewModel
     {
-        private int skillValue; 
         private int totalValue;
-        private uint dice;
+        private int dice, previousDice;
         private string previousSkillSelected, skillSelected;
 
-        public uint Dice
+        public int Dice
         {
             get => dice;
             set => this.SetProperty(ref this.dice, value);
-        }
-
-        public int SkillValue
-        {
-            get => skillValue;
-            set => this.SetProperty(ref this.skillValue, value);
         }
 
         public int TotalValue
@@ -49,19 +42,20 @@ namespace ARPEGOS.Views
 
         public SkillViewModel()
         {
+            NavigationPage.SetHasBackButton(App.Navigation.NavigationStack.Last(), true);
             this.previousSkillSelected = string.Empty;
             this.SkillSelected = "No se ha seleccionado ninguna habilidad";
-            this.SkillValue = 0;
             this.Dice = 0;
+            this.previousDice = 0;
 
             this.SelectSkillCommand = new Command(async() => await MainThread.InvokeOnMainThreadAsync(async() => await App.Navigation.PushAsync(new SkillListView())));
             this.CalculateSkillCommand = new Command<string>(async (skill) => 
             {
-                if(skill != null && this.previousSkillSelected != skill)
+                if(skill != null || this.previousSkillSelected != skill || this.previousDice != this.Dice)
                 {
                     this.previousSkillSelected = skill;
-                    this.SkillValue = await Task.Run(() => DependencyHelper.CurrentContext.CurrentCharacter.GetSkillValue(FileService.EscapedName(skill)));
-                    this.TotalValue = this.TotalValue = this.SkillValue + Convert.ToInt32(this.Dice);
+                    this.TotalValue = this.Dice + await Task.Run(() => DependencyHelper.CurrentContext.CurrentCharacter.GetSkillValue(FileService.EscapedName(skill)));
+                    previousDice = this.Dice;
                 }
             });
 
