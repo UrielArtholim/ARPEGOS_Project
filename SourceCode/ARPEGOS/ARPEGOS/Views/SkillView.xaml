@@ -10,7 +10,7 @@
             <Label Text="{Binding SkillSelected}" HorizontalOptions="CenterAndExpand" />
             <Entry Text ="{Binding Dice}" Keyboard="Numeric" Placeholder="Introduzca el valor de la tirada" HorizontalOptions="Fill"/>
             <Button Text="Calcular habilidad" Command="{Binding CalculateSkillCommand}" CommandParameter="{Binding SkillSelected}" HorizontalOptions="CenterAndExpand" />
-            <Label Text="{Binding TotalValue}" FontSize="72" FontFamily="OldLondon" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+            <Label Text="{Binding TotalValue}" FontSize="40" FontFamily="OldLondon" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
