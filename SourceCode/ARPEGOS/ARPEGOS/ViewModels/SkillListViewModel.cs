@@ -1,5 +1,4 @@
 ﻿using ARPEGOS.Helpers;
-using ARPEGOS.Services;
 using ARPEGOS.ViewModels.Base;
 using ARPEGOS.Views;
 using System;
@@ -31,12 +30,7 @@ namespace ARPEGOS.ViewModels
         public SkillListViewModel()
         {
             var character = DependencyHelper.CurrentContext.CurrentCharacter;
-            var characterSkills = character.GetCharacterSkills();
-            Data = new ObservableCollection<string>();
-            foreach(var item in characterSkills)
-            {
-                Data.Add(FileService.FormatName(item));
-            }
+            Data = new ObservableCollection<string>(character.GetCharacterSkills());
 
             this.SelectItemCommand = new Command<string>(item =>  
             {
@@ -48,6 +42,8 @@ namespace ARPEGOS.ViewModels
             });
 
             this.ReturnCommand = new Command(async () => await MainThread.InvokeOnMainThreadAsync(async()=> await App.Navigation.PopAsync()));
+
+            
         }
     }
 }

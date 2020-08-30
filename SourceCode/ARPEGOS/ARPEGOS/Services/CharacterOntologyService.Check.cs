@@ -200,7 +200,7 @@ namespace ARPEGOS.Services
                     var subjectFact = CurrentOntology.Model.ClassModel.SelectClass($"{CurrentContext}{subjectFactName}");
                     if (subjectFact != null)
                     {
-                        var subjectFactCostAnnotations = CurrentOntology.Model.ClassModel.Annotations.CustomAnnotations.SelectEntriesBySubject(subjectFact).Where(entry => entry.ToString().Contains("General_Cost_Defined_By"));
+                        var subjectFactCostAnnotations = CurrentOntology.Model.ClassModel.Annotations.CustomAnnotations.SelectEntriesBySubject(subjectFact).Where(entry => entry.ToString().Contains("GeneralCostDefinedBy"));
                         if (subjectFactCostAnnotations.Count() == 1)
                         {
                             filterCounter = 1;
@@ -253,7 +253,7 @@ namespace ARPEGOS.Services
 
             var stageClass = CurrentOntology.Model.ClassModel.SelectClass($"{CurrentContext}{stage}");
             var stageAnnotations = CurrentOntology.Model.ClassModel.Annotations.CustomAnnotations.SelectEntriesBySubject(stageClass);
-            var stageDefinitionAnnotation = stageAnnotations.Single(entry => entry.TaxonomyPredicate.ToString().Contains("Valued_List_Info"));
+            var stageDefinitionAnnotation = stageAnnotations.Single(entry => entry.TaxonomyPredicate.ToString().Contains("ValuedListInfo"));
             if (stageDefinitionAnnotation != null)
                 info = stageDefinitionAnnotation.TaxonomyObject.ToString().Split('^').First();
             else

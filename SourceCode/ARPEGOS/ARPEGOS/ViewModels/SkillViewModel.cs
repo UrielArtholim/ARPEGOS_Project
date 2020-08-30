@@ -1,5 +1,4 @@
 ﻿using ARPEGOS.Helpers;
-using ARPEGOS.Services;
 using ARPEGOS.ViewModels.Base;
 using System;
 using System.Collections.Generic;
@@ -49,23 +48,21 @@ namespace ARPEGOS.Views
 
         public SkillViewModel()
         {
-            this.previousSkillSelected = string.Empty;
-            this.SkillSelected = "No se ha seleccionado ninguna habilidad";
-            this.SkillValue = 0;
-            this.Dice = 0;
-
             this.SelectSkillCommand = new Command(async() => await MainThread.InvokeOnMainThreadAsync(async() => await App.Navigation.PushAsync(new SkillListView())));
-            this.CalculateSkillCommand = new Command<string>(async (skill) => 
+            this.CalculateSkillCommand = new Command(async () => 
             {
-                if(skill != null && this.previousSkillSelected != skill)
+                if(this.SkillSelected != null && this.previousSkillSelected != this.SkillSelected)
                 {
-                    this.previousSkillSelected = skill;
-                    this.SkillValue = await Task.Run(() => DependencyHelper.CurrentContext.CurrentCharacter.GetSkillValue(FileService.EscapedName(skill)));
+                    this.previousSkillSelected = this.SkillSelected;
+                    this.SkillValue = await Task.Run(() => DependencyHelper.CurrentContext.CurrentCharacter.GetSkillValue(this.SkillSelected));
                     this.TotalValue = this.TotalValue = this.SkillValue + Convert.ToInt32(this.Dice);
                 }
             });
 
-            
+            this.previousSkillSelected = string.Empty;
+            this.SkillSelected = "No se ha seleccionado ninguna habilidad";
+            this.SkillValue = 0;
+            this.Dice = 0;
         }      
 
     }

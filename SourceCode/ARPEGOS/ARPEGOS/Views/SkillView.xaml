@@ -5,12 +5,12 @@
              Title="Cálculo de habilidades"
              NavigationPage.HasBackButton="False">
     <ContentPage.Content>
-        <StackLayout Padding="20" Spacing ="20" Margin="20,20,20,0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
-            <Button Text="Selecciona habilidad" Command="{Binding SelectSkillCommand}" HorizontalOptions="CenterAndExpand"/>
-            <Label Text="{Binding SkillSelected}" HorizontalOptions="CenterAndExpand" />
-            <Entry Text ="{Binding Dice}" Keyboard="Numeric" Placeholder="Introduzca el valor de la tirada" HorizontalOptions="Fill"/>
-            <Button Text="Calcular habilidad" Command="{Binding CalculateSkillCommand}" CommandParameter="{Binding SkillSelected}" HorizontalOptions="CenterAndExpand" />
-            <Label Text="{Binding TotalValue}" FontSize="40" FontFamily="OldLondon" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+        <StackLayout Padding="5" Margin="20,20,20,0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <Button Text="Selecciona habilidad" Command="{Binding SelectSkillCommand}" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand"/>
+            <Label Text="{Binding SkillSelected}" VerticalOptions="StartAndExpand" HorizontalOptions="CenterAndExpand" />
+            <Entry Text ="{Binding Dice}" Keyboard="Numeric" Placeholder="Introduzca el valor de la tirada" HorizontalOptions="FillAndExpand"  VerticalOptions="CenterAndExpand" />
+            <Button Text="Calcular habilidad" Command="{Binding CalculateSkillCommand}" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand"/>
+            <Label Text="{Binding SkillValue}" FontSize="Large" FontFamily="OldLondon" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

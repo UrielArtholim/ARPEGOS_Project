@@ -5,12 +5,12 @@
              Visual="Material"
              Title="{Binding Title}"
              x:Name="P">
-    <ContentPage.ToolbarItems>
-        <ToolbarItem Order="Primary" Priority="0" Command="{Binding AddButtonCommand}" IconImageSource="add.png"/>
-        <ToolbarItem Order="Primary" Priority="0" Command="{Binding DeleteButtonCommand}" IconImageSource="delete.png"/>
-    </ContentPage.ToolbarItems>
     <Grid>
         <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="{DynamicResource SecondaryBackgroundColor}">
+            <StackLayout Spacing="80" Padding="5" Margin="20,20,20,0" Orientation="Horizontal" VerticalOptions="Start" HorizontalOptions="CenterAndExpand">
+                <Button Text="Añadir" BackgroundColor="ForestGreen" Command="{Binding AddButtonCommand}" HorizontalOptions="CenterAndExpand"/>
+                <Button Text="Eliminar" BackgroundColor="DarkRed" Command="{Binding DeleteButtonCommand}" HorizontalOptions="CenterAndExpand"/>
+            </StackLayout>
             <StackLayout Padding="5" Margin="20,20,20,0" Orientation="Horizontal" VerticalOptions="Start" HorizontalOptions="CenterAndExpand" IsVisible="{Binding CancelEnabled}">
                 <Button Text="Cancelar" BackgroundColor="DarkGray" Command="{Binding CancelButtonCommand}" HorizontalOptions="Center"/>
             </StackLayout>
@@ -33,10 +33,10 @@
                     </FlexLayout>
                 </StackLayout>
             </ScrollView>
-        </StackLayout>
-        <Frame Grid.Row="0" BackgroundColor="Black" Opacity="0.7" HasShadow="False" CornerRadius="0" IsVisible="{Binding IsBusy}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
-            <ActivityIndicator Color="White" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" IsRunning="{Binding IsBusy}"
+            <Frame Grid.Row="0" BackgroundColor="Black" Opacity="0.7" HasShadow="False" CornerRadius="0" IsVisible="{Binding IsBusy}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                <ActivityIndicator Color="White" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" IsRunning="{Binding IsBusy}"
                                WidthRequest="50" HeightRequest="50" />
-        </Frame>
+            </Frame>
+        </StackLayout>
     </Grid>
 </ContentPage>

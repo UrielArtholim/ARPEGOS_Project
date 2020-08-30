@@ -13,11 +13,11 @@ namespace ARPEGOS.Services
         /// Returns the root class of the creation scheme of the active game
         /// </summary>
         /// <returns></returns>
-        public string GetCreation_Scheme_RootClass ()
+        public string GetCreationSchemeRootClass ()
         {
-            var rootProperty = new RDFOntologyAnnotationProperty(new RDFResource($"{this.Context}{"Creation_Scheme_Root"}"));
-            var Creation_Scheme_RootUri = this.Ontology.Model.ClassModel.Annotations.CustomAnnotations.SelectEntriesByPredicate(rootProperty).Single().TaxonomySubject.ToString();
-            return Creation_Scheme_RootUri.Split('#').Last();
+            var rootProperty = new RDFOntologyAnnotationProperty(new RDFResource($"{this.Context}{"CreationSchemeRoot"}"));
+            var creationSchemeRootUri = this.Ontology.Model.ClassModel.Annotations.CustomAnnotations.SelectEntriesByPredicate(rootProperty).Single().TaxonomySubject.ToString();
+            return creationSchemeRootUri.Split('#').Last();
         }
     }
 }

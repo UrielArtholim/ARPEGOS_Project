@@ -50,7 +50,7 @@ namespace ARPEGOS
         /// </summary>
         /// <param name="groupTitle">Name of the group</param>
         /// <param name="expanded">State of expansion of the group</param>
-        public Group(string groupTitle, dynamic groupList = null, string description = "", bool expanded = false)
+        public Group(string groupTitle, string description = "", dynamic groupList = null, bool expanded = false)
         {
             Title = groupTitle;
             FormattedTitle = groupTitle.Replace('_', ' ').Trim();

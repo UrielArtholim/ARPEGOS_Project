@@ -35,39 +35,39 @@
     
 
 
-    <!-- urn:absolute:anima_beyond_fantasy#Creation_Scheme -->
+    <!-- urn:absolute:anima_beyond_fantasy#CreationScheme -->
 
-    <owl:AnnotationProperty rdf:about="urn:absolute:anima_beyond_fantasy#Creation_Scheme"/>
+    <owl:AnnotationProperty rdf:about="urn:absolute:anima_beyond_fantasy#CreationScheme"/>
     
 
 
-    <!-- urn:absolute:anima_beyond_fantasy#Creation_Scheme_Root -->
+    <!-- urn:absolute:anima_beyond_fantasy#CreationSchemeRoot -->
 
-    <owl:AnnotationProperty rdf:about="urn:absolute:anima_beyond_fantasy#Creation_Scheme_Root"/>
+    <owl:AnnotationProperty rdf:about="urn:absolute:anima_beyond_fantasy#CreationSchemeRoot"/>
     
 
 
-    <!-- urn:absolute:anima_beyond_fantasy#General_Cost_Defined_By -->
+    <!-- urn:absolute:anima_beyond_fantasy#GeneralCostDefinedBy -->
 
-    <owl:AnnotationProperty rdf:about="urn:absolute:anima_beyond_fantasy#General_Cost_Defined_By"/>
+    <owl:AnnotationProperty rdf:about="urn:absolute:anima_beyond_fantasy#GeneralCostDefinedBy"/>
     
 
 
-    <!-- urn:absolute:anima_beyond_fantasy#Substage_Order -->
+    <!-- urn:absolute:anima_beyond_fantasy#SubstageOrder -->
 
-    <owl:AnnotationProperty rdf:about="urn:absolute:anima_beyond_fantasy#Substage_Order"/>
+    <owl:AnnotationProperty rdf:about="urn:absolute:anima_beyond_fantasy#SubstageOrder"/>
     
 
 
-    <!-- urn:absolute:anima_beyond_fantasy#Valued_List_Info -->
+    <!-- urn:absolute:anima_beyond_fantasy#ValuedListInfo -->
 
-    <owl:AnnotationProperty rdf:about="urn:absolute:anima_beyond_fantasy#Valued_List_Info"/>
+    <owl:AnnotationProperty rdf:about="urn:absolute:anima_beyond_fantasy#ValuedListInfo"/>
     
 
 
-    <!-- urn:absolute:anima_beyond_fantasy#View_Type -->
+    <!-- urn:absolute:anima_beyond_fantasy#ViewType -->
 
-    <owl:AnnotationProperty rdf:about="urn:absolute:anima_beyond_fantasy#View_Type"/>
+    <owl:AnnotationProperty rdf:about="urn:absolute:anima_beyond_fantasy#ViewType"/>
     
 
 
@@ -3331,9 +3331,9 @@
     
 
 
-    <!-- urn:absolute:anima_beyond_fantasy#ClassIsCreation_Scheme_Root -->
+    <!-- urn:absolute:anima_beyond_fantasy#ClassIsCreationSchemeRoot -->
 
-    <owl:DatatypeProperty rdf:about="urn:absolute:anima_beyond_fantasy#ClassIsCreation_Scheme_Root">
+    <owl:DatatypeProperty rdf:about="urn:absolute:anima_beyond_fantasy#ClassIsCreationSchemeRoot">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:anima_beyond_fantasy#Definicion_Clases"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
@@ -8087,7 +8087,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
-        <View_Type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ValuedListView</View_Type>
+        <ViewType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ValuedListView</ViewType>
     </owl:DatatypeProperty>
     
 
@@ -18604,7 +18604,7 @@ Descripción: Este poder carga un objeto o lugar determinado con un fuerte senti
         <Cat_Turno_Nivel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Cat_Turno_Nivel>
         <Cat_Zeon_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Cat_Zeon_Coste>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Son individuos que se especializan en los campos del subterfugio y la intriga. Se mueven en el anonimato y tratan de que sus víctimas no sean ni siquiera conscientes de qué les ha matado. Emplean técnicas muy refinadas, prefiriendo evitar en todo momento llegar al combate, donde son muy vulnerables. Por ello, tras hacer su trabajo, desaparecen de nuevo entre las sombras de las que surgieron. De todas formas, los personajes con esta categoría no están necesariamente obligados a representar únicamente el papel de ejecutores dentro de la sociedad, ya que existen muchos otros ámbitos en los que pueden poner en práctica sus excelentes habilidades, como por ejemplo el espionaje.</rdfs:comment>
-        <Creation_Scheme rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Nivel,
+        <CreationScheme rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Nivel,
 Raza,
 Característica_Primaria,
 Desventaja_Común,  
@@ -18613,7 +18613,7 @@ Habilidad_Combate,
 Mejora_Natural, 
 Habilidad_Secundaria, 
 Clase_Social, 
-Equipamiento</Creation_Scheme>
+Equipamiento</CreationScheme>
     </owl:NamedIndividual>
     
 
@@ -18663,7 +18663,7 @@ Equipamiento</Creation_Scheme>
         <Cat_Turno_Nivel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</Cat_Turno_Nivel>
         <Cat_Zeon_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</Cat_Zeon_Coste>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Los conjuradores son místicos dotados de la capacidad de llamar a criaturas sobrenaturales y someterlas a su voluntad. Aunque, por sí mismos, ni sus poderes mágicos ni sus habilidades físicas son especialmente notables, los seres que convocan a este mundo son capaces de realizar prácticamente cualquier cosa que desee su controlador. Los conjuradores también pueden realizar invocaciones, recurriendo a la ayuda de grandes potencias sobrenaturales durante un tiempo limitado.</rdfs:comment>
-        <Creation_Scheme rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Nivel,
+        <CreationScheme rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Nivel,
 Raza,
 Característica_Primaria,
 Desventaja_Común, 
@@ -18675,7 +18675,7 @@ Habilidad_Combate,
 Mejora_Natural, 
 Habilidad_Secundaria, 
 Clase_Social, 
-Equipamiento</Creation_Scheme>
+Equipamiento</CreationScheme>
     </owl:NamedIndividual>
     
 
@@ -18729,7 +18729,7 @@ Equipamiento</Creation_Scheme>
         <Cat_Turno_Nivel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</Cat_Turno_Nivel>
         <Cat_Zeon_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Cat_Zeon_Coste>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Un explorador es el prototipo tradicional de aventurero. Normalmente, se trata de personas que han sacado el máximo provecho a su capacidad de percibir lo que les rodea y adentrarse donde nadie más sería capaz. Un explorador suele tener siempre sus sentidos pendientes de lo que hay a su alrededor, por lo que es muy complicado cogerle por sorpresa. Es también un rastreador y un superviviente nato, razón por la que tiene grandes conocimientos sobre zonas boscosas o regiones inhóspitas. En la sociedad suelen trabajar como cazadores, batidores o incluso arqueólogos, pero lo más normal es que simplemente se trate de habitantes de territorios apartados donde sus habilidades son necesarias para sobrevivir.</rdfs:comment>
-        <Creation_Scheme rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Nivel,
+        <CreationScheme rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Nivel,
 Raza,
 Característica_Primaria,
 Desventaja_Común,  
@@ -18738,7 +18738,7 @@ Habilidad_Combate,
 Mejoras_Natural, 
 Habilidad_Secundaria, 
 Clase_Social, 
-Equipamiento</Creation_Scheme>
+Equipamiento</CreationScheme>
     </owl:NamedIndividual>
     
 
@@ -18785,7 +18785,7 @@ Equipamiento</Creation_Scheme>
         <Cat_Turno_Nivel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</Cat_Turno_Nivel>
         <Cat_Zeon_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Cat_Zeon_Coste>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El guerrero es el luchador arquetípico por excelencia. Esta categoría engloba a aquellas personas que han dedicado por completo su vida al combate y son capaces de explotar al máximo su habilidad bélica. Esto les lleva no sólo a dominar el manejo de las armas, sino a, llegado el momento, emplear su energía anímica en la lucha. También tienen facilidad para desarrollar un gran conocimiento en el campo de las tácticas militares y convertirse en cabecillas de ejércitos. Tradicionalmente, los guerreros pueden llegar a trabajar casi de cualquier cosa, desde meros mercenarios a caballeros.</rdfs:comment>
-        <Creation_Scheme rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Nivel,
+        <CreationScheme rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Nivel,
 Raza,
 Característica_Primaria,
 Desventaja_Común,  
@@ -18794,7 +18794,7 @@ Habilidad_Combate,
 Mejora_Natural, 
 Habilidad_Secundaria, 
 Clase_Social, 
-Equipamiento</Creation_Scheme>
+Equipamiento</CreationScheme>
     </owl:NamedIndividual>
     
 
@@ -18843,7 +18843,7 @@ Equipamiento</Creation_Scheme>
         <Cat_Turno_Nivel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Cat_Turno_Nivel>
         <Cat_Zeon_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Cat_Zeon_Coste>
         <rdfs:comment>Los guerreros acróbatas son luchadores que se han especializado en sacar el máximo provecho a su agilidad y rapidez. Su principal ventaja consiste en anticiparse a los movimientos de sus adversarios y tratar de acabar con ellos antes de que reaccionen. También prefieren esquivar los ataques y estar tan lejos como puedan del lugar donde se da el golpe. Se benefician de una gran movilidad, siendo capaces de saltar, caer o correr con una destreza que muy pocos logran igualar. Pueden adoptar cualquier tipo de papel en la sociedad, pero generalmente asumirán profesiones ligadas al combate, como duelistas o espadachines.</rdfs:comment>
-        <Creation_Scheme rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Nivel,
+        <CreationScheme rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Nivel,
 Raza,
 Característica_Primaria,
 Desventaja_Común,  
@@ -18852,7 +18852,7 @@ Habilidad_Combate,
 Mejora_Natural, 
 Habilidad_Secundaria, 
 Clase_Social, 
-Equipamiento</Creation_Scheme>
+Equipamiento</CreationScheme>
     </owl:NamedIndividual>
     
 
@@ -18904,7 +18904,7 @@ Equipamiento</Creation_Scheme>
         <Cat_Turno_Nivel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</Cat_Turno_Nivel>
         <Cat_Zeon_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</Cat_Zeon_Coste>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Los guerreros conjuradores reúnen las habilidades de combate de los luchadores con las capacidades de invocación y control de los convocadores. Cuando luchan, emplean la ayuda de criaturas sobrenaturales que llaman a este mundo y ponen a su servicio temporalmente, o incluso invocando a los grandes poderes. Por desgracia, al igual que otras categorías mixtas, al dedicar demasiado esfuerzo para dominar dos campos tan complejos como la convocación y las artes bélicas, pueden dejar desatendidas otras habilidades importantes.</rdfs:comment>
-        <Creation_Scheme rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Nivel,
+        <CreationScheme rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Nivel,
 Raza,
 Característica_Primaria,
 Desventaja_Común, 
@@ -18916,7 +18916,7 @@ Arcano,
 Mejora_Natural, 
 Habilidad_Secundaria, 
 Clase_Social, 
-Equipamiento</Creation_Scheme>
+Equipamiento</CreationScheme>
     </owl:NamedIndividual>
     
 
@@ -18962,7 +18962,7 @@ Equipamiento</Creation_Scheme>
         <Cat_Turno_Nivel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</Cat_Turno_Nivel>
         <Cat_Zeon_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Cat_Zeon_Coste>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Los guerreros mentalistas son luchadores dotados de habilidades psíquicas, que han desarrollado un completo control de dichos poderes para obtener ventaja en la lucha. Sus capacidades mentales y combativas pueden ser tan elevadas como las de mentalistas y guerreros, aunque a veces su extrema dedicación en ambos campos hace que no tengan demasiado tiempo para desarrollar otras habilidades. Normalmente, un guerrero mentalista centra su atención sobre una de ellas, convirtiéndose en un guerrero que se apoya en sus poderes psíquicos para combatir o viceversa.</rdfs:comment>
-        <Creation_Scheme rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Nivel,
+        <CreationScheme rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Nivel,
 Raza,
 Característica_Primaria,
 Desventaja_Común,
@@ -18974,7 +18974,7 @@ Poder_Psíquico,
 Mejora_Natural, 
 Habilidad_Secundaria, 
 Clase_Social, 
-Equipamiento</Creation_Scheme>
+Equipamiento</CreationScheme>
     </owl:NamedIndividual>
     
 
@@ -19020,7 +19020,7 @@ Equipamiento</Creation_Scheme>
         <Cat_Turno_Nivel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</Cat_Turno_Nivel>
         <Cat_Zeon_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</Cat_Zeon_Coste>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Los hechiceros no son simplemente aquellos que tienen la increíble capacidad de manejar las energías místicas, sino las personas que se han dedicado en cuerpo y alma a comprender sus entresijos y llegar a dominarlas. Se especializan en el aspecto más puro de la magia: el uso de conjuros con los que son capaces de alterar la realidad a su antojo, enfocando y dominando sus poderes con completa precisión. Sienten también interés por todos los campos del intelecto, pero por desgracia, esta dedicación hace que su desarrollo físico sea por tanto inferior al de otras categorías.</rdfs:comment>
-        <Creation_Scheme rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Nivel,
+        <CreationScheme rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Nivel,
 Raza,
 Característica_Primaria,
 Desventaja_Común, 
@@ -19034,7 +19034,7 @@ Habilidad_Combate,
 Mejora_Natural, 
 Habilidad_Secundaria, 
 Clase_Social, 
-Equipamiento</Creation_Scheme>
+Equipamiento</CreationScheme>
     </owl:NamedIndividual>
     
 
@@ -19080,7 +19080,7 @@ Equipamiento</Creation_Scheme>
         <Cat_Turno_Nivel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</Cat_Turno_Nivel>
         <Cat_Zeon_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</Cat_Zeon_Coste>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El potencial de los hechiceros mentalistas es enorme. Los personajes con esta categoría están dedicados a controlar la combinación de las excepcionales habilidades de las que están dotados: la magia y las matrices psíquicas. Aunque su resistencia y sus conocimientos secundarios pueden ser escasos a causa de su extrema dedicación, con la capacidad de lanzar conjuros y apoyándose en sus disciplinas psíquicas hay muy pocas cosas que no estén a su alcance.</rdfs:comment>
-        <Creation_Scheme rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Nivel,
+        <CreationScheme rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Nivel,
 Raza,
 Característica_Primaria,
 Desventaja_Común, 
@@ -19093,7 +19093,7 @@ Habilidad_Primaria,
 Mejora_Natural, 
 Habilidad_Secundaria, 
 Clase_Social, 
-Equipamiento</Creation_Scheme>
+Equipamiento</CreationScheme>
     </owl:NamedIndividual>
     
 
@@ -19146,7 +19146,7 @@ Equipamiento</Creation_Scheme>
         <Cat_Turno_Nivel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</Cat_Turno_Nivel>
         <Cat_Zeon_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</Cat_Zeon_Coste>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Los ilusionistas combinan sus grandes habilidades en los campos del subterfugio con el control de la magia. Un buen ilusionista consigue que quienes le rodean no sepan si lo que hace se debe a sus poderes sobrenaturales o a su propia habilidad. Sus capacidades místicas son casi tan grandes como las de cualquier hechicero, pero carecen de la misma facilidad para ejecutar conjuros rápidamente. Al contrario de lo que su nombre parezca sugerir, los ilusionistas pueden dominar muchos tipos de magia y no sólo la ilusión. Muchas veces, usan diversos conjuros obteniendo unos efectos igualmente notables. Son muy vulnerables físicamente, por lo que suelen rehuir el combate directo en busca de estratagemas más ingeniosas.</rdfs:comment>
-        <Creation_Scheme rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Nivel,
+        <CreationScheme rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Nivel,
 Raza,
 Característica_Primaria,
 Desventaja_Común, 
@@ -19160,7 +19160,7 @@ Habilidad_Combate,
 Mejora_Natural, 
 Habilidad_Secundaria, 
 Clase_Social, 
-Equipamiento</Creation_Scheme>
+Equipamiento</CreationScheme>
     </owl:NamedIndividual>
     
 
@@ -19210,7 +19210,7 @@ Equipamiento</Creation_Scheme>
         <Cat_Turno_Nivel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Cat_Turno_Nivel>
         <Cat_Zeon_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Cat_Zeon_Coste>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Como sugiere su nombre, un ladrón es un personaje especializado en los campos del sigilo, el robo y la ocultación. Son personas que huyen de los enfrentamientos directos y prefieren confiar en sus habilidades de subterfugio para conseguir lo que desean. Dado que su resistencia física no suele ser demasiado elevada, son muy hábiles huyendo y esquivando golpes cuando son descubiertos. Pueden representar diversos papeles en la sociedad, aunque habitualmente se dedican a la profesión que da nombre a la categoría.</rdfs:comment>
-        <Creation_Scheme rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Nivel,
+        <CreationScheme rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Nivel,
 Raza,
 Característica_Primaria,
 Desventaja_Común,  
@@ -19222,7 +19222,7 @@ Tabla_Armas,
 Mejora_Natural, 
 Habilidad_Secundaria, 
 Clase_Social, 
-Equipamiento</Creation_Scheme>
+Equipamiento</CreationScheme>
     </owl:NamedIndividual>
     
 
@@ -19268,7 +19268,7 @@ Equipamiento</Creation_Scheme>
         <Cat_Turno_Nivel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</Cat_Turno_Nivel>
         <Cat_Zeon_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Cat_Zeon_Coste>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Son luchadores que se han dedicado a perfeccionar sus habilidades marciales con todo tipo de armas. Se trata de guerreros natos, los cuales han llevado hasta el límite su capacidad combativa por encima de cualquier otra categoría. Opuestamente a los guerreros convencionales, no emplean ninguna otra habilidad en la lucha más que su maestría en el uso de las armas. En una contienda, ignoran el uso de su energía física y de todo aquello que no sea su propia habilidad marcial, pero no por ello dejan de ser los combatientes más hábiles y los más centrados en las verdaderas habilidades marciales. La gran mayoría de caballeros y mercenarios tienen esta categoría.</rdfs:comment>
-        <Creation_Scheme rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Nivel,
+        <CreationScheme rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Nivel,
 Raza,
 Característica_Primaria,
 Desventaja_Común,  
@@ -19277,7 +19277,7 @@ Habilidad_Combate,
 Mejora_Natural, 
 Habilidad_Secundaria, 
 Clase_Social, 
-Equipamiento</Creation_Scheme>
+Equipamiento</CreationScheme>
     </owl:NamedIndividual>
     
 
@@ -19318,7 +19318,7 @@ Equipamiento</Creation_Scheme>
         <Cat_Turno_Nivel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</Cat_Turno_Nivel>
         <Cat_Zeon_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Cat_Zeon_Coste>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Los mentalistas son aquellos personajes que se han dedicado a desarrollar al máximo el potencial que les brindan sus poderes psíquicos. No se conforman sólo con poseer disciplinas mentales, sino que tratan de descubrir su funcionamiento y dominar nuevas habilidades. Al igual que los hechiceros, tienen grandes conocimientos en los campos intelectuales, pero esta dedicación hace que su desarrollo físico y su resistencia sean también inferiores a los de otras categorías.</rdfs:comment>
-        <Creation_Scheme rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Nivel,
+        <CreationScheme rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Nivel,
 Raza,
 Característica_Primaria,
 Desventaja_Común,
@@ -19330,7 +19330,7 @@ Habilidad_Combate,
 Mejora_Natural, 
 Habilidad_Secundaria, 
 Clase_Social, 
-Equipamiento</Creation_Scheme>
+Equipamiento</CreationScheme>
     </owl:NamedIndividual>
     
 
@@ -19373,7 +19373,7 @@ Equipamiento</Creation_Scheme>
         <Cat_Turno_Nivel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</Cat_Turno_Nivel>
         <Cat_Zeon_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Zeon_Coste>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Los noveles representan el arquetipo de Sin categoría, o lo que es lo mismo, alguien que no se encuentra dentro de ninguno de los arquetipos que se han explicado hasta el momento. Puede ser cualquier tipo de persona que no tenga una verdadera especialización. Desde campesinos a bardos, pasando por nobles y bufones, el novel es la categoría estándar de Ánima, a la que podrá acceder cualquiera. El novel tiene buenas habilidades en todos los campos, desde la magia al combate, aunque no se especializa en ninguno. Además, le resulta excepcionalmente fácil cambiar posteriormente de categoría a la de cualquier otro arquetipo. En muchas ocasiones, cuando un jugador no tenga realmente decidido qué hacer con su personaje, puede empezar como novel y realizar después un cambio de categoría, cuando finalmente encuentre la apropiada.</rdfs:comment>
-        <Creation_Scheme rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Nivel,
+        <CreationScheme rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Nivel,
 Raza,
 Característica_Primaria,
 Desventaja_Común,
@@ -19382,7 +19382,7 @@ Habilidad_Combate,
 Mejora_Natural, 
 Habilidad_Secundaria, 
 Clase_Social, 
-Equipamiento</Creation_Scheme>
+Equipamiento</CreationScheme>
     </owl:NamedIndividual>
     
 
@@ -19432,7 +19432,7 @@ Equipamiento</Creation_Scheme>
         <Cat_Turno_Nivel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</Cat_Turno_Nivel>
         <Cat_Zeon_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Zeon_Coste>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Los paladines son luchadores muy defensivos que combaten apoyándose en ciertas capacidades místicas. Una de sus especialidades consiste en expulsar a los seres sobrenaturales usando sus poderes naturales. Normalmente, muchos se rigen por códigos de conducta basados en normas religiosas o en el honor, aunque no están obligados a ello. Son líderes naturales, capaces de utilizar su carisma y dotes para movilizar a su favor a enormes cantidades de personas, que incluso darán sus vidas por ellos.</rdfs:comment>
-        <Creation_Scheme rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Nivel,
+        <CreationScheme rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Nivel,
 Raza,
 Característica_Primaria,
 Desventaja_Común, 
@@ -19446,7 +19446,7 @@ Conjuro_Libre_Acceso,
 Mejora_Natural, 
 Habilidad_Secundaria, 
 Clase_Social, 
-Equipamiento</Creation_Scheme>
+Equipamiento</CreationScheme>
     </owl:NamedIndividual>
     
 
@@ -19497,7 +19497,7 @@ Equipamiento</Creation_Scheme>
         <Cat_Turno_Nivel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</Cat_Turno_Nivel>
         <Cat_Zeon_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Zeon_Coste>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">En cierto modo, esta categoría es la opuesta directa al paladín. Es un luchador especializado en el ataque que se apoya en unas limitadas habilidades místicas. Sus principales poderes se basan en el dominio y control de los seres sobrenaturales, quienes, una vez sometidos a su voluntad, son utilizados en su beneficio. Tienen grandes capacidades de mando, pero emplean la intimidación y el miedo para subyugar a los demás a sus deseos. Si esto no funciona, persuaden a las personas tratando de conseguir salirse con lo que pretende.</rdfs:comment>
-        <Creation_Scheme rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Nivel,
+        <CreationScheme rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Nivel,
 Raza,
 Característica_Primaria,
 Desventaja_Común, 
@@ -19509,7 +19509,7 @@ Arcano,
 Mejora_Natural, 
 Habilidad_Secundaria, 
 Clase_Social, 
-Equipamiento</Creation_Scheme>
+Equipamiento</CreationScheme>
     </owl:NamedIndividual>
     
 
@@ -19558,7 +19558,7 @@ Equipamiento</Creation_Scheme>
         <Cat_Turno_Nivel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Cat_Turno_Nivel>
         <Cat_Zeon_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Cat_Zeon_Coste>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Las sombras son luchadores que se mueven en la oscuridad y aprovechan a su favor el entorno. Aunque sus habilidades de combate son excelentes, prefieren acabar con sus enemigos sin darles la oportunidad de responder a sus ataques. Para ello, emplean el subterfugio para sorprenderles, o usan otras tácticas más complejas. Incluso si es descubierta, una sombra es capaz de seguir luchando con sus enemigos en igualdad de oportunidades, aunque su resistencia tiende a ser menor que la de otros luchadores. Generalmente ágiles y veloces, prefieren esquivar los ataques en lugar de afrontarlos.</rdfs:comment>
-        <Creation_Scheme rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Nivel,
+        <CreationScheme rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Nivel,
 Raza,
 Característica_Primaria,
 Desventaja_Común,  
@@ -19567,7 +19567,7 @@ Habilidad_Combate,
 Mejora_Natural, 
 Habilidad_Secundaria, 
 Clase_Social, 
-Equipamiento</Creation_Scheme>
+Equipamiento</CreationScheme>
     </owl:NamedIndividual>
     
 
@@ -19611,7 +19611,7 @@ Equipamiento</Creation_Scheme>
         <Cat_Turno_Nivel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</Cat_Turno_Nivel>
         <Cat_Zeon_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Cat_Zeon_Coste>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Son artistas marciales que se han especializado en el combate sin armas. Dedicados a dominar todos los conocimientos marciales que les sea posible, siempre tratan de desarrollar nuevas y personales artes de lucha. Su entrenamiento les permite aprender con facilidad cualquier estilo marcial que se propongan, extrayendo de ellos los elementos que puedan volverles mejores combatientes. Llegado el momento, tratan además de emplear sus energías internas y sacarles el máximo provecho posible, compensando cualquier desventaja contra un enemigo bien equipado. Naturalmente, nada les impide llevar armas de cualquier clase.</rdfs:comment>
-        <Creation_Scheme rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Nivel,
+        <CreationScheme rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Nivel,
 Raza,
 Característica_Primaria,
 Desventaja_Común,  
@@ -19620,7 +19620,7 @@ Habilidad_Combate,
 Mejora_Natural, 
 Habilidad_Secundaria, 
 Clase_Social, 
-Equipamiento</Creation_Scheme>
+Equipamiento</CreationScheme>
     </owl:NamedIndividual>
     
 
@@ -19663,7 +19663,7 @@ Equipamiento</Creation_Scheme>
         <Cat_Turno_Nivel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</Cat_Turno_Nivel>
         <Cat_Zeon_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Cat_Zeon_Coste>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Un tecnicista es un experto utilizando sus habilidades del Ki. Se trata de individuos que han explorado a fondo los secretos del cuerpo y del alma, desarrollando con facilidad capacidades que resultan imposibles para personas normales. A veces, pueden incluso tardar años en desplegar el verdadero alcance de sus habilidades, pero cuando lo hacen, se convierten en sujetos de considerable poder. Aunque no poseen grandes dotes para el combate, cuando utilizan su control sobre el Ki en contra de un adversario resultan enemigos terribles, pudiendo desencadenar técnicas inhumanas con sencillez.</rdfs:comment>
-        <Creation_Scheme rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Nivel,
+        <CreationScheme rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Nivel,
 Raza,
 Característica_Primaria,
 Desventaja_Común,
@@ -19672,7 +19672,7 @@ Habilidad_Combate,
 Mejora_Natural, 
 Habilidad_Secundaria, 
 Clase_Social, 
-Equipamiento</Creation_Scheme>
+Equipamiento</CreationScheme>
     </owl:NamedIndividual>
     
 
@@ -19720,7 +19720,7 @@ Equipamiento</Creation_Scheme>
         <Cat_Turno_Nivel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</Cat_Turno_Nivel>
         <Cat_Zeon_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</Cat_Zeon_Coste>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Un warlock es un mago guerrero que desarrolla tanto sus habilidades marciales como las místicas. Igual que los hechiceros, dominan la habilidad sobrenatural más pura de todas, la capacidad de realizar conjuros con los que modificar la propia realidad. Aunque puede centrarse principalmente sobre un solo campo, un warlock es perfectamente capaz de convertirse en un maestro que controle por igual el uso de las armas en combate y de las artes sobrenaturales. Sin embargo, haciéndolo, pueden dejar desatendidas otras habilidades importantes.</rdfs:comment>
-        <Creation_Scheme rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Nivel,
+        <CreationScheme rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Nivel,
 Raza,
 Característica_Primaria,
 Desventaja_Común, 
@@ -19734,7 +19734,7 @@ Conjuro_Libre_Acceso,
 Mejora_Natural, 
 Habilidad_Secundaria, 
 Clase_Social, 
-Equipamiento</Creation_Scheme>
+Equipamiento</CreationScheme>
     </owl:NamedIndividual>
     
 
@@ -24498,12 +24498,12 @@ Beneficio: 1</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Def_Acumulación_Ki">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Definicion_Clases"/>
-        <Substage_Order rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2</Substage_Order>
-        <Valued_List_Info rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Item_PD, numerical: true, user_edit: true
+        <SubstageOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2</SubstageOrder>
+        <ValuedListInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Item_PD, numerical: true, user_edit: true
 Per_Item_Base, numerical: true, user_edit: false, Per_Item_PD:/:tieneCategoría:Cat_Item_Coste
 Per_Item_Bono, numerical: true, user_edit: false, Hab_CarPrincipal: Per_Ref_Total: Nivel_Característica_Ref: Car_Item_Bono
-Per_Item_Total, numerical: true, user_edit: false, Per_Item_Base:+: Per_Item_Bono</Valued_List_Info>
-        <View_Type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ValuedListView</View_Type>
+Per_Item_Total, numerical: true, user_edit: false, Per_Item_Base:+: Per_Item_Bono</ValuedListInfo>
+        <ViewType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ValuedListView</ViewType>
     </owl:NamedIndividual>
     
 
@@ -24513,9 +24513,9 @@ Per_Item_Total, numerical: true, user_edit: false, Per_Item_Base:+: Per_Item_Bon
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Def_Arcano">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Definicion_Clases"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Realmente, los Arcanos no poseen una forma física real ni intervienen de ningún modo en el mundo. No son ni dioses ni potencias, sino manifestaciones de las pasiones y los espíritus del hombre. Son personificaciones que fueron formadas por las almas que regresaban al flujo y que ahora se nutren de la propia energía de la realidad. Los Arcanos se encuentran estancados en el flujo hasta que son llamados al mundo y, por tanto, sus apariciones tienen una duración temporal muy limitada. Aunque a veces parece incluso que se presentan físicamente en el mundo, tan sólo utilizan el poder que les ha brindado el invocador para modificar la realidad y crear manifestaciones. Sus verdaderas esencias permanecen siempre en el corazón del mundo espiritual y, por tanto, sus avatares no pueden ser atacados de ningún modo; son tan reales como una ilusión. Cuando son invocados por primera vez, ofrecen pactos a quienes los hayan llamado para congraciarse y aceptarlos. A cambio de la realización del pacto, los Arcanos se unen existencialmente a esos individuos y les permiten invocar sus poderes posteriormente.</rdfs:comment>
-        <General_Cost_Defined_By rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Arcano_Disponible</General_Cost_Defined_By>
-        <Substage_Order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</Substage_Order>
-        <View_Type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MultipleChoiceStaticLimitView</View_Type>
+        <GeneralCostDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Arcano_Disponible</GeneralCostDefinedBy>
+        <SubstageOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</SubstageOrder>
+        <ViewType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MultipleChoiceStaticLimitView</ViewType>
     </owl:NamedIndividual>
     
 
@@ -24525,7 +24525,7 @@ Per_Item_Total, numerical: true, user_edit: false, Per_Item_Base:+: Per_Item_Bon
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Def_Arcano_Invertido">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Definicion_Clases"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Arcano basado en los aspectos negativos de la realidad.</rdfs:comment>
-        <Substage_Order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Substage_Order>
+        <SubstageOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</SubstageOrder>
     </owl:NamedIndividual>
     
 
@@ -24535,7 +24535,7 @@ Per_Item_Total, numerical: true, user_edit: false, Per_Item_Base:+: Per_Item_Bon
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Def_Arcano_Puro">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Definicion_Clases"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Arcano basado en los aspectos positivos de la realidad.</rdfs:comment>
-        <Substage_Order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</Substage_Order>
+        <SubstageOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</SubstageOrder>
     </owl:NamedIndividual>
     
 
@@ -24553,7 +24553,7 @@ Per_Item_Total, numerical: true, user_edit: false, Per_Item_Base:+: Per_Item_Bon
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Def_Arma_Similar">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Definicion_Clases"/>
-        <View_Type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MultipleChoiceDynamicLimitView</View_Type>
+        <ViewType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MultipleChoiceDynamicLimitView</ViewType>
     </owl:NamedIndividual>
     
 
@@ -24573,7 +24573,7 @@ Las armaduras no protegen necesariamente todo el cuerpo de un personaje. Sin con
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Def_Armas_Arquetípicas">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Definicion_Clases"/>
-        <View_Type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MultipleChoiceDynamicLimitView</View_Type>
+        <ViewType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MultipleChoiceDynamicLimitView</ViewType>
     </owl:NamedIndividual>
     
 
@@ -24582,7 +24582,7 @@ Las armaduras no protegen necesariamente todo el cuerpo de un personaje. Sin con
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Def_Armas_Tipología">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Definicion_Clases"/>
-        <View_Type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MultipleChoiceDynamicLimitView</View_Type>
+        <ViewType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MultipleChoiceDynamicLimitView</ViewType>
     </owl:NamedIndividual>
     
 
@@ -24612,9 +24612,9 @@ Los escudos tienen un funcionamiento diferente al del resto de las armas. Aunque
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Def_Arte_Marcial">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Definicion_Clases"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">En Ánima, un personaje que lucha sólo con su cuerpo puede aprender a dominar artes marciales. Cualquiera de estos estilos le permite utilizar su habilidad de ataque y parada, sin ningún penalizador, cuando combata desarmado. En cierta manera, son equivalentes a una tabla de armas con las manos desnudas, aunque además proporcionan ventajas adicionales a sus practicantes. Que un personaje adquiera un arte marcial, supone mucho más que simplemente conocer un estilo. Muchos individuos aprenden a utilizarlas, pero eso no significa que realmente sepan controlar sus ventajas. Si un personaje en Ánima conoce un arte marcial, simboliza que es un verdadero maestro que ha conseguido dominarla perfectamente.</rdfs:comment>
-        <General_Cost_Defined_By rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hab_Disponible_Coste</General_Cost_Defined_By>
-        <Substage_Order rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">2</Substage_Order>
-        <View_Type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MultipleChoiceDynamicLimitView</View_Type>
+        <GeneralCostDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hab_Disponible_Coste</GeneralCostDefinedBy>
+        <SubstageOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">2</SubstageOrder>
+        <ViewType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MultipleChoiceDynamicLimitView</ViewType>
     </owl:NamedIndividual>
     
 
@@ -24624,7 +24624,7 @@ Los escudos tienen un funcionamiento diferente al del resto de las armas. Aunque
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Def_Arte_Marcial_Avanzada">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Definicion_Clases"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Las artes marciales avanzadas son los estilos de combate más complejos. Se basan en los conocimientos que han sido desarrollados por las anteriores, incrementando el nivel de sus técnicas considerablemente. Por naturaleza, para poder aprender un arte marcial superior es necesario dominar alguno de los estilos en los que se basa.</rdfs:comment>
-        <Substage_Order rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">3</Substage_Order>
+        <SubstageOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">3</SubstageOrder>
     </owl:NamedIndividual>
     
 
@@ -24634,7 +24634,7 @@ Los escudos tienen un funcionamiento diferente al del resto de las armas. Aunque
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Def_Arte_Marcial_Básica">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Definicion_Clases"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Son las artes marciales más simples que puede adquirir un personaje.</rdfs:comment>
-        <Substage_Order rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">2</Substage_Order>
+        <SubstageOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">2</SubstageOrder>
     </owl:NamedIndividual>
     
 
@@ -24643,12 +24643,12 @@ Los escudos tienen un funcionamiento diferente al del resto de las armas. Aunque
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Def_Arte_Marcial_Común">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Definicion_Clases"/>
-        <Substage_Order rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">1</Substage_Order>
-        <Valued_List_Info rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Item_PD, numerical: true, user_edit: true
+        <SubstageOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">1</SubstageOrder>
+        <ValuedListInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Item_PD, numerical: true, user_edit: true
 Per_Item_Base, numerical: true, user_edit: false, Per_Item_PD: /: tieneCategoría: Cat_Item_Coste
 Per_Item_Bono, numerical: true, user_edit: false, tieneCategoría: Cat_Item_Nivel: *: Per_Nivel
-Per_Item_Total, numerical: true, user_edit: false, Per_Item_Base:+ :Per_Item_Bono</Valued_List_Info>
-        <View_Type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ValuedListView</View_Type>
+Per_Item_Total, numerical: true, user_edit: false, Per_Item_Base:+ :Per_Item_Bono</ValuedListInfo>
+        <ViewType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ValuedListView</ViewType>
     </owl:NamedIndividual>
     
 
@@ -24667,7 +24667,7 @@ Per_Item_Total, numerical: true, user_edit: false, Per_Item_Base:+ :Per_Item_Bon
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Def_Bonificador_Natural">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Definicion_Clases"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El bonificador natural es un modificador que permite potenciar las habilidades secundarias de un personaje dependiendo de lo elevadas que sean las características a las que estén ligadas.</rdfs:comment>
-        <Substage_Order rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</Substage_Order>
+        <SubstageOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</SubstageOrder>
     </owl:NamedIndividual>
     
 
@@ -24676,11 +24676,11 @@ Per_Item_Total, numerical: true, user_edit: false, Per_Item_Base:+ :Per_Item_Bon
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Def_Bonificador_Natural_Física">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Definicion_Clases"/>
-        <General_Cost_Defined_By rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Bonificador_Natural_Física_Disponible</General_Cost_Defined_By>
-        <Substage_Order rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</Substage_Order>
-        <Valued_List_Info rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Item_Base, numerical: true, user_edit: true
-Per_Item_Bono, numerical: true, user_edit: false, Bonif_Característica:Per_Ref_Bono:*:Per_Item_Base</Valued_List_Info>
-        <View_Type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ValuedListView</View_Type>
+        <GeneralCostDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Bonificador_Natural_Física_Disponible</GeneralCostDefinedBy>
+        <SubstageOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</SubstageOrder>
+        <ValuedListInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Item_Base, numerical: true, user_edit: true
+Per_Item_Bono, numerical: true, user_edit: false, Bonif_Característica:Per_Ref_Bono:*:Per_Item_Base</ValuedListInfo>
+        <ViewType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ValuedListView</ViewType>
     </owl:NamedIndividual>
     
 
@@ -24689,11 +24689,11 @@ Per_Item_Bono, numerical: true, user_edit: false, Bonif_Característica:Per_Ref_
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Def_Bonificador_Natural_Mental">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Definicion_Clases"/>
-        <General_Cost_Defined_By rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Bonificador_Natural_Mental_Disponible</General_Cost_Defined_By>
-        <Substage_Order rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2</Substage_Order>
-        <Valued_List_Info rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Item_Base, numerical: true, user_edit: true
-Per_Item_Bono, numerical: true, user_edit: false, Bonif_Característica:Per_Ref_Bono:*:Per_Item_Base</Valued_List_Info>
-        <View_Type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ValuedListView</View_Type>
+        <GeneralCostDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Bonificador_Natural_Mental_Disponible</GeneralCostDefinedBy>
+        <SubstageOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2</SubstageOrder>
+        <ValuedListInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Item_Base, numerical: true, user_edit: true
+Per_Item_Bono, numerical: true, user_edit: false, Bonif_Característica:Per_Ref_Bono:*:Per_Item_Base</ValuedListInfo>
+        <ViewType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ValuedListView</ViewType>
     </owl:NamedIndividual>
     
 
@@ -24703,7 +24703,7 @@ Per_Item_Bono, numerical: true, user_edit: false, Bonif_Característica:Per_Ref_
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Def_Capacidad_Física">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Definicion_Clases"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Las capacidades físicas dependen directamente de las características del personaje. Hay tres distintas: el Tipo de movimiento, el Índice de peso y el Cansancio. Cada una de ellas tiene funciones diferentes, desde saber cuan rápido es capaz de correr un individuo a la cantidad de peso que podrá levantar.</rdfs:comment>
-        <General_Cost_Defined_By>Bonificador_Natural_Límite</General_Cost_Defined_By>
+        <GeneralCostDefinedBy>Bonificador_Natural_Límite</GeneralCostDefinedBy>
     </owl:NamedIndividual>
     
 
@@ -24733,11 +24733,11 @@ Per_Item_Bono, numerical: true, user_edit: false, Bonif_Característica:Per_Ref_
 10: Un diez en una característica representa el grado máximo de un ser humano. Estas cifras sólo las han alcanzado muy pocas veces en la historia, y son personas que han destacado de un modo legendario. Einstein tendría un diez en Inteligencia y Carl Lewis en Agilidad.
 
 11 y superiores: Las cantidades mayores de diez superan aquello que conocemos como humanamente posible. Estos valores aumentan geométricamente, por lo que una entidad con Fuerza 15 podría incluso mover una pequeña montaña. Inicialmente, ningún método de generación permite obtener estas cifras.</rdfs:comment>
-        <Valued_List_Info rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Item_Base, numerical: true, user_edit: true
+        <ValuedListInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Item_Base, numerical: true, user_edit: true
 Per_Item_Bono, numerical: true, user_edit: false, Nivel_Característica: Car_Bonificador
 Per_Item_Temporal, numerical: true, user_edit: false, Per_Item_Temporal
-Per_Item_Total, numerical: true, user_edit: false, Per_Item_Base:+: Per_Item_Temporal</Valued_List_Info>
-        <View_Type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ValuedListView</View_Type>
+Per_Item_Total, numerical: true, user_edit: false, Per_Item_Base:+: Per_Item_Temporal</ValuedListInfo>
+        <ViewType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ValuedListView</ViewType>
     </owl:NamedIndividual>
     
 
@@ -24765,8 +24765,8 @@ Per_Item_Total, numerical: true, user_edit: false, Per_Item_Base:+: Per_Item_Tem
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Def_Categoría">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Definicion_Clases"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ahora que ya conocemos los arquetipos de los personajes ha llegado el momento del elegir su categoría. Tener una categoría no significa que alguien se dedique a una profesión concreta en sentido estricto. Un ladrón no tiene por qué ganarse necesariamente la vida robando, al igual que un asesino no tiene que dedicarse sólo a matar gente. Las categorías te indicarán cuáles son los costes de desarrollo de tu personaje, sus límites en la distribución de puntos y alguna de sus habilidades especiales.</rdfs:comment>
-        <Creation_Scheme_Root rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</Creation_Scheme_Root>
-        <View_Type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SingleChoiceListView</View_Type>
+        <CreationSchemeRoot rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</CreationSchemeRoot>
+        <ViewType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SingleChoiceListView</ViewType>
     </owl:NamedIndividual>
     
 
@@ -24775,7 +24775,7 @@ Per_Item_Total, numerical: true, user_edit: false, Per_Item_Base:+: Per_Item_Tem
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Def_Celéritas">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Definicion_Clases"/>
-        <Substage_Order rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">1</Substage_Order>
+        <SubstageOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">1</SubstageOrder>
     </owl:NamedIndividual>
     
 
@@ -24785,7 +24785,7 @@ Per_Item_Total, numerical: true, user_edit: false, Per_Item_Base:+: Per_Item_Tem
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Def_Clase_Social">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Definicion_Clases"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Normalmente, los personajes comenzarán la partida con una cantidad de dinero inicial para realizar pequeños gastos y poder equiparse. Cada jugador puede justificar como desee el origen de este dinero: una herencia, su propio trabajo o un casual golpe de suerte. Quienes posean habilidades de combate pueden comenzar adicionalmente con el arma básica que saben utilizar, o en su defecto, con alguna armadura de escaso valor. Para determinar los fondos iniciales de un personaje, debe atenderse a su clase social. Su origen indica la cantidad de la que inicialmente se dispone.</rdfs:comment>
-        <View_Type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SingleChoiceListView</View_Type>
+        <ViewType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SingleChoiceListView</ViewType>
     </owl:NamedIndividual>
     
 
@@ -24803,7 +24803,7 @@ Per_Item_Total, numerical: true, user_edit: false, Per_Item_Base:+: Per_Item_Tem
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Def_Conjuro">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Definicion_Clases"/>
-        <Substage_Order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</Substage_Order>
+        <SubstageOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</SubstageOrder>
     </owl:NamedIndividual>
     
 
@@ -24813,7 +24813,7 @@ Per_Item_Total, numerical: true, user_edit: false, Per_Item_Base:+: Per_Item_Tem
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Def_Conjuro_Libre_Acceso">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Definicion_Clases"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Conjuro que no forma parte de alguna de las 11 vias de la Magia.</rdfs:comment>
-        <View_Type>MultipleChoiceDynamicLimitView</View_Type>
+        <ViewType>MultipleChoiceDynamicLimitView</ViewType>
     </owl:NamedIndividual>
     
 
@@ -24823,9 +24823,9 @@ Per_Item_Total, numerical: true, user_edit: false, Per_Item_Base:+: Per_Item_Tem
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Def_Conjuro_Vía_Mágica">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Definicion_Clases"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Conjuro perteneciente a alguna de las 11 vías de la Magia</rdfs:comment>
-        <General_Cost_Defined_By rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Nivel_Magia_Disponible</General_Cost_Defined_By>
-        <Substage_Order rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</Substage_Order>
-        <View_Type>MultipleChoiceDynamicLimitView</View_Type>
+        <GeneralCostDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Nivel_Magia_Disponible</GeneralCostDefinedBy>
+        <SubstageOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</SubstageOrder>
+        <ViewType>MultipleChoiceDynamicLimitView</ViewType>
     </owl:NamedIndividual>
     
 
@@ -24839,7 +24839,7 @@ Per_Item_Total, numerical: true, user_edit: false, Per_Item_Base:+: Per_Item_Tem
 Las habilidades mágicas no dependen exclusivamente del Don y de los conjuros. Algunos individuos son capaces de controlar la esencia de los seres sobrenaturales que existen en el flujo de almas, atrayéndolos al mundo material. Para hacerlo, los invocadores utilizan su propia alma y sincronizan con ella la esencia de los seres con los que desean contactar. Sincronizar de este modo es un proceso muy complejo y muy a menudo son necesarios elaborados rituales y ceremonias. Sin embargo, algunos convocadores desarrollan tanto poder y un control tan elevado, que pueden forzar a las criaturas a venir a nuestro mundo simplemente pronunciando su nombre.
 
 No todos los seres vivos se ven sometidos a las habilidades de convocatoria. Estos poderes sólo permiten interactuar con las criaturas cuya presencia se encuentra sometida al flujo de almas. La mayoría de criaturas que pueblan el mundo, como los humanos, los animales e incluso algunas razas sobrenaturales, no están atados al flujo de almas y no son afectados por la influencia de los invocadores. En realidad su presencia está mucho más ligada al mundo físico que al espiritual. A pesar de que la convocatoria es una habilidad sobrenatural, los individuos que utilizan sus poderes no requieren necesariamente el Don de la magia. En realidad, únicamente necesitan tener un alma lo suficientemente fuerte para forzar a los seres sobrenaturales a cumplir su voluntad, y los conocimientos para hacerlo.</rdfs:comment>
-        <Substage_Order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Substage_Order>
+        <SubstageOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</SubstageOrder>
     </owl:NamedIndividual>
     
 
@@ -24849,7 +24849,7 @@ No todos los seres vivos se ven sometidos a las habilidades de convocatoria. Est
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Def_Desventaja">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Definicion_Clases"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Las desventajas funcionan de una manera similar a las ventajas, pero en lugar de gastar Puntos de Creación para obtenerlas, al elegirlas te proporcionan nuevos puntos para adquirir más ventajas. De este modo se nivelan los beneficios y los inconvenientes: cuantas más ventajas tengas, mayores serán sin duda tus problemas. Puedes elegir hasta tres desventajas para un personaje, aunque no es obligatorio hacerlo. Cualquier ventaja o desventaja, salvo que se diga expresamente lo contrario, sólo puede adquirirse en una ocasión.</rdfs:comment>
-        <View_Type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MultipleChoiceStaticLimitView</View_Type>
+        <ViewType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MultipleChoiceStaticLimitView</ViewType>
     </owl:NamedIndividual>
     
 
@@ -24859,7 +24859,7 @@ No todos los seres vivos se ven sometidos a las habilidades de convocatoria. Est
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Def_Desventaja_Común">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Definicion_Clases"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Esta es la lista de desventajas comunes que puedes elegir para tu personaje. El beneficio indica la cantidad de Puntos de Creación que obtendrás adquiriendo cada una de ellas. Recuerda que no has de elegir más de tres desventajas.</rdfs:comment>
-        <Substage_Order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</Substage_Order>
+        <SubstageOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</SubstageOrder>
     </owl:NamedIndividual>
     
 
@@ -24869,7 +24869,7 @@ No todos los seres vivos se ven sometidos a las habilidades de convocatoria. Est
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Def_Desventaja_Mística">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Definicion_Clases"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sólo quienes tengan el Don podrán elegir desventajas de esta lista. Los Puntos de Creación que consigas con ellas sólo podrán utilizarse para comprar ventajas mágicas para personajes con el Don. De todas formas, recuerda que el total de desventajas no puede ser mayor de tres, por lo que si ya has elegido tres generales, no podrás elegir ninguna de aquí.</rdfs:comment>
-        <Substage_Order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Substage_Order>
+        <SubstageOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</SubstageOrder>
     </owl:NamedIndividual>
     
 
@@ -24879,7 +24879,7 @@ No todos los seres vivos se ven sometidos a las habilidades de convocatoria. Est
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Def_Desventaja_Psíquica">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Definicion_Clases"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sólo los personajes con capacidades psíquicas podrán elegir desventajas de esta lista. Los Puntos de Creación que consigas con ellas, únicamente podrán utilizarse para comprar ventajas mentales para psíquicos. De todas formas, recuerda que el total de desventajas no puede ser mayor de tres, por lo que si ya has elegido tres generales, no podrás elegir ninguna de aquí.</rdfs:comment>
-        <Substage_Order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Substage_Order>
+        <SubstageOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</SubstageOrder>
     </owl:NamedIndividual>
     
 
@@ -24906,7 +24906,7 @@ No todos los seres vivos se ven sometidos a las habilidades de convocatoria. Est
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Def_El_Dragón">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Definicion_Clases"/>
-        <Substage_Order rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">3</Substage_Order>
+        <SubstageOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">3</SubstageOrder>
     </owl:NamedIndividual>
     
 
@@ -24916,13 +24916,13 @@ No todos los seres vivos se ven sometidos a las habilidades de convocatoria. Est
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Def_Equipamiento">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Definicion_Clases"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ahora que tu personaje ya tiene todas sus habilidades, ha llegado el momento de elegir su equipamiento. Por muchas pericias que tenga, de muy poco le pueden servir sin las cosas adecuadas. Conforme prospere y mejore, irá solicitando consecuentemente mejores artilugios, de acorde a sus necesidades.</rdfs:comment>
-        <General_Cost_Defined_By>Per_Equipamiento_Coste_Disponible</General_Cost_Defined_By>
-        <Valued_List_Info rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Equipo_Inventario, numerical: true, user_edit: true
+        <GeneralCostDefinedBy>Per_Equipamiento_Coste_Disponible</GeneralCostDefinedBy>
+        <ValuedListInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Equipo_Inventario, numerical: true, user_edit: true
 Objeto_Peso, numerical:true, user_edit: false, Item:Equipo_Peso
 Objeto_Peso_Total, numerical: true, user_edit: false, Equipo_Inventario:*:Objeto_Peso
 Objeto_Coste, numerical: true, user_edit: false, Item:Equipo_Coste
-Objeto_Coste_Total, numerical: true, user_edit: false, Equipo_Inventario:*:Objeto_Coste</Valued_List_Info>
-        <View_Type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ValuedListView</View_Type>
+Objeto_Coste_Total, numerical: true, user_edit: false, Equipo_Inventario:*:Objeto_Coste</ValuedListInfo>
+        <ViewType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ValuedListView</ViewType>
     </owl:NamedIndividual>
     
 
@@ -24959,7 +24959,7 @@ Objeto_Coste_Total, numerical: true, user_edit: false, Equipo_Inventario:*:Objet
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Def_Habilidad">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Definicion_Clases"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Las habilidades son los conocimientos y pericias de nuestro personaje, que nos indican en qué campos está versado y hasta qué grado.</rdfs:comment>
-        <General_Cost_Defined_By rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Habilidad_Primaria_Disponible_Total</General_Cost_Defined_By>
+        <GeneralCostDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Habilidad_Primaria_Disponible_Total</GeneralCostDefinedBy>
     </owl:NamedIndividual>
     
 
@@ -24969,7 +24969,7 @@ Objeto_Coste_Total, numerical: true, user_edit: false, Equipo_Inventario:*:Objet
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Def_Habilidad_Atléticas">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Definicion_Clases"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Son las habilidades que dependen de la movilidad del personaje, de su equilibrio y de su agilidad.</rdfs:comment>
-        <View_Type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ValuedListView</View_Type>
+        <ViewType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ValuedListView</ViewType>
     </owl:NamedIndividual>
     
 
@@ -24979,7 +24979,7 @@ Objeto_Coste_Total, numerical: true, user_edit: false, Equipo_Inventario:*:Objet
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Def_Habilidad_Combate">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Definicion_Clases"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Son las que permiten al personaje desarrollar todas las habilidades relacionadas con la lucha.</rdfs:comment>
-        <Substage_Order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Substage_Order>
+        <SubstageOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</SubstageOrder>
     </owl:NamedIndividual>
     
 
@@ -24988,13 +24988,13 @@ Objeto_Coste_Total, numerical: true, user_edit: false, Equipo_Inventario:*:Objet
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Def_Habilidad_Combate_Común">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Definicion_Clases"/>
-        <Substage_Order rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">1</Substage_Order>
-        <Valued_List_Info rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Item_PD, numerical: true, user_edit: true
+        <SubstageOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">1</SubstageOrder>
+        <ValuedListInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Item_PD, numerical: true, user_edit: true
 Per_Item_Base, numerical: true, user_edit: false, Per_Item_PD: /: tieneCategoría :Cat_Item_Coste
 Per_Item_Bono_Car, numerical: true, user_edit: false, Hab_CarPrincipal: Per_Ref_Bono
 Per_Item_Bono_Cat, numerical: true, user_edit: false, tieneCategoría: Cat_BI_Item: *: Per_Nivel
-Per_Item_Total, numerical: true, user_edit: false, Per_Item_Base: +: Per_Item_Bono_Car: +: Per_Item_Bono_Cat</Valued_List_Info>
-        <View_Type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ValuedListView</View_Type>
+Per_Item_Total, numerical: true, user_edit: false, Per_Item_Base: +: Per_Item_Bono_Car: +: Per_Item_Bono_Cat</ValuedListInfo>
+        <ViewType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ValuedListView</ViewType>
     </owl:NamedIndividual>
     
 
@@ -25004,7 +25004,7 @@ Per_Item_Total, numerical: true, user_edit: false, Per_Item_Base: +: Per_Item_Bo
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Def_Habilidad_Creativas">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Definicion_Clases"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Son todas las habilidades referentes a la capacidad artística e inventiva de los personajes.</rdfs:comment>
-        <View_Type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ValuedListView</View_Type>
+        <ViewType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ValuedListView</ViewType>
     </owl:NamedIndividual>
     
 
@@ -25014,7 +25014,7 @@ Per_Item_Total, numerical: true, user_edit: false, Per_Item_Base: +: Per_Item_Bo
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Def_Habilidad_Intelectuales">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Definicion_Clases"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Las habilidades intelectuales son las que dependen principalmente del conocimiento, la sabiduría y el raciocinio de los personajes.</rdfs:comment>
-        <View_Type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ValuedListView</View_Type>
+        <ViewType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ValuedListView</ViewType>
     </owl:NamedIndividual>
     
 
@@ -25023,8 +25023,8 @@ Per_Item_Total, numerical: true, user_edit: false, Per_Item_Base: +: Per_Item_Bo
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Def_Habilidad_Ki">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Definicion_Clases"/>
-        <Substage_Order rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">2</Substage_Order>
-        <View_Type>MultipleChoiceDynamicLimitView</View_Type>
+        <SubstageOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">2</SubstageOrder>
+        <ViewType>MultipleChoiceDynamicLimitView</ViewType>
     </owl:NamedIndividual>
     
 
@@ -25034,7 +25034,7 @@ Per_Item_Total, numerical: true, user_edit: false, Per_Item_Base: +: Per_Item_Bo
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Def_Habilidad_Mística">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Definicion_Clases"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La habilidad sobrenatural agrupa todas las pericias de carácter místico del personaje. Son las que utilizan las categorías dotadas de poderes sobrenaturales, como los magos, los invocadores o los ilusionistas.</rdfs:comment>
-        <Substage_Order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</Substage_Order>
+        <SubstageOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</SubstageOrder>
     </owl:NamedIndividual>
     
 
@@ -25043,7 +25043,7 @@ Per_Item_Total, numerical: true, user_edit: false, Per_Item_Base: +: Per_Item_Bo
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Def_Habilidad_Mística_Común">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Definicion_Clases"/>
-        <Substage_Order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</Substage_Order>
+        <SubstageOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</SubstageOrder>
     </owl:NamedIndividual>
     
 
@@ -25052,13 +25052,13 @@ Per_Item_Total, numerical: true, user_edit: false, Per_Item_Base: +: Per_Item_Bo
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Def_Habilidad_Mística_Específica">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Definicion_Clases"/>
-        <Substage_Order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Substage_Order>
-        <Valued_List_Info rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Item_PD, numerical: true, user_edit: true
+        <SubstageOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</SubstageOrder>
+        <ValuedListInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Item_PD, numerical: true, user_edit: true
 Per_Item_Base, numerical: true, user_edit: false, Per_Item_PD:/:tieneCategoría:Cat_Item_Coste
 Per_Item_Bono, numerical: true, user_edit: false, Hab_CarPrincipal:Per_Ref_Bono
 Per_Item_Categoría, numerical: true, user_edit: false, tieneCategoría:Cat_BI_Item
-Per_Item_Total, numerical: true, user_edit: false, Per_Item_Base:+:Per_Item_Bono:+:Per_Item_Categoría</Valued_List_Info>
-        <View_Type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ValuedListView</View_Type>
+Per_Item_Total, numerical: true, user_edit: false, Per_Item_Base:+:Per_Item_Bono:+:Per_Item_Categoría</ValuedListInfo>
+        <ViewType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ValuedListView</ViewType>
     </owl:NamedIndividual>
     
 
@@ -25067,13 +25067,13 @@ Per_Item_Total, numerical: true, user_edit: false, Per_Item_Base:+:Per_Item_Bono
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Def_Habilidad_Mística_General">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Definicion_Clases"/>
-        <Substage_Order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</Substage_Order>
-        <Valued_List_Info rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Item_PD, numerical: true, user_edit: true
+        <SubstageOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</SubstageOrder>
+        <ValuedListInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Item_PD, numerical: true, user_edit: true
 Per_Item_Base, numerical: true, user_edit: false, Per_Item_PD:/:tieneCategoría:Cat_Item_Coste
 Per_Item_Bono, numerical: true, user_edit: false, Hab_CarPrincipal:Per_Ref_Total:Item_Ref:Item_Valor
 Per_Item_Categoría, numerical: true, user_edit: false, tieneCategoría:Cat_BI_Item
-Per_Item_Total, numerical: true, user_edit: false, Per_Item_Base:+:Per_Item_Bono:+:Per_Item_Categoría</Valued_List_Info>
-        <View_Type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ValuedListView</View_Type>
+Per_Item_Total, numerical: true, user_edit: false, Per_Item_Base:+:Per_Item_Bono:+:Per_Item_Categoría</ValuedListInfo>
+        <ViewType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ValuedListView</ViewType>
     </owl:NamedIndividual>
     
 
@@ -25083,11 +25083,11 @@ Per_Item_Total, numerical: true, user_edit: false, Per_Item_Base:+:Per_Item_Bono
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Def_Habilidad_Natural">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Definicion_Clases"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Las habilidades naturales son una serie de bonos que el personaje obtiene en sus habilidades secundarias.</rdfs:comment>
-        <General_Cost_Defined_By rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></General_Cost_Defined_By>
-        <Substage_Order rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2</Substage_Order>
-        <Valued_List_Info rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Item_Base, numerical: true, user_edit: true
-Per_Item_Bono, numerical: true, user_edit: false, Per_Item_Base:*:10</Valued_List_Info>
-        <View_Type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ValuedListView</View_Type>
+        <GeneralCostDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></GeneralCostDefinedBy>
+        <SubstageOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2</SubstageOrder>
+        <ValuedListInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Item_Base, numerical: true, user_edit: true
+Per_Item_Bono, numerical: true, user_edit: false, Per_Item_Base:*:10</ValuedListInfo>
+        <ViewType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ValuedListView</ViewType>
     </owl:NamedIndividual>
     
 
@@ -25097,7 +25097,7 @@ Per_Item_Bono, numerical: true, user_edit: false, Per_Item_Base:*:10</Valued_Lis
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Def_Habilidad_Perceptivas">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Definicion_Clases"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">En este grupo se reúnen todas las habilidades perceptivas del personaje. Son las pericias que le permitirán explotar al máximo sus cinco sentidos y analizar la información obtenida.</rdfs:comment>
-        <View_Type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ValuedListView</View_Type>
+        <ViewType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ValuedListView</ViewType>
     </owl:NamedIndividual>
     
 
@@ -25116,7 +25116,7 @@ Per_Item_Bono, numerical: true, user_edit: false, Per_Item_Base:*:10</Valued_Lis
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Def_Habilidad_Psíquica">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Definicion_Clases"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Recoge todo lo relacionado con el campo de los poderes psíquicos y su uso.</rdfs:comment>
-        <Substage_Order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Substage_Order>
+        <SubstageOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</SubstageOrder>
     </owl:NamedIndividual>
     
 
@@ -25125,13 +25125,13 @@ Per_Item_Bono, numerical: true, user_edit: false, Per_Item_Base:*:10</Valued_Lis
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Def_Habilidad_Psíquica_Común">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Definicion_Clases"/>
-        <Substage_Order rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</Substage_Order>
-        <Valued_List_Info rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Item_PD, numerical: true, user_edit: true
+        <SubstageOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</SubstageOrder>
+        <ValuedListInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Item_PD, numerical: true, user_edit: true
 Per_Item_Base, numerical: true, user_edit: false, Per_Item_PD:/:tieneCategoría:Cat_Item_Coste
 Per_Item_Bono, numerical: true, user_edit: false, Per_Item_Bono
 Per_Item_Categoría, numerical: true, user_edit: false, Per_Item_Categoría
-Per_Item_Total, numerical: true, user_edit: false, Per_Item_Base:+:Per_Item_Bono:+:Per_Item_Categoría</Valued_List_Info>
-        <View_Type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ValuedListView</View_Type>
+Per_Item_Total, numerical: true, user_edit: false, Per_Item_Base:+:Per_Item_Bono:+:Per_Item_Categoría</ValuedListInfo>
+        <ViewType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ValuedListView</ViewType>
     </owl:NamedIndividual>
     
 
@@ -25141,14 +25141,14 @@ Per_Item_Total, numerical: true, user_edit: false, Per_Item_Base:+:Per_Item_Bono
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Def_Habilidad_Secundaria">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Definicion_Clases"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Son llamadas así ya que representan las habilidades básicas o principales de los personajes en el ejercicio de sus categorías. A su vez, las habilidades primarias están divididas en tres campos distintos: la habilidad de combate, la habilidad psíquica y la habilidad sobrenatural.</rdfs:comment>
-        <Valued_List_Info rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Item_PD, numerical: true, user_edit: true
+        <ValuedListInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Item_PD, numerical: true, user_edit: true
 Per_Item_Base, numerical: true, user_edit: false, Per_Item_PD: /: tieneCategoría: Cat_Item_Coste
 Per_Item_Bono_Car, numerical: true, user_edit: false, Hab_CarPrincipal: Per_Ref_Bono
 Per_Item_Bonificador_Innato, numerical: true, user_edit: false, tieneCategoría: Cat_BI_Item
 Per_Item_Bonificador_Natural_Bono, numerical: true, user_edit: false, Per_Item_Bonificador_Natural_Bono
 Per_Item_Habilidad_Natural_Bono, numerical: true, user_edit: false, Per_Item_Habilidad_Natural_Bono
-Per_Item_Total, numerical: true, user_edit: false, Per_Item_Base:+:Per_Item_Bono_Car:+:Per_Item_Bonificador_Innato:+:Per_Item_Bonificador_Natural_Bono:+:Per_Item_Habilidad_Natural_Bono</Valued_List_Info>
-        <View_Type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ValuedListView</View_Type>
+Per_Item_Total, numerical: true, user_edit: false, Per_Item_Base:+:Per_Item_Bono_Car:+:Per_Item_Bonificador_Innato:+:Per_Item_Bonificador_Natural_Bono:+:Per_Item_Habilidad_Natural_Bono</ValuedListInfo>
+        <ViewType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ValuedListView</ViewType>
     </owl:NamedIndividual>
     
 
@@ -25158,7 +25158,7 @@ Per_Item_Total, numerical: true, user_edit: false, Per_Item_Base:+:Per_Item_Bono
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Def_Habilidad_Sociales">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Definicion_Clases"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Es el grupo de habilidades que reflejan la capacidad del personaje para interactuar con otros individuos e influir de algún modo en ellos.</rdfs:comment>
-        <View_Type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ValuedListView</View_Type>
+        <ViewType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ValuedListView</ViewType>
     </owl:NamedIndividual>
     
 
@@ -25168,7 +25168,7 @@ Per_Item_Total, numerical: true, user_edit: false, Per_Item_Base:+:Per_Item_Bono
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Def_Habilidad_Subterfugio">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Definicion_Clases"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Es el campo en el que se reúnen aquellas pericias basadas en el disimulo y en la capacidad de actuar sin que los demás puedan percatarse.</rdfs:comment>
-        <View_Type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ValuedListView</View_Type>
+        <ViewType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ValuedListView</ViewType>
     </owl:NamedIndividual>
     
 
@@ -25178,7 +25178,7 @@ Per_Item_Total, numerical: true, user_edit: false, Per_Item_Base:+:Per_Item_Bono
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Def_Habilidad_Vigor">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Definicion_Clases"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Son las habilidades que recogen aquellas pericias basadas en el esfuerzo corporal, el aguante físico y la resistencia mental.</rdfs:comment>
-        <View_Type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ValuedListView</View_Type>
+        <ViewType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ValuedListView</ViewType>
     </owl:NamedIndividual>
     
 
@@ -25187,7 +25187,7 @@ Per_Item_Total, numerical: true, user_edit: false, Per_Item_Base:+:Per_Item_Bono
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Def_Ignis">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Definicion_Clases"/>
-        <Substage_Order rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">2</Substage_Order>
+        <SubstageOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">2</SubstageOrder>
     </owl:NamedIndividual>
     
 
@@ -25197,7 +25197,7 @@ Per_Item_Total, numerical: true, user_edit: false, Per_Item_Base:+:Per_Item_Bono
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Def_Invocación">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Definicion_Clases"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Los personajes tienen a su disposición la capacidad de contactar con entidades de enorme poder y solicitar su ayuda temporalmente. Semejantes seres son inmunes a las habilidades de convocatoria naturales, pero intervienen de manera limitada en el mundo, brindando parte de su poder a quienes los llaman. En cierta manera son equivalentes a poderosos hechizos, pero en lugar de ser realizados por el invocador, son las propias entidades quienes los ejecutan.</rdfs:comment>
-        <Substage_Order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</Substage_Order>
+        <SubstageOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</SubstageOrder>
     </owl:NamedIndividual>
     
 
@@ -25209,7 +25209,7 @@ Per_Item_Total, numerical: true, user_edit: false, Per_Item_Base:+:Per_Item_Bono
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El Ki es una fuerza que está presente en cualquier forma de vida. Cuando el alma penetra en un ser vivo en el momento de su nacimiento, impregna todo su ser y se hace uno con él. Aunque todas las cosas tienen espíritu, sólo los seres que están propiamente vivos funden completamente su esencia en cuerpo y alma. Si una piedra se rompe en dos, su alma se divide en dos partes. Si el cuerpo de un ser vivo muere, su espíritu se separa del cuerpo. Cuando un alma se afianza en sus carcasas terrenales impregna toda su esencia, creando la energía física a la que llamamos Ki. Dicha fuerza depende exclusivamente de la fusión entre cuerpo y espíritu, y de esta manera recorre internamente a todos los seres vivos. Esto no significa que sólo los seres orgánicos puedan utilizar el Ki, puesto que otras criaturas elementales sin una forma física material también son capaces de desarrollar estas habilidades. Para poder hacer uso de ellas, basta sencillamente con que un alma se funda realmente con una carcasa a la que pueda llamar cuerpo. Algunos explican la energía física de las personas como una fuente de calor viva. Por eso, los seres que han perdido su alma pero permanecen en este mundo, como los no muertos, desprenden un intenso frío espiritual.
 
 Aunque el Ki está presente en cualquier ser vivo, no todo el mundo llega realmente a ser consciente de ello. Sólo los pocos que son capaces de percibir su propia energía y la despiertan, controlan estas increíbles capacidades. Al hacerlo rompen la fina línea entre la carne y el alma, por lo que pueden emplear sus poderes espirituales mientras permanecen aún en sus cuerpos. El término “Dominio” proviene de la capacidad que tienen esas personas para controlar su energía y sacar el máximo provecho de ella, realizando acciones físicas que ningún otro mortal podría lograr.</rdfs:comment>
-        <Substage_Order rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">3</Substage_Order>
+        <SubstageOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">3</SubstageOrder>
     </owl:NamedIndividual>
     
 
@@ -25218,7 +25218,7 @@ Aunque el Ki está presente en cualquier ser vivo, no todo el mundo llega realme
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Def_Ki_Común">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Definicion_Clases"/>
-        <Substage_Order rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">1</Substage_Order>
+        <SubstageOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">1</SubstageOrder>
     </owl:NamedIndividual>
     
 
@@ -25227,7 +25227,7 @@ Aunque el Ki está presente en cualquier ser vivo, no todo el mundo llega realme
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Def_Libro_Agua">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Definicion_Clases"/>
-        <Substage_Order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</Substage_Order>
+        <SubstageOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</SubstageOrder>
     </owl:NamedIndividual>
     
 
@@ -25236,7 +25236,7 @@ Aunque el Ki está presente en cualquier ser vivo, no todo el mundo llega realme
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Def_Libro_Aire">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Definicion_Clases"/>
-        <Substage_Order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</Substage_Order>
+        <SubstageOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</SubstageOrder>
     </owl:NamedIndividual>
     
 
@@ -25245,7 +25245,7 @@ Aunque el Ki está presente en cualquier ser vivo, no todo el mundo llega realme
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Def_Libro_Creación">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Definicion_Clases"/>
-        <Substage_Order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Substage_Order>
+        <SubstageOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</SubstageOrder>
     </owl:NamedIndividual>
     
 
@@ -25254,7 +25254,7 @@ Aunque el Ki está presente en cualquier ser vivo, no todo el mundo llega realme
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Def_Libro_Destrucción">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Definicion_Clases"/>
-        <Substage_Order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</Substage_Order>
+        <SubstageOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</SubstageOrder>
     </owl:NamedIndividual>
     
 
@@ -25263,7 +25263,7 @@ Aunque el Ki está presente en cualquier ser vivo, no todo el mundo llega realme
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Def_Libro_Esencia">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Definicion_Clases"/>
-        <Substage_Order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</Substage_Order>
+        <SubstageOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</SubstageOrder>
     </owl:NamedIndividual>
     
 
@@ -25272,7 +25272,7 @@ Aunque el Ki está presente en cualquier ser vivo, no todo el mundo llega realme
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Def_Libro_Fuego">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Definicion_Clases"/>
-        <Substage_Order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</Substage_Order>
+        <SubstageOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</SubstageOrder>
     </owl:NamedIndividual>
     
 
@@ -25281,7 +25281,7 @@ Aunque el Ki está presente en cualquier ser vivo, no todo el mundo llega realme
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Def_Libro_Ilusión">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Definicion_Clases"/>
-        <Substage_Order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Substage_Order>
+        <SubstageOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</SubstageOrder>
     </owl:NamedIndividual>
     
 
@@ -25290,7 +25290,7 @@ Aunque el Ki está presente en cualquier ser vivo, no todo el mundo llega realme
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Def_Libro_Luz">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Definicion_Clases"/>
-        <Substage_Order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</Substage_Order>
+        <SubstageOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</SubstageOrder>
     </owl:NamedIndividual>
     
 
@@ -25299,7 +25299,7 @@ Aunque el Ki está presente en cualquier ser vivo, no todo el mundo llega realme
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Def_Libro_Nigromancia">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Definicion_Clases"/>
-        <Substage_Order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</Substage_Order>
+        <SubstageOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</SubstageOrder>
     </owl:NamedIndividual>
     
 
@@ -25308,7 +25308,7 @@ Aunque el Ki está presente en cualquier ser vivo, no todo el mundo llega realme
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Def_Libro_Oscuridad">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Definicion_Clases"/>
-        <Substage_Order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Substage_Order>
+        <SubstageOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</SubstageOrder>
     </owl:NamedIndividual>
     
 
@@ -25317,7 +25317,7 @@ Aunque el Ki está presente en cualquier ser vivo, no todo el mundo llega realme
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Def_Libro_Tierra">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Definicion_Clases"/>
-        <Substage_Order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</Substage_Order>
+        <SubstageOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</SubstageOrder>
     </owl:NamedIndividual>
     
 
@@ -25331,8 +25331,8 @@ Aunque el Ki está presente en cualquier ser vivo, no todo el mundo llega realme
 El poder de la magia no es uniforme. Al mezclarse con las almas, se nutre de su esencia y toma distintos matices según los elementos o las emociones con los que se ponga en contacto. De este modo, se divide en diversas tipologías cuando pasa a través de un brujo o se encuentra en un lugar cargado de fuertes sentimientos. Los conjuros oscuros por ejemplo, que se sustentan de las emociones negativas, toman su poder de la magia que ha estado en contacto con ira, rabia u odio.
 
 No todas las personas son capaces de controlar el poder de las almas. Hacerlo no resulta fácil ni siquiera para los propios espíritus sobrenaturales. Sin embargo, algunos sujetos nacen con la capacidad de sentir la magia, dejarla fluir por su cuerpo y encauzar su energía mediante conjuros. Estos individuos son brujos, aquellos que han nacido con el don de alterar la realidad a su antojo. Los brujos son una luz en las tinieblas para la magia, núcleos en torno a los cuales se acumula su poder. Actúan como portales para que esta se manifieste en el mundo físico: la magia se reúne a su alrededor, penetra en ellos y crece en sus almas hasta que se exterioriza mediante un conjuro. En realidad, los hechizos no son nada más que una manera de controlar la existencia y alterar sus reglas. Los brujos utilizan su energía sobrenatural para tejer sortilegios que se enmarañan en la propia esencia de la realidad. Las gesticulaciones y los versos son palabras que los magos susurran al alma del mundo para canalizar mejor sus energías, pero no son necesarios para alterar la realidad. A un brujo le basta su propia voluntad para manejar la magia y lanzar un conjuro, aunque al utilizar los rituales puede aumentar considerablemente su poder. Cada hechicero conoce sus propias fórmulas para modificar la existencia. Un mago crea sus sortilegios utilizando los conocimientos y medios que tiene a su alcance, porque la ejecución de la magia puede ser muy diferente de una persona a otra.</rdfs:comment>
-        <Substage_Order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Substage_Order>
-        <View_Type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MultipleChoiceDynamicLimitView</View_Type>
+        <SubstageOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</SubstageOrder>
+        <ViewType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MultipleChoiceDynamicLimitView</ViewType>
     </owl:NamedIndividual>
     
 
@@ -25440,9 +25440,9 @@ No todas las personas son capaces de controlar el poder de las almas. Hacerlo no
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Def_Poder_Psíquico">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Definicion_Clases"/>
-        <General_Cost_Defined_By rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_CV_Total</General_Cost_Defined_By>
-        <Substage_Order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Substage_Order>
-        <View_Type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MultipleChoiceStaticLimitGroupCostViewModel</View_Type>
+        <GeneralCostDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_CV_Total</GeneralCostDefinedBy>
+        <SubstageOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</SubstageOrder>
+        <ViewType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MultipleChoiceStaticLimitGroupCostViewModel</ViewType>
     </owl:NamedIndividual>
     
 
@@ -25451,12 +25451,12 @@ No todas las personas son capaces de controlar el poder de las almas. Hacerlo no
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Def_Puntos_Ki">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Definicion_Clases"/>
-        <Substage_Order rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">1</Substage_Order>
-        <Valued_List_Info rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Item_PD, numerical: true, user_edit: true
+        <SubstageOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">1</SubstageOrder>
+        <ValuedListInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Item_PD, numerical: true, user_edit: true
 Per_Item_Base, numerical: true, user_edit: false, Per_Item_PD:/:tieneCategoría:Cat_Item_Coste
 Per_Item_Bono, numerical: true, user_edit: false, Hab_CarPrincipal: Per_Ref_Total
-Per_Item_Total, numerical: true, user_edit: false, Per_Item_Base:+: Per_Item_Bono</Valued_List_Info>
-        <View_Type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ValuedListView</View_Type>
+Per_Item_Total, numerical: true, user_edit: false, Per_Item_Base:+: Per_Item_Bono</ValuedListInfo>
+        <ViewType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ValuedListView</ViewType>
     </owl:NamedIndividual>
     
 
@@ -25477,7 +25477,7 @@ Per_Item_Total, numerical: true, user_edit: false, Per_Item_Base:+: Per_Item_Bon
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cuando hablamos de raza no nos referimos a su etnia, como oriental, caucásico o negro, sino a una verdadera especie sobrenatural con características distintas a la nuestra. Sin embargo, al contrario que en muchos otros sistemas de rol, el mundo de Ánima es esencialmente humano, por lo que las partidas deberían basarse en grupos compuestos únicamente por miembros de nuestra raza. 
 
 De cualquier modo, si los jugadores lo desean, hay diferentes razas que se pueden adoptar. Cada una de ellas tiene una serie de características sobrenaturales que otorgan al personaje habilidades especiales</rdfs:comment>
-        <View_Type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SingleChoiceListView</View_Type>
+        <ViewType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SingleChoiceListView</ViewType>
     </owl:NamedIndividual>
     
 
@@ -25514,9 +25514,9 @@ De cualquier modo, si los jugadores lo desean, hay diferentes razas que se puede
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Def_Tabla_Armas">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Definicion_Clases"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Un individuo no tiene por qué verse obligado a dominar el uso de una única arma, sino que con la práctica es capaz de aprender a utilizar igualmente otras muchas con la misma habilidad. Las tablas de armas permiten a un personaje eliminar los penalizadores por blandir armas distintas a la que escogió inicialmente, e incluso en ocasiones, emplear su habilidad de combate lanzando conjuros o poderes psíquicos.</rdfs:comment>
-        <General_Cost_Defined_By>Per_Habilidad_Primaria_Disponible_Total</General_Cost_Defined_By>
-        <Substage_Order rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">4</Substage_Order>
-        <View_Type>MultipleChoiceDynamicLimitView</View_Type>
+        <GeneralCostDefinedBy>Per_Habilidad_Primaria_Disponible_Total</GeneralCostDefinedBy>
+        <SubstageOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">4</SubstageOrder>
+        <ViewType>MultipleChoiceDynamicLimitView</ViewType>
     </owl:NamedIndividual>
     
 
@@ -25526,8 +25526,8 @@ De cualquier modo, si los jugadores lo desean, hay diferentes razas que se puede
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Def_Tabla_Armas_Arquetípicas">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Definicion_Clases"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Estas tablas recogen una serie de armas, que utilizan ciertas profesiones tradicionales con gran maestría. Si lo deseas, puedes componer las tuyas propias, siempre que consideres que el grupo elegido guarda la suficiente relación con una profesión o figura arquetípica.</rdfs:comment>
-        <Substage_Order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Substage_Order>
-        <View_Type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MultipleChoiceDynamicLimitView</View_Type>
+        <SubstageOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</SubstageOrder>
+        <ViewType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MultipleChoiceDynamicLimitView</ViewType>
     </owl:NamedIndividual>
     
 
@@ -25537,7 +25537,7 @@ De cualquier modo, si los jugadores lo desean, hay diferentes razas que se puede
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Def_Tabla_Armas_Generales">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Definicion_Clases"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Las tablas de armas generales permiten a un personaje eliminar los penalizadores por blandir armas distintas a la que escogió inicialmente.</rdfs:comment>
-        <Substage_Order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</Substage_Order>
+        <SubstageOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</SubstageOrder>
     </owl:NamedIndividual>
     
 
@@ -25547,7 +25547,7 @@ De cualquier modo, si los jugadores lo desean, hay diferentes razas que se puede
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Def_Tabla_Estilo">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Definicion_Clases"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Estas tablas permiten al personaje potenciar su habilidad marcial, disminuyendo los penalizadores que se aplican al realizar algunas maniobras específicas de ataque.</rdfs:comment>
-        <Substage_Order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Substage_Order>
+        <SubstageOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</SubstageOrder>
     </owl:NamedIndividual>
     
 
@@ -25574,8 +25574,8 @@ De cualquier modo, si los jugadores lo desean, hay diferentes razas que se puede
 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Def_Tabla_de_Técnicas_de_Dominio">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Definicion_Clases"/>
-        <Substage_Order rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">3</Substage_Order>
-        <View_Type>MultipleChoiceDynamicLimitView</View_Type>
+        <SubstageOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">3</SubstageOrder>
+        <ViewType>MultipleChoiceDynamicLimitView</ViewType>
     </owl:NamedIndividual>
     
 
@@ -25623,7 +25623,7 @@ De cualquier modo, si los jugadores lo desean, hay diferentes razas que se puede
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Como cada ser vivo que puebla el mundo, los personajes en Ánima tienen una serie de peculiaridades que no pueden únicamente reflejarse en sus características, habilidades y conocimientos. Estas peculiaridades se hallan inherentemente unidas a su propia esencia o naturaleza. No se aprenden ni se mejoran: se nace con ellas o nunca se tendrán. ¿Es mi personaje ambidiestro o tiene habilidades mágicas? ¿Ha nacido con dotes psíquicas o quizás se cura lentamente?. Responder a estas preguntas no puede quedar únicamente al azar o al arbitrio de los deseos de cada jugador. 
 
 Al contrario que las habilidades, las ventajas no se adquieren con PD, sino con los Puntos de Creación. Todo jugador tiene tres Puntos de Creación para adquirir las ventajas que elija y crea más apropiadas. El coste de las ventajas indica cuántos Puntos de Creación debes gastar para obtenerla. Algunas ventajas tienen un coste variable, lo que significa que según la cantidad de Puntos de Creación que gastes en ella, otorgará mayores beneficios.</rdfs:comment>
-        <View_Type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MultipleChoiceStaticLimitView</View_Type>
+        <ViewType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MultipleChoiceStaticLimitView</ViewType>
     </owl:NamedIndividual>
     
 
@@ -25633,7 +25633,7 @@ Al contrario que las habilidades, las ventajas no se adquieren con PD, sino con 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Def_Ventaja_Común">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Definicion_Clases"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Esta es la lista de ventajas comunes que puedes elegir para tu personaje. El coste indica la cantidad de Puntos de Creación que gastarás adquiriendo cada una de ellas.</rdfs:comment>
-        <Substage_Order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</Substage_Order>
+        <SubstageOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</SubstageOrder>
     </owl:NamedIndividual>
     
 
@@ -25643,7 +25643,7 @@ Al contrario que las habilidades, las ventajas no se adquieren con PD, sino con 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Def_Ventaja_Mística">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Definicion_Clases"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sólo quienes tengan el Don podrán elegir ventajas de esta lista.</rdfs:comment>
-        <Substage_Order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Substage_Order>
+        <SubstageOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</SubstageOrder>
     </owl:NamedIndividual>
     
 
@@ -25653,7 +25653,7 @@ Al contrario que las habilidades, las ventajas no se adquieren con PD, sino con 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Def_Ventaja_Psíquica">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Definicion_Clases"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sólo los personajes con capacidades psíquicas podrán elegir ventajas de esta lista.</rdfs:comment>
-        <Substage_Order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Substage_Order>
+        <SubstageOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</SubstageOrder>
     </owl:NamedIndividual>
     
 
@@ -25681,9 +25681,9 @@ Al contrario que las habilidades, las ventajas no se adquieren con PD, sino con 
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Def_Vía_Mágica">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Definicion_Clases"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Los conjuros se encuentran divididos en vías de magia. Cada vía recoge el conocimiento sobre un aspecto distinto de la existencia y representa una manera de influir en ella. Existen once vías separadas en dos tipos diferentes: menores y mayores. Las mayores son las cinco vías que controlan los aspectos más fundamentales de la realidad: Luz, Oscuridad, Creación, Destrucción y Nigromancia. Las menores son las seis vías que controlan los elementos básicos, las almas y la ilusión: Fuego, Aire, Tierra, Agua, Esencia y Mentira. Las vías tienen un nivel comprendido entre 1 y 100, y por cada dos niveles que posea un personaje, conoce un conjuro.</rdfs:comment>
-        <Valued_List_Info rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Item_Nivel, numerical: true, user_edit: true
-Num_hechizos, numerical: true, user_edit: false, Habilidad_Nivel : &lt;=  : Per_Item_Nivel : Count()</Valued_List_Info>
-        <View_Type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ValuedListView</View_Type>
+        <ValuedListInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Item_Nivel, numerical: true, user_edit: true
+Num_hechizos, numerical: true, user_edit: false, Habilidad_Nivel : &lt;=  : Per_Item_Nivel : Count()</ValuedListInfo>
+        <ViewType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ValuedListView</ViewType>
     </owl:NamedIndividual>
     
 
@@ -47018,7 +47018,7 @@ Coste: 10 PD</rdfs:comment>
     <owl:NamedIndividual rdf:about="urn:absolute:anima_beyond_fantasy#Tabla_Armas_Arquetípicas">
         <rdf:type rdf:resource="urn:absolute:anima_beyond_fantasy#Tabla_Armas_Generales"/>
         <Hab_Disponible_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</Hab_Disponible_Coste>
-        <View_Type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Estas tablas recogen una serie de armas, que utilizan ciertas profesiones tradicionales con gran maestría. Si lo deseas, puedes componer las tuyas propias, siempre que consideres que el grupo elegido guarda la suficiente relación con una profesión o figura arquetípica.</View_Type>
+        <ViewType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Estas tablas recogen una serie de armas, que utilizan ciertas profesiones tradicionales con gran maestría. Si lo deseas, puedes componer las tuyas propias, siempre que consideres que el grupo elegido guarda la suficiente relación con una profesión o figura arquetípica.</ViewType>
     </owl:NamedIndividual>
     
 

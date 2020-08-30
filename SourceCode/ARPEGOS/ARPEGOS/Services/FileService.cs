@@ -141,8 +141,7 @@ namespace ARPEGOS.Services
         /// <returns> Formatted Name </returns>
         public static string FormatName(string name)
         {
-            name = name.Replace("Per_", "").Replace("_Total","");
-            return ti.ToTitleCase(name.Replace("_", " "));
+            return ti.ToTitleCase(name);
         }
 
         /// <summary>
@@ -152,7 +151,7 @@ namespace ARPEGOS.Services
         /// <returns> Escaped Name </returns>
         public static string EscapedName(string name)
         {
-                return name.Replace(" ", "_");
+            return FormatName(name).Replace(" ", "_");
         }
 
         /// <summary>

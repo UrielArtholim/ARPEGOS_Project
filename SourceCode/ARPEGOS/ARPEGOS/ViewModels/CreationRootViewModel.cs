@@ -18,7 +18,7 @@ namespace ARPEGOS.ViewModels
         {
             var character = DependencyHelper.CurrentContext.CurrentCharacter;
             var game = DependencyHelper.CurrentContext.CurrentGame;
-            var rootStage = game.GetCreation_Scheme_RootClass();
+            var rootStage = game.GetCreationSchemeRootClass();
             Data = new ObservableCollection<Item>(character.GetIndividuals(rootStage));
         }
     }
