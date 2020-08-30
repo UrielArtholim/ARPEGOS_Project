@@ -177,7 +177,7 @@ namespace ARPEGOS.ViewModels
                     }
                     else
                         DependencyHelper.CurrentContext.CurrentCharacter = await OntologyService.LoadCharacter(item, DependencyHelper.CurrentContext.CurrentGame);
-                    await MainThread.InvokeOnMainThreadAsync(async() => await App.Navigation.PushAsync(new SkillView()));
+                    await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.PushAsync(new OptionsView()));
                     this.PreviousStatus = this.CurrentStatus;
                     this.CurrentStatus = SelectionStatus.Done;
                     this.Load(this.CurrentStatus);

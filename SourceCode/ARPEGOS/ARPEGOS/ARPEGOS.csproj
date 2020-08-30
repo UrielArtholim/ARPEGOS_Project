@@ -21,6 +21,8 @@
     <None Remove="Resources\Fonts\OldLondonAlternate.ttf" />
     <None Remove="Resources\Fonts\Olondona.otf" />
     <None Remove="Resources\Fonts\Olondon_.otf" />
+    <None Remove="Resources\Icons\Add.png" />
+    <None Remove="Resources\Icons\Delete.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -59,6 +61,8 @@
   <ItemGroup>
     <Resource Include="DefaultGames\Anima Beyond Fantasy\characters\Ctuchik.owl" />
     <Resource Include="Resources\Fonts\Olondona.otf" />
+    <Resource Include="Resources\Icons\Add.png" />
+    <Resource Include="Resources\Icons\Delete.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -111,16 +115,31 @@
     <EmbeddedResource Update="Controls\CustomCheckCell.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Update="Controls\CustomProgressBarView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Controls\CustomRadioCheck.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Controls\CustomSliderCell.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Update="Templates\SingleChoiceListTemplate.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Views\AddGameView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\CharacterInfoView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\CreationRootView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\CreationView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\OptionsView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\SelectVersionView.xaml">
