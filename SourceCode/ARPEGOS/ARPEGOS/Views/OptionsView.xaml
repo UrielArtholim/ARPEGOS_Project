@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ARPEGOS.Views.OptionsView"
+             Title="Selecciona una opción">
+    <ContentPage.Content>
+        <StackLayout  Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand">
+            <Frame VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand"
+               Margin="20,20,20,20"
+               BorderColor="{DynamicResource SeparatorColor}"
+               HeightRequest="100">
+                <Grid HorizontalOptions="FillAndExpand"
+                  VerticalOptions="Start"
+                  RowDefinitions="Auto"                   
+                  ColumnDefinitions="3*,1*">
+                    <Label Grid.Row="0"
+                       Grid.Column="0"
+                       VerticalOptions="Center"
+                       Text="Visualizar personaje"
+                       FontSize="Title"/>
+                    <Image Source="info.png" 
+                         Grid.Row="0"
+                         Grid.Column="1" 
+                         Aspect="AspectFit"/>
+                </Grid>
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding InfoCommand}"/>
+                </Frame.GestureRecognizers>
+            </Frame>
+            <Frame  VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand"
+                    Margin="20,20,20,20"
+                    BorderColor="{DynamicResource SeparatorColor}"
+                    HeightRequest="100">
+                <Grid
+                  HorizontalOptions="FillAndExpand"
+                  VerticalOptions="Start"
+                  RowDefinitions="Auto"                   
+                  ColumnDefinitions="3*,1*">
+                    <Label Grid.Row="0"
+                       Grid.Column="0"
+                       VerticalOptions="Center"
+                       Text="Calcular habilidad"
+                       FontSize="Title"/>
+                    <Image Source="skill.png" 
+                         Grid.Row="0"
+                         Grid.Column="1" 
+                         Aspect="AspectFit"/>
+                </Grid>
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding SkillCommand}"/>
+                </Frame.GestureRecognizers>
+            </Frame>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

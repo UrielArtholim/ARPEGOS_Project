@@ -10,16 +10,16 @@ using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace ARPEGOS.Views
+namespace ARPEGOS.ViewModels
 {
     public class SkillViewModel: BaseViewModel
     {
         private int skillValue; 
         private int totalValue;
-        private uint dice;
-        private string previousSkillSelected, skillSelected;
+        private int previousDice, dice;
+        private Item previousSkillSelected, skillSelected;
 
-        public uint Dice
+        public int Dice
         {
             get => dice;
             set => this.SetProperty(ref this.dice, value);
@@ -37,10 +37,15 @@ namespace ARPEGOS.Views
             set => this.SetProperty(ref this.totalValue, value);
         }
 
-        public string SkillSelected
+        public Item SkillSelected
         {
             get => skillSelected;
             set => this.SetProperty(ref this.skillSelected, value);
+        }
+
+        public string SkillSelectedName
+        {
+            get => skillSelected.Name;
         }
 
         public ICommand SelectSkillCommand { get; private set; }
@@ -51,18 +56,20 @@ namespace ARPEGOS.Views
             this.SelectSkillCommand = new Command(async() => await MainThread.InvokeOnMainThreadAsync(async() => await App.Navigation.PushAsync(new SkillListView())));
             this.CalculateSkillCommand = new Command(async () => 
             {
-                if(this.SkillSelected != null && this.previousSkillSelected != this.SkillSelected)
+                if(this.SkillSelected != null || this.previousSkillSelected != this.SkillSelected || this.previousDice != this.Dice)
                 {
                     this.previousSkillSelected = this.SkillSelected;
-                    this.SkillValue = await Task.Run(() => DependencyHelper.CurrentContext.CurrentCharacter.GetSkillValue(this.SkillSelected));
-                    this.TotalValue = this.TotalValue = this.SkillValue + Convert.ToInt32(this.Dice);
+                    this.SkillValue = await Task.Run(() => DependencyHelper.CurrentContext.CurrentCharacter.GetSkillValue(this.SkillSelected.Name));
+                    this.TotalValue= this.SkillValue + Convert.ToInt32(this.Dice);
+                    this.previousDice = this.Dice;
                 }
             });
 
-            this.previousSkillSelected = string.Empty;
-            this.SkillSelected = "No se ha seleccionado ninguna habilidad";
+            this.previousSkillSelected = new Item("");
+            this.SkillSelected = new Item("");
             this.SkillValue = 0;
             this.Dice = 0;
+            this.previousDice = 0;
         }      
 
     }

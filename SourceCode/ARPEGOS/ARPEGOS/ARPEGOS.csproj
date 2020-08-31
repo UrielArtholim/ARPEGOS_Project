@@ -13,10 +13,12 @@
 
   <ItemGroup>
     <None Remove="DefaultGames\Anima Beyond Fantasy\characters\Ctuchik.owl" />
-    <None Remove="DefaultGames\Anima Beyond Fantasy\characters\Glenn Radars.owl" />
+    <None Remove="DefaultGames\Anima Beyond Fantasy\characters\Test.owl" />
+    <None Remove="DefaultGames\Anima Beyond Fantasy\gamefiles\Core Exxet Safe.owl" />
     <None Remove="DefaultGames\Anima Beyond Fantasy\Nanatsu No Taizai.owl" />
     <None Remove="DefaultGames\Core Exxet.owl" />
     <None Remove="DefaultGames\Nanatsu No Taizai\gamefiles\Nanatsu No Taizai.owl" />
+    <None Remove="Models\Stage.cs~RFdcc0b.TMP" />
     <None Remove="Resources\Fonts\OldLondon.ttf" />
     <None Remove="Resources\Fonts\OldLondonAlternate.ttf" />
     <None Remove="Resources\Fonts\Olondona.otf" />
@@ -24,9 +26,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="DefaultGames\Anima Beyond Fantasy\characters\Glenn Radars.owl">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </EmbeddedResource>
+    <EmbeddedResource Include="DefaultGames\Anima Beyond Fantasy\characters\Test.owl" />
     <EmbeddedResource Include="DefaultGames\Anima Beyond Fantasy\gamefiles\Core Exxet.owl">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </EmbeddedResource>
@@ -41,7 +41,7 @@
   <ItemGroup>
     <PackageReference Include="Autofac" Version="5.2.0" />
     <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
-    <PackageReference Include="RDFSharp" Version="2.14.0" />
+    <PackageReference Include="RDFSharp" Version="2.15.0" />
     <PackageReference Include="SkiaSharp.Views.Forms" Version="2.80.1" />
     <PackageReference Include="Xam.Plugins.Forms.ImageCircle" Version="3.0.0.5" />
     <PackageReference Include="Xamarin.FFImageLoading" Version="2.4.11.982" />
@@ -117,10 +117,13 @@
     <EmbeddedResource Update="Views\AddGameView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Update="Views\CharacterInfoView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Views\CreationRootView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\CreationView.xaml">
+    <EmbeddedResource Update="Views\OptionsView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\SelectVersionView.xaml">
@@ -130,6 +133,9 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\SkillView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\StageView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\Templates\SingleChoiceView.xaml">

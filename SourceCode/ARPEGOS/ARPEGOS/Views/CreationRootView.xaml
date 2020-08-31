@@ -13,7 +13,9 @@
                             ItemsLayout="VerticalList">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
-                        <controls:CustomCheckCell/>
+                        <ViewCell>
+                            
+                        </ViewCell>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
             </CollectionView>

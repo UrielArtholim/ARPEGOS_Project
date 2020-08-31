@@ -1,4 +1,6 @@
-﻿using ARPEGOS.ViewModels;
+﻿using ARPEGOS.Helpers;
+using ARPEGOS.ViewModels;
+using Autofac;
 using System;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
@@ -16,7 +18,7 @@ namespace ARPEGOS.Views
         public SkillListView ()
         {
             InitializeComponent();
-            this.BindingContext = new SkillListViewModel();
+            this.BindingContext = DependencyHelper.Container.Resolve<SkillListViewModel>();
         }
     }
 }

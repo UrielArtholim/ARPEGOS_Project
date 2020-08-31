@@ -8,7 +8,7 @@ namespace ARPEGOS
     /// <summary>
     /// ItemGroup models a collection of items which belong to a group
     /// </summary>
-    public class Group : INotifyPropertyChanged
+    public class Group: INotifyPropertyChanged
     {
         #region Properties
         /// <summary>
@@ -50,7 +50,7 @@ namespace ARPEGOS
         /// </summary>
         /// <param name="groupTitle">Name of the group</param>
         /// <param name="expanded">State of expansion of the group</param>
-        public Group(string groupTitle, string description = "", dynamic groupList = null, bool expanded = false)
+        public Group (string groupTitle, dynamic groupList = null, string description = "", bool expanded = false)
         {
             Title = groupTitle;
             FormattedTitle = groupTitle.Replace('_', ' ').Trim();
@@ -82,36 +82,36 @@ namespace ARPEGOS
         /// Notify the change of a property to the handler
         /// </summary>
         /// <param name="propertyName"></param>
-        protected virtual void OnPropertyChanged(string propertyName)
+        protected virtual void OnPropertyChanged (string propertyName)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
-        public void ShowGroup(string tree = " ")
+        public void ShowGroup (string tree = " ")
         {
             Console.WriteLine(tree + "====[" + this.FormattedTitle + "]");
-            
+
             string nextElement = tree + "----";
 
-            int textcounter = ((this.FormattedTitle.Length / 2) + this.FormattedTitle.Length % 2)+4;
-            for(int i = ((this.FormattedTitle.Length / 2) + this.FormattedTitle.Length % 2); i > 0; --i)
+            int textcounter = ((this.FormattedTitle.Length / 2) + this.FormattedTitle.Length % 2) + 4;
+            for (int i = ((this.FormattedTitle.Length / 2) + this.FormattedTitle.Length % 2); i > 0; --i)
             {
                 nextElement += "-";
                 --textcounter;
             }
             nextElement += "|";
 
-            Console.WriteLine(nextElement +"\n" + nextElement);
+            Console.WriteLine(nextElement + "\n" + nextElement);
             foreach (var element in GroupList)
             {
                 Type elementType = element.GetType();
                 Type groupType = this.GetType();
-                if(elementType == groupType)
+                if (elementType == groupType)
                 {
-                    Group currentGroup = (Group)element;
+                    Group currentGroup = (Group) element;
                     currentGroup.ShowGroup(nextElement);
                 }
-                else 
+                else
                 {
                     Item currentItem = (Item) element;
                     currentItem.ShowItem(nextElement);

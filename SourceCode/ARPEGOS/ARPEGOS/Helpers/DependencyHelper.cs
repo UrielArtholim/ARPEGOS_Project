@@ -4,7 +4,6 @@
     using ARPEGOS.Services;
     using ARPEGOS.Services.Interfaces;
     using ARPEGOS.ViewModels;
-
     using Autofac;
 
     public class DependencyHelper
@@ -41,6 +40,11 @@
         {
             builder.RegisterType<MainViewModel>().SingleInstance();
             builder.RegisterType<SelectVersionViewModel>().SingleInstance();
+            builder.RegisterType<OptionsViewModel>().SingleInstance();
+            builder.RegisterType<SkillViewModel>().SingleInstance();
+            builder.RegisterType<SkillListViewModel>().SingleInstance();
+            builder.RegisterType<CreationRootViewModel>().SingleInstance();
+            builder.RegisterType<StageViewModel>().SingleInstance();
         }
     }
 }

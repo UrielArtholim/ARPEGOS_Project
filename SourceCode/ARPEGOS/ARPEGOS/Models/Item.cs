@@ -32,13 +32,13 @@ namespace ARPEGOS
         #endregion
 
         #region Constructor
-        public Item(string name, string Class = "Classname", string description = "")
+        public Item(string name, string description = "This is a description", string Class = "Classname")
         {
             Name = name;
             this.Class = Class;
             if (name.Contains(Class))
                 name = name.Replace(Class,"").Trim();
-            FormattedName = name.Replace('_',' ').Trim();
+            FormattedName = name.Replace("Per_","").Replace("_Total","").Replace('_',' ').Trim();
             Description = description;
         }
         #endregion

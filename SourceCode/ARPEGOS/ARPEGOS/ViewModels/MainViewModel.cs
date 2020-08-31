@@ -103,7 +103,10 @@ namespace ARPEGOS.ViewModels
                     case SelectionStatus.SelectingCharacter:
                         var item = await this.dialogService.DisplayTextPrompt("Crear nuevo personaje", "Introduce el nombre:", "Crear");
                         if (!string.IsNullOrWhiteSpace(item))
+                        {
                             DependencyHelper.CurrentContext.CurrentCharacter = await OntologyService.CreateCharacter(item, DependencyHelper.CurrentContext.CurrentGame);
+                            await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.PushAsync(new NavigationPage(new CreationRootView())));
+                        }
                         this.Load(this.CurrentStatus);
                         break;
                 }
@@ -177,7 +180,7 @@ namespace ARPEGOS.ViewModels
                     }
                     else
                         DependencyHelper.CurrentContext.CurrentCharacter = await OntologyService.LoadCharacter(item, DependencyHelper.CurrentContext.CurrentGame);
-                    await MainThread.InvokeOnMainThreadAsync(async() => await App.Navigation.PushAsync(new SkillView()));
+                    await MainThread.InvokeOnMainThreadAsync(async() => await App.Navigation.PushAsync(new OptionsView()));
                     this.PreviousStatus = this.CurrentStatus;
                     this.CurrentStatus = SelectionStatus.Done;
                     this.Load(this.CurrentStatus);

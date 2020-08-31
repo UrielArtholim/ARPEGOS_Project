@@ -19,12 +19,10 @@ namespace ARPEGOS.Services
         /// </summary>
         /// <param name="propertyName"> Name of the property given </param>
         /// <returns> String with the hierarchy of the property given </returns>
-        public string GetPropertyVisualizationPosition(string propertyName)
+        public string GetPropertyVisualizationPosition (string propertyName)
         {
-            var propertyURI = $"{this.Context}{propertyName}";
-            var CurrentProperty = this.Ontology.Model.PropertyModel.SelectProperty(propertyURI);
-            var annotationPropertyURI = $"{this.Context}Visualization";
-            var AnnotationProperty = this.Ontology.Model.PropertyModel.SelectProperty(annotationPropertyURI);
+            var CurrentProperty = this.Ontology.Model.PropertyModel.SelectProperty($"{this.Context}{propertyName}");
+            var AnnotationProperty = this.Ontology.Model.PropertyModel.SelectProperty($"{this.Context}Visualization");
             var CharacterVisualizationAnnotations = this.Ontology.Model.PropertyModel.Annotations.CustomAnnotations.SelectEntriesByPredicate(AnnotationProperty);
             var CharacterVisualizationAnnotation = CharacterVisualizationAnnotations.SelectEntriesBySubject(CurrentProperty).Single();
             return CharacterVisualizationAnnotation.TaxonomyObject.ToString().Split('^').First();
@@ -34,16 +32,17 @@ namespace ARPEGOS.Services
         /// Returns all the properties of the current character 
         /// </summary>
         /// <returns> Dictionary with the properties of the current character and its values</returns>
-        public Dictionary<string,string> GetCharacterProperties()
+        public Dictionary<string, string> GetCharacterProperties ()
         {
             var CharacterProperties = new Dictionary<string, string>();
-            var CharacterFact = this.Ontology.Data.SelectFact($"{this.Context}{FileService.EscapedName(this.Name)}");
-            var CharacterAssertions = this.Ontology.Data.Relations.Assertions.SelectEntriesBySubject(CharacterFact); 
-            foreach(var assertion in CharacterAssertions)
+            var characterName = FileService.EscapedName(this.Name);
+            var CharacterFact = this.Ontology.Data.SelectFact($"{this.Context}{characterName}");
+            var CharacterAssertions = this.Ontology.Data.Relations.Assertions.SelectEntriesBySubject(CharacterFact);
+            foreach (var assertion in CharacterAssertions)
             {
                 var property = assertion.TaxonomyPredicate.ToString().Split('#').Last();
                 var value = assertion.TaxonomyObject.ToString().Split('#').Last();
-                if(!CharacterProperties.ContainsKey(property))
+                if (!CharacterProperties.ContainsKey(property))
                     CharacterProperties.Add(property, value);
             }
 
@@ -53,89 +52,74 @@ namespace ARPEGOS.Services
         /// <summary>
         /// Returns the properties that represent the skills of the character
         /// </summary>
-        /// <returns> Set of string which contains the names of the skills</returns>
-        public IEnumerable<string> GetCharacterSkills()
+        /// <returns> Set of string which contains the names of the skills </returns>
+        public IEnumerable<Item> GetCharacterSkills ()
         {
-            var skillObjectClass = "Habilidad";
-            var skillDataClass = "Personaje_Habilidad";
             var characterProperties = GetCharacterProperties();
-            var skills = new ObservableCollection<string>();
-            foreach(var property in characterProperties)
+            var skills = new ObservableCollection<Item>();
+            var AnnotationType = "SkillProperty";
+            foreach (var item in characterProperties)
             {
-                if(this.CheckIndividual(property.Value, true))
+                var skillName = string.Empty;
+                var skillDescription = string.Empty;
+                var property = this.Ontology.Model.PropertyModel.SelectProperty($"{this.Context}{item.Key}");
+                var annotationProperty = this.Ontology.Model.PropertyModel.SelectProperty($"{this.Context}{AnnotationType}");
+                var propertyTaxonomy = this.Ontology.Model.PropertyModel.Annotations.CustomAnnotations.SelectEntriesByPredicate(annotationProperty);
+                var propertySkillTaxonomy = propertyTaxonomy.SelectEntriesBySubject(property);
+                if (propertySkillTaxonomy.EntriesCount > 0)
                 {
-                    var parents = this.GetParentClasses(property.Value, true).Split(':').ToList();
-                    if (parents.Any(p => p.Contains(skillObjectClass)))
-                        skills.Add(property.Value);
-                }
-                else
-                {
-                    if(this.GetTopParentProperty(property.Key)==skillDataClass)
+                    if (this.CheckObjectProperty(item.Key) == true)
                     {
-                        var formatedName = FileService.FormatName(property.Key.Split("Per_").Last());
-                        skills.Add(property.Key);
-                    }                    
+                        skillName = item.Value;
+                        var skillObjectFact = this.Ontology.Data.SelectFact($"{this.Context}{skillName}");
+                        skillDescription = this.Ontology.Data.Annotations.Comment.SelectEntriesBySubject(skillObjectFact).Single().TaxonomyObject.ToString().Split('^').First();
+                        skills.Add(new Item(skillName, skillDescription));
+                    }
+                    else
+                    {
+                        skillName = item.Key.Replace("Per_","").Replace("_Total","");
+                        var skillObjectFact = this.Ontology.Data.SelectFact($"{this.Context}{skillName}");
+                        
+                        skillDescription = this.Ontology.Data.Annotations.Comment.SelectEntriesBySubject(skillObjectFact).Single().TaxonomyObject.ToString().Split('^').First();
+                        skills.Add(new Item(skillName, skillDescription));
+                    }
                 }
             }
             return skills;
         }
 
-        /// <summary>
-        /// Returns the top parent of the property given
-        /// </summary>
-        /// <param name="propertyName"> String that contains the name of the property given </param>
-        /// <returns> Name of the top parent property </returns>
-        public string GetTopParentProperty(string propertyName)
-        {
-            var parentName = string.Empty;
-            var propertyURI = $"{this.Context}{propertyName}";
-            var currentProperty = this.Ontology.Model.PropertyModel.SelectProperty(propertyURI);
-            var hasParent = true;
-            while (hasParent == true)
-            {
-                var parentTaxonomy = this.Ontology.Model.PropertyModel.Relations.SubPropertyOf.SelectEntriesBySubject(currentProperty);
-                if(parentTaxonomy == null)
-                {
-                    hasParent = false;
-                    parentName = currentProperty.ToString().Split('#').Last();
-                }
-                else
-                    currentProperty = parentTaxonomy.Single().TaxonomyObject as RDFOntologyProperty;
-            }
-            return parentName;
-        }
 
-        public int GetSkillValue(string skillName)
+        public int GetSkillValue (string skillName)
         {
+            var skillPropertyName = $"Per_{skillName}_Total";
+            if (this.CheckDatatypeProperty(skillPropertyName) == true)
+                skillName = skillPropertyName;
+
             int skillValue = 0;
-            var characterURI = $"{this.Context}{FileService.EscapedName(this.Name)}";
-            var character = this.Ontology.Data.SelectFact(characterURI);
-            var propertyURI = $"{this.Context}{skillName}";
-            var currentProperty = this.Ontology.Model.PropertyModel.SelectProperty(propertyURI);
-            if(this.CheckIndividual(skillName) == true)
+            var character = this.Ontology.Data.SelectFact($"{this.Context}{FileService.EscapedName(this.Name)}");
+            var currentProperty = this.Ontology.Model.PropertyModel.SelectProperty($"{this.Context}{skillName}");
+            if (this.CheckIndividual(skillName) == true)
             {
                 var annotationPropertyName = "SkillValue";
-                var annotationPropertyURI = $"{this.Context}{annotationPropertyName}";
-                var annotationProperty = this.Ontology.Model.PropertyModel.SelectProperty(annotationPropertyURI);
+                var annotationProperty = this.Ontology.Model.PropertyModel.SelectProperty($"{this.Context}{annotationPropertyName}");
                 var skillValueAssertionFound = false;
-                var parentClassURI = $"{this.Context}{this.GetElementClass(skillName, true)}";
-                var parentClass = this.Ontology.Model.ClassModel.SelectClass(parentClassURI);
+                var parentClass = this.Ontology.Model.ClassModel.SelectClass($"{this.Context}{this.GetElementClass(skillName, true)}");
                 var annotationValue = string.Empty;
 
                 var skillFact = this.Ontology.Data.SelectFact($"{this.Context}{skillName}");
                 var skillValueAnnotationTaxonomy = this.Ontology.Data.Annotations.CustomAnnotations.SelectEntriesBySubject(character).SelectEntriesByPredicate(annotationProperty);
-                if(skillValueAnnotationTaxonomy != null)
+                if (skillValueAnnotationTaxonomy != null)
                 {
                     skillValueAssertionFound = true;
                     annotationValue = skillValueAnnotationTaxonomy.Single().TaxonomyObject.ToString().Split('^').First();
                 }
 
-                while(skillValueAssertionFound == false)
+                while (skillValueAssertionFound == false)
                 {
                     skillValueAnnotationTaxonomy = this.Ontology.Model.ClassModel.Annotations.CustomAnnotations.SelectEntriesBySubject(parentClass);
-                    foreach(var assertion in skillValueAnnotationTaxonomy)
+                    foreach (var assertion in skillValueAnnotationTaxonomy)
                     {
-                        if(assertion.TaxonomyPredicate.ToString().Contains(annotationPropertyName))
+                        if (assertion.TaxonomyPredicate.ToString().Contains(annotationPropertyName))
                         {
                             annotationValue = assertion.TaxonomyObject.ToString().Split('^').First();
                             skillValueAssertionFound = true;
@@ -168,12 +152,12 @@ namespace ARPEGOS.Services
                     }
                     else if ((Regex.IsMatch(element, @"\d") && (!Regex.IsMatch(element, @"\D"))))
                     {
-                        if(index == 0)
+                        if (index == 0)
                             skillValue = Convert.ToInt32(element);
                     }
                     else
                     {
-                        if(index == 0)
+                        if (index == 0)
                         {
                             var elementProperty = this.Ontology.Model.PropertyModel.SelectProperty($"{this.Context}{element}");
                             var elementPropertyValue = this.Ontology.Data.Relations.Assertions.SelectEntriesByPredicate(elementProperty).Single().TaxonomyObject.ToString().Split('^').First();
@@ -182,7 +166,7 @@ namespace ARPEGOS.Services
                     }
                 }
             }
-            else if(this.CheckDatatypeProperty(skillName) == true)
+            else if (this.CheckDatatypeProperty(skillName) == true)
             {
                 var assertion = this.Ontology.Data.Relations.Assertions.SelectEntriesBySubject(character).SelectEntriesByPredicate(currentProperty).Single();
                 skillValue = Convert.ToInt32(assertion.TaxonomyObject.ToString().Split('^').First());
@@ -196,11 +180,11 @@ namespace ARPEGOS.Services
         /// <param name="elementName">Name of the element given</param>
         /// <param name="applyOnCharacter">Search inside character</param>
         /// <returns></returns>
-        public string GetElementClass (string elementName, bool applyOnCharacter = false)
+        public Item GetElementClass (string elementName, bool applyOnCharacter = false)
         {
             RDFOntology CurrentOntology;
             string CurrentContext;
-            if(applyOnCharacter)
+            if (applyOnCharacter)
             {
                 CurrentOntology = this.Ontology;
                 CurrentContext = this.Context;
@@ -213,7 +197,10 @@ namespace ARPEGOS.Services
 
             var DataModel = CurrentOntology.Data;
             var elementClassType = DataModel.Relations.ClassType.Where(entry => entry.TaxonomySubject.ToString().Contains(elementName)).First();
-            var elementClass = elementClassType.TaxonomyObject.ToString().Split('#').Last();
+            var elementClassName = elementClassType.TaxonomyObject.ToString().Split('#').Last();
+            var elementClassResource = this.Ontology.Model.ClassModel.SelectClass($"{this.Context}{elementClassName}");
+            var elementClassDescription = this.Ontology.Model.ClassModel.Annotations.Comment.SelectEntriesBySubject(elementClassResource).Single().TaxonomyObject.ToString().Split('^').First();
+            var elementClass = new Item(elementClassName, elementClassDescription);
             return elementClass;
         }
 
@@ -239,9 +226,9 @@ namespace ARPEGOS.Services
             }
 
             var DataModel = CurrentOntology.Data;
-            var elementCommentAnnotation = DataModel.Annotations.Comment.Where(entry => entry.TaxonomySubject.ToString().Contains(elementName)).First();
+            var elementCommentAnnotation = DataModel.Annotations.Comment.Where(entry => entry.TaxonomySubject.ToString().Contains(elementName)).Single();
             if (elementCommentAnnotation != null)
-                elementDesc = elementCommentAnnotation.TaxonomyObject.ToString().Replace("^^http://www.w3.org/2001/XMLSchema#string", "");
+                elementDesc = elementCommentAnnotation.TaxonomyObject.ToString().Split('^').First();
             return elementDesc;
         }
 
@@ -273,11 +260,12 @@ namespace ARPEGOS.Services
             var classAssertions = DataModel.Relations.ClassType.SelectEntriesByObject(currentClass);
             foreach (var assertion in classAssertions)
             {
-                    var individual = assertion.TaxonomySubject;
-                    var individualName = individual.ToString().Substring(individual.ToString().LastIndexOf('#') + 1);
-                    individuals.Add(new Item(individualName));
+                var individual = assertion.TaxonomySubject;
+                var individualName = individual.ToString().Substring(individual.ToString().LastIndexOf('#') + 1);
+                var individualDescription = CurrentOntology.Data.Annotations.Comment.SelectEntriesBySubject(individual).Single().TaxonomyObject.ToString().Split('^').First();
+                individuals.Add(new Item(individualName, individualDescription));
             }
-            
+
             return individuals;
         }
 
@@ -343,7 +331,7 @@ namespace ARPEGOS.Services
 
             var ElementClass = CurrentOntology.Model.ClassModel.SelectClass($"{CurrentContext}{ElementName}");
             var ElementClassAnnotations = CurrentOntology.Data.Annotations.CustomAnnotations.SelectEntriesBySubject(ElementClass);
-            var ElementGeneralCostAnnotation = ElementClassAnnotations.Where(entry => entry.TaxonomyPredicate.ToString().Contains("GeneralCostDefinedBy")).Single();
+            var ElementGeneralCostAnnotation = ElementClassAnnotations.Where(entry => entry.TaxonomyPredicate.ToString().Contains("General_Cost_Defined_By")).Single();
             var generalCostAnnotationFound = (ElementGeneralCostAnnotation != null);
 
             if (generalCostAnnotationFound)
@@ -389,7 +377,7 @@ namespace ARPEGOS.Services
                                 currentResultPropertiesCount = 0;
                         }
                         else if (propertyWords.Count() == ElementWords.Count() + 2)
-                        { 
+                        {
                             if (!ElementWords.All(word => propertyName.Contains(word)) || !AvailableWords.Any(word => propertyName.Contains(word)) || !propertyName.Contains("Total"))
                                 currentResultPropertiesCount = 0;
                         }
@@ -719,9 +707,9 @@ namespace ARPEGOS.Services
             foreach (var substage in Substages)
             {
                 var SubstageClass = CurrentOntology.Model.ClassModel.SelectClass($"{CurrentContext}{substage.Title}");
-                var SubstageOrderEntry = CurrentOntology.Model.ClassModel.Annotations.CustomAnnotations.SelectEntriesBySubject(SubstageClass).Where(entry => entry.TaxonomyPredicate.ToString().Contains("SubstageOrder")).Single();
-                if (SubstageOrderEntry != null)
-                    SubstagesAndOrder.Add(Convert.ToInt32(SubstageOrderEntry.TaxonomyObject.ToString().Split('^').First()), substage.Title);
+                var Substage_OrderEntry = CurrentOntology.Model.ClassModel.Annotations.CustomAnnotations.SelectEntriesBySubject(SubstageClass).Where(entry => entry.TaxonomyPredicate.ToString().Contains("Substage_Order")).Single();
+                if (Substage_OrderEntry != null)
+                    SubstagesAndOrder.Add(Convert.ToInt32(Substage_OrderEntry.TaxonomyObject.ToString().Split('^').First()), substage.Title);
             }
 
             return new SortedList<int, string>(SubstagesAndOrder);
@@ -1129,10 +1117,10 @@ namespace ARPEGOS.Services
                                                                 var classAnnotations = CurrentOntology.Data.Annotations.CustomAnnotations.Where(entry => entry.TaxonomySubject == ItemClass);
                                                                 if (classAnnotations.Count() > 0)
                                                                 {
-                                                                    var ValuedListInfoAnnotations = classAnnotations.Where(entry => entry.TaxonomyPredicate.ToString().Contains("ValuedListInfo"));
-                                                                    if (ValuedListInfoAnnotations.Count() > 0)
+                                                                    var Valued_List_InfoAnnotations = classAnnotations.Where(entry => entry.TaxonomyPredicate.ToString().Contains("Valued_List_Info"));
+                                                                    if (Valued_List_InfoAnnotations.Count() > 0)
                                                                     {
-                                                                        itemClassDescription = ValuedListInfoAnnotations.Single().TaxonomyObject.ToString().Split('^').First();
+                                                                        itemClassDescription = Valued_List_InfoAnnotations.Single().TaxonomyObject.ToString().Split('^').First();
                                                                         descriptionFound = true;
                                                                     }
                                                                 }
@@ -1188,7 +1176,7 @@ namespace ARPEGOS.Services
                         else
                         {
                             RDFOntologyDatatypeProperty predicate;
-                            var characterClassName = GetElementClass(this.Name, true);
+                            var characterClassName = GetElementClass(this.Name, true).Name;
                             var nextElementFirstWord = NextElement.Split('_').ToList().First();
                             if (!characterClassName.Contains(nextElementFirstWord))
                             {
@@ -1226,7 +1214,7 @@ namespace ARPEGOS.Services
 
                             var nextValueDigits = nextValueString.Split('^').First();
                             if (!nextValueString.Contains("float"))
-                            {                                    
+                            {
                                 nextValueDigits = nextValueString.Split(',').First();
                                 nextValue = Convert.ToSingle(nextValueDigits);
                             }
@@ -1317,7 +1305,7 @@ namespace ARPEGOS.Services
 
                         var ItemClassName = string.Empty;
                         if (itemName != null)
-                            ItemClassName = GetElementClass(itemName, applyOnCharacter);
+                            ItemClassName = GetElementClass(itemName, applyOnCharacter).Name;
                         var elementFirstWord = element.Split('_').ToList().First();
 
                         var CharacterFact = this.Ontology.Data.SelectFact($"{this.Context}{FileService.EscapedName(this.Name)}");
@@ -1438,7 +1426,7 @@ namespace ARPEGOS.Services
                             currentPropertyName = nextProperty;
                             var DatatypePredicate = this.Ontology.Model.PropertyModel.SelectProperty($"{this.Context}{nextProperty}") as RDFOntologyDatatypeProperty;
 
-                            var characterClassName = GetElementClass(this.Name, true);
+                            var characterClassName = GetElementClass(this.Name, true).Name;
                             var nextPropertyFirstWord = nextProperty.Split('_').ToList().First();
                             if (characterClassName.Contains(nextPropertyFirstWord))
                                 CharacterFact = this.Ontology.Data.SelectFact($"{this.Context}{FileService.EscapedName(this.Name)}");
@@ -1510,7 +1498,7 @@ namespace ARPEGOS.Services
                         if (CheckDatatypeProperty(currentPropertyName, false))
                         {
                             RDFOntologyDatatypeProperty currentProperty;
-                            var characterClassName = GetElementClass(this.Name, true);
+                            var characterClassName = GetElementClass(this.Name, true).Name;
                             var nextElementFirstWord = currentPropertyName.Split('_').ToList().First();
                             if (characterClassName.Contains(nextElementFirstWord))
                                 SubjectFact = CharacterFact;

@@ -253,7 +253,7 @@ namespace ARPEGOS.Services
 
             var stageClass = CurrentOntology.Model.ClassModel.SelectClass($"{CurrentContext}{stage}");
             var stageAnnotations = CurrentOntology.Model.ClassModel.Annotations.CustomAnnotations.SelectEntriesBySubject(stageClass);
-            var stageDefinitionAnnotation = stageAnnotations.Single(entry => entry.TaxonomyPredicate.ToString().Contains("ValuedListInfo"));
+            var stageDefinitionAnnotation = stageAnnotations.Single(entry => entry.TaxonomyPredicate.ToString().Contains("Valued_List_Info"));
             if (stageDefinitionAnnotation != null)
                 info = stageDefinitionAnnotation.TaxonomyObject.ToString().Split('^').First();
             else
@@ -282,10 +282,10 @@ namespace ARPEGOS.Services
         /// <param name="GeneralLimitValue">Value of the general limit</param>
         /// <param name="PartialLimitValue">Value of the partial limit</param>
         /// <returns></returns>
-        public List<string> CheckAvailableOptions(string stage, bool hasGeneralLimitValue, float? generalLimitValue, float? partialLimitValue)
+        public List<string> CheckAvailableOptions (string stage, bool hasGeneralLimitValue, float? generalLimitValue, float? partialLimitValue)
         {
             var costWords = new List<string> { "Coste", "Cost", "Coût" };
-            var requirementWords = new List<string> {"Requisito", "Requirement", "Requisite", "Prérequis" };
+            var requirementWords = new List<string> { "Requisito", "Requirement", "Requisite", "Prérequis" };
             var availableOptions = new List<string>();
             var stageGroup = new Group(stage);
             foreach (var item in stageGroup.GroupList)
@@ -306,7 +306,7 @@ namespace ARPEGOS.Services
                             {
                                 var objectRequirementNameList = new List<string>();
                                 var objectRequirementNameDictionary = new Dictionary<string, bool>();
-                                datatypeRequirementName = entry.TaxonomyPredicate.ToString().Split('#').Last();                                
+                                datatypeRequirementName = entry.TaxonomyPredicate.ToString().Split('#').Last();
                                 if (requirementsChecked.Any(req => req == datatypeRequirementName))
                                     continue;
                                 requirementsChecked.Add(datatypeRequirementName);
@@ -430,8 +430,8 @@ namespace ARPEGOS.Services
                                                             var datatypePropertyFirstWord = datatypeProperty.ToString().Split('#').Last().Split('_').FirstOrDefault();
                                                             itemCostWords.Insert(0, datatypePropertyFirstWord);
                                                             characterDatatatypePropertyFound = true;
-                                                        }                                                        
-                                                    }                                                        
+                                                        }
+                                                    }
                                                 }
                                             }
                                             ++index;
@@ -461,7 +461,7 @@ namespace ARPEGOS.Services
                                     }
                                     else
                                     {
-                                        if (generalLimitValue >= costValue && partialLimitValue >= costValue) 
+                                        if (generalLimitValue >= costValue && partialLimitValue >= costValue)
                                             availableOptions.Add(item.Name);
                                     }
                                 }
@@ -469,9 +469,9 @@ namespace ARPEGOS.Services
                                 {
                                     if (generalLimitValue >= costValue)
                                         availableOptions.Add(item.Name);
-                                }                              
+                                }
                             }
-                        }                        
+                        }
                     }
                 }
             }

@@ -17,6 +17,7 @@ namespace ARPEGOS.ViewModels
 {
     public class SkillListViewModel: BaseViewModel
     {
+        private ObservableCollection<Item> Items;
         private ObservableCollection<string> data;
         public ObservableCollection<string> Data
         {
@@ -30,20 +31,23 @@ namespace ARPEGOS.ViewModels
         public SkillListViewModel()
         {
             var character = DependencyHelper.CurrentContext.CurrentCharacter;
-            Data = new ObservableCollection<string>(character.GetCharacterSkills());
+            this.Data = new ObservableCollection<string>();
+            this.Items = new ObservableCollection<Item>(character.GetCharacterSkills());
+            foreach (var item in this.Items)
+                this.Data.Add(item.FormattedName);
 
-            this.SelectItemCommand = new Command<string>(item =>  
+            this.SelectItemCommand = new Command<string>(selected =>  
             {
+                var skillFormattedName = selected;
+                var itemSelected = Items.Where(item => item.FormattedName == selected).Single();
                 this.IsBusy = true;
                 var skillViewContext = App.Navigation.NavigationStack[App.Navigation.NavigationStack.Count - 2].BindingContext as SkillViewModel;
-                skillViewContext.SkillSelected = item;
+                skillViewContext.SkillSelected = itemSelected;
                 this.IsBusy = false;
                 ReturnCommand.Execute(null);
             });
 
-            this.ReturnCommand = new Command(async () => await MainThread.InvokeOnMainThreadAsync(async()=> await App.Navigation.PopAsync()));
-
-            
+            this.ReturnCommand = new Command(async () => await MainThread.InvokeOnMainThreadAsync(async()=> await App.Navigation.PopAsync()));   
         }
     }
 }
