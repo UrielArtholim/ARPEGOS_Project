@@ -13,12 +13,12 @@ using Xamarin.Forms.Xaml;
 namespace ARPEGOS.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class SkillView: ContentPage
+    public partial class StageView: ContentPage
     {
-        public SkillView ()
+        public StageView (int stageCounter)
         {
             InitializeComponent();
-            this.BindingContext = DependencyHelper.Container.Resolve<SkillViewModel>();
+            this.BindingContext = DependencyHelper.Container.Resolve<StageViewModel>(new NamedParameter("counter", stageCounter));
         }
     }
 }

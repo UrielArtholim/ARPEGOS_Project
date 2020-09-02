@@ -1,5 +1,6 @@
 ﻿using ARPEGOS.Helpers;
 using ARPEGOS.ViewModels.Base;
+using ARPEGOS.Views;
 using System;
 using System.Collections.Generic;
 using System.Linq;

@@ -1,4 +1,5 @@
-﻿using RDFSharp.Model;
+﻿using ARPEGOS.Helpers;
+using RDFSharp.Model;
 using RDFSharp.Semantics.OWL;
 using System;
 using System.Collections.Generic;
@@ -13,11 +14,15 @@ namespace ARPEGOS.Services
         /// Returns the root class of the creation scheme of the active game
         /// </summary>
         /// <returns></returns>
-        public string GetCreationSchemeRootClass ()
+        public string GetCreationSchemeRootClass()
         {
-            var rootProperty = new RDFOntologyAnnotationProperty(new RDFResource($"{this.Context}{"CreationSchemeRoot"}"));
-            var creationSchemeRootUri = this.Ontology.Model.ClassModel.Annotations.CustomAnnotations.SelectEntriesByPredicate(rootProperty).Single().TaxonomySubject.ToString();
-            return creationSchemeRootUri.Split('#').Last();
+            string rootClassName = string.Empty;
+            var game = DependencyHelper.CurrentContext.CurrentGame;
+            var ontology_class_annotations = game.Ontology.Model.ClassModel.Annotations.CustomAnnotations;
+            var entries = ontology_class_annotations.Where(entry => entry.TaxonomyPredicate.ToString().Contains("CreationSchemeRoot"));
+            if (entries.Count() > 0)
+                rootClassName = entries.Single().TaxonomySubject.ToString().Split('#').Last();
+            return rootClassName;
         }
     }
 }
