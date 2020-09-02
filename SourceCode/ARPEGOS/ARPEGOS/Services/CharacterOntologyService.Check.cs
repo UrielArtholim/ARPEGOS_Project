@@ -78,14 +78,17 @@ namespace ARPEGOS.Services
         /// </summary>
         /// <param name="name">Name of the object property</param>
         /// <returns></returns>
-        public bool CheckObjectProperty (string name, bool applyOnCharacter = true)
+        public bool CheckObjectProperty (string elementString, bool applyOnCharacter = true)
         {
             RDFOntology CurrentOntology;
             string CurrentContext;
+            string currentElementString = elementString;
+            var currentElementShortName = elementString.Split('#').Last();
             if (applyOnCharacter)
             {
                 CurrentOntology = this.Ontology;
                 CurrentContext = this.Context;
+                currentElementString = $"{this.Context}{currentElementShortName}";
             }
             else
             {
@@ -93,10 +96,9 @@ namespace ARPEGOS.Services
                 CurrentContext = DependencyHelper.CurrentContext.CurrentGame.Context;
             }
 
-            var escapedName = FileService.EscapedName(name);
             var exists = false;
             var propertyModel = CurrentOntology.Model.PropertyModel;
-            var property = propertyModel.SelectProperty($"{CurrentContext}{escapedName}");
+            var property = propertyModel.SelectProperty(elementString);
 
             if (property != null)
             {
@@ -104,7 +106,7 @@ namespace ARPEGOS.Services
                 while (objectEnumerator.MoveNext())
                 {
                     // performance doesn't change drastically from lastindexof + substring, and with split is more readable
-                    if (objectEnumerator.Current?.ToString().Split('#').Last() == escapedName)
+                    if (objectEnumerator.Current?.ToString().Split('#').Last() == currentElementShortName)
                     {
                         exists = true;
                         break;

@@ -4,6 +4,7 @@ using System.ComponentModel;
 namespace ARPEGOS
 {
     using System.Collections.ObjectModel;
+    using System.Linq;
 
     /// <summary>
     /// ItemGroup models a collection of items which belong to a group
@@ -17,7 +18,12 @@ namespace ARPEGOS
         private bool expanded;
 
         /// <summary>
-        /// Name of the group
+        /// String of the group
+        /// </summary>
+        public string GroupString { get; internal set; }
+        
+        /// <summary>
+        /// Short name of the group
         /// </summary>
         public string Title { get; internal set; }
 
@@ -50,10 +56,11 @@ namespace ARPEGOS
         /// </summary>
         /// <param name="groupTitle">Name of the group</param>
         /// <param name="expanded">State of expansion of the group</param>
-        public Group (string groupTitle, dynamic groupList = null, string description = "", bool expanded = false)
+        public Group (string groupString, dynamic groupList = null, string description = "", bool expanded = false)
         {
-            Title = groupTitle;
-            FormattedTitle = groupTitle.Replace('_', ' ').Trim();
+            GroupString = groupString;
+            Title = groupString.Split('#').Last();
+            FormattedTitle = Title.Replace('_', ' ').Trim();
             Expanded = expanded;
             Description = description;
             GroupList = groupList;

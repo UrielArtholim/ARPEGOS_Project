@@ -21,7 +21,7 @@ namespace ARPEGOS.Services
             var ontology_class_annotations = game.Ontology.Model.ClassModel.Annotations.CustomAnnotations;
             var entries = ontology_class_annotations.Where(entry => entry.TaxonomyPredicate.ToString().Contains("CreationSchemeRoot"));
             if (entries.Count() > 0)
-                rootClassName = entries.Single().TaxonomySubject.ToString().Split('#').Last();
+                rootClassName = entries.Single().TaxonomySubject.ToString();
             return rootClassName;
         }
     }

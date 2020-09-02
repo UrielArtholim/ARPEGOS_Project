@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace ARPEGOS
@@ -10,10 +11,17 @@ namespace ARPEGOS
     public class Item 
     {
         #region Properties
+        
         /// <summary>
-        /// Name of the element
+        /// Full name of the element
         /// </summary>
-        public string Name { get; internal set; }
+        public string FullName { get; internal set; }
+
+        /// <summary>
+        /// Short name of the element
+        /// </summary>
+        public string ShortName { get; internal set; }
+
 
         /// <summary>
         /// Name of the element formatted for UI
@@ -34,11 +42,13 @@ namespace ARPEGOS
         #region Constructor
         public Item(string name, string description = "This is a description", string Class = "Classname")
         {
-            Name = name;
+            FullName = name;
+            ShortName = name.Split('#').Last();
             this.Class = Class;
-            if (name.Contains(Class))
-                name = name.Replace(Class,"").Trim();
-            FormattedName = name.Replace("Per_","").Replace("_Total","").Replace('_',' ').Trim();
+            if (ShortName.Contains(Class))
+                if (!ShortName.Contains("_de_"))
+                    ShortName = name.Replace(Class,"").Trim();
+            FormattedName = ShortName.Replace("Per_","").Replace("_Total","").Replace('_',' ').Trim();
             Description = description;
         }
         #endregion
