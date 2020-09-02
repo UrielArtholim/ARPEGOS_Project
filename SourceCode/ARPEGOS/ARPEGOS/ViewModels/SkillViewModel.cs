@@ -46,7 +46,7 @@ namespace ARPEGOS.ViewModels
 
         public string SkillSelectedName
         {
-            get => skillSelected.Name;
+            get => skillSelected.FullName;
         }
 
         public ICommand SelectSkillCommand { get; private set; }
@@ -60,7 +60,7 @@ namespace ARPEGOS.ViewModels
                 if(this.SkillSelected != null || this.previousSkillSelected != this.SkillSelected || this.previousDice != this.Dice)
                 {
                     this.previousSkillSelected = this.SkillSelected;
-                    this.SkillValue = await Task.Run(() => DependencyHelper.CurrentContext.CurrentCharacter.GetSkillValue(this.SkillSelected.Name));
+                    this.SkillValue = await Task.Run(() => DependencyHelper.CurrentContext.CurrentCharacter.GetSkillValue(this.SkillSelected.FullName));
                     this.TotalValue= this.SkillValue + Convert.ToInt32(this.Dice);
                     this.previousDice = this.Dice;
                 }

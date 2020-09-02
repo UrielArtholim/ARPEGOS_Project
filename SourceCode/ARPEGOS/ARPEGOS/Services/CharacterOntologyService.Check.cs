@@ -35,7 +35,7 @@ namespace ARPEGOS.Services
         /// </summary>
         /// <param name="name">Name of the fact</param>
         /// <returns></returns>
-        public bool CheckFact (string name, bool applyOnCharacter = true)
+        public bool CheckFact (string elementString, bool applyOnCharacter = true)
         {
             RDFOntology CurrentOntology;
             if (applyOnCharacter)
@@ -43,9 +43,8 @@ namespace ARPEGOS.Services
             else
                 CurrentOntology = DependencyHelper.CurrentContext.CurrentGame.Ontology;
 
-            var escapedName = FileService.EscapedName(name);
             var dataModel = CurrentOntology.Data;
-            return dataModel.SelectFact($"{this.Context}{escapedName}") != null;
+            return dataModel.SelectFact(elementString) != null;
         }
 
         /// <summary>
@@ -53,24 +52,16 @@ namespace ARPEGOS.Services
         /// </summary>
         /// <param name="name">Name of the class</param>
         /// <returns></returns>
-        public bool CheckClass (string name, bool applyOnCharacter = true)
+        public bool CheckClass (string elementString, bool applyOnCharacter = true)
         {
             RDFOntology CurrentOntology;
-            string CurrentContext;
             if (applyOnCharacter)
-            {
                 CurrentOntology = this.Ontology;
-                CurrentContext = this.Context;
-            }
             else
-            {
                 CurrentOntology = DependencyHelper.CurrentContext.CurrentGame.Ontology;
-                CurrentContext = DependencyHelper.CurrentContext.CurrentGame.Context;
-            }
-
-            var escapedName = FileService.EscapedName(name);
+            
             var classModel = CurrentOntology.Model.ClassModel;
-            return classModel.SelectClass($"{CurrentContext}{escapedName}") != null;
+            return classModel.SelectClass(elementString) != null;
         }
 
         /// <summary>
@@ -81,20 +72,11 @@ namespace ARPEGOS.Services
         public bool CheckObjectProperty (string elementString, bool applyOnCharacter = true)
         {
             RDFOntology CurrentOntology;
-            string CurrentContext;
-            string currentElementString = elementString;
-            var currentElementShortName = elementString.Split('#').Last();
+
             if (applyOnCharacter)
-            {
                 CurrentOntology = this.Ontology;
-                CurrentContext = this.Context;
-                currentElementString = $"{this.Context}{currentElementShortName}";
-            }
             else
-            {
                 CurrentOntology = DependencyHelper.CurrentContext.CurrentGame.Ontology;
-                CurrentContext = DependencyHelper.CurrentContext.CurrentGame.Context;
-            }
 
             var exists = false;
             var propertyModel = CurrentOntology.Model.PropertyModel;
@@ -103,10 +85,11 @@ namespace ARPEGOS.Services
             if (property != null)
             {
                 var objectEnumerator = propertyModel.ObjectPropertiesEnumerator;
+                var shortName = elementString.Split('#').Last();
                 while (objectEnumerator.MoveNext())
                 {
                     // performance doesn't change drastically from lastindexof + substring, and with split is more readable
-                    if (objectEnumerator.Current?.ToString().Split('#').Last() == currentElementShortName)
+                    if (objectEnumerator.Current?.ToString().Split('#').Last() == shortName)
                     {
                         exists = true;
                         break;
@@ -122,33 +105,27 @@ namespace ARPEGOS.Services
         /// </summary>
         /// <param name="name">Name of the datatype property</param>
         /// <returns></returns>
-        public bool CheckDatatypeProperty (string name, bool applyOnCharacter = true)
+        public bool CheckDatatypeProperty (string elementString, bool applyOnCharacter = true)
         {
             RDFOntology CurrentOntology;
-            string CurrentContext;
             if (applyOnCharacter)
-            {
-                CurrentOntology = this.Ontology;
-                CurrentContext = this.Context;
-            }
-            else
-            {
-                CurrentOntology = DependencyHelper.CurrentContext.CurrentGame.Ontology;
-                CurrentContext = DependencyHelper.CurrentContext.CurrentGame.Context;
-            }
 
-            var escapedName = FileService.EscapedName(name);
+                CurrentOntology = this.Ontology;
+            else
+                CurrentOntology = DependencyHelper.CurrentContext.CurrentGame.Ontology;
+
             var exists = false;
             var propertyModel = CurrentOntology.Model.PropertyModel;
-            var property = propertyModel.SelectProperty($"{CurrentContext}{escapedName}");
+            var property = propertyModel.SelectProperty(elementString);
 
             if (property != null)
             {
                 var datatypeEnumerator = propertyModel.DatatypePropertiesEnumerator;
+                var shortName = elementString.Split('#').Last();
                 while (datatypeEnumerator.MoveNext())
                 {
                     // performance doesn't change drastically from lastindexof + substring, and with split is more readable
-                    if (datatypeEnumerator.Current?.ToString().Split('#').Last() == escapedName)
+                    if (datatypeEnumerator.Current?.ToString().Split('#').Last() == shortName)
                     {
                         exists = true;
                         break;
@@ -164,9 +141,9 @@ namespace ARPEGOS.Services
         /// </summary>
         /// <param name="name">Name of the individual</param>
         /// <returns></returns>
-        public bool CheckIndividual (string name, bool applyOnCharacter = true)
+        public bool CheckIndividual (string elementString, bool applyOnCharacter = true)
         {
-            return this.CheckFact(name, applyOnCharacter);
+            return this.CheckFact(elementString, applyOnCharacter);
         }
 
         /// <summary>
@@ -174,10 +151,11 @@ namespace ARPEGOS.Services
         /// </summary>
         /// <param name="stage">Name of the stage</param>
         /// <returns></returns>
-        public string CheckGeneralCost (string stage, bool applyOnCharacter = false)
+        public string CheckGeneralCost (string stageString, bool applyOnCharacter = false)
         {
             RDFOntology CurrentOntology;
             string CurrentContext;
+
             if (applyOnCharacter)
             {
                 CurrentOntology = this.Ontology;
@@ -190,7 +168,7 @@ namespace ARPEGOS.Services
             }
 
             var generalCostPredicateName = string.Empty;
-            var stageWords = stage.Split('_');
+            var stageWords = stageString.Split('#').Last().Split('_');
             var filterCounter = 2;
             var wordCounter = stageWords.Length;
 
@@ -199,7 +177,8 @@ namespace ARPEGOS.Services
                 if (wordCounter > 0)
                 {
                     var subjectFactName = string.Join('_', stageWords.Take(wordCounter));
-                    var subjectFact = CurrentOntology.Model.ClassModel.SelectClass($"{CurrentContext}{subjectFactName}");
+                    var subjectFactString = GetString(subjectFactName, applyOnCharacter);
+                    var subjectFact = CurrentOntology.Model.ClassModel.SelectClass(subjectFactString);
                     if (subjectFact != null)
                     {
                         var subjectFactCostAnnotations = CurrentOntology.Model.ClassModel.Annotations.CustomAnnotations.SelectEntriesBySubject(subjectFact).Where(entry => entry.ToString().Contains("GeneralCostDefinedBy"));
@@ -217,10 +196,10 @@ namespace ARPEGOS.Services
 
             if (filterCounter != 1)
             {
-                var parents = this.GetParentClasses(stage);
+                var parents = this.GetParentClasses(stageString);
                 if (parents != null)
                 {
-                    foreach (var parent in parents.Split(':'))
+                    foreach (var parent in parents.Split('|'))
                     {
                         generalCostPredicateName = this.CheckGeneralCost(parent);
                         if (generalCostPredicateName != null)
@@ -236,7 +215,7 @@ namespace ARPEGOS.Services
         /// </summary>
         /// <param name="stage">Name of the stage stage</param>
         /// <returns></returns>
-        public string CheckValueListInfo (string stage, bool applyOnCharacter = false)
+        public string CheckValueListInfo (string stageString, bool applyOnCharacter = false)
         {
             RDFOntology CurrentOntology;
             string CurrentContext;
@@ -253,17 +232,17 @@ namespace ARPEGOS.Services
 
             string info = null;
 
-            var stageClass = CurrentOntology.Model.ClassModel.SelectClass($"{CurrentContext}{stage}");
+            var stageClass = CurrentOntology.Model.ClassModel.SelectClass(stageString);
             var stageAnnotations = CurrentOntology.Model.ClassModel.Annotations.CustomAnnotations.SelectEntriesBySubject(stageClass);
-            var stageDefinitionAnnotation = stageAnnotations.Single(entry => entry.TaxonomyPredicate.ToString().Contains("Valued_List_Info"));
+            var stageDefinitionAnnotation = stageAnnotations.Single(entry => entry.TaxonomyPredicate.ToString().Contains("ValuedListInfo"));
             if (stageDefinitionAnnotation != null)
                 info = stageDefinitionAnnotation.TaxonomyObject.ToString().Split('^').First();
             else
             {
-                var parents = this.GetParentClasses(stage, applyOnCharacter);
+                var parents = this.GetParentClasses(stageString, applyOnCharacter);
                 if (parents != null)
                 {
-                    var parentList = parents.Split(':').ToList();
+                    var parentList = parents.Split('|').ToList();
                     foreach (var parent in parentList)
                     {
                         info = this.CheckValueListInfo(parent, applyOnCharacter);
@@ -284,20 +263,21 @@ namespace ARPEGOS.Services
         /// <param name="GeneralLimitValue">Value of the general limit</param>
         /// <param name="PartialLimitValue">Value of the partial limit</param>
         /// <returns></returns>
-        public List<string> CheckAvailableOptions (string stage, bool hasGeneralLimitValue, float? generalLimitValue, float? partialLimitValue)
+        public List<Item> CheckAvailableOptions (string stageString, bool hasGeneralLimitValue, float? generalLimitValue, float? partialLimitValue)
         {
+            RDFOntology GameOntology = DependencyHelper.CurrentContext.CurrentGame.Ontology;
             var costWords = new List<string> { "Coste", "Cost", "Coût" };
             var requirementWords = new List<string> { "Requisito", "Requirement", "Requisite", "Prérequis" };
-            var availableOptions = new List<string>();
-            var stageGroup = new Group(stage);
-            foreach (var item in stageGroup.GroupList)
+            var availableOptions = new List<Item>();
+            var stageGroup = new Group(stageString);
+            foreach (Item item in stageGroup.GroupList)
             {
                 if (hasGeneralLimitValue == false || generalLimitValue > 0)
                 {
                     if (partialLimitValue > 0)
                     {
-                        var itemFact = DependencyHelper.CurrentContext.CurrentGame.Ontology.Data.SelectFact($"{DependencyHelper.CurrentContext.CurrentGame.Context}{item.Name}");
-                        var itemFactAssertions = DependencyHelper.CurrentContext.CurrentGame.Ontology.Data.Relations.Assertions.SelectEntriesBySubject(itemFact);
+                        var itemFact = GameOntology.Data.SelectFact(item.FullName);//IBAS POR AQUI
+                        var itemFactAssertions = GameOntology.Data.Relations.Assertions.SelectEntriesBySubject(itemFact);
                         var itemRequirements = itemFactAssertions.Where(entry => requirementWords.Any(word => entry.ToString().Contains(word)));
                         string datatypeRequirementName;
                         var allRequirementsFulfilled = true;
@@ -320,26 +300,26 @@ namespace ARPEGOS.Services
                                     itemObjectRequirements = itemObjectRequirements.Where(entry => entry.ToString().Contains("_" + requirementNumber));
                                     foreach (var requirementEntry in itemObjectRequirements)
                                     {
-                                        var predicate = requirementEntry.TaxonomyPredicate.ToString().Split('#').Last();
-                                        var name = requirementEntry.TaxonomyObject.ToString().Split('#').Last();
-                                        objectRequirementNameList.Add(name);
-                                        requirementsChecked.Add(predicate);
+                                        var predicateString = requirementEntry.TaxonomyPredicate.ToString();
+                                        var requirementShortName = requirementEntry.TaxonomyObject.ToString();
+                                        objectRequirementNameList.Add(requirementShortName);
+                                        requirementsChecked.Add(predicateString);
                                     }
                                 }
                                 else
-                                    objectRequirementNameList.Add(entry.TaxonomyObject.ToString().Split('#').Last());
+                                    objectRequirementNameList.Add(entry.TaxonomyObject.ToString());
 
                                 foreach (var name in objectRequirementNameList)
                                 {
-                                    var objectFactName = name;
+                                    var objectFactString = GetString(name, true);
                                     RDFOntologyFact objectFact = null;
-                                    if (!this.CheckIndividual(objectFactName))
+                                    if (!this.CheckIndividual(objectFactString))
                                     {
                                         allRequirementsFulfilled = false;
                                         continue;
                                     }
                                     else
-                                        objectFact = this.Ontology.Data.SelectFact($"{this.Context}{objectFactName}");
+                                        objectFact = this.Ontology.Data.SelectFact(objectFactString);
 
                                     var characterFact = this.Ontology.Data.SelectFact($"{this.Context}{FileService.EscapedName(this.Name)}");
                                     var characterAssertions = this.Ontology.Data.Relations.Assertions.SelectEntriesBySubject(characterFact);
@@ -348,16 +328,16 @@ namespace ARPEGOS.Services
                                     {
                                         if (isDatatype)
                                         {
-                                            var requirementAssertion = characterAssertions.SingleOrDefault(entry => entry.TaxonomyPredicate.ToString().Contains(objectFactName));
+                                            var requirementAssertion = characterAssertions.Single(entry => entry.TaxonomyPredicate.ToString() == objectFactString);
                                             var requirementValue = Convert.ToSingle(entry.TaxonomyObject.ToString().Split('^').First());
-                                            var characterValue = Convert.ToSingle(requirementAssertion.TaxonomyObject.ToString().Split('#').First());
+                                            var characterValue = Convert.ToSingle(requirementAssertion.TaxonomyObject.ToString().Split('^').First());
                                             var result = ConvertToOperator("<", characterValue, requirementValue);
                                             objectRequirementNameDictionary.Add(name, result != true);
                                         }
                                     }
                                     else
                                     {
-                                        var requirementAssertions = characterAssertions.Where(entry => entry.TaxonomyPredicate.ToString().Contains(objectFactName));
+                                        var requirementAssertions = characterAssertions.Where(entry => entry.TaxonomyPredicate.ToString()==objectFactString);
                                         if (requirementAssertions.Any())
                                         {
                                             if (requirementAssertions.Count() > 1)
@@ -388,43 +368,42 @@ namespace ARPEGOS.Services
 
                             if (itemCosts.Count() > 1)
                             {
-                                var generalCostPredicateName = this.CheckGeneralCost(stage);
-                                itemCosts = itemCosts.Where(entry => entry.TaxonomyPredicate.ToString().Contains(generalCostPredicateName));
-                                itemCostEntry = itemCosts.SingleOrDefault();
+                                var generalCostPredicateName = this.CheckGeneralCost(stageString);
+                                itemCostEntry = itemCosts.Where(entry => entry.TaxonomyPredicate.ToString() == generalCostPredicateName).Single();
                             }
                             else if (itemCosts.Count() == 1)
                                 itemCostEntry = itemCosts.SingleOrDefault();
 
                             if (itemCostEntry != null)
                             {
-                                var costValue = Convert.ToSingle(itemCostEntry.TaxonomyObject.ToString().Split('#').First());
-                                var itemCostEntryPredicate = itemCostEntry.TaxonomyPredicate.ToString().Split('#').Last();
-                                var generalLimitName = this.GetLimitByValue(stage, generalLimitValue.ToString());
+                                var costValue = Convert.ToSingle(itemCostEntry.TaxonomyObject.ToString().Split('^').First());
+                                var itemCostEntryPredicate = itemCostEntry.TaxonomyPredicate.ToString();
+                                var generalLimitName = this.GetLimitByValue(stageString, generalLimitValue.ToString());
                                 var firstWord = generalLimitName.Split('_').ToList().FirstOrDefault() + "_";
                                 generalLimitName = generalLimitName.Replace("Per_", "");
 
                                 var costMatchGeneralLimit = CheckCostAndLimit(itemCostEntryPredicate, generalLimitName);
                                 if (costMatchGeneralLimit == false)
                                 {
-                                    var partialLimitName = this.GetLimitByValue(stage, partialLimitValue.ToString());
+                                    var partialLimitName = this.GetLimitByValue(stageString, partialLimitValue.ToString());
                                     var costMatchPartialLimit = CheckCostAndLimit(itemCostEntryPredicate, partialLimitName);
                                     if (itemCostEntryPredicate != partialLimitName)
                                     {
-                                        var itemCostWords = itemCostEntryPredicate.Split('_').ToList();
+                                        var itemCostWords = itemCostEntryPredicate.Split('#').Last().Split('_').ToList();
                                         var characterClass = new List<string> { "Personaje", "Character", "Personnage" };
                                         var characterDatatatypePropertyFound = false;
                                         var index = 0;
-                                        itemCostWords.Remove(itemCostWords.FirstOrDefault());
+                                        itemCostWords.Remove(itemCostWords.First());
 
                                         while (!characterDatatatypePropertyFound)
                                         {
                                             var property = this.Ontology.Model.PropertyModel.ElementAtOrDefault(index);
-                                            if (this.CheckDatatypeProperty(property.ToString().Split('#').Last()))
+                                            if (this.CheckDatatypeProperty(property.ToString()))
                                             {
                                                 var datatypeProperty = property as RDFOntologyDatatypeProperty;
                                                 if (datatypeProperty.Domain != null)
                                                 {
-                                                    var domainClass = datatypeProperty.Domain.ToString().Split('#').Last();
+                                                    var domainClass = datatypeProperty.Domain.ToString();
                                                     if (characterClass.Any(word => domainClass.Contains(word)))
                                                     {
                                                         if (!characterClass.Any(word => datatypeProperty.ToString().Contains(word)))
@@ -446,31 +425,32 @@ namespace ARPEGOS.Services
                                         }
 
                                         var requirementCostName = string.Join('_', itemCostWords);
+                                        var requirementCostString = GetString(requirementCostName, true);
                                         var characterFact = this.Ontology.Data.SelectFact($"{this.Context}{FileService.EscapedName(this.Name)}");
 
-                                        if (!(this.Ontology.Model.PropertyModel.SelectProperty($"{this.Context}{requirementCostName}") is RDFOntologyDatatypeProperty requirementCostProperty))
+                                        if (!(this.Ontology.Model.PropertyModel.SelectProperty(requirementCostString) is RDFOntologyDatatypeProperty requirementCostProperty))
                                         {
                                             IEnumerable<RDFOntologyTaxonomyEntry> requirementCostAssertions = this.Ontology.Data.Relations.Assertions.SelectEntriesBySubject(characterFact);
                                             requirementCostAssertions = requirementCostAssertions.Where(entry => itemCostWords.All(word => entry.TaxonomyPredicate.ToString().Contains(word)));
-                                            requirementCostName = requirementCostAssertions.SingleOrDefault().TaxonomyPredicate.ToString().Split('#').Last();
-                                            requirementCostProperty = this.Ontology.Model.PropertyModel.SelectProperty($"{this.Context}{requirementCostName}") as RDFOntologyDatatypeProperty;
+                                            requirementCostString = requirementCostAssertions.SingleOrDefault().TaxonomyPredicate.ToString();
+                                            requirementCostProperty = this.Ontology.Model.PropertyModel.SelectProperty(requirementCostString) as RDFOntologyDatatypeProperty;
                                         }
 
                                         var entry = this.Ontology.Data.Relations.Assertions.SelectEntriesBySubject(characterFact).SelectEntriesByPredicate(requirementCostProperty).SingleOrDefault();
                                         var entryValue = Convert.ToSingle(entry.TaxonomyObject.ToString().Split('^').First());
                                         if (entryValue >= costValue)
-                                            availableOptions.Add(item.Name);
+                                            availableOptions.Add(new Item(item.FullName));
                                     }
                                     else
                                     {
                                         if (generalLimitValue >= costValue && partialLimitValue >= costValue)
-                                            availableOptions.Add(item.Name);
+                                            availableOptions.Add(new Item(item.FullName));
                                     }
                                 }
                                 else
                                 {
                                     if (generalLimitValue >= costValue)
-                                        availableOptions.Add(item.Name);
+                                        availableOptions.Add(new Item(item.FullName));
                                 }
                             }
                         }

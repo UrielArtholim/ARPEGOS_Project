@@ -30,7 +30,7 @@ namespace ARPEGOS.ViewModels
             this.SelectItemCommand = new Command<Item>(async (item) => 
             {
                 var character = DependencyHelper.CurrentContext.CurrentCharacter;
-                character.AddObjectProperty($"{character.Context}{character.Name}", $"{character.Context}{rootStage}", $"{character.Context}{item.Name}");
+                character.AddObjectProperty($"{character.Context}{character.Name}", $"{character.Context}{rootStage}", $"{character.Context}{item.FullName}");
 
                 await MainThread.InvokeOnMainThreadAsync(async() => await App.Navigation.NavigationStack.Last().Navigation.PushAsync(new StageView(0)));
                 await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.PopAsync());
