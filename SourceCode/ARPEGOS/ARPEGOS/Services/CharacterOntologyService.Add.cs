@@ -20,9 +20,14 @@ namespace ARPEGOS.Services
             var subjectName = subjectFullName.Split('#').Last();
             var predicateName = predicateFullName.Split('#').Last();
             var objectName = objectFullName.Split('#').Last();
-            var subjectFact = !this.CheckIndividual(subjectName) ? this.CreateIndividual(subjectName) : characterDataModel.SelectFact(subjectFullName);
-            var predicate = !this.CheckObjectProperty(predicateName) ? this.CreateObjectProperty(predicateName) : this.Ontology.Model.PropertyModel.SelectProperty(predicateFullName);
-            var objectFact = !this.CheckIndividual(objectName) ? this.CreateIndividual(objectName) : characterDataModel.SelectFact(objectFullName);
+
+            var subjectCharacterString = $"{this.Context}{subjectName}";
+            var predicateCharacterString = $"{this.Context}{predicateName}";
+            var objectCharacterString = $"{this.Context}{objectName}";
+
+            var subjectFact = !this.CheckIndividual(subjectCharacterString) ? this.CreateIndividual(subjectName) : characterDataModel.SelectFact(subjectCharacterString);
+            var predicate = !this.CheckObjectProperty(predicateCharacterString) ? this.CreateObjectProperty(predicateName) : this.Ontology.Model.PropertyModel.SelectProperty(predicateCharacterString);
+            var objectFact = !this.CheckIndividual(objectCharacterString) ? this.CreateIndividual(objectName) : characterDataModel.SelectFact(objectCharacterString);
             characterDataModel.AddAssertionRelation(subjectFact, predicate as RDFOntologyObjectProperty, objectFact);
             this.Save();
         }
@@ -38,8 +43,12 @@ namespace ARPEGOS.Services
             var characterDataModel = this.Ontology.Data;
             var subjectName = subjectFullName.Split('#').Last();
             var predicateName = predicateFullName.Split('#').Last();
-            var subjectFact = !this.CheckIndividual(subjectName) ? this.CreateIndividual(subjectName) : characterDataModel.SelectFact(subjectFullName);
-            var predicate = !this.CheckDatatypeProperty(predicateName) ? this.CreateDatatypeProperty(predicateName) : this.Ontology.Model.PropertyModel.SelectProperty(predicateFullName);
+
+            var subjectCharacterString = $"{this.Context}{subjectName}";
+            var predicateCharacterString = $"{this.Context}{predicateName}";
+
+            var subjectFact = !this.CheckIndividual(subjectCharacterString) ? this.CreateIndividual(subjectName) : characterDataModel.SelectFact(subjectCharacterString);
+            var predicate = !this.CheckDatatypeProperty(predicateCharacterString) ? this.CreateDatatypeProperty(predicateName) : this.Ontology.Model.PropertyModel.SelectProperty(predicateCharacterString);
             var objectLiteral = this.CreateLiteral(value, valuetype);
             characterDataModel.AddAssertionRelation(subjectFact, predicate as RDFOntologyDatatypeProperty, objectLiteral);
             this.Save();
