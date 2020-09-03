@@ -49,23 +49,25 @@ namespace ARPEGOS.Services
         /// Asserts an annotation property to classify a character property
         /// </summary>
         /// <param name="propertyName">Name of the property</param>
-        internal void AddClassification (string propertyName)
+        internal void AddClassification (string propertyString)
         {
             var text = string.Empty;
             var descriptionType = "string";
             var hierarchy = new List<string>();
-            var currentProperty = this.Ontology.Model.PropertyModel.SelectProperty($"{this.Context}{propertyName}");
+            var currentProperty = this.Ontology.Model.PropertyModel.SelectProperty(propertyString);
             var propertyParents = this.Ontology.Model.PropertyModel.GetSuperPropertiesOf(currentProperty).ToList();
             propertyParents.Reverse();
 
             foreach (var parent in propertyParents)
             {
-                var parentName = parent.ToString().Substring(parent.ToString().LastIndexOf('#') + 1);
+                var parentString = parent.ToString();
+                var parentName = parent.ToString().Split('#').Last();
                 var groupName = parentName.Replace("tiene", "").Replace("Personaje", "").Replace("Per", "").Replace("_", " ");
                 groupName = System.Text.RegularExpressions.Regex.Replace(groupName, "([A-Z])", " $1", System.Text.RegularExpressions.RegexOptions.Compiled).Trim();
                 hierarchy.Add(groupName);
             }
-            hierarchy.Remove(hierarchy.FirstOrDefault());
+
+            hierarchy.Remove(hierarchy.First());
             if (hierarchy.Count > 1)
             {
                 for (int i = 0; i < hierarchy.Count; ++i)
@@ -93,10 +95,10 @@ namespace ARPEGOS.Services
             text = string.Join(":", hierarchy).Replace(" ", "");
             RDFOntologyLiteral description = CreateLiteral(text, descriptionType);
             var AnnotationType = "Visualization";
-            RDFOntologyProperty annotation = this.Ontology.Model.PropertyModel.SelectProperty($"{this.Context}{AnnotationType}");
+            var annotation = this.Ontology.Model.PropertyModel.Annotations.CustomAnnotations.Where(annotation => annotation.TaxonomyPredicate.ToString().Contains("Visualization")).First().TaxonomyPredicate as RDFOntologyAnnotationProperty;
             if (annotation == null)
-                this.Ontology.Model.PropertyModel.AddProperty(new RDFOntologyAnnotationProperty(new RDFResource($"{this.Context}{AnnotationType}")));
-            this.Ontology.Model.PropertyModel.AddCustomAnnotation(annotation as RDFOntologyAnnotationProperty, currentProperty, description);
+                annotation = new RDFOntologyAnnotationProperty(new RDFResource($"{this.Context}{AnnotationType}"));
+            this.Ontology.Model.PropertyModel.AddCustomAnnotation(annotation, currentProperty, description);
 
             //Comprobar que la propiedad es de una habilidad
             var activeSkillName = "Activa";
@@ -115,17 +117,21 @@ namespace ARPEGOS.Services
 
             if (propertyParent != null)
             {
-                if(this.CheckDatatypeProperty(propertyName) == true)
+                if(this.CheckDatatypeProperty(propertyString) == true)
                 {
-                    if(!propertyName.Contains("Total"))
+                    var propertyShortName = propertyString.Split('#').Last();
+                    if(!propertyShortName.Contains("Total"))
                         return;
                 }
 
                 description = CreateLiteral("true", "boolean");
                 AnnotationType = "SkillProperty";
-                annotation = this.Ontology.Model.PropertyModel.SelectProperty($"{this.Context}{AnnotationType}");
+                annotation = this.Ontology.Model.PropertyModel.Annotations.CustomAnnotations.Where(entry => entry.TaxonomyPredicate.ToString().Contains("SkillProperty")).First().TaxonomyPredicate as RDFOntologyAnnotationProperty;
                 if (annotation == null)
-                    this.Ontology.Model.PropertyModel.AddProperty(new RDFOntologyAnnotationProperty(new RDFResource($"{this.Context}{AnnotationType}")));
+                {
+                    annotation = new RDFOntologyAnnotationProperty(new RDFResource($"{this.Context}{AnnotationType}"));
+                    this.Ontology.Model.PropertyModel.AddProperty(annotation);
+                }
                 this.Ontology.Model.PropertyModel.AddCustomAnnotation(annotation as RDFOntologyAnnotationProperty, currentProperty, description);
             }
 

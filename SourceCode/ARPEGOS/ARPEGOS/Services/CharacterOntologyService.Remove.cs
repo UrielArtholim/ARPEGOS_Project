@@ -12,11 +12,11 @@ namespace ARPEGOS.Services
         /// </summary>
         /// <param name="predicateName">Name of the predicate</param>
         /// <param name="literal">Value of the property</param>
-        internal void RemoveDatatypeProperty(string predicateName, string literal = null)
+        internal void RemoveDatatypeProperty(string predicateString, string literalString = null)
         {
-            var predicate = this.Ontology.Model.PropertyModel.SelectProperty($"{this.Context}{predicateName}") as RDFOntologyDatatypeProperty;
+            var predicate = this.Ontology.Model.PropertyModel.SelectProperty(predicateString) as RDFOntologyDatatypeProperty;
             var CharacterPredicateAssertions = this.Ontology.Data.Relations.Assertions.SelectEntriesByPredicate(predicate);
-            if(literal == null)
+            if(literalString == null)
             {
                 foreach(var entry in CharacterPredicateAssertions)
                 {
@@ -27,7 +27,7 @@ namespace ARPEGOS.Services
             }
             else
             {
-                var entryLiteral = this.Ontology.Data.SelectLiteral(literal);
+                var entryLiteral = this.Ontology.Data.SelectLiteral(literalString);
                 var entries = this.Ontology.Data.Relations.Assertions.SelectEntriesByPredicate(predicate).SelectEntriesByObject(entryLiteral);
                 foreach(var entry in entries)
                 {
@@ -43,11 +43,11 @@ namespace ARPEGOS.Services
         /// </summary>
         /// <param name="predicateName"></param>
         /// <param name="objectFactName"></param>
-        internal void RemoveObjectProperty(string predicateName, string objectFactName = null)
+        internal void RemoveObjectProperty(string predicateString, string objectFactString = null)
         {
-            var predicate = this.Ontology.Model.PropertyModel.SelectProperty($"{this.Context}{predicateName}") as RDFOntologyObjectProperty;
+            var predicate = this.Ontology.Model.PropertyModel.SelectProperty(predicateString) as RDFOntologyObjectProperty;
             var CharacterPredicateAssertions = this.Ontology.Data.Relations.Assertions.SelectEntriesByPredicate(predicate);
-            if (objectFactName == null)
+            if (objectFactString == null)
             {
                 foreach (var entry in CharacterPredicateAssertions)
                 {
@@ -58,7 +58,7 @@ namespace ARPEGOS.Services
             }
             else
             {
-                var entryObject = this.Ontology.Data.SelectFact(this.Context + objectFactName);
+                var entryObject = this.Ontology.Data.SelectFact(objectFactString);
                 var entry = this.Ontology.Data.Relations.Assertions.SelectEntriesByPredicate(predicate).SelectEntriesByObject(entryObject).SingleOrDefault();
                 var entrySubject = entry.TaxonomySubject as RDFOntologyFact;
                 this.Ontology.Data.RemoveAssertionRelation(entrySubject, predicate, entryObject);
