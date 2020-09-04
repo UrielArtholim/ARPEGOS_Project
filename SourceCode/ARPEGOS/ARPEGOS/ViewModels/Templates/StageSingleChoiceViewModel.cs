@@ -1,4 +1,5 @@
 ﻿using ARPEGOS.Helpers;
+using ARPEGOS.Models;
 using ARPEGOS.Services;
 using ARPEGOS.ViewModels.Base;
 using ARPEGOS.Views;
@@ -7,22 +8,27 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 
-namespace ARPEGOS.ViewModels
+namespace ARPEGOS.ViewModels.Templates
 {
-    public class CreationRootViewModel: BaseViewModel 
+    public class StageSingleChoiceViewModel : BaseViewModel
     {
         private DialogService dialogService;
+        private Stage currentStage;
         private string stageString;
-        private string stage;
-        public string Stage
+        private string stageName;
+        public Stage CurrentStage
         {
-            get => stage;
-            set => SetProperty(ref this.stage, value);
+            get => currentStage;
+            set => SetProperty(ref this.currentStage, value);
+        }
+        public string StageName
+        {
+            get => stageName;
+            set => SetProperty(ref this.stageName, value);
         }
         private Item selectedItem;
         public Item SelectedItem
@@ -44,41 +50,37 @@ namespace ARPEGOS.ViewModels
         public ICommand InfoCommand { get; private set; }
         public ICommand SelectCommand { get; private set; }
 
-        public CreationRootViewModel()
+        public StageSingleChoiceViewModel(int stageNumber)
         {
             this.dialogService = new DialogService();
             this.Continue = false;
             var character = DependencyHelper.CurrentContext.CurrentCharacter;
             var game = DependencyHelper.CurrentContext.CurrentGame;
-            this.stageString = game.GetCreationSchemeRootClass();
-            this.Stage = this.stageString.Split('#').Last();
-            
+
+            this.CurrentStage = StageViewModel.CreationScheme.ElementAt(stageNumber);
+            this.StageName = FileService.FormatName(this.CurrentStage.ShortName);
             Data = new ObservableCollection<Item>(character.GetIndividuals(stageString));
 
-            this.NextCommand = new Command(async () => 
+            this.NextCommand = new Command(async () =>
             {
                 this.IsBusy = true;
                 var character = DependencyHelper.CurrentContext.CurrentCharacter;
                 var currentItem = this.SelectedItem;
                 var ItemFullShortName = this.SelectedItem.FullName.Split('#').Last();
-                var predicateString = character.GetObjectPropertyAssociated(this.stageString);
+                var predicateString = character.GetObjectPropertyAssociated(this.CurrentStage.ShortName);
                 var predicateName = predicateString.Split('#').Last();
-                character.UpdateObjectAssertion($"{character.Context}{predicateName}", $"{character.Context}{ItemFullShortName}");
 
-                var scheme = character.GetCreationScheme(this.SelectedItem.FullName);
-                StageViewModel.CreationScheme = scheme;
+                character.UpdateObjectAssertion($"{character.Context}{predicateName}", $"{character.Context}{ItemFullShortName}");
                 this.IsBusy = false;
 
-                await MainThread.InvokeOnMainThreadAsync(async() => await App.Navigation.NavigationStack.Last().Navigation.PushAsync(new StageView(0)));
-                await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.PopModalAsync());
+                await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.NavigationStack.Last().Navigation.PushAsync(new StageView(++stageNumber)));
             });
 
-            this.InfoCommand = new Command<Item>(async(item)=> 
-            { 
-                await this.dialogService.DisplayAlert(item.FormattedName, item.Description); 
+            this.InfoCommand = new Command<Item>(async (item) =>
+            {
+                await this.dialogService.DisplayAlert(item.FormattedName, item.Description);
             });
 
         }
-
     }
 }

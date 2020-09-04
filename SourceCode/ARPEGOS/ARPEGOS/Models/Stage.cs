@@ -13,7 +13,8 @@ namespace ARPEGOS.Models
         /// <summary>
         /// Name of the stage
         /// </summary>
-        public string Name { get; private set; }
+        public string FullName { get; private set; }
+        public string ShortName { get; private set; }
 
         public StageType Type { get; private set; }
         public StageModel Model { get; private set; }
@@ -22,36 +23,65 @@ namespace ARPEGOS.Models
 
         public ObservableCollection<Item> Items { get; private set; }
 
-        public Stage (string name, bool grouped = false)
+        public Stage (string elementString, bool grouped = false)
         {
             var characterService = DependencyHelper.CurrentContext.CurrentCharacter;
-            this.Name = name;
+            this.FullName = elementString;
+            this.ShortName = elementString.Split('#').Last();
             this.IsGrouped = grouped;
             this.Items = new ObservableCollection<Item>();
             if (this.IsGrouped == true)
             {
-                var stageItems = characterService.GetIndividualsGrouped(Name);
+                var stageItems = characterService.GetIndividualsGrouped(this.FullName);
                 foreach (var item in stageItems)
                     this.Items.Add(item);
             }
             else
             {
-                var stageItems = characterService.GetIndividuals(Name);
-                foreach (var item in stageItems)
-                    this.Items.Add(item);
+                if (characterService.CheckClass(this.FullName, false))
+                {
+                    var stageItems = characterService.GetIndividuals(this.FullName);
+                    foreach (var item in stageItems)
+                        this.Items.Add(item);
+                }
+                else
+                    this.Items.Add(new Item(this.FullName));
+                
             }
 
             this.Type = StageType.NotDefined;
 
             var gameService = DependencyHelper.CurrentContext.CurrentGame;
-            var stageClass = gameService.Ontology.Model.ClassModel.SelectClass($"{gameService.Ontology}{this.Name}");
-            while (this.Type == StageType.NotDefined)
+            var stageClass = gameService.Ontology.Model.ClassModel.SelectClass(this.FullName);
+            if(stageClass != null)
             {
-                var stageClassCustomAnnotations = gameService.Ontology.Model.ClassModel.Annotations.CustomAnnotations.SelectEntriesBySubject(stageClass);
-                var stageViewTypeAnnotations = stageClassCustomAnnotations.Where(entry => entry.TaxonomyPredicate.ToString().Contains("ViewType"));
-                if (stageViewTypeAnnotations.Count() > 0)
+                while (this.Type == StageType.NotDefined)
                 {
-                    var viewTypeName = stageViewTypeAnnotations.Single().TaxonomyObject.ToString().Split('^').First();
+                    var stageClassCustomAnnotations = gameService.Ontology.Model.ClassModel.Annotations.CustomAnnotations.SelectEntriesBySubject(stageClass);
+                    var stageViewTypeAnnotations = stageClassCustomAnnotations.Where(entry => entry.TaxonomyPredicate.ToString().Contains("ViewType"));
+                    if (stageViewTypeAnnotations.Count() > 0)
+                    {
+                        var viewTypeName = stageViewTypeAnnotations.Single().TaxonomyObject.ToString().Split('^').First();
+                        switch (viewTypeName)
+                        {
+                            case "SingleChoiceListView": this.Type = StageType.SingleChoice; this.Model = StageModel.NotRequired; break;
+                            case "MultipleChoiceStaticLimitView": this.Type = StageType.MultipleChoice; this.Model = StageModel.StaticLimit; break;
+                            case "MultipleChoiceStaticLimitGroupCostView": this.Type = StageType.MultipleChoice; this.Model = StageModel.StaticGroupLimit; break;
+                            case "MultipleChoiceDynamicLimitView": this.Type = StageType.MultipleChoice; this.Model = StageModel.DynamicLimit; break;
+                            case "ValuedListView": this.Type = StageType.ValuedChoice; this.Model = StageModel.NotRequired; break;
+                        }
+                    }
+                    else
+                        stageClass = gameService.Ontology.Model.ClassModel.Relations.SubClassOf.SelectEntriesBySubject(stageClass).Single().TaxonomyObject as RDFOntologyClass;
+                }
+            }
+            else
+            {
+                var stageFact = gameService.Ontology.Data.SelectFact(this.FullName);
+                var stageViewAnnotationEntries = gameService.Ontology.Data.Annotations.CustomAnnotations.SelectEntriesBySubject(stageFact).Where(entry => entry.TaxonomyPredicate.ToString().Contains("ViewType"));
+                if(stageViewAnnotationEntries.Count() > 0)
+                {
+                    var viewTypeName = stageViewAnnotationEntries.Single().TaxonomyObject.ToString().Split('^').First();
                     switch (viewTypeName)
                     {
                         case "SingleChoiceListView": this.Type = StageType.SingleChoice; this.Model = StageModel.NotRequired; break;
@@ -61,8 +91,6 @@ namespace ARPEGOS.Models
                         case "ValuedListView": this.Type = StageType.ValuedChoice; this.Model = StageModel.NotRequired; break;
                     }
                 }
-                else
-                    stageClass = gameService.Ontology.Model.ClassModel.Relations.SubClassOf.SelectEntriesBySubject(stageClass).Single().TaxonomyObject as RDFOntologyClass;
             }
         }
 

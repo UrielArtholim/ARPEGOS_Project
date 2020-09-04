@@ -277,13 +277,14 @@ namespace ARPEGOS.Services
             var ClassModel = CurrentOntology.Model.ClassModel;
             var DataModel = CurrentOntology.Data;
             var currentClass = ClassModel.SelectClass(currentClassString);
+            var currentClassName = currentClassString.Split('#').Last();
             var classAssertions = DataModel.Relations.ClassType.SelectEntriesByObject(currentClass);
             foreach (var assertion in classAssertions)
             {
                 var individualString = assertion.TaxonomySubject.ToString();
                 var individualFact = DataModel.SelectFact(individualString);
                 var individualDescription = CurrentOntology.Data.Annotations.Comment.SelectEntriesBySubject(individualFact).Single().TaxonomyObject.ToString().Split('^').First();
-                individuals.Add(new Item(individualString, individualDescription));
+                individuals.Add(new Item(individualString, individualDescription, currentClassName));
             }
 
             return individuals;
@@ -686,11 +687,13 @@ namespace ARPEGOS.Services
                     ObjectPropertyAssertions = ObjectPropertyAssertions.Where(entry => entry.ToString().Contains(ObjectPropertyName));
                     propertyString = ObjectPropertyAssertions.Single().ToString();
                     propertyNameFound = true;
+                    break;
                 }
                 else if (ObjectPropertyAssertions.Count() == 1)
                 {
                     propertyString = ObjectPropertyAssertions.Single().ToString();
                     propertyNameFound = true;
+                    break;
                 }
                 --wordCounter;
             }
@@ -711,6 +714,8 @@ namespace ARPEGOS.Services
                     }
                 }
             }
+            if (!propertyString.Contains('#'))
+                propertyString = GetString(propertyString);
             return propertyString;
         }//MODIFIED
 
@@ -1025,10 +1030,10 @@ namespace ARPEGOS.Services
                         {
                             elementString = item.ToString();
                             found = true;
+                            break;
                         }
                     }
                 }
-
                 if (found == false)
                 {
                     var characterClassList = CharacterOntology.Model.ClassModel.Where(item => item.ToString().Contains(elementName));
@@ -1040,11 +1045,11 @@ namespace ARPEGOS.Services
                             {
                                 elementString = item.ToString();
                                 found = true;
+                                break;
                             }
                         }
                     }
                 }
-
                 if (found == false)
                 {
                     var characterPropertyList = CharacterOntology.Model.PropertyModel.Where(item => item.ToString().Contains(elementName));
@@ -1056,6 +1061,7 @@ namespace ARPEGOS.Services
                             {
                                 elementString = item.ToString();
                                 found = true;
+                                break;
                             }
                         }
                     }
@@ -1063,22 +1069,19 @@ namespace ARPEGOS.Services
             }
             else
             {
-                if (found == false)
+                var gameFactList = GameOntology.Data.Where(item => item.ToString().Contains(elementName));
+                if (gameFactList.Count() > 0)
                 {
-                    var gameFactList = GameOntology.Data.Where(item => item.ToString().Contains(elementName));
-                    if (gameFactList.Count() > 0)
+                    foreach (var item in gameFactList)
                     {
-                        foreach (var item in gameFactList)
+                        if (item.ToString().Split('#').Last() == elementName)
                         {
-                            if (item.ToString().Split('#').Last() == elementName)
-                            {
-                                elementString = item.ToString();
-                                found = true;
-                            }
+                            elementString = item.ToString();
+                            found = true;
+                            break;
                         }
                     }
                 }
-
                 if (found == false)
                 {
                     var gameClassList = GameOntology.Model.ClassModel.Where(item => item.ToString().Contains(elementName));
@@ -1090,12 +1093,11 @@ namespace ARPEGOS.Services
                             {
                                 elementString = item.ToString();
                                 found = true;
+                                break;
                             }
                         }
                     }
                 }
-
-
                 if (found == false)
                 {
                     var gamePropertyList = GameOntology.Model.PropertyModel.Where(item => item.ToString().Contains(elementName));
@@ -1107,16 +1109,12 @@ namespace ARPEGOS.Services
                             {
                                 elementString = item.ToString();
                                 found = true;
+                                break;
                             }
                         }
                     }
                 }
             }
-            
-                
-
-            
-
             return elementString;
         }
 

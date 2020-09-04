@@ -3,6 +3,7 @@ namespace ARPEGOS.ViewModels
 {
     using System.Collections.Generic;
     using System.Collections.ObjectModel;
+    using System.Linq;
     using System.Net.Http.Headers;
     using System.Threading;
     using System.Threading.Tasks;
@@ -77,8 +78,9 @@ namespace ARPEGOS.ViewModels
                 return this.CurrentStatus switch
                     {
                         SelectionStatus.SelectingGame => "Selecciona el juego",
-                        SelectionStatus.SelectingCharacter => "Selecciona el personaje",
                         SelectionStatus.DeletingGame => "Selecciona el juego",
+                        SelectionStatus.SelectingCharacter => "Selecciona el personaje",
+                        SelectionStatus.DeletingCharacter => "Selecciona el personaje",
                         _ => "Carga completada!"
                     };
             }
@@ -100,12 +102,25 @@ namespace ARPEGOS.ViewModels
                         await App.Navigation.PushAsync(new AddGameView());
                         this.Load(this.CurrentStatus);
                         break;
+                    case SelectionStatus.DeletingGame:
+                        await App.Navigation.PushAsync(new AddGameView());
+                        this.Load(this.CurrentStatus);
+                        break;
                     case SelectionStatus.SelectingCharacter:
                         var item = await this.dialogService.DisplayTextPrompt("Crear nuevo personaje", "Introduce el nombre:", "Crear");
                         if (!string.IsNullOrWhiteSpace(item))
                         {
                             DependencyHelper.CurrentContext.CurrentCharacter = await OntologyService.CreateCharacter(item, DependencyHelper.CurrentContext.CurrentGame);
-                            await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.PushAsync(new NavigationPage(new CreationRootView())));
+                            await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.PushModalAsync(new NavigationPage(new CreationRootView())));
+                        }
+                        this.Load(this.CurrentStatus);
+                        break;
+                    case SelectionStatus.DeletingCharacter:
+                        item = await this.dialogService.DisplayTextPrompt("Crear nuevo personaje", "Introduce el nombre:", "Crear");
+                        if (!string.IsNullOrWhiteSpace(item))
+                        {
+                            DependencyHelper.CurrentContext.CurrentCharacter = await OntologyService.CreateCharacter(item, DependencyHelper.CurrentContext.CurrentGame);
+                            await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.PushModalAsync(new NavigationPage(new CreationRootView())));
                         }
                         this.Load(this.CurrentStatus);
                         break;
@@ -177,12 +192,14 @@ namespace ARPEGOS.ViewModels
                         if (string.IsNullOrWhiteSpace(item))
                             break;
                         DependencyHelper.CurrentContext.CurrentCharacter = await OntologyService.CreateCharacter(item, DependencyHelper.CurrentContext.CurrentGame);
+                        await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.PushModalAsync(new NavigationPage(new CreationRootView())));
+                        await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.PushAsync(new OptionsView()));
                     }
                     else
+                    {
                         DependencyHelper.CurrentContext.CurrentCharacter = await OntologyService.LoadCharacter(item, DependencyHelper.CurrentContext.CurrentGame);
-                    await MainThread.InvokeOnMainThreadAsync(async() => await App.Navigation.PushAsync(new OptionsView()));
-                    this.PreviousStatus = this.CurrentStatus;
-                    this.CurrentStatus = SelectionStatus.Done;
+                        await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.PushAsync(new OptionsView()));
+                    }
                     this.Load(this.CurrentStatus);
                     break;
 
@@ -191,8 +208,6 @@ namespace ARPEGOS.ViewModels
                     var confirmation = await this.dialogService.DisplayAcceptableAlert("Advertencia", $"¿Desea eliminar {item}? Una vez hecho no podrá ser recuperado", "Confirmar", "Cancelar");
                     if (confirmation == true)
                         await MainThread.InvokeOnMainThreadAsync(()=> FileService.DeleteGame(this.selectedGame));
-                    this.PreviousStatus = this.CurrentStatus;
-                    this.CurrentStatus = SelectionStatus.SelectingGame;
                     this.Load(CurrentStatus);
                     break;                    
 
@@ -201,9 +216,9 @@ namespace ARPEGOS.ViewModels
                     confirmation = await this.dialogService.DisplayAcceptableAlert("Advertencia", $"¿Desea eliminar {item}? Una vez hecho no podrá ser recuperado", "Confirmar", "Cancelar");
                     if(confirmation == true)
                         await MainThread.InvokeOnMainThreadAsync(() => FileService.DeleteCharacter(item, this.selectedGame));                    
-                    this.CurrentStatus = SelectionStatus.SelectingCharacter;
                     this.Load(this.CurrentStatus);
                     break;
+
 
                 default:
                     this.PreviousStatus = this.CurrentStatus;
@@ -218,13 +233,29 @@ namespace ARPEGOS.ViewModels
         private void Load(SelectionStatus status)
         {
             IEnumerable<string> items;
+            List<string> updatedItems;
             switch (status)
             {
+                case SelectionStatus.AddGame:
+                    items = FileService.ListGames();
+                    break;
                 case SelectionStatus.SelectingGame:
                     items = FileService.ListGames();
                     break;
+                case SelectionStatus.DeletingGame:
+                    updatedItems = FileService.ListGames().ToList();
+                    if (updatedItems.Count() == 0)
+                        this.CurrentStatus = SelectionStatus.SelectingGame;
+                    items = updatedItems;
+                    break;
                 case SelectionStatus.SelectingCharacter:
                     items = FileService.ListCharacters(this.SelectedGame);
+                    break;
+                case SelectionStatus.DeletingCharacter:
+                    updatedItems = FileService.ListCharacters(this.SelectedGame).ToList();
+                    if (updatedItems.Count() == 0)
+                        this.CurrentStatus = SelectionStatus.SelectingCharacter;
+                    items = updatedItems;
                     break;
                 case SelectionStatus.Done:
                     items = new string[0];

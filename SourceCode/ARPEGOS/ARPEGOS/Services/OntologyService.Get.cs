@@ -1,8 +1,10 @@
 ﻿using ARPEGOS.Helpers;
+using ARPEGOS.Models;
 using RDFSharp.Model;
 using RDFSharp.Semantics.OWL;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 
@@ -23,6 +25,35 @@ namespace ARPEGOS.Services
             if (entries.Count() > 0)
                 rootClassName = entries.Single().TaxonomySubject.ToString();
             return rootClassName;
+        }
+
+        public ObservableCollection<Stage> GetCreationScheme(string objectString)
+        {
+            var game = DependencyHelper.CurrentContext.CurrentGame;
+            var character = DependencyHelper.CurrentContext.CurrentCharacter;
+            var objectFact = game.Ontology.Data.SelectFact(objectString);
+            var dataCustomAnnotations = game.Ontology.Data.Annotations.CustomAnnotations;
+            var stageCreationSchemeAnnotation = dataCustomAnnotations.SelectEntriesBySubject(objectFact).Where(entry => entry.TaxonomyPredicate.ToString().Contains("CreationScheme")).Single();
+            var schemeStages = stageCreationSchemeAnnotation.TaxonomyObject.ToString().Split('^').First().Replace("\r", "").Split(',').ToList();
+            ObservableCollection<Stage> Scheme = new ObservableCollection<Stage>();
+            foreach(var name in schemeStages)
+            {
+                var stepStageString = character.GetString(name);
+                var isClass = character.CheckClass(stepStageString, false);
+                if(isClass == true)
+                {
+                    var stepStageClass = game.Ontology.Model.ClassModel.SelectClass(stepStageString);
+                    bool isGrouped = false;
+                    if (character.Ontology.Model.ClassModel.GetSubClassesOf(stepStageClass) != null)
+                        isGrouped = true;
+                    Scheme.Add(new Stage(stepStageString, isGrouped));
+                }
+                else
+                {
+                    Scheme.Add(new Stage(stepStageString, false));
+                }
+            }
+            return Scheme;
         }
     }
 }

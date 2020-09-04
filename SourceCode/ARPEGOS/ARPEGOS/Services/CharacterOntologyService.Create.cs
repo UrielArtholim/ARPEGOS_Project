@@ -90,7 +90,7 @@ namespace ARPEGOS.Services
         {
             var GameClassModel = DependencyHelper.CurrentContext.CurrentGame.Ontology.Model.ClassModel;
             var CharacterClassModel = this.Ontology.Model.ClassModel;
-            elementName = FileService.FormatName(FileService.EscapedName(elementName));
+            elementName = FileService.EscapedName(elementName.Split('#').Last());
             var elementString = GetString(elementName);
             var GameClass = GameClassModel.SelectClass(elementString);
             elementString = $"{this.Context}{elementName}";
@@ -99,19 +99,23 @@ namespace ARPEGOS.Services
                 CharacterClassModel.AddClass(CharacterClass);
             RDFOntologyClass CharacterPreviousClass = null;
             var GameSuperClasses = GameClassModel.GetSuperClassesOf(GameClass);
-            var UpperClasses = GameSuperClasses.ToList<RDFOntologyClass>();
-            UpperClasses.Reverse();
-            foreach (var item in UpperClasses)
+            if(GameSuperClasses.ClassesCount > 0)
             {
-                var CharacterUpperClassName = item.Value.ToString().Split('#').Last();
-                var CharacterUpperClassString = $"{this.Context}{CharacterUpperClassName}";
-                var CharacterUpperClass = new RDFOntologyClass(new RDFResource(CharacterUpperClassString));
-                if (!CheckClass(CharacterUpperClassName))
-                    CharacterClassModel.AddClass(CharacterUpperClass);
-                if (CharacterPreviousClass != null)
-                    CharacterClassModel.AddSubClassOfRelation(CharacterUpperClass, CharacterPreviousClass);
-                CharacterPreviousClass = CharacterUpperClass;
+                var UpperClasses = GameSuperClasses.ToList<RDFOntologyClass>();
+                UpperClasses.Reverse();
+                foreach (var item in UpperClasses)
+                {
+                    var CharacterUpperClassName = item.Value.ToString().Split('#').Last();
+                    var CharacterUpperClassString = $"{this.Context}{CharacterUpperClassName}";
+                    var CharacterUpperClass = new RDFOntologyClass(new RDFResource(CharacterUpperClassString));
+                    if (!CheckClass(CharacterUpperClassName))
+                        CharacterClassModel.AddClass(CharacterUpperClass);
+                    if (CharacterPreviousClass != null)
+                        CharacterClassModel.AddSubClassOfRelation(CharacterUpperClass, CharacterPreviousClass);
+                    CharacterPreviousClass = CharacterUpperClass;
+                }
             }
+            
             if (CharacterPreviousClass != null)
                 CharacterClassModel.AddSubClassOfRelation(CharacterClass, CharacterPreviousClass);
 
@@ -130,6 +134,9 @@ namespace ARPEGOS.Services
                         foreach (var entry in AnnotationsList)
                         {
                             var type = (RDFSemanticsEnums.RDFOntologyStandardAnnotation) Enum.Parse(typeof(RDFSemanticsEnums.RDFOntologyStandardAnnotation), propertyInfo.Name);
+                            var propertyShortName = propertyInfo.Name.Split('#').Last();
+                            var characterPropertyString = $"{this.Context}{propertyShortName}";
+                            var entryObject = entry.TaxonomyObject;
                             CharacterClassModel.AddStandardAnnotation(type, CharacterClass, entry.TaxonomyObject);
                         }
                     }
@@ -138,13 +145,17 @@ namespace ARPEGOS.Services
                         foreach (var entry in AnnotationsList)
                         {
                             var annotationShortName = entry.TaxonomyPredicate.ToString().Split('#').Last();
-                            RDFOntologyAnnotationProperty annotation = this.Ontology.Model.ClassModel.Annotations.CustomAnnotations.Where(entry => entry.TaxonomyPredicate.ToString().Contains(annotationShortName)).First().TaxonomyPredicate as RDFOntologyAnnotationProperty;
-                            if (annotation == null)
+                            var annotationEntries = this.Ontology.Model.ClassModel.Annotations.CustomAnnotations.Where(entry => entry.TaxonomyPredicate.ToString().Contains(annotationShortName));
+                            if(annotationEntries.Count() > 0)
                             {
-                                annotation = new RDFOntologyAnnotationProperty(new RDFResource($"{this.Context}{annotationShortName}"));
-                                this.Ontology.Model.PropertyModel.AddProperty(annotation);
-                            }
-                            CharacterClassModel.AddCustomAnnotation(annotation, CharacterClass, entry.TaxonomyObject);
+                                var annotation = annotationEntries.First().TaxonomyPredicate as RDFOntologyAnnotationProperty;
+                                if (annotation == null)
+                                {
+                                    annotation = new RDFOntologyAnnotationProperty(new RDFResource($"{this.Context}{annotationShortName}"));
+                                    this.Ontology.Model.PropertyModel.AddProperty(annotation);
+                                }
+                                CharacterClassModel.AddCustomAnnotation(annotation, CharacterClass, entry.TaxonomyObject);
+                            }                                
                         }
                     }
                 }
@@ -174,8 +185,12 @@ namespace ARPEGOS.Services
                     RDFOntologyClass DomainClass;
                     var DomainString = GameObjectProperty.Domain.ToString();
                     var DomainName = DomainString.Split('#').Last();
-                    if (!CheckClass(DomainString))
+                    var CharacterDomainString = $"{this.Context}{DomainName}";
+                    if (!CheckClass(CharacterDomainString))
+                    {
                         DomainClass = CreateClass(DomainName);
+                        this.Save();
+                    }
                     else
                         DomainClass = CharacterClassModel.SelectClass(DomainString);
                     CharacterObjectProperty.SetDomain(DomainClass);
@@ -186,10 +201,14 @@ namespace ARPEGOS.Services
                     RDFOntologyClass RangeClass;
                     var RangeString = GameObjectProperty.Range.ToString();
                     var RangeName = RangeString.Split('#').Last();
-                    if (!CheckClass(RangeString))
+                    var CharacterRangeString = $"{this.Context}{RangeName}";
+                    if (!CheckClass(CharacterRangeString))
+                    {
                         RangeClass = CreateClass(RangeName);
+                        this.Save();
+                    }
                     else
-                        RangeClass = CharacterClassModel.SelectClass(RangeString);
+                        RangeClass = CharacterClassModel.SelectClass(CharacterRangeString);
                     CharacterObjectProperty.SetRange(RangeClass);
                 }
                 CharacterObjectProperty.SetFunctional(GameObjectProperty.Functional);
@@ -273,10 +292,14 @@ namespace ARPEGOS.Services
                     RDFOntologyClass DomainClass;
                     var DomainString = GameDatatypeProperty.Domain.ToString();
                     var DomainName = DomainString.Split('#').Last();
-                    if (!CheckClass(DomainString))
+                    var CharacterDomainString = $"{this.Context}{DomainName}";
+                    if (!CheckClass(CharacterDomainString))
+                    {
                         DomainClass = CreateClass(DomainName);
+                        this.Save();
+                    }
                     else
-                        DomainClass = CharacterClassModel.SelectClass(DomainString);
+                        DomainClass = CharacterClassModel.SelectClass(CharacterDomainString);
                     CharacterDatatypeProperty.SetDomain(DomainClass);
                 }
                 if (GameDatatypeProperty.Range != null)

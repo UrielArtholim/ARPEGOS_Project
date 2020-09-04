@@ -4,6 +4,7 @@
              x:Class="ARPEGOS.Views.StageView">
     <ContentPage.Content>
         <StackLayout>
+            <ListView ItemTemplate=""
             <Label Text="Welcome to Xamarin.Forms!"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />

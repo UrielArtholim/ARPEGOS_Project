@@ -4,6 +4,7 @@ namespace ARPEGOS.Services
     using System;
     using System.IO;
     using System.Linq;
+    using System.Runtime.CompilerServices;
     using System.Text.RegularExpressions;
     using System.Threading;
     using System.Threading.Tasks;
@@ -45,13 +46,6 @@ namespace ARPEGOS.Services
             this.Ontology = ontology;
         }
 
-        // Ejemplo del naming de los nombres pa que nos entendamos
-        // nombre => glenn radars
-        // nombre formateado => Glenn Radars
-        // nombre escaped => Glenn_Radars
-        // file path => .../Glenn_Radars.owl
-        // los path van a usar el escapado, aunk los nombres guardados en las ontologias van a ser los formateados, por ser mas userfriendly
-
         public static async Task<GameOntologyService> LoadGame(string name, string version)
         {
             if(DependencyHelper.CurrentContext.CurrentGame != null)
@@ -65,8 +59,8 @@ namespace ARPEGOS.Services
             var graph =  RDFGraph.FromFile(RDFFormat, path);
             var context = $"{graph.Context}#";
             graph.SetContext(new Uri(context));
-            var prefix = string.Concat(Regex.Matches(FileService.EscapedName(name), "[A-Z]").Select(match => match.Value)).ToLower();
-            RDFNamespaceRegister.AddNamespace(new RDFNamespace(prefix, graph.Context.ToString()));
+            //var prefix = string.Concat(Regex.Matches(FileService.EscapedName(name), "[A-Z]").Select(match => match.Value)).ToLower();
+            //RDFNamespaceRegister.AddNamespace(new RDFNamespace(prefix, graph.Context.ToString()));
             var ontology = RDFOntology.FromRDFGraph(graph);
 
             return new GameOntologyService(name, path, context, ontology);
@@ -101,13 +95,13 @@ namespace ARPEGOS.Services
             var context = $"http://arpegos_project/Games/{FileService.EscapedName(game.Name)}/characters/{FileService.EscapedName(name)}#";
             var graph = new RDFGraph();
             graph.SetContext(new Uri(context));
-            var prefix = string.Concat(Regex.Matches(FileService.EscapedName(name), "[A-Z]").Select(match => match.Value)).ToLower();
-            RDFNamespaceRegister.AddNamespace(new RDFNamespace(prefix, graph.Context.ToString()));
-            var ontology = RDFOntology.FromRDFGraph(graph);
-
+            //var prefix = string.Concat(Regex.Matches(FileService.EscapedName(name), "[A-Z]").Select(match => match.Value)).ToLower();
+            //RDFNamespaceRegister.AddNamespace(new RDFNamespace(prefix, graph.Context.ToString()));
+            RDFOntology ontology = null;
+            await Task.Run(() => ontology = RDFOntology.FromRDFGraph(graph));
             var character = new CharacterOntologyService(name, path, context, ontology);
             character.Save();
-            return character;
+            return character;            
         }
     }
 }
