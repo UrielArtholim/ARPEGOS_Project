@@ -67,15 +67,12 @@ namespace ARPEGOS.Services
             string predicateName = predicateString.Split('#').Last();
             var hasPredicate = CheckDatatypeProperty(predicateString);
             RDFOntologyDatatypeProperty predicate;
-            if (hasPredicate == false)
-                predicate = CreateDatatypeProperty(predicateName);
-            else
-                predicate = this.Ontology.Model.PropertyModel.SelectProperty(predicateString) as RDFOntologyDatatypeProperty;
 
             string subjectString, valuetype;
 
             if (hasPredicate == true)
             {
+                predicate = this.Ontology.Model.PropertyModel.SelectProperty(predicateString) as RDFOntologyDatatypeProperty;
                 var CharacterPredicateAssertions = this.Ontology.Data.Relations.Assertions.SelectEntriesByPredicate(predicate).SingleOrDefault();
                 if(CharacterPredicateAssertions != null)
                 {
@@ -92,6 +89,7 @@ namespace ARPEGOS.Services
             }
             else
             {
+                predicate = CreateDatatypeProperty(predicateName);
                 subjectString = $"{this.Context}{this.Name}";
                 valuetype = predicate.Range.Value.ToString().Split('#').Last();
             }
@@ -109,14 +107,11 @@ namespace ARPEGOS.Services
             var predicateName = predicateString.Split('#').Last();
             var hasPredicate = CheckObjectProperty(predicateString);
             RDFOntologyObjectProperty predicate;
-            if (hasPredicate == false)
-                predicate = CreateObjectProperty(predicateName);
-            else
-                predicate = this.Ontology.Model.PropertyModel.SelectProperty(predicateString) as RDFOntologyObjectProperty;
             string subject;
 
             if (hasPredicate == true)
             {
+                predicate = this.Ontology.Model.PropertyModel.SelectProperty(predicateString) as RDFOntologyObjectProperty;
                 var CharacterPredicateAssertions = this.Ontology.Data.Relations.Assertions.SelectEntriesByPredicate(predicate).SingleOrDefault();
                 if(CharacterPredicateAssertions != null)
                 {
@@ -125,10 +120,16 @@ namespace ARPEGOS.Services
                     this.Save();
                 }
                 else
+                {
+                    predicate = CreateObjectProperty(predicateName);
                     subject = $"{this.Context}{this.Name}";
+                }
             }
             else
+            {
+                predicate = CreateObjectProperty(predicateName);
                 subject = $"{this.Context}{this.Name}";
+            }
             AddObjectProperty(subject, predicateString, objectString);
             this.Save();
         }

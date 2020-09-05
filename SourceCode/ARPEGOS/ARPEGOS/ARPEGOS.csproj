@@ -15,6 +15,7 @@
     <None Remove="DefaultGames\Anima Beyond Fantasy\characters\Ctuchik.owl" />
     <None Remove="DefaultGames\Anima Beyond Fantasy\characters\Test.owl" />
     <None Remove="DefaultGames\Anima Beyond Fantasy\gamefiles\Core Exxet Safe.owl" />
+    <None Remove="DefaultGames\Anima Beyond Fantasy\Gamefiles\Core Exxet.owl" />
     <None Remove="DefaultGames\Anima Beyond Fantasy\Nanatsu No Taizai.owl" />
     <None Remove="DefaultGames\Core Exxet.owl" />
     <None Remove="DefaultGames\Nanatsu No Taizai\gamefiles\Nanatsu No Taizai.owl" />
@@ -27,9 +28,7 @@
 
   <ItemGroup>
     <EmbeddedResource Include="DefaultGames\Anima Beyond Fantasy\characters\Test.owl" />
-    <EmbeddedResource Include="DefaultGames\Anima Beyond Fantasy\gamefiles\Core Exxet.owl">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </EmbeddedResource>
+    <EmbeddedResource Include="DefaultGames\Anima Beyond Fantasy\Gamefiles\Core Exxet.owl" />
     <EmbeddedResource Include="DefaultGames\Nanatsu No Taizai\gamefiles\Nanatsu No Taizai.owl">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </EmbeddedResource>
@@ -123,10 +122,19 @@
     <EmbeddedResource Update="Views\CreationRootView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Update="Views\MultipleChoiceGroupView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\MultipleChoiceView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Views\OptionsView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\SelectVersionView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\SingleChoiceView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\SkillListView.xaml">
@@ -135,19 +143,10 @@
     <EmbeddedResource Update="Views\SkillView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\StageView.xaml">
+    <EmbeddedResource Update="Views\ValuedGroupView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\Templates\SingleChoiceView.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Views\Templates\StageMultipleChoiceTemplate.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Views\Templates\StageSingleChoiceTemplate.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Views\Templates\StageValuedChoiceTemplate.xaml">
+    <EmbeddedResource Update="Views\ValuedView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>

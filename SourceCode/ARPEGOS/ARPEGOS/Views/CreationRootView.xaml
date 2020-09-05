@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:controls="clr-namespace:ARPEGOS.Controls"
              x:Class="ARPEGOS.Views.CreationRootView"
-             Title="{Binding Stage}">
+             Title="{Binding FirstStage}">
     <ContentPage.Content>
         <Grid>
             <StackLayout Spacing="10" Padding="10" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">

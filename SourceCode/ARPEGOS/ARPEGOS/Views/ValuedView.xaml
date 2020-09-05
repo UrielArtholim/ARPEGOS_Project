@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:controls="clr-namespace:ARPEGOS.Controls"
+             x:Class="ARPEGOS.Views.ValuedView"
+             Title="{Binding StageName}">
+    <ContentPage.Content>
+        <Grid>
+            <StackLayout Spacing="5" Padding="0" Margin="0,0,0,0">
+                <ListView ItemsSource="{Binding Data}" HasUnevenRows="True">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Frame x:Name="ItemFrame"
+                                       VerticalOptions="Start"
+                                       Margin="20,20,20,20"
+                                       BorderColor="{DynamicResource SeparatorColor}">
+                                    <Grid x:Name="SliderItem" 
+                                          HorizontalOptions="FillAndExpand"
+                                          RowDefinitions="Auto,Auto"
+                                          ColumnDefinitions="2*,*,*,*">
+                                        <Label x:Name="ItemNameLabel"
+                                               Grid.Row="0"
+                                               Grid.Column="0"
+                                               VerticalOptions="Center"
+                                               HorizontalTextAlignment="Center"
+                                               Text="{Binding FormattedName}"/>
+                                        <Label x:Name="SliderValueLabel"
+                                               Grid.Row="0"
+                                               Grid.Column="1"
+                                               VerticalOptions="Center"
+                                               HorizontalTextAlignment="Center"
+                                               Text="{Binding Source={x:Reference UserInputSlider},Path=Value}"/>
+                                        <Label x:Name="ItemValueLabel"
+                                               Grid.Row="0"
+                                               Grid.Column="2"
+                                               VerticalOptions="Center"
+                                               HorizontalTextAlignment="Center"
+                                               Text="Final Value"/>
+                                        <ImageButton x:Name="InformationButton"
+                                               Grid.Row="0"
+                                               Grid.Column="3"
+                                               Source="description.png"/>
+                                        <controls:CustomSlider x:Name="UserInputSlider" 
+                                                Grid.Row="1" 
+                                                Grid.Column="0" 
+                                                Grid.ColumnSpan="4"
+                                                Step="{Binding Step}"
+                                                Minimum="0"
+                                                Maximum="{Binding Source={x:RelativeSource AncestorType={x:Type ContentPage}}, Path=BindingContext.CurrentLimit}"/>
+                                    </Grid>
+                                </Frame>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                <Button Text="Siguiente" 
+                            Command="{Binding NextCommand}" 
+                            IsVisible="{Binding Continue}"
+                            BackgroundColor="{DynamicResource ButtonColor}"
+                            AbsoluteLayout.LayoutFlags="PositionProportional"
+                            AbsoluteLayout.LayoutBounds=".95,.95,80,80"/>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

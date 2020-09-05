@@ -41,38 +41,45 @@ namespace ARPEGOS.Services
             var GameFact = GameDataModel.SelectFact(GameFactString);
             var CharacterFact = new RDFOntologyFact(new RDFResource($"{this.Context}{elementName}"));
             if (!CheckFact(GetString(elementName, true)))
-                CharacterDataModel.AddFact(CharacterFact);
-            var GameAnnotations = GameDataModel.Annotations;
-            foreach (var propertyInfo in GameAnnotations.GetType().GetProperties())
-            {
-                var AnnotationsList = new List<RDFOntologyTaxonomyEntry>();
-                var propertyTaxonomy = GameAnnotations.GetType().GetProperty(propertyInfo.Name).GetValue(GameAnnotations) as RDFOntologyTaxonomy;
-                if (propertyTaxonomy.EntriesCount > 0)
-                {
-                    foreach (var entry in propertyTaxonomy)
-                        if (entry.TaxonomySubject == GameFact)
-                            AnnotationsList.Add(entry);
+                this.Ontology.Data.AddFact(CharacterFact);
 
-                    if (propertyInfo.Name != "CustomAnnotations")
+            if(elementName != this.Name)
+            {
+                var GameAnnotations = GameDataModel.Annotations;
+                foreach (var propertyInfo in GameAnnotations.GetType().GetProperties())
+                {
+                    var AnnotationsList = new List<RDFOntologyTaxonomyEntry>();
+                    var propertyTaxonomy = GameAnnotations.GetType().GetProperty(propertyInfo.Name).GetValue(GameAnnotations) as RDFOntologyTaxonomy;
+                    if (propertyTaxonomy.EntriesCount > 0)
                     {
-                        foreach (var entry in AnnotationsList)
+                        foreach (var entry in propertyTaxonomy)
+                            if (entry.TaxonomySubject == GameFact)
+                                AnnotationsList.Add(entry);
+
+                        if (propertyInfo.Name != "CustomAnnotations")
                         {
-                            var type = (RDFSemanticsEnums.RDFOntologyStandardAnnotation) Enum.Parse(typeof(RDFSemanticsEnums.RDFOntologyStandardAnnotation), propertyInfo.Name);
-                            CharacterDataModel.AddStandardAnnotation(type, CharacterFact, entry.TaxonomyObject);
-                        }
-                    }
-                    else
-                    {
-                        foreach (var entry in AnnotationsList)
-                        {
-                            var annotationShortName = entry.TaxonomyPredicate.ToString().Split('#').Last();
-                            RDFOntologyAnnotationProperty annotation = this.Ontology.Data.Annotations.CustomAnnotations.Where(entry => entry.TaxonomyPredicate.ToString().Contains(annotationShortName)).First().TaxonomyPredicate as RDFOntologyAnnotationProperty;
-                            if (annotation == null)
+                            foreach (var entry in AnnotationsList)
                             {
-                                annotation = new RDFOntologyAnnotationProperty(new RDFResource($"{this.Context}{annotationShortName}"));
-                                this.Ontology.Model.PropertyModel.AddProperty(annotation);
+                                var type = (RDFSemanticsEnums.RDFOntologyStandardAnnotation)Enum.Parse(typeof(RDFSemanticsEnums.RDFOntologyStandardAnnotation), propertyInfo.Name);
+                                CharacterDataModel.AddStandardAnnotation(type, CharacterFact, entry.TaxonomyObject);
                             }
-                            CharacterDataModel.AddCustomAnnotation(annotation, CharacterFact, entry.TaxonomyObject);
+                        }
+                        else
+                        {
+                            foreach (var entry in AnnotationsList)
+                            {
+                                var annotationShortName = entry.TaxonomyPredicate.ToString().Split('#').Last();
+                                var annotationEntries = this.Ontology.Data.Annotations.CustomAnnotations.Where(entry => entry.TaxonomyPredicate.ToString().Contains(annotationShortName));
+                                RDFOntologyAnnotationProperty annotation = null;
+                                if(annotationEntries.Count() > 0)
+                                    annotation = annotationEntries.First().TaxonomyPredicate as RDFOntologyAnnotationProperty;                                    
+                                if (annotation == null)
+                                {
+                                    annotation = new RDFOntologyAnnotationProperty(new RDFResource($"{this.Context}{annotationShortName}"));
+                                    this.Ontology.Model.PropertyModel.AddProperty(annotation);
+                                }
+                                CharacterDataModel.AddCustomAnnotation(annotation, CharacterFact, entry.TaxonomyObject);
+                            }
                         }
                     }
                 }
@@ -254,8 +261,20 @@ namespace ARPEGOS.Services
                         foreach (var entry in AnnotationsList)
                         {
                             var annotationShortName = entry.TaxonomyPredicate.ToString().Split('#').Last();
-                            RDFOntologyAnnotationProperty annotation = this.Ontology.Model.PropertyModel.Annotations.CustomAnnotations.Where(entry => entry.TaxonomyPredicate.ToString().Contains(annotationShortName)).First().TaxonomyPredicate as RDFOntologyAnnotationProperty;
-                            if (annotation == null)
+                            RDFOntologyAnnotationProperty annotation;
+                            var CharacterPropertyCustomAnnotations = this.Ontology.Model.PropertyModel.Annotations.CustomAnnotations;
+                            if (CharacterPropertyCustomAnnotations.EntriesCount > 0)
+                            {
+                                var annotationPropertyEntries = CharacterPropertyCustomAnnotations.Where(entry => entry.TaxonomyPredicate.ToString().Contains(annotationShortName));
+                                if (annotationPropertyEntries.Count() > 0)
+                                    annotation = annotationPropertyEntries.First().TaxonomyPredicate as RDFOntologyAnnotationProperty;
+                                else
+                                {
+                                    annotation = new RDFOntologyAnnotationProperty(new RDFResource($"{this.Context}{annotationShortName}"));
+                                    CharacterPropertyModel.AddProperty(annotation);
+                                }
+                            }
+                            else
                             {
                                 annotation = new RDFOntologyAnnotationProperty(new RDFResource($"{this.Context}{annotationShortName}"));
                                 CharacterPropertyModel.AddProperty(annotation);
@@ -351,8 +370,20 @@ namespace ARPEGOS.Services
                         foreach (var entry in AnnotationsList)
                         {
                             var annotationShortName = entry.TaxonomyPredicate.ToString().Split('#').Last();
-                            RDFOntologyAnnotationProperty annotation = this.Ontology.Model.PropertyModel.Annotations.CustomAnnotations.Where(entry => entry.TaxonomyPredicate.ToString().Contains(annotationShortName)).First().TaxonomyPredicate as RDFOntologyAnnotationProperty;
-                            if (annotation == null)
+                            RDFOntologyAnnotationProperty annotation;
+                            var CharacterPropertyCustomAnnotations = this.Ontology.Model.PropertyModel.Annotations.CustomAnnotations;
+                            if(CharacterPropertyCustomAnnotations.EntriesCount > 0)
+                            {
+                                var annotationPropertyEntries = CharacterPropertyCustomAnnotations.Where(entry => entry.TaxonomyPredicate.ToString().Contains(annotationShortName));
+                                if(annotationPropertyEntries.Count() > 0)
+                                    annotation = annotationPropertyEntries.First().TaxonomyPredicate as RDFOntologyAnnotationProperty;
+                                else
+                                {
+                                    annotation = new RDFOntologyAnnotationProperty(new RDFResource($"{this.Context}{annotationShortName}"));
+                                    CharacterPropertyModel.AddProperty(annotation);
+                                }
+                            }
+                            else
                             {
                                 annotation = new RDFOntologyAnnotationProperty(new RDFResource($"{this.Context}{annotationShortName}"));
                                 CharacterPropertyModel.AddProperty(annotation);
@@ -375,10 +406,10 @@ namespace ARPEGOS.Services
         {
             RDFOntologyFact CharacterSubject = null;
             elementName = FileService.EscapedName(elementName);
-            if (FileService.EscapedName(this.Name).Contains(elementName))
+            if (elementName.Contains(FileService.EscapedName(this.Name)))
             {
                 if (!CheckFact($"{this.Context}{this.Name}"))
-                    CharacterSubject = CreateFact(this.Name);
+                    CharacterSubject = CreateFact(FileService.EscapedName(this.Name));
                 RDFOntologyClass subjectClass;
                 var subjectClassName = "Personaje_Jugador";
                 var subjectClassString = GetString(subjectClassName);
@@ -407,15 +438,15 @@ namespace ARPEGOS.Services
                 else
                     CharacterSubjectClass = CharacterClassModel.SelectClass(FactClassString);
                 RDFOntologyFact CharacterObject;
-                var CharacterString = $"{this.Context}{this.Name}";
-                if (!CheckFact(CharacterString))
+                var FactString = $"{this.Context}{elementName}";
+                if (!CheckFact(FactString))
                 {
-                    CharacterSubject = CreateFact(this.Name);
+                    CharacterSubject = CreateFact(elementName);
                     CharacterDataModel.AddClassTypeRelation(CharacterSubject, CharacterSubjectClass);
                 }
                 else
                 {
-                    CharacterSubject = CharacterDataModel.SelectFact(CharacterString);
+                    CharacterSubject = CharacterDataModel.SelectFact(FactString);
                     CharacterDataModel.AddClassTypeRelation(CharacterSubject, CharacterSubjectClass);
                 }
                 var GameNamedFactAssertions = GameDataModel.Relations.Assertions.SelectEntriesBySubject(GameNamedFact);

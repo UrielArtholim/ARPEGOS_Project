@@ -49,6 +49,21 @@ namespace ARPEGOS
             get => isSelected;
             set => SetProperty(ref this.isSelected, value);
         }
+
+        private bool isEnabled;
+        public bool IsEnabled
+        {
+            get => isEnabled;
+            set => SetProperty(ref this.isEnabled, value);
+        }
+        private float cost;
+        public float Cost
+        {
+            get => cost;
+            set => SetProperty(ref this.cost, value);
+        }
+
+
         #endregion
 
         #region Constructor
@@ -57,11 +72,13 @@ namespace ARPEGOS
             FullName = elementString;
             ShortName = elementString.Split('#').Last();
             this.Class = Class;
+            IsEnabled = true;
             if (ShortName.Contains(Class))
                 if (!ShortName.Contains("_de_"))
                     ShortName = ShortName.Replace(Class,"").Trim();
             FormattedName = ShortName.Replace("Per_","").Replace("_Total","").Replace('_',' ').Trim();
             Description = description;
+            this.Cost = -1;
         }
         #endregion
 

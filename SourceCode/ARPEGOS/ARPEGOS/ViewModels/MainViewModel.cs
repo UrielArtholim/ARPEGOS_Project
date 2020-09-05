@@ -5,6 +5,7 @@ namespace ARPEGOS.ViewModels
     using System.Collections.ObjectModel;
     using System.Linq;
     using System.Net.Http.Headers;
+    using System.Runtime.CompilerServices;
     using System.Threading;
     using System.Threading.Tasks;
     using System.Windows.Input;
@@ -127,7 +128,7 @@ namespace ARPEGOS.ViewModels
                 }
             });
 
-            this.DeleteButtonCommand = new Command(() => 
+            this.DeleteButtonCommand = new Command(async() => 
             {
                 this.PreviousStatus = this.CurrentStatus;
                 switch(this.PreviousStatus)
@@ -137,13 +138,11 @@ namespace ARPEGOS.ViewModels
                     case SelectionStatus.DeletingGame: this.CurrentStatus = SelectionStatus.SelectingGame; break;
                     case SelectionStatus.DeletingCharacter: this.CurrentStatus = SelectionStatus.SelectingCharacter; break;
                 }
-                this.CancelEnabled = !this.CancelEnabled;
                 this.Load(CurrentStatus); 
             });
 
-            this.CancelButtonCommand = new Command(() => 
-            {
-                this.CancelEnabled = false;
+            this.CancelButtonCommand = new Command(() =>
+            { 
                 this.CurrentStatus = this.PreviousStatus;  
                 this.Load(CurrentStatus); 
             });
@@ -237,27 +236,33 @@ namespace ARPEGOS.ViewModels
             switch (status)
             {
                 case SelectionStatus.AddGame:
+                    this.CancelEnabled = false;
                     items = FileService.ListGames();
                     break;
                 case SelectionStatus.SelectingGame:
+                    this.CancelEnabled = false;
                     items = FileService.ListGames();
                     break;
                 case SelectionStatus.DeletingGame:
+                    this.CancelEnabled = true;
                     updatedItems = FileService.ListGames().ToList();
                     if (updatedItems.Count() == 0)
                         this.CurrentStatus = SelectionStatus.SelectingGame;
                     items = updatedItems;
                     break;
                 case SelectionStatus.SelectingCharacter:
+                    this.CancelEnabled = false;
                     items = FileService.ListCharacters(this.SelectedGame);
                     break;
                 case SelectionStatus.DeletingCharacter:
+                    this.CancelEnabled = true;
                     updatedItems = FileService.ListCharacters(this.SelectedGame).ToList();
                     if (updatedItems.Count() == 0)
                         this.CurrentStatus = SelectionStatus.SelectingCharacter;
                     items = updatedItems;
                     break;
                 case SelectionStatus.Done:
+                    this.CancelEnabled = false;
                     items = new string[0];
                     #if DEBUG
                     items = new List<string> { "Volver a empezar" };

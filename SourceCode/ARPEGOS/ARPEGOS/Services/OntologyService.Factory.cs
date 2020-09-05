@@ -22,6 +22,11 @@ namespace ARPEGOS.Services
         public string Name { get; }
 
         /// <summary>
+        /// Gets the formatted name of the ontology
+        /// </summary>
+        public string FormattedName { get; }
+
+        /// <summary>
         /// Gets the file path of the ontology
         /// </summary>
         public string Path { get; }
@@ -40,7 +45,8 @@ namespace ARPEGOS.Services
 
         public OntologyService(string name, string path, string context, RDFOntology ontology)
         {
-            this.Name = FileService.FormatName(name);
+            this.Name = name;
+            this.FormattedName = FileService.FormatName(name);
             this.Path = path;
             this.Context = context;
             this.Ontology = ontology;

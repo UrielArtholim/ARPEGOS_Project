@@ -1,4 +1,5 @@
 ﻿using ARPEGOS.Helpers;
+using ARPEGOS.ViewModels;
 using RDFSharp.Model;
 using RDFSharp.Semantics.OWL;
 using System;
@@ -298,7 +299,7 @@ namespace ARPEGOS.Services
         /// <returns></returns>
         public dynamic GetIndividualsGrouped (string classString, bool applyOnCharacter = false)
         {
-            dynamic groups;
+            dynamic groups = null;
             ObservableCollection<Group> subclasses = GetSubClasses(classString, applyOnCharacter);
             if (subclasses != null)
             {
@@ -306,10 +307,7 @@ namespace ARPEGOS.Services
                 foreach (Group groupItem in groups)
                     groupItem.GroupList = GetIndividualsGrouped(groupItem.GroupString, applyOnCharacter);
             }
-            else
-            {
-                groups = GetIndividuals(classString, applyOnCharacter);
-            }
+
             return groups;
         }//MODIFIED
 
@@ -491,119 +489,207 @@ namespace ARPEGOS.Services
         /// <param name="LimitValue">Limit value obtained</param>
         /// <param name="applyOnCharacter">Search inside character</param>
         /// <returns></returns>
-        public string GetLimit (string ElementString, out float? LimitValue, bool applyOnCharacter = false)
+        public string GetLimit (string stageName, bool isGeneral = false, bool applyOnCharacter = false)
         {
-            var LimitPropertyString = string.Empty;
-            var hasLimit = false;
-            LimitValue = null;
-            var LimitWords = new List<string>()
+            var game = DependencyHelper.CurrentContext.CurrentGame;
+            var character = DependencyHelper.CurrentContext.CurrentCharacter;
+            var CharacterStageString = $"{this.Context}{stageName}";
+            var CharacterLimitString = string.Empty;
+            var LimitValueString = string.Empty;
+            if (!isGeneral)
             {
-                "Límite",
-                "Limit",
-                "Limite"
-            };
-
-            RDFOntology CurrentOntology;
-            string CurrentContext;
-            string currentElementString = ElementString;
-            var shortName = ElementString.Split('#').Last();
-            if (applyOnCharacter)
-            {
-                CurrentOntology = this.Ontology;
-                CurrentContext = this.Context;
-                
-                currentElementString = $"{this.Context}{shortName}";
-            }
-            else
-            {
-                CurrentOntology = DependencyHelper.CurrentContext.CurrentGame.Ontology;
-                CurrentContext = DependencyHelper.CurrentContext.CurrentGame.Context;
-            }
-
-            var PropertyModel = CurrentOntology.Model.PropertyModel;
-            var ResultProperties = PropertyModel.Where(entry => LimitWords.Any(word => entry.ToString().Contains(word)));
-            var ElementWords = shortName.Split('_').ToList();
-            var CompareList = new List<string>();
-            var index = 0;
-            var FilterResultsCounter = ResultProperties.Count();
-
-            while (FilterResultsCounter > 1)
-            {
-                CompareList.Add(ElementWords.ElementAt(index));
-                ResultProperties = ResultProperties.Where(entry => CompareList.All(word => entry.ToString().Contains(word)));
-                FilterResultsCounter = ResultProperties.Count();
-                if (ElementWords.Count() - 1 == index && ResultProperties.Count() > 1)
-                    break;
-                ++index;
-            }
-
-            if (FilterResultsCounter > 0)
-            {
-                hasLimit = true;
-                RDFOntologyDatatypeProperty LimitProperty;
-                if (FilterResultsCounter > 1)
-                    LimitProperty = ResultProperties.First() as RDFOntologyDatatypeProperty;
-                else
-                    LimitProperty = ResultProperties.Single() as RDFOntologyDatatypeProperty;
-                LimitPropertyString = LimitProperty.ToString();
-                var LimitPropertyShortName = LimitPropertyString.Split('#').Last();
-                RDFOntologyDatatypeProperty CharacterLimitProperty;
-                if (!CheckDatatypeProperty(LimitPropertyString))
-                    CharacterLimitProperty = CreateDatatypeProperty(LimitPropertyString);
-                else
-                    CharacterLimitProperty = this.Ontology.Model.PropertyModel.SelectProperty(LimitPropertyString) as RDFOntologyDatatypeProperty;
-                var CharacterPropertyAssertions = this.Ontology.Data.Relations.Assertions.SelectEntriesByPredicate(CharacterLimitProperty);
-                if (CharacterPropertyAssertions.Count() == 0)
+                var stageString = character.GetString(stageName);
+                var stageClass = game.Ontology.Model.ClassModel.SelectClass(stageString);
+                if (stageClass != null)
                 {
-                    IEnumerable<RDFOntologyTaxonomyEntry> ResultAnnotations = CurrentOntology.Model.PropertyModel.Annotations.IsDefinedBy.SelectEntriesBySubject(LimitProperty);
-                    FilterResultsCounter = ResultAnnotations.Count();
-                    CompareList.Clear();
-
-                    while (FilterResultsCounter > 1)
+                    var ClassCustomAnnotations = game.Ontology.Model.ClassModel.Annotations.CustomAnnotations;
+                    var StageCustomAnnotations = ClassCustomAnnotations.SelectEntriesBySubject(stageClass);
+                    var StageLimitAnnotationEntries = StageCustomAnnotations.Where(entry => entry.TaxonomyPredicate.ToString().Contains("StageLimit"));
+                    if (StageLimitAnnotationEntries.Count() > 0)
                     {
-                        CompareList.Add(ElementWords.ElementAt(index));
-                        ResultAnnotations = ResultAnnotations.Where(entry => CompareList.All(word => entry.ToString().Contains(word)));
-                        FilterResultsCounter = ResultAnnotations.Count();
-                        ++index;
-                    }
-
-                    if (ResultAnnotations.Count() > 0)
-                    {
-                        var LimitPropertyDefinition = ResultAnnotations.Single().TaxonomyObject.ToString();
-                        if (LimitPropertyDefinition.Contains('^'))
-                            LimitPropertyDefinition = LimitPropertyDefinition.Split('^').First();
-
-                        if (!Regex.IsMatch(LimitPropertyDefinition, @"\d"))
-                            LimitValue = GetValue(LimitPropertyDefinition);
-                        else
-                            LimitValue = Convert.ToSingle(LimitPropertyDefinition);
-                    }
-                }
-                else
-                {
-                    var entry = CharacterPropertyAssertions.Single();
-                    var value = entry.TaxonomyObject.ToString().Split('^').First();
-                    LimitValue = Convert.ToSingle(value);
-                }
-            }
-            else
-            {
-                var parents = GetParentClasses(LimitPropertyString);
-                if (parents != null)
-                {
-                    var parentList = parents.Split('|').ToList();
-                    foreach (var parent in parentList)
-                    {
-                        if (hasLimit == false)
+                        var LimitName = StageLimitAnnotationEntries.Single().TaxonomyObject.ToString().Split('^').First();
+                        if (CharacterLimitString == null)
+                            CharacterLimitString = $"{character.Context}{LimitName}";
+                        var CharacterAssertions = character.GetCharacterProperties();
+                        bool assertionFound = CharacterAssertions.ContainsKey(CharacterLimitString);
+                        CharacterLimitString = $"{character.Context}{LimitName}";
+                        if (!assertionFound)
                         {
-                            LimitPropertyString = GetLimit(parent, out LimitValue);
-                            hasLimit = LimitPropertyString != null;
+                            var GameLimitString = character.GetString(LimitName);
+                            var GameLimitProperty = game.Ontology.Model.PropertyModel.SelectProperty(GameLimitString);
+                            var GamePropertyIsDefinedByAnnotations = game.Ontology.Model.PropertyModel.Annotations.IsDefinedBy;
+                            var GameLimitIsDefinedByAnnotations = GamePropertyIsDefinedByAnnotations.SelectEntriesBySubject(GameLimitProperty);
+                            if (GameLimitIsDefinedByAnnotations.EntriesCount > 0)
+                            {
+                                var definitionValue = GameLimitIsDefinedByAnnotations.Single().TaxonomyObject.ToString().Split('^').First();
+                                var definitionString = character.GetString(definitionValue);
+                                var definitionProperty = game.Ontology.Model.PropertyModel.SelectProperty(definitionString);
+                                var GameDefinitionIsDefinedByAnnotations = GamePropertyIsDefinedByAnnotations.SelectEntriesBySubject(definitionProperty);
+                                if (GameDefinitionIsDefinedByAnnotations.EntriesCount > 0)
+                                {
+                                    definitionValue = GameDefinitionIsDefinedByAnnotations.Single().TaxonomyObject.ToString().Split('^').First();
+                                    LimitValueString = character.GetValue(definitionValue, null, null, applyOnCharacter).ToString().Split('^').First();
+                                }
+                            }
+                        }
+                        else
+                        {
+                            CharacterAssertions.TryGetValue(CharacterLimitString, out LimitValueString);
+                            LimitValueString = LimitValueString.Split('^').First();
+                        }
+
+                        character.UpdateDatatypeAssertion(CharacterStageString, LimitValueString);
+                    }
+                }
+                else
+                {
+                    var StageProperty = game.Ontology.Model.PropertyModel.SelectProperty(stageString);
+                    var ClassCustomAnnotations = game.Ontology.Model.PropertyModel.Annotations.CustomAnnotations;
+                    var StageCustomAnnotations = ClassCustomAnnotations.SelectEntriesBySubject(StageProperty);
+                    var StageLimitAnnotationEntries = StageCustomAnnotations.Where(entry => entry.TaxonomyPredicate.ToString().Contains("StageLimit"));
+                    if (StageLimitAnnotationEntries.Count() > 0)
+                    {
+                        var LimitName = StageLimitAnnotationEntries.Single().TaxonomyObject.ToString().Split('^').First();
+                        CharacterLimitString = character.GetString(LimitName, true);
+                        var CharacterAssertions = character.GetCharacterProperties();
+                        bool assertionFound = CharacterAssertions.ContainsKey(CharacterLimitString);
+                        if (!assertionFound)
+                        {
+                            CharacterLimitString = $"{character.Context}{LimitName}";
+                            var GameLimitString = character.GetString(LimitName);
+                            var GameLimitProperty = game.Ontology.Model.PropertyModel.SelectProperty(GameLimitString);
+                            var GamePropertyIsDefinedByAnnotations = game.Ontology.Model.PropertyModel.Annotations.IsDefinedBy;
+                            var GameLimitIsDefinedByAnnotations = GamePropertyIsDefinedByAnnotations.SelectEntriesBySubject(GameLimitProperty);
+                            if (GameLimitIsDefinedByAnnotations.EntriesCount > 0)
+                            {
+                                var definitionValue = GameLimitIsDefinedByAnnotations.Single().TaxonomyObject.ToString().Split('^').First();
+                                if (Regex.IsMatch(definitionValue, @"\d") && (!Regex.IsMatch(definitionValue, @"\D")))
+                                {
+                                    LimitValueString = definitionValue;
+                                }
+                                else
+                                {
+                                    var definitionString = character.GetString(definitionValue);
+                                    var definitionProperty = game.Ontology.Model.PropertyModel.SelectProperty(definitionString);
+                                    var GameDefinitionIsDefinedByAnnotations = GamePropertyIsDefinedByAnnotations.SelectEntriesBySubject(definitionProperty);
+                                    if (GameDefinitionIsDefinedByAnnotations.EntriesCount > 0)
+                                    {
+                                        definitionValue = GameDefinitionIsDefinedByAnnotations.Single().TaxonomyObject.ToString().Split('^').First();
+                                        LimitValueString = character.GetValue(definitionValue, null, null, applyOnCharacter).ToString().Split('^').First();
+                                    }
+                                }
+                            }
+                        }
+                        else
+                        {
+                            CharacterAssertions.TryGetValue(CharacterLimitString, out LimitValueString);
+                            LimitValueString = LimitValueString.Split('^').First();
+                        }
+                        character.UpdateDatatypeAssertion(CharacterStageString, LimitValueString);
+                    }
+                }
+            }
+            else
+            {
+                var GamePropertyCustomAnnotations = game.Ontology.Model.PropertyModel.Annotations.CustomAnnotations;
+                var GamePropertyGeneralLimitAnnotations = GamePropertyCustomAnnotations.Where(entry => entry.TaxonomyPredicate.ToString().Contains("GeneralLimit"));
+                if(GamePropertyGeneralLimitAnnotations.Count() > 0)
+                {
+                    var GamePropertyGeneralLimit = GamePropertyGeneralLimitAnnotations.Single().TaxonomySubject;
+                    var GeneralLimitName = GamePropertyGeneralLimit.ToString().Split('#').Last();
+                    CharacterLimitString = $"{character.Context}{GeneralLimitName}";
+                    var GamePropertyIsDefinedByAnnotations = game.Ontology.Model.PropertyModel.Annotations.IsDefinedBy;
+                    var GameLimitIsDefinedByAnnotations = GamePropertyIsDefinedByAnnotations.SelectEntriesBySubject(GamePropertyGeneralLimit);
+                    if (GameLimitIsDefinedByAnnotations.EntriesCount > 0)
+                    {
+                        var definitionValue = GameLimitIsDefinedByAnnotations.Single().TaxonomyObject.ToString().Split('^').First();
+                        if (Regex.IsMatch(definitionValue, @"\d") && (!Regex.IsMatch(definitionValue, @"\D")))
+                        {
+                            LimitValueString = definitionValue;
+                        }
+                        else
+                        {
+                            var definitionString = character.GetString(definitionValue);
+                            var definitionProperty = game.Ontology.Model.PropertyModel.SelectProperty(definitionString);
+                            var GameDefinitionIsDefinedByAnnotations = GamePropertyIsDefinedByAnnotations.SelectEntriesBySubject(definitionProperty);
+                            if (GameDefinitionIsDefinedByAnnotations.EntriesCount > 0)
+                            {
+                                definitionValue = GameDefinitionIsDefinedByAnnotations.Single().TaxonomyObject.ToString().Split('^').First();
+                                LimitValueString = character.GetValue(definitionValue, null, null, applyOnCharacter).ToString().Split('^').First();
+                            }
+                        }
+                        character.UpdateDatatypeAssertion(CharacterLimitString, LimitValueString);
+                    }
+                }
+                
+            }
+            return CharacterStageString.Split('#').Last();
+        }//MODIFIED
+
+        public int GetStep(string itemName)
+        {
+            int step = 1;
+            var characterTypeStageName = StageViewModel.RootStage.Split('#').Last();
+            var characterTypeStageString = DependencyHelper.CurrentContext.CurrentCharacter.GetString(characterTypeStageName, true);
+            var characterTypePropertyString = this.GetObjectPropertyAssociated(characterTypeStageString, true);
+            var characterTypeProperty = this.Ontology.Model.PropertyModel.SelectProperty(characterTypePropertyString);
+            var characterTypeFact = this.Ontology.Data.Relations.Assertions.SelectEntriesByPredicate(characterTypeProperty).Single().TaxonomyObject;
+            var characterTypeAssertions = this.Ontology.Data.Relations.Assertions.SelectEntriesBySubject(characterTypeFact);
+
+            foreach(var entry in characterTypeAssertions)
+            {
+                var predicate = entry.TaxonomyPredicate;
+                var predicateName = predicate.ToString();
+                var itemNameWords = itemName.Split('_').ToList();
+                if(predicateName.Contains("Coste"))
+                {
+                    if(itemNameWords.Any(word => predicateName.Contains(word)))
+                    {
+                        var predicateAssertionEntries = this.Ontology.Data.Relations.Assertions.SelectEntriesByPredicate(predicate);
+                        if(predicateAssertionEntries.Count() > 0)
+                        {
+                            var predicateAssertion = predicateAssertionEntries.Single();
+                            step = Convert.ToInt32(predicateAssertion.TaxonomyObject.ToString().Split('^').First());
+                        }
+                    }
+                }
+                else
+                {
+                    var game = DependencyHelper.CurrentContext.CurrentGame;
+                    var itemString = this.GetString(itemName);
+                    var itemFact = game.Ontology.Data.SelectFact(itemString);
+                    if(itemFact != null)
+                    {
+                        var itemClass = game.Ontology.Data.Relations.ClassType.SelectEntriesBySubject(itemFact).Single().TaxonomyObject;
+                        var itemClassName = itemClass.ToString().Split('#').Last();
+                        var itemClassWords = itemClassName.Split('_').ToList();
+                        if (predicateName.Contains("Coste"))
+                        {
+                            if (itemClassWords.Any(word => predicateName.Contains(word)))
+                            {
+                                var predicateAssertionEntries = this.Ontology.Data.Relations.Assertions.SelectEntriesByPredicate(predicate);
+                                if (predicateAssertionEntries.Count() > 0)
+                                {
+                                    var predicateAssertion = predicateAssertionEntries.Single();
+                                    step = Convert.ToInt32(predicateAssertion.TaxonomyObject.ToString().Split('^').First());
+                                }
+                            }
                         }
                     }
                 }
             }
-            return LimitPropertyString;
-        }//MODIFIED
+            return step;
+        }
+
+        public float GetLimitValue (string name)
+        {
+            var character = DependencyHelper.CurrentContext.CurrentCharacter;
+            var propertyString = character.GetString(name, true);
+            var characterAssertions = character.GetCharacterProperties();
+            characterAssertions.TryGetValue(propertyString, out string valueString);
+            var LimitValue = Convert.ToSingle(valueString.Split('^').First());
+            return LimitValue;
+        }
 
         /// <summary>
         /// Returns the name of a limit given its value
@@ -625,7 +711,8 @@ namespace ARPEGOS.Services
                     var StageGeneralLimit = GetAvailablePoints(stageString, out float? LimitValue);
                     if (LimitValue.ToString() != value)
                     {
-                        var StagePartialLimit = GetLimit(stageString, out LimitValue);
+                        var StagePartialLimitName = GetLimit(stageString);
+                        LimitValue = GetLimitValue(StagePartialLimitName);
                         if (LimitValue.ToString() != value)
                         {
                             var parents = GetParentClasses(stageString);
@@ -637,7 +724,7 @@ namespace ARPEGOS.Services
                             }
                         }
                         else
-                            Limit = StagePartialLimit;
+                            Limit = StagePartialLimitName;
                     }
                     else
                         Limit = StageGeneralLimit;
@@ -645,7 +732,7 @@ namespace ARPEGOS.Services
             }
 
             return Limit;
-        }//MODIFIED
+        }//MODIFIED*/
 
         /// <summary>
         /// Returns the name of the object property associated to the stage given
@@ -1476,7 +1563,7 @@ namespace ARPEGOS.Services
                     var elementPropertyEntry = CurrentOntology.Data.Relations.Assertions.SelectEntriesBySubject(currentFact).SelectEntriesByPredicate(currentProperty).Single();
                     CurrentValue = elementPropertyEntry.TaxonomyObject.ToString().Split('^').First();
                 }
-                else if (CheckObjectProperty(GetString(element), false))
+                else if (CheckObjectProperty(GetString(element, applyOnCharacter), applyOnCharacter))
                 {
                     var currentPropertyName = expression.ElementAt(index);
                     var previousProperty = expression.ElementAt(index - 1);
@@ -1730,21 +1817,24 @@ namespace ARPEGOS.Services
                         }
                     }
                 }
-                else if (CheckDatatypeProperty(element, false))
+                else if (CheckDatatypeProperty(GetString(element), false))
                 {
                     if (index == 0)
                     {
                         var CharacterFact = this.Ontology.Data.SelectFact($"{this.Context}{FileService.EscapedName(this.Name)}");
+                        if (CharacterFact == null)
+                            CharacterFact = CreateFact(FileService.EscapedName(this.Name));
                         RDFOntologyDatatypeProperty predicate;
-                        var elementString = GetString(element, true);
-                        if (!CheckDatatypeProperty(elementString))
+                        var elementString = GetString(element, applyOnCharacter);
+                        if (!CheckDatatypeProperty(elementString, applyOnCharacter))
                             predicate = CreateDatatypeProperty(element);
                         else
-                            predicate = this.Ontology.Model.PropertyModel.SelectProperty(elementString) as RDFOntologyDatatypeProperty;
-                        var CharacterAssertions = this.Ontology.Data.Relations.Assertions.SelectEntriesBySubject(CharacterFact);
-                        var CharacterPredicateEntry = CharacterAssertions.SelectEntriesByPredicate(predicate).Single();
-                        if (CharacterPredicateEntry == null)
+                            predicate = CurrentOntology.Model.PropertyModel.SelectProperty(elementString) as RDFOntologyDatatypeProperty;
+                        var CharacterAssertions = CurrentOntology.Data.Relations.Assertions.SelectEntriesBySubject(CharacterFact);
+                        var CharacterPredicateEntries = CharacterAssertions.SelectEntriesByPredicate(predicate);
+                        if(CharacterPredicateEntries.EntriesCount > 0)
                         {
+                            var CharacterPredicateEntry = CharacterPredicateEntries.Single();
                             var GamePredicate = CurrentOntology.Model.PropertyModel.SelectProperty(elementString) as RDFOntologyDatatypeProperty;
                             var PredicateDefaultValueEntry = CurrentOntology.Model.PropertyModel.Annotations.IsDefinedBy.SelectEntriesBySubject(GamePredicate).Single();
                             if (PredicateDefaultValueEntry != null)
@@ -1753,7 +1843,10 @@ namespace ARPEGOS.Services
                                 var valuetype = PredicateDefaultValueDefinition.Split('#').Last();
                                 PredicateDefaultValueDefinition = PredicateDefaultValueDefinition.Split('^').First();
                                 var predicateValue = GetValue(PredicateDefaultValueDefinition).ToString();
-                                AddDatatypeProperty($"{this.Context}{FileService.EscapedName(this.Name)}", elementString, predicateValue, valuetype);
+                                var CharacterString = $"{this.Context}{FileService.EscapedName(this.Name)}";
+                                if (this.Ontology.Data.SelectFact(CharacterString) == null)
+                                    this.CreateFact(FileService.EscapedName(this.Name));
+                                AddDatatypeProperty(CharacterString, elementString, predicateValue, valuetype);
                                 CharacterAssertions = this.Ontology.Data.Relations.Assertions.SelectEntriesBySubject(CharacterFact);
                                 CharacterPredicateEntry = CharacterAssertions.SelectEntriesByPredicate(predicate).Single();
                             }
@@ -1765,27 +1858,26 @@ namespace ARPEGOS.Services
                                 CharacterPredicateEntry = CharacterAssertions.SelectEntriesByPredicate(predicate).Single();
                             }
 
-                        }
-
-                        var PropertyAnnotations = CurrentOntology.Data.Annotations.CustomAnnotations.SelectEntriesBySubject(predicate);
-                        var PropertyUpperLimitAnnotation = PropertyAnnotations.Where(entry => entry.TaxonomyPredicate.ToString().Contains("hasUpperLimit"));
-                        if (PropertyUpperLimitAnnotation.Count() > 0)
-                        {
-                            hasUpperLimit = true;
-                            UpperLimit = Convert.ToSingle(PropertyUpperLimitAnnotation.Single().TaxonomyObject.ToString().Split('^').First());
-                        }
-                        else
-                        {
-                            var CurrentValueString = CharacterPredicateEntry.TaxonomyObject.ToString();
-                            if (!CurrentValueString.Contains("float"))
+                            var PropertyAnnotations = CurrentOntology.Data.Annotations.CustomAnnotations.SelectEntriesBySubject(predicate);
+                            var PropertyUpperLimitAnnotation = PropertyAnnotations.Where(entry => entry.TaxonomyPredicate.ToString().Contains("hasUpperLimit"));
+                            if (PropertyUpperLimitAnnotation.Count() > 0)
                             {
-                                CurrentValue = CurrentValueString.Split('^').First().Split(',').First();
-                                SubjectRef = CurrentValue;
+                                hasUpperLimit = true;
+                                UpperLimit = Convert.ToSingle(PropertyUpperLimitAnnotation.Single().TaxonomyObject.ToString().Split('^').First());
                             }
                             else
                             {
-                                CurrentValue = CurrentValueString.Split('^').First();
-                                SubjectRef = CurrentValue;
+                                var CurrentValueString = CharacterPredicateEntry.TaxonomyObject.ToString();
+                                if (!CurrentValueString.Contains("float"))
+                                {
+                                    CurrentValue = CurrentValueString.Split('^').First().Split(',').First();
+                                    SubjectRef = CurrentValue;
+                                }
+                                else
+                                {
+                                    CurrentValue = CurrentValueString.Split('^').First();
+                                    SubjectRef = CurrentValue;
+                                }
                             }
                         }
                     }

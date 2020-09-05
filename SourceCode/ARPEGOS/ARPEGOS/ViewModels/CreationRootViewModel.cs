@@ -1,4 +1,5 @@
 ﻿using ARPEGOS.Helpers;
+using ARPEGOS.Models;
 using ARPEGOS.Services;
 using ARPEGOS.ViewModels.Base;
 using ARPEGOS.Views;
@@ -18,11 +19,11 @@ namespace ARPEGOS.ViewModels
     {
         private DialogService dialogService;
         private string stageString;
-        private string stage;
-        public string Stage
+        private string firstStage;
+        public string FirstStage
         {
-            get => stage;
-            set => SetProperty(ref this.stage, value);
+            get => firstStage;
+            set => SetProperty(ref this.firstStage, value);
         }
         private Item selectedItem;
         public Item SelectedItem
@@ -51,7 +52,8 @@ namespace ARPEGOS.ViewModels
             var character = DependencyHelper.CurrentContext.CurrentCharacter;
             var game = DependencyHelper.CurrentContext.CurrentGame;
             this.stageString = game.GetCreationSchemeRootClass();
-            this.Stage = this.stageString.Split('#').Last();
+            this.FirstStage = this.stageString.Split('#').Last();
+            StageViewModel.RootStage = this.stageString;
             
             Data = new ObservableCollection<Item>(character.GetIndividuals(stageString));
 
@@ -69,7 +71,30 @@ namespace ARPEGOS.ViewModels
                 StageViewModel.CreationScheme = scheme;
                 this.IsBusy = false;
 
-                await MainThread.InvokeOnMainThreadAsync(async() => await App.Navigation.NavigationStack.Last().Navigation.PushAsync(new StageView(0)));
+                StageViewModel.CurrentStep = 0;
+                var currentStage = StageViewModel.CreationScheme.ElementAt(StageViewModel.CurrentStep);
+
+                //if(StageViewModel.GeneralLimitProperty == null)
+                //StageViewModel.GeneralLimitProperty = character.GetLimit(stageString, true);
+                //StageViewModel.GeneralLimit = character.GetLimitValue(StageViewModel.GeneralLimitProperty);                
+
+                if (currentStage.IsGrouped)
+                {
+                    switch (currentStage.Type)
+                    {
+                        case Stage.StageType.MultipleChoice: await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.NavigationStack.Last().Navigation.PushAsync(new MultipleChoiceGroupView())); break;
+                        default: await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.NavigationStack.Last().Navigation.PushAsync(new ValuedGroupView())); break;
+                    }
+                }
+                else
+                {
+                    switch (currentStage.Type)
+                    {
+                        case Stage.StageType.SingleChoice: await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.NavigationStack.Last().Navigation.PushAsync(new SingleChoiceView())); break;
+                        case Stage.StageType.MultipleChoice: await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.NavigationStack.Last().Navigation.PushAsync(new MultipleChoiceView())); break;
+                        default: await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.NavigationStack.Last().Navigation.PushAsync(new ValuedView())); break;
+                    }
+                }
                 await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.PopModalAsync());
             });
 

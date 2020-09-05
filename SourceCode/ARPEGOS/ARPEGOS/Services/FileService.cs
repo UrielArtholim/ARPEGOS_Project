@@ -141,7 +141,7 @@ namespace ARPEGOS.Services
         /// <returns> Formatted Name </returns>
         public static string FormatName(string name)
         {
-            return ti.ToTitleCase(name.Replace("_", " "));
+            return ti.ToTitleCase(name.Replace("Per_","").Replace("_Total","").Replace("_", " "));
         }
 
         /// <summary>

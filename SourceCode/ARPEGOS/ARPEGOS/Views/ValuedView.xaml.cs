@@ -1,6 +1,4 @@
-﻿using ARPEGOS.Helpers;
-using ARPEGOS.ViewModels;
-using Autofac;
+﻿using ARPEGOS.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,12 +11,12 @@ using Xamarin.Forms.Xaml;
 namespace ARPEGOS.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class StageView: ContentPage
+    public partial class ValuedView : ContentPage
     {
-        public StageView (int stageCounter)
+        public ValuedView()
         {
             InitializeComponent();
-            this.BindingContext = DependencyHelper.Container.Resolve<StageViewModel>(new NamedParameter("counter", stageCounter));
+            this.BindingContext = new ValuedViewModel();
         }
     }
 }

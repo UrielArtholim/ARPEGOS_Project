@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace ARPEGOS.Views.Templates
+namespace ARPEGOS.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class StageValuedChoiceTemplate : ViewCell
+    public partial class MultipleChoiceGroupView : ContentPage
     {
-        public StageValuedChoiceTemplate()
+        public MultipleChoiceGroupView()
         {
             InitializeComponent();
         }
