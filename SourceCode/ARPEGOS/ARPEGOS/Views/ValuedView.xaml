@@ -1,12 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:controls="clr-namespace:ARPEGOS.Controls"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:controls="clr-namespace:ARPEGOS.Controls"
              x:Class="ARPEGOS.Views.ValuedView"
              Title="{Binding StageName}">
     <ContentPage.Content>
         <Grid>
             <StackLayout Spacing="5" Padding="0" Margin="0,0,0,0">
-                <ListView ItemsSource="{Binding Data}" HasUnevenRows="True">
+                <ListView ItemsSource="{Binding Data}" HasUnevenRows="True" SelectionMode="None" CachingStrategy="RecycleElementAndDataTemplate">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>

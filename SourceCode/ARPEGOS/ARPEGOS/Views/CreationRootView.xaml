@@ -7,7 +7,7 @@
     <ContentPage.Content>
         <Grid>
             <StackLayout Spacing="10" Padding="10" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
-                <ListView x:Name="CreationRootList" Grid.Row="0" ItemsSource="{Binding Data}" HasUnevenRows="True" SelectionMode="None">
+                <ListView x:Name="CreationRootList" ItemsSource="{Binding Data}" HasUnevenRows="True" SelectionMode="None" CachingStrategy="RecycleElementAndDataTemplate">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>

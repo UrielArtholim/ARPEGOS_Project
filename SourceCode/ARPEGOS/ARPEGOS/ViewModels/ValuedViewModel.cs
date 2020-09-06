@@ -2,12 +2,16 @@
 using ARPEGOS.Models;
 using ARPEGOS.Services;
 using ARPEGOS.ViewModels.Base;
+using ARPEGOS.Views;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Windows.Input;
+using Xamarin.Essentials;
+using Xamarin.Forms;
 
 namespace ARPEGOS.ViewModels
 {
@@ -93,6 +97,38 @@ namespace ARPEGOS.ViewModels
                     Data.Add(new ValuedItem(item.FullName, item.Description, this.CurrentLimit));
                 }
             }
+
+            this.NextCommand = new Command(async () =>
+            {
+
+                if(StageViewModel.GeneralLimitProperty == null)
+                StageViewModel.GeneralLimitProperty = character.GetLimit(StageViewModel.RootStage, true);
+                StageViewModel.GeneralLimit = character.GetLimitValue(StageViewModel.GeneralLimitProperty);                
+
+                if (currentStage.IsGrouped)
+                {
+                    switch (currentStage.Type)
+                    {
+                        case Stage.StageType.MultipleChoice: await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.PushAsync(new MultipleChoiceGroupView())); break;
+                        default: await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.PushAsync(new ValuedGroupView())); break;
+                    }
+                }
+                else
+                {
+                    switch (currentStage.Type)
+                    {
+                        case Stage.StageType.SingleChoice: await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.PushAsync(new SingleChoiceView())); break;
+                        case Stage.StageType.MultipleChoice: await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.PushAsync(new MultipleChoiceView())); break;
+                        default: await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.PushAsync(new ValuedView())); break;
+                    }
+                }
+                await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.PopModalAsync());
+            });
+
+            /*this.InfoCommand = new Command<Item>(async (item) =>
+            {
+                await this.dialogService.DisplayAlert(item.FormattedName, item.Description);
+            });*/
 
         }
     }

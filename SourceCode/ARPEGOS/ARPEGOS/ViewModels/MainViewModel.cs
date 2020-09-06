@@ -112,7 +112,7 @@ namespace ARPEGOS.ViewModels
                         if (!string.IsNullOrWhiteSpace(item))
                         {
                             DependencyHelper.CurrentContext.CurrentCharacter = await OntologyService.CreateCharacter(item, DependencyHelper.CurrentContext.CurrentGame);
-                            await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.PushModalAsync(new NavigationPage(new CreationRootView())));
+                            await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.PushAsync((new CreationRootView())));
                         }
                         this.Load(this.CurrentStatus);
                         break;
@@ -121,7 +121,7 @@ namespace ARPEGOS.ViewModels
                         if (!string.IsNullOrWhiteSpace(item))
                         {
                             DependencyHelper.CurrentContext.CurrentCharacter = await OntologyService.CreateCharacter(item, DependencyHelper.CurrentContext.CurrentGame);
-                            await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.PushModalAsync(new NavigationPage(new CreationRootView())));
+                            await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.PushAsync(new CreationRootView()));
                         }
                         this.Load(this.CurrentStatus);
                         break;
@@ -191,7 +191,7 @@ namespace ARPEGOS.ViewModels
                         if (string.IsNullOrWhiteSpace(item))
                             break;
                         DependencyHelper.CurrentContext.CurrentCharacter = await OntologyService.CreateCharacter(item, DependencyHelper.CurrentContext.CurrentGame);
-                        await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.PushModalAsync(new NavigationPage(new CreationRootView())));
+                        await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.PushAsync(new CreationRootView()));
                         await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.PushAsync(new OptionsView()));
                     }
                     else
