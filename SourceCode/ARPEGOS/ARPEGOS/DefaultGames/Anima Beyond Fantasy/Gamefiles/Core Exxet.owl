@@ -19385,8 +19385,8 @@ Descripción: Este poder carga un objeto o lugar determinado con un fuerte senti
 Sexo,
 Raza,
 Característica_Primaria,
-Desventaja_General,  
-Ventaja_General, 
+Desventaja_General,
+Ventaja_General,
 Habilidad_Combate_General,
 Arte_Marcial,
 Puntos_Ki,
@@ -19397,7 +19397,7 @@ Tabla_Armas,
 Bonificador_Natural_Físico,
 Bonificador_Natural_Mental,
 Habilidad_Natural,
-Habilidad_Secundaria, 
+Habilidad_Secundaria,
 Clase_Social</CreationScheme>
     </owl:NamedIndividual>
     
@@ -19453,13 +19453,11 @@ Sexo,
 Raza,
 Característica_Primaria,
 Desventaja_General,
-Desventaja_Mística,  
-Ventaja_General, 
-Ventaja_Mística,
-Habilidad_Mística_General,
-Habilidad_Mística_Específica,
-Conjuro_Vía_Mágica,
-Arcano,
+Desventaja_Psíquica,
+Ventaja_General,
+Ventaja_Psíquica,
+Habilidad_Psíquica_General,
+Poder_Psíquico,
 Habilidad_Combate_General,
 Arte_Marcial,
 Puntos_Ki,
@@ -19470,7 +19468,7 @@ Tabla_Armas,
 Bonificador_Natural_Físico,
 Bonificador_Natural_Mental,
 Habilidad_Natural,
-Habilidad_Secundaria, 
+Habilidad_Secundaria,
 Clase_Social</CreationScheme>
     </owl:NamedIndividual>
     
@@ -19529,8 +19527,8 @@ Clase_Social</CreationScheme>
 Sexo,
 Raza,
 Característica_Primaria,
-Desventaja_General,  
-Ventaja_General, 
+Desventaja_General,
+Ventaja_General,
 Habilidad_Combate_General,
 Arte_Marcial,
 Puntos_Ki,
@@ -19541,7 +19539,7 @@ Tabla_Armas,
 Bonificador_Natural_Físico,
 Bonificador_Natural_Mental,
 Habilidad_Natural,
-Habilidad_Secundaria, 
+Habilidad_Secundaria,
 Clase_Social</CreationScheme>
     </owl:NamedIndividual>
     
@@ -19593,8 +19591,8 @@ Clase_Social</CreationScheme>
 Sexo,
 Raza,
 Característica_Primaria,
-Desventaja_General,  
-Ventaja_General, 
+Desventaja_General,
+Ventaja_General,
 Habilidad_Combate_General,
 Arte_Marcial,
 Puntos_Ki,
@@ -19605,7 +19603,7 @@ Tabla_Armas,
 Bonificador_Natural_Físico,
 Bonificador_Natural_Mental,
 Habilidad_Natural,
-Habilidad_Secundaria, 
+Habilidad_Secundaria,
 Clase_Social</CreationScheme>
     </owl:NamedIndividual>
     
@@ -19659,8 +19657,8 @@ Clase_Social</CreationScheme>
 Sexo,
 Raza,
 Característica_Primaria,
-Desventaja_General,  
-Ventaja_General, 
+Desventaja_General,
+Ventaja_General,
 Habilidad_Combate_General,
 Arte_Marcial,
 Puntos_Ki,
@@ -19671,7 +19669,7 @@ Tabla_Armas,
 Bonificador_Natural_Físico,
 Bonificador_Natural_Mental,
 Habilidad_Natural,
-Habilidad_Secundaria, 
+Habilidad_Secundaria,
 Clase_Social</CreationScheme>
     </owl:NamedIndividual>
     
@@ -19729,8 +19727,8 @@ Sexo,
 Raza,
 Característica_Primaria,
 Desventaja_General,
-Desventaja_Mística,  
-Ventaja_General, 
+Desventaja_Mística,
+Ventaja_General,
 Ventaja_Mística,
 Habilidad_Mística_General,
 Habilidad_Mística_Específica,
@@ -19746,7 +19744,7 @@ Tabla_Armas,
 Bonificador_Natural_Físico,
 Bonificador_Natural_Mental,
 Habilidad_Natural,
-Habilidad_Secundaria, 
+Habilidad_Secundaria,
 Clase_Social</CreationScheme>
     </owl:NamedIndividual>
     
@@ -19799,7 +19797,7 @@ Raza,
 Característica_Primaria,
 Desventaja_General,
 Desventaja_Psíquica,
-Ventaja_General, 
+Ventaja_General,
 Ventaja_Psíquica,
 Habilidad_Psíquica_General,
 Poder_Psíquico,
@@ -19813,7 +19811,7 @@ Tabla_Armas,
 Bonificador_Natural_Físico,
 Bonificador_Natural_Mental,
 Habilidad_Natural,
-Habilidad_Secundaria, 
+Habilidad_Secundaria,
 Clase_Social</CreationScheme>
     </owl:NamedIndividual>
     
@@ -19865,8 +19863,8 @@ Sexo,
 Raza,
 Característica_Primaria,
 Desventaja_General,
-Desventaja_Mística,  
-Ventaja_General, 
+Desventaja_Mística,
+Ventaja_General,
 Ventaja_Mística,
 Habilidad_Mística_General,
 Habilidad_Mística_Específica,
@@ -19882,7 +19880,7 @@ Tabla_Armas,
 Bonificador_Natural_Físico,
 Bonificador_Natural_Mental,
 Habilidad_Natural,
-Habilidad_Secundaria, 
+Habilidad_Secundaria,
 Clase_Social</CreationScheme>
     </owl:NamedIndividual>
     
@@ -19935,7 +19933,7 @@ Raza,
 Característica_Primaria,
 Desventaja_General,
 Desventaja_Mística,
-Desventaja_Psíquica,  
+Desventaja_Psíquica,
 Ventaja_General,
 Ventaja_Mística,
 Ventaja_Psíquica,
@@ -19955,7 +19953,7 @@ Tabla_Armas,
 Bonificador_Natural_Físico,
 Bonificador_Natural_Mental,
 Habilidad_Natural,
-Habilidad_Secundaria, 
+Habilidad_Secundaria,
 Clase_Social</CreationScheme>
     </owl:NamedIndividual>
     
@@ -20014,8 +20012,8 @@ Sexo,
 Raza,
 Característica_Primaria,
 Desventaja_General,
-Desventaja_Mística,  
-Ventaja_General, 
+Desventaja_Mística,
+Ventaja_General,
 Ventaja_Mística,
 Habilidad_Mística_General,
 Habilidad_Mística_Específica,
@@ -20031,7 +20029,7 @@ Tabla_Armas,
 Bonificador_Natural_Físico,
 Bonificador_Natural_Mental,
 Habilidad_Natural,
-Habilidad_Secundaria, 
+Habilidad_Secundaria,
 Clase_Social</CreationScheme>
     </owl:NamedIndividual>
     
@@ -20086,8 +20084,8 @@ Clase_Social</CreationScheme>
 Sexo,
 Raza,
 Característica_Primaria,
-Desventaja_General,  
-Ventaja_General, 
+Desventaja_General,
+Ventaja_General,
 Habilidad_Combate_General,
 Arte_Marcial,
 Puntos_Ki,
@@ -20098,7 +20096,7 @@ Tabla_Armas,
 Bonificador_Natural_Físico,
 Bonificador_Natural_Mental,
 Habilidad_Natural,
-Habilidad_Secundaria, 
+Habilidad_Secundaria,
 Clase_Social</CreationScheme>
     </owl:NamedIndividual>
     
@@ -20149,8 +20147,8 @@ Clase_Social</CreationScheme>
 Sexo,
 Raza,
 Característica_Primaria,
-Desventaja_General,  
-Ventaja_General, 
+Desventaja_General,
+Ventaja_General,
 Habilidad_Combate_General,
 Arte_Marcial,
 Puntos_Ki,
@@ -20161,7 +20159,7 @@ Tabla_Armas,
 Bonificador_Natural_Físico,
 Bonificador_Natural_Mental,
 Habilidad_Natural,
-Habilidad_Secundaria, 
+Habilidad_Secundaria,
 Clase_Social</CreationScheme>
     </owl:NamedIndividual>
     
@@ -20209,7 +20207,7 @@ Raza,
 Característica_Primaria,
 Desventaja_General,
 Desventaja_Psíquica,
-Ventaja_General, 
+Ventaja_General,
 Ventaja_Psíquica,
 Habilidad_Psíquica_General,
 Poder_Psíquico,
@@ -20223,7 +20221,7 @@ Tabla_Armas,
 Bonificador_Natural_Físico,
 Bonificador_Natural_Mental,
 Habilidad_Natural,
-Habilidad_Secundaria, 
+Habilidad_Secundaria,
 Clase_Social</CreationScheme>
     </owl:NamedIndividual>
     
@@ -20273,7 +20271,7 @@ Raza,
 Característica_Primaria,
 Desventaja_General,
 Desventaja_Mística,
-Desventaja_Psíquica,  
+Desventaja_Psíquica,
 Ventaja_General,
 Ventaja_Mística,
 Ventaja_Psíquica,
@@ -20293,7 +20291,7 @@ Tabla_Armas,
 Bonificador_Natural_Físico,
 Bonificador_Natural_Mental,
 Habilidad_Natural,
-Habilidad_Secundaria, 
+Habilidad_Secundaria,
 Clase_Social</CreationScheme>
     </owl:NamedIndividual>
     
@@ -20349,8 +20347,8 @@ Sexo,
 Raza,
 Característica_Primaria,
 Desventaja_General,
-Desventaja_Mística,  
-Ventaja_General, 
+Desventaja_Mística,
+Ventaja_General,
 Ventaja_Mística,
 Habilidad_Mística_General,
 Habilidad_Mística_Específica,
@@ -20366,7 +20364,7 @@ Tabla_Armas,
 Bonificador_Natural_Físico,
 Bonificador_Natural_Mental,
 Habilidad_Natural,
-Habilidad_Secundaria, 
+Habilidad_Secundaria,
 Clase_Social</CreationScheme>
     </owl:NamedIndividual>
     
@@ -20423,8 +20421,8 @@ Sexo,
 Raza,
 Característica_Primaria,
 Desventaja_General,
-Desventaja_Mística,  
-Ventaja_General, 
+Desventaja_Mística,
+Ventaja_General,
 Ventaja_Mística,
 Habilidad_Mística_General,
 Habilidad_Mística_Específica,
@@ -20440,7 +20438,7 @@ Tabla_Armas,
 Bonificador_Natural_Físico,
 Bonificador_Natural_Mental,
 Habilidad_Natural,
-Habilidad_Secundaria, 
+Habilidad_Secundaria,
 Clase_Social</CreationScheme>
     </owl:NamedIndividual>
     
@@ -20494,8 +20492,8 @@ Clase_Social</CreationScheme>
 Sexo,
 Raza,
 Característica_Primaria,
-Desventaja_General,  
-Ventaja_General, 
+Desventaja_General,
+Ventaja_General,
 Habilidad_Combate_General,
 Arte_Marcial,
 Puntos_Ki,
@@ -20506,7 +20504,7 @@ Tabla_Armas,
 Bonificador_Natural_Físico,
 Bonificador_Natural_Mental,
 Habilidad_Natural,
-Habilidad_Secundaria, 
+Habilidad_Secundaria,
 Clase_Social</CreationScheme>
     </owl:NamedIndividual>
     
@@ -20555,8 +20553,8 @@ Clase_Social</CreationScheme>
 Sexo,
 Raza,
 Característica_Primaria,
-Desventaja_General,  
-Ventaja_General, 
+Desventaja_General,
+Ventaja_General,
 Habilidad_Combate_General,
 Arte_Marcial,
 Puntos_Ki,
@@ -20567,7 +20565,7 @@ Tabla_Armas,
 Bonificador_Natural_Físico,
 Bonificador_Natural_Mental,
 Habilidad_Natural,
-Habilidad_Secundaria, 
+Habilidad_Secundaria,
 Clase_Social</CreationScheme>
     </owl:NamedIndividual>
     
@@ -20615,8 +20613,8 @@ Clase_Social</CreationScheme>
 Sexo,
 Raza,
 Característica_Primaria,
-Desventaja_General,  
-Ventaja_General, 
+Desventaja_General,
+Ventaja_General,
 Habilidad_Combate_General,
 Arte_Marcial,
 Puntos_Ki,
@@ -20627,7 +20625,7 @@ Tabla_Armas,
 Bonificador_Natural_Físico,
 Bonificador_Natural_Mental,
 Habilidad_Natural,
-Habilidad_Secundaria, 
+Habilidad_Secundaria,
 Clase_Social</CreationScheme>
     </owl:NamedIndividual>
     
@@ -20681,8 +20679,8 @@ Sexo,
 Raza,
 Característica_Primaria,
 Desventaja_General,
-Desventaja_Mística,  
-Ventaja_General, 
+Desventaja_Mística,
+Ventaja_General,
 Ventaja_Mística,
 Habilidad_Mística_General,
 Habilidad_Mística_Específica,
@@ -20698,7 +20696,7 @@ Tabla_Armas,
 Bonificador_Natural_Físico,
 Bonificador_Natural_Mental,
 Habilidad_Natural,
-Habilidad_Secundaria, 
+Habilidad_Secundaria,
 Clase_Social</CreationScheme>
     </owl:NamedIndividual>
     
@@ -54394,10 +54392,10 @@ el potencial psíquico al usar esta disciplina.</rdfs:comment>
         <ViewType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ValuedListView</ViewType>
     </rdf:Description>
     <rdf:Description rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidad_Ki">
-        <StageModifiesStageLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</StageModifiesStageLimit>
         <ViewType>MultipleChoiceDynamicLimitView</ViewType>
-        <rdfs:comment>Las habilidades del Ki son una serie de capacidades especiales que pueden desarrollar los personajes, utilizando sus puntos de Conocimiento Marcial. Cuando alguien domina una de ellas, esta le permite realizar acciones especiales que ningún otro ser humano es capaz de ejecutar. Cada una tiene un coste en puntos de CM, que es necesario invertir para adquirirla. Las habilidades del Ki se desarrollan siguiendo una lógica en su conocimiento y por tanto es posible que, para aprender a utilizar algunas, un individuo tenga que dominar anteriormente otras.</rdfs:comment>
+        <StageModifiesStageLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</StageModifiesStageLimit>
         <StageLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Disponible_CM</StageLimit>
+        <rdfs:comment>Las habilidades del Ki son una serie de capacidades especiales que pueden desarrollar los personajes, utilizando sus puntos de Conocimiento Marcial. Cuando alguien domina una de ellas, esta le permite realizar acciones especiales que ningún otro ser humano es capaz de ejecutar. Cada una tiene un coste en puntos de CM, que es necesario invertir para adquirirla. Las habilidades del Ki se desarrollan siguiendo una lógica en su conocimiento y por tanto es posible que, para aprender a utilizar algunas, un individuo tenga que dominar anteriormente otras.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidad_Perceptivas">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">En este grupo se reúnen todas las habilidades perceptivas del personaje. Son las pericias que le permitirán explotar al máximo sus cinco sentidos y analizar la información obtenida.</rdfs:comment>
