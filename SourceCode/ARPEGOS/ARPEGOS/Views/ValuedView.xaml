@@ -45,7 +45,7 @@
                                                 Grid.Row="1" 
                                                 Grid.Column="0" 
                                                 Grid.ColumnSpan="4"
-                                                Step="{Binding Step}"
+                                                Step="{Binding Source={x:RelativeSource AncestorType={x:Type ContentPage}}, Path=BindingContext.Step}"
                                                 Minimum="0"
                                                 Maximum="{Binding Source={x:RelativeSource AncestorType={x:Type ContentPage}}, Path=BindingContext.CurrentLimit}"/>
                                     </Grid>

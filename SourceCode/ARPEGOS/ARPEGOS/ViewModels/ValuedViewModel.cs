@@ -17,7 +17,7 @@ namespace ARPEGOS.ViewModels
 {
     public class ValuedViewModel: BaseViewModel
     {
-        private ObservableCollection<ValuedItem> data;
+        private ObservableCollection<Item> data;
         private Stage currentStage;
         private string stageName;
         private int stageLimit;
@@ -25,7 +25,7 @@ namespace ARPEGOS.ViewModels
         private int currentLimit;
         private bool showDescription;
 
-        public ObservableCollection<ValuedItem> Data
+        public ObservableCollection<Item> Data
         {
             get => this.data;
             set => SetProperty(ref this.data, value);
@@ -60,14 +60,17 @@ namespace ARPEGOS.ViewModels
             set => SetProperty(ref this.showDescription, value);
         }
 
+        public int Step { get; set; }
+
         public ICommand NextCommand { get; private set; }
 
         public ValuedViewModel()
         {
             this.CurrentStage = StageViewModel.CreationScheme.ElementAt(StageViewModel.CurrentStep);
             this.StageName = FileService.FormatName(this.CurrentStage.ShortName);
-            this.Data = new ObservableCollection<ValuedItem>();
             this.ShowDescription = true;
+            this.Data = new ObservableCollection<Item>();
+            this.Step = 0;
 
             var character = DependencyHelper.CurrentContext.CurrentCharacter;
 
@@ -81,20 +84,27 @@ namespace ARPEGOS.ViewModels
             if (character.CheckDatatypeProperty(this.CurrentStage.FullName, StageViewModel.ApplyOnCharacter))
             {
                 this.ShowDescription = false;
-                var step = character.GetStep(this.StageName);
-                if (this.CurrentLimit > step * 100)
-                    this.CurrentLimit = step * 100;
-                var newItem = new ValuedItem(this.CurrentStage.FullName, string.Empty, this.CurrentLimit);
+                this.Step = character.GetStep(this.StageName);
+                if (this.CurrentLimit > this.Step * 100)
+                    this.CurrentLimit = this.Step * 100;
+
+                List<Item> DataList = new List<Item>();
+                Data.Add(new Item(this.CurrentStage.FullName));
             }
             else
             {
                 var Items = character.GetIndividuals(this.CurrentStage.FullName);
-                foreach(var item in Items)
+                List<Item> DataList = new List<Item>();
+
+                foreach (var item in Items)
                 {
-                    var step = character.GetStep(item.FullName.Split('#').Last());
-                    if (this.CurrentLimit > step * 100)
-                        this.CurrentLimit = step * 100;
-                    Data.Add(new ValuedItem(item.FullName, item.Description, this.CurrentLimit));
+                    if(this.Step == 0)
+                        this.Step = character.GetStep(item.FullName.Split('#').Last());
+
+                    if (this.CurrentLimit > this.Step * 100)
+                        this.CurrentLimit = this.Step * 100;
+                    var newItem = new Item(item.FullName, item.Description);
+                    Data.Add(newItem);
                 }
             }
 

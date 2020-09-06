@@ -628,7 +628,7 @@ namespace ARPEGOS.Services
 
         public int GetStep(string itemName)
         {
-            int step = 1;
+            int step = 1;/*
             var characterTypeStageName = StageViewModel.RootStage.Split('#').Last();
             var characterTypeStageString = DependencyHelper.CurrentContext.CurrentCharacter.GetString(characterTypeStageName, true);
             var characterTypePropertyString = this.GetObjectPropertyAssociated(characterTypeStageString, true);
@@ -677,7 +677,7 @@ namespace ARPEGOS.Services
                         }
                     }
                 }
-            }
+            }*/
             return step;
         }
 
