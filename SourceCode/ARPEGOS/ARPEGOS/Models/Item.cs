@@ -67,7 +67,7 @@ namespace ARPEGOS
         #endregion
 
         #region Constructor
-        public Item(string elementString, string description = "This is a description", string Class = "Classname")
+        public Item(string elementString, string description = "This is a description", string Class = "No class available")
         {
             FullName = elementString;
             ShortName = elementString.Split('#').Last();
@@ -78,7 +78,7 @@ namespace ARPEGOS
                     ShortName = ShortName.Replace(Class,"").Trim();
             FormattedName = ShortName.Replace("Per_","").Replace("_Total","").Replace('_',' ').Trim();
             Description = description;
-            this.Cost = -1;
+            this.Cost = 0;
         }
         #endregion
 

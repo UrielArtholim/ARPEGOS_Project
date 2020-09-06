@@ -79,23 +79,25 @@ namespace ARPEGOS.ViewModels
                 //StageViewModel.GeneralLimitProperty = character.GetLimit(stageString, true);
                 //StageViewModel.GeneralLimit = character.GetLimitValue(StageViewModel.GeneralLimitProperty);                
 
+                dynamic nextPage;
                 if (currentStage.IsGrouped)
                 {
                     switch (currentStage.Type)
                     {
-                        case Stage.StageType.MultipleChoice: await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.PushAsync(new MultipleChoiceGroupView())); break;
-                        default: await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.PushAsync(new ValuedGroupView())); break;
+                        case Stage.StageType.MultipleChoice: nextPage = new MultipleChoiceGroupView(); break;
+                        default: nextPage = new ValuedGroupView(); break;
                     }
                 }
                 else
                 {
                     switch (currentStage.Type)
                     {
-                        case Stage.StageType.SingleChoice: await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.PushAsync(new SingleChoiceView())); break;
-                        case Stage.StageType.MultipleChoice: await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.PushAsync(new MultipleChoiceView())); break;
-                        default: await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.PushAsync(new ValuedView())); break;
+                        case Stage.StageType.SingleChoice: nextPage = new SingleChoiceView(); break;
+                        case Stage.StageType.MultipleChoice: nextPage = new MultipleChoiceView(); break;
+                        default: nextPage = new ValuedView(); break;
                     }
                 }
+                await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.PushAsync(nextPage));
                 await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.PopAsync());
             });
 

@@ -84,7 +84,7 @@ namespace ARPEGOS.ViewModels
                 var step = character.GetStep(this.StageName);
                 if (this.CurrentLimit > step * 100)
                     this.CurrentLimit = step * 100;
-                Data.Add(new ValuedItem(this.CurrentStage.FullName, string.Empty, this.CurrentLimit));
+                var newItem = new ValuedItem(this.CurrentStage.FullName, string.Empty, this.CurrentLimit);
             }
             else
             {

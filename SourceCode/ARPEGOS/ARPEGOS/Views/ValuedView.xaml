@@ -56,10 +56,9 @@
                 </ListView>
                 <Button Text="Siguiente" 
                             Command="{Binding NextCommand}" 
-                            IsVisible="{Binding Continue}"
                             BackgroundColor="{DynamicResource ButtonColor}"
-                            AbsoluteLayout.LayoutFlags="PositionProportional"
-                            AbsoluteLayout.LayoutBounds=".95,.95,80,80"/>
+                            HorizontalOptions="CenterAndExpand"
+                            VerticalOptions="EndAndExpand"/>
             </StackLayout>
         </Grid>
     </ContentPage.Content>

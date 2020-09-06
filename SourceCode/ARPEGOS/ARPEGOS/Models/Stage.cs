@@ -78,17 +78,40 @@ namespace ARPEGOS.Models
             else
             {
                 var stageFact = gameService.Ontology.Data.SelectFact(this.FullName);
-                var stageViewAnnotationEntries = gameService.Ontology.Data.Annotations.CustomAnnotations.SelectEntriesBySubject(stageFact).Where(entry => entry.TaxonomyPredicate.ToString().Contains("ViewType"));
-                if(stageViewAnnotationEntries.Count() > 0)
+                if(stageFact != null)
                 {
-                    var viewTypeName = stageViewAnnotationEntries.Single().TaxonomyObject.ToString().Split('^').First();
-                    switch (viewTypeName)
+                    var stageViewAnnotationEntries = gameService.Ontology.Data.Annotations.CustomAnnotations.SelectEntriesBySubject(stageFact).Where(entry => entry.TaxonomyPredicate.ToString().Contains("ViewType"));
+                    if (stageViewAnnotationEntries.Count() > 0)
                     {
-                        case "SingleChoiceListView": this.Type = StageType.SingleChoice; this.Model = StageModel.NotRequired; break;
-                        case "MultipleChoiceStaticLimitView": this.Type = StageType.MultipleChoice; this.Model = StageModel.StaticLimit; break;
-                        case "MultipleChoiceStaticLimitGroupCostView": this.Type = StageType.MultipleChoice; this.Model = StageModel.StaticGroupLimit; break;
-                        case "MultipleChoiceDynamicLimitView": this.Type = StageType.MultipleChoice; this.Model = StageModel.DynamicLimit; break;
-                        case "ValuedListView": this.Type = StageType.ValuedChoice; this.Model = StageModel.NotRequired; break;
+                        var viewTypeName = stageViewAnnotationEntries.Single().TaxonomyObject.ToString().Split('^').First();
+                        switch (viewTypeName)
+                        {
+                            case "SingleChoiceListView": this.Type = StageType.SingleChoice; this.Model = StageModel.NotRequired; break;
+                            case "MultipleChoiceStaticLimitView": this.Type = StageType.MultipleChoice; this.Model = StageModel.StaticLimit; break;
+                            case "MultipleChoiceStaticLimitGroupCostView": this.Type = StageType.MultipleChoice; this.Model = StageModel.StaticGroupLimit; break;
+                            case "MultipleChoiceDynamicLimitView": this.Type = StageType.MultipleChoice; this.Model = StageModel.DynamicLimit; break;
+                            case "ValuedListView": this.Type = StageType.ValuedChoice; this.Model = StageModel.NotRequired; break;
+                        }
+                    }
+                }
+                else
+                {
+                    var stageProperty = gameService.Ontology.Model.PropertyModel.SelectProperty(this.FullName);
+                    if(stageProperty != null)
+                    {
+                        var stageViewAnnotationEntries = gameService.Ontology.Model.PropertyModel.Annotations.CustomAnnotations.SelectEntriesBySubject(stageProperty).Where(entry => entry.TaxonomyPredicate.ToString().Contains("ViewType"));
+                        if (stageViewAnnotationEntries.Count() > 0)
+                        {
+                            var viewTypeName = stageViewAnnotationEntries.Single().TaxonomyObject.ToString().Split('^').First();
+                            switch (viewTypeName)
+                            {
+                                case "SingleChoiceListView": this.Type = StageType.SingleChoice; this.Model = StageModel.NotRequired; break;
+                                case "MultipleChoiceStaticLimitView": this.Type = StageType.MultipleChoice; this.Model = StageModel.StaticLimit; break;
+                                case "MultipleChoiceStaticLimitGroupCostView": this.Type = StageType.MultipleChoice; this.Model = StageModel.StaticGroupLimit; break;
+                                case "MultipleChoiceDynamicLimitView": this.Type = StageType.MultipleChoice; this.Model = StageModel.DynamicLimit; break;
+                                case "ValuedListView": this.Type = StageType.ValuedChoice; this.Model = StageModel.NotRequired; break;
+                            }
+                        }
                     }
                 }
             }
