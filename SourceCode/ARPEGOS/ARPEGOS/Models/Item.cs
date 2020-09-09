@@ -43,6 +43,9 @@ namespace ARPEGOS
         /// </summary>
         public string Description { get; internal set; }
 
+        public bool HasDescription { get; internal set; }
+
+        private double step, maximum;
         private bool isSelected;
         public bool IsSelected
         {
@@ -56,29 +59,48 @@ namespace ARPEGOS
             get => isEnabled;
             set => SetProperty(ref this.isEnabled, value);
         }
-        private float cost;
-        public float Cost
+        private double value;
+        public double Value
         {
-            get => cost;
-            set => SetProperty(ref this.cost, value);
+            get => value;
+            set => SetProperty(ref this.value, value);
+        }
+
+        public double Step
+        {
+            get => this.step;
+            set => SetProperty(ref this.step, value);
+        }
+
+        public double Maximum
+        {
+            get => this.maximum;
+            set => SetProperty(ref this.maximum, value);
         }
 
 
         #endregion
 
         #region Constructor
-        public Item(string elementString, string description = "This is a description", string Class = "No class available")
+        public Item(string elementString, string description = "This is a description", string Class = "No class available", double sliderStep = 1, double sliderMaximum = 1)
         {
             FullName = elementString;
             ShortName = elementString.Split('#').Last();
             this.Class = Class;
             IsEnabled = true;
-            if (ShortName.Contains(Class))
-                if (!ShortName.Contains("_de_"))
-                    ShortName = ShortName.Replace(Class,"").Trim();
+            if(this.Class != string.Empty)
+                if (ShortName.Contains(Class))
+                    if (!ShortName.Contains("_de_"))
+                        ShortName = ShortName.Replace(Class,"").Trim();
             FormattedName = ShortName.Replace("Per_","").Replace("_Total","").Replace('_',' ').Trim();
             Description = description;
-            this.Cost = 0;
+            this.Value = 0;
+            this.Maximum = sliderMaximum;
+            this.Step = sliderStep;
+            if (string.IsNullOrEmpty(Description))
+                HasDescription = false;
+            else
+                HasDescription = true;
         }
         #endregion
 

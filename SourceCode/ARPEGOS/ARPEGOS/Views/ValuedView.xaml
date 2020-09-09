@@ -6,48 +6,81 @@
              Title="{Binding StageName}">
     <ContentPage.Content>
         <Grid>
-            <StackLayout Spacing="5" Padding="0" Margin="0,0,0,0">
+            <StackLayout Spacing="5" Padding="0" Margin="20,20,20,20">
+                <StackLayout Orientation="Vertical">
+                    <StackLayout Orientation="Vertical" Spacing="5" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" IsVisible="{Binding HasGeneralLimit}">
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Límite general" HorizontalOptions="StartAndExpand" FontSize="Large" />
+                            <Label Text="{Binding GeneralProgress, StringFormat='{0:F0}'}" HorizontalOptions="EndAndExpand" FontSize="Large"/>
+                        </StackLayout>
+                        <ProgressBar x:Name="GeneralProgressBar" 
+                                         HorizontalOptions="StartAndExpand"
+                                         Progress="{Binding GeneralProgress}" 
+                                         ProgressColor="{DynamicResource GeneralColor}"
+                                         BackgroundColor="{DynamicResource SeparatorColor}"
+                                         IsVisible="{Binding HasGeneralLimit}"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Vertical" Spacing="5" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand">
+                        <StackLayout Orientation="Horizontal" Spacing="5" HorizontalOptions="FillAndExpand">
+                            <Label Text="Límite de etapa" HorizontalOptions="StartAndExpand" FontSize="Large"/>
+                            <Label Text="{Binding StageProgressLabel, StringFormat='{0:F0}'}" HorizontalOptions="EndAndExpand" FontSize="Large"/>
+                        </StackLayout>
+                        <ProgressBar x:Name="StageProgressBar" HorizontalOptions="FillAndExpand"
+                                     Progress="{Binding StageProgress}" 
+                                     ProgressColor="{DynamicResource StageColor}"
+                                     BackgroundColor="{DynamicResource SeparatorColor}"/>
+                    </StackLayout>
+                </StackLayout>
+                
                 <ListView ItemsSource="{Binding Data}" HasUnevenRows="True" SelectionMode="None" CachingStrategy="RecycleElementAndDataTemplate">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>
                                 <Frame x:Name="ItemFrame"
                                        VerticalOptions="Start"
-                                       Margin="20,20,20,20"
+                                       Margin="0,0,0,0"
                                        BorderColor="{DynamicResource SeparatorColor}">
                                     <Grid x:Name="SliderItem" 
                                           HorizontalOptions="FillAndExpand"
-                                          RowDefinitions="Auto,Auto"
-                                          ColumnDefinitions="2*,*,*,*">
+                                          RowDefinitions="1*,1*"
+                                          ColumnDefinitions="*,*,*">
                                         <Label x:Name="ItemNameLabel"
+                                               FontSize="Large"
                                                Grid.Row="0"
                                                Grid.Column="0"
                                                VerticalOptions="Center"
                                                HorizontalTextAlignment="Center"
                                                Text="{Binding FormattedName}"/>
-                                        <Label x:Name="SliderValueLabel"
+                                        <Stepper x:Name="ValueEntry"
+                                               Grid.Row="1"
+                                               Grid.Column="1"
+                                               BindingContext="{Binding .}"
+                                               VerticalOptions="Center"
+                                               HorizontalOptions="FillAndExpand"
+                                               Maximum="{Binding Maximum}"
+                                               ValueChanged="OnValueChanged"/>
+                                        <Label x:Name="ValueLabel"
+                                               FontSize="Large"
                                                Grid.Row="0"
                                                Grid.Column="1"
                                                VerticalOptions="Center"
                                                HorizontalTextAlignment="Center"
-                                               Text="{Binding Source={x:Reference UserInputSlider},Path=Value}"/>
-                                        <Label x:Name="ItemValueLabel"
+                                               Text="{Binding Source={x:Reference ValueEntry}, Path=Value, StringFormat='{0:F0}'}"/>
+                                        <Label x:Name="LimitLabel"
+                                               FontSize="Large"
                                                Grid.Row="0"
                                                Grid.Column="2"
                                                VerticalOptions="Center"
                                                HorizontalTextAlignment="Center"
-                                               Text="Final Value"/>
+                                               Text="{Binding Maximum, StringFormat='Límite: {0:F0}'}"/>                                        
                                         <ImageButton x:Name="InformationButton"
-                                               Grid.Row="0"
-                                               Grid.Column="3"
-                                               Source="description.png"/>
-                                        <controls:CustomSlider x:Name="UserInputSlider" 
-                                                Grid.Row="1" 
-                                                Grid.Column="0" 
-                                                Grid.ColumnSpan="4"
-                                                Step="{Binding Source={x:RelativeSource AncestorType={x:Type ContentPage}}, Path=BindingContext.Step}"
-                                                Minimum="0"
-                                                Maximum="{Binding Source={x:RelativeSource AncestorType={x:Type ContentPage}}, Path=BindingContext.CurrentLimit}"/>
+                                               Grid.Row="1"
+                                               Grid.Column="2"
+                                               Source="description.png"
+                                               HeightRequest="25" WidthRequest="25"
+                                               BackgroundColor="Transparent"
+                                               IsEnabled="{Binding IsEnabled}"
+                                               IsVisible="{Binding IsEnabled}"/>
                                     </Grid>
                                 </Frame>
                             </ViewCell>

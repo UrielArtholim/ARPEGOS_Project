@@ -124,6 +124,7 @@ namespace ARPEGOS.Services
                 var shortName = elementString.Split('#').Last();
                 while (datatypeEnumerator.MoveNext())
                 {
+                    var propertyName = datatypeEnumerator.Current?.ToString().Split('#').Last();
                     // performance doesn't change drastically from lastindexof + substring, and with split is more readable
                     if (datatypeEnumerator.Current?.ToString().Split('#').Last() == shortName)
                     {

@@ -40,9 +40,7 @@
                         Grid.Row="1" 
                         Grid.Column="0" 
                         Grid.ColumnSpan="4"
-                        Step="{Binding Step}"
-                        Minimum="0"
-                        Maximum="{Binding Maximum}"/>
+                        Step="{Binding Step}"/>
             </Grid>
         </Frame>
     </ViewCell.View>
