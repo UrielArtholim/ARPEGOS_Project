@@ -22,6 +22,7 @@ namespace ARPEGOS.Models
         public bool IsGrouped { get; private set; }
 
         public ObservableCollection<Item> Items { get; private set; }
+        public ObservableCollection<Group> Groups { get; private set; }
 
         public Stage (string elementString, bool grouped = false)
         {
@@ -29,15 +30,18 @@ namespace ARPEGOS.Models
             this.FullName = elementString;
             this.ShortName = elementString.Split('#').Last();
             this.IsGrouped = grouped;
-            this.Items = new ObservableCollection<Item>();
+            this.Items = null;
+            this.Groups = null;
             if (this.IsGrouped == true)
             {
+                this.Groups = new ObservableCollection<Group>();
                 var stageItems = characterService.GetIndividualsGrouped(this.FullName);
                 foreach (var item in stageItems)
-                    this.Items.Add(item);
+                    this.Groups.Add(item);
             }
             else
             {
+                this.Items = new ObservableCollection<Item>();
                 if (characterService.CheckClass(this.FullName, false))
                 {
                     var stageItems = characterService.GetIndividuals(this.FullName);
@@ -45,8 +49,7 @@ namespace ARPEGOS.Models
                         this.Items.Add(item);
                 }
                 else
-                    this.Items.Add(new Item(this.FullName));
-                
+                    this.Items.Add(new Item(this.FullName));                
             }
 
             this.Type = StageType.NotDefined;

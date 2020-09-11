@@ -15,7 +15,7 @@ namespace ARPEGOS.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class CreationRootView: ContentPage
     {
-        CheckBox lastChecked;
+        RadioButton lastChecked;
         public CreationRootView ()
         {
             InitializeComponent();
@@ -23,12 +23,15 @@ namespace ARPEGOS.Views
         }
         void OnCheckedChanged(object sender, CheckedChangedEventArgs e)
         {
-            var activeCheckbox = sender as CheckBox;
-            if (activeCheckbox != lastChecked && lastChecked != null)
+            var activeRadioButton = sender as RadioButton;
+            if(lastChecked != null)
+                lastChecked.TextColor = Color.LightGreen;
+            activeRadioButton.TextColor = Color.Black;
+            if (activeRadioButton != lastChecked && lastChecked != null)
                 lastChecked.IsChecked = false;
-            lastChecked = activeCheckbox.IsChecked ? activeCheckbox : null;
+            lastChecked = activeRadioButton.IsChecked ? activeRadioButton : null;
             var viewModel = this.BindingContext as CreationRootViewModel;
-            viewModel.SelectedItem = activeCheckbox.BindingContext as Item;
+            viewModel.SelectedItem = activeRadioButton.BindingContext as Item;
             if (lastChecked != null)
                 viewModel.Continue = true;
             else

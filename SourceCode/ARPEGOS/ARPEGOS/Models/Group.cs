@@ -3,8 +3,13 @@ using System.ComponentModel;
 
 namespace ARPEGOS
 {
+    using ARPEGOS.Helpers;
+    using ARPEGOS.ViewModels;
+    using System.Collections;
+    using System.Collections.Generic;
     using System.Collections.ObjectModel;
     using System.Linq;
+    using System.Runtime.CompilerServices;
 
     /// <summary>
     /// ItemGroup models a collection of items which belong to a group
@@ -16,6 +21,11 @@ namespace ARPEGOS
         /// State of expansion of the group
         /// </summary>
         private bool expanded;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool HasDescription { get; set; }
 
         /// <summary>
         /// String of the group
@@ -35,7 +45,7 @@ namespace ARPEGOS
         /// <summary>
         /// Collection of elements of the group
         /// </summary>
-        public dynamic GroupList { get; internal set; }
+        public IEnumerable<Item> GroupList { get; internal set; }
 
         /// <summary>
         /// EventHandler to know when a property is changed
@@ -56,13 +66,18 @@ namespace ARPEGOS
         /// </summary>
         /// <param name="groupTitle">Name of the group</param>
         /// <param name="expanded">State of expansion of the group</param>
-        public Group (string groupString, dynamic groupList = null, string description = "", bool expanded = false)
+        public Group (string groupString, IEnumerable<Item> groupList = null)
         {
+            var character = DependencyHelper.CurrentContext.CurrentCharacter;
             GroupString = groupString;
             Title = groupString.Split('#').Last();
             FormattedTitle = Title.Replace('_', ' ').Trim();
-            Expanded = expanded;
-            Description = description;
+            Expanded = false;
+            Description = character.GetElementDescription(groupString, StageViewModel.ApplyOnCharacter);
+            if (string.IsNullOrEmpty(Description) || string.IsNullOrWhiteSpace(Description))
+                this.HasDescription = false;
+            else
+                this.HasDescription = true;
             GroupList = groupList;
         }
         #endregion
@@ -92,40 +107,6 @@ namespace ARPEGOS
         protected virtual void OnPropertyChanged (string propertyName)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
-
-        public void ShowGroup (string tree = " ")
-        {
-            Console.WriteLine(tree + "====[" + this.FormattedTitle + "]");
-
-            string nextElement = tree + "----";
-
-            int textcounter = ((this.FormattedTitle.Length / 2) + this.FormattedTitle.Length % 2) + 4;
-            for (int i = ((this.FormattedTitle.Length / 2) + this.FormattedTitle.Length % 2); i > 0; --i)
-            {
-                nextElement += "-";
-                --textcounter;
-            }
-            nextElement += "|";
-
-            Console.WriteLine(nextElement + "\n" + nextElement);
-            foreach (var element in GroupList)
-            {
-                Type elementType = element.GetType();
-                Type groupType = this.GetType();
-                if (elementType == groupType)
-                {
-                    Group currentGroup = (Group) element;
-                    currentGroup.ShowGroup(nextElement);
-                }
-                else
-                {
-                    Item currentItem = (Item) element;
-                    currentItem.ShowItem(nextElement);
-                }
-            }
-            Console.WriteLine(tree);
-            Console.WriteLine(tree);
         }
         #endregion
 

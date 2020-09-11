@@ -235,19 +235,31 @@ namespace ARPEGOS.Services
                 CurrentContext = DependencyHelper.CurrentContext.CurrentGame.Context;
             }
 
-            var DataModel = CurrentOntology.Data;
             RDFOntologyResource currentElementResource;
-            if (CheckClass(currentElementString))
+            RDFOntologyTaxonomy elementCommentAnnotationEntries;
+            if (CheckClass(currentElementString, applyOnCharacter))
+            {
                 currentElementResource = CurrentOntology.Model.ClassModel.SelectClass(currentElementString);
-            else if (CheckFact(currentElementString))
+                elementCommentAnnotationEntries = CurrentOntology.Model.ClassModel.Annotations.Comment.SelectEntriesBySubject(currentElementResource);
+            }
+            else if (CheckFact(currentElementString, applyOnCharacter))
+            {
                 currentElementResource = CurrentOntology.Data.SelectFact(currentElementString);
+                elementCommentAnnotationEntries = CurrentOntology.Data.Annotations.Comment.SelectEntriesBySubject(currentElementResource);
+            }
             else
+            {
                 currentElementResource = CurrentOntology.Model.PropertyModel.SelectProperty(currentElementString);
+                elementCommentAnnotationEntries = CurrentOntology.Model.PropertyModel.Annotations.Comment.SelectEntriesBySubject(currentElementResource);
+            }
 
-
-            var elementCommentAnnotation = DataModel.Annotations.Comment.SelectEntriesBySubject(currentElementResource).Single(); 
-            if (elementCommentAnnotation != null)
-                elementDesc = elementCommentAnnotation.TaxonomyObject.ToString().Split('^').First();
+            if (elementCommentAnnotationEntries.EntriesCount > 0)
+            {
+                var elementCommentAnnotation = elementCommentAnnotationEntries.Single().TaxonomyObject;
+                if (elementCommentAnnotation != null)
+                    elementDesc = elementCommentAnnotation.ToString().Split('^').First();
+            }
+            
             return elementDesc;
         }//MODIFIED
 
@@ -283,9 +295,12 @@ namespace ARPEGOS.Services
             var classAssertions = DataModel.Relations.ClassType.SelectEntriesByObject(currentClass);
             foreach (var assertion in classAssertions)
             {
-                var individualString = assertion.TaxonomySubject.ToString();
-                var individualFact = DataModel.SelectFact(individualString);
-                var individualDescription = CurrentOntology.Data.Annotations.Comment.SelectEntriesBySubject(individualFact).Single().TaxonomyObject.ToString().Split('^').First();
+                var individualFact = assertion.TaxonomySubject;
+                var individualDescriptionEntries = CurrentOntology.Data.Annotations.Comment.SelectEntriesBySubject(individualFact);
+                var individualDescription = string.Empty;
+                if(individualDescriptionEntries.EntriesCount > 0)
+                    individualDescription = individualDescriptionEntries.Single().TaxonomyObject.ToString().Split('^').First();
+                var individualString = individualFact.ToString();
                 individuals.Add(new Item(individualString, individualDescription, currentClassName));
             }
 
@@ -298,17 +313,16 @@ namespace ARPEGOS.Services
         /// <param name="className">Name of the class</param>
         /// <param name="applyOnCharacter">Search inside character</param>
         /// <returns></returns>
-        public dynamic GetIndividualsGrouped (string classString, bool applyOnCharacter = false)
+        public ObservableCollection<Group> GetIndividualsGrouped (string classString, bool applyOnCharacter = false)
         {
-            dynamic groups = null;
+            ObservableCollection<Group> groups = null;
             ObservableCollection<Group> subclasses = GetSubClasses(classString, applyOnCharacter);
             if (subclasses != null)
             {
-                groups = subclasses;
-                foreach (Group groupItem in groups)
-                    groupItem.GroupList = GetIndividualsGrouped(groupItem.GroupString, applyOnCharacter);
+                groups = new ObservableCollection<Group>();
+                foreach(var subclass in subclasses)
+                    groups.Add(subclass);
             }
-
             return groups;
         }//MODIFIED
 
@@ -1013,27 +1027,25 @@ namespace ARPEGOS.Services
             }
 
             ObservableCollection<Group> subclasses = new ObservableCollection<Group>();
-            var CharacterClassModel = CurrentOntology.Model.ClassModel;
-            var RootClass = CharacterClassModel.SelectClass(currentClassString);
-            var SubClassesOfRoot = CharacterClassModel.Relations.SubClassOf.SelectEntriesByObject(RootClass);
-            if (SubClassesOfRoot.EntriesCount != 0)
-                foreach (var currentEntry in SubClassesOfRoot)
-                {
-                    var groupString = currentEntry.TaxonomySubject.ToString();
-                    var currentClass = CharacterClassModel.SelectClass(groupString);
-                    var UpperClassesOfCurrent = CharacterClassModel.Relations.SubClassOf.SelectEntriesBySubject(currentClass);
+            var currentClass = CurrentOntology.Model.ClassModel.SelectClass(classString);
+            var currentClassDescription = this.GetElementDescription(classString, applyOnCharacter);
 
-                    foreach (var currentUpperClassEntry in UpperClassesOfCurrent)
-                    {
-                        var upperClassString = currentUpperClassEntry.TaxonomyObject.ToString();
-                        if (CharacterClassModel.SelectClass(upperClassString) == RootClass)
-                            subclasses.Add(new Group(groupString));
-                    }
+            var currentClassModel = CurrentOntology.Model.ClassModel.GetSubClassesOf(currentClass);
+            if (currentClassModel.ClassesCount > 0)
+            {
+                var enumerator = currentClassModel.ClassesEnumerator;
+                enumerator.Reset();
+                while(enumerator.MoveNext())
+                {
+                    var currentSubclass = enumerator.Current;
+                    var currentSubclassString = enumerator.Current.ToString();
+                    var itemList = this.GetIndividuals(currentSubclassString, applyOnCharacter);
+                    subclasses.Add(new Group(currentSubclassString, itemList));
                 }
-            if (subclasses.Count < 1)
-                return null;
+            }
             else
-                return subclasses;
+                subclasses = null;
+           return subclasses;
         }//MODIFIED
 
         /// <summary>
@@ -1254,7 +1266,7 @@ namespace ARPEGOS.Services
                 else if (CheckDatatypeProperty(GetString(element, applyOnCharacter), applyOnCharacter))
                 {
                     // 3.2.1 Check if element is in the first position. 
-                    if(index == 0)
+                    if (index == 0)
                     {
                         // 3.2.1.1 If element is a datatype property, check if the character has any entry with it
                         // 3.2.1.1 Get character fact
@@ -1263,7 +1275,7 @@ namespace ARPEGOS.Services
                         var characterElementPropertyString = GetString(element, true);
                         var characterElementProperty = CharacterOntology.Model.PropertyModel.SelectProperty(characterElementPropertyString) as RDFOntologyDatatypeProperty;
 
-                        if(characterElementProperty == null)
+                        if (characterElementProperty == null)
                         {
                             /* 3.2.1.2.1 If character does not have element datatype property defined, it is time to define it. For doing it, 
                              * we will search inside the game ontology the same property, and we will assign its default value, which will be included as an
@@ -1271,12 +1283,12 @@ namespace ARPEGOS.Services
                             var gameElementPropertyString = GetString(element);
                             var gameElementProperty = GameOntology.Model.PropertyModel.SelectProperty(gameElementPropertyString);
                             // 3.2.1.2.2 Check if gameElementProperty exists, to prevent unhandled exceptions
-                            if(gameElementProperty != null)
+                            if (gameElementProperty != null)
                             {
                                 var GameOntologyPropertyModelIsDefinedByAnnotations = GameOntology.Model.PropertyModel.Annotations.IsDefinedBy;
                                 var gameElementPropertyIsDefinedByAnnotations = GameOntologyPropertyModelIsDefinedByAnnotations.SelectEntriesBySubject(gameElementProperty);
                                 //3.2.1.2.3 Check if the annotation exists, to prevent unhandled exceptions
-                                if(gameElementPropertyIsDefinedByAnnotations.EntriesCount > 0)
+                                if (gameElementPropertyIsDefinedByAnnotations.EntriesCount > 0)
                                 {
                                     //3.2.1.2.3A.1 The definition is the object of the taxonomy entry. We take it in two parts, its value and its type.
                                     var definition = gameElementPropertyIsDefinedByAnnotations.Single().TaxonomyObject.ToString().Split('^').First();
@@ -1306,7 +1318,7 @@ namespace ARPEGOS.Services
                         // 3.2.1.4 Get property value
                         var propertyValueString = CharacterPropertyAssertion.TaxonomyObject.ToString();
                         // 3.2.1.5 If the value is float, convert it to string. Otherwise, assign the value to CurrentValue and SubjectRef
-                        if(propertyValueString.Contains("float"))
+                        if (propertyValueString.Contains("float"))
                         {
                             propertyValueString = propertyValueString.Split('^').First();
                             // If the value contains decimals, then we only get the integer part of the value.
@@ -1329,16 +1341,16 @@ namespace ARPEGOS.Services
                         var previousElement = formulaElements.ElementAt(index - 1);
 
                         // 3.2.2.2 Check if the element is an individual in the game ontology
-                        if(CheckIndividual(GetString(previousElement)))
+                        if (CheckIndividual(GetString(previousElement)))
                         {
                             // 3.2.2.3 Check if the element is has a version inside the character ontology. If it does not, then we create one
-                            var individualFact = CheckIndividual(GetString(previousElement,true)) ? CharacterOntology.Data.SelectFact(GetString(previousElement, applyOnCharacter)) : CreateIndividual(previousElement);
+                            var individualFact = CheckIndividual(GetString(previousElement, true)) ? CharacterOntology.Data.SelectFact(GetString(previousElement, applyOnCharacter)) : CreateIndividual(previousElement);
                             // 3.2.2.4 Now its time to find the current element inside the character ontology. As before, if it is not inside the character ontology, we create it.
                             var elementProperty = CheckDatatypeProperty(GetString(element, true)) ? CharacterOntology.Model.PropertyModel.SelectProperty(GetString(element, true)) : CreateDatatypeProperty(element);
                             // 3.2.2.5 Look if there is any assertion of the element property of the individual fact inside the character ontology
                             var individualFactElementPropertyAssertions = CharacterOntology.Data.Relations.Assertions.SelectEntriesBySubject(individualFact).SelectEntriesByPredicate(elementProperty);
                             // 3.2.2.6 Check if there is any assertion, to prevent unhandled exceptions
-                            if(individualFactElementPropertyAssertions.EntriesCount > 0)
+                            if (individualFactElementPropertyAssertions.EntriesCount > 0)
                             {
                                 // 3.2.2.7 Get assertion object value
                                 var propertyValueString = individualFactElementPropertyAssertions.Single().TaxonomyObject.ToString();
@@ -1369,7 +1381,7 @@ namespace ARPEGOS.Services
                     }
                 } // Ended element as datatype property 
                 // 3.3 Check if element is an object property in the current ontology
-                else if (CheckObjectProperty(GetString(element, applyOnCharacter),applyOnCharacter))
+                else if (CheckObjectProperty(GetString(element, applyOnCharacter), applyOnCharacter))
                 {
                     // 3.3.1 Get current element property and the previous element 
                     var elementPropertyName = formulaElements.ElementAt(index);
@@ -1398,7 +1410,7 @@ namespace ARPEGOS.Services
                         RDFOntologyObjectProperty PredicateProperty;
 
                         // 3.3.2.7 Process every property of the character
-                        foreach(var entry in characterAssertions)
+                        foreach (var entry in characterAssertions)
                         {
                             // 3.3.2.7.1 Get current entry property
                             var entryProperty = entry.TaxonomyPredicate;
@@ -1435,10 +1447,10 @@ namespace ARPEGOS.Services
                                 // 3.3.2.8A.1A If it is contains the word, then the subject is the character fact
                                 SubjectFact = characterFact;
                             else
-                            // 3.3.2.8A.1B If it does not contain the word, then the subject is the item. If it is not declared inside the ontology, we create it.
-                            SubjectFact = CheckIndividual(GetString(itemName, true)) ? CharacterOntology.Data.SelectFact(GetString(itemName, true)) : CreateIndividual(itemName);                                
+                                // 3.3.2.8A.1B If it does not contain the word, then the subject is the item. If it is not declared inside the ontology, we create it.
+                                SubjectFact = CheckIndividual(GetString(itemName, true)) ? CharacterOntology.Data.SelectFact(GetString(itemName, true)) : CreateIndividual(itemName);
                         }
-                        else if(itemClassName == string.Empty)
+                        else if (itemClassName == string.Empty)
                             // 3.3.2.8B If there is not any itemClass, the subject is the characterFact
                             SubjectFact = characterFact;
                         else
@@ -1448,16 +1460,16 @@ namespace ARPEGOS.Services
                             // 3.3.2.8C.2 The next step is check if the current property has characterFact as its domain
                             var PredicatePropertyDomain = PredicateProperty.Domain;
                             // Check if domain is null, to prevent unhandled exceptions
-                            if(PredicatePropertyDomain != null)
+                            if (PredicatePropertyDomain != null)
                             {
                                 // 3.3.2.8C.2 Check if element predicate has characterClass as domain
-                                if(!PredicatePropertyDomain.ToString().Contains(characterClassName))
+                                if (!PredicatePropertyDomain.ToString().Contains(characterClassName))
                                 {
                                     // 3.3.2.8C.2A If it does not have it, then we have to check if the item passed by parameter is inside the character ontology. If it is not, we create it
                                     if (!CheckIndividual(GetString(itemName, true), applyOnCharacter))
                                         SubjectFact = CreateIndividual(itemName);
                                     else
-                                    // 3.3.2.8C.2B If the element predicate domains is characterClass, then our subject is the characterFact.
+                                        // 3.3.2.8C.2B If the element predicate domains is characterClass, then our subject is the characterFact.
                                         SubjectFact = characterFact;
                                 }
                             }
@@ -1467,18 +1479,18 @@ namespace ARPEGOS.Services
                         if (!CheckObjectProperty(GetString(elementPropertyName, true)))
                             PredicateProperty = CreateObjectProperty(GetString(elementPropertyName, true));
                         else
-                            PredicateProperty = CharacterOntology.Model.PropertyModel.SelectProperty(GetString(elementPropertyName,true)) as RDFOntologyObjectProperty;
+                            PredicateProperty = CharacterOntology.Model.PropertyModel.SelectProperty(GetString(elementPropertyName, true)) as RDFOntologyObjectProperty;
 
                         /* Once we have our subject and predicate, we can find the object we are looking for.*/
                         // 3.3.2.10 Get the triple assertions which have SubjectFact as subject.
                         var SubjectAssertions = CharacterOntology.Data.Relations.Assertions.SelectEntriesBySubject(SubjectFact);
                         // Check if SubjectAssertions is not null, to prevent unhandled exceptions
-                        if(SubjectAssertions.EntriesCount > 0)
+                        if (SubjectAssertions.EntriesCount > 0)
                         {
                             // 3.3.2.11 Get SubjectAssertions which have PredicateProperty as predicate
                             var SubjectPredicateAssertions = SubjectAssertions.SelectEntriesByPredicate(PredicateProperty);
                             // Check if SubjectPredicateAssertions is not null, to prevent unhandled exceptions
-                            if(SubjectPredicateAssertions.EntriesCount > 0)
+                            if (SubjectPredicateAssertions.EntriesCount > 0)
                             {
                                 // 3.3.2.12 Get triple object fact
                                 ObjectFact = SubjectPredicateAssertions.Single().TaxonomyObject as RDFOntologyFact;
@@ -1491,7 +1503,7 @@ namespace ARPEGOS.Services
                                 // 3.3.2.15 Create a counter for next elements
                                 var nextElementCounter = 1;
                                 // 3.3.2.16 Check if next property is a datatype property inside the character property
-                                if(CheckDatatypeProperty(GetString(nextElement,true)))
+                                if (CheckDatatypeProperty(GetString(nextElement, true)))
                                 {
                                     // 3.3.2.16A.1 If next property is a datatype property, get the property
                                     var nextDatatypeProperty = CharacterOntology.Model.PropertyModel.SelectProperty(GetString(nextElement, true)) as RDFOntologyDatatypeProperty;
@@ -1502,12 +1514,12 @@ namespace ARPEGOS.Services
                                     // 3.3.2.16A.4 Get subject fact assertions
                                     SubjectAssertions = CharacterOntology.Data.Relations.Assertions.SelectEntriesBySubject(SubjectFact);
                                     // Check if SubjectAssertions is not null, to prevent unhandled exceptions
-                                    if(SubjectAssertions.EntriesCount > 0)
+                                    if (SubjectAssertions.EntriesCount > 0)
                                     {
                                         // 3.3.2.16A.5 Get subject fact assertions which have nextDatatypeProperty as predicate
                                         SubjectPredicateAssertions = SubjectAssertions.SelectEntriesByPredicate(nextDatatypeProperty);
                                         // Check if SubjectPredicateAssertions is not null, to prevent unhandled exceptions
-                                        if(SubjectPredicateAssertions.EntriesCount > 0)
+                                        if (SubjectPredicateAssertions.EntriesCount > 0)
                                         {
                                             // 3.3.2.16A.5A.1 If SubjectPredicateAsseritons is not null, then the object is our current value
                                             var nextPropertyValueString = SubjectPredicateAssertions.Single().TaxonomyObject.ToString();
@@ -1541,10 +1553,10 @@ namespace ARPEGOS.Services
                                     // 3.3.2.16B.1 Declare variable to control if its the first tiem to check
                                     var firstTime = true;
                                     // 3.3.2.16B.2 if this is not the last property, get the next property
-                                    while (CheckObjectProperty(GetString(nextElement,true)))
+                                    while (CheckObjectProperty(GetString(nextElement, true)))
                                     {
                                         // 3.3.2.16B.2.1 Check if its the first time
-                                        if(firstTime)
+                                        if (firstTime)
                                         {
                                             // 3.3.2.16B.2.1A Check if item exists inside the character ontology. If it does not exists, we create it.
                                             SubjectFact = CheckIndividual(GetString(itemName, true)) ? CharacterOntology.Data.SelectFact(GetString(itemName, true)) : CreateIndividual(GetString(itemName, true));
@@ -1620,190 +1632,240 @@ namespace ARPEGOS.Services
                                 }
                             }
                         }
-                    }// Ended element as object property
-                    // 3.4 Check if element is an class in the current ontology
-                    else if (CheckClass(GetString(element,applyOnCharacter), applyOnCharacter))
+                    }
+                }// Ended element as object property
+                 // 3.4 Check if element is an class in the current ontology
+                else if (CheckClass(GetString(element, applyOnCharacter), applyOnCharacter))
+                {
+                    // 3.4.1 Get next element
+                    var nextElement = formulaElements.ElementAt(index + 1);
+                    // 3.4.2 Get element as individual, adding itemName to the end of element string
+                    var subjectFactName = $"{element}_{User_Input}";
+                    var SubjectFact = CurrentOntology.Data.SelectFact(GetString(subjectFactName, applyOnCharacter));
+                    // 3.4.3 Get next element as property
+                    var PredicateProperty = CurrentOntology.Model.PropertyModel.SelectProperty(GetString(nextElement, applyOnCharacter));
+                    // 3.4.4 Get assertion
+                    var assertion = CurrentOntology.Data.Relations.Assertions.SelectEntriesBySubject(SubjectFact).SelectEntriesByPredicate(PredicateProperty);
+                    // Check if assertion is not null, to prevent unhandled exceptions
+                    if (assertion.EntriesCount > 0)
                     {
-                        // 3.4.1 Get next element
-                        var nextElement = formulaElements.ElementAt(index + 1);
-                        // 3.4.2 Get element as individual, adding itemName to the end of element string
-                        var subjectFactName = $"{element}_{User_Input}";
-                        var SubjectFact = CurrentOntology.Data.SelectFact(GetString(subjectFactName, applyOnCharacter));
-                        // 3.4.3 Get next element as property
-                        var PredicateProperty = CurrentOntology.Model.PropertyModel.SelectProperty(GetString(nextElement, applyOnCharacter));
-                        // 3.4.4 Get assertion
-                        var assertion = CurrentOntology.Data.Relations.Assertions.SelectEntriesBySubject(SubjectFact).SelectEntriesByPredicate(PredicateProperty);
-                        // Check if assertion is not null, to prevent unhandled exceptions
-                        if(assertion.EntriesCount > 0)
-                        {
-                            // If the assertion is not null, then the current value is the assertion object
-                            CurrentValue = assertion.Single().TaxonomyObject.ToString().Split('^').First();
-                        }
-                    }// Ended element as class
-                    // 3.5 Check if element is an individual in the current ontology
-                    else if(CheckIndividual(GetString(element, applyOnCharacter), applyOnCharacter))
+                        // If the assertion is not null, then the current value is the assertion object
+                        CurrentValue = assertion.Single().TaxonomyObject.ToString().Split('^').First();
+                    }
+                }// Ended element as class
+                 // 3.5 Check if element is an individual in the current ontology
+                else if (CheckIndividual(GetString(element, applyOnCharacter), applyOnCharacter))
+                {
+                    // 3.5.1 Get next element
+                    var nextElement = formulaElements.ElementAt(index + 1);
+                    // 3.5.2 Get current element as subject fact
+                    var SubjectFact = CurrentOntology.Data.SelectFact(GetString(element, applyOnCharacter));
+                    // 3.5.3 Get next element as a property
+                    var PredicateProperty = CurrentOntology.Model.PropertyModel.SelectProperty(GetString(nextElement, applyOnCharacter));
+                    // 3.5.4 Check if PredicateProperty is not null, to prevent unhandled exceptions
+                    if (PredicateProperty == null)
                     {
-                        // 3.5.1 Get next element
-                        var nextElement = formulaElements.ElementAt(index + 1);
-                        // 3.5.2 Get current element as subject fact
-                        var SubjectFact = CurrentOntology.Data.SelectFact(GetString(element, applyOnCharacter));
-                        // 3.5.3 Get next element as a property
-                        var PredicateProperty = CurrentOntology.Model.PropertyModel.SelectProperty(GetString(nextElement, applyOnCharacter));
-                        // 3.5.4 Check if PredicateProperty is not null, to prevent unhandled exceptions
-                        if(PredicateProperty == null)
-                        {
-                            /* If PredicateProperty is null, then it is necessary to find another predicate. To find it, we will use the words inside the current predicate name.*/
-                            // 3.5.4A.1 Declarate some variables to find the new predicate
-                            var PredicatePropertyWords = PredicateProperty.ToString().Split('#').Last().Split('_').ToList();
-                            var wordCounter = PredicatePropertyWords.Count();
-                            var propertyFound = false;
-                            var propertyName = string.Empty;
+                        /* If PredicateProperty is null, then it is necessary to find another predicate. To find it, we will use the words inside the current predicate name.*/
+                        // 3.5.4A.1 Declarate some variables to find the new predicate
+                        var PredicatePropertyWords = PredicateProperty.ToString().Split('#').Last().Split('_').ToList();
+                        var wordCounter = PredicatePropertyWords.Count();
+                        var propertyFound = false;
+                        var propertyName = string.Empty;
 
-                            // 3.5.4A.2 Search properties until we find one
-                            while (propertyFound == false && wordCounter > 1)
+                        // 3.5.4A.2 Search properties until we find one
+                        while (propertyFound == false && wordCounter > 1)
+                        {
+                            propertyName = "";
+                            // 3.5.4A.3 Add all words to propertyName except the last one
+                            for (int i = 0; i < wordCounter - 1; ++i)
+                                propertyName += PredicatePropertyWords.ElementAt(i) + "_";
+                            propertyName += PredicatePropertyWords.Last();
+                            // 3.5.4A.4 Check if propertyName exists as a datatype property inside the current
+                            if (CheckDatatypeProperty(GetString(propertyName, applyOnCharacter), applyOnCharacter))
                             {
-                                propertyName = "";
-                                // 3.5.4A.3 Add all words to propertyName except the last one
-                                for (int i = 0; i < wordCounter - 1; ++i)
-                                    propertyName += PredicatePropertyWords.ElementAt(i) + "_";
-                                propertyName += PredicatePropertyWords.Last();
-                                // 3.5.4A.4 Check if propertyName exists as a datatype property inside the current
-                                if(CheckDatatypeProperty(GetString(propertyName,applyOnCharacter),applyOnCharacter))
-                                {
-                                    //3.5.4A.4A.1 If propertyName is a datatype property, get it and update propertyFound indicator
-                                    PredicateProperty = CurrentOntology.Model.PropertyModel.SelectProperty(GetString(propertyName, applyOnCharacter));
-                                    propertyFound = true;
-                                }
-                                // 3.5.4A.5 Substract one from wordCounter
-                                --wordCounter;
+                                //3.5.4A.4A.1 If propertyName is a datatype property, get it and update propertyFound indicator
+                                PredicateProperty = CurrentOntology.Model.PropertyModel.SelectProperty(GetString(propertyName, applyOnCharacter));
+                                propertyFound = true;
                             }
+                            // 3.5.4A.5 Substract one from wordCounter
+                            --wordCounter;
                         }
-                        // 3.5.5 Get the assertion that has SubjectFact as subject and PredicateProperty as predicate
-                        var assertion = CurrentOntology.Data.Relations.Assertions.SelectEntriesBySubject(SubjectFact).SelectEntriesByPredicate(PredicateProperty);
-                        // Check if assertion is null, to prevent unhandled exceptions
-                        if(assertion.EntriesCount > 0)
-                        {
-                            // 3.5.6 If assertion is not null, the current value is the assertion object
-                            CurrentValue = assertion.Single().TaxonomyObject.ToString().Split('^').First();
-                        }
-                    }// Ended element as individual
-                    //3.6 Check element as operator
-                    else if(Operators.Any(op => element == op))
+                    }
+                    // 3.5.5 Get the assertion that has SubjectFact as subject and PredicateProperty as predicate
+                    var assertion = CurrentOntology.Data.Relations.Assertions.SelectEntriesBySubject(SubjectFact).SelectEntriesByPredicate(PredicateProperty);
+                    // Check if assertion is null, to prevent unhandled exceptions
+                    if (assertion.EntriesCount > 0)
                     {
-                        var isFloat = false;
-                        // 3.6.1 Get next element
-                        var nextElement = formulaElements.ElementAt(index + 1);
-                        // 3.6.2 Check if next element is a numeric value
-                        var nextElementIsValue = float.TryParse(nextElement, out float nextElementValue);
-                        if(nextElementIsValue == false)
+                        // 3.5.6 If assertion is not null, the current value is the assertion object
+                        CurrentValue = assertion.Single().TaxonomyObject.ToString().Split('^').First();
+                    }
+                }// Ended element as individual
+                 //3.6 Check element as operator
+                else if (Operators.Any(op => element == op))
+                {
+                    var isFloat = false;
+                    // 3.6.1 Get next element
+                    var nextElement = formulaElements.ElementAt(index + 1);
+                    // 3.6.2 Check if next element is a numeric value
+                    var nextElementIsValue = float.TryParse(nextElement, out float nextElementValue);
+                    if (nextElementIsValue == false)
+                    {
+                        // 3.6.2A.1 Get character fact
+                        var CharacterFact = CharacterOntology.Data.SelectFact($"{this.Context}{this.Name}");
+                        var SubjectFact = CharacterFact;
+                        // 3.6.2A.2 Check if nextElement is a datatypeProperty 
+                        if (CheckDatatypeProperty(GetString(nextElement, true)))
                         {
-                            // 3.6.2A.1 Get character fact
-                            var CharacterFact = CharacterOntology.Data.SelectFact($"{this.Context}{this.Name}");
-                            var SubjectFact = CharacterFact;
-                            // 3.6.2A.2 Check if nextElement is a datatypeProperty 
-                            if(CheckDatatypeProperty(GetString(nextElement,true)))
+                            // 3.6.2A.2A.1 Get character class name
+                            var characterClassName = GetElementClass($"{this.Context}{this.Name}", true).ToString().Split('#').Last();
+                            // 3.6.2A.2A.2 Get nextElement first word
+                            var nextElementFirstWord = nextElement.Split('_').First();
+                            // 3.6.2A.2A.3 Check if character class name contains next element first word
+                            if (!characterClassName.Contains(nextElementFirstWord))
                             {
-                                // 3.6.2A.2A.1 Get character class name
-                                var characterClassName = GetElementClass($"{this.Context}{this.Name}", true).ToString().Split('#').Last();
-                                // 3.6.2A.2A.2 Get nextElement first word
-                                var nextElementFirstWord = nextElement.Split('_').First();
-                                // 3.6.2A.2A.3 Check if character class name contains next element first word
-                                if(!characterClassName.Contains(nextElementFirstWord))
+                                // 3.6.2A.2A.3A.1 If character class name does not contain next element first word, find the class which name contains the first word.
+                                var nextElementClass = CurrentOntology.Model.ClassModel.Where(item => item.ToString().Contains(nextElementFirstWord)).Single();
+                                // 3.6.2A.2A.3A.2 Find the element whose class is nextElementClass
+                                var nextElementFactName = CurrentOntology.Data.Relations.ClassType.SelectEntriesByObject(nextElementClass).Single().TaxonomySubject.ToString().Split('#').Last();
+                                // 3.6.2A.2A.3A.3 Check if nextElementFact exists inside the character ontology. If it does not, we create it
+                                CharacterFact = CheckIndividual(GetString(nextElementFactName, true)) ? CharacterOntology.Data.SelectFact(GetString(nextElementFactName, true)) : CreateIndividual(nextElementFactName);
+                            }
+                            // 3.6.2A.2A.4 Check if next element predicate exists inside the character ontology. If it does not, we create it
+                            var PredicateProperty = CheckDatatypeProperty(GetString(nextElement, true)) ? CharacterOntology.Model.PropertyModel.SelectProperty(GetString(nextElement, true))
+                                : CreateDatatypeProperty(GetString(nextElement, true));
+                            // 3.6.2A.2A.5 Declare variable to get next element value string
+                            var nextElementValueString = string.Empty;
+                            // 3.6.2A.2A.6 Get character assertions
+                            var characterAssertions = CharacterOntology.Data.Relations.Assertions.SelectEntriesBySubject(CharacterFact);
+                            // Check if characterAssertions is null, to prevent unhandled exceptions
+                            if (characterAssertions.EntriesCount > 0)
+                            {
+                                // 3.6.2A.2A.7 Get characterAssertions which have PredicateProperty as predicate
+                                var characterPredicateAssertions = characterAssertions.SelectEntriesByPredicate(PredicateProperty);
+                                // Check if characterPredicateAssertions is null, to prevent unhandled exceptions
+                                if (characterPredicateAssertions.EntriesCount == 0)
                                 {
-                                    // 3.6.2A.2A.3A.1 If character class name does not contain next element first word, find the class which name contains the first word.
-                                    var nextElementClass = CurrentOntology.Model.ClassModel.Where(item => item.ToString().Contains(nextElementFirstWord)).Single();
-                                    // 3.6.2A.2A.3A.2 Find the element whose class is nextElementClass
-                                    var nextElementFactName = CurrentOntology.Data.Relations.ClassType.SelectEntriesByObject(nextElementClass).Single().TaxonomySubject.ToString().Split('#').Last();
-                                    // 3.6.2A.2A.3A.3 Check if nextElementFact exists inside the character ontology. If it does not, we create it
-                                    CharacterFact = CheckIndividual(GetString(nextElementFactName, true)) ? CharacterOntology.Data.SelectFact(GetString(nextElementFactName, true)) : CreateIndividual(nextElementFactName);
-                                }
-                                // 3.6.2A.2A.4 Check if next element predicate exists inside the character ontology. If it does not, we create it
-                                var PredicateProperty = CheckDatatypeProperty(GetString(nextElement, true)) ? CharacterOntology.Model.PropertyModel.SelectProperty(GetString(nextElement, true)) 
-                                    : CreateDatatypeProperty(GetString(nextElement, true));
-                                // 3.6.2A.2A.5 Declare variable to get next element value string
-                                var nextElementValueString = string.Empty;
-                                // 3.6.2A.2A.6 Get character assertions
-                                var characterAssertions = CharacterOntology.Data.Relations.Assertions.SelectEntriesBySubject(CharacterFact);
-                                // Check if characterAssertions is null, to prevent unhandled exceptions
-                                if(characterAssertions.EntriesCount > 0)
-                                {
-                                    // 3.6.2A.2A.7 Get characterAssertions which have PredicateProperty as predicate
-                                    var characterPredicateAssertions = characterAssertions.SelectEntriesByPredicate(PredicateProperty);
-                                    // Check if characterPredicateAssertions is null, to prevent unhandled exceptions
-                                    if (characterPredicateAssertions.EntriesCount == 0)
-                                    {
-                                        // 3.6.2A.2A.7A.1 Get predicate name
-                                        var predicateName = PredicateProperty.ToString().Split('#').Last();
-                                        // 3.6.2A.2A.7A.2 Search predicate inside the current ontology
-                                        var CurrentOntologyPredicate = CurrentOntology.Model.PropertyModel.SelectProperty(GetString(predicateName, applyOnCharacter));
-                                        // 3.6.2A.2A.7A.3 Get CurrentOntologyPredicate definition annoation
-                                        var propertyDefinition = CurrentOntology.Model.PropertyModel.Annotations.IsDefinedBy.SelectEntriesBySubject(CurrentOntologyPredicate).Single().TaxonomyObject.ToString().Split('^').First();
-                                        // 3.6.2A.2A.7A.4 Get CurrentOntologyPredicate type
-                                        var propertyType = CurrentOntology.Model.PropertyModel.Annotations.IsDefinedBy.SelectEntriesBySubject(CurrentOntologyPredicate).Single().TaxonomyObject.ToString().Split('^').Last();
-                                        // 3.6.2A.2A.7A.5 Get value from CurrentOntologyPredicate
-                                        nextElementValueString = $"{GetValue(propertyDefinition)}^^{propertyType}";
-                                    }
-                                    else
-                                        // 3.6.2A.2A.7B.1 If exists
-                                        nextElementValueString = characterPredicateAssertions.Single().TaxonomyObject.ToString();
-                                }
-                                // 3.6.2A.2A.8 Get next element value. If it is float, round it to integer
-                                string nextValueDigits = nextElementValueString.Substring(0, nextElementValueString.IndexOf('^'));
-                                if (!nextElementValueString.Contains("float"))
-                                {
-                                    if (nextValueDigits.Contains(','))
-                                        nextValueDigits = nextElementValueString.Split(',').ElementAtOrDefault(0);
-
-                                    nextElementValue = Convert.ToSingle(nextValueDigits);
+                                    // 3.6.2A.2A.7A.1 Get predicate name
+                                    var predicateName = PredicateProperty.ToString().Split('#').Last();
+                                    // 3.6.2A.2A.7A.2 Search predicate inside the current ontology
+                                    var CurrentOntologyPredicate = CurrentOntology.Model.PropertyModel.SelectProperty(GetString(predicateName, applyOnCharacter));
+                                    // 3.6.2A.2A.7A.3 Get CurrentOntologyPredicate definition annoation
+                                    var propertyDefinition = CurrentOntology.Model.PropertyModel.Annotations.IsDefinedBy.SelectEntriesBySubject(CurrentOntologyPredicate).Single().TaxonomyObject.ToString().Split('^').First();
+                                    // 3.6.2A.2A.7A.4 Get CurrentOntologyPredicate type
+                                    var propertyType = CurrentOntology.Model.PropertyModel.Annotations.IsDefinedBy.SelectEntriesBySubject(CurrentOntologyPredicate).Single().TaxonomyObject.ToString().Split('^').Last();
+                                    // 3.6.2A.2A.7A.5 Get value from CurrentOntologyPredicate
+                                    nextElementValueString = $"{GetValue(propertyDefinition)}^^{propertyType}";
                                 }
                                 else
-                                {
-                                    isFloat = true;
-                                    nextElementValueString = nextElementValueString.Substring(0, nextElementValueString.IndexOf('^'));
-                                    nextElementValue = Convert.ToSingle(nextElementValueString, CultureInfo.InvariantCulture);
-                                }
-
-
+                                    // 3.6.2A.2A.7B.1 If exists
+                                    nextElementValueString = characterPredicateAssertions.Single().TaxonomyObject.ToString();
                             }
-                            // 3.6.2A.3 Check if nextElement is an objectProperty
-                            else if(CheckObjectProperty(GetString(nextElement, true)))
+                            // 3.6.2A.2A.8 Get next element value. If it is float, round it to integer
+                            string nextValueDigits = nextElementValueString.Substring(0, nextElementValueString.IndexOf('^'));
+                            if (!nextElementValueString.Contains("float"))
                             {
-                                // 3.6.2A.4 It it is true, the first thing we will do is save the index in other variable
-                                var currentIndex = index;
-                                // 3.6.2A.5 Get next element property 
-                                var nextElementProperty = CurrentOntology.Model.PropertyModel.SelectProperty(GetString(nextElement, applyOnCharacter));
-                                // 3.6.2A.6 Get character assertions
-                                var characterAssertions = CharacterOntology.Data.Relations.Assertions.SelectEntriesBySubject(CharacterFact);
-                                // Check if characterAssertions is null, to prevent unhandled exceptions
-                                if(characterAssertions.EntriesCount > 0)
+                                if (nextValueDigits.Contains(','))
+                                    nextValueDigits = nextElementValueString.Split(',').ElementAtOrDefault(0);
+
+                                nextElementValue = Convert.ToSingle(nextValueDigits);
+                            }
+                            else
+                            {
+                                isFloat = true;
+                                nextElementValueString = nextElementValueString.Substring(0, nextElementValueString.IndexOf('^'));
+                                nextElementValue = Convert.ToSingle(nextElementValueString, CultureInfo.InvariantCulture);
+                            }
+
+
+                        }
+                        // 3.6.2A.3 Check if nextElement is an objectProperty
+                        else if (CheckObjectProperty(GetString(nextElement, true)))
+                        {
+                            // 3.6.2A.4 It it is true, the first thing we will do is save the index in other variable
+                            var currentIndex = index;
+                            // 3.6.2A.5 Get next element property 
+                            var nextElementProperty = CurrentOntology.Model.PropertyModel.SelectProperty(GetString(nextElement, applyOnCharacter));
+                            // 3.6.2A.6 Get character assertions
+                            var characterAssertions = CharacterOntology.Data.Relations.Assertions.SelectEntriesBySubject(CharacterFact);
+                            // Check if characterAssertions is null, to prevent unhandled exceptions
+                            if (characterAssertions.EntriesCount > 0)
+                            {
+                                // 3.6.2A.7 Get character assertions which have nextElementProperty as predicate
+                                var characterPredicateAssertions = characterAssertions.SelectEntriesByPredicate(nextElementProperty);
+                                // Check if characterPredicateAssertions is null, to prevent unhandled exceptions
+                                if (characterPredicateAssertions.EntriesCount > 0)
                                 {
-                                    // 3.6.2A.7 Get character assertions which have nextElementProperty as predicate
-                                    var characterPredicateAssertions = characterAssertions.SelectEntriesByPredicate(nextElementProperty);
-                                    // Check if characterPredicateAssertions is null, to prevent unhandled exceptions
-                                    if (characterPredicateAssertions.EntriesCount > 0)
+                                    // 3.6.2A.8 Get assertion object fact
+                                    var nextElementFact = characterPredicateAssertions.Single().TaxonomyObject as RDFOntologyFact;
+                                    // 3.6.2A.9 Increase current index variable
+                                    ++currentIndex;
+                                    // 3.6.2A.10 Get next element
+                                    nextElement = formulaElements.ElementAt(currentIndex + 1).Replace("Item", itemName).Replace("Ref", SubjectRef);
+                                    // 3.6.2A.11 Check if next element exists as property inside the current ontology
+                                    if (CheckDatatypeProperty(GetString(nextElement, applyOnCharacter), applyOnCharacter))
                                     {
-                                        // 3.6.2A.8 Get assertion object fact
-                                        var nextElementFact = characterPredicateAssertions.Single().TaxonomyObject as RDFOntologyFact;
-                                        // 3.6.2A.9 Increase current index variable
-                                        ++currentIndex;
-                                        // 3.6.2A.10 Get next element
-                                        nextElement = formulaElements.ElementAt(currentIndex + 1).Replace("Item", itemName).Replace("Ref", SubjectRef);
-                                        // 3.6.2A.11 Check if next element exists as property inside the current ontology
-                                        if(CheckDatatypeProperty(GetString(nextElement,applyOnCharacter),applyOnCharacter))
+                                        // 3.6.2A.11A.1 If next element is a datatype property, check if the property exists inside the character ontology. If it does not, we create it.
+                                        var PredicateProperty = CheckDatatypeProperty(GetString(nextElement, true)) ? CharacterOntology.Model.PropertyModel.SelectProperty(GetString(nextElement, true)) : CreateDatatypeProperty(GetString(nextElement, true));
+                                        //3.6.2A.11A.2 Get nextElementFact assertions
+                                        var nextElementFactAssertions = CharacterOntology.Data.Relations.Assertions.SelectEntriesBySubject(nextElementFact);
+                                        // Check if nextElementFactAssertions is null, to prevent unhandled exceptions
+                                        if (nextElementFactAssertions.EntriesCount > 0)
                                         {
-                                            // 3.6.2A.11A.1 If next element is a datatype property, check if the property exists inside the character ontology. If it does not, we create it.
+                                            //3.6.2A.11A.3 Get nextElementFact assertions which have PredicateProperty as predicate
+                                            var nextElementFactPredicateAssertions = nextElementFactAssertions.SelectEntriesByPredicate(PredicateProperty);
+                                            // Check if nextElementFactPredicateAssertions is null, to prevent unhandled exceptions
+                                            if (nextElementFactPredicateAssertions.EntriesCount > 0)
+                                            {
+                                                //3.6.2A.11A.3 Get next value. If it is not float, then round the value to integer
+                                                var nextElementValueString = nextElementFactPredicateAssertions.Single().TaxonomyObject.ToString();
+                                                var nextElementValueDigits = nextElementValueString.Split('^').First();
+
+                                                if (!nextElementValueString.Contains("float"))
+                                                {
+                                                    if (nextElementValueDigits.Contains(','))
+                                                        nextElementValueDigits = nextElementValueString.Split(',').ElementAtOrDefault(0);
+
+                                                    nextElementValue = Convert.ToSingle(nextElementValueDigits);
+                                                }
+                                                else
+                                                {
+                                                    isFloat = true;
+                                                    nextElementValue = Convert.ToSingle(nextElementValueDigits, CultureInfo.InvariantCulture);
+                                                }
+                                            }
+                                        }
+                                    }
+                                    else
+                                    {
+                                        // 3.6.2A.11B.1 If it is not a datatype property, we will need to find a property using next element words
+                                        var nextElementWords = nextElement.Split('_').ToList();
+                                        // 3.6.2A.11B.2 Declare variable to count number of words in use currently
+                                        var wordCounter = nextElementWords.Count() - 1;
+                                        // 3.6.2A.11B.3 Mount new property name using next element words while we do not find a property
+                                        while (!CheckDatatypeProperty(GetString(nextElement)) && wordCounter > 1)
+                                        {
+                                            nextElement = "";
+                                            for (int i = 0; i < wordCounter - 1; ++i)
+                                                nextElement += nextElementWords.ElementAtOrDefault(i) + "_";
+                                            nextElement += nextElementWords.ElementAtOrDefault(wordCounter);
+                                            --wordCounter;
+                                        }
+                                        // 3.6.2A.11B.4 Check if wordCounter has reached its limit
+                                        if (wordCounter > 1)
+                                        {
+                                            // 3.6.2A.11B.4A.1 Check if new nextElement is a datatype property inside the characterOntology. If it does not exists, we create it
                                             var PredicateProperty = CheckDatatypeProperty(GetString(nextElement, true)) ? CharacterOntology.Model.PropertyModel.SelectProperty(GetString(nextElement, true)) : CreateDatatypeProperty(GetString(nextElement, true));
-                                            //3.6.2A.11A.2 Get nextElementFact assertions
+                                            // 3.6.2A.11B.4A.2 Get next element fact assertions
                                             var nextElementFactAssertions = CharacterOntology.Data.Relations.Assertions.SelectEntriesBySubject(nextElementFact);
                                             // Check if nextElementFactAssertions is null, to prevent unhandled exceptions
-                                            if(nextElementFactAssertions.EntriesCount > 0)
+                                            if (nextElementFactAssertions.EntriesCount > 0)
                                             {
-                                                //3.6.2A.11A.3 Get nextElementFact assertions which have PredicateProperty as predicate
+                                                // 3.6.2A.11B.4A.3 Get nextElementFact assertions which have PredicateProperty as predicate
                                                 var nextElementFactPredicateAssertions = nextElementFactAssertions.SelectEntriesByPredicate(PredicateProperty);
                                                 // Check if nextElementFactPredicateAssertions is null, to prevent unhandled exceptions
                                                 if (nextElementFactPredicateAssertions.EntriesCount > 0)
                                                 {
-                                                    //3.6.2A.11A.3 Get next value. If it is not float, then round the value to integer
+                                                    // 3.6.2A.11B.4A.14 Get next value. If it is not float, then round the value to integer
                                                     var nextElementValueString = nextElementFactPredicateAssertions.Single().TaxonomyObject.ToString();
                                                     var nextElementValueDigits = nextElementValueString.Split('^').First();
 
@@ -1824,195 +1886,150 @@ namespace ARPEGOS.Services
                                         }
                                         else
                                         {
-                                            // 3.6.2A.11B.1 If it is not a datatype property, we will need to find a property using next element words
-                                            var nextElementWords = nextElement.Split('_').ToList();
-                                            // 3.6.2A.11B.2 Declare variable to count number of words in use currently
-                                            var wordCounter = nextElementWords.Count()-1;
-                                            // 3.6.2A.11B.3 Mount new property name using next element words while we do not find a property
-                                            while(!CheckDatatypeProperty(GetString(nextElement)) && wordCounter > 1)
+                                            /* If there is no property, then we need to find it searching upper in the property hierarchy.*/
+                                            // 3.6.2A.11B.4B.1 Get item parents
+                                            var itemParents = GetParentClasses(GetString(itemName, applyOnCharacter), applyOnCharacter);
+                                            // Check if item parents is null, to prevent unhandled exceptions
+                                            if (itemParents != null)
                                             {
-                                                nextElement = "";
-                                                for (int i = 0; i < wordCounter - 1; ++i)
-                                                    nextElement += nextElementWords.ElementAtOrDefault(i) + "_";
-                                                nextElement += nextElementWords.ElementAtOrDefault(wordCounter);
-                                                --wordCounter;
-                                            }
-                                            // 3.6.2A.11B.4 Check if wordCounter has reached its limit
-                                            if(wordCounter > 1)
-                                            {
-                                                // 3.6.2A.11B.4A.1 Check if new nextElement is a datatype property inside the characterOntology. If it does not exists, we create it
-                                                var PredicateProperty = CheckDatatypeProperty(GetString(nextElement, true)) ? CharacterOntology.Model.PropertyModel.SelectProperty(GetString(nextElement, true)) : CreateDatatypeProperty(GetString(nextElement, true));
-                                                // 3.6.2A.11B.4A.2 Get next element fact assertions
-                                                var nextElementFactAssertions = CharacterOntology.Data.Relations.Assertions.SelectEntriesBySubject(nextElementFact);
-                                                // Check if nextElementFactAssertions is null, to prevent unhandled exceptions
-                                                if (nextElementFactAssertions.EntriesCount > 0)
+                                                // 3.6.2A.11B.4B.2 Declare some variables to get a new item with its definition
+                                                var newItem = string.Empty;
+                                                var newItemDefinition = string.Empty;
+                                                var parentList = itemParents.Split("|").ToList();
+                                                // 3.6.2A.11B.4B.3 Look for each parent of item
+                                                foreach (var parent in parentList)
                                                 {
-                                                    // 3.6.2A.11B.4A.3 Get nextElementFact assertions which have PredicateProperty as predicate
-                                                    var nextElementFactPredicateAssertions = nextElementFactAssertions.SelectEntriesByPredicate(PredicateProperty);
-                                                    // Check if nextElementFactPredicateAssertions is null, to prevent unhandled exceptions
-                                                    if (nextElementFactPredicateAssertions.EntriesCount > 0)
+                                                    // 3.6.2A.11B.4B.4 Check if new item is not defined
+                                                    if (string.IsNullOrEmpty(newItem))
                                                     {
-                                                        // 3.6.2A.11B.4A.14 Get next value. If it is not float, then round the value to integer
-                                                        var nextElementValueString = nextElementFactPredicateAssertions.Single().TaxonomyObject.ToString();
-                                                        var nextElementValueDigits = nextElementValueString.Split('^').First();
-
-                                                        if (!nextElementValueString.Contains("float"))
+                                                        // 3.6.2A.11B.4B.5 Search while there are not items found
+                                                        for (int i = index; i < formulaElements.Count() - 1; ++i)
                                                         {
-                                                            if (nextElementValueDigits.Contains(','))
-                                                                nextElementValueDigits = nextElementValueString.Split(',').ElementAtOrDefault(0);
-
-                                                            nextElementValue = Convert.ToSingle(nextElementValueDigits);
-                                                        }
-                                                        else
-                                                        {
-                                                            isFloat = true;
-                                                            nextElementValue = Convert.ToSingle(nextElementValueDigits, CultureInfo.InvariantCulture);
-                                                        }
-                                                    }
-                                                }
-                                            }
-                                            else
-                                            {
-                                                /* If there is no property, then we need to find it searching upper in the property hierarchy.*/
-                                                // 3.6.2A.11B.4B.1 Get item parents
-                                                var itemParents = GetParentClasses(GetString(itemName, applyOnCharacter), applyOnCharacter);
-                                                // Check if item parents is null, to prevent unhandled exceptions
-                                                if(itemParents != null)
-                                                {
-                                                    // 3.6.2A.11B.4B.2 Declare some variables to get a new item with its definition
-                                                    var newItem = string.Empty;
-                                                    var newItemDefinition = string.Empty;
-                                                    var parentList = itemParents.Split("|").ToList();
-                                                    // 3.6.2A.11B.4B.3 Look for each parent of item
-                                                    foreach(var parent in parentList)
-                                                    {
-                                                        // 3.6.2A.11B.4B.4 Check if new item is not defined
-                                                        if (string.IsNullOrEmpty(newItem))
-                                                        {
-                                                            // 3.6.2A.11B.4B.5 Search while there are not items found
-                                                            for (int i = index; i < formulaElements.Count() - 1; ++i)
+                                                            // 3.6.2A.11B.4B.6 Get next element and replace item with parent
+                                                            var newNextElement = formulaElements.ElementAt(i + 1).Replace(itemName, parent);
+                                                            // 3.6.2A.11B.4B.7 Check if newNextElement is a datatype property inside the current ontology
+                                                            if (CheckDatatypeProperty(GetString(newNextElement, applyOnCharacter), applyOnCharacter))
                                                             {
-                                                                // 3.6.2A.11B.4B.6 Get next element and replace item with parent
-                                                                var newNextElement = formulaElements.ElementAt(i + 1).Replace(itemName, parent);
-                                                                // 3.6.2A.11B.4B.7 Check if newNextElement is a datatype property inside the current ontology
-                                                                if (CheckDatatypeProperty(GetString(newNextElement, applyOnCharacter), applyOnCharacter))
+                                                                // 3.6.2A.11B.4B.8 Create a new list using the current definition 
+                                                                var newValueList = valueDefinition.Split(':').ToList();
+                                                                // 3.6.2A.11B.4B.9 declare some variables to get the new item definition
+                                                                var basePointsWord = string.Empty;
+                                                                var itemClassItem = GetElementClass(GetString(itemName, applyOnCharacter), applyOnCharacter);
+                                                                var definitionFound = false;
+                                                                var itemClassDefinition = string.Empty;
+                                                                // 3.6.2A.11B.4B.10 Search while no definition has been found 
+                                                                while (!definitionFound)
                                                                 {
-                                                                    // 3.6.2A.11B.4B.8 Create a new list using the current definition 
-                                                                    var newValueList = valueDefinition.Split(':').ToList();
-                                                                    // 3.6.2A.11B.4B.9 declare some variables to get the new item definition
-                                                                    var basePointsWord = string.Empty;
-                                                                    var itemClassItem = GetElementClass(GetString(itemName, applyOnCharacter), applyOnCharacter);
-                                                                    var definitionFound = false;
-                                                                    var itemClassDefinition = string.Empty;
-                                                                    // 3.6.2A.11B.4B.10 Search while no definition has been found 
-                                                                    while(!definitionFound)
+                                                                    // 3.6.2A.11B.4B.10.1 Search for valued list info annotations for item class
+                                                                    var itemClass = CurrentOntology.Model.ClassModel.SelectClass(GetString(itemClassItem.FullName.Split('#').Last(), applyOnCharacter));
+                                                                    var itemClassAnnotations = CurrentOntology.Model.ClassModel.Annotations.CustomAnnotations.SelectEntriesBySubject(itemClass);
+                                                                    // Check if definitionAnnotations is null, to prevent unhandled exceptions
+                                                                    if (itemClassAnnotations.EntriesCount > 0)
                                                                     {
-                                                                        // 3.6.2A.11B.4B.10.1 Search for valued list info annotations for item class
-                                                                        var itemClass = CurrentOntology.Model.ClassModel.SelectClass(GetString(itemClassItem.FullName.Split('#').Last(), applyOnCharacter));
-                                                                        var itemClassAnnotations = CurrentOntology.Model.ClassModel.Annotations.CustomAnnotations.SelectEntriesBySubject(itemClass);
-                                                                        // Check if definitionAnnotations is null, to prevent unhandled exceptions
-                                                                        if(itemClassAnnotations.EntriesCount > 0)
+                                                                        // 3.6.2A.11B.4B.10.2 Get itemClassAnnotations which have "Valued List Info" as predicate
+                                                                        var itemClassDefinitionAnnotations = itemClassAnnotations.Where(entry => entry.TaxonomyPredicate.ToString().Contains("ValuedListInfo"));
+                                                                        // Check if itemClassDefinitionAnnotations is null, to prevent unhandled exceptions
+                                                                        if (itemClassDefinitionAnnotations.Count() > 0)
                                                                         {
-                                                                            // 3.6.2A.11B.4B.10.2 Get itemClassAnnotations which have "Valued List Info" as predicate
-                                                                            var itemClassDefinitionAnnotations = itemClassAnnotations.Where(entry => entry.TaxonomyPredicate.ToString().Contains("ValuedListInfo"));
-                                                                            // Check if itemClassDefinitionAnnotations is null, to prevent unhandled exceptions
-                                                                            if (itemClassDefinitionAnnotations.Count() > 0)
-                                                                            {
-                                                                                // 3.6.2A.11B.4B.10.3 Get definition and update definitionFound indicator
-                                                                                itemClassDefinition = itemClassDefinitionAnnotations.Single().TaxonomyObject.ToString().Split('^').First();
-                                                                                definitionFound = true;
-                                                                            }
+                                                                            // 3.6.2A.11B.4B.10.3 Get definition and update definitionFound indicator
+                                                                            itemClassDefinition = itemClassDefinitionAnnotations.Single().TaxonomyObject.ToString().Split('^').First();
+                                                                            definitionFound = true;
                                                                         }
                                                                     }
-                                                                    // 3.6.2A.11B.4B.11 Get new list of definition rows
-                                                                    var definitionRows = itemClassDefinition.Split('\n').ToList();
-                                                                    // 3.6.2A.11B.4B.12 Search for base points word in every row of the new definition
-                                                                    foreach(var row in definitionRows)
-                                                                    {
-                                                                        // 3.6.2A.11B.4B.13 Get row elements
-                                                                        var rowElements = row.Split(',').ToList();
-                                                                        // 3.6.2A.11B.4B.14 Check if current row is defined as user editable
-                                                                        var userEditValue = Convert.ToBoolean(rowElements.Where(item => item.Contains("User_Edit")).Single().Split(':').Last());
-                                                                        if (userEditValue == true)
-                                                                        {
-                                                                            basePointsWord = rowElements.First().Split('_').Last();
-                                                                            break;
-                                                                        }
-                                                                    }
-                                                                    // 3.6.2A.11B.4B.15 Count newValueList elements
-                                                                    var listCount = newValueList.Count();
-                                                                    // 3.6.2A.11B.4B.16 Add user input in the position of base points word
-                                                                    for (int listIndex = 0; listIndex < listCount; ++listIndex)
-                                                                    {
-                                                                        if (newValueList.ElementAtOrDefault(listIndex).Contains(basePointsWord))
-                                                                        {
-                                                                            newValueList.RemoveAt(listIndex);
-                                                                            newValueList.Insert(listIndex, User_Input);
-                                                                        }
-                                                                    }
-                                                                    // 3.6.2A.11B.4B.17 Create new value definition using the elements of newValueList
-                                                                    foreach (string item in newValueList)
-                                                                    {
-                                                                        int listIndex = newValueList.IndexOf(item);
-                                                                        if (listIndex == i + 1)
-                                                                            newItemDefinition += newNextElement + ':';
-                                                                        else
-                                                                            newItemDefinition += item + ':';
-                                                                    }
-                                                                    break;
                                                                 }
+                                                                // 3.6.2A.11B.4B.11 Get new list of definition rows
+                                                                var definitionRows = itemClassDefinition.Split('\n').ToList();
+                                                                // 3.6.2A.11B.4B.12 Search for base points word in every row of the new definition
+                                                                foreach (var row in definitionRows)
+                                                                {
+                                                                    // 3.6.2A.11B.4B.13 Get row elements
+                                                                    var rowElements = row.Split(',').ToList();
+                                                                    // 3.6.2A.11B.4B.14 Check if current row is defined as user editable
+                                                                    var userEditValue = Convert.ToBoolean(rowElements.Where(item => item.Contains("User_Edit")).Single().Split(':').Last());
+                                                                    if (userEditValue == true)
+                                                                    {
+                                                                        basePointsWord = rowElements.First().Split('_').Last();
+                                                                        break;
+                                                                    }
+                                                                }
+                                                                // 3.6.2A.11B.4B.15 Count newValueList elements
+                                                                var listCount = newValueList.Count();
+                                                                // 3.6.2A.11B.4B.16 Add user input in the position of base points word
+                                                                for (int listIndex = 0; listIndex < listCount; ++listIndex)
+                                                                {
+                                                                    if (newValueList.ElementAtOrDefault(listIndex).Contains(basePointsWord))
+                                                                    {
+                                                                        newValueList.RemoveAt(listIndex);
+                                                                        newValueList.Insert(listIndex, User_Input);
+                                                                    }
+                                                                }
+                                                                // 3.6.2A.11B.4B.17 Create new value definition using the elements of newValueList
+                                                                foreach (string item in newValueList)
+                                                                {
+                                                                    int listIndex = newValueList.IndexOf(item);
+                                                                    if (listIndex == i + 1)
+                                                                        newItemDefinition += newNextElement + ':';
+                                                                    else
+                                                                        newItemDefinition += item + ':';
+                                                                }
+                                                                break;
                                                             }
                                                         }
-                                                        else
-                                                            break;
                                                     }
-                                                    if (newItemDefinition.EndsWith(':'))
-                                                        newItemDefinition = newItemDefinition[0..^1];
-
-                                                    nextElementValue = GetValue(newItemDefinition.ToString(), itemName, User_Input);
+                                                    else
+                                                        break;
                                                 }
+                                                if (newItemDefinition.EndsWith(':'))
+                                                    newItemDefinition = newItemDefinition[0..^1];
+
+                                                nextElementValue = GetValue(newItemDefinition.ToString(), itemName, User_Input);
                                             }
                                         }
                                     }
-                                }                                
-                            }
-                        }
-
-                        // 3.6.3 If current element matches with the division operator, and denominator is 0, then next value is the neutral value of division (1).
-                        if (element == "/" && nextElementValue == 0)
-                        {
-                            nextElementValue = 1;
-                        }
-                        // 3.6.4 Get result of the operator
-                        dynamic operatorResult = ConvertToOperator(element, Convert.ToSingle(CurrentValue), nextElementValue);
-                        // 3.6.5 Check if result is boolean
-                        if (operatorResult.GetType().ToString().Contains("boolean"))
-                        {
-                            // 3.6.5A.1 If result is boolean, add all individuals in itemName class to currentList
-                            foreach (Item individual in GetIndividuals(itemName))
-                                if (operatorResult == true)
-                                    currentList.Add(individual);
-                        }
-                        else
-                        {
-                            //3.6.5B.1 If result is not value, check if value is float. If it is not, then round result to integer
-                            if(isFloat == false)
-                            {
-                                if (isFloat == false)
-                                {
-                                    var resultString = operatorResult.ToString();
-                                    if (resultString.Contains(','))
-                                        CurrentValue = resultString.Split(',').ElementAt(0);
-                                    else
-                                        CurrentValue = resultString;
                                 }
-                                else
-                                    CurrentValue = operatorResult.ToString();
                             }
+                        }
+                    }
+
+                    // 3.6.3 If current element matches with the division operator, and denominator is 0, then next value is the neutral value of division (1).
+                    if (element == "/" && nextElementValue == 0)
+                    {
+                        nextElementValue = 1;
+                    }
+                    // 3.6.4 Get result of the operator
+                    dynamic operatorResult = ConvertToOperator(element, Convert.ToSingle(CurrentValue), nextElementValue);
+                    // 3.6.5 Check if result is boolean
+                    if (operatorResult.GetType().ToString().Contains("boolean"))
+                    {
+                        // 3.6.5A.1 If result is boolean, add all individuals in itemName class to currentList
+                        foreach (Item individual in GetIndividuals(itemName))
+                            if (operatorResult == true)
+                                currentList.Add(individual);
+                    }
+                    else
+                    {
+                        //3.6.5B.1 If result is not value, check if value is float. If it is not, then round result to integer
+                        if (isFloat == false)
+                        {
+                            if (isFloat == false)
+                            {
+                                var resultString = operatorResult.ToString();
+                                if (resultString.Contains(','))
+                                    CurrentValue = resultString.Split(',').ElementAt(0);
+                                else
+                                    CurrentValue = resultString;
+                            }
+                            else
+                                CurrentValue = operatorResult.ToString();
                         }
                     }
                 }
             }
+            // Check if currentValue is null, remove type and return value
+            if (string.IsNullOrEmpty(CurrentValue))
+                CurrentValue = "0";
+            CurrentValue = CurrentValue.Split('^').First();
+            return Convert.ToSingle(CurrentValue);
         }
     }
 }

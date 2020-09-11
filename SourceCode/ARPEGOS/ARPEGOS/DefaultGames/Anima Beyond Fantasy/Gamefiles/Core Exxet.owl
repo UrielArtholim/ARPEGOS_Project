@@ -13414,6 +13414,7 @@ De cualquier modo, si los jugadores lo desean, hay diferentes razas que se puede
 
     <owl:Class rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Raza_Pura">
         <rdfs:subClassOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Raza"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Comunidad de seres definida por afinidades raciales, lingüísticas, culturales, sobrenaturales, etc.</rdfs:comment>
     </owl:Class>
     
 
@@ -54392,8 +54393,8 @@ el potencial psíquico al usar esta disciplina.</rdfs:comment>
         <ViewType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ValuedListView</ViewType>
     </rdf:Description>
     <rdf:Description rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidad_Ki">
-        <ViewType>MultipleChoiceDynamicLimitView</ViewType>
         <StageModifiesStageLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</StageModifiesStageLimit>
+        <ViewType>MultipleChoiceDynamicLimitView</ViewType>
         <StageLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Disponible_CM</StageLimit>
         <rdfs:comment>Las habilidades del Ki son una serie de capacidades especiales que pueden desarrollar los personajes, utilizando sus puntos de Conocimiento Marcial. Cuando alguien domina una de ellas, esta le permite realizar acciones especiales que ningún otro ser humano es capaz de ejecutar. Cada una tiene un coste en puntos de CM, que es necesario invertir para adquirirla. Las habilidades del Ki se desarrollan siguiendo una lógica en su conocimiento y por tanto es posible que, para aprender a utilizar algunas, un individuo tenga que dominar anteriormente otras.</rdfs:comment>
     </rdf:Description>

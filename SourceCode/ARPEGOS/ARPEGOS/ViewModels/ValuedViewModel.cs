@@ -230,10 +230,11 @@ namespace ARPEGOS.ViewModels
 
                 character.UpdateDatatypeAssertion($"{character.Context}{StageViewModel.GeneralLimitProperty}", $"{StageViewModel.GeneralLimit}");
                 ++StageViewModel.CurrentStep;
+                var nextStage = StageViewModel.CreationScheme.ElementAt(StageViewModel.CurrentStep);
 
-                if (currentStage.IsGrouped)
+                if (nextStage.IsGrouped)
                 {
-                    switch (currentStage.Type)
+                    switch (nextStage.Type)
                     {
                         case Stage.StageType.MultipleChoice: await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.PushAsync(new MultipleChoiceGroupView())); break;
                         default: await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.PushAsync(new ValuedGroupView())); break;
@@ -241,7 +242,7 @@ namespace ARPEGOS.ViewModels
                 }
                 else
                 {
-                    switch (currentStage.Type)
+                    switch (nextStage.Type)
                     {
                         case Stage.StageType.SingleChoice: await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.PushAsync(new SingleChoiceView())); break;
                         case Stage.StageType.MultipleChoice: await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.PushAsync(new MultipleChoiceView())); break;

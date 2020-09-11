@@ -43,6 +43,7 @@ namespace ARPEGOS.ViewModels
                 this.IsBusy = true;
                 var skillViewContext = App.Navigation.NavigationStack[App.Navigation.NavigationStack.Count - 2].BindingContext as SkillViewModel;
                 skillViewContext.SkillSelected = itemSelected;
+                skillViewContext.SkillSelectedName = itemSelected.FormattedName;
                 this.IsBusy = false;
                 ReturnCommand.Execute(null);
             });

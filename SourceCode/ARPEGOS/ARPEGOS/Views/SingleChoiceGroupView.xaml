@@ -1,8 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ARPEGOS.Views.SingleChoiceView"
-             Title="{Binding StageName}">
+             x:Class="ARPEGOS.Views.SingleChoiceGroupView">
     <ContentPage.Content>
         <Grid>
             <StackLayout Spacing="10" Padding="10" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
@@ -10,35 +9,64 @@
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>
-                                <Frame x:Name="ItemFrame" 
+                                <StackLayout x:Name="ViewCellLayout">
+                                    <Frame x:Name="GroupFrame" 
                                        Padding="15" 
                                        Margin="10,10,10,0" 
                                        BorderColor="{DynamicResource SeparatorColor}">
-                                    <Frame.GestureRecognizers>
-                                        <TapGestureRecognizer Command="{Binding SelectItem}" CommandParameter="{Binding .}"/>
-                                    </Frame.GestureRecognizers>
-                                    <StackLayout Orientation="Horizontal"  
+                                        <Frame.GestureRecognizers>
+                                            <TapGestureRecognizer Command="{Binding SelectGroupCommand}" CommandParameter="{Binding .}"/>
+                                        </Frame.GestureRecognizers>
+                                        <StackLayout Orientation="Horizontal"  
                                                  HorizontalOptions="FillAndExpand" 
                                                  VerticalOptions="CenterAndExpand" >
-                                        <RadioButton  Grid.Row="0"
+                                            <Label  Grid.Row="0" 
+                                                Grid.Column="1" 
+                                                FontSize="Large" 
+                                                HorizontalOptions="CenterAndExpand" 
+                                                VerticalOptions="Center" 
+                                                Text="{Binding FormattedTitle}"/>
+                                            <ImageButton Source="description.png" HeightRequest="25" WidthRequest="25"
+                                                     Command="{Binding Source={x:RelativeSource AncestorType={x:Type ContentPage}}, Path=BindingContext.InfoCommand}"
+                                                     CommandParameter="{Binding .}"
+                                                     BackgroundColor="Transparent"/>
+                                        </StackLayout>
+                                    </Frame>
+                                    <ListView x:Name="GroupList" ItemsSource="{Binding GroupList}" IsVisible="{Binding Expanded}">
+                                        <ListView.ItemTemplate>
+                                            <DataTemplate>
+                                                <ViewCell>
+                                                    <Frame x:Name="ItemFrame" 
+                                       Padding="15" 
+                                       Margin="10,10,10,0" 
+                                       BorderColor="{DynamicResource SeparatorColor}">
+                                                        <StackLayout Orientation="Horizontal"  
+                                                 HorizontalOptions="FillAndExpand" 
+                                                 VerticalOptions="CenterAndExpand" >
+                                                            <RadioButton  Grid.Row="0"
                                                    Grid.Column="0" 
-                                                   IsChecked="{Binding SelectItem}" 
+                                                   IsChecked="{Binding SelectItemCommand}" 
                                                    HorizontalOptions="Start" 
                                                    VerticalOptions="Center" 
                                                    CheckedChanged="OnCheckedChanged" 
                                                    BindingContext="{Binding .}"/>
-                                        <Label  Grid.Row="0" 
+                                                            <Label  Grid.Row="0" 
                                                 Grid.Column="1" 
                                                 FontSize="Large" 
                                                 HorizontalOptions="CenterAndExpand" 
                                                 VerticalOptions="Center" 
                                                 Text="{Binding FormattedName}"/>
-                                        <ImageButton Source="description.png" HeightRequest="25" WidthRequest="25"
+                                                            <ImageButton Source="description.png" HeightRequest="25" WidthRequest="25"
                                                      Command="{Binding Source={x:RelativeSource AncestorType={x:Type ContentPage}}, Path=BindingContext.InfoCommand}"
                                                      CommandParameter="{Binding .}"
                                                      BackgroundColor="Transparent"/>
-                                    </StackLayout>
-                                </Frame>
+                                                        </StackLayout>
+                                                    </Frame>
+                                                </ViewCell>
+                                            </DataTemplate>
+                                        </ListView.ItemTemplate>
+                                    </ListView>
+                                </StackLayout>
                             </ViewCell>
                         </DataTemplate>
                     </ListView.ItemTemplate>

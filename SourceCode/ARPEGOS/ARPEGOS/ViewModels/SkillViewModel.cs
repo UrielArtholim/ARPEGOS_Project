@@ -18,6 +18,7 @@ namespace ARPEGOS.ViewModels
         private int skillValue; 
         private int totalValue;
         private int previousDice, dice;
+        private string skillSelectedName;
         private Item previousSkillSelected, skillSelected;
 
         public int Dice
@@ -46,7 +47,8 @@ namespace ARPEGOS.ViewModels
 
         public string SkillSelectedName
         {
-            get => skillSelected.FullName;
+            get => this.skillSelectedName;
+            set => SetProperty(ref this.skillSelectedName, value);
         }
 
         public ICommand SelectSkillCommand { get; private set; }

@@ -21,9 +21,8 @@
                                     <StackLayout Orientation="Horizontal"  
                                                  HorizontalOptions="FillAndExpand" 
                                                  VerticalOptions="CenterAndExpand" >
-                                        <CheckBox  Grid.Row="0"
+                                        <RadioButton  Grid.Row="0"
                                                    Grid.Column="0" 
-                                                   Color="{DynamicResource ButtonColor}" 
                                                    IsChecked="{Binding SelectItem}" 
                                                    HorizontalOptions="Start" 
                                                    VerticalOptions="Center" 
@@ -55,7 +54,7 @@
             <Frame Grid.Row="0" BackgroundColor="Black" Opacity="0.7" HasShadow="False" CornerRadius="0" IsVisible="{Binding Source={x:RelativeSource AncestorType={x:Type ContentPage}}, Path=BindingContext.IsBusy}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
                 <ActivityIndicator Color="White" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" IsRunning="{Binding Source={x:RelativeSource AncestorType={x:Type ContentPage}}, Path=BindingContext.IsBusy}"
                                WidthRequest="50" HeightRequest="50" />
-        </Frame>
+            </Frame>
         </Grid>
     </ContentPage.Content>
 </ContentPage>

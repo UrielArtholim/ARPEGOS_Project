@@ -1,5 +1,6 @@
 ﻿using ARPEGOS.Helpers;
 using ARPEGOS.Models;
+using ARPEGOS.ViewModels;
 using RDFSharp.Model;
 using RDFSharp.Semantics.OWL;
 using System;
@@ -34,23 +35,34 @@ namespace ARPEGOS.Services
             var objectFact = game.Ontology.Data.SelectFact(objectString);
             var dataCustomAnnotations = game.Ontology.Data.Annotations.CustomAnnotations;
             var stageCreationSchemeAnnotation = dataCustomAnnotations.SelectEntriesBySubject(objectFact).Where(entry => entry.TaxonomyPredicate.ToString().Contains("CreationScheme")).Single();
-            var schemeStages = stageCreationSchemeAnnotation.TaxonomyObject.ToString().Split('^').First().Replace("\r", "").Split(',').ToList();
+            var schemeStages = stageCreationSchemeAnnotation.TaxonomyObject.ToString().Split('^').First().Replace("\r", "").Replace("\n","").Split(',').ToList();
             ObservableCollection<Stage> Scheme = new ObservableCollection<Stage>();
             foreach(var name in schemeStages)
             {
-                var stepStageString = character.GetString(name);
-                var isClass = character.CheckClass(stepStageString, false);
-                if(isClass == true)
+                var stepStageString = character.GetString(name, StageViewModel.ApplyOnCharacter);
+                if(stepStageString != null)
                 {
-                    var stepStageClass = game.Ontology.Model.ClassModel.SelectClass(stepStageString);
-                    bool isGrouped = false;
-                    if (character.Ontology.Model.ClassModel.GetSubClassesOf(stepStageClass) != null)
-                        isGrouped = true;
-                    Scheme.Add(new Stage(stepStageString, isGrouped));
-                }
-                else
-                {
-                    Scheme.Add(new Stage(stepStageString, false));
+                    var isClass = character.CheckClass(stepStageString, StageViewModel.ApplyOnCharacter);
+                    if (isClass == true)
+                    {
+                        var stepStageClass = game.Ontology.Model.ClassModel.SelectClass(stepStageString);
+                        bool isGrouped = false;
+                        var subclasses = character.GetSubClasses(stepStageString, StageViewModel.ApplyOnCharacter);
+                        if (subclasses != null)
+                        {
+                            if (subclasses.Count > 0)
+                            {
+                                isGrouped = true;
+                                Scheme.Add(new Stage(stepStageString, isGrouped));
+                            }
+                        }                            
+                        else
+                            Scheme.Add(new Stage(stepStageString, false));
+                    }
+                    else
+                    {
+                        Scheme.Add(new Stage(stepStageString, false));
+                    }
                 }
             }
             return Scheme;

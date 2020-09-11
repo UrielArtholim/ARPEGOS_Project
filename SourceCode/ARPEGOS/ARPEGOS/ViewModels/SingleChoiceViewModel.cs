@@ -8,22 +8,21 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace ARPEGOS.ViewModels
 {
-    public class CreationRootViewModel: BaseViewModel 
+    public class SingleChoiceViewModel: BaseViewModel
     {
         private DialogService dialogService;
         private string stageString;
-        private string firstStage;
-        public string FirstStage
+        private string stageName;
+        public string StageName
         {
-            get => firstStage;
-            set => SetProperty(ref this.firstStage, value);
+            get => stageName;
+            set => SetProperty(ref this.stageName, value);
         }
         private Item selectedItem;
         public Item SelectedItem
@@ -45,20 +44,23 @@ namespace ARPEGOS.ViewModels
         public ICommand InfoCommand { get; private set; }
         public ICommand SelectCommand { get; private set; }
 
-        public CreationRootViewModel()
+        public SingleChoiceViewModel()
         {
-
             this.dialogService = new DialogService();
             this.Continue = false;
             var character = DependencyHelper.CurrentContext.CurrentCharacter;
             var game = DependencyHelper.CurrentContext.CurrentGame;
-            this.stageString = game.GetCreationSchemeRootClass();
-            this.FirstStage = this.stageString.Split('#').Last();
-            StageViewModel.RootStage = this.stageString;
-            
-            Data = new ObservableCollection<Item>(character.GetIndividuals(stageString));
+            this.stageString = StageViewModel.CreationScheme.ElementAt(StageViewModel.CurrentStep).FullName;
+            this.StageName = this.stageString.Split('#').Last();
 
-            this.NextCommand = new Command(async () => 
+            var datalist = new ObservableCollection<Item>(character.GetIndividuals(stageString));
+            foreach (var item in datalist)
+                if (string.IsNullOrEmpty(item.Description) || string.IsNullOrWhiteSpace(item.Description))
+                    item.HasDescription = false;
+
+            Data = new ObservableCollection<Item>(datalist);
+
+            this.NextCommand = new Command(async () =>
             {
                 this.IsBusy = true;
                 var character = DependencyHelper.CurrentContext.CurrentCharacter;
@@ -67,39 +69,32 @@ namespace ARPEGOS.ViewModels
                 var predicateString = character.GetObjectPropertyAssociated(this.stageString);
                 var predicateName = predicateString.Split('#').Last();
                 character.UpdateObjectAssertion($"{character.Context}{predicateName}", $"{character.Context}{ItemFullShortName}");
-
-                var scheme = character.GetCreationScheme(this.SelectedItem.FullName);
-                StageViewModel.CreationScheme = scheme;
+                ++StageViewModel.CurrentStep;
+                var nextStage = StageViewModel.CreationScheme.ElementAt(StageViewModel.CurrentStep);
                 this.IsBusy = false;
-
-                StageViewModel.CurrentStep = 0;
-                var currentStage = StageViewModel.CreationScheme.ElementAt(StageViewModel.CurrentStep);
-                //if(StageViewModel.GeneralLimitProperty == null)
-                //StageViewModel.GeneralLimitProperty = character.GetLimit(stageString, true);
-                //StageViewModel.GeneralLimit = character.GetLimitValue(StageViewModel.GeneralLimitProperty);                
-
-                if (currentStage.IsGrouped)
+                if (nextStage.IsGrouped)
                 {
-                    switch (currentStage.Type)
+                    switch (nextStage.Type)
                     {
+                        case Stage.StageType.SingleChoice: await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.PushAsync(new SingleChoiceGroupView())); break;
                         case Stage.StageType.MultipleChoice: await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.PushAsync(new MultipleChoiceGroupView())); break;
                         default: await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.PushAsync(new ValuedGroupView())); break;
                     }
                 }
                 else
                 {
-                    switch (currentStage.Type)
+                    switch (nextStage.Type)
                     {
-                        case Stage.StageType.SingleChoice: await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.PushAsync( new SingleChoiceView())); break;
+                        case Stage.StageType.SingleChoice: await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.PushAsync(new SingleChoiceView())); break;
                         case Stage.StageType.MultipleChoice: await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.PushAsync(new MultipleChoiceView())); break;
                         default: await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.PushAsync(new ValuedView())); break;
                     }
                 }
             });
 
-            this.InfoCommand = new Command<Item>(async(item)=> 
-            { 
-                await this.dialogService.DisplayAlert(item.FormattedName, item.Description); 
+            this.InfoCommand = new Command<Item>(async (item) =>
+            {
+                await this.dialogService.DisplayAlert(item.FormattedName, item.Description);
             });
         }
     }
