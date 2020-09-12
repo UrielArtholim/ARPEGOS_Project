@@ -29,7 +29,7 @@ namespace ARPEGOS.Views
             if (activeRadioButton != lastChecked && lastChecked != null)
                 lastChecked.IsChecked = false;
             lastChecked = activeRadioButton.IsChecked ? activeRadioButton : null;
-            var viewModel = this.BindingContext as CreationRootViewModel;
+            var viewModel = this.BindingContext as SingleChoiceGroupViewModel;
             viewModel.SelectedItem = activeRadioButton.BindingContext as Item;
             if (lastChecked != null)
                 viewModel.Continue = true;

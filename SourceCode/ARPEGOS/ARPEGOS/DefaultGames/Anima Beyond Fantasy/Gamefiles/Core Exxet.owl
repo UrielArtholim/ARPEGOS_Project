@@ -13205,7 +13205,7 @@ No todas las personas son capaces de controlar el poder de las almas. Hacerlo no
     <owl:Class rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Poder_Psíquico">
         <rdfs:subClassOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidad_Psíquica"/>
         <StageLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Disponible_CV</StageLimit>
-        <ViewType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MultipleChoiceStaticLimitCostView</ViewType>
+        <ViewType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MultipleChoiceStaticLimitView</ViewType>
     </owl:Class>
     
 

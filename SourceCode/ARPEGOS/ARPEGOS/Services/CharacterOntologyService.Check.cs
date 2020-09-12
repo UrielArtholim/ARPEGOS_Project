@@ -271,7 +271,7 @@ namespace ARPEGOS.Services
             var requirementWords = new List<string> { "Requisito", "Requirement", "Requisite", "Prérequis" };
             var availableOptions = new List<Item>();
             var stageGroup = new Group(stageString);
-            foreach (Item item in stageGroup.GroupList)
+            foreach (Item item in stageGroup)
             {
                 if (hasGeneralLimitValue == false || generalLimitValue > 0)
                 {

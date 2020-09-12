@@ -20,6 +20,7 @@ namespace ARPEGOS.ViewModels
         private DialogService dialogService;
         private string stageString;
         private string stageName;
+        private Group lastGroup;
         public string StageName
         {
             get => stageName;
@@ -43,6 +44,7 @@ namespace ARPEGOS.ViewModels
 
         public ICommand NextCommand { get; private set; }
         public ICommand InfoCommand { get; private set; }
+        public ICommand GroupInfoCommand { get; private set; }
         public ICommand SelectItemCommand { get; private set; }
         public ICommand SelectGroupCommand { get; private set; }
 
@@ -64,10 +66,25 @@ namespace ARPEGOS.ViewModels
 
             Data = currentStage.Groups;
 
-            this.SelectGroupCommand = new Command<Group>(async (group) => 
+            this.SelectGroupCommand = new Command<Group>(async(group) => await MainThread.InvokeOnMainThreadAsync(() =>
             {
-               await MainThread.InvokeOnMainThreadAsync(() => group.Expanded = !group.Expanded);                
-            });
+                if(lastGroup == group)
+                {
+                    group.Expanded = !group.Expanded;
+                    UpdateGroup(group);
+                }
+                else
+                {
+                    if(lastGroup != null)
+                    {
+                        lastGroup.Expanded = false;
+                        UpdateGroup(lastGroup);
+                    }
+                    group.Expanded = true;
+                    UpdateGroup(group);
+                }
+                lastGroup = group;
+            }));
 
             this.NextCommand = new Command(async () =>
             {
@@ -105,6 +122,18 @@ namespace ARPEGOS.ViewModels
             {
                 await this.dialogService.DisplayAlert(item.FormattedName, item.Description);
             });
+
+            this.GroupInfoCommand = new Command<Group>(async (group) =>
+            {
+                await this.dialogService.DisplayAlert(group.FormattedTitle, group.Description);
+            });
+        }
+
+        private void UpdateGroup (Group g)
+        {
+            var index = Data.IndexOf(g);
+            Data.Remove(g);
+            Data.Insert(index, g);
         }
     }
 }

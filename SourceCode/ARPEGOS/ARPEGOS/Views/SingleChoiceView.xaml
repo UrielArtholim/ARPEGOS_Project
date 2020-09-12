@@ -2,7 +2,8 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ARPEGOS.Views.SingleChoiceView"
-             Title="{Binding StageName}">
+             Title="{Binding StageName}"
+             x:Name="SingleChoice">
     <ContentPage.Content>
         <Grid>
             <StackLayout Spacing="10" Padding="10" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
@@ -34,7 +35,7 @@
                                                 VerticalOptions="Center" 
                                                 Text="{Binding FormattedName}"/>
                                         <ImageButton Source="description.png" HeightRequest="25" WidthRequest="25"
-                                                     Command="{Binding Source={x:RelativeSource AncestorType={x:Type ContentPage}}, Path=BindingContext.InfoCommand}"
+                                                     Command="{Binding Source={x:Reference SingleChoice}, Path=BindingContext.InfoCommand}"
                                                      CommandParameter="{Binding .}"
                                                      BackgroundColor="Transparent"/>
                                     </StackLayout>
@@ -50,8 +51,8 @@
                         AbsoluteLayout.LayoutFlags="PositionProportional"
                         AbsoluteLayout.LayoutBounds=".95,.95,80,80"/>
             </StackLayout>
-            <Frame Grid.Row="0" BackgroundColor="Black" Opacity="0.7" HasShadow="False" CornerRadius="0" IsVisible="{Binding Source={x:RelativeSource AncestorType={x:Type ContentPage}}, Path=BindingContext.IsBusy}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
-                <ActivityIndicator Color="White" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" IsRunning="{Binding Source={x:RelativeSource AncestorType={x:Type ContentPage}}, Path=BindingContext.IsBusy}"
+            <Frame Grid.Row="0" BackgroundColor="Black" Opacity="0.7" HasShadow="False" CornerRadius="0" IsVisible="{Binding Source={x:Reference SingleChoice}, Path=BindingContext.IsBusy}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                <ActivityIndicator Color="White" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" IsRunning="{Binding Source={x:Reference SingleChoice}, Path=BindingContext.IsBusy}"
                                WidthRequest="50" HeightRequest="50" />
             </Frame>
         </Grid>

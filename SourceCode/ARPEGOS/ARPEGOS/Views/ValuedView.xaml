@@ -22,7 +22,7 @@
                     </StackLayout>
                     <StackLayout Orientation="Vertical" Spacing="5" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand">
                         <StackLayout Orientation="Horizontal" Spacing="5" HorizontalOptions="FillAndExpand">
-                            <Label Text="Límite de etapa" HorizontalOptions="StartAndExpand" FontSize="Large"/>
+                            <Label Text="Límite" HorizontalOptions="StartAndExpand" FontSize="Large"/>
                             <Label Text="{Binding StageProgressLabel, StringFormat='{0:F0}'}" HorizontalOptions="EndAndExpand" FontSize="Large"/>
                         </StackLayout>
                         <ProgressBar x:Name="StageProgressBar" HorizontalOptions="FillAndExpand"
@@ -50,7 +50,22 @@
                                                Grid.Column="0"
                                                VerticalOptions="Center"
                                                HorizontalTextAlignment="Center"
-                                               Text="{Binding FormattedName}"/>
+                                               Text="{Binding FormattedName}"/>                                        
+                                        <Label x:Name="ValueLabel"
+                                               FontSize="Large"
+                                               Grid.Row="0"
+                                               Grid.Column="1"
+                                               VerticalOptions="Center"
+                                               HorizontalTextAlignment="Center"
+                                               Text="{Binding Source={x:Reference ValueEntry}, Path=Value, StringFormat='{0:F0}'}"/>
+                                        <ImageButton x:Name="InformationButton"
+                                               Grid.Row="0"
+                                               Grid.Column="2"
+                                               Source="description.png"
+                                               HeightRequest="25" WidthRequest="25"
+                                               BackgroundColor="Transparent"
+                                               IsEnabled="{Binding IsEnabled}"
+                                               IsVisible="{Binding IsEnabled}"/>
                                         <Stepper x:Name="ValueEntry"
                                                Grid.Row="1"
                                                Grid.Column="1"
@@ -59,28 +74,6 @@
                                                HorizontalOptions="FillAndExpand"
                                                Maximum="{Binding Maximum}"
                                                ValueChanged="OnValueChanged"/>
-                                        <Label x:Name="ValueLabel"
-                                               FontSize="Large"
-                                               Grid.Row="0"
-                                               Grid.Column="1"
-                                               VerticalOptions="Center"
-                                               HorizontalTextAlignment="Center"
-                                               Text="{Binding Source={x:Reference ValueEntry}, Path=Value, StringFormat='{0:F0}'}"/>
-                                        <Label x:Name="LimitLabel"
-                                               FontSize="Large"
-                                               Grid.Row="0"
-                                               Grid.Column="2"
-                                               VerticalOptions="Center"
-                                               HorizontalTextAlignment="Center"
-                                               Text="{Binding Maximum, StringFormat='Límite: {0:F0}'}"/>                                        
-                                        <ImageButton x:Name="InformationButton"
-                                               Grid.Row="1"
-                                               Grid.Column="2"
-                                               Source="description.png"
-                                               HeightRequest="25" WidthRequest="25"
-                                               BackgroundColor="Transparent"
-                                               IsEnabled="{Binding IsEnabled}"
-                                               IsVisible="{Binding IsEnabled}"/>
                                     </Grid>
                                 </Frame>
                             </ViewCell>

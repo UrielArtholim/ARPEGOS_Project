@@ -9,18 +9,18 @@ namespace ARPEGOS
     using System.Collections.Generic;
     using System.Collections.ObjectModel;
     using System.Linq;
-    using System.Runtime.CompilerServices;
 
     /// <summary>
     /// ItemGroup models a collection of items which belong to a group
     /// </summary>
-    public class Group: INotifyPropertyChanged
+    public class Group: ObservableCollection<Item>, INotifyPropertyChanged
     {
         #region Properties
         /// <summary>
         /// State of expansion of the group
         /// </summary>
         private bool expanded;
+        private List<Item> Elements;
 
         /// <summary>
         /// 
@@ -43,11 +43,6 @@ namespace ARPEGOS
         public string FormattedTitle { get; internal set; }
 
         /// <summary>
-        /// Collection of elements of the group
-        /// </summary>
-        public IEnumerable<Item> GroupList { get; internal set; }
-
-        /// <summary>
         /// EventHandler to know when a property is changed
         /// </summary>
         public event PropertyChangedEventHandler PropertyChanged;
@@ -55,7 +50,7 @@ namespace ARPEGOS
         /// <summary>
         /// Graphic element which shows the state of expansion of the group
         /// </summary>
-        public string StateIcon => Expanded ? "collapse_icon.png" : "expand_icon.png";
+        public string StateIcon => Expanded ? "collapse.png" : "expand.png";
 
         public string Description { get; internal set; }
         #endregion
@@ -66,19 +61,18 @@ namespace ARPEGOS
         /// </summary>
         /// <param name="groupTitle">Name of the group</param>
         /// <param name="expanded">State of expansion of the group</param>
-        public Group (string groupString, IEnumerable<Item> groupList = null)
+        public Group (string groupString, IEnumerable<Item> groupList = null): base(groupList)
         {
-            var character = DependencyHelper.CurrentContext.CurrentCharacter;
+            Elements = groupList.ToList();
             GroupString = groupString;
             Title = groupString.Split('#').Last();
             FormattedTitle = Title.Replace('_', ' ').Trim();
             Expanded = false;
-            Description = character.GetElementDescription(groupString, StageViewModel.ApplyOnCharacter);
+            Description = DependencyHelper.CurrentContext.CurrentCharacter.GetElementDescription(groupString, StageViewModel.ApplyOnCharacter);
             if (string.IsNullOrEmpty(Description) || string.IsNullOrWhiteSpace(Description))
                 this.HasDescription = false;
             else
                 this.HasDescription = true;
-            GroupList = groupList;
         }
         #endregion
 
@@ -97,6 +91,13 @@ namespace ARPEGOS
                     OnPropertyChanged("Expanded");
                     OnPropertyChanged("StateIcon");
                 }
+                if(expanded == true)
+                {
+                    foreach(var item in this.Elements)
+                        this.Add(item);
+                }
+                else
+                    this.Clear();
             }
         }
 

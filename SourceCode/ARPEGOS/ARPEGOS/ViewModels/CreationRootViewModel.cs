@@ -47,7 +47,7 @@ namespace ARPEGOS.ViewModels
 
         public CreationRootViewModel()
         {
-
+            StageViewModel.GeneralLimitProperty = null;
             this.dialogService = new DialogService();
             this.Continue = false;
             var character = DependencyHelper.CurrentContext.CurrentCharacter;
