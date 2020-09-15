@@ -35,7 +35,7 @@
                                                 HorizontalOptions="CenterAndExpand" 
                                                 VerticalOptions="Center" 
                                                 Text="{Binding FormattedName}"/>
-                                        <ImageButton Source="description.png" HeightRequest="25" WidthRequest="25"
+                                        <ImageButton Source="description.png" HeightRequest="25" WidthRequest="25" Aspect="AspectFit"
                                                      Command="{Binding Source={x:Reference CreationPage}, Path=BindingContext.InfoCommand}"
                                                      CommandParameter="{Binding .}"
                                                      BackgroundColor="Transparent"/>
@@ -50,7 +50,8 @@
                         IsVisible="{Binding Continue}"
                         BackgroundColor="{DynamicResource ButtonColor}"
                         AbsoluteLayout.LayoutFlags="PositionProportional"
-                        AbsoluteLayout.LayoutBounds=".95,.95,80,80"/>
+                        AbsoluteLayout.LayoutBounds=".95,.95,80,80"
+                        HeightRequest="50"/>
             </StackLayout>
             <Frame Grid.Row="0" BackgroundColor="Black" Opacity="0.7" HasShadow="False" CornerRadius="0" IsVisible="{Binding Source={x:Reference CreationPage}, Path=BindingContext.IsBusy}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
                 <ActivityIndicator Color="White" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" IsRunning="{Binding Source={x:Reference CreationPage}, Path=BindingContext.IsBusy}"

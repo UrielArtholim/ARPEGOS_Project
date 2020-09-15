@@ -20,11 +20,14 @@ namespace ARPEGOS.Models
         public StageModel Model { get; private set; }
 
         public bool IsGrouped { get; private set; }
+        public bool EditGeneralLimit { get; private set; }
+        public bool EditStageLimit { get; private set; }
+
 
         public ObservableCollection<Item> Items { get; private set; }
         public ObservableCollection<Group> Groups { get; private set; }
 
-        public Stage (string elementString, bool grouped = false)
+        public Stage (string elementString, bool grouped = false, bool editGeneral = false, bool editStage = false)
         {
             var characterService = DependencyHelper.CurrentContext.CurrentCharacter;
             this.FullName = elementString;
@@ -32,6 +35,9 @@ namespace ARPEGOS.Models
             this.IsGrouped = grouped;
             this.Items = null;
             this.Groups = null;
+            this.EditGeneralLimit = editGeneral;
+            this.EditStageLimit = editStage;
+
             if (this.IsGrouped == true)
             {
                 this.Groups = new ObservableCollection<Group>();

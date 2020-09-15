@@ -1,12 +1,84 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ARPEGOS.Views.MultipleChoiceView">
+             x:Class="ARPEGOS.Views.MultipleChoiceView"
+             Visual="Material">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <Grid>
+            <StackLayout Spacing="10" Padding="10" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                <StackLayout Orientation="Vertical">
+                    <StackLayout Orientation="Vertical" Spacing="5" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" IsVisible="{Binding HasGeneralLimit}">
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Límite general" HorizontalOptions="StartAndExpand" FontSize="Large" />
+                            <Label Text="{Binding GeneralProgress, StringFormat='{0:F0}'}" HorizontalOptions="EndAndExpand" FontSize="Large"/>
+                        </StackLayout>
+                        <ProgressBar x:Name="GeneralProgressBar" 
+                                         HorizontalOptions="StartAndExpand"
+                                         Progress="{Binding GeneralProgress}" 
+                                         ProgressColor="{DynamicResource GeneralColor}"
+                                         BackgroundColor="{DynamicResource SeparatorColor}"
+                                         IsVisible="{Binding HasGeneralLimit}"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Vertical" Spacing="5" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand">
+                        <StackLayout Orientation="Horizontal" Spacing="5" HorizontalOptions="FillAndExpand">
+                            <Label Text="Límite" HorizontalOptions="StartAndExpand" FontSize="Large"/>
+                            <Label Text="{Binding StageProgressLabel, StringFormat='{0:F0}'}" HorizontalOptions="EndAndExpand" FontSize="Large"/>
+                        </StackLayout>
+                        <ProgressBar x:Name="StageProgressBar" HorizontalOptions="FillAndExpand"
+                                     Progress="{Binding StageProgress}" 
+                                     ProgressColor="{DynamicResource StageColor}"
+                                     BackgroundColor="{DynamicResource SeparatorColor}"/>
+                    </StackLayout>
+                </StackLayout>
+                <ListView x:Name="SingleChoiceList" ItemsSource="{Binding Data}" HasUnevenRows="True" SelectionMode="None" CachingStrategy="RecycleElementAndDataTemplate">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Frame x:Name="ItemFrame" 
+                                       Padding="15" 
+                                       Margin="10,10,10,0" 
+                                       BorderColor="{DynamicResource SeparatorColor}">
+                                    <Frame.GestureRecognizers>
+                                        <TapGestureRecognizer Command="{Binding SelectItem}" CommandParameter="{Binding .}"/>
+                                    </Frame.GestureRecognizers>
+                                    <StackLayout Orientation="Horizontal"  
+                                                 HorizontalOptions="FillAndExpand" 
+                                                 VerticalOptions="CenterAndExpand" >
+                                        <CheckBox  Grid.Row="0"
+                                                   Grid.Column="0" 
+                                                   IsChecked="{Binding SelectItem}" 
+                                                   HorizontalOptions="Start" 
+                                                   VerticalOptions="Center" 
+                                                   CheckedChanged="OnCheckedChanged" 
+                                                   BindingContext="{Binding .}"/>
+                                        <Label  Grid.Row="0" 
+                                                Grid.Column="1" 
+                                                FontSize="Large" 
+                                                HorizontalOptions="CenterAndExpand" 
+                                                VerticalOptions="Center" 
+                                                Text="{Binding FormattedName}"/>
+                                        <ImageButton Source="description.png" HeightRequest="25" WidthRequest="25"
+                                                     Command="{Binding Source={x:Reference SingleChoice}, Path=BindingContext.InfoCommand}"
+                                                     CommandParameter="{Binding .}"
+                                                     BackgroundColor="Transparent"/>
+                                    </StackLayout>
+                                </Frame>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                <Button Text="Siguiente" 
+                        Command="{Binding NextCommand}" 
+                        IsVisible="{Binding Continue}"
+                        BackgroundColor="{DynamicResource ButtonColor}"
+                        AbsoluteLayout.LayoutFlags="PositionProportional"
+                        AbsoluteLayout.LayoutBounds=".95,.95,80,80"
+                        HeightRequest="50"/>
+            </StackLayout>
+            <Frame Grid.Row="0" BackgroundColor="Black" Opacity="0.7" HasShadow="False" CornerRadius="0" IsVisible="{Binding Source={x:Reference SingleChoice}, Path=BindingContext.IsBusy}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                <ActivityIndicator Color="White" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" IsRunning="{Binding Source={x:Reference SingleChoice}, Path=BindingContext.IsBusy}"
+                               WidthRequest="50" HeightRequest="50" />
+            </Frame>
+        </Grid>
     </ContentPage.Content>
 </ContentPage>

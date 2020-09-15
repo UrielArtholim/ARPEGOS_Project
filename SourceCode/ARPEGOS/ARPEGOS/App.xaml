@@ -12,8 +12,9 @@
             <Color x:Key="PrimaryBackgroundColor">#ffffff</Color>
             <Color x:Key="SecondaryBackgroundColor">#f2f4f8</Color>
             <Color x:Key="ButtonColor">#096ee8</Color>
-            <Color x:Key="GeneralColor">#00d44e</Color>
-            <Color x:Key="StageColor">#00bed4</Color>
+            <Color x:Key="GeneralColor">#b405ff</Color>
+            <Color x:Key="StageColor">#096ee8</Color>
+            <Color x:Key="ProgressBarBackgroundColor">#b5b1fc</Color>
             <Color x:Key="SeparatorColor">#a2a3a2</Color>
             <converter:GetInitialsImageConverter x:Key="GetInitialsImageConverter" />
         </ResourceDictionary>

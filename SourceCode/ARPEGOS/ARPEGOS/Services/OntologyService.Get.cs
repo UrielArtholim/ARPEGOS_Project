@@ -36,10 +36,31 @@ namespace ARPEGOS.Services
             var dataCustomAnnotations = game.Ontology.Data.Annotations.CustomAnnotations;
             var stageCreationSchemeAnnotation = dataCustomAnnotations.SelectEntriesBySubject(objectFact).Where(entry => entry.TaxonomyPredicate.ToString().Contains("CreationScheme")).Single();
             var schemeStages = stageCreationSchemeAnnotation.TaxonomyObject.ToString().Split('^').First().Replace("\r", "").Replace("\n","").Split(',').ToList();
+            var editGeneralLimit = false;
+            var editStageLimit = false;
             ObservableCollection<Stage> Scheme = new ObservableCollection<Stage>();
             foreach(var name in schemeStages)
             {
                 var stepStageString = character.GetString(name, StageViewModel.ApplyOnCharacter);
+
+                RDFOntologyTaxonomy gameCustomAnnotations;
+                if(character.CheckDatatypeProperty(stepStageString,false))
+                    gameCustomAnnotations = game.Ontology.Model.PropertyModel.Annotations.CustomAnnotations;
+                else
+                    gameCustomAnnotations = game.Ontology.Model.ClassModel.Annotations.CustomAnnotations;
+
+                var StageCustomAnnotations = gameCustomAnnotations.Where(entry => entry.TaxonomySubject.ToString() == stepStageString);
+                if(StageCustomAnnotations.Count() > 0)
+                {
+                    var EditStageLimitAnnotationEntries = StageCustomAnnotations.Where(entry => entry.TaxonomyPredicate.ToString().Contains("EditStageLimit"));
+                    if (EditStageLimitAnnotationEntries.Count() > 0)
+                        editStageLimit = true;
+
+                    var EditGeneralLimitAnnotationEntries = StageCustomAnnotations.Where(entry => entry.TaxonomyPredicate.ToString().Contains("EditGeneralLimit"));
+                    if (EditGeneralLimitAnnotationEntries.Count() > 0)
+                        editGeneralLimit = true;
+                }
+
                 if(stepStageString != null)
                 {
                     var isClass = character.CheckClass(stepStageString, StageViewModel.ApplyOnCharacter);
@@ -53,15 +74,15 @@ namespace ARPEGOS.Services
                             if (subclasses.Count > 0)
                             {
                                 isGrouped = true;
-                                Scheme.Add(new Stage(stepStageString, isGrouped));
+                                Scheme.Add(new Stage(stepStageString, isGrouped, editGeneralLimit, editStageLimit));
                             }
                         }                            
                         else
-                            Scheme.Add(new Stage(stepStageString, false));
+                            Scheme.Add(new Stage(stepStageString, false, editGeneralLimit, editStageLimit));
                     }
                     else
                     {
-                        Scheme.Add(new Stage(stepStageString, false));
+                        Scheme.Add(new Stage(stepStageString, false, editGeneralLimit, editStageLimit));
                     }
                 }
             }

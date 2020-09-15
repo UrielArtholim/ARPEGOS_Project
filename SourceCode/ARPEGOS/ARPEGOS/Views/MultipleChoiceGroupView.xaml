@@ -1,12 +1,93 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ARPEGOS.Views.MultipleChoiceGroupView">
+             x:Class="ARPEGOS.Views.MultipleChoiceGroupView"
+             x:Name="MultipleChoiceGroup">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <Grid>
+            <StackLayout Spacing="10" Padding="10" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                <ListView x:Name="MultipleChoiceList" 
+                          ItemsSource="{Binding Data}" 
+                          HasUnevenRows="True" 
+                          SelectionMode="None" 
+                          CachingStrategy="RecycleElementAndDataTemplate" 
+                          IsGroupingEnabled="True"
+                          SeparatorVisibility="None"
+                          GroupDisplayBinding="{Binding FormattedTitle}">
+                    <ListView.GroupHeaderTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Frame x:Name="GroupFrame" 
+                                       Padding="15" 
+                                       Margin="10,10,10,0" 
+                                       BorderColor="{DynamicResource SeparatorColor}">
+                                    <Frame.GestureRecognizers>
+                                        <TapGestureRecognizer Command="{Binding Source={x:Reference MultipleChoiceGroup}, Path=BindingContext.SelectGroupCommand}" CommandParameter="{Binding .}"/>
+                                    </Frame.GestureRecognizers>
+                                    <StackLayout Orientation="Horizontal"  
+                                                 HorizontalOptions="FillAndExpand" 
+                                                 VerticalOptions="CenterAndExpand" >
+                                        <Image Source="{Binding StateIcon}" HeightRequest="25" WidthRequest="25" BackgroundColor="Transparent"/>
+                                        <Label  Grid.Row="0" 
+                                                Grid.Column="1" 
+                                                FontSize="Large" 
+                                                HorizontalOptions="CenterAndExpand" 
+                                                VerticalOptions="Center" 
+                                                Text="{Binding FormattedTitle}"/>
+                                        <ImageButton Source="description.png" HeightRequest="25" WidthRequest="25"
+                                                     Command="{Binding Source={x:Reference MultipleChoiceGroup}, Path=BindingContext.GroupInfoCommand}"
+                                                     CommandParameter="{Binding .}"
+                                                     BackgroundColor="Transparent"/>
+                                    </StackLayout>
+                                </Frame>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.GroupHeaderTemplate>
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Frame x:Name="ItemFrame" 
+                                       Padding="15" 
+                                       Margin="10,10,10,0" 
+                                       BorderColor="{DynamicResource SeparatorColor}">
+                                    <StackLayout Orientation="Horizontal"  
+                                                 HorizontalOptions="FillAndExpand" 
+                                                 VerticalOptions="CenterAndExpand" >
+                                        <CheckBox  Grid.Row="0"
+                                                   Grid.Column="0" 
+                                                   IsChecked="{Binding SelectItemCommand}" 
+                                                   HorizontalOptions="Start" 
+                                                   VerticalOptions="Center" 
+                                                   CheckedChanged="OnCheckedChanged" 
+                                                   BindingContext="{Binding .}"/>
+                                        <Label  Grid.Row="0" 
+                                                Grid.Column="1" 
+                                                FontSize="Large" 
+                                                HorizontalOptions="CenterAndExpand" 
+                                                VerticalOptions="Center" 
+                                                Text="{Binding .FormattedName}"/>
+                                        <ImageButton Source="description.png"  HeightRequest="25" WidthRequest="25"
+                                                     Command="{Binding Source={x:Reference MultipleChoiceGroup}, Path=BindingContext.InfoCommand}"
+                                                     CommandParameter="{Binding .}"
+                                                     BackgroundColor="Transparent"/>
+                                    </StackLayout>
+                                </Frame>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                <Button Text="Siguiente" 
+                        Command="{Binding NextCommand}" 
+                        IsVisible="{Binding Continue}"
+                        BackgroundColor="{DynamicResource ButtonColor}"
+                        AbsoluteLayout.LayoutFlags="PositionProportional"
+                        AbsoluteLayout.LayoutBounds=".95,.95,80,80"
+                        HeightRequest="40"/>
+            </StackLayout>
+            <Frame Grid.Row="0" BackgroundColor="Black" Opacity="0.7" HasShadow="False" CornerRadius="0" IsVisible="{Binding Source={x:Reference MultipleChoiceGroup}, Path=BindingContext.IsBusy}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                <ActivityIndicator Color="White" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" IsRunning="{Binding Source={x:Reference MultipleChoiceGroup}, Path=BindingContext.IsBusy}"
+                               WidthRequest="50" HeightRequest="50" />
+            </Frame>
+        </Grid>
     </ContentPage.Content>
 </ContentPage>

@@ -498,7 +498,7 @@ namespace ARPEGOS.Services
         }//MODIFIED
 
         /// <summary>
-        /// Returns true if the given element has a limit and the limit.
+        /// Returns the limit of the element given.
         /// </summary>
         /// <param name="ElementName">Name of the element</param>
         /// <param name="LimitValue">Limit value obtained</param>
@@ -519,7 +519,7 @@ namespace ARPEGOS.Services
                 {
                     var ClassCustomAnnotations = game.Ontology.Model.ClassModel.Annotations.CustomAnnotations;
                     var StageCustomAnnotations = ClassCustomAnnotations.SelectEntriesBySubject(stageClass);
-                    var StageLimitAnnotationEntries = StageCustomAnnotations.Where(entry => entry.TaxonomyPredicate.ToString().Contains("StageLimit"));
+                    var StageLimitAnnotationEntries = StageCustomAnnotations.Where(entry => entry.TaxonomyPredicate.ToString().Split('#').Last() == "StageLimit");
                     if (StageLimitAnnotationEntries.Count() > 0)
                     {
                         var LimitName = StageLimitAnnotationEntries.Single().TaxonomyObject.ToString().Split('^').First();
@@ -560,7 +560,7 @@ namespace ARPEGOS.Services
                     var StageProperty = game.Ontology.Model.PropertyModel.SelectProperty(stageString);
                     var ClassCustomAnnotations = game.Ontology.Model.PropertyModel.Annotations.CustomAnnotations;
                     var StageCustomAnnotations = ClassCustomAnnotations.SelectEntriesBySubject(StageProperty);
-                    var StageLimitAnnotationEntries = StageCustomAnnotations.Where(entry => entry.TaxonomyPredicate.ToString().Contains("StageLimit"));
+                    var StageLimitAnnotationEntries = StageCustomAnnotations.Where(entry => entry.TaxonomyPredicate.ToString().Split('#').Last() == "StageLimit");
                     if (StageLimitAnnotationEntries.Count() > 0)
                     {
                         var LimitName = StageLimitAnnotationEntries.Single().TaxonomyObject.ToString().Split('^').First();
@@ -607,7 +607,7 @@ namespace ARPEGOS.Services
             else
             {
                 var GamePropertyCustomAnnotations = game.Ontology.Model.PropertyModel.Annotations.CustomAnnotations;
-                var GamePropertyGeneralLimitAnnotations = GamePropertyCustomAnnotations.Where(entry => entry.TaxonomyPredicate.ToString().Contains("GeneralLimit"));
+                var GamePropertyGeneralLimitAnnotations = GamePropertyCustomAnnotations.Where(entry => entry.TaxonomyPredicate.ToString().Split('#').Last() == "GeneralLimit");
                 if(GamePropertyGeneralLimitAnnotations.Count() > 0)
                 {
                     var GamePropertyGeneralLimit = GamePropertyGeneralLimitAnnotations.Single().TaxonomySubject;
@@ -643,7 +643,7 @@ namespace ARPEGOS.Services
 
         public double GetStep(string itemName)
         {
-            double step = 1;/*
+            double step = 1;
             var characterTypeStageName = StageViewModel.RootStage.Split('#').Last();
             var characterTypeStageString = DependencyHelper.CurrentContext.CurrentCharacter.GetString(characterTypeStageName, true);
             var characterTypePropertyString = this.GetObjectPropertyAssociated(characterTypeStageString, true);
@@ -692,16 +692,33 @@ namespace ARPEGOS.Services
                         }
                     }
                 }
-            }*/
+            }
             return step;
         }
 
         public double GetLimitValue (string name)
         {
             var character = DependencyHelper.CurrentContext.CurrentCharacter;
+            var game = DependencyHelper.CurrentContext.CurrentGame;
+
             var propertyString = character.GetString(name, true);
-            var characterAssertions = character.GetCharacterProperties();
-            characterAssertions.TryGetValue(propertyString, out string valueString);
+            var valueString = string.Empty;
+            if(!string.IsNullOrEmpty(propertyString))
+            {
+                var characterAssertions = character.GetCharacterProperties();
+                characterAssertions.TryGetValue(propertyString, out valueString);
+            }
+            else
+            {
+                propertyString = character.GetString(name);
+                var property = game.Ontology.Model.PropertyModel.SelectProperty(propertyString);
+                var gamePropertyAnnotations = game.Ontology.Model.PropertyModel.Annotations.IsDefinedBy.SelectEntriesBySubject(property);
+                if(gamePropertyAnnotations.EntriesCount > 0)
+                {
+                    var definition = gamePropertyAnnotations.Single().TaxonomyObject.ToString().Split('^').First();
+                    valueString = character.GetValue(definition).ToString();                    
+                }
+            }
             var LimitValue = Convert.ToDouble(valueString.Split('^').First());
             return LimitValue;
         }
@@ -1296,7 +1313,7 @@ namespace ARPEGOS.Services
                                     //3.2.1.2.3A.2 To get its value, we call the function GetValue with it, and convert it to string
                                     var gameElementPropertyValue = GetValue(definition).ToString();
                                     //3.2.1.2.3A.3 Now we can add the property with its default value inside the character (So we use the character context strings)
-                                    AddDatatypeProperty($"{this.Context}{this.Name}", characterElementPropertyString, gameElementPropertyValue, definitionType);
+                                    AddDatatypeProperty($"{this.Context}{this.Name}", gameElementPropertyString, gameElementPropertyValue, definitionType);
                                 }
                                 else
                                 {

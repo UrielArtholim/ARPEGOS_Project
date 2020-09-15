@@ -73,6 +73,24 @@
     
 
 
+    <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#EditGeneralLimit -->
+
+    <owl:AnnotationProperty rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#EditGeneralLimit"/>
+    
+
+
+    <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#EditStageLimit -->
+
+    <owl:AnnotationProperty rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#EditStageLimit"/>
+    
+
+
+    <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#ElementLimit -->
+
+    <owl:AnnotationProperty rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#ElementLimit"/>
+    
+
+
     <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#GeneralLimit -->
 
     <owl:AnnotationProperty rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#GeneralLimit"/>
@@ -85,21 +103,15 @@
     
 
 
+    <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#StageGroupCost -->
+
+    <owl:AnnotationProperty rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#StageGroupCost"/>
+    
+
+
     <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#StageLimit -->
 
     <owl:AnnotationProperty rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#StageLimit"/>
-    
-
-
-    <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#StageModifiesGeneralLimit -->
-
-    <owl:AnnotationProperty rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#StageModifiesGeneralLimit"/>
-    
-
-
-    <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#StageModifiesStageLimit -->
-
-    <owl:AnnotationProperty rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#StageModifiesStageLimit"/>
     
 
 
@@ -6252,7 +6264,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
-        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Límite_Característica</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Límite_Característica:*:8:-:100</rdfs:isDefinedBy>
     </owl:DatatypeProperty>
     
 
@@ -8509,6 +8521,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
+        <EditStageLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</EditStageLimit>
         <StageLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Límite_Nivel</StageLimit>
         <ViewType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ValuedListView</ViewType>
     </owl:DatatypeProperty>
@@ -11401,9 +11414,9 @@
     <owl:Class rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Acumulación_Ki">
         <rdfs:subClassOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Ki_General"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Es la capacidad que tiene un sujeto para concentrar y usar a mayor velocidad sus puntos de Ki. Su valor base también depende de los atributos.</rdfs:comment>
+        <EditGeneralLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</EditGeneralLimit>
+        <EditStageLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</EditStageLimit>
         <StageLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Disponible_Habilidad_Combate</StageLimit>
-        <StageModifiesGeneralLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</StageModifiesGeneralLimit>
-        <StageModifiesStageLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</StageModifiesStageLimit>
         <ValuedListInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Item_Base, numerical: true, User_Edit: true
 Per_Item_Bono, numerical: true, User_Edit: false, Nivel_Característica: Car_Bonificador
 Per_Item_Temporal, numerical: true, User_Edit: false, Per_Item_Temporal
@@ -11434,8 +11447,8 @@ Per_Item_Total, numerical: true, User_Edit: false, Per_Item_Base:+: Per_Item_Tem
     <owl:Class rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arcano">
         <rdfs:subClassOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Invocación"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Realmente, los Arcanos no poseen una forma física real ni intervienen de ningún modo en el mundo. No son ni dioses ni potencias, sino manifestaciones de las pasiones y los espíritus del hombre. Son personificaciones que fueron formadas por las almas que regresaban al flujo y que ahora se nutren de la propia energía de la realidad. Los Arcanos se encuentran estancados en el flujo hasta que son llamados al mundo y, por tanto, sus apariciones tienen una duración temporal muy limitada. Aunque a veces parece incluso que se presentan físicamente en el mundo, tan sólo utilizan el poder que les ha brindado el invocador para modificar la realidad y crear manifestaciones. Sus verdaderas esencias permanecen siempre en el corazón del mundo espiritual y, por tanto, sus avatares no pueden ser atacados de ningún modo; son tan reales como una ilusión. Cuando son invocados por primera vez, ofrecen pactos a quienes los hayan llamado para congraciarse y aceptarlos. A cambio de la realización del pacto, los Arcanos se unen existencialmente a esos individuos y les permiten invocar sus poderes posteriormente.</rdfs:comment>
+        <EditStageLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</EditStageLimit>
         <StageLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Disponible_Arcano</StageLimit>
-        <StageModifiesStageLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</StageModifiesStageLimit>
         <ViewType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MultipleChoiceStaticLimitView</ViewType>
     </owl:Class>
     
@@ -11628,8 +11641,8 @@ Los escudos tienen un funcionamiento diferente al del resto de las armas. Aunque
     <owl:Class rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arte_Marcial">
         <rdfs:subClassOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidad_Combate"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">En Ánima, un personaje que lucha sólo con su cuerpo puede aprender a dominar artes marciales. Cualquiera de estos estilos le permite utilizar su habilidad de ataque y parada, sin ningún penalizador, cuando combata desarmado. En cierta manera, son equivalentes a una tabla de armas con las manos desnudas, aunque además proporcionan ventajas adicionales a sus practicantes. Que un personaje adquiera un arte marcial, supone mucho más que simplemente conocer un estilo. Muchos individuos aprenden a utilizarlas, pero eso no significa que realmente sepan controlar sus ventajas. Si un personaje en Ánima conoce un arte marcial, simboliza que es un verdadero maestro que ha conseguido dominarla perfectamente.</rdfs:comment>
+        <EditStageLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</EditStageLimit>
         <StageLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Disponible_CM</StageLimit>
-        <StageModifiesStageLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</StageModifiesStageLimit>
         <ViewType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MultipleChoiceDynamicLimitView</ViewType>
     </owl:Class>
     
@@ -11803,8 +11816,8 @@ Los escudos tienen un funcionamiento diferente al del resto de las armas. Aunque
 
     <owl:Class rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Bonificador_Natural_Físico">
         <rdfs:subClassOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Bonificador_Natural"/>
+        <EditStageLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</EditStageLimit>
         <StageLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Disponible_Bonificador_Natural_Físico</StageLimit>
-        <StageModifiesStageLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</StageModifiesStageLimit>
         <ValuedListInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Item_Base, numerical: true, User_Edit: true
 Per_Item_Bono, numerical: true, User_Edit: false, Bonif_Característica:Per_Ref_Bono:*:Per_Item_Base</ValuedListInfo>
         <ViewType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ValuedListView</ViewType>
@@ -11816,8 +11829,8 @@ Per_Item_Bono, numerical: true, User_Edit: false, Bonif_Característica:Per_Ref_
 
     <owl:Class rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Bonificador_Natural_Mental">
         <rdfs:subClassOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Bonificador_Natural"/>
+        <EditStageLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</EditStageLimit>
         <StageLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Disponible_Bonificador_Natural_Mental</StageLimit>
-        <StageModifiesStageLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</StageModifiesStageLimit>
         <ValuedListInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Item_Base, numerical: true, User_Edit: true
 Per_Item_Bono, numerical: true, User_Edit: false, Bonif_Característica:Per_Ref_Bono:*:Per_Item_Base</ValuedListInfo>
         <ViewType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ValuedListView</ViewType>
@@ -11963,6 +11976,7 @@ Per_Item_Bono, numerical: true, User_Edit: false, Bonif_Característica:Per_Ref_
     <owl:Class rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Característica_Primaria">
         <rdfs:subClassOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Característica"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lo más elemental en la creación de un personaje será determinar sus características primarias, que son las que definirán sus capacidades básicas. Puesto que no hay dos individuos iguales, cada personaje tiene también unas características diferentes tratando de representar la diversidad de sujetos que pueblan el mundo. En Ánima existen ocho características primarias distintas: Fuerza, Destreza, Agilidad, Constitución, Inteligencia, Voluntad, Poder y Percepción. Las cuatro primeras miden las capacidades físicas del personaje, mientras que las cuatro siguientes representan sus capacidades psíquicas, espirituales y perceptivas. A estas características se les debe atribuir un número para medir el grado de habilidad que se posee en cada campo concreto. Las características de un ser humano están comprendidas entre 1 y 10, aunque en algunos casos realmente excepcionales, pueden llegar a superarse dichas cifras.</rdfs:comment>
+        <ElementLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Límite_Característica</ElementLimit>
         <StageLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Disponible_Característica</StageLimit>
         <ValuedListInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Item_Base, numerical: true, User_Edit: true
 Per_Item_Bono, numerical: true, User_Edit: false, Nivel_Característica: Car_Bonificador
@@ -12118,8 +12132,8 @@ Per_Item_Total, numerical: true, User_Edit: false, Per_Item_Base:+: Per_Item_Tem
     <owl:Class rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Conjuro_Vía_Mágica">
         <rdfs:subClassOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Conjuro"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Conjuro perteneciente a alguna de las 11 vías de la Magia</rdfs:comment>
+        <EditStageLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</EditStageLimit>
         <StageLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Disponible_Magia</StageLimit>
-        <StageModifiesStageLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</StageModifiesStageLimit>
         <ViewType>MultipleChoiceDynamicLimitView</ViewType>
     </owl:Class>
     
@@ -12213,8 +12227,8 @@ No todos los seres vivos se ven sometidos a las habilidades de convocatoria. Est
     <owl:Class rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Desventaja_General">
         <rdfs:subClassOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Desventaja"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Esta es la lista de desventajas comunes que puedes elegir para tu personaje. El beneficio indica la cantidad de Puntos de Creación que obtendrás adquiriendo cada una de ellas. Recuerda que no has de elegir más de tres desventajas.</rdfs:comment>
+        <EditStageLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</EditStageLimit>
         <StageLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Disponible_Desventaja</StageLimit>
-        <StageModifiesStageLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</StageModifiesStageLimit>
         <ViewType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MultipleChoiceStaticLimitView</ViewType>
     </owl:Class>
     
@@ -12225,8 +12239,8 @@ No todos los seres vivos se ven sometidos a las habilidades de convocatoria. Est
     <owl:Class rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Desventaja_Mística">
         <rdfs:subClassOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Desventaja"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sólo quienes tengan el Don podrán elegir desventajas de esta lista. Los Puntos de Creación que consigas con ellas sólo podrán utilizarse para comprar ventajas mágicas para personajes con el Don. De todas formas, recuerda que el total de desventajas no puede ser mayor de tres, por lo que si ya has elegido tres generales, no podrás elegir ninguna de aquí.</rdfs:comment>
+        <EditStageLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</EditStageLimit>
         <StageLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Disponible_Desventaja</StageLimit>
-        <StageModifiesStageLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</StageModifiesStageLimit>
         <ViewType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MultipleChoiceStaticLimitView</ViewType>
     </owl:Class>
     
@@ -12237,8 +12251,8 @@ No todos los seres vivos se ven sometidos a las habilidades de convocatoria. Est
     <owl:Class rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Desventaja_Psíquica">
         <rdfs:subClassOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Desventaja"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sólo los personajes con capacidades psíquicas podrán elegir desventajas de esta lista. Los Puntos de Creación que consigas con ellas, únicamente podrán utilizarse para comprar ventajas mentales para psíquicos. De todas formas, recuerda que el total de desventajas no puede ser mayor de tres, por lo que si ya has elegido tres generales, no podrás elegir ninguna de aquí.</rdfs:comment>
+        <EditStageLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</EditStageLimit>
         <StageLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Disponible_Desventaja</StageLimit>
-        <StageModifiesStageLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</StageModifiesStageLimit>
         <ViewType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MultipleChoiceStaticLimitView</ViewType>
     </owl:Class>
     
@@ -12472,9 +12486,9 @@ Objeto_Coste_Total, numerical: true, User_Edit: false, Equipo_Inventario:*:Objet
 
     <owl:Class rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidad_Combate_General">
         <rdfs:subClassOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidad_Combate"/>
+        <EditGeneralLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</EditGeneralLimit>
+        <EditStageLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</EditStageLimit>
         <StageLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Disponible_Habilidad_Combate</StageLimit>
-        <StageModifiesGeneralLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</StageModifiesGeneralLimit>
-        <StageModifiesStageLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</StageModifiesStageLimit>
         <ValuedListInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Item_PD, numerical: true, User_Edit: true
 Per_Item_Base, numerical: true, User_Edit: false, Per_Item_PD: /: tieneCategoría :Cat_Item_Coste
 Per_Item_Bono_Característica, numerical: true, User_Edit: false, Hab_CarPrincipal: Per_Ref_Bono
@@ -12530,9 +12544,9 @@ Per_Item_Total, numerical: true, User_Edit: false, Per_Item_Base: +: Per_Item_Bo
 
     <owl:Class rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidad_Mística_Específica">
         <rdfs:subClassOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidad_Mística_Común"/>
+        <EditGeneralLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</EditGeneralLimit>
+        <EditStageLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</EditStageLimit>
         <StageLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Disponible_Habilidad_Mística</StageLimit>
-        <StageModifiesGeneralLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</StageModifiesGeneralLimit>
-        <StageModifiesStageLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</StageModifiesStageLimit>
         <ValuedListInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Item_PD, numerical: true, User_Edit: true
 Per_Item_Base, numerical: true, User_Edit: false, Per_Item_PD:/:tieneCategoría:Cat_Item_Coste
 Per_Item_Bono, numerical: true, User_Edit: false, Hab_CarPrincipal:Per_Ref_Bono
@@ -12547,9 +12561,9 @@ Per_Item_Total, numerical: true, User_Edit: false, Per_Item_Base:+:Per_Item_Bono
 
     <owl:Class rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidad_Mística_General">
         <rdfs:subClassOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidad_Mística_Común"/>
+        <EditGeneralLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</EditGeneralLimit>
+        <EditStageLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</EditStageLimit>
         <StageLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Disponible_Habilidad_Mística</StageLimit>
-        <StageModifiesGeneralLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</StageModifiesGeneralLimit>
-        <StageModifiesStageLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</StageModifiesStageLimit>
         <ValuedListInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Item_PD, numerical: true, User_Edit: true
 Per_Item_Base, numerical: true, User_Edit: false, Per_Item_PD:/:tieneCategoría:Cat_Item_Coste
 Per_Item_Bono, numerical: true, User_Edit: false, Hab_CarPrincipal:Per_Ref_Total:Item_Ref:Item_Valor
@@ -12603,9 +12617,9 @@ Per_Item_Bono, numerical: true, User_Edit: false, Per_Item_Base:*:10</ValuedList
 
     <owl:Class rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidad_Psíquica_General">
         <rdfs:subClassOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidad_Psíquica"/>
+        <EditGeneralLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</EditGeneralLimit>
+        <EditStageLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</EditStageLimit>
         <StageLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Disponible_Habilidad_Psíquica</StageLimit>
-        <StageModifiesGeneralLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</StageModifiesGeneralLimit>
-        <StageModifiesStageLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</StageModifiesStageLimit>
         <ValuedListInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Item_PD, numerical: true, User_Edit: true
 Per_Item_Base, numerical: true, User_Edit: false, Per_Item_PD:/:tieneCategoría:Cat_Item_Coste
 Per_Item_Bono, numerical: true, User_Edit: false, Per_Item_Bono
@@ -12621,9 +12635,9 @@ Per_Item_Total, numerical: true, User_Edit: false, Per_Item_Base:+:Per_Item_Bono
     <owl:Class rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidad_Secundaria">
         <rdfs:subClassOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidad"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Son llamadas así ya que representan las habilidades básicas o principales de los personajes en el ejercicio de sus categorías. A su vez, las habilidades primarias están divididas en tres campos distintos: la habilidad de combate, la habilidad psíquica y la habilidad sobrenatural.</rdfs:comment>
+        <EditGeneralLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</EditGeneralLimit>
+        <EditStageLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</EditStageLimit>
         <StageLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Disponible_Habilidad_Secundaria</StageLimit>
-        <StageModifiesGeneralLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</StageModifiesGeneralLimit>
-        <StageModifiesStageLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</StageModifiesStageLimit>
         <ValuedListInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Item_PD, numerical: true, User_Edit: true
 Per_Item_Base, numerical: true, User_Edit: false, Per_Item_PD: /: tieneCategoría: Cat_Item_Coste
 Per_Item_Bono_Característica, numerical: true, User_Edit: false, Hab_CarPrincipal: Per_Ref_Bono
@@ -13336,9 +13350,9 @@ No todas las personas son capaces de controlar el poder de las almas. Hacerlo no
     <owl:Class rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Puntos_Ki">
         <rdfs:subClassOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Ki_General"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Los puntos de Ki miden el potencial de la energía interna del personaje. Cuantos más posea, habrá conseguido despertar una mayor cantidad de poder. Estos puntos dependen de algunas de las características primarias: Fuerza, Destreza, Agilidad, Constitución, Poder y Voluntad.</rdfs:comment>
+        <EditGeneralLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</EditGeneralLimit>
+        <EditStageLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</EditStageLimit>
         <StageLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Disponible_Habilidad_Combate</StageLimit>
-        <StageModifiesGeneralLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</StageModifiesGeneralLimit>
-        <StageModifiesStageLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</StageModifiesStageLimit>
         <ValuedListInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Item_PD, numerical: true, User_Edit: true
 Per_Item_Base, numerical: true, User_Edit: false, Per_Item_PD:/:tieneCategoría:Cat_Item_Coste
 Per_Item_Bono, numerical: true, User_Edit: false, Hab_CarPrincipal: Per_Ref_Total
@@ -13498,9 +13512,9 @@ De cualquier modo, si los jugadores lo desean, hay diferentes razas que se puede
     <owl:Class rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Tabla_Armas">
         <rdfs:subClassOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidad_Combate"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Un individuo no tiene por qué verse obligado a dominar el uso de una única arma, sino que con la práctica es capaz de aprender a utilizar igualmente otras muchas con la misma habilidad. Las tablas de armas permiten a un personaje eliminar los penalizadores por blandir armas distintas a la que escogió inicialmente, e incluso en ocasiones, emplear su habilidad de combate lanzando conjuros o poderes psíquicos.</rdfs:comment>
+        <EditGeneralLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</EditGeneralLimit>
+        <EditStageLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</EditStageLimit>
         <StageLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Disponible_Habilidad_Combate</StageLimit>
-        <StageModifiesGeneralLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</StageModifiesGeneralLimit>
-        <StageModifiesStageLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</StageModifiesStageLimit>
         <ViewType>MultipleChoiceDynamicLimitView</ViewType>
     </owl:Class>
     
@@ -13519,8 +13533,8 @@ De cualquier modo, si los jugadores lo desean, hay diferentes razas que se puede
     <owl:Class rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Tabla_De_Técnicas_De_Dominio">
         <rdfs:subClassOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Ki"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Los personajes que controlen su energía interna tienen a su disposición algo más que las habilidades del Ki. Invirtiendo puntos de Conocimiento Marcial, pueden desarrollar otras capacidades especiales a las que llamaremos Técnicas. Estas artes tienen funciones muy diversas, desde potenciar la habilidad de ataque y defensa hasta transportar al personaje a grandes distancias. Las Técnicas permiten a los individuos que las utilizan emplear su energía interna para ejecutar acciones sorprendentes. Por ejemplo, una Técnica puede ser ejecutada para proyectar un ataque a distancia o multiplicar su velocidad, y realizar así varias acciones sin penalizadores en un solo asalto.</rdfs:comment>
+        <EditStageLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</EditStageLimit>
         <StageLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Disponible_CM</StageLimit>
-        <StageModifiesStageLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</StageModifiesStageLimit>
         <ViewType>MultipleChoiceDynamicLimitView</ViewType>
     </owl:Class>
     
@@ -13700,8 +13714,8 @@ Al contrario que las habilidades, las ventajas no se adquieren con PD, sino con 
     <owl:Class rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Ventaja_General">
         <rdfs:subClassOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Ventaja"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Esta es la lista de ventajas comunes que puedes elegir para tu personaje. El coste indica la cantidad de Puntos de Creación que gastarás adquiriendo cada una de ellas.</rdfs:comment>
+        <EditStageLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</EditStageLimit>
         <StageLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Disponible_Ventaja</StageLimit>
-        <StageModifiesStageLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</StageModifiesStageLimit>
         <ViewType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MultipleChoiceStaticLimitView</ViewType>
     </owl:Class>
     
@@ -13712,8 +13726,8 @@ Al contrario que las habilidades, las ventajas no se adquieren con PD, sino con 
     <owl:Class rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Ventaja_Mística">
         <rdfs:subClassOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Ventaja"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sólo quienes tengan el Don podrán elegir ventajas de esta lista.</rdfs:comment>
+        <EditStageLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</EditStageLimit>
         <StageLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Disponible_Ventaja</StageLimit>
-        <StageModifiesStageLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</StageModifiesStageLimit>
         <ViewType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MultipleChoiceStaticLimitView</ViewType>
     </owl:Class>
     
@@ -13724,8 +13738,8 @@ Al contrario que las habilidades, las ventajas no se adquieren con PD, sino con 
     <owl:Class rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Ventaja_Psíquica">
         <rdfs:subClassOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Ventaja"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sólo los personajes con capacidades psíquicas podrán elegir ventajas de esta lista.</rdfs:comment>
+        <EditStageLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</EditStageLimit>
         <StageLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Disponible_Ventaja</StageLimit>
-        <StageModifiesStageLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</StageModifiesStageLimit>
         <ViewType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MultipleChoiceStaticLimitView</ViewType>
     </owl:Class>
     
@@ -54369,6 +54383,7 @@ Coste: 30 PD</rdfs:comment>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Se trata de un tubo de madera o metal hueco, de 30 a 90 centímetros de largo. Se usa para disparar dardos pequeños, usualmente llenos de veneno. Como regla especial, la cerbatana no aplica el bono de Fuerza del personaje para calcular su daño. Requiere ambas manos para usarla.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Crioquinesis">
+        <StageGroupCost rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">1</StageGroupCost>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Al contrario que la Piroquinesis, esta disciplina permite al psíquico controlar las bajas temperaturas y el hielo. Sus poderes pueden congelar a personas o disminuir la temperatura a cientos de metros de distancia.
 
 Modificador: Como en la Piroquinesis, el entorno aumenta o disminuye
@@ -54378,6 +54393,7 @@ el potencial psíquico al usar esta disciplina.</rdfs:comment>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Los orígenes de este arte son anteriores al Imperio. Desarrollada originariamente por un sacerdote guerrero de Lannet, se dice que sus secretos le fueron enseñados por una de las grandes bestias. Todas sus técnicas resultan tan variadas como potentes, a imagen y semejanza de las habilidades de la criatura en la que se inspiran. Cada vez que su usuario ejecuta una de ellas, durante unos instantes su cuerpo se cubre con diversos tatuajes en alusión al poder del dragón.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Energía">
+        <StageGroupCost rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">1</StageGroupCost>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Esta disciplina permite al psíquico usar sus poderes para generar energía pura, e influir en menor grado en el calor, el frio y la electricidad. La matriz psíquica se materializa, afectando físicamente al mundo material de muy diversos modos. No tiene ningún modificador.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidad_Atléticas">
@@ -54393,10 +54409,10 @@ el potencial psíquico al usar esta disciplina.</rdfs:comment>
         <ViewType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ValuedListView</ViewType>
     </rdf:Description>
     <rdf:Description rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidad_Ki">
-        <StageModifiesStageLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</StageModifiesStageLimit>
+        <EditStageLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</EditStageLimit>
         <ViewType>MultipleChoiceDynamicLimitView</ViewType>
-        <StageLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Disponible_CM</StageLimit>
         <rdfs:comment>Las habilidades del Ki son una serie de capacidades especiales que pueden desarrollar los personajes, utilizando sus puntos de Conocimiento Marcial. Cuando alguien domina una de ellas, esta le permite realizar acciones especiales que ningún otro ser humano es capaz de ejecutar. Cada una tiene un coste en puntos de CM, que es necesario invertir para adquirirla. Las habilidades del Ki se desarrollan siguiendo una lógica en su conocimiento y por tanto es posible que, para aprender a utilizar algunas, un individuo tenga que dominar anteriormente otras.</rdfs:comment>
+        <StageLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Disponible_CM</StageLimit>
     </rdf:Description>
     <rdf:Description rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidad_Perceptivas">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">En este grupo se reúnen todas las habilidades perceptivas del personaje. Son las pericias que le permitirán explotar al máximo sus cinco sentidos y analizar la información obtenida.</rdfs:comment>
@@ -54421,6 +54437,7 @@ el potencial psíquico al usar esta disciplina.</rdfs:comment>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ignis es la esencia del fuego, un estilo que permite a sus usuarios producir potentes llamaradas gracias al Ki. Sus ataques son excepcionalmente destructivos, y resulta prácticamente imposible contenerlos. Se trata de un estilo de procedencia no humana, que ha sido empleado por muchos Duk´zarist. Toda la tabla de Ignis sufre la desventaja Atadura elemental hacia el fuego.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Incremento_Físico">
+        <StageGroupCost rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">1</StageGroupCost>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La disciplina Incremento físico otorga al psíquico un completo dominio sobre su cuerpo y todas las células que lo componen. De este modo, controla cada parte de su anatomía como si se tratase de una máquina perfecta, aumentando de un modo increible sus capacidades corporales. Sólo es posible emplear una vez un mismo poder sobre un determinado individuo. No tiene ningún modificador.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Libro_Agua">
@@ -54457,12 +54474,14 @@ el potencial psíquico al usar esta disciplina.</rdfs:comment>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La Tierra es el poder del planeta, la piedra y los minerales. Es la magia más material de todas y controla las leyes de la física, como la gravedad y el magnetismo. Su influencia sobre los espíritus y lo inmaterial es muy limitada. Los conjuros de piedra recogen la magia relacionada con la resistencia, la dureza y la lentitud. La vía opuesta a Tierra es Aire.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Matricial">
+        <StageGroupCost rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">1</StageGroupCost>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">De modo adicional a las habilidades mentales explicadas, existen cuatro poderes genéricos a los que tienen acceso todos los psíquicos indistintamente. No se encuentran dentro de ninguna disciplina, por lo que cualquiera de ellos puede adquirirse invirtiendo un solo CV, o gastar temporalmente uno para tener un acceso limitado a él. Estos poderes no tienen nivel.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Mod_Cansancio">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El Cansancio está relacionado con las acciones físicas que realiza un personaje. Cada vez que alguien hace esfuerzos corporales, va agotándose poco a poco. Este atributo depende directamente de la Constitución y es equivalente al valor de dicha característica.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Piroquinesis">
+        <StageGroupCost rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">1</StageGroupCost>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Esta disciplina permite al psíquico tener dominio sobre las altas temperaturas y el fuego. Puede controlar su forma o volverse inmune a los efectos del calor.
 
 Modificador: El entorno en el que se encuentre el psíquico aumenta o disminuye su potencial.</rdfs:comment>
@@ -54471,6 +54490,7 @@ Modificador: El entorno en el que se encuentre el psíquico aumenta o disminuye 
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Es el bono innato que consigue un personaje a sus puntos de vida. Suma esta cantidad en primer nivel y posteriormente vuelve a hacerlo cada vez que sube de nuevo.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Sensorial">
+        <StageGroupCost rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">1</StageGroupCost>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Esta disciplina permite al psíquico percibir y controlar los sentimientos y sentidos de otras personas. Como la Telepatía, no tiene ninguna utilidad sobre seres sin mente, como golems o similares. Sentiente tampoco requiere un control de Proyección Psíquica para fijar su blanco (la tirada sigue siendo requerido para determinar el alcance del poder), pero si el psíquico no es capaz de obtener un mínimo de daño 10% en el resultado del asalto, el individuo afectado puede añadir un +60 a su control de RP.
 
 Modificador: Siempre que un psíquico utilice uno de sus poderes sentientes sobre un sujeto que se encuentra en contacto físico con él, puede sumar un bonificador de +20 a su potencial psíquico.</rdfs:comment>
@@ -54479,14 +54499,17 @@ Modificador: Siempre que un psíquico utilice uno de sus poderes sentientes sobr
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La Telemetría es la capacidad mental de percibir los residuos ambientales de tiempos pasados. Ello se debe a que la matriz psíquica de cada persona deja siempre tras de sí cierta energía residual, que depende de su estado de ánimo y de sus pensamientos en cada momento. Un individuo con esta disciplina es capaz de percibir dichos residuos y, consecuentemente, de sentir en mayor o menor grado lo que ha ocurrido en el pasado.
 
 Modificador: Siempre que un psíquico utilice uno de sus poderes telemétricos sobre algo con lo que se encuentre en contacto físico (ya sea un objeto o una persona), puede sumar un bonificador de +10 a su potencial.</rdfs:comment>
+        <StageGroupCost rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">1</StageGroupCost>
     </rdf:Description>
     <rdf:Description rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Telepatía">
+        <StageGroupCost rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">1</StageGroupCost>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La Telepatía es una de las disciplinas más fascinantes que tienen los psíquicos a su disposición: sincronizar las energías de dos matrices psíquicas, permitiendo penetrar a quien la utilice en la mente de otros sujetos. Algunos ejemplos de poderes telépatas serían leer los pensamientos de otros individuos, alterar su percepción o incluso dominar su voluntad. No tiene ninguna utilidad sobre seres sin mente, como golems o similares. Al contrario que otras Disciplinas, no se requiere un control de Proyección Psíquica para fijar su blanco (la tirada sigue siendo requerido para determinar el alcance del poder), pero si el psíquico no es capaz de obtener un mínimo de daño 10% en el resultado del asalto, el individuo afectado puede añadir un +60 a su control de RP. 
 
 Modificador: Siempre que un psíquico utilice uno de sus poderes telepáticos sobre un sujeto que se encuentra en contacto físico con él, puede sumar un bonificador de +20 a su potencial.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Telequinesia">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La Telequinesis es la facultad psíquica de mover objetos con la fuerza mental de un individuo. A mayor nivel, un personaje es incluso capaz de destrozar cosas a distancia o modificar su estructura atómica. Esta disciplina no tiene ningún modificador.</rdfs:comment>
+        <StageGroupCost rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">1</StageGroupCost>
     </rdf:Description>
     
 

@@ -18,19 +18,21 @@ namespace ARPEGOS.ViewModels
 {
     public class ValuedViewModel: BaseViewModel
     {
+        #region Properties
+        #region Private
         private DialogService dialogService = new DialogService();
         private ObservableCollection<Item> data;
         private Stage currentStage;
-        private string stageName;
-        private string stageLimitProperty;
-
+        private string stageName, stageLimitProperty;
         private double stageLimit, stageProgress, stageProgressLabel;
         private double generalLimit, generalProgress, generalProgressLabel;
-        private bool hasGeneralLimit;
-
         private double sliderLimit;
-        private bool showDescription;
+        private double? elementLimit;
+        private bool hasGeneralLimit, hasStageLimit, showDescription;
+        
+        #endregion
 
+        #region Public
         public ObservableCollection<Item> Data
         {
             get => this.data;
@@ -89,11 +91,21 @@ namespace ARPEGOS.ViewModels
             get => this.hasGeneralLimit;
             set => SetProperty(ref this.hasGeneralLimit, value);
         }
-
+        public bool HasStageLimit
+        {
+            get => this.hasStageLimit;
+            set => SetProperty(ref this.hasStageLimit, value);
+        }
         public double SliderLimit
         {
             get => this.sliderLimit;
             set => SetProperty(ref this.sliderLimit, value);
+        }
+
+        public double? ElementLimit
+        {
+            get => this.elementLimit;
+            set => SetProperty(ref this.elementLimit, value);
         }
 
         public bool ShowDescription
@@ -101,34 +113,61 @@ namespace ARPEGOS.ViewModels
             get => this.showDescription;
             set => SetProperty(ref this.showDescription, value);
         }
+        #endregion
+        #endregion
 
-
+        #region Commands
         public ICommand NextCommand { get; private set; }
         public ICommand InfoCommand { get; private set; }
+        #endregion
 
+        #region Constructor
         public ValuedViewModel()
         {
             var character = DependencyHelper.CurrentContext.CurrentCharacter;
+            var game = DependencyHelper.CurrentContext.CurrentGame;
 
             this.CurrentStage = StageViewModel.CreationScheme.ElementAt(StageViewModel.CurrentStep);
             this.StageName = FileService.FormatName(this.CurrentStage.ShortName);
             this.stageLimitProperty = character.GetLimit(this.CurrentStage.FullName.Split('#').Last());
             this.StageLimit = character.GetLimitValue(this.stageLimitProperty);
-            this.ShowDescription = true;
-            this.Data = new ObservableCollection<Item>();
             this.SliderLimit = this.StageLimit;
             this.StageProgressLabel = this.StageLimit;
+            this.StageProgress = 1;
+            this.ShowDescription = true;
+            this.HasGeneralLimit = this.CurrentStage.EditGeneralLimit;
+            this.hasStageLimit = true;
+            this.ElementLimit = null;
+            this.Data = new ObservableCollection<Item>();
 
-            if (StageViewModel.GeneralLimit >= 0)
+            if(this.HasGeneralLimit == true)
             {
                 this.HasGeneralLimit = true;
                 this.GeneralLimit = StageViewModel.GeneralLimit;
+                this.GeneralProgress = StageViewModel.GeneralProgress;
+                this.GeneralProgressLabel = this.GeneralLimit;
             }
             else
-                this.HasGeneralLimit = false;
+            {
+                this.GeneralLimit = 1;
+            }
 
             if (this.HasGeneralLimit == true)
                 this.SliderLimit = Math.Min(Convert.ToInt32(StageViewModel.GeneralLimit), this.StageLimit);
+
+            if(character.CheckClass(this.CurrentStage.FullName, false))
+            {
+                var subjectClass = game.Ontology.Model.ClassModel.SelectClass(this.CurrentStage.FullName);
+                var subjectClassAnnotationEntries = game.Ontology.Model.ClassModel.Annotations.CustomAnnotations.SelectEntriesBySubject(subjectClass);
+                var elementLimitAnnotationEntries = subjectClassAnnotationEntries.Where(entry => entry.TaxonomyPredicate.ToString().Contains("ElementLimit"));
+                if(elementLimitAnnotationEntries.Count() > 0)
+                {
+                    var definition = elementLimitAnnotationEntries.Single().TaxonomyObject.ToString().Split('^').First();
+                    this.ElementLimit = character.GetValue(definition);
+                    this.SliderLimit = Convert.ToDouble(this.ElementLimit);
+                }
+            }
+
 
             if (character.CheckDatatypeProperty(this.CurrentStage.FullName, StageViewModel.ApplyOnCharacter))
             {
@@ -139,7 +178,7 @@ namespace ARPEGOS.ViewModels
 
                 List<Item> DataList = new List<Item>();
                 var newItem = new Item(this.CurrentStage.FullName, string.Empty, string.Empty, itemStep, this.SliderLimit);
-                newItem.IsEnabled = false;
+                newItem.IsEnabled = true;
                 Data.Add(newItem);
             }
             else
@@ -165,32 +204,6 @@ namespace ARPEGOS.ViewModels
                 }
             }
 
-            this.NextCommand = new Command(async () =>
-            {
-
-                if(StageViewModel.GeneralLimitProperty == null)
-                StageViewModel.GeneralLimitProperty = character.GetLimit(StageViewModel.RootStage, true);
-                StageViewModel.GeneralLimit = character.GetLimitValue(StageViewModel.GeneralLimitProperty);                
-
-                if (currentStage.IsGrouped)
-                {
-                    switch (currentStage.Type)
-                    {
-                        case Stage.StageType.MultipleChoice: await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.PushAsync(new MultipleChoiceGroupView())); break;
-                        default: await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.PushAsync(new ValuedGroupView())); break;
-                    }
-                }
-                else
-                {
-                    switch (currentStage.Type)
-                    {
-                        case Stage.StageType.SingleChoice: await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.PushAsync(new SingleChoiceView())); break;
-                        case Stage.StageType.MultipleChoice: await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.PushAsync(new MultipleChoiceView())); break;
-                        default: await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.PushAsync(new ValuedView())); break;
-                    }
-                }
-                await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.PopModalAsync());
-            });
 
             this.NextCommand = new Command(async () => 
             {
@@ -224,11 +237,25 @@ namespace ARPEGOS.ViewModels
                 {
                     StageViewModel.GeneralLimitProperty = character.GetLimit(this.CurrentStage.FullName, true);
                     StageViewModel.GeneralLimit = character.GetLimitValue(StageViewModel.GeneralLimitProperty);
+                    StageViewModel.GeneralProgress = 1;
                 }
                 else
                     StageViewModel.GeneralLimit = this.GeneralProgress;
 
-                character.UpdateDatatypeAssertion($"{character.Context}{StageViewModel.GeneralLimitProperty}", $"{StageViewModel.GeneralLimit}");
+                if (this.CurrentStage.EditStageLimit)
+                {
+                    var characterStageLimitProperty = $"{character.Context}{this.stageLimitProperty}";
+                    character.UpdateDatatypeAssertion(characterStageLimitProperty, Convert.ToString(Convert.ToInt32(this.StageProgressLabel)));
+                }
+
+                if (this.CurrentStage.EditGeneralLimit)
+                {
+                    var characterStageLimitProperty = $"{character.Context}{StageViewModel.GeneralLimitProperty}";
+                    character.UpdateDatatypeAssertion(characterStageLimitProperty, Convert.ToString(Convert.ToInt32(this.GeneralProgressLabel)));
+                    StageViewModel.GeneralLimit = this.GeneralProgressLabel;
+                    StageViewModel.GeneralProgress = this.GeneralProgress;
+                }
+
                 ++StageViewModel.CurrentStep;
                 var nextStage = StageViewModel.CreationScheme.ElementAt(StageViewModel.CurrentStep);
 
@@ -256,7 +283,7 @@ namespace ARPEGOS.ViewModels
             {
                 await this.dialogService.DisplayAlert(item.FormattedName, item.Description);
             });
-
         }
+        #endregion         
     }
 }

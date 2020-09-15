@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ARPEGOS.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,12 @@ namespace ARPEGOS.Views
         public MultipleChoiceGroupView()
         {
             InitializeComponent();
+            this.BindingContext = new MultipleChoiceGroupViewModel();
+        }
+
+        public void OnCheckedChanged(object sender, CheckedChangedEventArgs e)
+        {
+
         }
     }
 }

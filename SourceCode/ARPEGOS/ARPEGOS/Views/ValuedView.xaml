@@ -3,36 +3,38 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              xmlns:controls="clr-namespace:ARPEGOS.Controls"
              x:Class="ARPEGOS.Views.ValuedView"
+             Visual="Material"
              Title="{Binding StageName}">
     <ContentPage.Content>
         <Grid>
-            <StackLayout Spacing="5" Padding="0" Margin="20,20,20,20">
+            <StackLayout Spacing="20" Padding="0" Margin="20,20,20,20">
                 <StackLayout Orientation="Vertical">
-                    <StackLayout Orientation="Vertical" Spacing="5" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" IsVisible="{Binding HasGeneralLimit}">
+                    <StackLayout Orientation="Vertical" Spacing="0" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" IsVisible="{Binding HasGeneralLimit}">
                         <StackLayout Orientation="Horizontal">
-                            <Label Text="Límite general" HorizontalOptions="StartAndExpand" FontSize="Large" />
-                            <Label Text="{Binding GeneralProgress, StringFormat='{0:F0}'}" HorizontalOptions="EndAndExpand" FontSize="Large"/>
+                            <Label Text="Límite general" HorizontalOptions="StartAndExpand" FontSize="Medium" />
+                            <Label Text="{Binding GeneralProgress, StringFormat='{0:F0}'}" HorizontalOptions="EndAndExpand" FontSize="Medium"/>
                         </StackLayout>
-                        <ProgressBar x:Name="GeneralProgressBar" 
+                        <ProgressBar x:Name="GeneralProgressBar"  HeightRequest="10"
                                          HorizontalOptions="StartAndExpand"
                                          Progress="{Binding GeneralProgress}" 
                                          ProgressColor="{DynamicResource GeneralColor}"
-                                         BackgroundColor="{DynamicResource SeparatorColor}"
+                                         BackgroundColor="{DynamicResource ProgressBarBackgroundColor}"
                                          IsVisible="{Binding HasGeneralLimit}"/>
                     </StackLayout>
-                    <StackLayout Orientation="Vertical" Spacing="5" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand">
+                    <StackLayout Orientation="Vertical" Spacing="5" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" IsVisible="{Binding HasStageLimit}">
                         <StackLayout Orientation="Horizontal" Spacing="5" HorizontalOptions="FillAndExpand">
-                            <Label Text="Límite" HorizontalOptions="StartAndExpand" FontSize="Large"/>
-                            <Label Text="{Binding StageProgressLabel, StringFormat='{0:F0}'}" HorizontalOptions="EndAndExpand" FontSize="Large"/>
+                            <Label Text="Límite" HorizontalOptions="StartAndExpand" FontSize="Medium"/>
+                            <Label Text="{Binding StageProgressLabel, StringFormat='{0:F0}'}" HorizontalOptions="EndAndExpand" FontSize="Medium"/>
                         </StackLayout>
-                        <ProgressBar x:Name="StageProgressBar" HorizontalOptions="FillAndExpand"
+                        <ProgressBar x:Name="StageProgressBar" HeightRequest="10"
+                                     HorizontalOptions="FillAndExpand"
                                      Progress="{Binding StageProgress}" 
                                      ProgressColor="{DynamicResource StageColor}"
-                                     BackgroundColor="{DynamicResource SeparatorColor}"/>
+                                     BackgroundColor="{DynamicResource ProgressBarBackgroundColor}"/>
                     </StackLayout>
                 </StackLayout>
                 
-                <ListView ItemsSource="{Binding Data}" HasUnevenRows="True" SelectionMode="None" CachingStrategy="RecycleElementAndDataTemplate">
+                <ListView ItemsSource="{Binding Data}" HasUnevenRows="True" SelectionMode="None">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>
@@ -42,38 +44,38 @@
                                        BorderColor="{DynamicResource SeparatorColor}">
                                     <Grid x:Name="SliderItem" 
                                           HorizontalOptions="FillAndExpand"
-                                          RowDefinitions="1*,1*"
+                                          RowDefinitions="1*"
                                           ColumnDefinitions="*,*,*">
                                         <Label x:Name="ItemNameLabel"
-                                               FontSize="Large"
+                                               FontSize="Medium"
                                                Grid.Row="0"
                                                Grid.Column="0"
                                                VerticalOptions="Center"
                                                HorizontalTextAlignment="Center"
-                                               Text="{Binding FormattedName}"/>                                        
-                                        <Label x:Name="ValueLabel"
-                                               FontSize="Large"
-                                               Grid.Row="0"
-                                               Grid.Column="1"
+                                               Text="{Binding FormattedName}"/>
+                                        <StackLayout Orientation="Vertical" Grid.Row="0" Grid.Column="1" VerticalOptions="Center" HorizontalOptions="Center">
+                                            <Label x:Name="ValueLabel"
+                                               FontSize="Medium"                                               
                                                VerticalOptions="Center"
                                                HorizontalTextAlignment="Center"
                                                Text="{Binding Source={x:Reference ValueEntry}, Path=Value, StringFormat='{0:F0}'}"/>
-                                        <ImageButton x:Name="InformationButton"
-                                               Grid.Row="0"
-                                               Grid.Column="2"
-                                               Source="description.png"
-                                               HeightRequest="25" WidthRequest="25"
-                                               BackgroundColor="Transparent"
-                                               IsEnabled="{Binding IsEnabled}"
-                                               IsVisible="{Binding IsEnabled}"/>
-                                        <Stepper x:Name="ValueEntry"
-                                               Grid.Row="1"
-                                               Grid.Column="1"
+                                            <Stepper x:Name="ValueEntry"
                                                BindingContext="{Binding .}"
                                                VerticalOptions="Center"
                                                HorizontalOptions="FillAndExpand"
                                                Maximum="{Binding Maximum}"
+                                               IsEnabled="{Binding IsEnabled}"
                                                ValueChanged="OnValueChanged"/>
+                                        </StackLayout>                                        
+                                        <ImageButton x:Name="InformationButton" Aspect="AspectFit" VerticalOptions="Center"
+                                               Grid.Row="0"
+                                               Grid.Column="2"
+                                               Source="description.png"
+                                               HeightRequest="30" WidthRequest="30"
+                                               BackgroundColor="Transparent"
+                                               IsEnabled="{Binding HasDescription}"
+                                               IsVisible="{Binding HasDescription}"/>
+                                        
                                     </Grid>
                                 </Frame>
                             </ViewCell>
@@ -83,8 +85,9 @@
                 <Button Text="Siguiente" 
                             Command="{Binding NextCommand}" 
                             BackgroundColor="{DynamicResource ButtonColor}"
-                            HorizontalOptions="CenterAndExpand"
-                            VerticalOptions="EndAndExpand"/>
+                            HorizontalOptions="FillAndExpand"
+                            VerticalOptions="EndAndExpand"
+                            HeightRequest="50"/>
             </StackLayout>
         </Grid>
     </ContentPage.Content>

@@ -53,6 +53,8 @@ namespace ARPEGOS
         public string StateIcon => Expanded ? "collapse.png" : "expand.png";
 
         public string Description { get; internal set; }
+
+        public int Value { get; internal set; }
         #endregion
 
         #region Ctors
@@ -61,13 +63,14 @@ namespace ARPEGOS
         /// </summary>
         /// <param name="groupTitle">Name of the group</param>
         /// <param name="expanded">State of expansion of the group</param>
-        public Group (string groupString, IEnumerable<Item> groupList = null): base(groupList)
+        public Group (string groupString, IEnumerable<Item> groupList = null, int groupValue = 0): base(groupList)
         {
             Elements = groupList.ToList();
             GroupString = groupString;
             Title = groupString.Split('#').Last();
             FormattedTitle = Title.Replace('_', ' ').Trim();
             Expanded = false;
+            Value = groupValue;
             Description = DependencyHelper.CurrentContext.CurrentCharacter.GetElementDescription(groupString, StageViewModel.ApplyOnCharacter);
             if (string.IsNullOrEmpty(Description) || string.IsNullOrWhiteSpace(Description))
                 this.HasDescription = false;

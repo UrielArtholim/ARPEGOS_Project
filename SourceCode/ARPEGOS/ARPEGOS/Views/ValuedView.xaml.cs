@@ -28,39 +28,73 @@ namespace ARPEGOS.Views
             double NewValue, OldValue;
 
             NewValue = e.NewValue;
-            OldValue = e.OldValue;            
+            OldValue = e.OldValue;
 
-            if(NewValue > OldValue)
+
+            if (viewModel.ElementLimit != null)
             {
-                item.Value += item.Step;
-                Task.Run(async () => await MainThread.InvokeOnMainThreadAsync(() =>
+                var lowerLimit = viewModel.StageProgressLabel;
+                if (viewModel.HasGeneralLimit == true)
+                    lowerLimit = Math.Min(viewModel.GeneralProgressLabel, lowerLimit);
+                lowerLimit = Math.Min(lowerLimit, Convert.ToDouble(viewModel.ElementLimit));
+                foreach (var element in viewModel.Data)
                 {
-                    viewModel.StageProgressLabel -= item.Step;
-                    viewModel.StageProgress -= item.Step;
-                    if (viewModel.HasGeneralLimit)
+                    if(lowerLimit > 0)
                     {
-                        viewModel.GeneralProgressLabel -= item.Step;
-                        viewModel.GeneralProgress -= item.Step;
+                        if (lowerLimit == 1)
+                        {
+                            element.IsEnabled = true;
+                            element.Maximum = element.Value + 1;
+                        }
+                    }                    
+                    else if (lowerLimit == 0)
+                    {
+                        if (element.Value != 0)
+                            element.Maximum = element.Value;
+                        else
+                            element.IsEnabled = false;
                     }
-                }));
-                
+                }
+            }
+
+            if (NewValue > OldValue)
+            {
+                ++item.Value;
+                if(viewModel.CurrentStage.EditStageLimit == true)
+                {
+                    Task.Run(async () => await MainThread.InvokeOnMainThreadAsync(() =>
+                    {
+                        viewModel.StageProgressLabel -= Convert.ToDouble(item.Step);
+                        viewModel.StageProgress -= Convert.ToDouble(item.Step / viewModel.StageLimit);
+                        if (viewModel.CurrentStage.EditGeneralLimit == true)
+                        {
+                            viewModel.GeneralProgressLabel -= Convert.ToDouble(item.Step);
+                            viewModel.GeneralProgress -= Convert.ToDouble(item.Step / viewModel.GeneralLimit);
+                        }
+                    }));
+                }               
             }
             else if (OldValue > NewValue)
             {
-                Task.Run(async () => await MainThread.InvokeOnMainThreadAsync(() =>
+                if(viewModel.CurrentStage.EditStageLimit == true)
                 {
-                    item.Value -= item.Step;
-                    viewModel.StageProgressLabel += item.Step;
-                    viewModel.StageProgress += item.Step;
-                    if (viewModel.HasGeneralLimit)
+                    Task.Run(async () => await MainThread.InvokeOnMainThreadAsync(() =>
                     {
-                        viewModel.GeneralProgressLabel += item.Step;
-                        viewModel.GeneralProgress += item.Step;
-                    }
-                }));
-                
+                        --item.Value;
+                        viewModel.StageProgressLabel += Convert.ToDouble(item.Step);
+                        viewModel.StageProgress += Convert.ToDouble(item.Step / viewModel.StageLimit);
+                        if (viewModel.CurrentStage.EditGeneralLimit == true)
+                        {
+                            viewModel.GeneralProgressLabel += Convert.ToDouble(item.Step);
+                            viewModel.GeneralProgress += Convert.ToDouble(item.Step / viewModel.GeneralLimit);
+                        }
+                    }));
+                }
             }
+
             
+            
+                   
         }
     }
 }
