@@ -264,7 +264,7 @@ namespace ARPEGOS.Services
         /// <param name="GeneralLimitValue">Value of the general limit</param>
         /// <param name="PartialLimitValue">Value of the partial limit</param>
         /// <returns></returns>
-        public List<Item> CheckAvailableOptions (string stageString, bool hasGeneralLimitValue, float? generalLimitValue, float? partialLimitValue)
+        public List<Item> CheckAvailableOptions (string stageString, bool hasGeneralLimitValue, double generalLimitValue, double partialLimitValue)
         {
             RDFOntology GameOntology = DependencyHelper.CurrentContext.CurrentGame.Ontology;
             var costWords = new List<string> { "Coste", "Cost", "Coût" };

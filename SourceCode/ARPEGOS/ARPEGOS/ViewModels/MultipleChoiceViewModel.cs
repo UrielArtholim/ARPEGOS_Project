@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Essentials;
 using Xamarin.Forms;
@@ -16,29 +17,25 @@ namespace ARPEGOS.ViewModels
 {
     public class MultipleChoiceViewModel: BaseViewModel
     {
-        private DialogService dialogService;
+        #region Properties
+        #region Private
+        private DialogService dialogService = new DialogService();
+        private ObservableCollection<Item> data;
         private Stage currentStage;
-        private string stageString;
-        private string stageName;
-
+        private string stageName, stageLimitProperty;
         private double stageLimit, stageProgress, stageProgressLabel;
         private double generalLimit, generalProgress, generalProgressLabel;
-        private bool hasGeneralLimit;
+        private double currentLimit;
+        private bool hasGeneralLimit, hasStageLimit, showDescription;
 
-        private List<Item> selectedItems;
-        public List<Item> SelectedItems
+        #endregion
+
+        #region Public
+        public ObservableCollection<Item> Data
         {
-            get => this.selectedItems;
-            set => SetProperty(ref this.selectedItems, value);
+            get => this.data;
+            set => SetProperty(ref this.data, value);
         }
-
-        public bool _continue;
-        public bool Continue
-        {
-            get => _continue;
-            set => SetProperty(ref this._continue, value);
-        }
-
         public Stage CurrentStage
         {
             get => this.currentStage;
@@ -87,28 +84,64 @@ namespace ARPEGOS.ViewModels
             set => SetProperty(ref this.generalProgressLabel, value);
         }
 
+        public double CurrentLimit
+        {
+            get => this.currentLimit;
+            set => SetProperty(ref this.currentLimit, value);
+        }
+
         public bool HasGeneralLimit
         {
             get => this.hasGeneralLimit;
             set => SetProperty(ref this.hasGeneralLimit, value);
         }
+        public bool HasStageLimit
+        {
+            get => this.hasStageLimit;
+            set => SetProperty(ref this.hasStageLimit, value);
+        }
 
-        public ObservableCollection<Item> Data { get; private set; }
+        public bool ShowDescription
+        {
+            get => this.showDescription;
+            set => SetProperty(ref this.showDescription, value);
+        }
+        #endregion
+        #endregion
 
+        #region Commands
         public ICommand NextCommand { get; private set; }
         public ICommand InfoCommand { get; private set; }
         public ICommand SelectCommand { get; private set; }
+        #endregion
+
+        #region Constructor
 
         public MultipleChoiceViewModel()
         {
             this.dialogService = new DialogService();
-            this.Continue = false;
             var character = DependencyHelper.CurrentContext.CurrentCharacter;
             var game = DependencyHelper.CurrentContext.CurrentGame;
-            this.stageString = StageViewModel.CreationScheme.ElementAt(StageViewModel.CurrentStep).FullName;
-            this.StageName = this.stageString.Split('#').Last();
+            this.CurrentStage = StageViewModel.CreationScheme.ElementAt(StageViewModel.CurrentStep);
+            this.StageName = this.CurrentStage.FullName.Split('#').Last();
+            this.stageLimitProperty = character.GetLimit(this.CurrentStage.FullName.Split('#').Last());
+            this.StageLimit = character.GetLimitValue(this.stageLimitProperty);
+            this.StageProgressLabel = this.StageLimit;
+            this.StageProgress = 1;
+            this.ShowDescription = true;
+            this.HasGeneralLimit = this.CurrentStage.EditGeneralLimit;
+            this.hasStageLimit = true;
 
-            var datalist = new ObservableCollection<Item>(character.GetIndividuals(stageString));
+            if (this.HasGeneralLimit == true)
+            {
+                this.HasGeneralLimit = true;
+                this.GeneralLimit = StageViewModel.GeneralLimit;
+                this.GeneralProgress = StageViewModel.GeneralProgress;
+                this.GeneralProgressLabel = this.GeneralLimit;
+                this.CurrentLimit = Math.Min(this.GeneralLimit, this.StageLimit);
+            }
+
+            var datalist = new ObservableCollection<Item>(character.GetIndividuals(this.CurrentStage.FullName));
             foreach (var item in datalist)
                 if (string.IsNullOrEmpty(item.Description) || string.IsNullOrWhiteSpace(item.Description))
                     item.HasDescription = false;
@@ -120,14 +153,6 @@ namespace ARPEGOS.ViewModels
                 this.IsBusy = true;
                 var character = DependencyHelper.CurrentContext.CurrentCharacter;
 
-                foreach(var item in this.SelectedItems)
-                {
-                    var ItemFullShortName = item.FullName.Split('#').Last();
-                    var predicateString = character.GetObjectPropertyAssociated(this.stageString);
-                    var predicateName = predicateString.Split('#').Last();
-                    character.UpdateObjectAssertion($"{character.Context}{predicateName}", $"{character.Context}{ItemFullShortName}");
-                }
-                
                 ++StageViewModel.CurrentStep;
                 var nextStage = StageViewModel.CreationScheme.ElementAt(StageViewModel.CurrentStep);
 
@@ -157,5 +182,29 @@ namespace ARPEGOS.ViewModels
                 await this.dialogService.DisplayAlert(item.FormattedName, item.Description);
             });
         }
+        #endregion
+
+        #region Methods
+        public async Task UpdateView()
+        {
+            var character = DependencyHelper.CurrentContext.CurrentCharacter;
+            var availableItems = await Task.Run(()=> character.CheckAvailableOptions(this.CurrentStage.FullName, this.CurrentStage.EditGeneralLimit, StageViewModel.GeneralLimit, this.StageLimit));
+            foreach(var element in Data)
+                element.IsEnabled = false;
+            foreach(var element in Data)
+            {
+                foreach(var item in availableItems)
+                {
+                    if(element.ShortName == item.ShortName)
+                    {
+                        item.IsEnabled = true;
+                        var index = Data.IndexOf(element);
+                        Data.Remove(element);
+                        Data.Insert(index, item);
+                    }
+                }
+            }
+        }
+        #endregion
     }
 }

@@ -31,8 +31,9 @@
                                                    BindingContext="{Binding .}"/>
                                         <Label  Grid.Row="0" 
                                                 Grid.Column="1" 
-                                                FontSize="Large" 
-                                                HorizontalOptions="CenterAndExpand" 
+                                                FontSize="Medium" 
+                                                HorizontalOptions="StartAndExpand" 
+                                                HorizontalTextAlignment="Start"
                                                 VerticalOptions="Center" 
                                                 Text="{Binding FormattedName}"/>
                                         <ImageButton Source="description.png" HeightRequest="25" WidthRequest="25" Aspect="AspectFit"

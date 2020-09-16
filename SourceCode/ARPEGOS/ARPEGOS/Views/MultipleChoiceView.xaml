@@ -2,32 +2,35 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ARPEGOS.Views.MultipleChoiceView"
-             Visual="Material">
+             Visual="Material"
+             x:Name="MultipleChoice"
+             Title="Multiple Choice View">
     <ContentPage.Content>
         <Grid>
             <StackLayout Spacing="10" Padding="10" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
                 <StackLayout Orientation="Vertical">
-                    <StackLayout Orientation="Vertical" Spacing="5" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" IsVisible="{Binding HasGeneralLimit}">
+                    <StackLayout Orientation="Vertical" Spacing="0" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" IsVisible="{Binding HasGeneralLimit}">
                         <StackLayout Orientation="Horizontal">
-                            <Label Text="Límite general" HorizontalOptions="StartAndExpand" FontSize="Large" />
-                            <Label Text="{Binding GeneralProgress, StringFormat='{0:F0}'}" HorizontalOptions="EndAndExpand" FontSize="Large"/>
+                            <Label Text="Límite general" HorizontalOptions="StartAndExpand" FontSize="Medium" />
+                            <Label Text="{Binding GeneralProgress, StringFormat='{0:F0}'}" HorizontalOptions="EndAndExpand" FontSize="Medium"/>
                         </StackLayout>
-                        <ProgressBar x:Name="GeneralProgressBar" 
+                        <ProgressBar x:Name="GeneralProgressBar"  HeightRequest="10"
                                          HorizontalOptions="StartAndExpand"
                                          Progress="{Binding GeneralProgress}" 
                                          ProgressColor="{DynamicResource GeneralColor}"
-                                         BackgroundColor="{DynamicResource SeparatorColor}"
+                                         BackgroundColor="{DynamicResource ProgressBarBackgroundColor}"
                                          IsVisible="{Binding HasGeneralLimit}"/>
                     </StackLayout>
-                    <StackLayout Orientation="Vertical" Spacing="5" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand">
+                    <StackLayout Orientation="Vertical" Spacing="5" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" IsVisible="{Binding HasStageLimit}">
                         <StackLayout Orientation="Horizontal" Spacing="5" HorizontalOptions="FillAndExpand">
-                            <Label Text="Límite" HorizontalOptions="StartAndExpand" FontSize="Large"/>
-                            <Label Text="{Binding StageProgressLabel, StringFormat='{0:F0}'}" HorizontalOptions="EndAndExpand" FontSize="Large"/>
+                            <Label Text="Límite" HorizontalOptions="StartAndExpand" FontSize="Medium"/>
+                            <Label Text="{Binding StageProgressLabel, StringFormat='{0:F0}'}" HorizontalOptions="EndAndExpand" FontSize="Medium"/>
                         </StackLayout>
-                        <ProgressBar x:Name="StageProgressBar" HorizontalOptions="FillAndExpand"
+                        <ProgressBar x:Name="StageProgressBar" HeightRequest="10"
+                                     HorizontalOptions="FillAndExpand"
                                      Progress="{Binding StageProgress}" 
                                      ProgressColor="{DynamicResource StageColor}"
-                                     BackgroundColor="{DynamicResource SeparatorColor}"/>
+                                     BackgroundColor="{DynamicResource ProgressBarBackgroundColor}"/>
                     </StackLayout>
                 </StackLayout>
                 <ListView x:Name="SingleChoiceList" ItemsSource="{Binding Data}" HasUnevenRows="True" SelectionMode="None" CachingStrategy="RecycleElementAndDataTemplate">
@@ -47,18 +50,20 @@
                                         <CheckBox  Grid.Row="0"
                                                    Grid.Column="0" 
                                                    IsChecked="{Binding SelectItem}" 
+                                                   IsVisible="{Binding IsEnabled}"
                                                    HorizontalOptions="Start" 
                                                    VerticalOptions="Center" 
                                                    CheckedChanged="OnCheckedChanged" 
                                                    BindingContext="{Binding .}"/>
                                         <Label  Grid.Row="0" 
                                                 Grid.Column="1" 
-                                                FontSize="Large" 
-                                                HorizontalOptions="CenterAndExpand" 
+                                                FontSize="Medium" 
+                                                HorizontalOptions="StartAndExpand" 
+                                                HorizontalTextAlignment="Start"
                                                 VerticalOptions="Center" 
                                                 Text="{Binding FormattedName}"/>
                                         <ImageButton Source="description.png" HeightRequest="25" WidthRequest="25"
-                                                     Command="{Binding Source={x:Reference SingleChoice}, Path=BindingContext.InfoCommand}"
+                                                     Command="{Binding Source={x:Reference MultipleChoice}, Path=BindingContext.InfoCommand}"
                                                      CommandParameter="{Binding .}"
                                                      BackgroundColor="Transparent"/>
                                     </StackLayout>
@@ -69,14 +74,14 @@
                 </ListView>
                 <Button Text="Siguiente" 
                         Command="{Binding NextCommand}" 
-                        IsVisible="{Binding Continue}"
+                        IsVisible="True"
                         BackgroundColor="{DynamicResource ButtonColor}"
                         AbsoluteLayout.LayoutFlags="PositionProportional"
                         AbsoluteLayout.LayoutBounds=".95,.95,80,80"
                         HeightRequest="50"/>
             </StackLayout>
-            <Frame Grid.Row="0" BackgroundColor="Black" Opacity="0.7" HasShadow="False" CornerRadius="0" IsVisible="{Binding Source={x:Reference SingleChoice}, Path=BindingContext.IsBusy}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
-                <ActivityIndicator Color="White" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" IsRunning="{Binding Source={x:Reference SingleChoice}, Path=BindingContext.IsBusy}"
+            <Frame Grid.Row="0" BackgroundColor="Black" Opacity="0.7" HasShadow="False" CornerRadius="0" IsVisible="{Binding Source={x:Reference MultipleChoice}, Path=BindingContext.IsBusy}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                <ActivityIndicator Color="White" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" IsRunning="{Binding Source={x:Reference MultipleChoice}, Path=BindingContext.IsBusy}"
                                WidthRequest="50" HeightRequest="50" />
             </Frame>
         </Grid>

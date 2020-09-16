@@ -223,7 +223,14 @@ namespace ARPEGOS.ViewModels
                             var itemTotalPropertyEntries = itemProperties.Where(property => property.ToString().Contains("Total"));
                             if(itemTotalPropertyEntries.Count() > 0)
                             {
-                                var itemPropertyName = itemTotalPropertyEntries.Single().ToString().Split('#').Last();
+                                var itemPropertyName = string.Empty;
+                                if (itemTotalPropertyEntries.Count() > 1)
+                                {
+                                    var name = $"Per_{itemName}_Total";
+                                    itemPropertyName = itemTotalPropertyEntries.Where(entry => entry.ToString().Split('#').Last() == name).Single().ToString().Split('#').Last();
+                                }
+                                else
+                                    itemPropertyName = itemTotalPropertyEntries.Single().ToString().Split('#').Last();
                                 characterItemString = $"{character.Context}{itemPropertyName}";
                                 character.UpdateDatatypeAssertion(characterItemString, itemValue);
                             }

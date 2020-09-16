@@ -82,7 +82,7 @@ namespace ARPEGOS
         #endregion
 
         #region Constructor
-        public Item(string elementString, string description = "This is a description", string Class = "No class available", double sliderStep = 1, double sliderMaximum = 1)
+        public Item(string elementString, string description = "This is a description", string Class = "No class available", double elementValue = 1, double elementMaximum = 1)
         {
             FullName = elementString;
             ShortName = elementString.Split('#').Last();
@@ -94,9 +94,9 @@ namespace ARPEGOS
                         ShortName = ShortName.Replace(Class,"").Trim();
             FormattedName = ShortName.Replace("Per_","").Replace("_Total","").Replace('_',' ').Trim();
             Description = description;
-            this.Value = 0;
-            this.Maximum = sliderMaximum;
-            this.Step = sliderStep;
+            this.Value = elementValue;
+            this.Maximum = elementMaximum;
+            this.Step = elementValue;
             if (string.IsNullOrEmpty(Description))
                 HasDescription = false;
             else

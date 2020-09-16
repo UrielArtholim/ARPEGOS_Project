@@ -34,9 +34,9 @@ namespace ARPEGOS.Services
         /// Returns all the properties of the current character 
         /// </summary>
         /// <returns> Dictionary with the properties of the current character and its values</returns>
-        public Dictionary<string, string> GetCharacterProperties ()
+        public Dictionary<string, List<string>> GetCharacterProperties ()
         {
-            var CharacterProperties = new Dictionary<string, string>();
+            var CharacterProperties = new Dictionary<string, List<string>>();
             var characterName = FileService.EscapedName(this.Name);
             var CharacterFact = this.Ontology.Data.SelectFact($"{this.Context}{characterName}");
             var CharacterAssertions = this.Ontology.Data.Relations.Assertions.SelectEntriesBySubject(CharacterFact);
@@ -44,10 +44,11 @@ namespace ARPEGOS.Services
             {
                 var property = assertion.TaxonomyPredicate.ToString();
                 var value = assertion.TaxonomyObject.ToString();
-                if (!CharacterProperties.ContainsKey(property))
-                    CharacterProperties.Add(property, value);
+                if(!CharacterProperties.ContainsKey(property))
+                    CharacterProperties.Add(property, new List<string> { value });
+                else
+                    CharacterProperties[property].Add(value);                
             }
-
             return CharacterProperties;
         }//MODIFIED
 
@@ -60,28 +61,32 @@ namespace ARPEGOS.Services
             var characterProperties = GetCharacterProperties();
             var skills = new ObservableCollection<Item>();
             var AnnotationType = "SkillProperty";
-            foreach (var item in characterProperties)
+            foreach (var pair in characterProperties)
             {
-                var skillName = string.Empty;
-                var skillDescription = string.Empty;
-                var property = this.Ontology.Model.PropertyModel.SelectProperty(item.Key);
-                var annotationProperty = this.Ontology.Model.PropertyModel.SelectProperty($"{this.Context}{AnnotationType}");
-                var propertyTaxonomy = this.Ontology.Model.PropertyModel.Annotations.CustomAnnotations.SelectEntriesBySubject(property);
-                var propertySkillTaxonomy = propertyTaxonomy.Where(property => property.TaxonomyPredicate.ToString().Contains(AnnotationType));
-                if (propertySkillTaxonomy.Count() > 0)
+                var itemList = pair.Value;
+                foreach(var item in itemList)
                 {
-                    if (this.CheckObjectProperty(item.Key) == true)
+                    var skillName = string.Empty;
+                    var skillDescription = string.Empty;
+                    var property = this.Ontology.Model.PropertyModel.SelectProperty(pair.Key);
+                    var annotationProperty = this.Ontology.Model.PropertyModel.SelectProperty($"{this.Context}{AnnotationType}");
+                    var propertyTaxonomy = this.Ontology.Model.PropertyModel.Annotations.CustomAnnotations.SelectEntriesBySubject(property);
+                    var propertySkillTaxonomy = propertyTaxonomy.Where(property => property.TaxonomyPredicate.ToString().Contains(AnnotationType));
+                    if (propertySkillTaxonomy.Count() > 0)
                     {
-                        skillName = item.Value;
-                        var skillObjectFact = this.Ontology.Data.SelectFact(skillName);
-                        skillDescription = this.Ontology.Data.Annotations.Comment.SelectEntriesBySubject(skillObjectFact).Single().TaxonomyObject.ToString();
-                        skills.Add(new Item(skillName, skillDescription));
+                        if (this.CheckObjectProperty(pair.Key) == true)
+                        {
+                            skillName = item;
+                            var skillObjectFact = this.Ontology.Data.SelectFact(skillName);
+                            skillDescription = this.Ontology.Data.Annotations.Comment.SelectEntriesBySubject(skillObjectFact).Single().TaxonomyObject.ToString();
+                            skills.Add(new Item(skillName, skillDescription));
+                        }
+                        else
+                        {
+                            skills.Add(new Item(pair.Key, skillDescription)); //DataItem
+                        }
                     }
-                    else
-                    {
-                        skills.Add(new Item(item.Key, skillDescription)); //DataItem
-                    }
-                }
+                }                
             }
             return skills;
         }//MODIFIED
@@ -550,8 +555,8 @@ namespace ARPEGOS.Services
                         }
                         else
                         {
-                            CharacterAssertions.TryGetValue(CharacterLimitString, out LimitValueString);
-                            LimitValueString = LimitValueString.Split('^').First();
+                            CharacterAssertions.TryGetValue(CharacterLimitString, out var valueList);
+                            LimitValueString = valueList.Single().Split('^').First();
                         }
                     }
                 }
@@ -598,8 +603,8 @@ namespace ARPEGOS.Services
                         }
                         else
                         {
-                            CharacterAssertions.TryGetValue(CharacterLimitString, out LimitValueString);
-                            LimitValueString = LimitValueString.Split('^').First();
+                            CharacterAssertions.TryGetValue(CharacterLimitString, out var valueList);
+                            LimitValueString = valueList.Single().Split('^').First();
                         }
                     }
                 }
@@ -635,8 +640,7 @@ namespace ARPEGOS.Services
                         }
                         character.UpdateDatatypeAssertion(CharacterLimitString, LimitValueString);
                     }
-                }
-                
+                }                
             }
             return CharacterLimitString.Split('#').Last();
         }//MODIFIED
@@ -706,7 +710,8 @@ namespace ARPEGOS.Services
             if(!string.IsNullOrEmpty(propertyString))
             {
                 var characterAssertions = character.GetCharacterProperties();
-                characterAssertions.TryGetValue(propertyString, out valueString);
+                characterAssertions.TryGetValue(propertyString, out var valueList);
+                valueString = valueList.Single();
             }
             else
             {
@@ -767,7 +772,7 @@ namespace ARPEGOS.Services
         }//MODIFIED*/
 
         /// <summary>
-        /// Returns the name of the object property associated to the stage given
+        /// Returns the URI of the object property associated to the stage given
         /// </summary>
         /// <param name="stage">Name of the stage</param>
         /// <param name="applyOnCharacter">Search inside character</param>
@@ -1252,8 +1257,6 @@ namespace ARPEGOS.Services
             var CurrentValue = string.Empty;
             var Operators = new List<string> { "+", "-", "*", "/", "%", "<", ">", "<=", ">=", "=", "!=" };
             var currentList = new List<dynamic>();
-            var hasUpperLimit = false;
-            var UpperLimit = 0.0f;
 
             // 2 - Get formula substituting word "Item" by current item name. Then, split formula in formulaElements, removing leftover spaces
             var formula = valueDefinition.Replace("Item", itemName).Replace("__", "_");
