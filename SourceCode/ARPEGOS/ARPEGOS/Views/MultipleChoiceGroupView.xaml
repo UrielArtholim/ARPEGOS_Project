@@ -2,10 +2,36 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ARPEGOS.Views.MultipleChoiceGroupView"
-             x:Name="MultipleChoiceGroup">
+             x:Name="MultipleChoiceGroup"
+             Title="{Binding StageName}">
     <ContentPage.Content>
         <Grid>
             <StackLayout Spacing="10" Padding="10" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                <StackLayout Orientation="Vertical">
+                    <StackLayout Orientation="Vertical" Spacing="0" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" IsVisible="{Binding HasGeneralLimit}">
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Límite general" HorizontalOptions="StartAndExpand" FontSize="Medium" />
+                            <Label Text="{Binding GeneralProgress, StringFormat='{0:F0}'}" HorizontalOptions="EndAndExpand" FontSize="Medium"/>
+                        </StackLayout>
+                        <ProgressBar x:Name="GeneralProgressBar"  HeightRequest="10"
+                                         HorizontalOptions="FillAndExpand"
+                                         Progress="{Binding GeneralProgress}" 
+                                         ProgressColor="{DynamicResource GeneralColor}"
+                                         BackgroundColor="{DynamicResource ProgressBarBackgroundColor}"
+                                         IsVisible="{Binding HasGeneralLimit}"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Vertical" Spacing="5" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" IsVisible="{Binding HasStageLimit}">
+                        <StackLayout Orientation="Horizontal" Spacing="5" HorizontalOptions="FillAndExpand">
+                            <Label Text="Límite" HorizontalOptions="StartAndExpand" FontSize="Medium"/>
+                            <Label Text="{Binding StageProgressLabel, StringFormat='{0:F0}'}" HorizontalOptions="EndAndExpand" FontSize="Medium"/>
+                        </StackLayout>
+                        <ProgressBar x:Name="StageProgressBar" HeightRequest="10"
+                                     HorizontalOptions="FillAndExpand"
+                                     Progress="{Binding StageProgress}" 
+                                     ProgressColor="{DynamicResource StageColor}"
+                                     BackgroundColor="{DynamicResource ProgressBarBackgroundColor}"/>
+                    </StackLayout>
+                </StackLayout>
                 <ListView x:Name="MultipleChoiceList" 
                           ItemsSource="{Binding Data}" 
                           HasUnevenRows="True" 
@@ -62,8 +88,9 @@
                                                    BindingContext="{Binding .}"/>
                                         <Label  Grid.Row="0" 
                                                 Grid.Column="1" 
-                                                FontSize="Large" 
+                                                FontSize="Medium" 
                                                 HorizontalOptions="CenterAndExpand" 
+                                                HorizontalTextAlignment="Start"
                                                 VerticalOptions="Center" 
                                                 Text="{Binding .FormattedName}"/>
                                         <ImageButton Source="description.png"  HeightRequest="25" WidthRequest="25"

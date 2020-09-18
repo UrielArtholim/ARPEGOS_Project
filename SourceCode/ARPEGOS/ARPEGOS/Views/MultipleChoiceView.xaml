@@ -4,18 +4,18 @@
              x:Class="ARPEGOS.Views.MultipleChoiceView"
              Visual="Material"
              x:Name="MultipleChoice"
-             Title="Multiple Choice View">
+             Title="{Binding StageName}">
     <ContentPage.Content>
         <Grid>
-            <StackLayout Spacing="10" Padding="10" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
-                <StackLayout Orientation="Vertical">
+            <StackLayout Spacing="10" Padding="10"  VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                <StackLayout Orientation="Vertical" Padding="10">
                     <StackLayout Orientation="Vertical" Spacing="0" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" IsVisible="{Binding HasGeneralLimit}">
                         <StackLayout Orientation="Horizontal">
                             <Label Text="Límite general" HorizontalOptions="StartAndExpand" FontSize="Medium" />
                             <Label Text="{Binding GeneralProgress, StringFormat='{0:F0}'}" HorizontalOptions="EndAndExpand" FontSize="Medium"/>
                         </StackLayout>
                         <ProgressBar x:Name="GeneralProgressBar"  HeightRequest="10"
-                                         HorizontalOptions="StartAndExpand"
+                                         HorizontalOptions="FillAndExpand"
                                          Progress="{Binding GeneralProgress}" 
                                          ProgressColor="{DynamicResource GeneralColor}"
                                          BackgroundColor="{DynamicResource ProgressBarBackgroundColor}"

@@ -21,6 +21,7 @@ namespace ARPEGOS.ViewModels
         private string stageString;
         private string stageName;
         private Group lastGroup;
+        private Stage currentStage;
         public string StageName
         {
             get => stageName;
@@ -38,6 +39,11 @@ namespace ARPEGOS.ViewModels
         {
             get => _continue;
             set => SetProperty(ref this._continue, value);
+        }
+        public Stage CurrentStage
+        {
+            get => currentStage;
+            set => SetProperty(ref this.currentStage, value);
         }
 
         public ObservableCollection<Group> Data { get; private set; }
@@ -57,7 +63,13 @@ namespace ARPEGOS.ViewModels
 
             var currentStage = StageViewModel.CreationScheme.ElementAt(StageViewModel.CurrentStep);
             this.stageString = currentStage.FullName;
-            this.StageName = this.stageString.Split('#').Last();
+            this.StageName = FileService.FormatName(this.stageString.Split('#').Last());
+
+            if (StageViewModel.GeneralLimitProperty == null && StageName != "Nivel")
+            {
+                StageViewModel.GeneralLimitProperty = character.GetLimit(stageString, true);
+                StageViewModel.GeneralLimit = character.GetLimitValue(StageViewModel.GeneralLimitProperty);
+            }
 
             var datalist = character.GetIndividualsGrouped(stageString);
             foreach (var item in datalist)

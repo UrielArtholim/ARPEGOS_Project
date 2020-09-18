@@ -128,7 +128,8 @@ namespace ARPEGOS.ViewModels
             var game = DependencyHelper.CurrentContext.CurrentGame;
 
             this.CurrentStage = StageViewModel.CreationScheme.ElementAt(StageViewModel.CurrentStep);
-            this.StageName = FileService.FormatName(this.CurrentStage.ShortName);
+            var stageString = this.CurrentStage.FullName;
+            this.StageName = FileService.FormatName(stageString.Split('#').Last());
             this.stageLimitProperty = character.GetLimit(this.CurrentStage.FullName.Split('#').Last());
             this.StageLimit = character.GetLimitValue(this.stageLimitProperty);
             this.SliderLimit = this.StageLimit;
@@ -140,16 +141,18 @@ namespace ARPEGOS.ViewModels
             this.ElementLimit = null;
             this.Data = new ObservableCollection<Item>();
 
-            if(this.HasGeneralLimit == true)
+            if(StageViewModel.GeneralLimitProperty == null && StageName != "Nivel")
+            {
+                StageViewModel.GeneralLimitProperty = character.GetLimit(stageString, true);
+                StageViewModel.GeneralLimit = character.GetLimitValue(StageViewModel.GeneralLimitProperty);   
+            }
+
+            if (this.HasGeneralLimit == true)
             {
                 this.HasGeneralLimit = true;
                 this.GeneralLimit = StageViewModel.GeneralLimit;
                 this.GeneralProgress = StageViewModel.GeneralProgress;
                 this.GeneralProgressLabel = this.GeneralLimit;
-            }
-            else
-            {
-                this.GeneralLimit = 1;
             }
 
             if (this.HasGeneralLimit == true)
@@ -239,15 +242,6 @@ namespace ARPEGOS.ViewModels
                     else
                         character.UpdateDatatypeAssertion(characterItemString, itemValue);
                 }
-
-                if (StageViewModel.GeneralLimitProperty == null)
-                {
-                    StageViewModel.GeneralLimitProperty = character.GetLimit(this.CurrentStage.FullName, true);
-                    StageViewModel.GeneralLimit = character.GetLimitValue(StageViewModel.GeneralLimitProperty);
-                    StageViewModel.GeneralProgress = 1;
-                }
-                else
-                    StageViewModel.GeneralLimit = this.GeneralProgress;
 
                 if (this.CurrentStage.EditStageLimit)
                 {

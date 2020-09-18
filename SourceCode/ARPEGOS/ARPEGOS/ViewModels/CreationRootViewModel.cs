@@ -74,10 +74,7 @@ namespace ARPEGOS.ViewModels
                 this.IsBusy = false;
 
                 StageViewModel.CurrentStep = 0;
-                var currentStage = StageViewModel.CreationScheme.ElementAt(StageViewModel.CurrentStep);
-                //if(StageViewModel.GeneralLimitProperty == null)
-                //StageViewModel.GeneralLimitProperty = character.GetLimit(stageString, true);
-                //StageViewModel.GeneralLimit = character.GetLimitValue(StageViewModel.GeneralLimitProperty);                
+                var currentStage = StageViewModel.CreationScheme.ElementAt(StageViewModel.CurrentStep);              
 
                 if (currentStage.IsGrouped)
                 {

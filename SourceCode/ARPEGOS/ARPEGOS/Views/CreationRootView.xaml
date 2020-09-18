@@ -31,7 +31,7 @@
                                                    BindingContext="{Binding .}"/>
                                         <Label  Grid.Row="0" 
                                                 Grid.Column="1" 
-                                                FontSize="Large" 
+                                                FontSize="Medium" 
                                                 HorizontalOptions="CenterAndExpand" 
                                                 VerticalOptions="Center" 
                                                 Text="{Binding FormattedName}"/>

@@ -6288,7 +6288,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Límite_Habilidad_Combate</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Límite_Habilidad_Combate</rdfs:isDefinedBy>
     </owl:DatatypeProperty>
     
 
@@ -6300,7 +6300,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Límite_Habilidad_Mística</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Límite_Habilidad_Mística</rdfs:isDefinedBy>
     </owl:DatatypeProperty>
     
 
@@ -6312,7 +6312,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Límite_Habilidad_Psíquica</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Límite_Habilidad_Psíquica</rdfs:isDefinedBy>
     </owl:DatatypeProperty>
     
 
@@ -6349,7 +6349,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
-        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ventaja_Límite</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Límite_Ventaja</rdfs:isDefinedBy>
     </owl:DatatypeProperty>
     
 
@@ -7690,7 +7690,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
-        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Personaje_Límite_PD:*:Cat_Hab_Combate_Límite</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Límite_PD:*:tieneCategoría:Cat_Hab_Combate_Límite</rdfs:isDefinedBy>
     </owl:DatatypeProperty>
     
 
@@ -7702,7 +7702,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
-        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Personaje_Límite_PD:*:Cat_Hab_Mística_Límite</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Límite_PD:*:tieneCategoría:Cat_Hab_Mística_Límite</rdfs:isDefinedBy>
     </owl:DatatypeProperty>
     
 
@@ -7726,7 +7726,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
-        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Personaje_Límite_PD:*:Cat_Hab_Psíquica_Límite</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Límite_PD:*:tieneCategoría:Cat_Hab_Psíquica_Límite</rdfs:isDefinedBy>
     </owl:DatatypeProperty>
     
 
@@ -7786,7 +7786,16 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
-        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Nivel :- :1 :* :100 :+ :600</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Nivel :- :1 :* :100 :+ :500</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Per_Límite_Ventaja -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Per_Límite_Ventaja">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Personaje_Límite"/>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">3</rdfs:isDefinedBy>
     </owl:DatatypeProperty>
     
 
@@ -9120,7 +9129,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
-        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Personaje_Límite_PD:/:20</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Límite_PD:/:20</rdfs:isDefinedBy>
     </owl:DatatypeProperty>
     
 

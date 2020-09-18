@@ -12,10 +12,10 @@
                     <StackLayout Orientation="Vertical" Spacing="0" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" IsVisible="{Binding HasGeneralLimit}">
                         <StackLayout Orientation="Horizontal">
                             <Label Text="Límite general" HorizontalOptions="StartAndExpand" FontSize="Medium" />
-                            <Label Text="{Binding GeneralProgress, StringFormat='{0:F0}'}" HorizontalOptions="EndAndExpand" FontSize="Medium"/>
+                            <Label Text="{Binding GeneralProgressLabel, StringFormat='{0:F0}'}" HorizontalOptions="EndAndExpand" FontSize="Medium"/>
                         </StackLayout>
                         <ProgressBar x:Name="GeneralProgressBar"  HeightRequest="10"
-                                         HorizontalOptions="StartAndExpand"
+                                         HorizontalOptions="FillAndExpand"
                                          Progress="{Binding GeneralProgress}" 
                                          ProgressColor="{DynamicResource GeneralColor}"
                                          BackgroundColor="{DynamicResource ProgressBarBackgroundColor}"
@@ -51,7 +51,8 @@
                                                Grid.Row="0"
                                                Grid.Column="0"
                                                VerticalOptions="Center"
-                                               HorizontalTextAlignment="Center"
+                                               HorizontalOptions="Start"
+                                               HorizontalTextAlignment="Start"
                                                Text="{Binding FormattedName}"/>
                                         <StackLayout Orientation="Vertical" Grid.Row="0" Grid.Column="1" VerticalOptions="Center" HorizontalOptions="Center">
                                             <Label x:Name="ValueLabel"

@@ -1804,7 +1804,7 @@ namespace ARPEGOS.Services
                             // 3.6.2A.4 It it is true, the first thing we will do is save the index in other variable
                             var currentIndex = index;
                             // 3.6.2A.5 Get next element property 
-                            var nextElementProperty = CurrentOntology.Model.PropertyModel.SelectProperty(GetString(nextElement, applyOnCharacter));
+                            var nextElementProperty = CharacterOntology.Model.PropertyModel.SelectProperty(GetString(nextElement,true));
                             // 3.6.2A.6 Get character assertions
                             var characterAssertions = CharacterOntology.Data.Relations.Assertions.SelectEntriesBySubject(CharacterFact);
                             // Check if characterAssertions is null, to prevent unhandled exceptions
@@ -2031,17 +2031,14 @@ namespace ARPEGOS.Services
                         //3.6.5B.1 If result is not value, check if value is float. If it is not, then round result to integer
                         if (isFloat == false)
                         {
-                            if (isFloat == false)
-                            {
-                                var resultString = operatorResult.ToString();
-                                if (resultString.Contains(','))
-                                    CurrentValue = resultString.Split(',').ElementAt(0);
-                                else
-                                    CurrentValue = resultString;
-                            }
+                            var resultString = operatorResult.ToString();
+                            if (resultString.Contains(','))
+                                CurrentValue = resultString.Split(',').ElementAt(0);
                             else
-                                CurrentValue = operatorResult.ToString();
+                                CurrentValue = resultString;
                         }
+                        else
+                            CurrentValue = operatorResult.ToString();
                     }
                 }
             }

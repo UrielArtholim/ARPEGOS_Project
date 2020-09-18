@@ -27,12 +27,13 @@
                                     </Frame.GestureRecognizers>
                                     <StackLayout Orientation="Horizontal"  
                                                  HorizontalOptions="FillAndExpand" 
-                                                 VerticalOptions="CenterAndExpand" >
-                                        <Image Source="{Binding StateIcon}" HeightRequest="25" WidthRequest="25" BackgroundColor="Transparent"/>
+                                                 VerticalOptions="CenterAndExpand"
+                                                 Spacing="20">
+                                        <Image Source="{Binding StateIcon}" HeightRequest="25" WidthRequest="25" BackgroundColor="Transparent" />
                                         <Label  Grid.Row="0" 
                                                 Grid.Column="1" 
                                                 FontSize="Large" 
-                                                HorizontalOptions="CenterAndExpand" 
+                                                HorizontalOptions="StartAndExpand" 
                                                 VerticalOptions="Center" 
                                                 Text="{Binding FormattedTitle}"/>
                                         <ImageButton Source="description.png" HeightRequest="25" WidthRequest="25"
@@ -52,8 +53,9 @@
                                                            Margin="10,10,10,0" 
                                                            BorderColor="{DynamicResource SeparatorColor}">
                                     <StackLayout Orientation="Horizontal"  
-                                                                     HorizontalOptions="FillAndExpand" 
-                                                                     VerticalOptions="CenterAndExpand" >
+                                                 HorizontalOptions="FillAndExpand" 
+                                                 VerticalOptions="CenterAndExpand" 
+                                                 Spacing="20">
                                         <RadioButton  Grid.Row="0"
                                                                           Grid.Column="0" 
                                                                           IsChecked="{Binding SelectItemCommand}" 
@@ -63,8 +65,9 @@
                                                                           BindingContext="{Binding .}"/>
                                         <Label  Grid.Row="0" 
                                                                     Grid.Column="1" 
-                                                                    FontSize="Large" 
-                                                                    HorizontalOptions="CenterAndExpand" 
+                                                                    FontSize="Medium" 
+                                                                    HorizontalOptions="StartAndExpand" 
+                                                                    HorizontalTextAlignment="Start"
                                                                     VerticalOptions="Center" 
                                                                     Text="{Binding .FormattedName}"/>
                                         <ImageButton Source="description.png"  HeightRequest="25" WidthRequest="25"

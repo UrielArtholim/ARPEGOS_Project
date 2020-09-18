@@ -19,9 +19,8 @@ namespace ARPEGOS.Views
             this.BindingContext = new ValuedViewModel();
         }
 
-        void OnValueChanged(object sender , ValueChangedEventArgs e)
+        void OnValueChanged(object sender, ValueChangedEventArgs e)
         {
-
             var viewModel = this.BindingContext as ValuedViewModel;
             var entry = sender as Stepper;
             var item = entry.BindingContext as Item;
@@ -29,7 +28,6 @@ namespace ARPEGOS.Views
 
             NewValue = e.NewValue;
             OldValue = e.OldValue;
-
 
             if (viewModel.ElementLimit != null)
             {
@@ -39,14 +37,14 @@ namespace ARPEGOS.Views
                 lowerLimit = Math.Min(lowerLimit, Convert.ToDouble(viewModel.ElementLimit));
                 foreach (var element in viewModel.Data)
                 {
-                    if(lowerLimit > 0)
+                    if (lowerLimit > 0)
                     {
                         if (lowerLimit == 1)
                         {
                             element.IsEnabled = true;
                             element.Maximum = element.Value + 1;
                         }
-                    }                    
+                    }
                     else if (lowerLimit == 0)
                     {
                         if (element.Value != 0)
@@ -60,7 +58,7 @@ namespace ARPEGOS.Views
             if (NewValue > OldValue)
             {
                 ++item.Value;
-                if(viewModel.CurrentStage.EditStageLimit == true)
+                if (viewModel.CurrentStage.EditStageLimit == true)
                 {
                     Task.Run(async () => await MainThread.InvokeOnMainThreadAsync(() =>
                     {
@@ -72,11 +70,11 @@ namespace ARPEGOS.Views
                             viewModel.GeneralProgress -= Convert.ToDouble(item.Step / viewModel.GeneralLimit);
                         }
                     }));
-                }               
+                }
             }
             else if (OldValue > NewValue)
             {
-                if(viewModel.CurrentStage.EditStageLimit == true)
+                if (viewModel.CurrentStage.EditStageLimit == true)
                 {
                     Task.Run(async () => await MainThread.InvokeOnMainThreadAsync(() =>
                     {
@@ -91,10 +89,6 @@ namespace ARPEGOS.Views
                     }));
                 }
             }
-
-            
-            
-                   
         }
     }
 }

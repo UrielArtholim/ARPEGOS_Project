@@ -1,12 +1,132 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ARPEGOS.Views.ValuedGroupView">
+             x:Class="ARPEGOS.Views.ValuedGroupView"
+             x:Name="ValuedGroup">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <Grid>
+            <StackLayout Spacing="10" Padding="10" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                <StackLayout Orientation="Vertical">
+                    <StackLayout Orientation="Vertical" Spacing="0" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" IsVisible="{Binding HasGeneralLimit}">
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Límite general" HorizontalOptions="StartAndExpand" FontSize="Medium" />
+                            <Label Text="{Binding GeneralProgress, StringFormat='{0:F0}'}" HorizontalOptions="EndAndExpand" FontSize="Medium"/>
+                        </StackLayout>
+                        <ProgressBar x:Name="GeneralProgressBar"  HeightRequest="10"
+                                         HorizontalOptions="FillAndExpand"
+                                         Progress="{Binding GeneralProgress}" 
+                                         ProgressColor="{DynamicResource GeneralColor}"
+                                         BackgroundColor="{DynamicResource ProgressBarBackgroundColor}"
+                                         IsVisible="{Binding HasGeneralLimit}"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Vertical" Spacing="5" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" IsVisible="{Binding HasStageLimit}">
+                        <StackLayout Orientation="Horizontal" Spacing="5" HorizontalOptions="FillAndExpand">
+                            <Label Text="Límite" HorizontalOptions="StartAndExpand" FontSize="Medium"/>
+                            <Label Text="{Binding StageProgressLabel, StringFormat='{0:F0}'}" HorizontalOptions="EndAndExpand" FontSize="Medium"/>
+                        </StackLayout>
+                        <ProgressBar x:Name="StageProgressBar" HeightRequest="10"
+                                     HorizontalOptions="FillAndExpand"
+                                     Progress="{Binding StageProgress}" 
+                                     ProgressColor="{DynamicResource StageColor}"
+                                     BackgroundColor="{DynamicResource ProgressBarBackgroundColor}"/>
+                    </StackLayout>
+                </StackLayout>
+                <ListView x:Name="ValuedGroupedList" 
+                          ItemsSource="{Binding Data}" 
+                          HasUnevenRows="True" 
+                          SelectionMode="None" 
+                          CachingStrategy="RecycleElementAndDataTemplate" 
+                          IsGroupingEnabled="True"
+                          SeparatorVisibility="None"
+                          GroupDisplayBinding="{Binding FormattedTitle}">
+                    <ListView.GroupHeaderTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Frame x:Name="GroupFrame" 
+                                       Padding="15" 
+                                       Margin="10,10,10,0" 
+                                       BorderColor="{DynamicResource SeparatorColor}">
+                                    <Frame.GestureRecognizers>
+                                        <TapGestureRecognizer Command="{Binding Source={x:Reference ValuedGroup}, Path=BindingContext.SelectGroupCommand}" CommandParameter="{Binding .}"/>
+                                    </Frame.GestureRecognizers>
+                                    <StackLayout Orientation="Horizontal"  
+                                                 HorizontalOptions="FillAndExpand" 
+                                                 VerticalOptions="CenterAndExpand" >
+                                        <Image Source="{Binding StateIcon}" HeightRequest="25" WidthRequest="25" BackgroundColor="Transparent"/>
+                                        <Label  Grid.Row="0" 
+                                                Grid.Column="1" 
+                                                FontSize="Large" 
+                                                HorizontalOptions="CenterAndExpand" 
+                                                VerticalOptions="Center" 
+                                                Text="{Binding FormattedTitle}"/>
+                                        <ImageButton Source="description.png" HeightRequest="25" WidthRequest="25"
+                                                     Command="{Binding Source={x:Reference ValuedGroup}, Path=BindingContext.GroupInfoCommand}"
+                                                     CommandParameter="{Binding .}"
+                                                     BackgroundColor="Transparent"/>
+                                    </StackLayout>
+                                </Frame>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.GroupHeaderTemplate>
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Frame x:Name="ItemFrame"
+                                       VerticalOptions="Start"
+                                       Margin="0,0,0,0"
+                                       BorderColor="{DynamicResource SeparatorColor}">
+                                    <Grid x:Name="SliderItem" 
+                                              HorizontalOptions="FillAndExpand"
+                                              RowDefinitions="1*"
+                                              ColumnDefinitions="*,*,*">
+                                        <Label x:Name="ItemNameLabel"
+                                                   FontSize="Medium"
+                                                   Grid.Row="0"
+                                                   Grid.Column="0"
+                                                   VerticalOptions="Center"
+                                                   HorizontalTextAlignment="Center"
+                                                   Text="{Binding FormattedName}"/>
+                                        <StackLayout Orientation="Vertical" Grid.Row="0" Grid.Column="1" VerticalOptions="Center" HorizontalOptions="Center">
+                                            <Label x:Name="ValueLabel"
+                                                   FontSize="Medium"                                               
+                                                   VerticalOptions="Center"
+                                                   HorizontalTextAlignment="Start"
+                                                   Text="{Binding Source={x:Reference ValueEntry}, Path=Value, StringFormat='{0:F0}'}"/>
+                                            <Stepper x:Name="ValueEntry"
+                                                   BindingContext="{Binding .}"
+                                                   VerticalOptions="Center"
+                                                   HorizontalOptions="FillAndExpand"
+                                                   Maximum="{Binding Maximum}"
+                                                   IsEnabled="{Binding IsEnabled}"
+                                                   ValueChanged="OnValueChanged"/>
+                                        </StackLayout>
+                                        <ImageButton x:Name="InformationButton" Aspect="AspectFit" VerticalOptions="Center"
+                                                   Grid.Row="0"
+                                                   Grid.Column="2"
+                                                   Source="description.png"
+                                                   HeightRequest="30" WidthRequest="30"
+                                                   BackgroundColor="Transparent"
+                                                   IsEnabled="{Binding HasDescription}"
+                                                   IsVisible="{Binding HasDescription}"/>
+
+                                    </Grid>
+                            </Frame>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                <Button Text="Siguiente" 
+                        Command="{Binding NextCommand}" 
+                        IsVisible="{Binding Continue}"
+                        BackgroundColor="{DynamicResource ButtonColor}"
+                        AbsoluteLayout.LayoutFlags="PositionProportional"
+                        AbsoluteLayout.LayoutBounds=".95,.95,80,80"
+                        HeightRequest="40"/>
+            </StackLayout>
+            <Frame Grid.Row="0" BackgroundColor="Black" Opacity="0.7" HasShadow="False" CornerRadius="0" IsVisible="{Binding Source={x:Reference ValuedGroup}, Path=BindingContext.IsBusy}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                <ActivityIndicator Color="White" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" IsRunning="{Binding Source={x:Reference ValuedGroup}, Path=BindingContext.IsBusy}"
+                               WidthRequest="50" HeightRequest="50" />
+            </Frame>
+        </Grid>
     </ContentPage.Content>
 </ContentPage>
