@@ -130,7 +130,7 @@ namespace ARPEGOS.ViewModels
             this.CurrentStage = StageViewModel.CreationScheme.ElementAt(StageViewModel.CurrentStep);
             var stageString = this.CurrentStage.FullName;
             this.StageName = FileService.FormatName(stageString.Split('#').Last());
-            this.stageLimitProperty = character.GetLimit(this.CurrentStage.FullName.Split('#').Last());
+            this.stageLimitProperty = character.GetLimit(this.CurrentStage.FullName.Split('#').Last(), false, this.CurrentStage.EditGeneralLimit);
             this.StageLimit = character.GetLimitValue(this.stageLimitProperty);
             this.SliderLimit = this.StageLimit;
             this.StageProgressLabel = this.StageLimit;
@@ -144,7 +144,8 @@ namespace ARPEGOS.ViewModels
             if(StageViewModel.GeneralLimitProperty == null && StageName != "Nivel")
             {
                 StageViewModel.GeneralLimitProperty = character.GetLimit(stageString, true);
-                StageViewModel.GeneralLimit = character.GetLimitValue(StageViewModel.GeneralLimitProperty);   
+                StageViewModel.GeneralLimit = character.GetLimitValue(StageViewModel.GeneralLimitProperty);
+                StageViewModel.GeneralProgress = 1;
             }
 
             if (this.HasGeneralLimit == true)

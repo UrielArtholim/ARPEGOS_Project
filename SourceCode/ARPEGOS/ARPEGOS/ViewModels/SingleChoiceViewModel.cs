@@ -64,6 +64,7 @@ namespace ARPEGOS.ViewModels
             {
                 StageViewModel.GeneralLimitProperty = character.GetLimit(stageString, true);
                 StageViewModel.GeneralLimit = character.GetLimitValue(StageViewModel.GeneralLimitProperty);
+                StageViewModel.GeneralProgress = 1;
             }
 
             var datalist = new ObservableCollection<Item>(character.GetIndividuals(stageString));

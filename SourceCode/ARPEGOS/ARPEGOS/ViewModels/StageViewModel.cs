@@ -13,7 +13,7 @@ namespace ARPEGOS.ViewModels
         public static ObservableCollection<Stage> CreationScheme = new ObservableCollection<Stage>();
         public static int CurrentStep { get; set; }
         public static double GeneralLimit { get; set; }
-        public static double GeneralProgress { get; set; } = 1;
+        public static double GeneralProgress { get; set; }
         public static string GeneralLimitProperty { get; set; } = null;
         public static string RootStage { get; set; }
         public static bool ApplyOnCharacter { get; set; } = false;

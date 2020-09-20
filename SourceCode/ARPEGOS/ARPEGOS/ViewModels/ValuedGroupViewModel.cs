@@ -114,7 +114,7 @@ namespace ARPEGOS.ViewModels
             this.CurrentStage = StageViewModel.CreationScheme.ElementAt(StageViewModel.CurrentStep);
             var stageString = this.CurrentStage.FullName;
             this.StageName = FileService.FormatName(stageString.Split('#').Last());
-            this.stageLimitProperty = character.GetLimit(this.CurrentStage.FullName.Split('#').Last());
+            this.stageLimitProperty = character.GetLimit(this.CurrentStage.FullName.Split('#').Last(), false, this.CurrentStage.EditGeneralLimit);
             this.StageLimit = character.GetLimitValue(this.stageLimitProperty);
             this.ShowDescription = true;
             this.SliderLimit = this.StageLimit;
@@ -125,6 +125,7 @@ namespace ARPEGOS.ViewModels
             {
                 StageViewModel.GeneralLimitProperty = character.GetLimit(stageString, true);
                 StageViewModel.GeneralLimit = character.GetLimitValue(StageViewModel.GeneralLimitProperty);
+                StageViewModel.GeneralProgress = 1;
             }
 
             this.SelectGroupCommand = new Command<Group>(async (group) => await MainThread.InvokeOnMainThreadAsync(() =>

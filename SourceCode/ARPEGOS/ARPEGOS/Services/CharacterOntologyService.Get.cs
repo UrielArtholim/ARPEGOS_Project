@@ -1,4 +1,5 @@
 ﻿using ARPEGOS.Helpers;
+using ARPEGOS.Models;
 using ARPEGOS.ViewModels;
 using RDFSharp.Model;
 using RDFSharp.Semantics.OWL;
@@ -43,11 +44,11 @@ namespace ARPEGOS.Services
             foreach (var assertion in CharacterAssertions)
             {
                 var property = assertion.TaxonomyPredicate.ToString();
-                var value = assertion.TaxonomyObject.ToString();
+                var valueString = assertion.TaxonomyObject.ToString();
                 if(!CharacterProperties.ContainsKey(property))
-                    CharacterProperties.Add(property, new List<string> { value });
+                    CharacterProperties.Add(property, new List<string> { valueString });
                 else
-                    CharacterProperties[property].Add(value);                
+                    CharacterProperties[property].Add(valueString);                
             }
             return CharacterProperties;
         }//MODIFIED
@@ -509,140 +510,110 @@ namespace ARPEGOS.Services
         /// <param name="LimitValue">Limit value obtained</param>
         /// <param name="applyOnCharacter">Search inside character</param>
         /// <returns></returns>
-        public string GetLimit (string stageName, bool isGeneral = false, bool applyOnCharacter = false)
+        public string GetLimit(string stageName, bool isGeneral = false, bool editGeneralLimit = false)
         {
             var game = DependencyHelper.CurrentContext.CurrentGame;
             var character = DependencyHelper.CurrentContext.CurrentCharacter;
+            var CharacterProperties = character.GetCharacterProperties();
             var CharacterStageString = string.Empty;
             var CharacterLimitString = string.Empty;
+            var LimitName = string.Empty;
             var LimitValueString = string.Empty;
-            if (!isGeneral)
+            if (stageName.Contains('#'))
+                stageName = stageName.Split('#').Last();
+
+            var stageString = character.GetString(stageName);
+            var stageClass = game.Ontology.Model.ClassModel.SelectClass(stageString);
+            if (stageClass != null)
             {
-                var stageString = character.GetString(stageName);
-                var stageClass = game.Ontology.Model.ClassModel.SelectClass(stageString);
-                if (stageClass != null)
+
+                string limitAnnotationName = string.Empty;
+                var ClassCustomAnnotations = game.Ontology.Model.ClassModel.Annotations.CustomAnnotations;
+                if (isGeneral)
                 {
-                    var ClassCustomAnnotations = game.Ontology.Model.ClassModel.Annotations.CustomAnnotations;
-                    var StageCustomAnnotations = ClassCustomAnnotations.SelectEntriesBySubject(stageClass);
-                    var StageLimitAnnotationEntries = StageCustomAnnotations.Where(entry => entry.TaxonomyPredicate.ToString().Split('#').Last() == "StageLimit");
-                    if (StageLimitAnnotationEntries.Count() > 0)
+                    limitAnnotationName = "GeneralLimit";
+                    var PropertyCustomAnnotations = game.Ontology.Model.PropertyModel.Annotations.CustomAnnotations.Where(entry => entry.TaxonomyPredicate.ToString().Contains(limitAnnotationName));
+                    if (PropertyCustomAnnotations.Count() > 0)
                     {
-                        var LimitName = StageLimitAnnotationEntries.Single().TaxonomyObject.ToString().Split('^').First();
-                        if (CharacterLimitString == null)
-                            CharacterLimitString = $"{character.Context}{LimitName}";
-                        var CharacterAssertions = character.GetCharacterProperties();
-                        bool assertionFound = CharacterAssertions.ContainsKey(CharacterLimitString);
-                        CharacterLimitString = $"{character.Context}{LimitName}";
-                        if (!assertionFound)
+                        LimitName = PropertyCustomAnnotations.Single().TaxonomySubject.ToString().Split('#').Last();
+                        bool propertyFound = CharacterProperties.ContainsKey(LimitName);
+                        if (!propertyFound)
                         {
-                            var GameLimitString = character.GetString(LimitName);
-                            var GameLimitProperty = game.Ontology.Model.PropertyModel.SelectProperty(GameLimitString);
-                            var GamePropertyIsDefinedByAnnotations = game.Ontology.Model.PropertyModel.Annotations.IsDefinedBy;
-                            var GameLimitIsDefinedByAnnotations = GamePropertyIsDefinedByAnnotations.SelectEntriesBySubject(GameLimitProperty);
-                            if (GameLimitIsDefinedByAnnotations.EntriesCount > 0)
+                            var LimitPropertyString = character.GetString(LimitName);
+                            var property = game.Ontology.Model.PropertyModel.SelectProperty(LimitPropertyString);
+                            if (property != null)
                             {
-                                var definitionValue = GameLimitIsDefinedByAnnotations.Single().TaxonomyObject.ToString().Split('^').First();
-                                var definitionString = character.GetString(definitionValue);
-                                var definitionProperty = game.Ontology.Model.PropertyModel.SelectProperty(definitionString);
-                                var GameDefinitionIsDefinedByAnnotations = GamePropertyIsDefinedByAnnotations.SelectEntriesBySubject(definitionProperty);
-                                if (GameDefinitionIsDefinedByAnnotations.EntriesCount > 0)
+                                var PropertyDefinitionAnnotationEntries = game.Ontology.Model.PropertyModel.Annotations.IsDefinedBy.SelectEntriesBySubject(property);
+                                if (PropertyDefinitionAnnotationEntries.EntriesCount > 0)
                                 {
-                                    definitionValue = GameDefinitionIsDefinedByAnnotations.Single().TaxonomyObject.ToString().Split('^').First();
-                                    LimitValueString = character.GetValue(definitionValue, null, null, applyOnCharacter).ToString().Split('^').First();
+                                    CharacterLimitString = $"{character.Context}{LimitName}";
+                                    var definition = PropertyDefinitionAnnotationEntries.Single().TaxonomyObject.ToString().Split('^').First();
+                                    LimitValueString = character.GetValue(definition).ToString();
                                     character.UpdateDatatypeAssertion(CharacterLimitString, LimitValueString);
                                 }
                             }
-                        }
-                        else
-                        {
-                            CharacterAssertions.TryGetValue(CharacterLimitString, out var valueList);
-                            LimitValueString = valueList.Single().Split('^').First();
                         }
                     }
                 }
                 else
                 {
-                    var StageProperty = game.Ontology.Model.PropertyModel.SelectProperty(stageString);
-                    var ClassCustomAnnotations = game.Ontology.Model.PropertyModel.Annotations.CustomAnnotations;
-                    var StageCustomAnnotations = ClassCustomAnnotations.SelectEntriesBySubject(StageProperty);
-                    var StageLimitAnnotationEntries = StageCustomAnnotations.Where(entry => entry.TaxonomyPredicate.ToString().Split('#').Last() == "StageLimit");
-                    if (StageLimitAnnotationEntries.Count() > 0)
+                    limitAnnotationName = "StageLimit";
+                    var StageCustomAnnotations = ClassCustomAnnotations.SelectEntriesBySubject(stageClass);
+                    if (StageCustomAnnotations.EntriesCount > 0)
                     {
-                        var LimitName = StageLimitAnnotationEntries.Single().TaxonomyObject.ToString().Split('^').First();
-                        CharacterLimitString = $"{character.Context}{LimitName}";
-                        var CharacterAssertions = character.GetCharacterProperties();
-                        bool assertionFound = CharacterAssertions.ContainsKey(CharacterLimitString);
-                        if (!assertionFound)
+                        var AnnotationEntries = StageCustomAnnotations.Where(entry => entry.TaxonomyPredicate.ToString().Split('#').Last() == limitAnnotationName);
+                        if (AnnotationEntries.Count() > 0)
                         {
-                            var GameLimitString = character.GetString(LimitName);
-                            var GameLimitProperty = game.Ontology.Model.PropertyModel.SelectProperty(GameLimitString);
-                            var GamePropertyIsDefinedByAnnotations = game.Ontology.Model.PropertyModel.Annotations.IsDefinedBy;
-                            var GameLimitIsDefinedByAnnotations = GamePropertyIsDefinedByAnnotations.SelectEntriesBySubject(GameLimitProperty);
-                            if (GameLimitIsDefinedByAnnotations.EntriesCount > 0)
+                            LimitName = AnnotationEntries.Single().TaxonomyObject.ToString().Split('^').First();
+                            bool propertyFound = CharacterProperties.ContainsKey(LimitName);
+                            if (!propertyFound)
                             {
-                                var definitionValue = GameLimitIsDefinedByAnnotations.Single().TaxonomyObject.ToString().Split('^').First();
-                                if (Regex.IsMatch(definitionValue, @"\d") && (!Regex.IsMatch(definitionValue, @"\D")))
+                                CharacterLimitString = $"{character.Context}{LimitName}";
+                                var GameLimitString = character.GetString(LimitName);
+                                var GameLimitProperty = game.Ontology.Model.PropertyModel.SelectProperty(GameLimitString);
+                                var GamePropertyIsDefinedByAnnotations = game.Ontology.Model.PropertyModel.Annotations.IsDefinedBy;
+                                var GameLimitIsDefinedByAnnotations = GamePropertyIsDefinedByAnnotations.SelectEntriesBySubject(GameLimitProperty);
+                                if (GameLimitIsDefinedByAnnotations.EntriesCount > 0)
                                 {
-                                    LimitValueString = definitionValue;
-                                }
-                                else
-                                {
+                                    var definitionValue = GameLimitIsDefinedByAnnotations.Single().TaxonomyObject.ToString().Split('^').First();
                                     var definitionString = character.GetString(definitionValue);
                                     var definitionProperty = game.Ontology.Model.PropertyModel.SelectProperty(definitionString);
                                     var GameDefinitionIsDefinedByAnnotations = GamePropertyIsDefinedByAnnotations.SelectEntriesBySubject(definitionProperty);
                                     if (GameDefinitionIsDefinedByAnnotations.EntriesCount > 0)
                                     {
                                         definitionValue = GameDefinitionIsDefinedByAnnotations.Single().TaxonomyObject.ToString().Split('^').First();
-                                        LimitValueString = character.GetValue(definitionValue, null, null, applyOnCharacter).ToString().Split('^').First();
+                                        LimitValueString = character.GetValue(definitionValue).ToString().Split('^').First();
+                                        character.UpdateDatatypeAssertion(CharacterLimitString, LimitValueString);
                                     }
                                 }
-                                character.UpdateDatatypeAssertion(CharacterLimitString, LimitValueString);
-
                             }
-
-                        }
-                        else
-                        {
-                            CharacterAssertions.TryGetValue(CharacterLimitString, out var valueList);
-                            LimitValueString = valueList.Single().Split('^').First();
                         }
                     }
                 }
             }
             else
             {
-                var GamePropertyCustomAnnotations = game.Ontology.Model.PropertyModel.Annotations.CustomAnnotations;
-                var GamePropertyGeneralLimitAnnotations = GamePropertyCustomAnnotations.Where(entry => entry.TaxonomyPredicate.ToString().Split('#').Last() == "GeneralLimit");
-                if(GamePropertyGeneralLimitAnnotations.Count() > 0)
+                LimitName = stageName;
+                var stageProperty = game.Ontology.Model.PropertyModel.SelectProperty(stageString);
+                if (stageProperty != null)
                 {
-                    var GamePropertyGeneralLimit = GamePropertyGeneralLimitAnnotations.Single().TaxonomySubject;
-                    var GeneralLimitName = GamePropertyGeneralLimit.ToString().Split('#').Last();
-                    CharacterLimitString = $"{character.Context}{GeneralLimitName}";
-                    var GamePropertyIsDefinedByAnnotations = game.Ontology.Model.PropertyModel.Annotations.IsDefinedBy;
-                    var GameLimitIsDefinedByAnnotations = GamePropertyIsDefinedByAnnotations.SelectEntriesBySubject(GamePropertyGeneralLimit);
-                    if (GameLimitIsDefinedByAnnotations.EntriesCount > 0)
+                    var PropertyCustomAnnotations = game.Ontology.Model.PropertyModel.Annotations.CustomAnnotations.SelectEntriesBySubject(stageProperty);
+                    if (PropertyCustomAnnotations.EntriesCount > 0)
                     {
-                        var definitionValue = GameLimitIsDefinedByAnnotations.Single().TaxonomyObject.ToString().Split('^').First();
-                        if (Regex.IsMatch(definitionValue, @"\d") && (!Regex.IsMatch(definitionValue, @"\D")))
+                        var limitAnnotationName = isGeneral ? "GeneralLimit" : "StageLimit";
+                        var LimitAnnotationEntries = PropertyCustomAnnotations.Where(entry => entry.TaxonomyPredicate.ToString().Split('#').Last() == limitAnnotationName);
+                        if(LimitAnnotationEntries.Count() > 0)
                         {
-                            LimitValueString = definitionValue;
+                            CharacterLimitString = $"{character.Context}{LimitName}";
+                            var definition = LimitAnnotationEntries.Single().TaxonomyObject.ToString().Split('^').First();
+                            LimitValueString = character.GetValue(definition).ToString();
+                            character.UpdateDatatypeAssertion(CharacterLimitString, LimitValueString);
                         }
-                        else
-                        {
-                            var definitionString = character.GetString(definitionValue);
-                            var definitionProperty = game.Ontology.Model.PropertyModel.SelectProperty(definitionString);
-                            var GameDefinitionIsDefinedByAnnotations = GamePropertyIsDefinedByAnnotations.SelectEntriesBySubject(definitionProperty);
-                            if (GameDefinitionIsDefinedByAnnotations.EntriesCount > 0)
-                            {
-                                definitionValue = GameDefinitionIsDefinedByAnnotations.Single().TaxonomyObject.ToString().Split('^').First();
-                                LimitValueString = character.GetValue(definitionValue, null, null, applyOnCharacter).ToString().Split('^').First();
-                            }
-                        }
-                        character.UpdateDatatypeAssertion(CharacterLimitString, LimitValueString);
+                        
                     }
-                }                
+                }
             }
-            return CharacterLimitString.Split('#').Last();
+            return LimitName;
         }//MODIFIED
 
         public double GetStep(string itemName)

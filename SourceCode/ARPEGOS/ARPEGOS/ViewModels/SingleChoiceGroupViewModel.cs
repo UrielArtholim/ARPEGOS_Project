@@ -67,8 +67,9 @@ namespace ARPEGOS.ViewModels
 
             if (StageViewModel.GeneralLimitProperty == null && StageName != "Nivel")
             {
-                StageViewModel.GeneralLimitProperty = character.GetLimit(stageString, true);
+                StageViewModel.GeneralLimitProperty = character.GetLimit(this.stageString.Split('#').Last(), true);
                 StageViewModel.GeneralLimit = character.GetLimitValue(StageViewModel.GeneralLimitProperty);
+                StageViewModel.GeneralProgress = 1;
             }
 
             var datalist = character.GetIndividualsGrouped(stageString);
