@@ -126,12 +126,13 @@ namespace ARPEGOS.ViewModels
             var character = DependencyHelper.CurrentContext.CurrentCharacter;
             var game = DependencyHelper.CurrentContext.CurrentGame;
             this.CurrentStage = StageViewModel.CreationScheme.ElementAt(StageViewModel.CurrentStep);
-            var stageString = this.CurrentStage.FullName;
+            var stageString = this.CurrentStage.FullName; //https://arpegos-project.org/games/anima/characters/1#Arte_Marcial
             this.StageName = FileService.FormatName(stageString.Split('#').Last());
             this.stageLimitProperty = character.GetLimit(this.CurrentStage.FullName.Split('#').Last(), false, this.CurrentStage.EditGeneralLimit);
             this.StageLimit = character.GetLimitValue(this.stageLimitProperty);
             this.StageProgressLabel = this.StageLimit;
-            this.StageProgress = 1;
+            // Actualizar stageProgress
+            //this.StageProgress = 1; Buscar limite 1500 y dividir stageprogresslabel / 1500 
             this.ShowDescription = true;
             this.HasGeneralLimit = this.CurrentStage.EditGeneralLimit;
             this.hasStageLimit = true;

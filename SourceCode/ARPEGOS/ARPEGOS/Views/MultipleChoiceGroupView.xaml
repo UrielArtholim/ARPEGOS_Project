@@ -11,7 +11,7 @@
                     <StackLayout Orientation="Vertical" Spacing="0" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" IsVisible="{Binding HasGeneralLimit}">
                         <StackLayout Orientation="Horizontal">
                             <Label Text="Límite general" HorizontalOptions="StartAndExpand" FontSize="Medium" />
-                            <Label Text="{Binding GeneralProgress, StringFormat='{0:F0}'}" HorizontalOptions="EndAndExpand" FontSize="Medium"/>
+                            <Label Text="{Binding GeneralProgressLabel, StringFormat='{0:F0}'}" HorizontalOptions="EndAndExpand" FontSize="Medium"/>
                         </StackLayout>
                         <ProgressBar x:Name="GeneralProgressBar"  HeightRequest="10"
                                          HorizontalOptions="FillAndExpand"

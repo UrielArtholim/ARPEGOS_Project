@@ -563,7 +563,7 @@ namespace ARPEGOS.Services
                     {
                         var AnnotationEntries = StageCustomAnnotations.Where(entry => entry.TaxonomyPredicate.ToString().Split('#').Last() == limitAnnotationName);
                         if (AnnotationEntries.Count() > 0)
-                        {
+                        { // Sujeto Predicado Objeto
                             LimitName = AnnotationEntries.Single().TaxonomyObject.ToString().Split('^').First();
                             bool propertyFound = CharacterProperties.ContainsKey(LimitName);
                             if (!propertyFound)
@@ -675,26 +675,25 @@ namespace ARPEGOS.Services
         {
             var character = DependencyHelper.CurrentContext.CurrentCharacter;
             var game = DependencyHelper.CurrentContext.CurrentGame;
-
-            var propertyString = character.GetString(name, true);
             var valueString = string.Empty;
-            if(!string.IsNullOrEmpty(propertyString))
-            {
-                var characterAssertions = character.GetCharacterProperties();
-                characterAssertions.TryGetValue(propertyString, out var valueList);
-                valueString = valueList.Single();
-            }
-            else
+            var characterAssertions = character.GetCharacterProperties();
+            var propertyString = $"{character.Context}{name}";
+            var propertyFound = characterAssertions.TryGetValue(propertyString, out var valueList);
+
+            if (!propertyFound)
             {
                 propertyString = character.GetString(name);
                 var property = game.Ontology.Model.PropertyModel.SelectProperty(propertyString);
                 var gamePropertyAnnotations = game.Ontology.Model.PropertyModel.Annotations.IsDefinedBy.SelectEntriesBySubject(property);
-                if(gamePropertyAnnotations.EntriesCount > 0)
+                if (gamePropertyAnnotations.EntriesCount > 0)
                 {
                     var definition = gamePropertyAnnotations.Single().TaxonomyObject.ToString().Split('^').First();
-                    valueString = character.GetValue(definition).ToString();                    
+                    valueString = character.GetValue(definition).ToString();
                 }
             }
+            else
+                valueString = valueList.Single();
+
             var LimitValue = Convert.ToDouble(valueString.Split('^').First());
             return LimitValue;
         }
