@@ -12,6 +12,7 @@ using System.Reflection;
 using System.Text;
 using System.Text.RegularExpressions;
 using Xamarin.Forms;
+using Xamarin.Forms.Internals;
 
 namespace ARPEGOS.Services
 {
@@ -512,6 +513,7 @@ namespace ARPEGOS.Services
         /// <returns></returns>
         public string GetLimit(string stageName, bool isGeneral = false, bool editGeneralLimit = false)
         {
+            // Limite de etapa se actualiza de 630 a 750 en esta funcion. Comprobar por qué
             var game = DependencyHelper.CurrentContext.CurrentGame;
             var character = DependencyHelper.CurrentContext.CurrentCharacter;
             var CharacterProperties = character.GetCharacterProperties();
@@ -565,7 +567,7 @@ namespace ARPEGOS.Services
                         if (AnnotationEntries.Count() > 0)
                         { // Sujeto Predicado Objeto
                             LimitName = AnnotationEntries.Single().TaxonomyObject.ToString().Split('^').First();
-                            bool propertyFound = CharacterProperties.ContainsKey(LimitName);
+                            bool propertyFound = CharacterProperties.ContainsKey(GetString(LimitName,true));
                             if (!propertyFound)
                             {
                                 CharacterLimitString = $"{character.Context}{LimitName}";

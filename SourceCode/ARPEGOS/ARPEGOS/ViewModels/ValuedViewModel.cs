@@ -248,6 +248,24 @@ namespace ARPEGOS.ViewModels
                 {
                     var characterStageLimitProperty = $"{character.Context}{this.stageLimitProperty}";
                     character.UpdateDatatypeAssertion(characterStageLimitProperty, Convert.ToString(Convert.ToInt32(this.StageProgressLabel)));
+                    var characterAssertions = character.GetCharacterProperties();
+                    var assertionFound = characterAssertions.TryGetValue(characterStageLimitProperty, out var valueList);
+                    if(assertionFound == true)
+                    {
+                        var valueString = valueList.Single().Split('^').First();
+                        var currentValue = Convert.ToDouble(valueString);
+                        while(currentValue != StageProgressLabel)
+                        {
+                            character.UpdateDatatypeAssertion(characterStageLimitProperty, this.StageProgressLabel.ToString());
+                            characterAssertions = character.GetCharacterProperties();
+                            assertionFound = characterAssertions.TryGetValue(characterStageLimitProperty, out valueList);
+                            if(assertionFound == true)
+                            {
+                                valueString = valueList.Single().Split('^').First();
+                                currentValue = Convert.ToDouble(valueString);
+                            }
+                        }
+                    }
                 }
 
                 if (this.CurrentStage.EditGeneralLimit)
