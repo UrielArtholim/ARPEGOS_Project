@@ -3,6 +3,7 @@ namespace ARPEGOS.Services
 {
     using System;
     using System.Collections.Generic;
+    using System.Diagnostics;
     using System.Linq;
     using ARPEGOS.Helpers;
     using RDFSharp.Model;
@@ -182,7 +183,7 @@ namespace ARPEGOS.Services
                     var subjectFact = CurrentOntology.Model.ClassModel.SelectClass(subjectFactString);
                     if (subjectFact != null)
                     {
-                        var subjectFactCostAnnotations = CurrentOntology.Model.ClassModel.Annotations.CustomAnnotations.SelectEntriesBySubject(subjectFact).Where(entry => entry.ToString().Contains("GeneralCostDefinedBy"));
+                        var subjectFactCostAnnotations = CurrentOntology.Model.ClassModel.Annotations.CustomAnnotations.SelectEntriesBySubject(subjectFact).Where(entry => entry.ToString().Contains("GeneralCost"));
                         if (subjectFactCostAnnotations.Count() == 1)
                         {
                             filterCounter = 1;
@@ -269,10 +270,50 @@ namespace ARPEGOS.Services
             RDFOntology GameOntology = DependencyHelper.CurrentContext.CurrentGame.Ontology;
             var costWords = new List<string> { "Coste", "Cost", "Coût" };
             var requirementWords = new List<string> { "Requisito", "Requirement", "Requisite", "Prérequis" };
+            var stageOptions = new List<Item>();
             var availableOptions = new List<Item>();
-            var stageGroup = new Group(stageString);
-            foreach (Item item in stageGroup)
+            // Check if stage has subclasses
+            var stageGroups = this.GetIndividualsGrouped(stageString);
+            if(stageGroups != null)
             {
+                Debug.WriteLine($"Stage Groups |-| ");
+                var groupIndex = 1;
+                foreach(var group in stageGroups)
+                {
+                    var itemIndex = 1;
+                    Debug.Write($"Group {groupIndex} - ");
+                    foreach (var item in group.Elements)
+                    {
+                        Debug.WriteLine($"Item {itemIndex} - {item.ShortName}");
+                        stageOptions.Add(item);
+                        Debug.WriteLine($"--------------------------");
+                        ++itemIndex;
+                    }
+                    Debug.WriteLine($"==========================");
+                    ++groupIndex;
+                    itemIndex = 1;
+                }
+            }
+            else
+            {
+                Debug.WriteLine($"Stage Items |-| ");
+                var stageItems = this.GetIndividuals(stageString);
+                var itemIndex = 1;
+                foreach (var item in stageItems)
+                {
+                    Debug.WriteLine($"Item {itemIndex} - {item.ShortName}");
+                    stageOptions.Add(item);
+                    ++itemIndex;
+                }
+                Debug.WriteLine($"==========================");
+            }
+
+            Debug.WriteLine($"Item Available Checks |-| ");
+            var itemNumber = 1;
+            foreach (Item item in stageOptions)
+            {
+                Debug.WriteLine($"Item {itemNumber} - {item.ShortName}");
+
                 if (hasGeneralLimitValue == false || generalLimitValue > 0)
                 {
                     if (partialLimitValue > 0)
@@ -370,7 +411,7 @@ namespace ARPEGOS.Services
                             if (itemCosts.Count() > 1)
                             {
                                 var generalCostPredicateName = this.CheckGeneralCost(stageString);
-                                itemCostEntry = itemCosts.Where(entry => entry.TaxonomyPredicate.ToString() == generalCostPredicateName).Single();
+                                itemCostEntry = itemCosts.Where(entry => entry.TaxonomyPredicate.ToString().Contains(generalCostPredicateName)).Single();
                             }
                             else if (itemCosts.Count() == 1)
                                 itemCostEntry = itemCosts.SingleOrDefault();
@@ -421,8 +462,11 @@ namespace ARPEGOS.Services
 
                                         if (costWords.Any(word => itemCostEntryPredicate.Contains(word)))
                                         {
-                                            itemCostWords.Remove(itemCostWords.LastOrDefault());
+                                            itemCostWords.Remove(itemCostWords.Last());
                                             itemCostWords.Add("Total");
+                                            var itemCostName = string.Join("_", itemCostWords);
+                                            if (string.IsNullOrEmpty(this.GetString(itemCostName)))
+                                                itemCostWords.Remove(itemCostWords.Last());
                                         }
 
                                         var requirementCostName = string.Join('_', itemCostWords);
@@ -457,8 +501,8 @@ namespace ARPEGOS.Services
                         }
                     }
                 }
+                ++itemNumber;
             }
-
             return availableOptions;
         }
     }

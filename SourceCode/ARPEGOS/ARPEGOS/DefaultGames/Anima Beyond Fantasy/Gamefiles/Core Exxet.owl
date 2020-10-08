@@ -91,6 +91,12 @@
     
 
 
+    <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#GeneralCost -->
+
+    <owl:AnnotationProperty rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#GeneralCost"/>
+    
+
+
     <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#GeneralLimit -->
 
     <owl:AnnotationProperty rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#GeneralLimit"/>
@@ -3773,9 +3779,9 @@
     
 
 
-    <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Hab_Disponible_Coste -->
+    <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Hab_Disponible_PD_Coste -->
 
-    <owl:DatatypeProperty rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Hab_Disponible_Coste">
+    <owl:DatatypeProperty rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Hab_Disponible_PD_Coste">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#HabilidadTieneValor"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidad_Primaria"/>
@@ -11651,6 +11657,7 @@ Los escudos tienen un funcionamiento diferente al del resto de las armas. Aunque
         <rdfs:subClassOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidad_Combate"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">En Ánima, un personaje que lucha sólo con su cuerpo puede aprender a dominar artes marciales. Cualquiera de estos estilos le permite utilizar su habilidad de ataque y parada, sin ningún penalizador, cuando combata desarmado. En cierta manera, son equivalentes a una tabla de armas con las manos desnudas, aunque además proporcionan ventajas adicionales a sus practicantes. Que un personaje adquiera un arte marcial, supone mucho más que simplemente conocer un estilo. Muchos individuos aprenden a utilizarlas, pero eso no significa que realmente sepan controlar sus ventajas. Si un personaje en Ánima conoce un arte marcial, simboliza que es un verdadero maestro que ha conseguido dominarla perfectamente.</rdfs:comment>
         <EditStageLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</EditStageLimit>
+        <GeneralCost rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hab_Disponible_PD_Coste</GeneralCost>
         <StageLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Disponible_Habilidad_Combate</StageLimit>
         <ViewType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MultipleChoiceDynamicLimitView</ViewType>
     </owl:Class>
@@ -12497,6 +12504,7 @@ Objeto_Coste_Total, numerical: true, User_Edit: false, Equipo_Inventario:*:Objet
         <rdfs:subClassOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidad_Combate"/>
         <EditGeneralLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</EditGeneralLimit>
         <EditStageLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</EditStageLimit>
+        <GeneralCost rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hab_Disponible_PD_Coste</GeneralCost>
         <StageLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Disponible_Habilidad_Combate</StageLimit>
         <ValuedListInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Item_PD, numerical: true, User_Edit: true
 Per_Item_Base, numerical: true, User_Edit: false, Per_Item_PD: /: tieneCategoría :Cat_Item_Coste
@@ -12739,6 +12747,7 @@ Per_Item_Total, numerical: true, User_Edit: false, Per_Item_Base:+:Per_Item_Bono
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El Ki es una fuerza que está presente en cualquier forma de vida. Cuando el alma penetra en un ser vivo en el momento de su nacimiento, impregna todo su ser y se hace uno con él. Aunque todas las cosas tienen espíritu, sólo los seres que están propiamente vivos funden completamente su esencia en cuerpo y alma. Si una piedra se rompe en dos, su alma se divide en dos partes. Si el cuerpo de un ser vivo muere, su espíritu se separa del cuerpo. Cuando un alma se afianza en sus carcasas terrenales impregna toda su esencia, creando la energía física a la que llamamos Ki. Dicha fuerza depende exclusivamente de la fusión entre cuerpo y espíritu, y de esta manera recorre internamente a todos los seres vivos. Esto no significa que sólo los seres orgánicos puedan utilizar el Ki, puesto que otras criaturas elementales sin una forma física material también son capaces de desarrollar estas habilidades. Para poder hacer uso de ellas, basta sencillamente con que un alma se funda realmente con una carcasa a la que pueda llamar cuerpo. Algunos explican la energía física de las personas como una fuente de calor viva. Por eso, los seres que han perdido su alma pero permanecen en este mundo, como los no muertos, desprenden un intenso frío espiritual.
 
 Aunque el Ki está presente en cualquier ser vivo, no todo el mundo llega realmente a ser consciente de ello. Sólo los pocos que son capaces de percibir su propia energía y la despiertan, controlan estas increíbles capacidades. Al hacerlo rompen la fina línea entre la carne y el alma, por lo que pueden emplear sus poderes espirituales mientras permanecen aún en sus cuerpos. El término “Dominio” proviene de la capacidad que tienen esas personas para controlar su energía y sacar el máximo provecho de ella, realizando acciones físicas que ningún otro mortal podría lograr.</rdfs:comment>
+        <GeneralCost rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hab_Disponible_PD_Coste</GeneralCost>
     </owl:Class>
     
 
@@ -13523,6 +13532,7 @@ De cualquier modo, si los jugadores lo desean, hay diferentes razas que se puede
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Un individuo no tiene por qué verse obligado a dominar el uso de una única arma, sino que con la práctica es capaz de aprender a utilizar igualmente otras muchas con la misma habilidad. Las tablas de armas permiten a un personaje eliminar los penalizadores por blandir armas distintas a la que escogió inicialmente, e incluso en ocasiones, emplear su habilidad de combate lanzando conjuros o poderes psíquicos.</rdfs:comment>
         <EditGeneralLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</EditGeneralLimit>
         <EditStageLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</EditStageLimit>
+        <GeneralCost rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hab_Disponible_PD_Coste</GeneralCost>
         <StageLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Disponible_Habilidad_Combate</StageLimit>
         <ViewType>MultipleChoiceDynamicLimitView</ViewType>
     </owl:Class>
@@ -14627,7 +14637,7 @@ Mantenimiento: No</rdfs:comment>
         <Hab_RequisitoClave_1 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Trucos_De_Manos"/>
         <ArteMarcial_BonoEsquiva rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</ArteMarcial_BonoEsquiva>
         <ArteMarcial_BonoParadaSinArmas rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</ArteMarcial_BonoParadaSinArmas>
-        <Hab_Disponible_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</Hab_Disponible_Coste>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</Hab_Disponible_PD_Coste>
         <Hab_RequisitoValor_1 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">40</Hab_RequisitoValor_1>
         <Habilidad_Conocimiento_Marcial_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-10</Habilidad_Conocimiento_Marcial_Coste>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El Aikido es un arte marcial que permite defenderse de los ataques empleando la fuerza de los antagonistas contra ellos mismos. Sus practicantes apresan o rompen fácilmente los brazos y piernas de sus enemigos con escasos movimientos. Según su filosofía, es la propia violencia de los adversarios lo único que puede acabar con ellos.
@@ -16271,7 +16281,7 @@ Mantenimiento: 90 / 100 / 105 / 110</rdfs:comment>
         <TablaArmas_Arma rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Escudo_Corporal"/>
         <TablaArmas_Arma rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Jabalina"/>
         <TablaArmas_Arma rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Lanza"/>
-        <Hab_Disponible_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</Hab_Disponible_Coste>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</Hab_Disponible_PD_Coste>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Es el equipamiento de combate que tradicionalmente usan los indígenas de tribus poco sofisticadas.
 
 Efectos: Otorga pericia en las siguientes armas: Jabalina, Lanza, Escudo Corporal, Arco y Cerbatana.
@@ -16290,7 +16300,7 @@ Coste: 50 PD</rdfs:comment>
         <TablaArmas_Arma rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Espada_Corta"/>
         <TablaArmas_Arma rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Estilete"/>
         <TablaArmas_Arma rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Garrote"/>
-        <Hab_Disponible_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</Hab_Disponible_Coste>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</Hab_Disponible_PD_Coste>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Luchadores oscuros que utilizan armas precisas, mortales y fáciles de ocultar.
 
 Efectos: Otorga pericia en las siguientes armas: Espada Corta, Ballesta de Mano, Garrote, Cerbatana y Estilete.
@@ -16309,7 +16319,7 @@ Coste: 50 PD</rdfs:comment>
         <TablaArmas_Arma rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Espada_Corta"/>
         <TablaArmas_Arma rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Garrote"/>
         <TablaArmas_Arma rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Maza"/>
-        <Hab_Disponible_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</Hab_Disponible_Coste>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</Hab_Disponible_PD_Coste>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Guerreros especializados en robos y asaltos, que empuñan armas simples pero amenazadoras.
 
 Efectos: Otorga pericia en las siguientes armas: Daga, Ballesta, Espada Corta, Maza y Garrote.
@@ -16328,7 +16338,7 @@ Coste: 50 PD</rdfs:comment>
         <TablaArmas_Arma rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Hacha_De_Guerra"/>
         <TablaArmas_Arma rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Mandoble"/>
         <TablaArmas_Arma rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Maza_Pesada_De_Combate"/>
-        <Hab_Disponible_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</Hab_Disponible_Coste>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</Hab_Disponible_PD_Coste>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Son aquellos individuos que basan su estilo de combate en utilizar las armas más grandes y potentes.
 
 Efectos: Otorga pericia en las siguientes armas: Hacha de Guerra, Hacha a dos manos, Mandoble, Espada Bastarda y Maza a Dos Manos.
@@ -16346,7 +16356,7 @@ Coste: 50 PD</rdfs:comment>
         <TablaArmas_Arma rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Espada_Larga"/>
         <TablaArmas_Arma rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Lanza_De_Caballería"/>
         <TablaArmas_Arma rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Maza"/>
-        <Hab_Disponible_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</Hab_Disponible_Coste>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</Hab_Disponible_PD_Coste>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Guerreros ortodoxos, que luchan tanto a caballo como con a pie.
 
 Efectos: Otorga pericia en las siguientes armas: Espada Larga, Lanza de Caballería, Maza, Espada Bastarda y Escudo Medio.
@@ -16367,7 +16377,7 @@ Coste: 50 PD</rdfs:comment>
         <TablaArmas_Arma rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Espada_Corta"/>
         <TablaArmas_Arma rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Jabalina"/>
         <TablaArmas_Arma rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Lanza"/>
-        <Hab_Disponible_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</Hab_Disponible_Coste>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</Hab_Disponible_PD_Coste>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Luchadores expertos en el subterfugio, que aprovechan armas de proyectiles y poco pesadas.
 
 Efectos: Otorga pericia en las siguientes armas: Jabalina, Arco, Espada Corta, Lanza y Boleadoras.
@@ -16386,7 +16396,7 @@ Coste: 50 PD</rdfs:comment>
         <TablaArmas_Arma rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Estoque"/>
         <TablaArmas_Arma rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Florete"/>
         <TablaArmas_Arma rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Sable"/>
-        <Hab_Disponible_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</Hab_Disponible_Coste>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</Hab_Disponible_PD_Coste>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Esta tabla es usada por espadachines y maestros de esgrima.
 
 Efectos: Otorga pericia en las siguientes armas: Estoque, Florete, Daga de Parada, Sable y Espada Larga.
@@ -16405,7 +16415,7 @@ Coste: 50 PD</rdfs:comment>
         <TablaArmas_Arma rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Red_De_Gladiador"/>
         <TablaArmas_Arma rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Rodela"/>
         <TablaArmas_Arma rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Tridente"/>
-        <Hab_Disponible_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</Hab_Disponible_Coste>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</Hab_Disponible_PD_Coste>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Son armas exóticas y vistosas que utilizan los luchadores de circos y espectáculos.
 
 Efectos: Otorga pericia en las siguientes armas: Espada Corta, Red de Gladiador, Rodela, Tridente y Látigo.
@@ -16424,7 +16434,7 @@ Coste: 50 PD</rdfs:comment>
         <TablaArmas_Arma rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Kusari-Gama"/>
         <TablaArmas_Arma rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Shuriken"/>
         <TablaArmas_Arma rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Tanto"/>
-        <Hab_Disponible_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</Hab_Disponible_Coste>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</Hab_Disponible_PD_Coste>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Asesinos orientales, maestros en el uso de armas exóticas.
 
 Efectos: Otorga pericia en las siguientes armas: Katana, Tanto, Garras, Shuriken y Kusari Gama.
@@ -16443,7 +16453,7 @@ Coste: 50 PD</rdfs:comment>
         <TablaArmas_Arma rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Daga"/>
         <TablaArmas_Arma rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Lanza"/>
         <TablaArmas_Arma rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Turcus"/>
-        <Hab_Disponible_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</Hab_Disponible_Coste>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</Hab_Disponible_PD_Coste>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Son guerreros criados en el desierto y especializados en el uso de armas arábigas.
 
 Efectos: Otorga pericia en las siguientes armas: Daga, Turcus, Arco Largo, Cimitarra y Lanza.
@@ -16462,7 +16472,7 @@ Coste: 50 PD</rdfs:comment>
         <TablaArmas_Arma rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Hacha_De_Mano"/>
         <TablaArmas_Arma rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Red_De_Gladiador"/>
         <TablaArmas_Arma rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Sable"/>
-        <Hab_Disponible_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</Hab_Disponible_Coste>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</Hab_Disponible_PD_Coste>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reune armas empleadas principalmente por marinos, que pasan su vida entre barcos.
 
 Efectos: Otorga pericia en las siguientes armas: Arpón, Red de Gladiador, Garfio, Sable y Hacha de mano.
@@ -16480,7 +16490,7 @@ Coste: 50 PD</rdfs:comment>
         <TablaArmas_Arma rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Ballesta"/>
         <TablaArmas_Arma rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Espada_Larga"/>
         <TablaArmas_Arma rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Lanza"/>
-        <Hab_Disponible_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</Hab_Disponible_Coste>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</Hab_Disponible_PD_Coste>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Son las armas tradicionales que se les enseña a usar a los guerreros regulares de cualquier ejército.
 
 Efectos: Otorga pericia en las siguientes armas: Ballesta, Espada Larga, Alabarda, Lanza y Escudo Medio.
@@ -16650,7 +16660,7 @@ Mantenimiento: 15 / 30 / 50 / 100 Diario</rdfs:comment>
         <ArteMarcial_BonoEsquiva rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</ArteMarcial_BonoEsquiva>
         <ArteMarcial_BonoParadaSinArmas rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</ArteMarcial_BonoParadaSinArmas>
         <ArteMarcial_BonoTurno rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</ArteMarcial_BonoTurno>
-        <Hab_Disponible_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</Hab_Disponible_Coste>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</Hab_Disponible_PD_Coste>
         <Hab_RequisitoValor_2 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">160</Hab_RequisitoValor_2>
         <Hab_RequisitoValor_3 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">160</Hab_RequisitoValor_3>
         <Habilidad_Conocimiento_Marcial_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-10</Habilidad_Conocimiento_Marcial_Coste>
@@ -19037,7 +19047,7 @@ Mantenimiento: 10 / 20 / 20 / 25 Diario</rdfs:comment>
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arte_Marcial_Básica"/>
         <Hab_RequisitoClave_1 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Baile"/>
         <ArteMarcial_BonoEsquiva rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</ArteMarcial_BonoEsquiva>
-        <Hab_Disponible_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</Hab_Disponible_Coste>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</Hab_Disponible_PD_Coste>
         <Hab_RequisitoValor_1 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">40</Hab_RequisitoValor_1>
         <Habilidad_Conocimiento_Marcial_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-10</Habilidad_Conocimiento_Marcial_Coste>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El Capoeira es un sistema de combate de apariencia caótica que emplea amplios movimientos acrobáticos de pierna, similares a una danza.
@@ -28473,7 +28483,7 @@ Mantenimiento: No</rdfs:comment>
         <Hab_RequisitoClave_1 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Kempo"/>
         <Hab_RequisitoClave_2 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Extrusión_De_Presencia"/>
         <ArteMarcial_BonoAtaqueSinArmas rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</ArteMarcial_BonoAtaqueSinArmas>
-        <Hab_Disponible_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</Hab_Disponible_Coste>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</Hab_Disponible_PD_Coste>
         <Habilidad_Conocimiento_Marcial_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-10</Habilidad_Conocimiento_Marcial_Coste>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dumah es conocido como “el arte del viento”, un estilo marcial que recibe su nombre por enseñar a sus practicantes a usar sus manos y piernas como si se tratasen de armas de filo. Se trata de una práctica tribal, que suele transmitirse únicamente entre miembros de una misma familia.
 
@@ -29185,7 +29195,7 @@ Descripción: El psíquico hace desaparecer temporalmente alguno de los cinco se
         <Hab_RequisitoClave_2 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Ataque"/>
         <ArteMarcial_BonoAtaqueSinArmas rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</ArteMarcial_BonoAtaqueSinArmas>
         <ArteMarcial_BonoTurno rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</ArteMarcial_BonoTurno>
-        <Hab_Disponible_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</Hab_Disponible_Coste>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</Hab_Disponible_PD_Coste>
         <Hab_RequisitoValor_2 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">200</Hab_RequisitoValor_2>
         <Habilidad_Conocimiento_Marcial_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-10</Habilidad_Conocimiento_Marcial_Coste>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Emp es una depurada técnica de lucha que prepara a sus usuarios para combatir contra enemigos armados. Con rápidos y vertiginosos movimientos en espiral, un maestro de Emp es capaz de adelantarse a su adversario e inutilizarlo en apenas un par de movimientos.
@@ -29540,7 +29550,7 @@ Mantenimiento: 20 / 25 / 30 / 35</rdfs:comment>
         <Hab_RequisitoClave_3 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Parada"/>
         <ArteMarcial_BonoEsquiva rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</ArteMarcial_BonoEsquiva>
         <ArteMarcial_BonoParadaSinArmas rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</ArteMarcial_BonoParadaSinArmas>
-        <Hab_Disponible_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</Hab_Disponible_Coste>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</Hab_Disponible_PD_Coste>
         <Hab_RequisitoValor_2 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">160</Hab_RequisitoValor_2>
         <Hab_RequisitoValor_3 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">160</Hab_RequisitoValor_3>
         <Habilidad_Conocimiento_Marcial_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-10</Habilidad_Conocimiento_Marcial_Coste>
@@ -32693,7 +32703,7 @@ Mantenimiento: No</rdfs:comment>
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Grappling">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arte_Marcial_Básica"/>
         <Hab_RequisitoClave_1 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Proezas_De_Fuerza"/>
-        <Hab_Disponible_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</Hab_Disponible_Coste>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</Hab_Disponible_PD_Coste>
         <Hab_RequisitoValor_1 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">40</Hab_RequisitoValor_1>
         <Habilidad_Conocimiento_Marcial_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-10</Habilidad_Conocimiento_Marcial_Coste>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El Grappling es un arte que consiste en agarrar y apresar a tu oponente. Su entrenamiento se especializa en caídas, golpes, patadas, estrangulamientos y proyecciones. El objetivo de este estilo es rebajar la distancia entre el luchador y su contendiente para así poder llevarlo al suelo, donde es mucho más fácil acabar con él.
@@ -33001,7 +33011,7 @@ Mantenimiento: 5 / 5 / 5 / 5</rdfs:comment>
         <Hab_RequisitoClave_3 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Ataque"/>
         <ArteMarcial_BonoAtaqueSinArmas rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</ArteMarcial_BonoAtaqueSinArmas>
         <ArteMarcial_BonoTurno rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</ArteMarcial_BonoTurno>
-        <Hab_Disponible_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</Hab_Disponible_Coste>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</Hab_Disponible_PD_Coste>
         <Hab_RequisitoValor_3 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">200</Hab_RequisitoValor_3>
         <Habilidad_Conocimiento_Marcial_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-10</Habilidad_Conocimiento_Marcial_Coste>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Muchos consideran el Hakyoukuken el arte marcial más perfecto que jamás ha existido. De hecho, su origen ni siquiera es humano, por lo que su verdadera procedencia sigue siendo un misterio. Un practicante de Hakyoukuken domina la tensión de cada músculo de su cuerpo y proyecta sus golpes con una potencia devastadora, destrozando literalmente a sus adversarios desde dentro. Su estilo enseña además a adelantarse a cualquier golpe: si no hay atacante, no hay necesidad de defensa.
@@ -35750,7 +35760,7 @@ Vías Cerradas: Luz</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Kempo">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arte_Marcial_Básica"/>
-        <Hab_Disponible_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</Hab_Disponible_Coste>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</Hab_Disponible_PD_Coste>
         <Habilidad_Conocimiento_Marcial_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-10</Habilidad_Conocimiento_Marcial_Coste>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Es una disciplina de combate libre que emplea combinaciones de golpes. Su estilo consiste en atacar rápidamente al adversario, esperando encontrar fallos en su guardia gracias a la acumulación de impactos.
 
@@ -35793,7 +35803,7 @@ Bono: Ninguno.</rdfs:comment>
         <Hab_RequisitoClave_2 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Trucos_De_Manos"/>
         <Hab_RequisitoClave_3 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Estilo"/>
         <ArteMarcial_BonoVariable rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</ArteMarcial_BonoVariable>
-        <Hab_Disponible_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</Hab_Disponible_Coste>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</Hab_Disponible_PD_Coste>
         <Hab_RequisitoValor_1 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">40</Hab_RequisitoValor_1>
         <Hab_RequisitoValor_2 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">40</Hab_RequisitoValor_2>
         <Hab_RequisitoValor_3 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</Hab_RequisitoValor_3>
@@ -37881,7 +37891,7 @@ Vías Cerradas: Esencia</rdfs:comment>
         <Hab_RequisitoClave_4 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Esquiva"/>
         <Hab_RequisitoClave_4 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Parada"/>
         <ArteMarcial_BonoAtaqueSinArmas rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</ArteMarcial_BonoAtaqueSinArmas>
-        <Hab_Disponible_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</Hab_Disponible_Coste>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</Hab_Disponible_PD_Coste>
         <Hab_RequisitoValor_3 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">160</Hab_RequisitoValor_3>
         <Hab_RequisitoValor_4 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">160</Hab_RequisitoValor_4>
         <Habilidad_Conocimiento_Marcial_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-10</Habilidad_Conocimiento_Marcial_Coste>
@@ -38276,7 +38286,7 @@ Descripción: Disminuye varias intensidades de un fuego ya existente. Si se usa 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Moai_Thai">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arte_Marcial_Básica"/>
         <Hab_RequisitoClave_1 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Proezas_De_Fuerza"/>
-        <Hab_Disponible_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</Hab_Disponible_Coste>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</Hab_Disponible_PD_Coste>
         <Hab_RequisitoValor_1 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">40</Hab_RequisitoValor_1>
         <Habilidad_Conocimiento_Marcial_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-10</Habilidad_Conocimiento_Marcial_Coste>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El Moai Thai maximiza el uso de la fuerza de quienes lo practican. Al luchar, saca provecho de las partes más duras del cuerpo, como los codos y las rodillas. Sus maestros buscan las partes débiles de sus rivales, como articulaciones y costillas.
@@ -42621,7 +42631,7 @@ proyección mágica no aplica ninguno de los penalizadores de combate ni para at
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Proyección_Psíquica">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidad_Psíquica_General"/>
-        <Hab_Disponible_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100</Hab_Disponible_Coste>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100</Hab_Disponible_PD_Coste>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La Proyección Psíquica es la habilidad de las personas dotadas de disciplinas mentales para enfocar y controlar sus poderes sobre un objetivo. En cierto modo, sería correcto decir que es equivalente a la Proyección Mágica del psíquico. De la misma manera que ocurre con el mago, la Proyección Psíquica no mide su “puntería”, sino el control que tiene sobre sus poderes para llevar a cabo acciones con ellos. El psíquico utiliza su Proyección para atacar y defenderse.</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -44862,7 +44872,7 @@ Beneficio: 1</rdfs:comment>
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Sambo">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arte_Marcial_Básica"/>
         <ArteMarcial_BonoParadaSinArmas rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</ArteMarcial_BonoParadaSinArmas>
-        <Hab_Disponible_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</Hab_Disponible_Coste>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</Hab_Disponible_PD_Coste>
         <Habilidad_Conocimiento_Marcial_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-10</Habilidad_Conocimiento_Marcial_Coste>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La denominación de Sambo proviene de Samooborona Biez Orousia, que significa defensa personal sin armas. Es un estilo de combate muy preciso y defensivo, desarrollado para entrenar a algunas órdenes militares.
 
@@ -44979,7 +44989,7 @@ Mantenimiento: No</rdfs:comment>
         <Hab_RequisitoClave_2 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Parada"/>
         <ArteMarcial_BonoEsquiva rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</ArteMarcial_BonoEsquiva>
         <ArteMarcial_BonoParadaSinArmas rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</ArteMarcial_BonoParadaSinArmas>
-        <Hab_Disponible_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</Hab_Disponible_Coste>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</Hab_Disponible_PD_Coste>
         <Hab_RequisitoValor_2 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">200</Hab_RequisitoValor_2>
         <Habilidad_Conocimiento_Marcial_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-10</Habilidad_Conocimiento_Marcial_Coste>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Según el mito, Selene fue el primer arte marcial reconocido como tal. Era practicado únicamente por mujeres y tradicionalmente no se permite a ningún hombre descubrir sus secretos. Selene proyecta la propia fuerza de los atacantes sobre ellos mismos, lanzándolos por los aires como simples muñecos de trapo. A pesar de su enorme complejidad, visualmente Selene utiliza tan pocos movimientos que incluso puede dar la sensación de que quien la usa ni siquiera se está moviendo.
@@ -45215,7 +45225,7 @@ Mantenimiento: 10 / 15 / 15 / 20</rdfs:comment>
         <Hab_RequisitoClave_2 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Extrusión_De_Presencia"/>
         <Hab_RequisitoClave_3 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Ataque"/>
         <ArteMarcial_BonoAtaqueSinArmas rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</ArteMarcial_BonoAtaqueSinArmas>
-        <Hab_Disponible_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</Hab_Disponible_Coste>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</Hab_Disponible_PD_Coste>
         <Hab_RequisitoValor_3 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">180</Hab_RequisitoValor_3>
         <Habilidad_Conocimiento_Marcial_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-10</Habilidad_Conocimiento_Marcial_Coste>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Según cuenta la tradición, Seraphite es un estilo que se desarrolló para cazar demonios. Se trata de un arte que emplea movimientos muy arriesgados e inusuales que ponen en peligro a su practicante, pero que a cambio multiplica la efectividad de sus ataques. En la actualidad, es conocido por algunas secciones de la Iglesia, principalmente miembros de la Inquisición.
@@ -45598,7 +45608,7 @@ Mantenimiento: 30 / 45 / 60 / 100 Diario</rdfs:comment>
         <Hab_RequisitoClave_5 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Esquiva"/>
         <ArteMarcial_BonoEsquiva rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</ArteMarcial_BonoEsquiva>
         <ArteMarcial_BonoParadaSinArmas rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</ArteMarcial_BonoParadaSinArmas>
-        <Hab_Disponible_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</Hab_Disponible_Coste>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</Hab_Disponible_PD_Coste>
         <Hab_RequisitoValor_4 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">200</Hab_RequisitoValor_4>
         <Hab_RequisitoValor_5 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">200</Hab_RequisitoValor_5>
         <Habilidad_Conocimiento_Marcial_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-10</Habilidad_Conocimiento_Marcial_Coste>
@@ -45620,7 +45630,7 @@ Bono: +20 a la habilidad de esquiva y parada sin armas.</rdfs:comment>
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Shotokan">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arte_Marcial_Básica"/>
         <ArteMarcial_BonoAtaqueSinArmas rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</ArteMarcial_BonoAtaqueSinArmas>
-        <Hab_Disponible_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</Hab_Disponible_Coste>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</Hab_Disponible_PD_Coste>
         <Habilidad_Conocimiento_Marcial_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-10</Habilidad_Conocimiento_Marcial_Coste>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El Shotokan es un arte marcial en el que se emplean fuertes golpes tanto con los puños como con las piernas. Su estilo consiste en aprovechar los puntos débiles en la defensa de un adversario para derrotarlo con un solo movimiento. Es un arte marcial muy ofensivo capaz de causar un enorme daño.
 
@@ -45739,7 +45749,7 @@ Bono: +10 a la habilidad de ataque sin armas.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Similar_Abanico_De_Combate">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arma_Similar"/>
-        <Hab_Disponible_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_Coste>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_PD_Coste>
     </owl:NamedIndividual>
     
 
@@ -45748,7 +45758,7 @@ Bono: +10 a la habilidad de ataque sin armas.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Similar_Alabarda">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arma_Similar"/>
-        <Hab_Disponible_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_Coste>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_PD_Coste>
     </owl:NamedIndividual>
     
 
@@ -45757,7 +45767,7 @@ Bono: +10 a la habilidad de ataque sin armas.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Similar_Anciano_De_Primavera">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arma_Similar"/>
-        <Hab_Disponible_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_Coste>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_PD_Coste>
     </owl:NamedIndividual>
     
 
@@ -45766,7 +45776,7 @@ Bono: +10 a la habilidad de ataque sin armas.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Similar_Arcabuz">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arma_Similar"/>
-        <Hab_Disponible_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_Coste>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_PD_Coste>
     </owl:NamedIndividual>
     
 
@@ -45775,7 +45785,7 @@ Bono: +10 a la habilidad de ataque sin armas.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Similar_Arco_Compuesto">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arma_Similar"/>
-        <Hab_Disponible_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_Coste>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_PD_Coste>
     </owl:NamedIndividual>
     
 
@@ -45784,7 +45794,7 @@ Bono: +10 a la habilidad de ataque sin armas.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Similar_Arco_Corto">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arma_Similar"/>
-        <Hab_Disponible_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_Coste>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_PD_Coste>
     </owl:NamedIndividual>
     
 
@@ -45793,7 +45803,7 @@ Bono: +10 a la habilidad de ataque sin armas.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Similar_Arco_Largo">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arma_Similar"/>
-        <Hab_Disponible_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_Coste>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_PD_Coste>
     </owl:NamedIndividual>
     
 
@@ -45802,7 +45812,7 @@ Bono: +10 a la habilidad de ataque sin armas.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Similar_Arpón">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arma_Similar"/>
-        <Hab_Disponible_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_Coste>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_PD_Coste>
     </owl:NamedIndividual>
     
 
@@ -45811,7 +45821,7 @@ Bono: +10 a la habilidad de ataque sin armas.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Similar_Balista_Ligera">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arma_Similar"/>
-        <Hab_Disponible_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_Coste>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_PD_Coste>
     </owl:NamedIndividual>
     
 
@@ -45820,7 +45830,7 @@ Bono: +10 a la habilidad de ataque sin armas.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Similar_Balista_Pesada">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arma_Similar"/>
-        <Hab_Disponible_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_Coste>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_PD_Coste>
     </owl:NamedIndividual>
     
 
@@ -45829,7 +45839,7 @@ Bono: +10 a la habilidad de ataque sin armas.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Similar_Ballesta">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arma_Similar"/>
-        <Hab_Disponible_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_Coste>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_PD_Coste>
     </owl:NamedIndividual>
     
 
@@ -45838,7 +45848,7 @@ Bono: +10 a la habilidad de ataque sin armas.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Similar_Ballesta_De_Mano">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arma_Similar"/>
-        <Hab_Disponible_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_Coste>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_PD_Coste>
     </owl:NamedIndividual>
     
 
@@ -45847,7 +45857,7 @@ Bono: +10 a la habilidad de ataque sin armas.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Similar_Ballesta_De_Repetición">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arma_Similar"/>
-        <Hab_Disponible_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_Coste>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_PD_Coste>
     </owl:NamedIndividual>
     
 
@@ -45856,7 +45866,7 @@ Bono: +10 a la habilidad de ataque sin armas.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Similar_Ballesta_Pesada">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arma_Similar"/>
-        <Hab_Disponible_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_Coste>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_PD_Coste>
     </owl:NamedIndividual>
     
 
@@ -45865,7 +45875,7 @@ Bono: +10 a la habilidad de ataque sin armas.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Similar_Bolas">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arma_Similar"/>
-        <Hab_Disponible_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_Coste>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_PD_Coste>
     </owl:NamedIndividual>
     
 
@@ -45874,7 +45884,7 @@ Bono: +10 a la habilidad de ataque sin armas.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Similar_Boleadoras">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arma_Similar"/>
-        <Hab_Disponible_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_Coste>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_PD_Coste>
     </owl:NamedIndividual>
     
 
@@ -45883,7 +45893,7 @@ Bono: +10 a la habilidad de ataque sin armas.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Similar_Bumerán">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arma_Similar"/>
-        <Hab_Disponible_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_Coste>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_PD_Coste>
     </owl:NamedIndividual>
     
 
@@ -45892,7 +45902,7 @@ Bono: +10 a la habilidad de ataque sin armas.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Similar_Cadena">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arma_Similar"/>
-        <Hab_Disponible_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_Coste>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_PD_Coste>
     </owl:NamedIndividual>
     
 
@@ -45901,7 +45911,7 @@ Bono: +10 a la habilidad de ataque sin armas.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Similar_Cañón">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arma_Similar"/>
-        <Hab_Disponible_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_Coste>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_PD_Coste>
     </owl:NamedIndividual>
     
 
@@ -45910,7 +45920,7 @@ Bono: +10 a la habilidad de ataque sin armas.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Similar_Cerbatana">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arma_Similar"/>
-        <Hab_Disponible_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_Coste>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_PD_Coste>
     </owl:NamedIndividual>
     
 
@@ -45919,7 +45929,7 @@ Bono: +10 a la habilidad de ataque sin armas.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Similar_Cestus">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arma_Similar"/>
-        <Hab_Disponible_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_Coste>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_PD_Coste>
     </owl:NamedIndividual>
     
 
@@ -45928,7 +45938,7 @@ Bono: +10 a la habilidad de ataque sin armas.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Similar_Cimitarra">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arma_Similar"/>
-        <Hab_Disponible_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_Coste>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_PD_Coste>
     </owl:NamedIndividual>
     
 
@@ -45937,7 +45947,7 @@ Bono: +10 a la habilidad de ataque sin armas.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Similar_Cuervo">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arma_Similar"/>
-        <Hab_Disponible_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_Coste>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_PD_Coste>
     </owl:NamedIndividual>
     
 
@@ -45946,7 +45956,7 @@ Bono: +10 a la habilidad de ataque sin armas.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Similar_Daga">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arma_Similar"/>
-        <Hab_Disponible_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_Coste>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_PD_Coste>
     </owl:NamedIndividual>
     
 
@@ -45955,7 +45965,7 @@ Bono: +10 a la habilidad de ataque sin armas.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Similar_Daga_De_Parada">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arma_Similar"/>
-        <Hab_Disponible_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_Coste>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_PD_Coste>
     </owl:NamedIndividual>
     
 
@@ -45964,7 +45974,7 @@ Bono: +10 a la habilidad de ataque sin armas.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Similar_Dardos_De_Mano">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arma_Similar"/>
-        <Hab_Disponible_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_Coste>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_PD_Coste>
     </owl:NamedIndividual>
     
 
@@ -45973,7 +45983,7 @@ Bono: +10 a la habilidad de ataque sin armas.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Similar_Escudo">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arma_Similar"/>
-        <Hab_Disponible_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_Coste>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_PD_Coste>
     </owl:NamedIndividual>
     
 
@@ -45982,7 +45992,7 @@ Bono: +10 a la habilidad de ataque sin armas.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Similar_Escudo_Corporal">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arma_Similar"/>
-        <Hab_Disponible_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_Coste>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_PD_Coste>
     </owl:NamedIndividual>
     
 
@@ -45991,7 +46001,7 @@ Bono: +10 a la habilidad de ataque sin armas.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Similar_Espada_Ancha">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arma_Similar"/>
-        <Hab_Disponible_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_Coste>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_PD_Coste>
     </owl:NamedIndividual>
     
 
@@ -46000,7 +46010,7 @@ Bono: +10 a la habilidad de ataque sin armas.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Similar_Espada_Bastarda">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arma_Similar"/>
-        <Hab_Disponible_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_Coste>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_PD_Coste>
     </owl:NamedIndividual>
     
 
@@ -46009,7 +46019,7 @@ Bono: +10 a la habilidad de ataque sin armas.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Similar_Espada_Corta">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arma_Similar"/>
-        <Hab_Disponible_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_Coste>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_PD_Coste>
     </owl:NamedIndividual>
     
 
@@ -46018,7 +46028,7 @@ Bono: +10 a la habilidad de ataque sin armas.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Similar_Espada_Larga">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arma_Similar"/>
-        <Hab_Disponible_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_Coste>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_PD_Coste>
     </owl:NamedIndividual>
     
 
@@ -46027,7 +46037,7 @@ Bono: +10 a la habilidad de ataque sin armas.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Similar_Estilete">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arma_Similar"/>
-        <Hab_Disponible_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_Coste>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_PD_Coste>
     </owl:NamedIndividual>
     
 
@@ -46036,7 +46046,7 @@ Bono: +10 a la habilidad de ataque sin armas.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Similar_Estoque">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arma_Similar"/>
-        <Hab_Disponible_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_Coste>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_PD_Coste>
     </owl:NamedIndividual>
     
 
@@ -46045,7 +46055,7 @@ Bono: +10 a la habilidad de ataque sin armas.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Similar_Florete">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arma_Similar"/>
-        <Hab_Disponible_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_Coste>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_PD_Coste>
     </owl:NamedIndividual>
     
 
@@ -46054,7 +46064,7 @@ Bono: +10 a la habilidad de ataque sin armas.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Similar_Garfio">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arma_Similar"/>
-        <Hab_Disponible_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_Coste>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_PD_Coste>
     </owl:NamedIndividual>
     
 
@@ -46063,7 +46073,7 @@ Bono: +10 a la habilidad de ataque sin armas.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Similar_Garras">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arma_Similar"/>
-        <Hab_Disponible_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_Coste>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_PD_Coste>
     </owl:NamedIndividual>
     
 
@@ -46072,7 +46082,7 @@ Bono: +10 a la habilidad de ataque sin armas.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Similar_Garrote">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arma_Similar"/>
-        <Hab_Disponible_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_Coste>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_PD_Coste>
     </owl:NamedIndividual>
     
 
@@ -46081,7 +46091,7 @@ Bono: +10 a la habilidad de ataque sin armas.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Similar_Gran_Martillo_De_Guerra">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arma_Similar"/>
-        <Hab_Disponible_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_Coste>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_PD_Coste>
     </owl:NamedIndividual>
     
 
@@ -46090,7 +46100,7 @@ Bono: +10 a la habilidad de ataque sin armas.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Similar_Guadaña">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arma_Similar"/>
-        <Hab_Disponible_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_Coste>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_PD_Coste>
     </owl:NamedIndividual>
     
 
@@ -46099,7 +46109,7 @@ Bono: +10 a la habilidad de ataque sin armas.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Similar_Hacha_A_2_Manos">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arma_Similar"/>
-        <Hab_Disponible_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_Coste>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_PD_Coste>
     </owl:NamedIndividual>
     
 
@@ -46108,7 +46118,7 @@ Bono: +10 a la habilidad de ataque sin armas.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Similar_Hacha_De_Guerra">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arma_Similar"/>
-        <Hab_Disponible_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_Coste>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_PD_Coste>
     </owl:NamedIndividual>
     
 
@@ -46117,7 +46127,7 @@ Bono: +10 a la habilidad de ataque sin armas.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Similar_Hacha_De_Mano">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arma_Similar"/>
-        <Hab_Disponible_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_Coste>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_PD_Coste>
     </owl:NamedIndividual>
     
 
@@ -46126,7 +46136,7 @@ Bono: +10 a la habilidad de ataque sin armas.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Similar_Honda">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arma_Similar"/>
-        <Hab_Disponible_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_Coste>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_PD_Coste>
     </owl:NamedIndividual>
     
 
@@ -46135,7 +46145,7 @@ Bono: +10 a la habilidad de ataque sin armas.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Similar_Jabalina">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arma_Similar"/>
-        <Hab_Disponible_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_Coste>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_PD_Coste>
     </owl:NamedIndividual>
     
 
@@ -46144,7 +46154,7 @@ Bono: +10 a la habilidad de ataque sin armas.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Similar_Katana">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arma_Similar"/>
-        <Hab_Disponible_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_Coste>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_PD_Coste>
     </owl:NamedIndividual>
     
 
@@ -46153,7 +46163,7 @@ Bono: +10 a la habilidad de ataque sin armas.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Similar_Katana_De_Doble_Hoja">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arma_Similar"/>
-        <Hab_Disponible_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_Coste>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_PD_Coste>
     </owl:NamedIndividual>
     
 
@@ -46162,7 +46172,7 @@ Bono: +10 a la habilidad de ataque sin armas.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Similar_Katar">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arma_Similar"/>
-        <Hab_Disponible_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_Coste>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_PD_Coste>
     </owl:NamedIndividual>
     
 
@@ -46171,7 +46181,7 @@ Bono: +10 a la habilidad de ataque sin armas.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Similar_Kusari-Gama">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arma_Similar"/>
-        <Hab_Disponible_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_Coste>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_PD_Coste>
     </owl:NamedIndividual>
     
 
@@ -46180,7 +46190,7 @@ Bono: +10 a la habilidad de ataque sin armas.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Similar_Lanza">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arma_Similar"/>
-        <Hab_Disponible_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_Coste>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_PD_Coste>
     </owl:NamedIndividual>
     
 
@@ -46189,7 +46199,7 @@ Bono: +10 a la habilidad de ataque sin armas.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Similar_Lanza_De_Caballería">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arma_Similar"/>
-        <Hab_Disponible_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_Coste>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_PD_Coste>
     </owl:NamedIndividual>
     
 
@@ -46198,7 +46208,7 @@ Bono: +10 a la habilidad de ataque sin armas.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Similar_Lazo">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arma_Similar"/>
-        <Hab_Disponible_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_Coste>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_PD_Coste>
     </owl:NamedIndividual>
     
 
@@ -46207,7 +46217,7 @@ Bono: +10 a la habilidad de ataque sin armas.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Similar_Látigo">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arma_Similar"/>
-        <Hab_Disponible_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_Coste>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_PD_Coste>
     </owl:NamedIndividual>
     
 
@@ -46216,7 +46226,7 @@ Bono: +10 a la habilidad de ataque sin armas.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Similar_Mandoble">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arma_Similar"/>
-        <Hab_Disponible_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_Coste>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_PD_Coste>
     </owl:NamedIndividual>
     
 
@@ -46225,7 +46235,7 @@ Bono: +10 a la habilidad de ataque sin armas.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Similar_Mangual">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arma_Similar"/>
-        <Hab_Disponible_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_Coste>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_PD_Coste>
     </owl:NamedIndividual>
     
 
@@ -46234,7 +46244,7 @@ Bono: +10 a la habilidad de ataque sin armas.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Similar_Martillo_De_Guerra">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arma_Similar"/>
-        <Hab_Disponible_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_Coste>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_PD_Coste>
     </owl:NamedIndividual>
     
 
@@ -46243,7 +46253,7 @@ Bono: +10 a la habilidad de ataque sin armas.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Similar_Mayal">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arma_Similar"/>
-        <Hab_Disponible_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_Coste>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_PD_Coste>
     </owl:NamedIndividual>
     
 
@@ -46252,7 +46262,7 @@ Bono: +10 a la habilidad de ataque sin armas.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Similar_Maza">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arma_Similar"/>
-        <Hab_Disponible_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_Coste>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_PD_Coste>
     </owl:NamedIndividual>
     
 
@@ -46261,7 +46271,7 @@ Bono: +10 a la habilidad de ataque sin armas.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Similar_Maza_Pesada_De_Combate">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arma_Similar"/>
-        <Hab_Disponible_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_Coste>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_PD_Coste>
     </owl:NamedIndividual>
     
 
@@ -46270,7 +46280,7 @@ Bono: +10 a la habilidad de ataque sin armas.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Similar_Nodachi">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arma_Similar"/>
-        <Hab_Disponible_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_Coste>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_PD_Coste>
     </owl:NamedIndividual>
     
 
@@ -46279,7 +46289,7 @@ Bono: +10 a la habilidad de ataque sin armas.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Similar_Nunchaku">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arma_Similar"/>
-        <Hab_Disponible_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_Coste>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_PD_Coste>
     </owl:NamedIndividual>
     
 
@@ -46288,7 +46298,7 @@ Bono: +10 a la habilidad de ataque sin armas.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Similar_Pistola_De_Mecha">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arma_Similar"/>
-        <Hab_Disponible_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_Coste>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_PD_Coste>
     </owl:NamedIndividual>
     
 
@@ -46297,7 +46307,7 @@ Bono: +10 a la habilidad de ataque sin armas.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Similar_Quebradora">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arma_Similar"/>
-        <Hab_Disponible_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_Coste>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_PD_Coste>
     </owl:NamedIndividual>
     
 
@@ -46306,7 +46316,7 @@ Bono: +10 a la habilidad de ataque sin armas.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Similar_Red_De_Gladiador">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arma_Similar"/>
-        <Hab_Disponible_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_Coste>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_PD_Coste>
     </owl:NamedIndividual>
     
 
@@ -46315,7 +46325,7 @@ Bono: +10 a la habilidad de ataque sin armas.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Similar_Rodela">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arma_Similar"/>
-        <Hab_Disponible_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_Coste>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_PD_Coste>
     </owl:NamedIndividual>
     
 
@@ -46324,7 +46334,7 @@ Bono: +10 a la habilidad de ataque sin armas.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Similar_Sable">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arma_Similar"/>
-        <Hab_Disponible_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_Coste>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_PD_Coste>
     </owl:NamedIndividual>
     
 
@@ -46333,7 +46343,7 @@ Bono: +10 a la habilidad de ataque sin armas.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Similar_Sai">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arma_Similar"/>
-        <Hab_Disponible_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_Coste>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_PD_Coste>
     </owl:NamedIndividual>
     
 
@@ -46342,7 +46352,7 @@ Bono: +10 a la habilidad de ataque sin armas.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Similar_Shuko">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arma_Similar"/>
-        <Hab_Disponible_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_Coste>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_PD_Coste>
     </owl:NamedIndividual>
     
 
@@ -46351,7 +46361,7 @@ Bono: +10 a la habilidad de ataque sin armas.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Similar_Shuriken">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arma_Similar"/>
-        <Hab_Disponible_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_Coste>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_PD_Coste>
     </owl:NamedIndividual>
     
 
@@ -46360,7 +46370,7 @@ Bono: +10 a la habilidad de ataque sin armas.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Similar_Tanto">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arma_Similar"/>
-        <Hab_Disponible_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_Coste>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_PD_Coste>
     </owl:NamedIndividual>
     
 
@@ -46369,7 +46379,7 @@ Bono: +10 a la habilidad de ataque sin armas.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Similar_Tonfa">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arma_Similar"/>
-        <Hab_Disponible_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_Coste>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_PD_Coste>
     </owl:NamedIndividual>
     
 
@@ -46378,7 +46388,7 @@ Bono: +10 a la habilidad de ataque sin armas.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Similar_Tridente">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arma_Similar"/>
-        <Hab_Disponible_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_Coste>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_PD_Coste>
     </owl:NamedIndividual>
     
 
@@ -46387,7 +46397,7 @@ Bono: +10 a la habilidad de ataque sin armas.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Similar_Turcus">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arma_Similar"/>
-        <Hab_Disponible_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_Coste>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_PD_Coste>
     </owl:NamedIndividual>
     
 
@@ -46396,7 +46406,7 @@ Bono: +10 a la habilidad de ataque sin armas.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Similar_Vara">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arma_Similar"/>
-        <Hab_Disponible_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_Coste>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_Disponible_PD_Coste>
     </owl:NamedIndividual>
     
 
@@ -46753,7 +46763,7 @@ Limitación: Esta ventaja puede comprarse tantas veces como se desee. Coste: 2</
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Tabla_Arma_Distinta_Y_Desarmado">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Tabla_Armas_Generales"/>
-        <Hab_Disponible_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</Hab_Disponible_Coste>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</Hab_Disponible_PD_Coste>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El personaje domina el uso de dos armas distintas.
 
 Efectos: Otorga la capacidad de usar un arma de un tipo que no conoce el personaje.
@@ -46767,7 +46777,7 @@ Coste: 20 PD</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Tabla_Arma_Mixta">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Tabla_Armas_Generales"/>
-        <Hab_Disponible_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</Hab_Disponible_Coste>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</Hab_Disponible_PD_Coste>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El personaje domina el uso de dos armas con algunas similitudes.
 
 Efectos: Otorga la capacidad de usar un arma mixta que tiene, por lo menos, un mismo tipo en común con otra que el personaje ya conoce.
@@ -46781,7 +46791,7 @@ Coste: 15 PD</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Tabla_Arma_Similar">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Tabla_Armas_Generales"/>
-        <Hab_Disponible_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</Hab_Disponible_Coste>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</Hab_Disponible_PD_Coste>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El personaje domina el empleo de dos armas parecidas.
 
 Efectos: Otorga la capacidad de usar un arma adicional del mismo tipo que una que el personaje ya conoce.
@@ -46795,7 +46805,7 @@ Coste: 10 PD</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Tabla_Armas_Arquetípicas">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Tabla_Armas_Generales"/>
-        <Hab_Disponible_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</Hab_Disponible_Coste>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</Hab_Disponible_PD_Coste>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Estas tablas recogen una serie de armas, que utilizan ciertas profesiones tradicionales con gran maestría. Si lo deseas, puedes componer las tuyas propias, siempre que consideres que el grupo elegido guarda la suficiente relación con una profesión o figura arquetípica.</rdfs:comment>
         <ViewType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Estas tablas recogen una serie de armas, que utilizan ciertas profesiones tradicionales con gran maestría. Si lo deseas, puedes componer las tuyas propias, siempre que consideres que el grupo elegido guarda la suficiente relación con una profesión o figura arquetípica.</ViewType>
         <ViewType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MultipleChoiceDynamicLimitView</ViewType>
@@ -46807,7 +46817,7 @@ Coste: 10 PD</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Tabla_Armas_Tipología">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Tabla_Armas_Generales"/>
-        <Hab_Disponible_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</Hab_Disponible_Coste>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</Hab_Disponible_PD_Coste>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El personaje ha conseguido dominar el estilo de uso de una determinada clase de armas, pudiendo utilizar indistintamente cualquiera de ellas.
 
 Efectos: Permite utilizar una determinada tipología de armas sin aplicar ningún penalizador a su habilidad marcial. Deben de elegirse las de una clase concreta, ya sea pura o mixta. Si por ejemplo el personaje domina el uso de las espadas, podrá manejar cualquiera de ellas sin negativos, pero no así un mandoble, al ser un arma de tipología mixta.
@@ -46821,7 +46831,7 @@ Coste: 50 PD</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Tabla_Estilo_Area">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Tabla_Estilo"/>
-        <Hab_Disponible_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</Hab_Disponible_Coste>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</Hab_Disponible_PD_Coste>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El personaje se especializa en realizar maniobras amplias, con las que puede abarcar a varios enemigos con mayor facilidad.
 
 Efectos: Reduce a la mitad el penalizador de la maniobra Ataque en área, por lo que al ejecutarla, un personaje aplica sólo un -25 a su habilidad.
@@ -46835,7 +46845,7 @@ Coste: 50 PD</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Tabla_Estilo_Ataque_Encadenado">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Tabla_Estilo"/>
-        <Hab_Disponible_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</Hab_Disponible_Coste>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</Hab_Disponible_PD_Coste>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El personaje se especializa en realizar ataques adicionales usando armas de gran tamaño.
 
 Efectos: Al realizar ataques adicionales, el personaje puede usar las armas de tamaño Grande aplicando el penalizador de armas de tamaño Medio (es decir, un -30), y las de tamaño Medio como si fueran Pequeñas (un -20). No tiene efectos sobre armas Pequeñas.
@@ -46849,7 +46859,7 @@ Coste: 50 PD</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Tabla_Estilo_Desarme">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Tabla_Estilo"/>
-        <Hab_Disponible_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">40</Hab_Disponible_Coste>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">40</Hab_Disponible_PD_Coste>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Un personaje con esta habilidad se ha especializado en desarmar a sus contrincantes.
 
 Efectos: Reduce a la mitad el penalizador de la maniobra Desarmar, por lo que un personaje sufre sólo un -20 a su habilidad al ejecutarla.
@@ -46863,7 +46873,7 @@ Coste: 40 PD</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Tabla_Estilo_Precisión">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Tabla_Estilo"/>
-        <Hab_Disponible_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</Hab_Disponible_Coste>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</Hab_Disponible_PD_Coste>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El luchador tiene una gran capacidad para engatillara sus adversarios.
 
 Efectos: Reduce a la mitad el penalizador de la maniobra Engatillar, por lo que un personaje sufre sólo un -50 a su habilidad al ejecutarla.
@@ -46877,7 +46887,7 @@ Coste: 50 PD</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Tabla_Improvisadas">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Tabla_Armas_Generales"/>
-        <Hab_Disponible_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</Hab_Disponible_Coste>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</Hab_Disponible_PD_Coste>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El luchador es muy hábil usando las cosas que hay a su alrededor en combate.
 
 Efectos: Esta tabla permite utilizar cualquier tipo de objeto común como arma improvisada.
@@ -46891,7 +46901,7 @@ Coste: 50 PD</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Tabla_Lanzamiento">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Tabla_Armas_Generales"/>
-        <Hab_Disponible_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</Hab_Disponible_Coste>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</Hab_Disponible_PD_Coste>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El personaje es capaz de utilizar su puntería lanzando cualquier tipo de arma u objeto.
 
 Efectos: Adquiere la pericia de lanzar toda clase de artefactos con la misma habilidad de ataque. Téngase presente que no le permite usar físicamente las armas con la regla de Lanzable, sino sólo arrojarlas.
@@ -46905,7 +46915,7 @@ Coste: 50 PD</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Tabla_Proyección_Mágica_Ataque">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Tabla_Mística"/>
-        <Hab_Disponible_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">75</Hab_Disponible_Coste>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">75</Hab_Disponible_PD_Coste>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Representa que el personaje unifica sus conocimientos de combate con la capacidad de dirigir hechizos sobre los demás. Para él, los conjuros se comportan como verdaderas armas que puede proyectar como una auténtica habilidad marcial.
 
 Efectos: Permite utilizar la habilidad de ataque de un personaje como Proyección Mágica ofensiva. Sólo se emplea la habilidad base, y no los puntos de mejora innata que proporcionan algunas categorías de combate. No puede utilizarse para lanzar conjuros pasivos ni defensivos.
@@ -46919,7 +46929,7 @@ Coste: 75 PD</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Tabla_Proyección_Mágica_Defensa">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Tabla_Mística"/>
-        <Hab_Disponible_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">75</Hab_Disponible_Coste>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">75</Hab_Disponible_PD_Coste>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El personaje emplea sus conocimientos defensivos para proyectar sus sortilegios pasivos y escudos, como si se tratasen de armas o protecciones que interceptan los ataques de sus adversarios.
 
 Efectos: Permite utilizar la habilidad de defensa de un personaje como Proyección Mágica defensiva. Sólo se emplea la habilidad base, y no los puntos de mejora innata que proporcionan algunas categorías de combate. No puede utilizarse para dirigir conjuros de carácter ofensivo.
@@ -46946,7 +46956,7 @@ Coste: 100 PD</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Tabla_Proyectiles">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Tabla_Armas_Generales"/>
-        <Hab_Disponible_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</Hab_Disponible_Coste>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</Hab_Disponible_PD_Coste>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El personaje es capaz de utilizar su puntería con todas las armas de disparo.
 
 Efectos: Adquiere la pericia de usar cualquier arma de disparo con la misma habilidad de ataque.
@@ -46969,7 +46979,7 @@ Coste: 50 PD</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Tae_Kwon_Do">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arte_Marcial_Básica"/>
-        <Hab_Disponible_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</Hab_Disponible_Coste>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</Hab_Disponible_PD_Coste>
         <Habilidad_Conocimiento_Marcial_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-10</Habilidad_Conocimiento_Marcial_Coste>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El Tae Kwon Do es un sistema de combate ideal para combinar el uso del cuerpo con armas. Es un arte marcial que se basa principalmente
 en eficaces ataques de pierna, dirigidos con potencia y habilidad.
@@ -46990,7 +47000,7 @@ Bono: Ninguno.</rdfs:comment>
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Tai_Chi">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arte_Marcial_Básica"/>
         <Hab_RequisitoClave_1 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Uso_Del_Ki"/>
-        <Hab_Disponible_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</Hab_Disponible_Coste>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</Hab_Disponible_PD_Coste>
         <Habilidad_Conocimiento_Marcial_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-30</Habilidad_Conocimiento_Marcial_Coste>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Más que un arte marcial, el Tai Chi es una filosofía. Emplea todas las partes del cuerpo usando movimientos fluidos y elegantes, tanto que no parece un verdadero sistema de combate.
 
@@ -47847,7 +47857,7 @@ Mantenimiento: 35 / 60 / 90 / 150</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Tipología_Asta">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Armas_Tipología"/>
-        <Hab_Disponible_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</Hab_Disponible_Coste>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</Hab_Disponible_PD_Coste>
     </owl:NamedIndividual>
     
 
@@ -47856,7 +47866,7 @@ Mantenimiento: 35 / 60 / 90 / 150</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Tipología_Cortas">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Armas_Tipología"/>
-        <Hab_Disponible_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</Hab_Disponible_Coste>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</Hab_Disponible_PD_Coste>
     </owl:NamedIndividual>
     
 
@@ -47865,7 +47875,7 @@ Mantenimiento: 35 / 60 / 90 / 150</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Tipología_Cuerda">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Armas_Tipología"/>
-        <Hab_Disponible_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</Hab_Disponible_Coste>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</Hab_Disponible_PD_Coste>
     </owl:NamedIndividual>
     
 
@@ -47874,7 +47884,7 @@ Mantenimiento: 35 / 60 / 90 / 150</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Tipología_Espada">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Armas_Tipología"/>
-        <Hab_Disponible_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</Hab_Disponible_Coste>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</Hab_Disponible_PD_Coste>
     </owl:NamedIndividual>
     
 
@@ -47883,7 +47893,7 @@ Mantenimiento: 35 / 60 / 90 / 150</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Tipología_Hacha">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Armas_Tipología"/>
-        <Hab_Disponible_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</Hab_Disponible_Coste>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</Hab_Disponible_PD_Coste>
     </owl:NamedIndividual>
     
 
@@ -47892,7 +47902,7 @@ Mantenimiento: 35 / 60 / 90 / 150</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Tipología_Mandoble">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Armas_Tipología"/>
-        <Hab_Disponible_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</Hab_Disponible_Coste>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</Hab_Disponible_PD_Coste>
     </owl:NamedIndividual>
     
 
@@ -47901,7 +47911,7 @@ Mantenimiento: 35 / 60 / 90 / 150</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Tipología_Maza">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Armas_Tipología"/>
-        <Hab_Disponible_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</Hab_Disponible_Coste>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</Hab_Disponible_PD_Coste>
     </owl:NamedIndividual>
     
 
@@ -47910,7 +47920,7 @@ Mantenimiento: 35 / 60 / 90 / 150</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Tipología_Mixta">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Armas_Tipología"/>
-        <Hab_Disponible_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</Hab_Disponible_Coste>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</Hab_Disponible_PD_Coste>
     </owl:NamedIndividual>
     
 
@@ -49367,7 +49377,7 @@ Requisitos: Mantener activo Feuer</rdfs:comment>
         <Hab_RequisitoClave_2 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Extrusión_De_Presencia"/>
         <ArteMarcial_BonoEsquiva rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</ArteMarcial_BonoEsquiva>
         <ArteMarcial_BonoParadaSinArmas rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</ArteMarcial_BonoParadaSinArmas>
-        <Hab_Disponible_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</Hab_Disponible_Coste>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</Hab_Disponible_PD_Coste>
         <Habilidad_Conocimiento_Marcial_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-20</Habilidad_Conocimiento_Marcial_Coste>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Para dominar Velez es necesario que sus practicantes controlen su energía interna y sepan canalizarla. Este estilo concentra toda la potencia espiritual del artista marcial cuando golpea, permitiéndole crear un flujo de poder capaz de atravesar incluso la materia física. Sin duda es una de las artes marciales más espectaculares y raras del mundo, aunque los pocos que conocen sus secretos son reacios a transmitirlos.
 
@@ -54364,7 +54374,7 @@ El descomunal poder que poseen las almas de los Duk´zarist se manifiesta con fu
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Tabla_Estilo_Batto_Jutsu/Iai_Jutsu">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Tabla_Estilo"/>
-        <Hab_Disponible_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</Hab_Disponible_Coste>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</Hab_Disponible_PD_Coste>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Esta habilidad permite desenfundar armas con completa naturalidad.
 
 Efectos: El personaje puede desenfundar su arma sin aplicar el penalizador de - 25 a su habilidad de ataque o parada. No tiene efectos sobre armas a dos manos.
@@ -54420,8 +54430,8 @@ el potencial psíquico al usar esta disciplina.</rdfs:comment>
     <rdf:Description rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidad_Ki">
         <EditStageLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</EditStageLimit>
         <ViewType>MultipleChoiceDynamicLimitView</ViewType>
-        <rdfs:comment>Las habilidades del Ki son una serie de capacidades especiales que pueden desarrollar los personajes, utilizando sus puntos de Conocimiento Marcial. Cuando alguien domina una de ellas, esta le permite realizar acciones especiales que ningún otro ser humano es capaz de ejecutar. Cada una tiene un coste en puntos de CM, que es necesario invertir para adquirirla. Las habilidades del Ki se desarrollan siguiendo una lógica en su conocimiento y por tanto es posible que, para aprender a utilizar algunas, un individuo tenga que dominar anteriormente otras.</rdfs:comment>
         <StageLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Disponible_CM</StageLimit>
+        <rdfs:comment>Las habilidades del Ki son una serie de capacidades especiales que pueden desarrollar los personajes, utilizando sus puntos de Conocimiento Marcial. Cuando alguien domina una de ellas, esta le permite realizar acciones especiales que ningún otro ser humano es capaz de ejecutar. Cada una tiene un coste en puntos de CM, que es necesario invertir para adquirirla. Las habilidades del Ki se desarrollan siguiendo una lógica en su conocimiento y por tanto es posible que, para aprender a utilizar algunas, un individuo tenga que dominar anteriormente otras.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidad_Perceptivas">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">En este grupo se reúnen todas las habilidades perceptivas del personaje. Son las pericias que le permitirán explotar al máximo sus cinco sentidos y analizar la información obtenida.</rdfs:comment>

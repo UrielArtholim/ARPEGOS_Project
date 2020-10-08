@@ -147,7 +147,15 @@ namespace ARPEGOS.ViewModels
                 this.GeneralProgress = StageViewModel.GeneralProgress;
                 this.GeneralProgressLabel = this.GeneralLimit;
                 this.CurrentLimit = Math.Min(this.GeneralLimit, this.StageLimit);
+
+                var stageProperty = game.Ontology.Model.PropertyModel.SelectProperty(character.GetString(this.stageLimitProperty));
+                var stagePropertyDefinedAnnotations = game.Ontology.Model.PropertyModel.Annotations.IsDefinedBy.SelectEntriesBySubject(stageProperty);
+                var definition = stagePropertyDefinedAnnotations.Single().TaxonomyObject.ToString().Split('^').First();
+                var stageMax = Convert.ToDouble(character.GetValue(definition));
+                this.StageProgress = this.StageProgressLabel / stageMax;
             }
+            else
+                this.StageProgress = 1;
 
             var datalist = new ObservableCollection<Item>(character.GetIndividuals(this.CurrentStage.FullName));
             foreach (var item in datalist)

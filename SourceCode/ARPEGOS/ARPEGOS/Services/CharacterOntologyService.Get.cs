@@ -623,7 +623,7 @@ namespace ARPEGOS.Services
             double step = 1;
             var characterTypeStageName = StageViewModel.RootStage.Split('#').Last();
             var characterTypeStageString = DependencyHelper.CurrentContext.CurrentCharacter.GetString(characterTypeStageName, true);
-            var characterTypePropertyString = this.GetObjectPropertyAssociated(characterTypeStageString, true);
+            var characterTypePropertyString = this.GetObjectPropertyAssociated(characterTypeStageString, null, true);
             var characterTypeProperty = this.Ontology.Model.PropertyModel.SelectProperty(characterTypePropertyString);
             var characterTypeFact = this.Ontology.Data.Relations.Assertions.SelectEntriesByPredicate(characterTypeProperty).Single().TaxonomyObject;
             var characterTypeAssertions = this.Ontology.Data.Relations.Assertions.SelectEntriesBySubject(characterTypeFact);
@@ -749,7 +749,7 @@ namespace ARPEGOS.Services
         /// <param name="stage">Name of the stage</param>
         /// <param name="applyOnCharacter">Search inside character</param>
         /// <returns></returns>
-        public string GetObjectPropertyAssociated (string stageString, bool applyOnCharacter = false)
+        public string GetObjectPropertyAssociated (string stageString, Item currentItem = null, bool applyOnCharacter = false)
         {
             RDFOntology CurrentOntology;
             string CurrentContext;
@@ -781,6 +781,9 @@ namespace ARPEGOS.Services
                 if (ObjectPropertyAssertions.Count() > 1)
                 {
                     ObjectPropertyAssertions = ObjectPropertyAssertions.Where(entry => entry.ToString().Contains(ObjectPropertyName));
+                    //Quedarse con una única propiedad 
+                    var currentClassName = currentItem.Class;
+                    ObjectPropertyAssertions = ObjectPropertyAssertions.Where(entry => entry.Range.Value.ToString().Contains(currentClassName));
                     propertyString = ObjectPropertyAssertions.Single().ToString();
                     propertyNameFound = true;
                     break;
@@ -1034,7 +1037,8 @@ namespace ARPEGOS.Services
                     var currentSubclass = enumerator.Current;
                     var currentSubclassString = enumerator.Current.ToString();
                     var itemList = this.GetIndividuals(currentSubclassString, applyOnCharacter);
-                    subclasses.Add(new Group(currentSubclassString, itemList));
+                    var currentGroup = new Group(currentSubclassString, itemList);
+                    subclasses.Add(currentGroup);
                 }
             }
             else

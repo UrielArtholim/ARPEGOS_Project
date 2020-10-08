@@ -23,14 +23,12 @@ namespace ARPEGOS.Views
         void OnCheckedChanged(object sender, CheckedChangedEventArgs e)
         {
             var activeCheckBox = sender as CheckBox;
-            var viewModel = this.BindingContext as MultipleChoiceViewModel;
+            var viewModel = this.BindingContext as MultipleChoiceGroupViewModel;
             var activeItem = activeCheckBox.BindingContext as Item;
             var character = DependencyHelper.CurrentContext.CurrentCharacter;
-            var predicate = character.GetObjectPropertyAssociated(viewModel.CurrentStage.FullName, StageViewModel.ApplyOnCharacter);
-
+            var predicate = character.GetObjectPropertyAssociated(viewModel.CurrentStage.FullName, activeItem, StageViewModel.ApplyOnCharacter);
             if (activeCheckBox.IsChecked == true)
             {
-
                 Task.Run(async () => await MainThread.InvokeOnMainThreadAsync(() =>
                 {
                     viewModel.StageProgressLabel -= activeItem.Value;

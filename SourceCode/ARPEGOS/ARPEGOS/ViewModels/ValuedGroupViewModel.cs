@@ -27,7 +27,7 @@ namespace ARPEGOS.ViewModels
         private double generalLimit, generalProgress, generalProgressLabel;
         private bool hasGeneralLimit;
 
-        private double sliderLimit;
+        private double currentLimit;
         private bool showDescription;
         private Group lastGroup;
 
@@ -91,10 +91,10 @@ namespace ARPEGOS.ViewModels
             set => SetProperty(ref this.hasGeneralLimit, value);
         }
 
-        public double SliderLimit
+        public double CurrentLimit
         {
-            get => this.sliderLimit;
-            set => SetProperty(ref this.sliderLimit, value);
+            get => this.currentLimit;
+            set => SetProperty(ref this.currentLimit, value);
         }
 
         public bool ShowDescription
@@ -111,14 +111,14 @@ namespace ARPEGOS.ViewModels
         public ValuedGroupViewModel()
         {
             var character = DependencyHelper.CurrentContext.CurrentCharacter;
+            var game = DependencyHelper.CurrentContext.CurrentCharacter;
             this.CurrentStage = StageViewModel.CreationScheme.ElementAt(StageViewModel.CurrentStep);
             var stageString = this.CurrentStage.FullName;
             this.StageName = FileService.FormatName(stageString.Split('#').Last());
             this.stageLimitProperty = character.GetLimit(this.CurrentStage.FullName.Split('#').Last(), false, this.CurrentStage.EditGeneralLimit);
             this.StageLimit = character.GetLimitValue(this.stageLimitProperty);
             this.ShowDescription = true;
-            this.SliderLimit = this.StageLimit;
-            this.StageProgress = 1;
+            this.CurrentLimit = this.StageLimit;
             this.StageProgressLabel = this.StageLimit;
 
             if (StageViewModel.GeneralLimitProperty == null && StageName != "Nivel")
@@ -127,6 +127,23 @@ namespace ARPEGOS.ViewModels
                 StageViewModel.GeneralLimit = character.GetLimitValue(StageViewModel.GeneralLimitProperty);
                 StageViewModel.GeneralProgress = 1;
             }
+
+            if (this.HasGeneralLimit == true)
+            {
+                this.HasGeneralLimit = true;
+                this.GeneralLimit = StageViewModel.GeneralLimit;
+                this.GeneralProgress = StageViewModel.GeneralProgress;
+                this.GeneralProgressLabel = this.GeneralLimit;
+                this.CurrentLimit = Math.Min(this.GeneralLimit, this.StageLimit);
+
+                var stageProperty = game.Ontology.Model.PropertyModel.SelectProperty(character.GetString(this.stageLimitProperty));
+                var stagePropertyDefinedAnnotations = game.Ontology.Model.PropertyModel.Annotations.IsDefinedBy.SelectEntriesBySubject(stageProperty);
+                var definition = stagePropertyDefinedAnnotations.Single().TaxonomyObject.ToString().Split('^').First();
+                var stageMax = Convert.ToDouble(character.GetValue(definition));
+                this.StageProgress = this.StageProgressLabel / stageMax;
+            }
+            else
+                this.StageProgress = 1;
 
             this.SelectGroupCommand = new Command<Group>(async (group) => await MainThread.InvokeOnMainThreadAsync(() =>
             {

@@ -151,12 +151,35 @@ namespace ARPEGOS.ViewModels
                 this.GeneralProgress = StageViewModel.GeneralProgress;
                 this.GeneralProgressLabel = this.GeneralLimit;
                 this.CurrentLimit = Math.Min(this.GeneralLimit, this.StageLimit);
+
+                var stageProperty = game.Ontology.Model.PropertyModel.SelectProperty(character.GetString(this.stageLimitProperty));
+                var stagePropertyDefinedAnnotations = game.Ontology.Model.PropertyModel.Annotations.IsDefinedBy.SelectEntriesBySubject(stageProperty);
+                var definition = stagePropertyDefinedAnnotations.Single().TaxonomyObject.ToString().Split('^').First();
+                var stageMax = Convert.ToDouble(character.GetValue(definition));
+                this.StageProgress = this.StageProgressLabel / stageMax;
             }
+            else
+                this.StageProgress = 1; 
 
             var datalist = new ObservableCollection<Group>(character.GetIndividualsGrouped(this.CurrentStage.FullName));
             foreach (var item in datalist)
                 if (string.IsNullOrEmpty(item.Description) || string.IsNullOrWhiteSpace(item.Description))
                     item.HasDescription = false;
+
+            var availableItems = character.CheckAvailableOptions(this.CurrentStage.FullName, this.HasGeneralLimit, this.GeneralLimit, this.StageLimit);
+            foreach(var group in datalist)
+            {
+                foreach(var item in group)
+                {
+                    foreach(var availableItem in availableItems)
+                    {
+                        if (availableItem.FullName == item.FullName)
+                            item.IsEnabled = true;
+                        else
+                            item.IsEnabled = false;
+                    }
+                }
+            }
 
             Data = new ObservableCollection<Group>(datalist);
 
@@ -214,9 +237,26 @@ namespace ARPEGOS.ViewModels
 
             this.SelectGroupCommand = new Command<Group>(async (group) => await MainThread.InvokeOnMainThreadAsync(() =>
             {
+                var availableItems = character.CheckAvailableOptions(this.CurrentStage.FullName, this.HasGeneralLimit, this.GeneralLimit, this.StageLimit);          
                 if (lastGroup == group)
                 {
                     group.Expanded = !group.Expanded;
+                    foreach (var groupItem in group.Elements)
+                    {
+                        foreach (var item in availableItems)
+                        {
+                            if (groupItem.ShortName == item.ShortName)
+                            {
+                                groupItem.IsEnabled = true;
+                                break;
+                            }
+                            else
+                                groupItem.IsEnabled = false;
+                        }
+                    }
+                    foreach (var item in group.Elements)
+                        if (item.IsEnabled == false)
+                            group.Remove(item);
                     UpdateGroup(group);
                 }
                 else
@@ -227,6 +267,22 @@ namespace ARPEGOS.ViewModels
                         UpdateGroup(lastGroup);
                     }
                     group.Expanded = true;
+                    foreach (var groupItem in group.Elements)
+                    {
+                        foreach (var item in availableItems)
+                        {
+                            if (groupItem.ShortName == item.ShortName)
+                            {
+                                groupItem.IsEnabled = true;
+                                break;
+                            }
+                            else
+                                groupItem.IsEnabled = false;
+                        }
+                    }
+                    foreach (var item in group.Elements)
+                        if (item.IsEnabled == false)
+                            group.Remove(item);
                     UpdateGroup(group);
                 }
                 lastGroup = group;
@@ -248,20 +304,21 @@ namespace ARPEGOS.ViewModels
         public async Task UpdateView()
         {
             var character = DependencyHelper.CurrentContext.CurrentCharacter;
-            var availableItems = await Task.Run(() => character.CheckAvailableOptions(this.CurrentStage.FullName, this.CurrentStage.EditGeneralLimit, StageViewModel.GeneralLimit, this.StageLimit));
-            foreach (var group in Data)
-                foreach(var element in group)
-                    element.IsEnabled = false;
-
+            var availableItems = character.CheckAvailableOptions(this.CurrentStage.FullName, this.HasGeneralLimit, this.GeneralLimit, this.StageLimit);
             foreach (var group in Data)
             {
-                foreach (var element in group)
+                foreach (var groupItem in group)
+                {
                     foreach (var item in availableItems)
-                        if (element.ShortName == item.ShortName)
-                            element.IsEnabled = true;
+                    {
+                        if (groupItem.ShortName == item.ShortName)
+                            group.Add(groupItem);
+                        else if (group.Contains(groupItem))
+                            group.Remove(groupItem);
+                    }
+                }
                 UpdateGroup(group);
-            }
-            
+            }     
         }
         private void UpdateGroup(Group g)
         {

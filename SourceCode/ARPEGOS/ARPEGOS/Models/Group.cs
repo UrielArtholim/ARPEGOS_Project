@@ -72,7 +72,6 @@ namespace ARPEGOS
         /// <param name="expanded">State of expansion of the group</param>
         public Group (string groupString, IEnumerable<Item> groupList = null, int groupValue = 0): base(groupList)
         {
-            Elements = groupList.ToList();
             GroupString = groupString;
             Title = groupString.Split('#').Last();
             FormattedTitle = Title.Replace('_', ' ').Trim();
@@ -83,6 +82,7 @@ namespace ARPEGOS
                 this.HasDescription = false;
             else
                 this.HasDescription = true;
+            Elements = groupList.ToList();
         }
         #endregion
 

@@ -32,31 +32,31 @@ namespace ARPEGOS.Controls
             if(!currentStage.IsGrouped)
             {
                 var viewModel = App.Navigation.NavigationStack.Last().BindingContext as ValuedViewModel;
-                item.Value = slider.Value * viewModel.SliderLimit;
+                item.Value = slider.Value * viewModel.CurrentLimit;
                 if (e.NewValue > e.OldValue)
                 {
-                    viewModel.GeneralProgress -= e.NewValue * viewModel.SliderLimit / viewModel.GeneralLimit;
-                    viewModel.StageProgress -= e.NewValue * viewModel.SliderLimit / viewModel.StageLimit;   
+                    viewModel.GeneralProgress -= e.NewValue * viewModel.CurrentLimit / viewModel.GeneralLimit;
+                    viewModel.StageProgress -= e.NewValue * viewModel.CurrentLimit / viewModel.StageLimit;   
                 }
                 else if (e.NewValue < e.OldValue)
                 {
-                    viewModel.GeneralProgress += e.NewValue * viewModel.SliderLimit / viewModel.GeneralLimit;
-                    viewModel.StageProgress += e.NewValue * viewModel.SliderLimit / viewModel.StageLimit;
+                    viewModel.GeneralProgress += e.NewValue * viewModel.CurrentLimit / viewModel.GeneralLimit;
+                    viewModel.StageProgress += e.NewValue * viewModel.CurrentLimit / viewModel.StageLimit;
                 }
             }
             else
             {
                 var viewModel = App.Navigation.NavigationStack.Last().BindingContext as ValuedGroupViewModel;
-                /*item.Value = slider.Value * viewModel.SliderLimit;
+                /*item.Value = slider.Value * viewModel.CurrentLimit;
                 if (e.NewValue > e.OldValue)
                 {
-                    viewModel.GeneralProgress -= e.NewValue * viewModel.SliderLimit / viewModel.GeneralLimit;
-                    viewModel.StageProgress -= e.NewValue * viewModel.SliderLimit / viewModel.StageLimit;
+                    viewModel.GeneralProgress -= e.NewValue * viewModel.CurrentLimit / viewModel.GeneralLimit;
+                    viewModel.StageProgress -= e.NewValue * viewModel.CurrentLimit / viewModel.StageLimit;
                 }
                 else if (e.NewValue < e.OldValue)
                 {
-                    viewModel.GeneralProgress += e.NewValue * viewModel.SliderLimit / viewModel.GeneralLimit;
-                    viewModel.StageProgress += e.NewValue * viewModel.SliderLimit / viewModel.StageLimit;
+                    viewModel.GeneralProgress += e.NewValue * viewModel.CurrentLimit / viewModel.GeneralLimit;
+                    viewModel.StageProgress += e.NewValue * viewModel.CurrentLimit / viewModel.StageLimit;
                 }*/
             }
         }

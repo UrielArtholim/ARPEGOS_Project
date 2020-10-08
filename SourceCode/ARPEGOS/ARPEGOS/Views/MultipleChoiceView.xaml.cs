@@ -26,7 +26,7 @@ namespace ARPEGOS.Views
             var viewModel = this.BindingContext as MultipleChoiceViewModel;
             var activeItem = activeCheckBox.BindingContext as Item;
             var character = DependencyHelper.CurrentContext.CurrentCharacter;
-            var predicate = character.GetObjectPropertyAssociated(viewModel.CurrentStage.FullName, StageViewModel.ApplyOnCharacter);
+            var predicate = character.GetObjectPropertyAssociated(viewModel.CurrentStage.FullName, activeItem, StageViewModel.ApplyOnCharacter);
             
             if(activeCheckBox.IsChecked == true)
             {
@@ -57,7 +57,6 @@ namespace ARPEGOS.Views
                     }
                 }));
                 
-
                 // Remove assertion of item selected
                 var characterAssertions = character.GetCharacterProperties();
                 var predicateName = predicate.Split('#').Last();
