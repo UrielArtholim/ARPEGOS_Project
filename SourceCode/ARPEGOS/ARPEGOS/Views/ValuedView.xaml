@@ -4,7 +4,8 @@
              xmlns:controls="clr-namespace:ARPEGOS.Controls"
              x:Class="ARPEGOS.Views.ValuedView"
              Visual="Material"
-             Title="{Binding StageName}">
+             Title="{Binding StageName}"
+             x:Name="ValuedChoice">
     <ContentPage.Content>
         <Grid>
             <StackLayout Spacing="20" Padding="0" Margin="20,20,20,20">
@@ -74,9 +75,10 @@
                                                Source="description.png"
                                                HeightRequest="30" WidthRequest="30"
                                                BackgroundColor="Transparent"
+                                               Command="{Binding Source={x:Reference ValuedChoice}, Path=BindingContext.InfoCommand}"
+                                               CommandParameter="{Binding .}"
                                                IsEnabled="{Binding HasDescription}"
-                                               IsVisible="{Binding HasDescription}"/>
-                                        
+                                               IsVisible="{Binding HasDescription}"/>                                        
                                     </Grid>
                                 </Frame>
                             </ViewCell>

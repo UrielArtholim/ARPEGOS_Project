@@ -11656,6 +11656,7 @@ Los escudos tienen un funcionamiento diferente al del resto de las armas. Aunque
     <owl:Class rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arte_Marcial">
         <rdfs:subClassOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidad_Combate"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">En Ánima, un personaje que lucha sólo con su cuerpo puede aprender a dominar artes marciales. Cualquiera de estos estilos le permite utilizar su habilidad de ataque y parada, sin ningún penalizador, cuando combata desarmado. En cierta manera, son equivalentes a una tabla de armas con las manos desnudas, aunque además proporcionan ventajas adicionales a sus practicantes. Que un personaje adquiera un arte marcial, supone mucho más que simplemente conocer un estilo. Muchos individuos aprenden a utilizarlas, pero eso no significa que realmente sepan controlar sus ventajas. Si un personaje en Ánima conoce un arte marcial, simboliza que es un verdadero maestro que ha conseguido dominarla perfectamente.</rdfs:comment>
+        <EditGeneralLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</EditGeneralLimit>
         <EditStageLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</EditStageLimit>
         <GeneralCost rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hab_Disponible_PD_Coste</GeneralCost>
         <StageLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Disponible_Habilidad_Combate</StageLimit>
@@ -11992,6 +11993,7 @@ Per_Item_Bono, numerical: true, User_Edit: false, Bonif_Característica:Per_Ref_
     <owl:Class rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Característica_Primaria">
         <rdfs:subClassOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Característica"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lo más elemental en la creación de un personaje será determinar sus características primarias, que son las que definirán sus capacidades básicas. Puesto que no hay dos individuos iguales, cada personaje tiene también unas características diferentes tratando de representar la diversidad de sujetos que pueblan el mundo. En Ánima existen ocho características primarias distintas: Fuerza, Destreza, Agilidad, Constitución, Inteligencia, Voluntad, Poder y Percepción. Las cuatro primeras miden las capacidades físicas del personaje, mientras que las cuatro siguientes representan sus capacidades psíquicas, espirituales y perceptivas. A estas características se les debe atribuir un número para medir el grado de habilidad que se posee en cada campo concreto. Las características de un ser humano están comprendidas entre 1 y 10, aunque en algunos casos realmente excepcionales, pueden llegar a superarse dichas cifras.</rdfs:comment>
+        <EditStageLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</EditStageLimit>
         <ElementLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Límite_Característica</ElementLimit>
         <StageLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Disponible_Característica</StageLimit>
         <ValuedListInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Item_Base, numerical: true, User_Edit: true
@@ -54430,8 +54432,8 @@ el potencial psíquico al usar esta disciplina.</rdfs:comment>
     <rdf:Description rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidad_Ki">
         <EditStageLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</EditStageLimit>
         <ViewType>MultipleChoiceDynamicLimitView</ViewType>
-        <StageLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Disponible_CM</StageLimit>
         <rdfs:comment>Las habilidades del Ki son una serie de capacidades especiales que pueden desarrollar los personajes, utilizando sus puntos de Conocimiento Marcial. Cuando alguien domina una de ellas, esta le permite realizar acciones especiales que ningún otro ser humano es capaz de ejecutar. Cada una tiene un coste en puntos de CM, que es necesario invertir para adquirirla. Las habilidades del Ki se desarrollan siguiendo una lógica en su conocimiento y por tanto es posible que, para aprender a utilizar algunas, un individuo tenga que dominar anteriormente otras.</rdfs:comment>
+        <StageLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Disponible_CM</StageLimit>
     </rdf:Description>
     <rdf:Description rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidad_Perceptivas">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">En este grupo se reúnen todas las habilidades perceptivas del personaje. Son las pericias que le permitirán explotar al máximo sus cinco sentidos y analizar la información obtenida.</rdfs:comment>

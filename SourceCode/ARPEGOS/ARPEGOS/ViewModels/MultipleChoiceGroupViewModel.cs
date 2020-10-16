@@ -55,6 +55,12 @@ namespace ARPEGOS.ViewModels
             set => SetProperty(ref this.stageLimit, value);
         }
 
+        public string StageLimitProperty
+        {
+            get => this.stageLimitProperty;
+            set => SetProperty(ref this.stageLimitProperty, value);
+        }
+
         public double StageProgress
         {
             get => this.stageProgress;
@@ -128,7 +134,7 @@ namespace ARPEGOS.ViewModels
             this.CurrentStage = StageViewModel.CreationScheme.ElementAt(StageViewModel.CurrentStep);
             var stageString = this.CurrentStage.FullName; //https://arpegos-project.org/games/anima/characters/1#Arte_Marcial
             this.StageName = FileService.FormatName(stageString.Split('#').Last());
-            this.stageLimitProperty = character.GetLimit(this.CurrentStage.FullName.Split('#').Last(), false, this.CurrentStage.EditGeneralLimit);
+            this.StageLimitProperty = character.GetLimit(this.CurrentStage.FullName.Split('#').Last(), false, this.CurrentStage.EditGeneralLimit);
             this.StageLimit = character.GetLimitValue(this.stageLimitProperty);
             this.StageProgressLabel = this.StageLimit;
             // Actualizar stageProgress
@@ -166,10 +172,13 @@ namespace ARPEGOS.ViewModels
                 if (string.IsNullOrEmpty(item.Description) || string.IsNullOrWhiteSpace(item.Description))
                     item.HasDescription = false;
 
-            var availableItems = character.CheckAvailableOptions(this.CurrentStage.FullName, this.HasGeneralLimit, this.GeneralLimit, this.StageLimit);
+            var availableItems = character.CheckAvailableOptions(this.CurrentStage.FullName, this.HasGeneralLimit, StageViewModel.GeneralLimitProperty, this.GeneralLimit, this.StageLimitProperty, this.StageLimit);
+            // Add data aux & group
+            
             foreach(var group in datalist)
             {
-                foreach(var item in group)
+                var updatedGroup = group;
+                foreach(var item in group.Elements)
                 {
                     foreach(var availableItem in availableItems)
                     {
@@ -237,7 +246,7 @@ namespace ARPEGOS.ViewModels
 
             this.SelectGroupCommand = new Command<Group>(async (group) => await MainThread.InvokeOnMainThreadAsync(() =>
             {
-                var availableItems = character.CheckAvailableOptions(this.CurrentStage.FullName, this.HasGeneralLimit, this.GeneralLimit, this.StageLimit);          
+                var availableItems = character.CheckAvailableOptions(this.CurrentStage.FullName, this.HasGeneralLimit, StageViewModel.GeneralLimitProperty, this.GeneralLimit, this.StageLimitProperty, this.StageLimit);
                 if (lastGroup == group)
                 {
                     group.Expanded = !group.Expanded;
@@ -301,30 +310,41 @@ namespace ARPEGOS.ViewModels
         #endregion
 
         #region Methods
-        public async Task UpdateView()
+        public void UpdateView()
         {
             var character = DependencyHelper.CurrentContext.CurrentCharacter;
-            var availableItems = character.CheckAvailableOptions(this.CurrentStage.FullName, this.HasGeneralLimit, this.GeneralLimit, this.StageLimit);
+            var availableItems = character.CheckAvailableOptions(this.CurrentStage.FullName, this.HasGeneralLimit, StageViewModel.GeneralLimitProperty, this.GeneralLimit, this.StageLimitProperty, this.StageLimit);
+            var updatedDatalist = new ObservableCollection<Group>(Data);
             foreach (var group in Data)
             {
+                var updatedGroup = new Group(group);
                 foreach (var groupItem in group)
                 {
                     foreach (var item in availableItems)
                     {
                         if (groupItem.ShortName == item.ShortName)
-                            group.Add(groupItem);
-                        else if (group.Contains(groupItem))
-                            group.Remove(groupItem);
+                        {
+                            if (!updatedGroup.Contains(groupItem))
+                                updatedGroup.Add(groupItem);
+                        }
+                        else
+                            if (updatedGroup.Contains(groupItem))
+                            updatedGroup.Remove(groupItem);
                     }
                 }
-                UpdateGroup(group);
-            }     
+                updatedDatalist.Add(updatedGroup);
+            }
+            Data.Clear();
+            Data.AddRange(updatedDatalist);
         }
         private void UpdateGroup(Group g)
         {
-            var index = Data.IndexOf(g);
+            var index = Data.IndexOf(Data.Where(group => group.GroupString == g.GroupString).Single());
             Data.Remove(g);
-            Data.Insert(index, g);
+            if (index >= Data.Count())
+                Data.Add(g);
+            else
+                Data.Insert(index, g);
         }
         #endregion
     }

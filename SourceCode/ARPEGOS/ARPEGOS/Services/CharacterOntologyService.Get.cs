@@ -294,7 +294,7 @@ namespace ARPEGOS.Services
                 CurrentOntology = DependencyHelper.CurrentContext.CurrentGame.Ontology;
                 CurrentContext = DependencyHelper.CurrentContext.CurrentGame.Context;
             }
-
+            var CostWords = new List<string> { "Coste", "Cost", "Coût" };
             var ClassModel = CurrentOntology.Model.ClassModel;
             var DataModel = CurrentOntology.Data;
             var currentClass = ClassModel.SelectClass(currentClassString);
@@ -308,9 +308,46 @@ namespace ARPEGOS.Services
                 if(individualDescriptionEntries.EntriesCount > 0)
                     individualDescription = individualDescriptionEntries.Single().TaxonomyObject.ToString().Split('^').First();
                 var individualString = individualFact.ToString();
-                individuals.Add(new Item(individualString, individualDescription, currentClassName));
-            }
+                var individualAssertions = CurrentOntology.Data.Relations.Assertions.SelectEntriesBySubject(individualFact);
+                var individualCostAssertions = individualAssertions.Where(entry => CostWords.Any(word => entry.TaxonomyPredicate.ToString().Contains(word)));
+                double individualValue = 1;
+                if (individualCostAssertions.Count() > 1)
+                {
+                    var currentClassCustomAnnotations = CurrentOntology.Model.ClassModel.Annotations.CustomAnnotations.SelectEntriesBySubject(currentClass);
+                    var currentClassGeneralCostAnnotation = currentClassCustomAnnotations.Where(entry => entry.TaxonomyPredicate.ToString().Contains("GeneralCost"));
+                    if(currentClassGeneralCostAnnotation.Count() > 0)
+                    {
+                        var currentClassGeneralCost = currentClassGeneralCostAnnotation.Single().TaxonomyObject.ToString().Split('^').First();
+                        var individualGeneralCostAssertion = individualCostAssertions.Where(entry => entry.TaxonomyPredicate.ToString().Contains(currentClassGeneralCost));
+                        individualValue = Convert.ToDouble(individualCostAssertions.Single().TaxonomyObject.ToString().Split('^').First());
+                    }
+                    else
+                    {
+                        var parentClassAssertions = CurrentOntology.Model.ClassModel.Relations.SubClassOf.SelectEntriesBySubject(currentClass);
+                        RDFOntologyClass parentClass;
+                        if (parentClassAssertions.Count() > 0)
+                        {
+                            if (parentClassAssertions.Count() > 1)
+                                parentClass = parentClassAssertions.First().TaxonomyObject as RDFOntologyClass;
+                            else    
+                                parentClass = parentClassAssertions.Single().TaxonomyObject as RDFOntologyClass;
+                            currentClassCustomAnnotations = CurrentOntology.Model.ClassModel.Annotations.CustomAnnotations.SelectEntriesBySubject(parentClass);
+                            currentClassGeneralCostAnnotation = currentClassCustomAnnotations.Where(entry => entry.TaxonomyPredicate.ToString().Contains("GeneralCost"));
+                            if (currentClassGeneralCostAnnotation.Count() > 0)
+                            {
+                                var currentClassGeneralCost = currentClassGeneralCostAnnotation.Single().TaxonomyObject.ToString().Split('^').First();
+                                var individualGeneralCostAssertion = individualCostAssertions.Where(entry => entry.TaxonomyPredicate.ToString().Contains(currentClassGeneralCost));
+                                if(individualGeneralCostAssertion.Count() > 0)
+                                    individualValue = Convert.ToDouble(individualGeneralCostAssertion.Single().TaxonomyObject.ToString().Split('^').First());
+                            }
+                        }
+                    }
+                }
+                else if (individualCostAssertions.Count() == 1)
+                    individualValue = Convert.ToDouble(individualCostAssertions.Single().TaxonomyObject.ToString().Split('^').First());
 
+                individuals.Add(new Item(individualString, individualDescription, currentClassName, individualValue));
+            }
             return individuals;
         }//MODIFIED
 
@@ -376,16 +413,19 @@ namespace ARPEGOS.Services
 
             var ElementClass = CurrentOntology.Model.ClassModel.SelectClass(currentElementString);
             var ElementClassAnnotations = CurrentOntology.Data.Annotations.CustomAnnotations.SelectEntriesBySubject(ElementClass);
-            var ElementGeneralCostAnnotation = ElementClassAnnotations.Where(entry => entry.TaxonomyPredicate.ToString().Contains("GeneralCostDefinedBy")).Single();
-            var generalCostAnnotationFound = (ElementGeneralCostAnnotation != null);
+            var GeneralLimitAnnotations = ElementClassAnnotations.Where(entry => entry.TaxonomyPredicate.ToString().Contains("GeneralLimit"));
+            if(GeneralLimitAnnotations.Count() == 0)
+                GeneralLimitAnnotations = CurrentOntology.Model.PropertyModel.Annotations.CustomAnnotations.Where(entry => entry.TaxonomyPredicate.ToString().Contains("GeneralLimit"));
 
+            var GeneralLimitAnnotation = GeneralLimitAnnotations.First();
+            var generalCostAnnotationFound = (GeneralLimitAnnotation != null);
             if (generalCostAnnotationFound)
             {
-                var AnnotationValue = ElementGeneralCostAnnotation.TaxonomyObject.ToString();
-                if (string.IsNullOrEmpty(AnnotationValue))
+                var ElementValue = GeneralLimitAnnotation.TaxonomySubject.ToString();
+                if (string.IsNullOrEmpty(ElementValue))
                     return null;
 
-                var GeneralCostProperty = PropertyModel.SelectProperty(AnnotationValue);
+                var GeneralCostProperty = PropertyModel.SelectProperty(ElementValue);
                 ResultProperties.Add(GeneralCostProperty);
                 FilterResultsCounter = ResultProperties.Count();
             }
@@ -610,10 +650,14 @@ namespace ARPEGOS.Services
                             var definition = LimitAnnotationEntries.Single().TaxonomyObject.ToString().Split('^').First();
                             LimitValueString = character.GetValue(definition).ToString();
                             character.UpdateDatatypeAssertion(CharacterLimitString, LimitValueString);
-                        }
-                        
+                        }                        
                     }
                 }
+            }
+            if(string.IsNullOrEmpty(LimitName))
+            {
+                var stageParentClassString = game.Ontology.Model.ClassModel.Relations.SubClassOf.SelectEntriesBySubject(stageClass).Single().TaxonomyObject.ToString();
+                LimitName = this.GetLimit(stageParentClassString, isGeneral, editGeneralLimit);
             }
             return LimitName;
         }//MODIFIED
@@ -721,25 +765,27 @@ namespace ARPEGOS.Services
                     if (LimitValue.ToString() != value)
                     {
                         var StagePartialLimitName = GetLimit(stageString);
-                        LimitValue = GetLimitValue(StagePartialLimitName);
-                        if (LimitValue.ToString() != value)
+                        if(!string.IsNullOrEmpty(StagePartialLimitName))
                         {
-                            var parents = GetParentClasses(stageString);
-                            if (parents != null)
+                            LimitValue = GetLimitValue(StagePartialLimitName);
+                            if (LimitValue.ToString() != value)
                             {
-                                var parentList = parents.Split('|').ToList();
-                                foreach (string parent in parentList)
-                                    Limit = GetLimitByValue(parent, value);
+                                var parents = GetParentClasses(stageString);
+                                if (parents != null)
+                                {
+                                    var parentList = parents.Split('|').ToList();
+                                    foreach (string parent in parentList)
+                                        Limit = GetLimitByValue(parent, value);
+                                }
                             }
-                        }
-                        else
-                            Limit = StagePartialLimitName;
+                            else
+                                Limit = StagePartialLimitName;
+                        }                        
                     }
                     else
                         Limit = StageGeneralLimit;
                 }
             }
-
             return Limit;
         }//MODIFIED*/
 

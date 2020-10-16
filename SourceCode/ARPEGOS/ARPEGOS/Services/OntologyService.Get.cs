@@ -41,6 +41,8 @@ namespace ARPEGOS.Services
             ObservableCollection<Stage> Scheme = new ObservableCollection<Stage>();
             foreach(var name in schemeStages)
             {
+                editStageLimit = false;
+                editGeneralLimit = false;
                 var stepStageString = character.GetString(name, StageViewModel.ApplyOnCharacter);
 
                 RDFOntologyTaxonomy gameCustomAnnotations;
@@ -55,6 +57,7 @@ namespace ARPEGOS.Services
                     var EditStageLimitAnnotationEntries = StageCustomAnnotations.Where(entry => entry.TaxonomyPredicate.ToString().Contains("EditStageLimit"));
                     if (EditStageLimitAnnotationEntries.Count() > 0)
                         editStageLimit = true;
+
 
                     var EditGeneralLimitAnnotationEntries = StageCustomAnnotations.Where(entry => entry.TaxonomyPredicate.ToString().Contains("EditGeneralLimit"));
                     if (EditGeneralLimitAnnotationEntries.Count() > 0)

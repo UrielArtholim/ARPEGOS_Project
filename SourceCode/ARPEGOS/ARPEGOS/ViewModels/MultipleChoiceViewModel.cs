@@ -54,6 +54,12 @@ namespace ARPEGOS.ViewModels
             set => SetProperty(ref this.stageLimit, value);
         }
 
+        public string StageLimitProperty
+        {
+            get => this.stageLimitProperty;
+            set => SetProperty(ref this.stageLimitProperty, value);
+        }
+
         public double StageProgress
         {
             get => this.stageProgress;
@@ -125,7 +131,7 @@ namespace ARPEGOS.ViewModels
             this.CurrentStage = StageViewModel.CreationScheme.ElementAt(StageViewModel.CurrentStep);
             var stageString = this.CurrentStage.FullName;
             this.StageName = FileService.FormatName(stageString.Split('#').Last());
-            this.stageLimitProperty = character.GetLimit(this.CurrentStage.FullName.Split('#').Last(), false, this.CurrentStage.EditGeneralLimit);
+            this.StageLimitProperty = character.GetLimit(this.CurrentStage.FullName.Split('#').Last(), false, this.CurrentStage.EditGeneralLimit);
             this.StageLimit = character.GetLimitValue(this.stageLimitProperty);
             this.StageProgressLabel = this.StageLimit;
             this.StageProgress = 1;
@@ -142,7 +148,6 @@ namespace ARPEGOS.ViewModels
 
             if (this.HasGeneralLimit == true)
             {
-                this.HasGeneralLimit = true;
                 this.GeneralLimit = StageViewModel.GeneralLimit;
                 this.GeneralProgress = StageViewModel.GeneralProgress;
                 this.GeneralProgressLabel = this.GeneralLimit;
@@ -225,7 +230,7 @@ namespace ARPEGOS.ViewModels
         public async Task UpdateView()
         {
             var character = DependencyHelper.CurrentContext.CurrentCharacter;
-            var availableItems = await Task.Run(()=> character.CheckAvailableOptions(this.CurrentStage.FullName, this.CurrentStage.EditGeneralLimit, StageViewModel.GeneralLimit, this.StageLimit));
+            var availableItems = await Task.Run(()=> character.CheckAvailableOptions(this.CurrentStage.FullName, this.CurrentStage.EditGeneralLimit, StageViewModel.GeneralLimitProperty, StageViewModel.GeneralLimit, this.StageLimitProperty, this.StageLimit));
             foreach(var element in Data)
                 element.IsEnabled = false;
             foreach(var element in Data)

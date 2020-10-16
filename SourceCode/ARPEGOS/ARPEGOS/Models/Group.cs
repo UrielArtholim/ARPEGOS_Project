@@ -84,6 +84,17 @@ namespace ARPEGOS
                 this.HasDescription = true;
             Elements = groupList.ToList();
         }
+
+        public Group(Group g)
+        {
+            this.GroupString = g.GroupString;
+            this.Title = g.Title;
+            this.FormattedTitle = g.FormattedTitle;
+            this.Expanded = g.Expanded;
+            this.Value = g.Value;
+            this.Description = g.Description;
+            this.Elements = new List<Item>(g.Elements);
+        }
         #endregion
 
         #region Methods

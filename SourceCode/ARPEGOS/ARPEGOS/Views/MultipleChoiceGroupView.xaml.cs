@@ -20,7 +20,16 @@ namespace ARPEGOS.Views
             this.BindingContext = new MultipleChoiceGroupViewModel();
         }
 
-        void OnCheckedChanged(object sender, CheckedChangedEventArgs e)
+        protected override bool OnBackButtonPressed()
+        {
+            if (StageViewModel.CreationScheme.Count() > 0 && StageViewModel.CurrentStep > 1)
+                --StageViewModel.CurrentStep;
+            else
+                StageViewModel.CurrentStep = 0;
+            return base.OnBackButtonPressed();
+        }
+
+        async void OnCheckedChanged(object sender, CheckedChangedEventArgs e)
         {
             var activeCheckBox = sender as CheckBox;
             var viewModel = this.BindingContext as MultipleChoiceGroupViewModel;
@@ -29,7 +38,7 @@ namespace ARPEGOS.Views
             var predicate = character.GetObjectPropertyAssociated(viewModel.CurrentStage.FullName, activeItem, StageViewModel.ApplyOnCharacter);
             if (activeCheckBox.IsChecked == true)
             {
-                Task.Run(async () => await MainThread.InvokeOnMainThreadAsync(() =>
+                 await MainThread.InvokeOnMainThreadAsync(() =>
                 {
                     viewModel.StageProgressLabel -= activeItem.Value;
                     viewModel.StageProgress -= activeItem.Value / viewModel.StageLimit;
@@ -38,13 +47,13 @@ namespace ARPEGOS.Views
                         viewModel.GeneralProgressLabel -= activeItem.Value;
                         viewModel.GeneralProgress -= activeItem.Value / viewModel.StageLimit;
                     }
-                }));
+                });
                 character.UpdateObjectAssertion(predicate, activeItem.FullName);
             }
             // Update assertion of item selected
             else
             {
-                Task.Run(async () => await MainThread.InvokeOnMainThreadAsync(() =>
+                 await MainThread.InvokeOnMainThreadAsync(() =>
                 {
                     viewModel.StageProgressLabel += activeItem.Value;
                     viewModel.StageProgress += activeItem.Value / viewModel.StageLimit;
@@ -53,7 +62,7 @@ namespace ARPEGOS.Views
                         viewModel.GeneralProgressLabel += activeItem.Value;
                         viewModel.GeneralProgress += activeItem.Value / viewModel.StageLimit;
                     }
-                }));
+                });
 
                 // Remove assertion of item selected
                 var characterAssertions = character.GetCharacterProperties();
@@ -67,7 +76,7 @@ namespace ARPEGOS.Views
                 }
             }
             if (viewModel.HasGeneralLimit == true)
-                Task.Run(async () => await viewModel.UpdateView());
+                Task.WaitAny(Task.Run(()=> viewModel.UpdateView()));
         }
     }
 }

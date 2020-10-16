@@ -265,7 +265,7 @@ namespace ARPEGOS.Services
         /// <param name="GeneralLimitValue">Value of the general limit</param>
         /// <param name="PartialLimitValue">Value of the partial limit</param>
         /// <returns></returns>
-        public List<Item> CheckAvailableOptions (string stageString, bool hasGeneralLimitValue, double generalLimitValue, double partialLimitValue)
+        public List<Item> CheckAvailableOptions (string stageString, bool hasGeneralLimitValue, string GeneralLimitName, double generalLimitValue, string StageLimitName, double partialLimitValue)
         {
             RDFOntology GameOntology = DependencyHelper.CurrentContext.CurrentGame.Ontology;
             var costWords = new List<string> { "Coste", "Cost", "Coût" };
@@ -273,6 +273,7 @@ namespace ARPEGOS.Services
             var stageOptions = new List<Item>();
             var availableOptions = new List<Item>();
             // Check if stage has subclasses
+
             var stageGroups = this.GetIndividualsGrouped(stageString);
             if(stageGroups != null)
             {
@@ -420,82 +421,79 @@ namespace ARPEGOS.Services
                             {
                                 var costValue = Convert.ToSingle(itemCostEntry.TaxonomyObject.ToString().Split('^').First());
                                 var itemCostEntryPredicate = itemCostEntry.TaxonomyPredicate.ToString();
-                                var generalLimitName = this.GetLimitByValue(stageString, generalLimitValue.ToString());
-                                var firstWord = generalLimitName.Split('_').ToList().FirstOrDefault() + "_";
-                                generalLimitName = generalLimitName.Replace("Per_", "");
 
-                                var costMatchGeneralLimit = CheckCostAndLimit(itemCostEntryPredicate, generalLimitName);
-                                if (costMatchGeneralLimit == false)
+                                var matchPartialLimit = CheckCostAndLimit(itemCostEntryPredicate, StageLimitName);
+                                var matchGeneralLimit = CheckCostAndLimit(itemCostEntryPredicate, GeneralLimitName);
+                                if (!matchPartialLimit && !matchGeneralLimit)
                                 {
-                                    var partialLimitName = this.GetLimitByValue(stageString, partialLimitValue.ToString());
-                                    var costMatchPartialLimit = CheckCostAndLimit(itemCostEntryPredicate, partialLimitName);
-                                    if (itemCostEntryPredicate != partialLimitName)
-                                    {
-                                        var itemCostWords = itemCostEntryPredicate.Split('#').Last().Split('_').ToList();
-                                        var characterClass = new List<string> { "Personaje", "Character", "Personnage" };
-                                        var characterDatatatypePropertyFound = false;
-                                        var index = 0;
-                                        itemCostWords.Remove(itemCostWords.First());
+                                    var itemCostWords = itemCostEntryPredicate.Split('#').Last().Split('_').ToList();
+                                    var characterClass = new List<string> { "Personaje", "Character", "Personnage" };
+                                    var characterDatatatypePropertyFound = false;
+                                    var index = 0;
+                                    itemCostWords.Remove(itemCostWords.First());
 
-                                        while (!characterDatatatypePropertyFound)
+                                    while (!characterDatatatypePropertyFound)
+                                    {
+                                        var property = this.Ontology.Model.PropertyModel.ElementAtOrDefault(index);
+                                        if (this.CheckDatatypeProperty(property.ToString()))
                                         {
-                                            var property = this.Ontology.Model.PropertyModel.ElementAtOrDefault(index);
-                                            if (this.CheckDatatypeProperty(property.ToString()))
+                                            var datatypeProperty = property as RDFOntologyDatatypeProperty;
+                                            if (datatypeProperty.Domain != null)
                                             {
-                                                var datatypeProperty = property as RDFOntologyDatatypeProperty;
-                                                if (datatypeProperty.Domain != null)
+                                                var domainClass = datatypeProperty.Domain.ToString();
+                                                if (characterClass.Any(word => domainClass.Contains(word)))
                                                 {
-                                                    var domainClass = datatypeProperty.Domain.ToString();
-                                                    if (characterClass.Any(word => domainClass.Contains(word)))
+                                                    if (!characterClass.Any(word => datatypeProperty.ToString().Contains(word)))
                                                     {
-                                                        if (!characterClass.Any(word => datatypeProperty.ToString().Contains(word)))
-                                                        {
-                                                            var datatypePropertyFirstWord = datatypeProperty.ToString().Split('#').Last().Split('_').FirstOrDefault();
-                                                            itemCostWords.Insert(0, datatypePropertyFirstWord);
-                                                            characterDatatatypePropertyFound = true;
-                                                        }
+                                                        var datatypePropertyFirstWord = datatypeProperty.ToString().Split('#').Last().Split('_').FirstOrDefault();
+                                                        itemCostWords.Insert(0, datatypePropertyFirstWord);
+                                                        characterDatatatypePropertyFound = true;
                                                     }
                                                 }
                                             }
-                                            ++index;
                                         }
-
-                                        if (costWords.Any(word => itemCostEntryPredicate.Contains(word)))
-                                        {
-                                            itemCostWords.Remove(itemCostWords.Last());
-                                            itemCostWords.Add("Total");
-                                            var itemCostName = string.Join("_", itemCostWords);
-                                            if (string.IsNullOrEmpty(this.GetString(itemCostName)))
-                                                itemCostWords.Remove(itemCostWords.Last());
-                                        }
-
-                                        var requirementCostName = string.Join('_', itemCostWords);
-                                        var requirementCostString = GetString(requirementCostName, true);
-                                        var characterFact = this.Ontology.Data.SelectFact($"{this.Context}{FileService.EscapedName(this.Name)}");
-
-                                        if (!(this.Ontology.Model.PropertyModel.SelectProperty(requirementCostString) is RDFOntologyDatatypeProperty requirementCostProperty))
-                                        {
-                                            IEnumerable<RDFOntologyTaxonomyEntry> requirementCostAssertions = this.Ontology.Data.Relations.Assertions.SelectEntriesBySubject(characterFact);
-                                            requirementCostAssertions = requirementCostAssertions.Where(entry => itemCostWords.All(word => entry.TaxonomyPredicate.ToString().Contains(word)));
-                                            requirementCostString = requirementCostAssertions.SingleOrDefault().TaxonomyPredicate.ToString();
-                                            requirementCostProperty = this.Ontology.Model.PropertyModel.SelectProperty(requirementCostString) as RDFOntologyDatatypeProperty;
-                                        }
-
-                                        var entry = this.Ontology.Data.Relations.Assertions.SelectEntriesBySubject(characterFact).SelectEntriesByPredicate(requirementCostProperty).SingleOrDefault();
-                                        var entryValue = Convert.ToSingle(entry.TaxonomyObject.ToString().Split('^').First());
-                                        if (entryValue >= costValue)
-                                            availableOptions.Add(new Item(item.FullName));
+                                        ++index;
                                     }
-                                    else
+
+                                    if (costWords.Any(word => itemCostEntryPredicate.Contains(word)))
                                     {
-                                        if (generalLimitValue >= costValue && partialLimitValue >= costValue)
-                                            availableOptions.Add(new Item(item.FullName));
+                                        itemCostWords.Remove(itemCostWords.Last());
+                                        itemCostWords.Add("Total");
+                                        var itemCostName = string.Join("_", itemCostWords);
+                                        if (string.IsNullOrEmpty(this.GetString(itemCostName)))
+                                            itemCostWords.Remove(itemCostWords.Last());
+                                    }
+
+                                    var requirementCostName = string.Join('_', itemCostWords);
+                                    var requirementCostString = GetString(requirementCostName, true);
+                                    var characterFact = this.Ontology.Data.SelectFact($"{this.Context}{FileService.EscapedName(this.Name)}");
+
+                                    if (!(this.Ontology.Model.PropertyModel.SelectProperty(requirementCostString) is RDFOntologyDatatypeProperty requirementCostProperty))
+                                    {
+                                        IEnumerable<RDFOntologyTaxonomyEntry> requirementCostAssertions = this.Ontology.Data.Relations.Assertions.SelectEntriesBySubject(characterFact);
+                                        requirementCostAssertions = requirementCostAssertions.Where(entry => itemCostWords.All(word => entry.TaxonomyPredicate.ToString().Contains(word)));
+                                        requirementCostString = requirementCostAssertions.SingleOrDefault().TaxonomyPredicate.ToString();
+                                        requirementCostProperty = this.Ontology.Model.PropertyModel.SelectProperty(requirementCostString) as RDFOntologyDatatypeProperty;
+                                    }
+
+                                    var entry = this.Ontology.Data.Relations.Assertions.SelectEntriesBySubject(characterFact).SelectEntriesByPredicate(requirementCostProperty).SingleOrDefault();
+                                    var entryValue = Convert.ToSingle(entry.TaxonomyObject.ToString().Split('^').First());
+                                    if (entryValue >= costValue)
+                                    {
+                                        if (hasGeneralLimitValue)
+                                            if (generalLimitValue >= costValue)
+                                                availableOptions.Add(new Item(item.FullName));
+                                            else
+                                                availableOptions.Add(new Item(item.FullName));
                                     }
                                 }
                                 else
                                 {
-                                    if (generalLimitValue >= costValue)
-                                        availableOptions.Add(new Item(item.FullName));
+                                    if (hasGeneralLimitValue)
+                                        if (generalLimitValue >= costValue && partialLimitValue >= costValue)
+                                            availableOptions.Add(new Item(item.FullName));
+                                        else if (partialLimitValue >= costValue)
+                                            availableOptions.Add(new Item(item.FullName));
                                 }
                             }
                         }

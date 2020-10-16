@@ -20,6 +20,15 @@ namespace ARPEGOS.Views
             InitializeComponent();
             this.BindingContext = new MultipleChoiceViewModel();
         }
+        protected override bool OnBackButtonPressed()
+        {
+            if (StageViewModel.CreationScheme.Count() > 0 && StageViewModel.CurrentStep > 1)
+                --StageViewModel.CurrentStep;
+            else
+                StageViewModel.CurrentStep = 0;
+            return base.OnBackButtonPressed();
+        }
+
         void OnCheckedChanged(object sender, CheckedChangedEventArgs e)
         {
             var activeCheckBox = sender as CheckBox;

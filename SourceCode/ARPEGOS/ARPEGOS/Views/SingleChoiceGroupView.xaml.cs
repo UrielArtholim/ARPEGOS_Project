@@ -20,6 +20,15 @@ namespace ARPEGOS.Views
             this.BindingContext = new SingleChoiceGroupViewModel();
         }
 
+        protected override bool OnBackButtonPressed()
+        {
+            if (StageViewModel.CreationScheme.Count() > 0 && StageViewModel.CurrentStep > 1)
+                --StageViewModel.CurrentStep;
+            else
+                StageViewModel.CurrentStep = 0;
+            return base.OnBackButtonPressed();
+        }
+
         void OnCheckedChanged(object sender, CheckedChangedEventArgs e)
         {
             var activeRadioButton = sender as RadioButton;

@@ -18,8 +18,16 @@ namespace ARPEGOS.Views
             InitializeComponent();
             this.BindingContext = new ValuedViewModel();
         }
+        protected override bool OnBackButtonPressed()
+        {
+            if (StageViewModel.CreationScheme.Count() > 0 && StageViewModel.CurrentStep > 1)
+                --StageViewModel.CurrentStep;
+            else
+                StageViewModel.CurrentStep = 0;
+            return base.OnBackButtonPressed();
+        }
 
-        void OnValueChanged(object sender, ValueChangedEventArgs e)
+        async void OnValueChanged(object sender, ValueChangedEventArgs e)
         {
             var viewModel = this.BindingContext as ValuedViewModel;
             var entry = sender as Stepper;
@@ -60,7 +68,7 @@ namespace ARPEGOS.Views
                 ++item.Value;
                 if (viewModel.CurrentStage.EditStageLimit == true)
                 {
-                    Task.Run(async () => await MainThread.InvokeOnMainThreadAsync(() =>
+                    await MainThread.InvokeOnMainThreadAsync(() =>
                     {
                         viewModel.StageProgressLabel -= Convert.ToDouble(item.Step);
                         viewModel.StageProgress -= Convert.ToDouble(item.Step / viewModel.StageLimit);
@@ -69,14 +77,14 @@ namespace ARPEGOS.Views
                             viewModel.GeneralProgressLabel -= Convert.ToDouble(item.Step);
                             viewModel.GeneralProgress -= Convert.ToDouble(item.Step / viewModel.GeneralLimit);
                         }
-                    }));
+                    });
                 }
             }
             else if (OldValue > NewValue)
             {
                 if (viewModel.CurrentStage.EditStageLimit == true)
                 {
-                    Task.Run(async () => await MainThread.InvokeOnMainThreadAsync(() =>
+                    await MainThread.InvokeOnMainThreadAsync(() =>
                     {
                         --item.Value;
                         viewModel.StageProgressLabel += Convert.ToDouble(item.Step);
@@ -86,7 +94,7 @@ namespace ARPEGOS.Views
                             viewModel.GeneralProgressLabel += Convert.ToDouble(item.Step);
                             viewModel.GeneralProgress += Convert.ToDouble(item.Step / viewModel.GeneralLimit);
                         }
-                    }));
+                    });
                 }
             }
         }
