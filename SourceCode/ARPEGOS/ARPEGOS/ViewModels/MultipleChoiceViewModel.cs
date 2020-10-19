@@ -20,7 +20,7 @@ namespace ARPEGOS.ViewModels
         #region Properties
         #region Private
         private DialogService dialogService = new DialogService();
-        private ObservableCollection<Item> data;
+        private ObservableCollection<Item> data, elements;
         private Stage currentStage;
         private string stageName, stageLimitProperty;
         private double stageLimit, stageProgress, stageProgressLabel;
@@ -112,6 +112,12 @@ namespace ARPEGOS.ViewModels
             get => this.showDescription;
             set => SetProperty(ref this.showDescription, value);
         }
+
+        public ObservableCollection<Item> Elements
+        {
+            get => this.elements;
+            set => SetProperty(ref this.elements, value);
+        }
         #endregion
         #endregion
 
@@ -162,10 +168,23 @@ namespace ARPEGOS.ViewModels
             else
                 this.StageProgress = 1;
 
-            var datalist = new ObservableCollection<Item>(character.GetIndividuals(this.CurrentStage.FullName));
-            foreach (var item in datalist)
-                if (string.IsNullOrEmpty(item.Description) || string.IsNullOrWhiteSpace(item.Description))
-                    item.HasDescription = false;
+            this.Elements = new ObservableCollection<Item>(character.GetIndividuals(this.CurrentStage.FullName));
+            var availableItems = character.CheckAvailableOptions(this.CurrentStage.FullName, this.HasGeneralLimit, StageViewModel.GeneralLimitProperty, this.GeneralLimit, this.StageLimitProperty, this.StageLimit);
+
+            var datalist = new ObservableCollection<Item>();
+            foreach (var item in this.Elements)
+            {
+                foreach (var availableItem in availableItems )
+                {
+                    if (availableItem.FullName.Split('#').Last() == item.FullName.Split('#').Last())
+                    {
+                        datalist.Add(item);
+                        break;
+                    }
+                    else if (datalist.Contains(item))
+                        datalist.Remove(item);
+                }
+            }
 
             Data = new ObservableCollection<Item>(datalist);
 
@@ -230,22 +249,27 @@ namespace ARPEGOS.ViewModels
         public async Task UpdateView()
         {
             var character = DependencyHelper.CurrentContext.CurrentCharacter;
-            var availableItems = await Task.Run(()=> character.CheckAvailableOptions(this.CurrentStage.FullName, this.CurrentStage.EditGeneralLimit, StageViewModel.GeneralLimitProperty, StageViewModel.GeneralLimit, this.StageLimitProperty, this.StageLimit));
-            foreach(var element in Data)
-                element.IsEnabled = false;
-            foreach(var element in Data)
+            var availableItems = await Task.Run(()=> character.CheckAvailableOptions(this.CurrentStage.FullName, this.HasGeneralLimit, StageViewModel.GeneralLimitProperty, this.GeneralLimit, this.StageLimitProperty, this.StageLimit));
+            var updatedDatalist = new ObservableCollection<Item>(Data);
+            foreach (var item in this.Elements)
             {
-                foreach(var item in availableItems)
+                foreach (var availableItem in availableItems)
                 {
-                    if(element.ShortName == item.ShortName)
+                    if (availableItem.ShortName == item.ShortName)
                     {
-                        item.IsEnabled = true;
-                        var index = Data.IndexOf(element);
-                        Data.Remove(element);
-                        Data.Insert(index, item);
+                        if(!updatedDatalist.Contains(item))
+                            updatedDatalist.Add(item);
                     }
+                    else
+                    {
+                        if (updatedDatalist.Contains(item))
+                            updatedDatalist.Remove(item);
+                    }
+                        
                 }
             }
+            Data.Clear();
+            Data.AddRange(updatedDatalist);
         }
         #endregion
     }

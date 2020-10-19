@@ -19,8 +19,8 @@ namespace ARPEGOS.Services
         public static bool CheckCostAndLimit(string cost, string limit)
         {
             var ignorableWords = new List<string> { "Coste", "Cost", "Coût", "Total"};
-            var costWords = cost.Split('_').ToList();
-            var limitWords = limit.Split('_').ToList();
+            var costWords = cost.Split('#').Last().Split('_').ToList();
+            var limitWords = limit.Split('#').Last().Split('_').ToList();
 
             var comparableWords = Math.Min(costWords.Count, limitWords.Count);
             if (costWords.Count == comparableWords)
@@ -48,6 +48,32 @@ namespace ARPEGOS.Services
                 if (itemCostWord != generalLimitWord)
                     costMatchLimit = false;
             }
+
+            if(costMatchLimit == false)
+            {
+                costWords.Remove(costWords.First());
+                costWords.Remove(costWords.Last());
+                limitWords.Remove(limitWords.First());
+                limitWords.Remove(limitWords.First());
+                costMatchLimit = true;
+
+                var limitIndex = limitWords.Count()-1;
+                var costIndex = costWords.Count()-1;
+                if(limitIndex == costIndex)
+                {
+                    var index = limitIndex;
+                    while (index >= 0)
+                    {
+                        if (costWords.ElementAt(index) != limitWords.ElementAt(index))
+                        {
+                            costMatchLimit = false;
+                            break;
+                        }
+                        --index;
+                    }
+                }                
+            }
+
             return costMatchLimit;
         }
 

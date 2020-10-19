@@ -3,6 +3,7 @@ namespace ARPEGOS.Services
 {
     using System;
     using System.Collections.Generic;
+    using System.Collections.ObjectModel;
     using System.Diagnostics;
     using System.Linq;
     using ARPEGOS.Helpers;
@@ -273,9 +274,26 @@ namespace ARPEGOS.Services
             var stageOptions = new List<Item>();
             var availableOptions = new List<Item>();
             // Check if stage has subclasses
-
+            var stageClass = GameOntology.Model.ClassModel.SelectClass(stageString);
+            var stageSubclassesEntries = GameOntology.Model.ClassModel.Relations.SubClassOf.SelectEntriesByObject(stageClass);
+            bool stageHasGroups = false;
             var stageGroups = this.GetIndividualsGrouped(stageString);
-            if(stageGroups != null)
+
+            if (stageSubclassesEntries.EntriesCount > 0)
+            {
+                stageHasGroups = true;
+                foreach (var group in stageGroups)
+                    foreach (var item in group)
+                        stageOptions.Add(item);
+            }
+            else
+            {
+                var stageElements = this.GetIndividuals(stageString);
+                foreach (var item in stageElements)
+                    stageOptions.Add(item);
+            }
+
+            if(stageHasGroups == true)
             {
                 Debug.WriteLine($"Stage Groups |-| ");
                 var groupIndex = 1;
@@ -466,13 +484,15 @@ namespace ARPEGOS.Services
 
                                     var requirementCostName = string.Join('_', itemCostWords);
                                     var requirementCostString = GetString(requirementCostName, true);
+                                    if (string.IsNullOrEmpty(requirementCostString))
+                                        requirementCostString = itemCostEntryPredicate;
                                     var characterFact = this.Ontology.Data.SelectFact($"{this.Context}{FileService.EscapedName(this.Name)}");
 
                                     if (!(this.Ontology.Model.PropertyModel.SelectProperty(requirementCostString) is RDFOntologyDatatypeProperty requirementCostProperty))
                                     {
                                         IEnumerable<RDFOntologyTaxonomyEntry> requirementCostAssertions = this.Ontology.Data.Relations.Assertions.SelectEntriesBySubject(characterFact);
                                         requirementCostAssertions = requirementCostAssertions.Where(entry => itemCostWords.All(word => entry.TaxonomyPredicate.ToString().Contains(word)));
-                                        requirementCostString = requirementCostAssertions.SingleOrDefault().TaxonomyPredicate.ToString();
+                                        requirementCostString = requirementCostAssertions.Single().TaxonomyPredicate.ToString();
                                         requirementCostProperty = this.Ontology.Model.PropertyModel.SelectProperty(requirementCostString) as RDFOntologyDatatypeProperty;
                                     }
 
@@ -489,11 +509,13 @@ namespace ARPEGOS.Services
                                 }
                                 else
                                 {
-                                    if (hasGeneralLimitValue)
-                                        if (generalLimitValue >= costValue && partialLimitValue >= costValue)
+                                    if (matchGeneralLimit || matchPartialLimit)
+                                    {
+                                        if (matchGeneralLimit && generalLimitValue >= costValue && partialLimitValue >= costValue)
                                             availableOptions.Add(new Item(item.FullName));
-                                        else if (partialLimitValue >= costValue)
+                                        else if (matchPartialLimit && partialLimitValue >= costValue)
                                             availableOptions.Add(new Item(item.FullName));
+                                    }
                                 }
                             }
                         }

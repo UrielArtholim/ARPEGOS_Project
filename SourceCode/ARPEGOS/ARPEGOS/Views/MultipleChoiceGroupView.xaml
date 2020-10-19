@@ -92,7 +92,7 @@
                                                 HorizontalOptions="CenterAndExpand" 
                                                 HorizontalTextAlignment="Start"
                                                 VerticalOptions="Center" 
-                                                Text="{Binding .FormattedName}"/>
+                                                Text="{Binding FormattedName}"/>
                                         <ImageButton Source="description.png"  HeightRequest="25" WidthRequest="25"
                                                      Command="{Binding Source={x:Reference MultipleChoiceGroup}, Path=BindingContext.InfoCommand}"
                                                      CommandParameter="{Binding .}"
