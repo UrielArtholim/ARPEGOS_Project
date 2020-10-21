@@ -310,7 +310,7 @@ namespace ARPEGOS.ViewModels
         #endregion
 
         #region Methods
-        public void UpdateView()
+        public async Task UpdateView()
         {
             var character = DependencyHelper.CurrentContext.CurrentCharacter;
             var availableItems = character.CheckAvailableOptions(this.CurrentStage.FullName, this.HasGeneralLimit, StageViewModel.GeneralLimitProperty, this.GeneralLimit, this.StageLimitProperty, this.StageLimit);

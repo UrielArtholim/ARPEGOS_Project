@@ -81,7 +81,7 @@ namespace ARPEGOS
 
         #endregion
 
-        #region Constructor
+        #region Constructors
         public Item(string elementString, string description = "This is a description", string Class = "No class available", double elementValue = 1, double elementMaximum = 1)
         {
             FullName = elementString;
@@ -101,6 +101,19 @@ namespace ARPEGOS
                 HasDescription = false;
             else
                 HasDescription = true;
+        }
+
+        public Item(Item i)
+        {
+            this.FullName = i.FullName;
+            this.ShortName = i.ShortName;
+            this.FormattedName = i.FormattedName;
+            this.Class = i.Class;
+            this.Value = i.Value;
+            this.Maximum = i.Maximum;
+            this.Step = i.Step;
+            this.HasDescription = i.HasDescription;
+            this.Description = i.Description;
         }
         #endregion
 

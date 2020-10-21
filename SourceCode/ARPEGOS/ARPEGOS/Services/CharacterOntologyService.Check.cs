@@ -337,7 +337,7 @@ namespace ARPEGOS.Services
                 {
                     if (partialLimitValue > 0)
                     {
-                        var itemFact = GameOntology.Data.SelectFact(item.FullName);//IBAS POR AQUI
+                        var itemFact = GameOntology.Data.SelectFact(item.FullName);
                         var itemFactAssertions = GameOntology.Data.Relations.Assertions.SelectEntriesBySubject(itemFact);
                         var itemRequirements = itemFactAssertions.Where(entry => requirementWords.Any(word => entry.ToString().Contains(word)));
                         string datatypeRequirementName;
@@ -372,7 +372,8 @@ namespace ARPEGOS.Services
 
                                 foreach (var name in objectRequirementNameList)
                                 {
-                                    var objectFactString = GetString(name, true);
+                                    var elementName = name.Split('#').Last();
+                                    var objectFactString = $"{this.Context}{elementName}";
                                     RDFOntologyFact objectFact = null;
                                     if (!this.CheckIndividual(objectFactString))
                                     {
@@ -412,13 +413,16 @@ namespace ARPEGOS.Services
                                                 var result = ConvertToOperator("<", CharacterValue, RequirementValue);
                                                 objectRequirementNameDictionary.Add(name, result != true);
                                             }
+                                            else
+                                                continue;
                                         }
                                         else
                                             allRequirementsFulfilled = false;
                                     }
                                 }
-                                if (objectRequirementNameDictionary.Values.All(value => value == false))
-                                    allRequirementsFulfilled = false;
+                                if(objectRequirementNameDictionary.Values.Count() > 0)
+                                    if (objectRequirementNameDictionary.Values.All(value => value == false))
+                                        allRequirementsFulfilled = false;
                             }
                         }
 

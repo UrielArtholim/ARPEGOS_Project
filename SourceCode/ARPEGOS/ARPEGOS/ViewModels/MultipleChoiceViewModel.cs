@@ -258,7 +258,10 @@ namespace ARPEGOS.ViewModels
                     if (availableItem.ShortName == item.ShortName)
                     {
                         if(!updatedDatalist.Contains(item))
+                        {
                             updatedDatalist.Add(item);
+                            break;
+                        }
                     }
                     else
                     {

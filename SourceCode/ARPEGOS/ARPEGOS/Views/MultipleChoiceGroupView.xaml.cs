@@ -38,7 +38,7 @@ namespace ARPEGOS.Views
             var predicate = character.GetObjectPropertyAssociated(viewModel.CurrentStage.FullName, activeItem, StageViewModel.ApplyOnCharacter);
             if (activeCheckBox.IsChecked == true)
             {
-                 await MainThread.InvokeOnMainThreadAsync(() =>
+                await MainThread.InvokeOnMainThreadAsync(() =>
                 {
                     viewModel.StageProgressLabel -= activeItem.Value;
                     viewModel.StageProgress -= activeItem.Value / viewModel.StageLimit;
@@ -53,7 +53,7 @@ namespace ARPEGOS.Views
             // Update assertion of item selected
             else
             {
-                 await MainThread.InvokeOnMainThreadAsync(() =>
+                await MainThread.InvokeOnMainThreadAsync(() =>
                 {
                     viewModel.StageProgressLabel += activeItem.Value;
                     viewModel.StageProgress += activeItem.Value / viewModel.StageLimit;
@@ -75,8 +75,7 @@ namespace ARPEGOS.Views
                         character.RemoveObjectProperty(predicate, activeItem.FullName);
                 }
             }
-            if (viewModel.HasGeneralLimit == true)
-                Task.WaitAny(Task.Run(()=> viewModel.UpdateView()));
+            await viewModel.UpdateView();
         }
     }
 }
