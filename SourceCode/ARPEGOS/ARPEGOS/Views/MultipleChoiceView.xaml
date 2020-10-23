@@ -33,7 +33,7 @@
                                      BackgroundColor="{DynamicResource ProgressBarBackgroundColor}"/>
                     </StackLayout>
                 </StackLayout>
-                <ListView x:Name="SingleChoiceList" ItemsSource="{Binding Data}" HasUnevenRows="True" SelectionMode="None" CachingStrategy="RecycleElementAndDataTemplate">
+                <ListView x:Name="SingleChoiceList" ItemsSource="{Binding Data}" HasUnevenRows="True" SelectionMode="None" >
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>

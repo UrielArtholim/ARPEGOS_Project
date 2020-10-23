@@ -29,18 +29,16 @@ namespace ARPEGOS.Views
             return base.OnBackButtonPressed();
         }
 
-        void OnCheckedChanged(object sender, CheckedChangedEventArgs e)
+        async void OnCheckedChanged(object sender, CheckedChangedEventArgs e)
         {
             var activeCheckBox = sender as CheckBox;
             var viewModel = this.BindingContext as MultipleChoiceViewModel;
             var activeItem = activeCheckBox.BindingContext as Item;
             var character = DependencyHelper.CurrentContext.CurrentCharacter;
             var predicate = character.GetObjectPropertyAssociated(viewModel.CurrentStage.FullName, activeItem, StageViewModel.ApplyOnCharacter);
-            
             if(activeCheckBox.IsChecked == true)
             {
-
-                Task.Run(async () => await MainThread.InvokeOnMainThreadAsync(() => 
+                await MainThread.InvokeOnMainThreadAsync(() => 
                 {
                     viewModel.StageProgressLabel -= activeItem.Value;
                     viewModel.StageProgress -= activeItem.Value / viewModel.StageLimit;
@@ -49,13 +47,13 @@ namespace ARPEGOS.Views
                         viewModel.GeneralProgressLabel -= activeItem.Value;
                         viewModel.GeneralProgress -= activeItem.Value / viewModel.StageLimit;
                     }
-                }));                
+                });                
                 character.UpdateObjectAssertion(predicate, activeItem.FullName);
             }
             // Update assertion of item selected
             else
             {
-                Task.Run(async () => await MainThread.InvokeOnMainThreadAsync(() =>
+                await MainThread.InvokeOnMainThreadAsync(() =>
                 {
                     viewModel.StageProgressLabel += activeItem.Value;
                     viewModel.StageProgress += activeItem.Value / viewModel.StageLimit;
@@ -64,21 +62,22 @@ namespace ARPEGOS.Views
                         viewModel.GeneralProgressLabel += activeItem.Value;
                         viewModel.GeneralProgress += activeItem.Value / viewModel.StageLimit;
                     }
-                }));
-                
+                });                
                 // Remove assertion of item selected
                 var characterAssertions = character.GetCharacterProperties();
                 var predicateName = predicate.Split('#').Last();
+                var characterPredicate = $"{character.Context}{predicateName}";
                 var itemName = activeItem.FullName.Split('#').Last();
-                if(characterAssertions.ContainsKey(predicateName))
+                var characterItem = $"{character.Context}{itemName}";
+
+                if(characterAssertions.ContainsKey(characterPredicate))
                 {
-                    characterAssertions.TryGetValue(predicateName, out var valueList);
-                    if (valueList.Contains(itemName))
-                        character.RemoveObjectProperty(predicate, activeItem.FullName);
+                    characterAssertions.TryGetValue(characterPredicate, out var valueList);
+                    if (valueList.Contains(characterItem))
+                        character.RemoveObjectProperty(characterPredicate, characterItem);
                 }
-            }
-            if(viewModel.HasGeneralLimit == true)
-                Task.Run(async () => await viewModel.UpdateView());
+            }            
+            await viewModel.UpdateView();
         }
     }
 }

@@ -167,6 +167,8 @@ namespace ARPEGOS.ViewModels
 
             if (this.HasGeneralLimit == true)
                 this.CurrentLimit = Math.Min(Convert.ToInt32(StageViewModel.GeneralLimit), this.StageLimit);
+            else
+                this.CurrentLimit = this.StageLimit;
 
             if(character.CheckClass(this.CurrentStage.FullName, false))
             {

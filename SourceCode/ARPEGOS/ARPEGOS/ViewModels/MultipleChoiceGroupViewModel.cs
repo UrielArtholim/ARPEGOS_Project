@@ -20,7 +20,7 @@ namespace ARPEGOS.ViewModels
         #region Properties
         #region Private
         private DialogService dialogService = new DialogService();
-        private ObservableCollection<Group> data;
+        private ObservableCollection<Group> data, datalist;
         private Stage currentStage;
         private string stageName, stageLimitProperty;
         private double stageLimit, stageProgress, stageProgressLabel;
@@ -37,6 +37,13 @@ namespace ARPEGOS.ViewModels
             get => this.data;
             set => SetProperty(ref this.data, value);
         }
+
+        private ObservableCollection<Group> Datalist
+        {
+            get => this.datalist;
+            set => SetProperty(ref this.datalist, value);
+        }
+
         public Stage CurrentStage
         {
             get => this.currentStage;
@@ -167,7 +174,7 @@ namespace ARPEGOS.ViewModels
             else
                 this.StageProgress = 1; 
 
-            var datalist = new ObservableCollection<Group>(character.GetIndividualsGrouped(this.CurrentStage.FullName));
+            Datalist = new ObservableCollection<Group>(character.GetIndividualsGrouped(this.CurrentStage.FullName));
             foreach (var item in datalist)
                 if (string.IsNullOrEmpty(item.Description) || string.IsNullOrWhiteSpace(item.Description))
                     item.HasDescription = false;
@@ -175,7 +182,7 @@ namespace ARPEGOS.ViewModels
             var availableItems = character.CheckAvailableOptions(this.CurrentStage.FullName, this.HasGeneralLimit, StageViewModel.GeneralLimitProperty, this.GeneralLimit, this.StageLimitProperty, this.StageLimit);
             // Add data aux & group
             
-            foreach(var group in datalist)
+            foreach(var group in Datalist)
             {
                 var updatedGroup = group;
                 foreach(var item in group.Elements)
@@ -313,29 +320,39 @@ namespace ARPEGOS.ViewModels
         public async Task UpdateView()
         {
             var character = DependencyHelper.CurrentContext.CurrentCharacter;
-            var availableItems = character.CheckAvailableOptions(this.CurrentStage.FullName, this.HasGeneralLimit, StageViewModel.GeneralLimitProperty, this.GeneralLimit, this.StageLimitProperty, this.StageLimit);
-            var updatedDatalist = new ObservableCollection<Group>(Data);
-            foreach (var group in Data)
+            var availableItems = character.CheckAvailableOptions(this.CurrentStage.FullName, this.HasGeneralLimit, StageViewModel.GeneralLimitProperty, this.GeneralProgressLabel, this.StageLimitProperty, this.StageProgressLabel);
+            var updatedDatalist = new ObservableCollection<Group>();
+
+            foreach(var group in Datalist)
             {
-                var updatedGroup = new Group(group);
-                foreach (var groupItem in group)
+                int elementIndex = 0;
+                foreach (var element in group)
                 {
+                    bool elementFound = false;
                     foreach (var item in availableItems)
                     {
-                        if (groupItem.ShortName == item.ShortName)
+                        var elementName = element.FullName.Split('#').Last();
+                        var itemName = item.FullName.Split('#').Last();
+                        if (element.FullName == item.FullName)
                         {
-                            if (!updatedGroup.Contains(groupItem))
-                                updatedGroup.Add(groupItem);
+                            elementFound = true;
+                            if (group.Contains(element) == false)
+                            {
+                                if (elementIndex >= group.Count())
+                                    group.Add(element);
+                                else
+                                    group.Insert(elementIndex, element);
+                                break;
+                            }
                         }
-                        else
-                            if (updatedGroup.Contains(groupItem))
-                            updatedGroup.Remove(groupItem);
                     }
+                    if (elementFound == false)
+                        if (group.Contains(element))
+                            group.Remove(element);
+                    ++elementIndex;
                 }
-                updatedDatalist.Add(updatedGroup);
             }
-            Data.Clear();
-            Data.AddRange(updatedDatalist);
+            
         }
         private void UpdateGroup(Group g)
         {

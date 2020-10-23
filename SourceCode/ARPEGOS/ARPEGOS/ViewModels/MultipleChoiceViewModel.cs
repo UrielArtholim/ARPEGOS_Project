@@ -4,7 +4,7 @@ using ARPEGOS.Services;
 using ARPEGOS.ViewModels.Base;
 using ARPEGOS.Views;
 using System;
-using System.Collections.Generic;
+using System.Collections;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
@@ -249,8 +249,35 @@ namespace ARPEGOS.ViewModels
         public async Task UpdateView()
         {
             var character = DependencyHelper.CurrentContext.CurrentCharacter;
-            var availableItems = await Task.Run(()=> character.CheckAvailableOptions(this.CurrentStage.FullName, this.HasGeneralLimit, StageViewModel.GeneralLimitProperty, this.GeneralLimit, this.StageLimitProperty, this.StageLimit));
-            var updatedDatalist = new ObservableCollection<Item>(Data);
+            var availableItems = await Task.Run(()=> character.CheckAvailableOptions(this.CurrentStage.FullName, this.HasGeneralLimit, StageViewModel.GeneralLimitProperty, this.GeneralProgressLabel, this.StageLimitProperty, this.StageProgressLabel));
+
+            int elementIndex = 0;
+            foreach(var element in this.Elements)
+            {                
+                bool elementFound = false;
+                foreach(var item in availableItems)
+                {
+                    var elementName = element.FullName.Split('#').Last();
+                    var itemName = item.FullName.Split('#').Last();
+                    if (element.FullName == item.FullName)
+                    {
+                        elementFound = true;
+                        if (Data.Contains(element) == false)
+                        {
+                            if (elementIndex >= Data.Count())
+                                Data.Add(element);
+                            else
+                                Data.Insert(elementIndex, element);
+                            break;
+                        }
+                    }
+                }
+                if (elementFound == false)
+                    if (Data.Contains(element))
+                        Data.Remove(element);
+                ++elementIndex;
+            }
+            /*
             foreach (var item in this.Elements)
             {
                 foreach (var availableItem in availableItems)
@@ -270,9 +297,8 @@ namespace ARPEGOS.ViewModels
                     }
                         
                 }
-            }
-            Data.Clear();
-            Data.AddRange(updatedDatalist);
+            }*/
+
         }
         #endregion
     }

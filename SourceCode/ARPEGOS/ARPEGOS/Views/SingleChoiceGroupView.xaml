@@ -11,7 +11,7 @@
                           ItemsSource="{Binding Data}" 
                           HasUnevenRows="True" 
                           SelectionMode="None" 
-                          CachingStrategy="RecycleElementAndDataTemplate" 
+
                           IsGroupingEnabled="True"
                           SeparatorVisibility="None"
                           GroupDisplayBinding="{Binding FormattedTitle}">

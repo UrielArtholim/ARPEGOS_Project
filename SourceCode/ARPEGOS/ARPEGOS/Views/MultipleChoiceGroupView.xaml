@@ -36,7 +36,7 @@
                           ItemsSource="{Binding Data}" 
                           HasUnevenRows="True" 
                           SelectionMode="None" 
-                          CachingStrategy="RecycleElementAndDataTemplate" 
+                          
                           IsGroupingEnabled="True"
                           SeparatorVisibility="None"
                           GroupDisplayBinding="{Binding FormattedTitle}">
@@ -105,11 +105,11 @@
                 </ListView>
                 <Button Text="Siguiente" 
                         Command="{Binding NextCommand}" 
-                        IsVisible="{Binding Continue}"
+                        IsVisible="True"
                         BackgroundColor="{DynamicResource ButtonColor}"
                         AbsoluteLayout.LayoutFlags="PositionProportional"
                         AbsoluteLayout.LayoutBounds=".95,.95,80,80"
-                        HeightRequest="40"/>
+                        HeightRequest="50"/>
             </StackLayout>
             <Frame Grid.Row="0" BackgroundColor="Black" Opacity="0.7" HasShadow="False" CornerRadius="0" IsVisible="{Binding Source={x:Reference MultipleChoiceGroup}, Path=BindingContext.IsBusy}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
                 <ActivityIndicator Color="White" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" IsRunning="{Binding Source={x:Reference MultipleChoiceGroup}, Path=BindingContext.IsBusy}"

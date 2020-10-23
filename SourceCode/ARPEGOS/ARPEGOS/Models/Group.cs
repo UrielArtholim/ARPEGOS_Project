@@ -90,10 +90,10 @@ namespace ARPEGOS
             this.GroupString = g.GroupString;
             this.Title = g.Title;
             this.FormattedTitle = g.FormattedTitle;
-            this.Expanded = g.Expanded;
-            this.Value = g.Value;
             this.Description = g.Description;
             this.Elements = new List<Item>(g.Elements);
+            this.Value = g.Value;
+            this.Expanded = g.Expanded;            
         }
         #endregion
 
