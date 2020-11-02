@@ -288,26 +288,29 @@ namespace ARPEGOS.ViewModels
                 }
 
                 ++StageViewModel.CurrentStep;
-                var nextStage = StageViewModel.CreationScheme.ElementAt(StageViewModel.CurrentStep);
-
-                if (nextStage.IsGrouped)
+                if (StageViewModel.CurrentStep < StageViewModel.CreationScheme.Count())
                 {
-                    switch (nextStage.Type)
+                    var nextStage = StageViewModel.CreationScheme.ElementAt(StageViewModel.CurrentStep);
+                    if (nextStage.IsGrouped)
                     {
-                        case Stage.StageType.MultipleChoice: await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.PushAsync(new MultipleChoiceGroupView())); break;
-                        default: await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.PushAsync(new ValuedGroupView())); break;
+                        switch (nextStage.Type)
+                        {
+                            case Stage.StageType.MultipleChoice: await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.PushAsync(new MultipleChoiceGroupView())); break;
+                            default: await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.PushAsync(new ValuedGroupView())); break;
+                        }
+                    }
+                    else
+                    {
+                        switch (nextStage.Type)
+                        {
+                            case Stage.StageType.SingleChoice: await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.PushAsync(new SingleChoiceView())); break;
+                            case Stage.StageType.MultipleChoice: await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.PushAsync(new MultipleChoiceView())); break;
+                            default: await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.PushAsync(new ValuedView())); break;
+                        }
                     }
                 }
                 else
-                {
-                    switch (nextStage.Type)
-                    {
-                        case Stage.StageType.SingleChoice: await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.PushAsync(new SingleChoiceView())); break;
-                        case Stage.StageType.MultipleChoice: await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.PushAsync(new MultipleChoiceView())); break;
-                        default: await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.PushAsync(new ValuedView())); break;
-                    }
-                }
-
+                    await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.PopToRootAsync());
             });
 
             this.InfoCommand = new Command<Item>(async (item) =>

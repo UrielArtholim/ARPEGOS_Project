@@ -266,9 +266,7 @@ namespace ARPEGOS.ViewModels
                     }
                 }
                 else
-                {
-                    await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.PopAsync());
-                }
+                    await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.PopToRootAsync());
             });
 
             this.InfoCommand = new Command<Item>(async (item) =>
