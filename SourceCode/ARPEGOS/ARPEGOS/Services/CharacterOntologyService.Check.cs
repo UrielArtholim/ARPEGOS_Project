@@ -268,7 +268,9 @@ namespace ARPEGOS.Services
         /// <returns></returns>
         public List<Item> CheckAvailableOptions (string stageString, bool hasGeneralLimitValue, string GeneralLimitName, double generalLimitValue, string StageLimitName, double partialLimitValue)
         {
-            RDFOntology GameOntology = DependencyHelper.CurrentContext.CurrentGame.Ontology;
+            var character = DependencyHelper.CurrentContext.CurrentCharacter;
+            var game = DependencyHelper.CurrentContext.CurrentGame;
+            var GameOntology = game.Ontology;
             var costWords = new List<string> { "Coste", "Cost", "Coût" };
             var requirementWords = new List<string> { "Requisito", "Requirement", "Requisite", "Prérequis" };
             var stageOptions = new List<Item>();
@@ -339,10 +341,48 @@ namespace ARPEGOS.Services
                     {
                         var itemFact = GameOntology.Data.SelectFact(item.FullName);
                         var itemFactAssertions = GameOntology.Data.Relations.Assertions.SelectEntriesBySubject(itemFact);
-                        var itemRequirements = itemFactAssertions.Where(entry => requirementWords.Any(word => entry.ToString().Contains(word)));
+                        var itemRequirements = itemFactAssertions.Where(entry => requirementWords.Any(word => entry.TaxonomyPredicate.ToString().Contains(word)));
                         string datatypeRequirementName;
                         var allRequirementsFulfilled = true;
                         var requirementsChecked = new List<string>();
+                        var requirementsDictionary = new Dictionary<string, string>();
+                        var requirementPropertyDictionary = new Dictionary<string, string>();
+
+                        foreach (var entry in itemRequirements)
+                        {
+                            var currentPredicate = entry.TaxonomyPredicate.ToString().Split('#').Last();
+
+                            var currentObject = entry.TaxonomyObject.ToString();
+                            if (currentObject.Contains('^'))
+                                currentObject = currentObject.Split('^').First();
+                            else
+                                currentObject = currentObject.Split('#').Last();
+                            var predicateNumber = currentPredicate.Split('_').Last();
+
+                            if(!requirementPropertyDictionary.ContainsKey(currentObject))
+                                requirementPropertyDictionary.Add(currentObject, currentPredicate);
+
+
+                            var coincidences = itemRequirements.Where(req => req != entry && req.TaxonomyPredicate.ToString().Split('#').Last() == currentPredicate);
+                            if (coincidences.Count() > 1)
+                                if (!requirementsDictionary.ContainsKey(currentPredicate))
+                                    requirementsDictionary.Add(currentPredicate, "Multiple");
+
+                            coincidences = itemRequirements.Where(req => req != entry && req.TaxonomyPredicate.ToString().Split('#').Last().Contains(predicateNumber));
+                            if (coincidences.Count() > 0)
+                            {
+                                var elements = coincidences.Where(req => req.TaxonomyPredicate.ToString().Split('#').Last() != currentPredicate);
+                                if(elements.Count() == 1)
+                                    if (!requirementsDictionary.ContainsKey(currentPredicate))
+                                        requirementsDictionary.Add(currentPredicate, "Datatype");
+                            }
+                            else
+                            {
+                                if (!requirementsDictionary.ContainsKey(currentPredicate))
+                                    requirementsDictionary.Add(currentPredicate, "Object");
+                            }
+                        }
+
                         foreach (var entry in itemRequirements)
                         {
                             if (allRequirementsFulfilled)
@@ -350,22 +390,26 @@ namespace ARPEGOS.Services
                                 var objectRequirementNameList = new List<string>();
                                 var objectRequirementNameDictionary = new Dictionary<string, bool>();
                                 datatypeRequirementName = entry.TaxonomyPredicate.ToString().Split('#').Last();
-                                if (requirementsChecked.Any(req => req == datatypeRequirementName))
-                                    continue;
                                 requirementsChecked.Add(datatypeRequirementName);
-                                var isDatatype = this.CheckDatatypeProperty(datatypeRequirementName);
+                                var isDatatype = this.CheckDatatypeProperty($"{game.Context}{datatypeRequirementName}", false);
                                 if (isDatatype)
                                 {
                                     var requirementNumber = datatypeRequirementName.Split('_').ToList().LastOrDefault();
                                     var itemObjectRequirements = itemFactAssertions.Where(entry => entry.TaxonomyPredicate.ToString().Contains(datatypeRequirementName) == false);
-                                    itemObjectRequirements = itemObjectRequirements.Where(entry => entry.ToString().Contains("_" + requirementNumber));
-                                    foreach (var requirementEntry in itemObjectRequirements)
+                                    if(itemObjectRequirements.Count() > 0)
                                     {
-                                        var predicateString = requirementEntry.TaxonomyPredicate.ToString();
-                                        var requirementShortName = requirementEntry.TaxonomyObject.ToString();
-                                        objectRequirementNameList.Add(requirementShortName);
-                                        requirementsChecked.Add(predicateString);
-                                    }
+                                        itemObjectRequirements = itemObjectRequirements.Where(entry => entry.ToString().Contains("_" + requirementNumber));
+                                        if(itemObjectRequirements.Count() > 0)
+                                        {
+                                            foreach (var requirementEntry in itemObjectRequirements)
+                                            {
+                                                var predicateString = requirementEntry.TaxonomyPredicate.ToString();
+                                                var requirementShortName = requirementEntry.TaxonomyObject.ToString();
+                                                objectRequirementNameList.Add(requirementShortName);
+                                                requirementsChecked.Add(predicateString);
+                                            }
+                                        }                                        
+                                    }                                    
                                 }
                                 else
                                     objectRequirementNameList.Add(entry.TaxonomyObject.ToString());
@@ -373,57 +417,127 @@ namespace ARPEGOS.Services
                                 foreach (var name in objectRequirementNameList)
                                 {
                                     var elementName = name.Split('#').Last();
-                                    var objectFactString = $"{this.Context}{elementName}";
-                                    RDFOntologyFact objectFact = null;
-                                    if (!this.CheckIndividual(objectFactString))
-                                    {
-                                        allRequirementsFulfilled = false;
-                                        continue;
-                                    }
-                                    else
-                                        objectFact = this.Ontology.Data.SelectFact(objectFactString);
-
-                                    var characterFact = this.Ontology.Data.SelectFact($"{this.Context}{FileService.EscapedName(this.Name)}");
-                                    var characterAssertions = this.Ontology.Data.Relations.Assertions.SelectEntriesBySubject(characterFact);
-                                    var characterRequirementAssertions = characterAssertions.SelectEntriesByObject(objectFact);
-                                    if (characterRequirementAssertions.Any())
-                                    {
-                                        if (isDatatype)
-                                        {
-                                            var requirementAssertion = characterAssertions.Single(entry => entry.TaxonomyPredicate.ToString() == objectFactString);
-                                            var requirementValue = Convert.ToSingle(entry.TaxonomyObject.ToString().Split('^').First());
-                                            var characterValue = Convert.ToSingle(requirementAssertion.TaxonomyObject.ToString().Split('^').First());
-                                            var result = ConvertToOperator("<", characterValue, requirementValue);
-                                            objectRequirementNameDictionary.Add(name, result != true);
-                                        }
-                                    }
+                                    var elementString = $"{character.Context}{elementName}";
+                                    RDFOntologyFact elementFact = null;
+                                    RDFOntologyDatatypeProperty elementProperty = null;
+                                    if (this.CheckIndividual(elementString))
+                                        elementFact = this.Ontology.Data.SelectFact(elementString);
                                     else
                                     {
-                                        var requirementAssertions = characterAssertions.Where(entry => entry.TaxonomyPredicate.ToString()==objectFactString);
-                                        if (requirementAssertions.Any())
+                                        var elementStringEntries = this.Ontology.Model.PropertyModel.Where(property => property.ToString().Contains(elementName));
+                                        if(elementStringEntries.Count() > 0)
                                         {
-                                            if (requirementAssertions.Count() > 1)
-                                                requirementAssertions = requirementAssertions.Where(entry => entry.TaxonomyPredicate.ToString().Contains("Total"));
-
-                                            if (isDatatype)
-                                            {
-                                                var requirementAssertion = requirementAssertions.SingleOrDefault();
-                                                var RequirementValue = Convert.ToSingle(entry.TaxonomyObject.ToString().Split('^').First());
-                                                var CharacterValue = Convert.ToSingle(requirementAssertion.TaxonomyObject.ToString().Split('^').First());
-                                                var result = ConvertToOperator("<", CharacterValue, RequirementValue);
-                                                objectRequirementNameDictionary.Add(name, result != true);
-                                            }
+                                            if (elementStringEntries.Count() > 1)
+                                                elementString = elementStringEntries.Where(property => property.ToString().Contains("Total")).Single().ToString();
                                             else
-                                                continue;
-                                        }
+                                                elementString = elementStringEntries.Single().ToString();
+                                            elementProperty = this.Ontology.Model.PropertyModel.SelectProperty(elementString) as RDFOntologyDatatypeProperty;
+                                        }                                        
                                         else
                                             allRequirementsFulfilled = false;
                                     }
+                                        
+                                    if(allRequirementsFulfilled == true)
+                                    {
+                                        var characterFact = this.Ontology.Data.SelectFact($"{character.Context}{FileService.EscapedName(this.Name)}");
+                                        var characterAssertions = this.Ontology.Data.Relations.Assertions.SelectEntriesBySubject(characterFact);
+                                        RDFOntologyTaxonomy characterRequirementAssertions = null;
+                                        if (isDatatype)
+                                        {
+                                            characterRequirementAssertions = characterAssertions.SelectEntriesByPredicate(elementProperty);
+                                            if(characterRequirementAssertions.Count() > 0)
+                                            {
+                                                var requirementAssertion = characterRequirementAssertions.Single();
+                                                var requirementValue = Convert.ToSingle(entry.TaxonomyObject.ToString().Split('^').First());
+                                                var characterValue = Convert.ToSingle(requirementAssertion.TaxonomyObject.ToString().Split('^').First());
+                                                var result = ConvertToOperator("<", characterValue, requirementValue);
+                                                if(!objectRequirementNameDictionary.ContainsKey(name))
+                                                    objectRequirementNameDictionary.Add(name, result != true);
+                                            }                                            
+                                        }
+                                        else
+                                        {
+                                            requirementPropertyDictionary.TryGetValue(elementName, out var requirementProperty);
+                                            requirementsDictionary.TryGetValue(requirementProperty, out var requirementType);
+
+                                            if(requirementType == "Multiple")
+                                            {
+                                                var requirementNumber = requirementProperty.Split('#').Last().Split('_').Last();
+                                                var valueRequirementEntries = itemRequirements.Where(assertion => assertion.TaxonomyPredicate.ToString().Split('#').Last().Contains(requirementNumber) && assertion.TaxonomyPredicate.ToString().Split('#').Last() != requirementProperty);
+                                                if(valueRequirementEntries.Count() > 0)
+                                                {
+                                                    var requirementCheckValue = Convert.ToDouble(valueRequirementEntries.Single().TaxonomyObject.ToString().Split('^').First());
+                                                    var requirementEntries = itemRequirements.Where(assertion => assertion.TaxonomyPredicate.ToString().Split('#').Last() == requirementProperty);
+                                                    var similarRequirementsDictionary = new Dictionary<string, bool>();
+                                                    foreach (var assertion in requirementEntries)
+                                                    {
+                                                        var currentObjectString = assertion.TaxonomyObject.ToString();
+                                                        var currentObjectName = currentObjectString.Split('#').Last();
+
+                                                        if (character.CheckIndividual(currentObjectString, false))
+                                                        {
+                                                            var currentObject = game.Ontology.Data.SelectFact(currentObjectString);
+                                                            var characterCurrentRequirementAssertions = characterAssertions.SelectEntriesByObject(currentObject);
+                                                            if (characterCurrentRequirementAssertions.Count() > 0)
+                                                            {
+                                                                if (!similarRequirementsDictionary.ContainsKey(elementName))
+                                                                    similarRequirementsDictionary.Add(elementName, true);
+                                                            }                                                                
+                                                            else
+                                                                if (!similarRequirementsDictionary.ContainsKey(elementName))
+                                                                    similarRequirementsDictionary.Add(elementName, false);
+                                                        }
+                                                        else
+                                                        {
+                                                            var characterCurrentRequirementAssertions = characterAssertions.Where(entry => entry.TaxonomyPredicate.ToString().Contains(currentObjectName));
+                                                            if (characterCurrentRequirementAssertions.Count() > 0)
+                                                            {
+                                                                characterCurrentRequirementAssertions = characterAssertions.Where(entry => entry.TaxonomyPredicate.ToString().Contains("Total"));
+                                                                if (characterCurrentRequirementAssertions.Count() > 0)
+                                                                {
+                                                                    var currentRequirementValue = Convert.ToDouble(characterCurrentRequirementAssertions.Single().TaxonomyObject.ToString().Split('^').First());
+                                                                    var result = ConvertToOperator("<", currentRequirementValue, requirementCheckValue);
+                                                                    if(result == false)
+                                                                    {
+                                                                        if (!similarRequirementsDictionary.ContainsKey(elementName))
+                                                                            similarRequirementsDictionary.Add(elementName, true);
+                                                                    }                                                                        
+                                                                    else
+                                                                        if (!similarRequirementsDictionary.ContainsKey(elementName))
+                                                                            similarRequirementsDictionary.Add(elementName, false);
+                                                                }
+                                                            }
+                                                            else
+                                                                if (!similarRequirementsDictionary.ContainsKey(elementName))
+                                                                    similarRequirementsDictionary.Add(elementName, false);
+                                                        }
+                                                    }
+                                                    if(!similarRequirementsDictionary.Values.Any(check => check == true))
+                                                        allRequirementsFulfilled = false;
+                                                }
+                                            }
+                                            else if(requirementType == "Object")
+                                            {
+                                                characterRequirementAssertions = characterAssertions.SelectEntriesByObject(elementFact);
+                                                if (characterRequirementAssertions.Any())
+                                                {
+                                                    if(!objectRequirementNameDictionary.ContainsKey(elementName))
+                                                        objectRequirementNameDictionary.Add(elementName, true);
+
+                                                }
+                                                else
+                                                    if (!objectRequirementNameDictionary.ContainsKey(elementName))
+                                                        objectRequirementNameDictionary.Add(elementName, false);
+                                            }                                            
+                                        }
+                                    }                                    
                                 }
-                                if(objectRequirementNameDictionary.Values.Count() > 0)
+                                if (objectRequirementNameDictionary.Values.Count() > 0)
                                     if (objectRequirementNameDictionary.Values.All(value => value == false))
                                         allRequirementsFulfilled = false;
                             }
+                            else
+                                break;
                         }
 
                         if (allRequirementsFulfilled)

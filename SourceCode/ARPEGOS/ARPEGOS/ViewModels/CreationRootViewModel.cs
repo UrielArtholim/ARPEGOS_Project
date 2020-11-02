@@ -74,7 +74,7 @@ namespace ARPEGOS.ViewModels
                 this.IsBusy = false;
 
                 StageViewModel.CurrentStep = 0;
-                var currentStage = StageViewModel.CreationScheme.ElementAt(StageViewModel.CurrentStep);              
+                var currentStage = StageViewModel.CreationScheme.ElementAt(StageViewModel.CurrentStep);
 
                 if (currentStage.IsGrouped)
                 {

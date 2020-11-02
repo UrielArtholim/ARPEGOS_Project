@@ -18,7 +18,7 @@ namespace ARPEGOS.ViewModels
     public class ValuedGroupViewModel: BaseViewModel
     {
         private DialogService dialogService = new DialogService();
-        private ObservableCollection<Group> data;
+        private ObservableCollection<Group> data, datalist;
         private Stage currentStage;
         private string stageName;
         private string stageLimitProperty;
@@ -37,6 +37,13 @@ namespace ARPEGOS.ViewModels
             get => this.data;
             set => SetProperty(ref this.data, value);
         }
+
+        private ObservableCollection<Group> Datalist
+        {
+            get => this.datalist;
+            set => SetProperty(ref this.datalist, value);
+        }
+
         public Stage CurrentStage
         {
             get => this.currentStage;
@@ -118,6 +125,7 @@ namespace ARPEGOS.ViewModels
             this.stageLimitProperty = character.GetLimit(this.CurrentStage.FullName.Split('#').Last(), false, this.CurrentStage.EditGeneralLimit);
             this.StageLimit = character.GetLimitValue(this.stageLimitProperty);
             this.ShowDescription = true;
+            this.HasGeneralLimit = this.CurrentStage.EditGeneralLimit;
             this.CurrentLimit = this.StageLimit;
             this.StageProgressLabel = this.StageLimit;
 
@@ -136,14 +144,29 @@ namespace ARPEGOS.ViewModels
                 this.GeneralProgressLabel = this.GeneralLimit;
                 this.CurrentLimit = Math.Min(this.GeneralLimit, this.StageLimit);
 
-                var stageProperty = game.Ontology.Model.PropertyModel.SelectProperty(character.GetString(this.stageLimitProperty));
-                var stagePropertyDefinedAnnotations = game.Ontology.Model.PropertyModel.Annotations.IsDefinedBy.SelectEntriesBySubject(stageProperty);
-                var definition = stagePropertyDefinedAnnotations.Single().TaxonomyObject.ToString().Split('^').First();
-                var stageMax = Convert.ToDouble(character.GetValue(definition));
-                this.StageProgress = this.StageProgressLabel / stageMax;
+                var gameStageProperty = character.GetString(this.stageLimitProperty);
+                var stageProperty = game.Ontology.Model.PropertyModel.SelectProperty($"{game.Context}{this.stageLimitProperty}");
+                if(stageProperty != null)
+                {
+                    var stagePropertyDefinedAnnotations = game.Ontology.Model.PropertyModel.Annotations.IsDefinedBy.SelectEntriesBySubject(stageProperty);
+                    if(stagePropertyDefinedAnnotations.Count() > 0)
+                    {
+                        var definition = stagePropertyDefinedAnnotations.Single().TaxonomyObject.ToString().Split('^').First();
+                        var stageMax = Convert.ToDouble(character.GetValue(definition));
+                        this.StageProgress = this.StageProgressLabel / stageMax;
+                    }                    
+                }
             }
+                
             else
                 this.StageProgress = 1;
+
+            Datalist = new ObservableCollection<Group>(character.GetIndividualsGrouped(this.CurrentStage.FullName));
+            foreach (var item in datalist)
+                if (string.IsNullOrEmpty(item.Description) || string.IsNullOrWhiteSpace(item.Description))
+                    item.HasDescription = false;
+
+            Data = new ObservableCollection<Group>(datalist);
 
             this.SelectGroupCommand = new Command<Group>(async (group) => await MainThread.InvokeOnMainThreadAsync(() =>
             {

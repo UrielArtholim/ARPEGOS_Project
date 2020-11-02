@@ -6,7 +6,7 @@
              Title="{Binding StageName}">
     <ContentPage.Content>
         <Grid>
-            <StackLayout Spacing="10" Padding="10" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+            <StackLayout Spacing="20" Padding="10" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
                 <StackLayout Orientation="Vertical">
                     <StackLayout Orientation="Vertical" Spacing="0" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" IsVisible="{Binding HasGeneralLimit}">
                         <StackLayout Orientation="Horizontal">

@@ -52,6 +52,7 @@ namespace ARPEGOS.ViewModels
 
         public SingleChoiceViewModel()
         {
+            Application.Current.MainPage.IsBusy = false;
             this.dialogService = new DialogService();
             this.Continue = false;
             var character = DependencyHelper.CurrentContext.CurrentCharacter;

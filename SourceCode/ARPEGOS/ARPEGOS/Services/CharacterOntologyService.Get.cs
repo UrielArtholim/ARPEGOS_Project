@@ -662,7 +662,7 @@ namespace ARPEGOS.Services
             return LimitName;
         }//MODIFIED
 
-        public double GetStep(string itemName)
+        public double GetStep(string itemName, string stageName)
         {
             double step = 1;
             var characterTypeStageName = StageViewModel.RootStage.Split('#').Last();
@@ -679,14 +679,26 @@ namespace ARPEGOS.Services
                 var itemNameWords = itemName.Split('_').ToList();
                 if(predicateName.Contains("Coste"))
                 {
-                    if(itemNameWords.Any(word => predicateName.Contains(word)))
+                    var predicateNameWords = predicateName.Split('#').Last().Split('_').ToList();
+                    if(itemNameWords.Any(itemWord => predicateNameWords.Any(predicateWord => itemWord == predicateWord)))
                     {
-                        var predicateAssertionEntries = this.Ontology.Data.Relations.Assertions.SelectEntriesByPredicate(predicate);
-                        if(predicateAssertionEntries.Count() > 0)
+                        var stageWords = stageName.Split('_').ToList();
+                        var itemWords = itemName.Split('_').ToList();
+                        var filteredPredicateName = predicateName;
+                        foreach (var word in stageWords)
+                            filteredPredicateName = filteredPredicateName.Replace(word, "");
+                        foreach (var word in itemWords)
+                            filteredPredicateName = filteredPredicateName.Replace(word, "");
+
+                        if(!string.IsNullOrEmpty(filteredPredicateName))
                         {
-                            var predicateAssertion = predicateAssertionEntries.Single();
-                            step = Convert.ToInt32(predicateAssertion.TaxonomyObject.ToString().Split('^').First());
-                        }
+                            var predicateAssertionEntries = this.Ontology.Data.Relations.Assertions.SelectEntriesByPredicate(predicate);
+                            if (predicateAssertionEntries.Count() > 0)
+                            {
+                                var predicateAssertion = predicateAssertionEntries.Single();
+                                step = Convert.ToInt32(predicateAssertion.TaxonomyObject.ToString().Split('^').First());
+                            }
+                        }                        
                     }
                 }
                 else
@@ -827,12 +839,24 @@ namespace ARPEGOS.Services
                 if (ObjectPropertyAssertions.Count() > 1)
                 {
                     ObjectPropertyAssertions = ObjectPropertyAssertions.Where(entry => entry.ToString().Contains(ObjectPropertyName));
-                    //Quedarse con una única propiedad 
-                    var currentClassName = currentItem.Class;
-                    ObjectPropertyAssertions = ObjectPropertyAssertions.Where(entry => entry.Range.Value.ToString().Contains(currentClassName));
-                    propertyString = ObjectPropertyAssertions.Single().ToString();
-                    propertyNameFound = true;
-                    break;
+                    if(ObjectPropertyAssertions.Count() >1)
+                    {
+                        //Quedarse con una única propiedad 
+                        var currentClassName = currentItem.Class;
+                        ObjectPropertyAssertions = ObjectPropertyAssertions.Where(entry => entry.Range.Value.ToString().Contains(currentClassName));
+                        if (ObjectPropertyAssertions.Count() > 0)
+                        {
+                            propertyString = ObjectPropertyAssertions.Single().ToString();
+                            propertyNameFound = true;
+                            break;
+                        }
+                    }
+                    else if (ObjectPropertyAssertions.Count() == 1)
+                    {
+                        propertyString = ObjectPropertyAssertions.Single().ToString();
+                        propertyNameFound = true;
+                        break;
+                    }
                 }
                 else if (ObjectPropertyAssertions.Count() == 1)
                 {

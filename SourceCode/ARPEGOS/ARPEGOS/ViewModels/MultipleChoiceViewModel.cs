@@ -172,19 +172,26 @@ namespace ARPEGOS.ViewModels
             var availableItems = character.CheckAvailableOptions(this.CurrentStage.FullName, this.HasGeneralLimit, StageViewModel.GeneralLimitProperty, this.GeneralLimit, this.StageLimitProperty, this.StageLimit);
 
             var datalist = new ObservableCollection<Item>();
-            foreach (var item in this.Elements)
+
+            if (availableItems.Count() > 0)
             {
-                foreach (var availableItem in availableItems )
+                foreach (var item in this.Elements)
                 {
-                    if (availableItem.FullName.Split('#').Last() == item.FullName.Split('#').Last())
+                    foreach (var availableItem in availableItems)
                     {
-                        datalist.Add(item);
-                        break;
+                        if (availableItem.FullName.Split('#').Last() == item.FullName.Split('#').Last())
+                        {
+                            datalist.Add(item);
+                            break;
+                        }
+                        else if (datalist.Contains(item))
+                            datalist.Remove(item);
                     }
-                    else if (datalist.Contains(item))
-                        datalist.Remove(item);
                 }
             }
+            else
+                Data.Clear();
+            
 
             Data = new ObservableCollection<Item>(datalist);
 
@@ -274,7 +281,11 @@ namespace ARPEGOS.ViewModels
                 }
                 if (elementFound == false)
                     if (Data.Contains(element))
-                        Data.Remove(element);
+                    {
+                        var item = Data.ElementAt(Data.IndexOf(element));
+                        if (item.IsSelected == false)
+                            Data.Remove(element);
+                    }
                 ++elementIndex;
             }
             /*

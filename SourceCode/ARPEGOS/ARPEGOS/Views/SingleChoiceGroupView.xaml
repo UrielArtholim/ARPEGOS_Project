@@ -36,7 +36,7 @@
                                                 HorizontalOptions="StartAndExpand" 
                                                 VerticalOptions="Center" 
                                                 Text="{Binding FormattedTitle}"/>
-                                        <ImageButton Source="description.png" HeightRequest="25" WidthRequest="25"
+                                        <ImageButton Source="description.png" HeightRequest="25" WidthRequest="25" IsVisible="{Binding HasDescription}"
                                                      Command="{Binding Source={x:Reference SingleChoiceGroup}, Path=BindingContext.GroupInfoCommand}"
                                                      CommandParameter="{Binding .}"
                                                      BackgroundColor="Transparent"/>

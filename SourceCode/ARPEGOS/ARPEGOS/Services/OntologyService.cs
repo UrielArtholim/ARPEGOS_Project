@@ -275,7 +275,7 @@ namespace ARPEGOS.Services
         /// <param name="value1"></param>
         /// <param name="value2"></param>
         /// <returns></returns>
-        public static dynamic ConvertToOperator(string op, float value1, float value2)
+        public static dynamic ConvertToOperator(string op, double value1, double value2)
         {
             switch (op)
             {

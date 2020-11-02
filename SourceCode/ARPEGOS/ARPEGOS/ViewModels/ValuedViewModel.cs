@@ -187,7 +187,7 @@ namespace ARPEGOS.ViewModels
             if (character.CheckDatatypeProperty(this.CurrentStage.FullName, StageViewModel.ApplyOnCharacter))
             {
                 this.ShowDescription = false;
-                var itemStep = character.GetStep(this.StageName);
+                var itemStep = character.GetStep(this.StageName, stageString.Split('#').Last());
                 if (this.CurrentLimit > itemStep * 100)
                     this.CurrentLimit = itemStep * 100;
 
@@ -203,7 +203,7 @@ namespace ARPEGOS.ViewModels
 
                 foreach (var item in Items)
                 {
-                    var itemStep = character.GetStep(item.FullName.Split('#').Last());
+                    var itemStep = character.GetStep(item.FullName.Split('#').Last(), stageString.Split('#').Last());
 
                     if (this.CurrentLimit > item.Step * 100)
                         this.CurrentLimit = item.Step * 100;

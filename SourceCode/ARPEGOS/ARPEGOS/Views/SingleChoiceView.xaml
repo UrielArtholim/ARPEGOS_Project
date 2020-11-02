@@ -36,7 +36,7 @@
                                                 HorizontalTextAlignment="Start"
                                                 VerticalOptions="Center" 
                                                 Text="{Binding FormattedName}"/>
-                                        <ImageButton Source="description.png" HeightRequest="25" WidthRequest="25" Aspect="AspectFit"
+                                        <ImageButton Source="description.png" HeightRequest="25" WidthRequest="25" Aspect="AspectFit" IsVisible="{Binding HasDescription}"
                                                      Command="{Binding Source={x:Reference SingleChoice}, Path=BindingContext.InfoCommand}"
                                                      CommandParameter="{Binding .}"
                                                      BackgroundColor="Transparent"/>

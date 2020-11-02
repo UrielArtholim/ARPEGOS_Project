@@ -997,7 +997,7 @@
     <owl:ObjectProperty rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tieneHabilidadAtlética">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tieneHabilidadSecundaria"/>
         <rdfs:domain rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Personaje"/>
-        <rdfs:range rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidad_Atléticas"/>
+        <rdfs:range rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidades_Atléticas"/>
     </owl:ObjectProperty>
     
 
@@ -1033,7 +1033,7 @@
     <owl:ObjectProperty rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tieneHabilidadCreativa">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tieneHabilidadSecundaria"/>
         <rdfs:domain rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Personaje"/>
-        <rdfs:range rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidad_Creativas"/>
+        <rdfs:range rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidades_Creativas"/>
     </owl:ObjectProperty>
     
 
@@ -1043,7 +1043,7 @@
     <owl:ObjectProperty rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tieneHabilidadIntelectual">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tieneHabilidadSecundaria"/>
         <rdfs:domain rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Personaje"/>
-        <rdfs:range rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidad_Intelectuales"/>
+        <rdfs:range rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidades_Intelectuales"/>
     </owl:ObjectProperty>
     
 
@@ -1089,7 +1089,7 @@
     <owl:ObjectProperty rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tieneHabilidadPerceptiva">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tieneHabilidadSecundaria"/>
         <rdfs:domain rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Personaje"/>
-        <rdfs:range rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidad_Perceptivas"/>
+        <rdfs:range rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidades_Perceptivas"/>
     </owl:ObjectProperty>
     
 
@@ -1145,7 +1145,7 @@
     <owl:ObjectProperty rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tieneHabilidadSocial">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tieneHabilidadSecundaria"/>
         <rdfs:domain rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Personaje"/>
-        <rdfs:range rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidad_Sociales"/>
+        <rdfs:range rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidades_Sociales"/>
     </owl:ObjectProperty>
     
 
@@ -1155,7 +1155,7 @@
     <owl:ObjectProperty rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tieneHabilidadSubterfugio">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tieneHabilidadSecundaria"/>
         <rdfs:domain rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Personaje"/>
-        <rdfs:range rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidad_Subterfugio"/>
+        <rdfs:range rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidades_Subterfugio"/>
     </owl:ObjectProperty>
     
 
@@ -1165,7 +1165,7 @@
     <owl:ObjectProperty rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tieneHabilidadVigor">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tieneHabilidadSecundaria"/>
         <rdfs:domain rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Personaje"/>
-        <rdfs:range rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidad_Vigor"/>
+        <rdfs:range rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidades_Vigor"/>
     </owl:ObjectProperty>
     
 
@@ -1321,7 +1321,7 @@
     <owl:ObjectProperty rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tieneTablaArquetípica">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tieneTabla_Armas"/>
         <rdfs:domain rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Personaje"/>
-        <rdfs:range rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Armas_Arquetípicas"/>
+        <rdfs:range rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Armas_Arquetípo"/>
     </owl:ObjectProperty>
     
 
@@ -3284,9 +3284,9 @@
     
 
 
-    <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Cat_Habilidad_Atléticas_Coste -->
+    <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Cat_Habilidades_Atléticas_Coste -->
 
-    <owl:DatatypeProperty rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Cat_Habilidad_Atléticas_Coste">
+    <owl:DatatypeProperty rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Cat_Habilidades_Atléticas_Coste">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Cat_Hab_Sec_Coste"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Categoría"/>
@@ -3295,9 +3295,9 @@
     
 
 
-    <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Cat_Habilidad_Creativas_Coste -->
+    <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Cat_Habilidades_Creativas_Coste -->
 
-    <owl:DatatypeProperty rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Cat_Habilidad_Creativas_Coste">
+    <owl:DatatypeProperty rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Cat_Habilidades_Creativas_Coste">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Cat_Hab_Sec_Coste"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Categoría"/>
@@ -3306,9 +3306,9 @@
     
 
 
-    <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Cat_Habilidad_Intelectuales_Coste -->
+    <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Cat_Habilidades_Intelectuales_Coste -->
 
-    <owl:DatatypeProperty rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Cat_Habilidad_Intelectuales_Coste">
+    <owl:DatatypeProperty rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Cat_Habilidades_Intelectuales_Coste">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Cat_Hab_Sec_Coste"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Categoría"/>
@@ -3317,9 +3317,9 @@
     
 
 
-    <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Cat_Habilidad_Perceptivas_Coste -->
+    <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Cat_Habilidades_Perceptivas_Coste -->
 
-    <owl:DatatypeProperty rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Cat_Habilidad_Perceptivas_Coste">
+    <owl:DatatypeProperty rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Cat_Habilidades_Perceptivas_Coste">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Cat_Hab_Sec_Coste"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Categoría"/>
@@ -3328,9 +3328,9 @@
     
 
 
-    <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Cat_Habilidad_Sociales_Coste -->
+    <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Cat_Habilidades_Sociales_Coste -->
 
-    <owl:DatatypeProperty rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Cat_Habilidad_Sociales_Coste">
+    <owl:DatatypeProperty rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Cat_Habilidades_Sociales_Coste">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Cat_Hab_Sec_Coste"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Categoría"/>
@@ -3339,9 +3339,9 @@
     
 
 
-    <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Cat_Habilidad_Subterfugio_Coste -->
+    <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Cat_Habilidades_Subterfugio_Coste -->
 
-    <owl:DatatypeProperty rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Cat_Habilidad_Subterfugio_Coste">
+    <owl:DatatypeProperty rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Cat_Habilidades_Subterfugio_Coste">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Cat_Hab_Sec_Coste"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Categoría"/>
@@ -3350,9 +3350,9 @@
     
 
 
-    <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Cat_Habilidad_Vigor_Coste -->
+    <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Cat_Habilidades_Vigor_Coste -->
 
-    <owl:DatatypeProperty rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Cat_Habilidad_Vigor_Coste">
+    <owl:DatatypeProperty rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Cat_Habilidades_Vigor_Coste">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Cat_Hab_Sec_Coste"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Categoría"/>
@@ -5525,14 +5525,6 @@
     
 
 
-    <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Per_Conocimiento_Marcial -->
-
-    <owl:DatatypeProperty rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Per_Conocimiento_Marcial">
-        <rdfs:subPropertyOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Per_Habilidad_Combate_Pasiva"/>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Per_CV -->
 
     <owl:DatatypeProperty rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Per_CV">
@@ -5862,6 +5854,14 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Per_Conocimiento_Marcial -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Per_Conocimiento_Marcial">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Per_Habilidad_Combate_Pasiva"/>
     </owl:DatatypeProperty>
     
 
@@ -6270,18 +6270,6 @@
     
 
 
-    <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Per_Disponible_Conocimiento_Marcial -->
-
-    <owl:DatatypeProperty rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Per_Disponible_Conocimiento_Marcial">
-        <rdfs:subPropertyOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Personaje_Disponible"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Personaje"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
-        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Límite_Conocimiento_Marcial</rdfs:isDefinedBy>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Per_Disponible_CV -->
 
     <owl:DatatypeProperty rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Per_Disponible_CV">
@@ -6302,6 +6290,18 @@
         <rdfs:domain rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Límite_Característica:*:8:-:100</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Per_Disponible_Conocimiento_Marcial -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Per_Disponible_Conocimiento_Marcial">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Personaje_Disponible"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Personaje"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Límite_Conocimiento_Marcial</rdfs:isDefinedBy>
     </owl:DatatypeProperty>
     
 
@@ -6338,6 +6338,18 @@
         <rdfs:domain rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Límite_Habilidad_Psíquica</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Per_Disponible_Habilidad_Secundaria -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Per_Disponible_Habilidad_Secundaria">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Personaje_Disponible"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Personaje"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Límite_Habilidad_Secundaria</rdfs:isDefinedBy>
     </owl:DatatypeProperty>
     
 
@@ -7624,9 +7636,9 @@
     
 
 
-    <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Per_Límite_Bonificador_Natural_Física -->
+    <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Per_Límite_Bonificador_Natural_Físico -->
 
-    <owl:DatatypeProperty rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Per_Límite_Bonificador_Natural_Física">
+    <owl:DatatypeProperty rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Per_Límite_Bonificador_Natural_Físico">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Personaje_Límite"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Personaje"/>
@@ -7644,18 +7656,6 @@
         <rdfs:domain rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Nivel</rdfs:isDefinedBy>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Per_Límite_Conocimiento_Marcial -->
-
-    <owl:DatatypeProperty rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Per_Límite_Conocimiento_Marcial">
-        <rdfs:subPropertyOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Personaje_Límite"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Personaje"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
-        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Nivel:*:tieneCategoría:Cat_Conocimiento_Marcial_Nivel</rdfs:isDefinedBy>
     </owl:DatatypeProperty>
     
 
@@ -7680,6 +7680,18 @@
         <rdfs:domain rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">20</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Per_Límite_Conocimiento_Marcial -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Per_Límite_Conocimiento_Marcial">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Personaje_Límite"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Personaje"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Nivel:*:tieneCategoría:Cat_Conocimiento_Marcial_Nivel</rdfs:isDefinedBy>
     </owl:DatatypeProperty>
     
 
@@ -11601,9 +11613,9 @@ Las armaduras no protegen necesariamente todo el cuerpo de un personaje. Sin con
     
 
 
-    <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Armas_Arquetípicas -->
+    <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Armas_Arquetípo -->
 
-    <owl:Class rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Armas_Arquetípicas">
+    <owl:Class rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Armas_Arquetípo">
         <rdfs:subClassOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Tabla_Armas"/>
         <ViewType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MultipleChoiceDynamicLimitView</ViewType>
     </owl:Class>
@@ -12488,14 +12500,6 @@ Objeto_Coste_Total, numerical: true, User_Edit: false, Equipo_Inventario:*:Objet
     
 
 
-    <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidad_Atléticas -->
-
-    <owl:Class rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidad_Atléticas">
-        <rdfs:subClassOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidad_Secundaria"/>
-    </owl:Class>
-    
-
-
     <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidad_Combate -->
 
     <owl:Class rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidad_Combate">
@@ -12519,22 +12523,6 @@ Per_Item_Bono_Característica, numerical: true, User_Edit: false, Hab_CarPrincip
 Per_Item_Bono_Categoría, numerical: true, User_Edit: false, tieneCategoría: Cat_BI_Item: *: Per_Nivel
 Per_Item_Total, numerical: true, User_Edit: false, Per_Item_Base: +: Per_Item_Bono_Característica: +: Per_Item_Bono_Categoría</ValuedListInfo>
         <ViewType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ValuedListView</ViewType>
-    </owl:Class>
-    
-
-
-    <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidad_Creativas -->
-
-    <owl:Class rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidad_Creativas">
-        <rdfs:subClassOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidad_Secundaria"/>
-    </owl:Class>
-    
-
-
-    <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidad_Intelectuales -->
-
-    <owl:Class rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidad_Intelectuales">
-        <rdfs:subClassOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidad_Secundaria"/>
     </owl:Class>
     
 
@@ -12603,18 +12591,11 @@ Per_Item_Total, numerical: true, User_Edit: false, Per_Item_Base:+:Per_Item_Bono
     <owl:Class rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidad_Natural">
         <rdfs:subClassOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Mejora_Natural"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Las habilidades naturales son una serie de bonos que el personaje obtiene en sus habilidades secundarias.</rdfs:comment>
-        <StageLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Habilidad_Natural_Límite</StageLimit>
+        <EditStageLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</EditStageLimit>
+        <StageLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Límite_Habilidad_Natural</StageLimit>
         <ValuedListInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Item_Base, numerical: true, User_Edit: true
 Per_Item_Bono, numerical: true, User_Edit: false, Per_Item_Base:*:10</ValuedListInfo>
         <ViewType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ValuedListView</ViewType>
-    </owl:Class>
-    
-
-
-    <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidad_Perceptivas -->
-
-    <owl:Class rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidad_Perceptivas">
-        <rdfs:subClassOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidad_Secundaria"/>
     </owl:Class>
     
 
@@ -12674,26 +12655,72 @@ Per_Item_Total, numerical: true, User_Edit: false, Per_Item_Base:+:Per_Item_Bono
     
 
 
-    <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidad_Sociales -->
+    <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidades_Atléticas -->
 
-    <owl:Class rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidad_Sociales">
+    <owl:Class rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidades_Atléticas">
         <rdfs:subClassOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidad_Secundaria"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Son las habilidades que dependen de la movilidad del personaje, de su equilibrio y de su agilidad.</rdfs:comment>
+        <ViewType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ValuedListView</ViewType>
     </owl:Class>
     
 
 
-    <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidad_Subterfugio -->
+    <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidades_Creativas -->
 
-    <owl:Class rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidad_Subterfugio">
+    <owl:Class rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidades_Creativas">
         <rdfs:subClassOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidad_Secundaria"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Son todas las habilidades referentes a la capacidad artística e inventiva de los personajes.</rdfs:comment>
+        <ViewType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ValuedListView</ViewType>
     </owl:Class>
     
 
 
-    <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidad_Vigor -->
+    <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidades_Intelectuales -->
 
-    <owl:Class rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidad_Vigor">
+    <owl:Class rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidades_Intelectuales">
         <rdfs:subClassOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidad_Secundaria"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Las habilidades intelectuales son las que dependen principalmente del conocimiento, la sabiduría y el raciocinio de los personajes.</rdfs:comment>
+        <ViewType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ValuedListView</ViewType>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidades_Perceptivas -->
+
+    <owl:Class rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidades_Perceptivas">
+        <rdfs:subClassOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidad_Secundaria"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">En este grupo se reúnen todas las habilidades perceptivas del personaje. Son las pericias que le permitirán explotar al máximo sus cinco sentidos y analizar la información obtenida.</rdfs:comment>
+        <ViewType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ValuedListView</ViewType>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidades_Sociales -->
+
+    <owl:Class rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidades_Sociales">
+        <rdfs:subClassOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidad_Secundaria"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Es el grupo de habilidades que reflejan la capacidad del personaje para interactuar con otros individuos e influir de algún modo en ellos.</rdfs:comment>
+        <ViewType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ValuedListView</ViewType>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidades_Subterfugio -->
+
+    <owl:Class rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidades_Subterfugio">
+        <rdfs:subClassOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidad_Secundaria"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Es el campo en el que se reúnen aquellas pericias basadas en el disimulo y en la capacidad de actuar sin que los demás puedan percatarse.</rdfs:comment>
+        <ViewType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ValuedListView</ViewType>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidades_Vigor -->
+
+    <owl:Class rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidades_Vigor">
+        <rdfs:subClassOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidad_Secundaria"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Son las habilidades que recogen aquellas pericias basadas en el esfuerzo corporal, el aguante físico y la resistencia mental.</rdfs:comment>
+        <ViewType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ValuedListView</ViewType>
     </owl:Class>
     
 
@@ -14073,7 +14100,7 @@ Descripción: Es una aleación excepcionalmente rara. Se llama así por su color
     <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Acrobacias -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Acrobacias">
-        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidad_Atléticas"/>
+        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidades_Atléticas"/>
         <Hab_CarPrincipal rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Agilidad"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mide la capacidad acrobática. Las Acrobacias no sólo permiten realizar volteretas y cabriolas circenses, sino muchas otras maniobras físicas que requieran equilibrio y movilidad, como andar por la cuerda floja. También puede emplearse para caer desde grandes alturas sin sufrir daños: un personaje que se esté cayendo tiene la oportunidad de realizar una tirada de Acrobacias para colocarse en una posición favorable y evitar fracturas. Sufre el penalizador por armadura.</rdfs:comment>
     </owl:NamedIndividual>
@@ -14491,7 +14518,7 @@ Mantenimiento: 20 / 40 / 50 / 60</rdfs:comment>
     <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Advertir -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Advertir">
-        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidad_Perceptivas"/>
+        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidades_Perceptivas"/>
         <Hab_CarPrincipal rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Percepción"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Refleja la habilidad perceptiva que permite ser consciente de lo que sucede alrededor. Un personaje puede advertir cualquier cosa extraña que pase o se encuentre en su entorno, desde un grabado inusual en la pared a un asesino que se acerque sigilosamente por su espalda. Las personas advierten utilizando sus cinco sentidos, aunque lo más común es que empleen principalmente la vista y el oído. Si un sujeto está privado de uno de ellos reduce su habilidad a la mitad, salvo si las circunstancias requieren que se utilicen solo determinados sentidos. En esta misma página podéis ver los modificadores de Advertir, separada en los cinco sentidos del personaje. Además de estos, un individuo distraído sufre un penalizador adicional comprendido entre -20 y -40 a sus controles, según crea apropiado el Director de Juego.</rdfs:comment>
     </owl:NamedIndividual>
@@ -15114,7 +15141,7 @@ Vías Cerradas: Agua</rdfs:comment>
     <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Animales -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Animales">
-        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidad_Intelectuales"/>
+        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidades_Intelectuales"/>
         <Hab_CarPrincipal rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Inteligencia"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Recoge el conocimiento sobre todo lo relacionado con el mundo animal. Mediante esta habilidad no sólo se pueden reconocer sus características y costumbres, sino también ser un experto en su crianza y adiestramiento. Es posible especializarse en una especie en concreto, en cuyo caso el personaje obtendrá un bonificador de +40 a los controles de la habilidad.</rdfs:comment>
     </owl:NamedIndividual>
@@ -16280,7 +16307,7 @@ Mantenimiento: 90 / 100 / 105 / 110</rdfs:comment>
     <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arquetipo_Aborigen -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arquetipo_Aborigen">
-        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Armas_Arquetípicas"/>
+        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Armas_Arquetípo"/>
         <TablaArmas_Arma rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arco_Compuesto"/>
         <TablaArmas_Arma rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arco_Corto"/>
         <TablaArmas_Arma rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arco_Largo"/>
@@ -16301,7 +16328,7 @@ Coste: 50 PD</rdfs:comment>
     <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arquetipo_Asesino -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arquetipo_Asesino">
-        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Armas_Arquetípicas"/>
+        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Armas_Arquetípo"/>
         <TablaArmas_Arma rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Ballesta_De_Mano"/>
         <TablaArmas_Arma rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Cerbatana"/>
         <TablaArmas_Arma rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Espada_Corta"/>
@@ -16320,7 +16347,7 @@ Coste: 50 PD</rdfs:comment>
     <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arquetipo_Bandido -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arquetipo_Bandido">
-        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Armas_Arquetípicas"/>
+        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Armas_Arquetípo"/>
         <TablaArmas_Arma rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Ballesta"/>
         <TablaArmas_Arma rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Daga"/>
         <TablaArmas_Arma rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Espada_Corta"/>
@@ -16339,7 +16366,7 @@ Coste: 50 PD</rdfs:comment>
     <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arquetipo_Bárbaro -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arquetipo_Bárbaro">
-        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Armas_Arquetípicas"/>
+        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Armas_Arquetípo"/>
         <TablaArmas_Arma rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Espada_Bastarda"/>
         <TablaArmas_Arma rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Hacha_A_2_Manos"/>
         <TablaArmas_Arma rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Hacha_De_Guerra"/>
@@ -16358,7 +16385,7 @@ Coste: 50 PD</rdfs:comment>
     <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arquetipo_Caballero -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arquetipo_Caballero">
-        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Armas_Arquetípicas"/>
+        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Armas_Arquetípo"/>
         <TablaArmas_Arma rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Espada_Bastarda"/>
         <TablaArmas_Arma rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Espada_Larga"/>
         <TablaArmas_Arma rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Lanza_De_Caballería"/>
@@ -16376,7 +16403,7 @@ Coste: 50 PD</rdfs:comment>
     <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arquetipo_Cazador -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arquetipo_Cazador">
-        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Armas_Arquetípicas"/>
+        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Armas_Arquetípo"/>
         <TablaArmas_Arma rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arco_Compuesto"/>
         <TablaArmas_Arma rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arco_Corto"/>
         <TablaArmas_Arma rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arco_Largo"/>
@@ -16397,7 +16424,7 @@ Coste: 50 PD</rdfs:comment>
     <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arquetipo_Duelista -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arquetipo_Duelista">
-        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Armas_Arquetípicas"/>
+        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Armas_Arquetípo"/>
         <TablaArmas_Arma rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Daga_De_Parada"/>
         <TablaArmas_Arma rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Espada_Larga"/>
         <TablaArmas_Arma rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Estoque"/>
@@ -16416,7 +16443,7 @@ Coste: 50 PD</rdfs:comment>
     <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arquetipo_Gladiador -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arquetipo_Gladiador">
-        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Armas_Arquetípicas"/>
+        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Armas_Arquetípo"/>
         <TablaArmas_Arma rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Espada_Corta"/>
         <TablaArmas_Arma rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Látigo"/>
         <TablaArmas_Arma rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Red_De_Gladiador"/>
@@ -16435,7 +16462,7 @@ Coste: 50 PD</rdfs:comment>
     <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arquetipo_Ninja -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arquetipo_Ninja">
-        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Armas_Arquetípicas"/>
+        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Armas_Arquetípo"/>
         <TablaArmas_Arma rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Garras"/>
         <TablaArmas_Arma rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Katana"/>
         <TablaArmas_Arma rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Kusari-Gama"/>
@@ -16454,7 +16481,7 @@ Coste: 50 PD</rdfs:comment>
     <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arquetipo_Nómada -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arquetipo_Nómada">
-        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Armas_Arquetípicas"/>
+        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Armas_Arquetípo"/>
         <TablaArmas_Arma rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arco_Largo"/>
         <TablaArmas_Arma rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Cimitarra"/>
         <TablaArmas_Arma rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Daga"/>
@@ -16473,7 +16500,7 @@ Coste: 50 PD</rdfs:comment>
     <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arquetipo_Pirata -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arquetipo_Pirata">
-        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Armas_Arquetípicas"/>
+        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Armas_Arquetípo"/>
         <TablaArmas_Arma rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arpón"/>
         <TablaArmas_Arma rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Garfio"/>
         <TablaArmas_Arma rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Hacha_De_Mano"/>
@@ -16492,7 +16519,7 @@ Coste: 50 PD</rdfs:comment>
     <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arquetipo_Soldado -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arquetipo_Soldado">
-        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Armas_Arquetípicas"/>
+        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Armas_Arquetípo"/>
         <TablaArmas_Arma rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Alabarda"/>
         <TablaArmas_Arma rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Ballesta"/>
         <TablaArmas_Arma rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Espada_Larga"/>
@@ -16560,7 +16587,7 @@ Mantenimiento: 15 / 30 / 50 / 100 Diario</rdfs:comment>
     <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arte -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arte">
-        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidad_Creativas"/>
+        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidades_Creativas"/>
         <Hab_CarPrincipal rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Poder"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mide la pericia de un individuo en los campos artísticos, como la pintura o la escultura. Un personaje puede especializarse en una única habilidad artística,  en cuyo caso aplicará un bonificador de +40 al realizar dichos controles.</rdfs:comment>
     </owl:NamedIndividual>
@@ -17071,7 +17098,7 @@ Mantenimiento: No</rdfs:comment>
     <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Atletismo -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Atletismo">
-        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidad_Atléticas"/>
+        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidades_Atléticas"/>
         <Hab_CarPrincipal rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Agilidad"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Es la capacidad del personaje de forzar sus habilidades atléticas, manteniendo el ritmo en una carrera, saltando obstáculos o incluso remando. Con ella podrá correr por encima de sus límites y distribuir mejor sus energías para aguantar más sin agotarse. Para saber cada cuanto tiempo un personaje pierde un punto de Cansancio corriendo o desplazándose a su movimiento máximo es necesario realizar un control de Atletismo.
 
@@ -17622,7 +17649,7 @@ Mantenimiento: 10 / 15 / 25 / 35</rdfs:comment>
     <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Baile -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Baile">
-        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidad_Creativas"/>
+        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidades_Creativas"/>
         <Hab_CarPrincipal rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Agilidad"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Es la facultad de bailar y de aprender nuevas danzas. Cuanto más elevada sea la habilidad, el personaje podrá dominar un mayor número de bailes y estilos distintos. Es sin duda una buena manera de ganarse la vida: un gran bailarín siempre podrá conseguir unas monedas si sabe sacar provecho de su capacidad. Un personaje puede especializarse únicamente en un tipo concreto de danza, como por ejemplo baile de salón, en cuyo caso aplicará un bonificador de +40 a sus controles. Sufre el penalizador por armadura.</rdfs:comment>
     </owl:NamedIndividual>
@@ -18615,7 +18642,7 @@ Mantenimiento: 5 / 5 / 10 / 10</rdfs:comment>
     <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Buscar -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Buscar">
-        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidad_Perceptivas"/>
+        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidades_Perceptivas"/>
         <Hab_CarPrincipal rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Percepción"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Es la capacidad visual e intuitiva del personaje para buscar algo concreto empleando sus sentidos, ya sea una entrada secreta o a alguien oculto. Es una habilidad mucho más precisa que advertir, puesto que es una acción consciente. Para buscar algo hace falta declararlo previamente, aunque lo que se encuentre al final puede que no sea exactamente lo que se pretendía hallar (un personaje podría tratar de buscar una puerta secreta en una habitación, y en el proceso encontrar algún objeto oculto). También sirve para buscar cosas concretas, como un libro en una biblioteca. Si un individuo trata de buscar una trampa, requiere un nivel de dificultad menos del que indique el artilugio. Esta habilidad utiliza también los mismos modificadores que Advertir.</rdfs:comment>
     </owl:NamedIndividual>
@@ -19405,13 +19432,13 @@ Descripción: Este poder carga un objeto o lugar determinado con un fuerte senti
         <Cat_Hab_Combate_Límite rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.5</Cat_Hab_Combate_Límite>
         <Cat_Hab_Mística_Límite rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.5</Cat_Hab_Mística_Límite>
         <Cat_Hab_Psíquica_Límite rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.5</Cat_Hab_Psíquica_Límite>
-        <Cat_Habilidad_Atléticas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidad_Atléticas_Coste>
-        <Cat_Habilidad_Creativas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">2</Cat_Habilidad_Creativas_Coste>
-        <Cat_Habilidad_Intelectuales_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">3</Cat_Habilidad_Intelectuales_Coste>
-        <Cat_Habilidad_Perceptivas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">1</Cat_Habilidad_Perceptivas_Coste>
-        <Cat_Habilidad_Sociales_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">2</Cat_Habilidad_Sociales_Coste>
-        <Cat_Habilidad_Subterfugio_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">2</Cat_Habilidad_Subterfugio_Coste>
-        <Cat_Habilidad_Vigor_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">3</Cat_Habilidad_Vigor_Coste>
+        <Cat_Habilidades_Atléticas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidades_Atléticas_Coste>
+        <Cat_Habilidades_Creativas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">2</Cat_Habilidades_Creativas_Coste>
+        <Cat_Habilidades_Intelectuales_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">3</Cat_Habilidades_Intelectuales_Coste>
+        <Cat_Habilidades_Perceptivas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">1</Cat_Habilidades_Perceptivas_Coste>
+        <Cat_Habilidades_Sociales_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">2</Cat_Habilidades_Sociales_Coste>
+        <Cat_Habilidades_Subterfugio_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">2</Cat_Habilidades_Subterfugio_Coste>
+        <Cat_Habilidades_Vigor_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">3</Cat_Habilidades_Vigor_Coste>
         <Cat_Llevar_Armadura_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Cat_Llevar_Armadura_Coste>
         <Cat_Múltiplo_Vida_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</Cat_Múltiplo_Vida_Coste>
         <Cat_Parada_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Cat_Parada_Coste>
@@ -19472,13 +19499,13 @@ Clase_Social</CreationScheme>
         <Cat_Hab_Combate_Límite rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.5</Cat_Hab_Combate_Límite>
         <Cat_Hab_Mística_Límite rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.6</Cat_Hab_Mística_Límite>
         <Cat_Hab_Psíquica_Límite rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.5</Cat_Hab_Psíquica_Límite>
-        <Cat_Habilidad_Atléticas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidad_Atléticas_Coste>
-        <Cat_Habilidad_Creativas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidad_Creativas_Coste>
-        <Cat_Habilidad_Intelectuales_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidad_Intelectuales_Coste>
-        <Cat_Habilidad_Perceptivas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidad_Perceptivas_Coste>
-        <Cat_Habilidad_Sociales_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidad_Sociales_Coste>
-        <Cat_Habilidad_Subterfugio_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidad_Subterfugio_Coste>
-        <Cat_Habilidad_Vigor_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Cat_Habilidad_Vigor_Coste>
+        <Cat_Habilidades_Atléticas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidades_Atléticas_Coste>
+        <Cat_Habilidades_Creativas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidades_Creativas_Coste>
+        <Cat_Habilidades_Intelectuales_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidades_Intelectuales_Coste>
+        <Cat_Habilidades_Perceptivas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidades_Perceptivas_Coste>
+        <Cat_Habilidades_Sociales_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidades_Sociales_Coste>
+        <Cat_Habilidades_Subterfugio_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidades_Subterfugio_Coste>
+        <Cat_Habilidades_Vigor_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Cat_Habilidades_Vigor_Coste>
         <Cat_Llevar_Armadura_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Cat_Llevar_Armadura_Coste>
         <Cat_Múltiplo_Vida_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</Cat_Múltiplo_Vida_Coste>
         <Cat_Parada_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Cat_Parada_Coste>
@@ -19547,13 +19574,13 @@ Clase_Social</CreationScheme>
         <Cat_Hab_Combate_Límite rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.6</Cat_Hab_Combate_Límite>
         <Cat_Hab_Mística_Límite rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.5</Cat_Hab_Mística_Límite>
         <Cat_Hab_Psíquica_Límite rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.5</Cat_Hab_Psíquica_Límite>
-        <Cat_Habilidad_Atléticas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidad_Atléticas_Coste>
-        <Cat_Habilidad_Creativas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidad_Creativas_Coste>
-        <Cat_Habilidad_Intelectuales_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Cat_Habilidad_Intelectuales_Coste>
-        <Cat_Habilidad_Perceptivas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</Cat_Habilidad_Perceptivas_Coste>
-        <Cat_Habilidad_Sociales_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidad_Sociales_Coste>
-        <Cat_Habilidad_Subterfugio_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidad_Subterfugio_Coste>
-        <Cat_Habilidad_Vigor_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Cat_Habilidad_Vigor_Coste>
+        <Cat_Habilidades_Atléticas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidades_Atléticas_Coste>
+        <Cat_Habilidades_Creativas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidades_Creativas_Coste>
+        <Cat_Habilidades_Intelectuales_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Cat_Habilidades_Intelectuales_Coste>
+        <Cat_Habilidades_Perceptivas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</Cat_Habilidades_Perceptivas_Coste>
+        <Cat_Habilidades_Sociales_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidades_Sociales_Coste>
+        <Cat_Habilidades_Subterfugio_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidades_Subterfugio_Coste>
+        <Cat_Habilidades_Vigor_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Cat_Habilidades_Vigor_Coste>
         <Cat_Llevar_Armadura_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Llevar_Armadura_Coste>
         <Cat_Múltiplo_Vida_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</Cat_Múltiplo_Vida_Coste>
         <Cat_Parada_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Parada_Coste>
@@ -19611,13 +19638,13 @@ Clase_Social</CreationScheme>
         <Cat_Hab_Combate_Límite rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.6</Cat_Hab_Combate_Límite>
         <Cat_Hab_Mística_Límite rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.5</Cat_Hab_Mística_Límite>
         <Cat_Hab_Psíquica_Límite rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.5</Cat_Hab_Psíquica_Límite>
-        <Cat_Habilidad_Atléticas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidad_Atléticas_Coste>
-        <Cat_Habilidad_Creativas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidad_Creativas_Coste>
-        <Cat_Habilidad_Intelectuales_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Cat_Habilidad_Intelectuales_Coste>
-        <Cat_Habilidad_Perceptivas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidad_Perceptivas_Coste>
-        <Cat_Habilidad_Sociales_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidad_Sociales_Coste>
-        <Cat_Habilidad_Subterfugio_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidad_Subterfugio_Coste>
-        <Cat_Habilidad_Vigor_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidad_Vigor_Coste>
+        <Cat_Habilidades_Atléticas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidades_Atléticas_Coste>
+        <Cat_Habilidades_Creativas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidades_Creativas_Coste>
+        <Cat_Habilidades_Intelectuales_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Cat_Habilidades_Intelectuales_Coste>
+        <Cat_Habilidades_Perceptivas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidades_Perceptivas_Coste>
+        <Cat_Habilidades_Sociales_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidades_Sociales_Coste>
+        <Cat_Habilidades_Subterfugio_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidades_Subterfugio_Coste>
+        <Cat_Habilidades_Vigor_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidades_Vigor_Coste>
         <Cat_Llevar_Armadura_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Llevar_Armadura_Coste>
         <Cat_Múltiplo_Vida_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</Cat_Múltiplo_Vida_Coste>
         <Cat_Parada_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Parada_Coste>
@@ -19677,13 +19704,13 @@ Clase_Social</CreationScheme>
         <Cat_Hab_Combate_Límite rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.6</Cat_Hab_Combate_Límite>
         <Cat_Hab_Mística_Límite rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.5</Cat_Hab_Mística_Límite>
         <Cat_Hab_Psíquica_Límite rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.5</Cat_Hab_Psíquica_Límite>
-        <Cat_Habilidad_Atléticas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidad_Atléticas_Coste>
-        <Cat_Habilidad_Creativas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidad_Creativas_Coste>
-        <Cat_Habilidad_Intelectuales_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Cat_Habilidad_Intelectuales_Coste>
-        <Cat_Habilidad_Perceptivas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidad_Perceptivas_Coste>
-        <Cat_Habilidad_Sociales_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidad_Sociales_Coste>
-        <Cat_Habilidad_Subterfugio_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidad_Subterfugio_Coste>
-        <Cat_Habilidad_Vigor_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidad_Vigor_Coste>
+        <Cat_Habilidades_Atléticas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidades_Atléticas_Coste>
+        <Cat_Habilidades_Creativas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidades_Creativas_Coste>
+        <Cat_Habilidades_Intelectuales_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Cat_Habilidades_Intelectuales_Coste>
+        <Cat_Habilidades_Perceptivas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidades_Perceptivas_Coste>
+        <Cat_Habilidades_Sociales_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidades_Sociales_Coste>
+        <Cat_Habilidades_Subterfugio_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidades_Subterfugio_Coste>
+        <Cat_Habilidades_Vigor_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidades_Vigor_Coste>
         <Cat_Llevar_Armadura_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Llevar_Armadura_Coste>
         <Cat_Múltiplo_Vida_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</Cat_Múltiplo_Vida_Coste>
         <Cat_Parada_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Cat_Parada_Coste>
@@ -19746,13 +19773,13 @@ Clase_Social</CreationScheme>
         <Cat_Hab_Combate_Límite rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.5</Cat_Hab_Combate_Límite>
         <Cat_Hab_Mística_Límite rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.5</Cat_Hab_Mística_Límite>
         <Cat_Hab_Psíquica_Límite rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.5</Cat_Hab_Psíquica_Límite>
-        <Cat_Habilidad_Atléticas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidad_Atléticas_Coste>
-        <Cat_Habilidad_Creativas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidad_Creativas_Coste>
-        <Cat_Habilidad_Intelectuales_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidad_Intelectuales_Coste>
-        <Cat_Habilidad_Perceptivas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidad_Perceptivas_Coste>
-        <Cat_Habilidad_Sociales_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidad_Sociales_Coste>
-        <Cat_Habilidad_Subterfugio_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidad_Subterfugio_Coste>
-        <Cat_Habilidad_Vigor_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidad_Vigor_Coste>
+        <Cat_Habilidades_Atléticas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidades_Atléticas_Coste>
+        <Cat_Habilidades_Creativas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidades_Creativas_Coste>
+        <Cat_Habilidades_Intelectuales_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidades_Intelectuales_Coste>
+        <Cat_Habilidades_Perceptivas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidades_Perceptivas_Coste>
+        <Cat_Habilidades_Sociales_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidades_Sociales_Coste>
+        <Cat_Habilidades_Subterfugio_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidades_Subterfugio_Coste>
+        <Cat_Habilidades_Vigor_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidades_Vigor_Coste>
         <Cat_Llevar_Armadura_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Llevar_Armadura_Coste>
         <Cat_Múltiplo_Vida_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</Cat_Múltiplo_Vida_Coste>
         <Cat_Parada_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Parada_Coste>
@@ -19815,13 +19842,13 @@ Clase_Social</CreationScheme>
         <Cat_Hab_Combate_Límite rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.5</Cat_Hab_Combate_Límite>
         <Cat_Hab_Mística_Límite rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.5</Cat_Hab_Mística_Límite>
         <Cat_Hab_Psíquica_Límite rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.5</Cat_Hab_Psíquica_Límite>
-        <Cat_Habilidad_Atléticas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidad_Atléticas_Coste>
-        <Cat_Habilidad_Creativas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidad_Creativas_Coste>
-        <Cat_Habilidad_Intelectuales_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidad_Intelectuales_Coste>
-        <Cat_Habilidad_Perceptivas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidad_Perceptivas_Coste>
-        <Cat_Habilidad_Sociales_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidad_Sociales_Coste>
-        <Cat_Habilidad_Subterfugio_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidad_Subterfugio_Coste>
-        <Cat_Habilidad_Vigor_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Cat_Habilidad_Vigor_Coste>
+        <Cat_Habilidades_Atléticas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidades_Atléticas_Coste>
+        <Cat_Habilidades_Creativas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidades_Creativas_Coste>
+        <Cat_Habilidades_Intelectuales_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidades_Intelectuales_Coste>
+        <Cat_Habilidades_Perceptivas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidades_Perceptivas_Coste>
+        <Cat_Habilidades_Sociales_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidades_Sociales_Coste>
+        <Cat_Habilidades_Subterfugio_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidades_Subterfugio_Coste>
+        <Cat_Habilidades_Vigor_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Cat_Habilidades_Vigor_Coste>
         <Cat_Llevar_Armadura_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Llevar_Armadura_Coste>
         <Cat_Múltiplo_Vida_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</Cat_Múltiplo_Vida_Coste>
         <Cat_Parada_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Parada_Coste>
@@ -19882,13 +19909,13 @@ Clase_Social</CreationScheme>
         <Cat_Hab_Combate_Límite rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.5</Cat_Hab_Combate_Límite>
         <Cat_Hab_Mística_Límite rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.6</Cat_Hab_Mística_Límite>
         <Cat_Hab_Psíquica_Límite rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.5</Cat_Hab_Psíquica_Límite>
-        <Cat_Habilidad_Atléticas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidad_Atléticas_Coste>
-        <Cat_Habilidad_Creativas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidad_Creativas_Coste>
-        <Cat_Habilidad_Intelectuales_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidad_Intelectuales_Coste>
-        <Cat_Habilidad_Perceptivas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidad_Perceptivas_Coste>
-        <Cat_Habilidad_Sociales_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidad_Sociales_Coste>
-        <Cat_Habilidad_Subterfugio_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidad_Subterfugio_Coste>
-        <Cat_Habilidad_Vigor_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Cat_Habilidad_Vigor_Coste>
+        <Cat_Habilidades_Atléticas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidades_Atléticas_Coste>
+        <Cat_Habilidades_Creativas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidades_Creativas_Coste>
+        <Cat_Habilidades_Intelectuales_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidades_Intelectuales_Coste>
+        <Cat_Habilidades_Perceptivas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidades_Perceptivas_Coste>
+        <Cat_Habilidades_Sociales_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidades_Sociales_Coste>
+        <Cat_Habilidades_Subterfugio_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidades_Subterfugio_Coste>
+        <Cat_Habilidades_Vigor_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Cat_Habilidades_Vigor_Coste>
         <Cat_Llevar_Armadura_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Cat_Llevar_Armadura_Coste>
         <Cat_Múltiplo_Vida_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</Cat_Múltiplo_Vida_Coste>
         <Cat_Parada_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Cat_Parada_Coste>
@@ -19951,13 +19978,13 @@ Clase_Social</CreationScheme>
         <Cat_Hab_Combate_Límite rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.5</Cat_Hab_Combate_Límite>
         <Cat_Hab_Mística_Límite rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.5</Cat_Hab_Mística_Límite>
         <Cat_Hab_Psíquica_Límite rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.5</Cat_Hab_Psíquica_Límite>
-        <Cat_Habilidad_Atléticas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidad_Atléticas_Coste>
-        <Cat_Habilidad_Creativas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidad_Creativas_Coste>
-        <Cat_Habilidad_Intelectuales_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidad_Intelectuales_Coste>
-        <Cat_Habilidad_Perceptivas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidad_Perceptivas_Coste>
-        <Cat_Habilidad_Sociales_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidad_Sociales_Coste>
-        <Cat_Habilidad_Subterfugio_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidad_Subterfugio_Coste>
-        <Cat_Habilidad_Vigor_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Cat_Habilidad_Vigor_Coste>
+        <Cat_Habilidades_Atléticas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidades_Atléticas_Coste>
+        <Cat_Habilidades_Creativas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidades_Creativas_Coste>
+        <Cat_Habilidades_Intelectuales_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidades_Intelectuales_Coste>
+        <Cat_Habilidades_Perceptivas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidades_Perceptivas_Coste>
+        <Cat_Habilidades_Sociales_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidades_Sociales_Coste>
+        <Cat_Habilidades_Subterfugio_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidades_Subterfugio_Coste>
+        <Cat_Habilidades_Vigor_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Cat_Habilidades_Vigor_Coste>
         <Cat_Llevar_Armadura_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Cat_Llevar_Armadura_Coste>
         <Cat_Múltiplo_Vida_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</Cat_Múltiplo_Vida_Coste>
         <Cat_Parada_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Cat_Parada_Coste>
@@ -20031,13 +20058,13 @@ Clase_Social</CreationScheme>
         <Cat_Hab_Combate_Límite rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.5</Cat_Hab_Combate_Límite>
         <Cat_Hab_Mística_Límite rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.6</Cat_Hab_Mística_Límite>
         <Cat_Hab_Psíquica_Límite rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.5</Cat_Hab_Psíquica_Límite>
-        <Cat_Habilidad_Atléticas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidad_Atléticas_Coste>
-        <Cat_Habilidad_Creativas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidad_Creativas_Coste>
-        <Cat_Habilidad_Intelectuales_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidad_Intelectuales_Coste>
-        <Cat_Habilidad_Perceptivas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidad_Perceptivas_Coste>
-        <Cat_Habilidad_Sociales_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidad_Sociales_Coste>
-        <Cat_Habilidad_Subterfugio_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidad_Subterfugio_Coste>
-        <Cat_Habilidad_Vigor_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Cat_Habilidad_Vigor_Coste>
+        <Cat_Habilidades_Atléticas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidades_Atléticas_Coste>
+        <Cat_Habilidades_Creativas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidades_Creativas_Coste>
+        <Cat_Habilidades_Intelectuales_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidades_Intelectuales_Coste>
+        <Cat_Habilidades_Perceptivas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidades_Perceptivas_Coste>
+        <Cat_Habilidades_Sociales_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidades_Sociales_Coste>
+        <Cat_Habilidades_Subterfugio_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidades_Subterfugio_Coste>
+        <Cat_Habilidades_Vigor_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Cat_Habilidades_Vigor_Coste>
         <Cat_Llevar_Armadura_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Cat_Llevar_Armadura_Coste>
         <Cat_Múltiplo_Vida_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</Cat_Múltiplo_Vida_Coste>
         <Cat_Parada_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Cat_Parada_Coste>
@@ -20104,13 +20131,13 @@ Clase_Social</CreationScheme>
         <Cat_Hab_Combate_Límite rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.5</Cat_Hab_Combate_Límite>
         <Cat_Hab_Mística_Límite rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.5</Cat_Hab_Mística_Límite>
         <Cat_Hab_Psíquica_Límite rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.5</Cat_Hab_Psíquica_Límite>
-        <Cat_Habilidad_Atléticas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</Cat_Habilidad_Atléticas_Coste>
-        <Cat_Habilidad_Creativas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidad_Creativas_Coste>
-        <Cat_Habilidad_Intelectuales_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Cat_Habilidad_Intelectuales_Coste>
-        <Cat_Habilidad_Perceptivas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidad_Perceptivas_Coste>
-        <Cat_Habilidad_Sociales_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidad_Sociales_Coste>
-        <Cat_Habilidad_Subterfugio_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</Cat_Habilidad_Subterfugio_Coste>
-        <Cat_Habilidad_Vigor_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Cat_Habilidad_Vigor_Coste>
+        <Cat_Habilidades_Atléticas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</Cat_Habilidades_Atléticas_Coste>
+        <Cat_Habilidades_Creativas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidades_Creativas_Coste>
+        <Cat_Habilidades_Intelectuales_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Cat_Habilidades_Intelectuales_Coste>
+        <Cat_Habilidades_Perceptivas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidades_Perceptivas_Coste>
+        <Cat_Habilidades_Sociales_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidades_Sociales_Coste>
+        <Cat_Habilidades_Subterfugio_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</Cat_Habilidades_Subterfugio_Coste>
+        <Cat_Habilidades_Vigor_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Cat_Habilidades_Vigor_Coste>
         <Cat_Llevar_Armadura_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Cat_Llevar_Armadura_Coste>
         <Cat_Múltiplo_Vida_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</Cat_Múltiplo_Vida_Coste>
         <Cat_Parada_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Cat_Parada_Coste>
@@ -20167,13 +20194,13 @@ Clase_Social</CreationScheme>
         <Cat_Hab_Combate_Límite rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.6</Cat_Hab_Combate_Límite>
         <Cat_Hab_Mística_Límite rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.5</Cat_Hab_Mística_Límite>
         <Cat_Hab_Psíquica_Límite rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.5</Cat_Hab_Psíquica_Límite>
-        <Cat_Habilidad_Atléticas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidad_Atléticas_Coste>
-        <Cat_Habilidad_Creativas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidad_Creativas_Coste>
-        <Cat_Habilidad_Intelectuales_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Cat_Habilidad_Intelectuales_Coste>
-        <Cat_Habilidad_Perceptivas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidad_Perceptivas_Coste>
-        <Cat_Habilidad_Sociales_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidad_Sociales_Coste>
-        <Cat_Habilidad_Subterfugio_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Cat_Habilidad_Subterfugio_Coste>
-        <Cat_Habilidad_Vigor_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</Cat_Habilidad_Vigor_Coste>
+        <Cat_Habilidades_Atléticas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidades_Atléticas_Coste>
+        <Cat_Habilidades_Creativas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidades_Creativas_Coste>
+        <Cat_Habilidades_Intelectuales_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Cat_Habilidades_Intelectuales_Coste>
+        <Cat_Habilidades_Perceptivas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidades_Perceptivas_Coste>
+        <Cat_Habilidades_Sociales_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidades_Sociales_Coste>
+        <Cat_Habilidades_Subterfugio_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Cat_Habilidades_Subterfugio_Coste>
+        <Cat_Habilidades_Vigor_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</Cat_Habilidades_Vigor_Coste>
         <Cat_Llevar_Armadura_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</Cat_Llevar_Armadura_Coste>
         <Cat_Múltiplo_Vida_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Cat_Múltiplo_Vida_Coste>
         <Cat_Parada_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Parada_Coste>
@@ -20225,13 +20252,13 @@ Clase_Social</CreationScheme>
         <Cat_Hab_Combate_Límite rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.5</Cat_Hab_Combate_Límite>
         <Cat_Hab_Mística_Límite rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.5</Cat_Hab_Mística_Límite>
         <Cat_Hab_Psíquica_Límite rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.6</Cat_Hab_Psíquica_Límite>
-        <Cat_Habilidad_Atléticas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidad_Atléticas_Coste>
-        <Cat_Habilidad_Creativas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidad_Creativas_Coste>
-        <Cat_Habilidad_Intelectuales_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidad_Intelectuales_Coste>
-        <Cat_Habilidad_Perceptivas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidad_Perceptivas_Coste>
-        <Cat_Habilidad_Sociales_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidad_Sociales_Coste>
-        <Cat_Habilidad_Subterfugio_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidad_Subterfugio_Coste>
-        <Cat_Habilidad_Vigor_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Cat_Habilidad_Vigor_Coste>
+        <Cat_Habilidades_Atléticas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidades_Atléticas_Coste>
+        <Cat_Habilidades_Creativas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidades_Creativas_Coste>
+        <Cat_Habilidades_Intelectuales_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidades_Intelectuales_Coste>
+        <Cat_Habilidades_Perceptivas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidades_Perceptivas_Coste>
+        <Cat_Habilidades_Sociales_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidades_Sociales_Coste>
+        <Cat_Habilidades_Subterfugio_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidades_Subterfugio_Coste>
+        <Cat_Habilidades_Vigor_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Cat_Habilidades_Vigor_Coste>
         <Cat_Llevar_Armadura_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Cat_Llevar_Armadura_Coste>
         <Cat_Múltiplo_Vida_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</Cat_Múltiplo_Vida_Coste>
         <Cat_Parada_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Cat_Parada_Coste>
@@ -20289,13 +20316,13 @@ Clase_Social</CreationScheme>
         <Cat_Hab_Combate_Límite rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.6</Cat_Hab_Combate_Límite>
         <Cat_Hab_Mística_Límite rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.6</Cat_Hab_Mística_Límite>
         <Cat_Hab_Psíquica_Límite rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.6</Cat_Hab_Psíquica_Límite>
-        <Cat_Habilidad_Atléticas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidad_Atléticas_Coste>
-        <Cat_Habilidad_Creativas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidad_Creativas_Coste>
-        <Cat_Habilidad_Intelectuales_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidad_Intelectuales_Coste>
-        <Cat_Habilidad_Perceptivas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidad_Perceptivas_Coste>
-        <Cat_Habilidad_Sociales_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidad_Sociales_Coste>
-        <Cat_Habilidad_Subterfugio_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidad_Subterfugio_Coste>
-        <Cat_Habilidad_Vigor_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidad_Vigor_Coste>
+        <Cat_Habilidades_Atléticas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidades_Atléticas_Coste>
+        <Cat_Habilidades_Creativas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidades_Creativas_Coste>
+        <Cat_Habilidades_Intelectuales_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidades_Intelectuales_Coste>
+        <Cat_Habilidades_Perceptivas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidades_Perceptivas_Coste>
+        <Cat_Habilidades_Sociales_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidades_Sociales_Coste>
+        <Cat_Habilidades_Subterfugio_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidades_Subterfugio_Coste>
+        <Cat_Habilidades_Vigor_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidades_Vigor_Coste>
         <Cat_Llevar_Armadura_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Llevar_Armadura_Coste>
         <Cat_Múltiplo_Vida_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</Cat_Múltiplo_Vida_Coste>
         <Cat_Parada_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Parada_Coste>
@@ -20366,13 +20393,13 @@ Clase_Social</CreationScheme>
         <Cat_Hab_Combate_Límite rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.6</Cat_Hab_Combate_Límite>
         <Cat_Hab_Mística_Límite rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.5</Cat_Hab_Mística_Límite>
         <Cat_Hab_Psíquica_Límite rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.5</Cat_Hab_Psíquica_Límite>
-        <Cat_Habilidad_Atléticas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidad_Atléticas_Coste>
-        <Cat_Habilidad_Creativas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidad_Creativas_Coste>
-        <Cat_Habilidad_Intelectuales_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidad_Intelectuales_Coste>
-        <Cat_Habilidad_Perceptivas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidad_Perceptivas_Coste>
-        <Cat_Habilidad_Sociales_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</Cat_Habilidad_Sociales_Coste>
-        <Cat_Habilidad_Subterfugio_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Cat_Habilidad_Subterfugio_Coste>
-        <Cat_Habilidad_Vigor_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidad_Vigor_Coste>
+        <Cat_Habilidades_Atléticas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidades_Atléticas_Coste>
+        <Cat_Habilidades_Creativas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidades_Creativas_Coste>
+        <Cat_Habilidades_Intelectuales_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidades_Intelectuales_Coste>
+        <Cat_Habilidades_Perceptivas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidades_Perceptivas_Coste>
+        <Cat_Habilidades_Sociales_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</Cat_Habilidades_Sociales_Coste>
+        <Cat_Habilidades_Subterfugio_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Cat_Habilidades_Subterfugio_Coste>
+        <Cat_Habilidades_Vigor_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidades_Vigor_Coste>
         <Cat_Llevar_Armadura_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Llevar_Armadura_Coste>
         <Cat_Múltiplo_Vida_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</Cat_Múltiplo_Vida_Coste>
         <Cat_Parada_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Parada_Coste>
@@ -20440,13 +20467,13 @@ Clase_Social</CreationScheme>
         <Cat_Hab_Combate_Límite rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.6</Cat_Hab_Combate_Límite>
         <Cat_Hab_Mística_Límite rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.5</Cat_Hab_Mística_Límite>
         <Cat_Hab_Psíquica_Límite rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.5</Cat_Hab_Psíquica_Límite>
-        <Cat_Habilidad_Atléticas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidad_Atléticas_Coste>
-        <Cat_Habilidad_Creativas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidad_Creativas_Coste>
-        <Cat_Habilidad_Intelectuales_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidad_Intelectuales_Coste>
-        <Cat_Habilidad_Perceptivas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidad_Perceptivas_Coste>
-        <Cat_Habilidad_Sociales_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</Cat_Habilidad_Sociales_Coste>
-        <Cat_Habilidad_Subterfugio_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidad_Subterfugio_Coste>
-        <Cat_Habilidad_Vigor_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidad_Vigor_Coste>
+        <Cat_Habilidades_Atléticas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidades_Atléticas_Coste>
+        <Cat_Habilidades_Creativas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidades_Creativas_Coste>
+        <Cat_Habilidades_Intelectuales_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidades_Intelectuales_Coste>
+        <Cat_Habilidades_Perceptivas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidades_Perceptivas_Coste>
+        <Cat_Habilidades_Sociales_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</Cat_Habilidades_Sociales_Coste>
+        <Cat_Habilidades_Subterfugio_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidades_Subterfugio_Coste>
+        <Cat_Habilidades_Vigor_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidades_Vigor_Coste>
         <Cat_Llevar_Armadura_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Llevar_Armadura_Coste>
         <Cat_Múltiplo_Vida_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</Cat_Múltiplo_Vida_Coste>
         <Cat_Parada_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Parada_Coste>
@@ -20512,13 +20539,13 @@ Clase_Social</CreationScheme>
         <Cat_Hab_Combate_Límite rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.6</Cat_Hab_Combate_Límite>
         <Cat_Hab_Mística_Límite rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.5</Cat_Hab_Mística_Límite>
         <Cat_Hab_Psíquica_Límite rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.5</Cat_Hab_Psíquica_Límite>
-        <Cat_Habilidad_Atléticas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidad_Atléticas_Coste>
-        <Cat_Habilidad_Creativas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidad_Creativas_Coste>
-        <Cat_Habilidad_Intelectuales_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Cat_Habilidad_Intelectuales_Coste>
-        <Cat_Habilidad_Perceptivas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidad_Perceptivas_Coste>
-        <Cat_Habilidad_Sociales_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidad_Sociales_Coste>
-        <Cat_Habilidad_Subterfugio_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidad_Subterfugio_Coste>
-        <Cat_Habilidad_Vigor_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidad_Vigor_Coste>
+        <Cat_Habilidades_Atléticas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidades_Atléticas_Coste>
+        <Cat_Habilidades_Creativas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidades_Creativas_Coste>
+        <Cat_Habilidades_Intelectuales_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Cat_Habilidades_Intelectuales_Coste>
+        <Cat_Habilidades_Perceptivas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidades_Perceptivas_Coste>
+        <Cat_Habilidades_Sociales_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidades_Sociales_Coste>
+        <Cat_Habilidades_Subterfugio_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidades_Subterfugio_Coste>
+        <Cat_Habilidades_Vigor_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidades_Vigor_Coste>
         <Cat_Llevar_Armadura_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Llevar_Armadura_Coste>
         <Cat_Múltiplo_Vida_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</Cat_Múltiplo_Vida_Coste>
         <Cat_Parada_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Cat_Parada_Coste>
@@ -20573,13 +20600,13 @@ Clase_Social</CreationScheme>
         <Cat_Hab_Combate_Límite rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.6</Cat_Hab_Combate_Límite>
         <Cat_Hab_Mística_Límite rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.5</Cat_Hab_Mística_Límite>
         <Cat_Hab_Psíquica_Límite rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.5</Cat_Hab_Psíquica_Límite>
-        <Cat_Habilidad_Atléticas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidad_Atléticas_Coste>
-        <Cat_Habilidad_Creativas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidad_Creativas_Coste>
-        <Cat_Habilidad_Intelectuales_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Cat_Habilidad_Intelectuales_Coste>
-        <Cat_Habilidad_Perceptivas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidad_Perceptivas_Coste>
-        <Cat_Habilidad_Sociales_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidad_Sociales_Coste>
-        <Cat_Habilidad_Subterfugio_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidad_Subterfugio_Coste>
-        <Cat_Habilidad_Vigor_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidad_Vigor_Coste>
+        <Cat_Habilidades_Atléticas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidades_Atléticas_Coste>
+        <Cat_Habilidades_Creativas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidades_Creativas_Coste>
+        <Cat_Habilidades_Intelectuales_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Cat_Habilidades_Intelectuales_Coste>
+        <Cat_Habilidades_Perceptivas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidades_Perceptivas_Coste>
+        <Cat_Habilidades_Sociales_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidades_Sociales_Coste>
+        <Cat_Habilidades_Subterfugio_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidades_Subterfugio_Coste>
+        <Cat_Habilidades_Vigor_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidades_Vigor_Coste>
         <Cat_Llevar_Armadura_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Llevar_Armadura_Coste>
         <Cat_Múltiplo_Vida_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</Cat_Múltiplo_Vida_Coste>
         <Cat_Parada_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Parada_Coste>
@@ -20633,13 +20660,13 @@ Clase_Social</CreationScheme>
         <Cat_Hab_Combate_Límite rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.6</Cat_Hab_Combate_Límite>
         <Cat_Hab_Mística_Límite rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.5</Cat_Hab_Mística_Límite>
         <Cat_Hab_Psíquica_Límite rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.5</Cat_Hab_Psíquica_Límite>
-        <Cat_Habilidad_Atléticas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidad_Atléticas_Coste>
-        <Cat_Habilidad_Creativas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidad_Creativas_Coste>
-        <Cat_Habilidad_Intelectuales_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Cat_Habilidad_Intelectuales_Coste>
-        <Cat_Habilidad_Perceptivas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidad_Perceptivas_Coste>
-        <Cat_Habilidad_Sociales_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidad_Sociales_Coste>
-        <Cat_Habilidad_Subterfugio_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidad_Subterfugio_Coste>
-        <Cat_Habilidad_Vigor_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidad_Vigor_Coste>
+        <Cat_Habilidades_Atléticas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidades_Atléticas_Coste>
+        <Cat_Habilidades_Creativas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidades_Creativas_Coste>
+        <Cat_Habilidades_Intelectuales_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Cat_Habilidades_Intelectuales_Coste>
+        <Cat_Habilidades_Perceptivas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidades_Perceptivas_Coste>
+        <Cat_Habilidades_Sociales_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidades_Sociales_Coste>
+        <Cat_Habilidades_Subterfugio_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidades_Subterfugio_Coste>
+        <Cat_Habilidades_Vigor_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidades_Vigor_Coste>
         <Cat_Llevar_Armadura_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Llevar_Armadura_Coste>
         <Cat_Múltiplo_Vida_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</Cat_Múltiplo_Vida_Coste>
         <Cat_Parada_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Parada_Coste>
@@ -20698,13 +20725,13 @@ Clase_Social</CreationScheme>
         <Cat_Hab_Combate_Límite rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.5</Cat_Hab_Combate_Límite>
         <Cat_Hab_Mística_Límite rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.5</Cat_Hab_Mística_Límite>
         <Cat_Hab_Psíquica_Límite rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.5</Cat_Hab_Psíquica_Límite>
-        <Cat_Habilidad_Atléticas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidad_Atléticas_Coste>
-        <Cat_Habilidad_Creativas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidad_Creativas_Coste>
-        <Cat_Habilidad_Intelectuales_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidad_Intelectuales_Coste>
-        <Cat_Habilidad_Perceptivas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidad_Perceptivas_Coste>
-        <Cat_Habilidad_Sociales_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidad_Sociales_Coste>
-        <Cat_Habilidad_Subterfugio_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidad_Subterfugio_Coste>
-        <Cat_Habilidad_Vigor_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidad_Vigor_Coste>
+        <Cat_Habilidades_Atléticas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidades_Atléticas_Coste>
+        <Cat_Habilidades_Creativas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidades_Creativas_Coste>
+        <Cat_Habilidades_Intelectuales_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidades_Intelectuales_Coste>
+        <Cat_Habilidades_Perceptivas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidades_Perceptivas_Coste>
+        <Cat_Habilidades_Sociales_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidades_Sociales_Coste>
+        <Cat_Habilidades_Subterfugio_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidades_Subterfugio_Coste>
+        <Cat_Habilidades_Vigor_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Habilidades_Vigor_Coste>
         <Cat_Llevar_Armadura_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Llevar_Armadura_Coste>
         <Cat_Múltiplo_Vida_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</Cat_Múltiplo_Vida_Coste>
         <Cat_Parada_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Cat_Parada_Coste>
@@ -21021,7 +21048,7 @@ Descripción: El psíquico disminuye la temperatura a su alrededor hasta el cero
     <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Cerrajería -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Cerrajería">
-        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidad_Subterfugio"/>
+        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidades_Subterfugio"/>
         <Hab_CarPrincipal rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Destreza"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Se emplea para abrir o cerrar todo tipo de cerraduras o mecanismos similares de los que no se tenga la llave. En el caso de que se trate de un cerrojo o candado tradicional, será necesario utilizar una ganzúa o el personaje aplicará un penalizador de –40 a su habilidad.</rdfs:comment>
     </owl:NamedIndividual>
@@ -21247,7 +21274,7 @@ Beneficio: 2</rdfs:comment>
     <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Ciencia -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Ciencia">
-        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidad_Intelectuales"/>
+        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidades_Intelectuales"/>
         <Hab_CarPrincipal rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Inteligencia"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Con la única excepción de la Medicina, la ciencia es la reunión de todos los conocimientos intelectuales que constituyen disciplinas de estudios. Algunos ejemplos de las nociones ligadas a esta habilidad son las matemáticas, la mecánica, la astronomía o la filosofía. Naturalmente, las aptitudes que desarrolle un personaje en estos campos no serán tan avanzadas como las ideas científicas actuales, puesto que su formación no constituye una disciplina unificada como lo es hoy en día. Es posible especializarse en una ciencia en concreto, en cuyo caso se obtendrá un bonificador de +40 a los controles de la habilidad.</rdfs:comment>
     </owl:NamedIndividual>
@@ -27906,7 +27933,7 @@ Mantenimiento: No</rdfs:comment>
     <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Disfraz -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Disfraz">
-        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidad_Subterfugio"/>
+        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidades_Subterfugio"/>
         <Hab_CarPrincipal rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Destreza"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mide la pericia para caracterizarse tomando una apariencia distinta a la propia, vistiéndose y maquillándose debidamente. También evalúa la capacidad de interpretar el papel que trata de imitar, como la forma de moverse y su manera de hablar. Disfraz se enfrenta directamente a las habilidades de advertir y buscar de los otros personajes. Para que alguien que no conoce al individuo disfrazado se percate de que hay algo raro en su aspecto, debe de superar por 80 puntos el control de habilidades enfrentadas si utiliza Advertir, o por 20 si emplea Buscar. En el caso de que sí le hubiese visto antes, ambas se reducen a la mitad. Para emplear correctamente esta habilidad, un personaje necesita tiempo y material para disfrazarse.</rdfs:comment>
     </owl:NamedIndividual>
@@ -28518,16 +28545,17 @@ Bono: +20 a la habilidad de ataque sin armas.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#El_Aliento_Del_Dragón">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#El_Dragón"/>
-        <Hab_RequisitoClave_1 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Acumulación_Ki_AGI"/>
-        <Hab_RequisitoClave_2 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Acumulación_Ki_CON"/>
-        <Hab_RequisitoClave_3 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Acumulación_Ki_DES"/>
-        <Hab_RequisitoClave_4 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Acumulación_Ki_FUE"/>
-        <Hab_RequisitoClave_5 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Acumulación_Ki_POD"/>
-        <Hab_RequisitoValor_1 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_RequisitoValor_1>
+        <Hab_RequisitoClave_1 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Control_Del_Ki"/>
+        <Hab_RequisitoClave_2 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Acumulación_Ki_AGI"/>
+        <Hab_RequisitoClave_3 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Acumulación_Ki_CON"/>
+        <Hab_RequisitoClave_4 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Acumulación_Ki_DES"/>
+        <Hab_RequisitoClave_5 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Acumulación_Ki_FUE"/>
+        <Hab_RequisitoClave_6 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Acumulación_Ki_POD"/>
         <Hab_RequisitoValor_2 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_RequisitoValor_2>
         <Hab_RequisitoValor_3 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_RequisitoValor_3>
-        <Hab_RequisitoValor_4 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</Hab_RequisitoValor_4>
-        <Hab_RequisitoValor_5 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</Hab_RequisitoValor_5>
+        <Hab_RequisitoValor_4 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_RequisitoValor_4>
+        <Hab_RequisitoValor_5 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</Hab_RequisitoValor_5>
+        <Hab_RequisitoValor_6 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</Hab_RequisitoValor_6>
         <Habilidad_Conocimiento_Marcial_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">80</Habilidad_Conocimiento_Marcial_Coste>
         <Habilidad_Nivel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Habilidad_Nivel>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El último y más grande de los poderes del dragón es su aliento. Esta Técnica desencadena una potente descarga de pura energía, que avanza desde el cuerpo del luchador hasta una distancia máxima de un kilómetro, donde estalla destruyéndolo todo en cien metros de radio. El aliento del dragón no utiliza el daño del arma del personaje, sino que emplea como base el doble de su presencia más el bono de Poder, cantidad que después se debe multiplicar por dos. El aliento del dragón es una técnica predeterminada, por lo que quien pretenda usarla, debe declarar de antemano su intención.
@@ -28549,14 +28577,15 @@ Desventaja: Predeterminación</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#El_Colmillo">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#El_Dragón"/>
-        <Hab_RequisitoClave_1 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Acumulación_Ki_AGI"/>
-        <Hab_RequisitoClave_2 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Acumulación_Ki_CON"/>
-        <Hab_RequisitoClave_3 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Acumulación_Ki_DES"/>
-        <Hab_RequisitoClave_4 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Acumulación_Ki_FUE"/>
-        <Hab_RequisitoValor_1 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</Hab_RequisitoValor_1>
-        <Hab_RequisitoValor_2 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</Hab_RequisitoValor_2>
-        <Hab_RequisitoValor_3 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</Hab_RequisitoValor_3>
-        <Hab_RequisitoValor_4 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Hab_RequisitoValor_4>
+        <Hab_RequisitoClave_1 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Control_Del_Ki"/>
+        <Hab_RequisitoClave_2 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Acumulación_Ki_AGI"/>
+        <Hab_RequisitoClave_3 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Acumulación_Ki_CON"/>
+        <Hab_RequisitoClave_4 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Acumulación_Ki_DES"/>
+        <Hab_RequisitoClave_5 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Acumulación_Ki_FUE"/>
+        <Hab_RequisitoValor_2 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</Hab_RequisitoValor_2>
+        <Hab_RequisitoValor_3 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</Hab_RequisitoValor_3>
+        <Hab_RequisitoValor_4 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</Hab_RequisitoValor_4>
+        <Hab_RequisitoValor_5 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Hab_RequisitoValor_5>
         <Habilidad_Conocimiento_Marcial_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">45</Habilidad_Conocimiento_Marcial_Coste>
         <Habilidad_Nivel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Habilidad_Nivel>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El comillo del dragón es preciso y afilado, capaz de atravesar cualquier barrera o protección. Este ataque disminuye en seis puntos el tipo de armadura del defensor, al mismo tiempo que aumenta la habilidad ofensiva y reduce los penalizadores de su usuario al realizar golpes apuntados.
@@ -28808,13 +28837,14 @@ Vías Cerradas: Ninguna</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Eld">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Ignis"/>
-        <Hab_RequisitoClave_1 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Feuer"/>
-        <Hab_RequisitoClave_2 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Acumulación_Ki_DES"/>
-        <Hab_RequisitoClave_3 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Acumulación_Ki_FUE"/>
-        <Hab_RequisitoClave_4 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Acumulación_Ki_VOL"/>
-        <Hab_RequisitoValor_2 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_RequisitoValor_2>
+        <Hab_RequisitoClave_1 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Control_Del_Ki"/>
+        <Hab_RequisitoClave_2 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Feuer"/>
+        <Hab_RequisitoClave_3 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Acumulación_Ki_DES"/>
+        <Hab_RequisitoClave_4 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Acumulación_Ki_FUE"/>
+        <Hab_RequisitoClave_5 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Acumulación_Ki_VOL"/>
         <Hab_RequisitoValor_3 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_RequisitoValor_3>
-        <Hab_RequisitoValor_4 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">19</Hab_RequisitoValor_4>
+        <Hab_RequisitoValor_4 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_RequisitoValor_4>
+        <Hab_RequisitoValor_5 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">19</Hab_RequisitoValor_5>
         <Habilidad_Conocimiento_Marcial_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">60</Habilidad_Conocimiento_Marcial_Coste>
         <Habilidad_Nivel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Habilidad_Nivel>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Esta aterradora Técnica tiene efectos devastadores, tanto para quien la recibe como para aquel que la ejecuta. Para emplearla, el personaje sacrifica una parte de su energía vital, quedando malherido en el proceso. Además de aumentar su habilidad de ataque, incrementa el daño base en una cantidad equivalente al doble de los puntos de vida que gaste al desencadenarla. Eld requiere que el luchador mantenga activa la Técnica de primer nivel Feuer.
@@ -31206,7 +31236,7 @@ Mantenimiento: 15 / 20 / 25 / 30</rdfs:comment>
     <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Estilo -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Estilo">
-        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidad_Sociales"/>
+        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidades_Sociales"/>
         <Hab_CarPrincipal rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Poder"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Estilo es la capacidad de quedar “estéticamente” bien ante cualquier situación, ya sea en una fiesta o en mitad de una pelea. Alguien con Estilo sabrá que, por mucho que se tuerzan las cosas, al menos va a quedar con clase. Incluso si recibe un duro golpe en la cara, un personaje puede tirar Estilo para que el pelo se le mueva de manera dramáticamente apropiada y el hilillo de sangre que le sale de la comisura de los labios quede resultón. Permite también que las cicatrices sean atrayentes en lugar de horribles o, incluso a niveles muy elevados, que los truenos de una tormenta suenen acorde a sus movimientos más teatrales. Vamos, pura cinematografía.</rdfs:comment>
     </owl:NamedIndividual>
@@ -31257,12 +31287,13 @@ Mantenimiento: 15 / 20 / 25 / 30</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Excisum_Aeris">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Celéritas"/>
-        <Hab_RequisitoClave_1 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Acumulación_Ki_AGI"/>
-        <Hab_RequisitoClave_2 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Acumulación_Ki_DES"/>
-        <Hab_RequisitoClave_3 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Acumulación_Ki_POD"/>
-        <Hab_RequisitoValor_1 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</Hab_RequisitoValor_1>
+        <Hab_RequisitoClave_1 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Control_Del_Ki"/>
+        <Hab_RequisitoClave_2 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Acumulación_Ki_AGI"/>
+        <Hab_RequisitoClave_3 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Acumulación_Ki_DES"/>
+        <Hab_RequisitoClave_4 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Acumulación_Ki_POD"/>
         <Hab_RequisitoValor_2 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</Hab_RequisitoValor_2>
-        <Hab_RequisitoValor_3 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Hab_RequisitoValor_3>
+        <Hab_RequisitoValor_3 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</Hab_RequisitoValor_3>
+        <Hab_RequisitoValor_4 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Hab_RequisitoValor_4>
         <Habilidad_Conocimiento_Marcial_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25</Habilidad_Conocimiento_Marcial_Coste>
         <Habilidad_Nivel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</Habilidad_Nivel>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Esta Técnica permite al personaje hacer estallar todo su Ki en un momento, proyectando un golpe a tal velocidad que el mismo aire se deforma y avanza hasta impactar con su enemigo. Este ataque utiliza el daño base del arma empleada por su ejecutor.
@@ -31281,12 +31312,13 @@ Efectos: Ataque a distancia: 50 metros, +50 al turno.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Excisum_Magister">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Celéritas"/>
-        <Hab_RequisitoClave_1 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Acumulación_Ki_AGI"/>
-        <Hab_RequisitoClave_2 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Acumulación_Ki_DES"/>
-        <Hab_RequisitoClave_3 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Acumulación_Ki_POD"/>
-        <Hab_RequisitoValor_1 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</Hab_RequisitoValor_1>
+        <Hab_RequisitoClave_1 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Control_Del_Ki"/>
+        <Hab_RequisitoClave_2 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Acumulación_Ki_AGI"/>
+        <Hab_RequisitoClave_3 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Acumulación_Ki_DES"/>
+        <Hab_RequisitoClave_4 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Acumulación_Ki_POD"/>
         <Hab_RequisitoValor_2 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</Hab_RequisitoValor_2>
-        <Hab_RequisitoValor_3 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</Hab_RequisitoValor_3>
+        <Hab_RequisitoValor_3 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</Hab_RequisitoValor_3>
+        <Hab_RequisitoValor_4 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</Hab_RequisitoValor_4>
         <Habilidad_Conocimiento_Marcial_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">45</Habilidad_Conocimiento_Marcial_Coste>
         <Habilidad_Nivel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Habilidad_Nivel>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El luchador concentra toda su energía para ejecutar un solo movimiento; un ataque a tal velocidad que atraviesa a su antagonista antes de que sus heridas empiecen a sangrar. Esta técnica incrementa tanto su turno base como su habilidad ofensiva.
@@ -31598,12 +31630,13 @@ Mantenimiento: 15 / 20 / 25 / 30 Diario</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Feuer">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Ignis"/>
-        <Hab_RequisitoClave_1 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Acumulación_Ki_FUE"/>
-        <Hab_RequisitoClave_2 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Acumulación_Ki_POD"/>
-        <Hab_RequisitoClave_3 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Acumulación_Ki_VOL"/>
-        <Hab_RequisitoValor_1 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</Hab_RequisitoValor_1>
-        <Hab_RequisitoValor_2 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</Hab_RequisitoValor_2>
-        <Hab_RequisitoValor_3 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</Hab_RequisitoValor_3>
+        <Hab_RequisitoClave_1 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Control_Del_Ki"/>
+        <Hab_RequisitoClave_2 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Acumulación_Ki_FUE"/>
+        <Hab_RequisitoClave_3 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Acumulación_Ki_POD"/>
+        <Hab_RequisitoClave_4 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Acumulación_Ki_VOL"/>
+        <Hab_RequisitoValor_2 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</Hab_RequisitoValor_2>
+        <Hab_RequisitoValor_3 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</Hab_RequisitoValor_3>
+        <Hab_RequisitoValor_4 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</Hab_RequisitoValor_4>
         <Habilidad_Conocimiento_Marcial_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</Habilidad_Conocimiento_Marcial_Coste>
         <Habilidad_Nivel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</Habilidad_Nivel>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Concentrando el Ki en su arma, el luchador es capaz de rodearla completamente con una potente aura de fuego, con lo que aumenta 25 puntos su daño base y le permite atacar en la TA de Calor como crítico primario. Feuer puede mantenerse invirtiendo un punto de Ki de Voluntad y otro de Poder, en cada asalto. Esta Técnica es, además, clave para realizar posteriormente otros ataques de mayor poder.
@@ -32107,7 +32140,7 @@ Mantenimiento: 5 / 10 / 15 / 15</rdfs:comment>
     <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Frialdad -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Frialdad">
-        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidad_Vigor"/>
+        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidades_Vigor"/>
         <Hab_CarPrincipal rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Voluntad"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Es la capacidad de permanecer impávido ante las situaciones más críticas. Con esta habilidad, un individuo puede mantener la calma y la cabeza fría incluso cuando afronta la muerte. Si un personaje es blanco de un efecto sobrenatural que afecte a su ánimo o emociones, podrá añadir el bono a la Resistencia que corresponda.</rdfs:comment>
     </owl:NamedIndividual>
@@ -33048,7 +33081,7 @@ Bono: +20 al turno cuando se utilicen artes marciales, y +10 a la habilidad de a
     <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Herbolaria -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Herbolaria">
-        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidad_Intelectuales"/>
+        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidades_Intelectuales"/>
         <Hab_CarPrincipal rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Inteligencia"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Recoge todo el campo del conocimiento del mundo vegetal, sus posibles usos, naturaleza y dónde pueden encontrarse. Esta habilidad permite, por ejemplo, reconocer qué plantas son comestibles y cuáles son antídotos o remedios. A niveles avanzados, un buen herbolario puede también realizar compuestos de todo tipo.</rdfs:comment>
     </owl:NamedIndividual>
@@ -33123,7 +33156,7 @@ Descripción: El hierro es el material por excelencia para construir armas y arm
     <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Historia -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Historia">
-        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidad_Intelectuales"/>
+        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidades_Intelectuales"/>
         <Hab_CarPrincipal rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Inteligencia"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Otorga erudición tanto de la historia actual como de la pasada. El personaje puede reconocer insignias, tener nociones políticas sobre la situación de un territorio o conocer las leyendas de una zona. Es posible especializarse en un tema concreto, como individuos de renombre, fábulas o economía, lo que otorgará un bonificador de +40 a los controles de la habilidad.</rdfs:comment>
     </owl:NamedIndividual>
@@ -33292,15 +33325,16 @@ Mantenimiento: 5 / 20 / 25 / 30</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Horecka">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Ignis"/>
-        <Hab_RequisitoClave_1 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Feuer"/>
-        <Hab_RequisitoClave_2 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Acumulación_Ki_DES"/>
-        <Hab_RequisitoClave_3 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Acumulación_Ki_FUE"/>
-        <Hab_RequisitoClave_4 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Acumulación_Ki_POD"/>
-        <Hab_RequisitoClave_5 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Acumulación_Ki_VOL"/>
-        <Hab_RequisitoValor_2 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</Hab_RequisitoValor_2>
-        <Hab_RequisitoValor_3 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Hab_RequisitoValor_3>
-        <Hab_RequisitoValor_4 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</Hab_RequisitoValor_4>
-        <Hab_RequisitoValor_5 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_RequisitoValor_5>
+        <Hab_RequisitoClave_1 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Control_Del_Ki"/>
+        <Hab_RequisitoClave_2 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Feuer"/>
+        <Hab_RequisitoClave_3 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Acumulación_Ki_DES"/>
+        <Hab_RequisitoClave_4 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Acumulación_Ki_FUE"/>
+        <Hab_RequisitoClave_5 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Acumulación_Ki_POD"/>
+        <Hab_RequisitoClave_6 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Acumulación_Ki_VOL"/>
+        <Hab_RequisitoValor_3 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</Hab_RequisitoValor_3>
+        <Hab_RequisitoValor_4 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Hab_RequisitoValor_4>
+        <Hab_RequisitoValor_5 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</Hab_RequisitoValor_5>
+        <Hab_RequisitoValor_6 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Hab_RequisitoValor_6>
         <Habilidad_Conocimiento_Marcial_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">40</Habilidad_Conocimiento_Marcial_Coste>
         <Habilidad_Nivel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Habilidad_Nivel>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Esta Técnica se ejecuta introduciendo aún más energía en el interior del arma, lo que desencadena un verdadero infierno que engulle todo lo que hay en un área de 50 metros de radio alrededor del personaje, en una inmensa explosión. El fuego es tan intenso que dobla el daño base que de por sí produce el arma. Horecka requiere que el luchador mantenga activa la Técnica de primer nivel Feuer.
@@ -35328,7 +35362,7 @@ Descripción:Intensifica el sentimiento o estado de ánimo principal del individ
     <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Intimidar -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Intimidar">
-        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidad_Sociales"/>
+        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidades_Sociales"/>
         <Hab_CarPrincipal rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Voluntad"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intimidar es la capacidad de asustar a alguien con la actitud, las palabras o la simple presencia. Un individuo no tiene por qué parecer amenazador para utilizar esta habilidad, basta con saber cómo debe comportarse para atemorizar a cualquiera. Sus efectos son completamente interpretativos.</rdfs:comment>
     </owl:NamedIndividual>
@@ -35898,14 +35932,15 @@ Mantenimiento: 40 / 45 / 45 / 50 Diario</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#La_Cola">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#El_Dragón"/>
-        <Hab_RequisitoClave_1 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Acumulación_Ki_AGI"/>
-        <Hab_RequisitoClave_2 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Acumulación_Ki_CON"/>
-        <Hab_RequisitoClave_3 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Acumulación_Ki_DES"/>
-        <Hab_RequisitoClave_4 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Acumulación_Ki_FUE"/>
-        <Hab_RequisitoValor_1 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</Hab_RequisitoValor_1>
-        <Hab_RequisitoValor_2 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</Hab_RequisitoValor_2>
-        <Hab_RequisitoValor_3 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</Hab_RequisitoValor_3>
-        <Hab_RequisitoValor_4 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Hab_RequisitoValor_4>
+        <Hab_RequisitoClave_1 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Control_Del_Ki"/>
+        <Hab_RequisitoClave_2 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Acumulación_Ki_AGI"/>
+        <Hab_RequisitoClave_3 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Acumulación_Ki_CON"/>
+        <Hab_RequisitoClave_4 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Acumulación_Ki_DES"/>
+        <Hab_RequisitoClave_5 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Acumulación_Ki_FUE"/>
+        <Hab_RequisitoValor_2 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</Hab_RequisitoValor_2>
+        <Hab_RequisitoValor_3 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</Hab_RequisitoValor_3>
+        <Hab_RequisitoValor_4 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</Hab_RequisitoValor_4>
+        <Hab_RequisitoValor_5 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Hab_RequisitoValor_5>
         <Habilidad_Conocimiento_Marcial_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">55</Habilidad_Conocimiento_Marcial_Coste>
         <Habilidad_Nivel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Habilidad_Nivel>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Un simple movimiento de la cola del dragón puede hacer volar ejércitos enteros. Esta Técnica permite al luchador realizar un potente ataque en un área de 25 metros de radio, empleando el daño base del arma que utilice e incrementando su habilidad ofensiva. Cualquier individuo que reciba el impacto deberá realizar, además, un control enfrentado contra una característica equivalente a Fuerza 16, o saldrá despedido por su descomunal potencia.
@@ -36030,12 +36065,13 @@ La orden fue creada por Zhorne Giovanni, quien otorgó ese título a los caballe
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Las_Escamas">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#El_Dragón"/>
-        <Hab_RequisitoClave_1 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Acumulación_Ki_AGI"/>
-        <Hab_RequisitoClave_2 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Acumulación_Ki_CON"/>
-        <Hab_RequisitoClave_3 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Acumulación_Ki_DES"/>
-        <Hab_RequisitoValor_1 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</Hab_RequisitoValor_1>
-        <Hab_RequisitoValor_2 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Hab_RequisitoValor_2>
+        <Hab_RequisitoClave_1 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Control_Del_Ki"/>
+        <Hab_RequisitoClave_2 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Acumulación_Ki_AGI"/>
+        <Hab_RequisitoClave_3 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Acumulación_Ki_CON"/>
+        <Hab_RequisitoClave_4 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Acumulación_Ki_DES"/>
+        <Hab_RequisitoValor_2 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</Hab_RequisitoValor_2>
         <Hab_RequisitoValor_3 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Hab_RequisitoValor_3>
+        <Hab_RequisitoValor_4 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Hab_RequisitoValor_4>
         <Habilidad_Conocimiento_Marcial_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</Habilidad_Conocimiento_Marcial_Coste>
         <Habilidad_Nivel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</Habilidad_Nivel>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El dragón está preparado para enfrentarse a multitud de enemigos, por lo que puede escudarse de varios impactos sin sufrir penalizadores. Esta técnica permite al usuario defenderse de siete ataques sin menoscabar su habilidad.
@@ -36054,14 +36090,15 @@ Efectos: +6 defensas adicionales.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Las_Garras">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#El_Dragón"/>
-        <Hab_RequisitoClave_1 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Acumulación_Ki_AGI"/>
-        <Hab_RequisitoClave_2 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Acumulación_Ki_CON"/>
-        <Hab_RequisitoClave_3 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Acumulación_Ki_DES"/>
-        <Hab_RequisitoClave_4 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Acumulación_Ki_FUE"/>
-        <Hab_RequisitoValor_1 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</Hab_RequisitoValor_1>
+        <Hab_RequisitoClave_1 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Control_Del_Ki"/>
+        <Hab_RequisitoClave_2 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Acumulación_Ki_AGI"/>
+        <Hab_RequisitoClave_3 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Acumulación_Ki_CON"/>
+        <Hab_RequisitoClave_4 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Acumulación_Ki_DES"/>
+        <Hab_RequisitoClave_5 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Acumulación_Ki_FUE"/>
         <Hab_RequisitoValor_2 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</Hab_RequisitoValor_2>
         <Hab_RequisitoValor_3 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</Hab_RequisitoValor_3>
-        <Hab_RequisitoValor_4 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Hab_RequisitoValor_4>
+        <Hab_RequisitoValor_4 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</Hab_RequisitoValor_4>
+        <Hab_RequisitoValor_5 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Hab_RequisitoValor_5>
         <Habilidad_Conocimiento_Marcial_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</Habilidad_Conocimiento_Marcial_Coste>
         <Habilidad_Nivel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</Habilidad_Nivel>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pocas cosas son tan letales como las garras del dragón. Al ejecutar esta Técnica, el personaje realiza dos ataques con un bono de 40 puntos a su daño base en ambos.
@@ -36197,14 +36234,15 @@ Mantenimiento: 10 / 10 / 15 / 15</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Le_Feu">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Ignis"/>
-        <Hab_RequisitoClave_1 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Acumulación_Ki_DES"/>
-        <Hab_RequisitoClave_2 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Acumulación_Ki_FUE"/>
-        <Hab_RequisitoClave_3 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Acumulación_Ki_POD"/>
-        <Hab_RequisitoClave_4 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Acumulación_Ki_VOL"/>
-        <Hab_RequisitoValor_1 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Hab_RequisitoValor_1>
-        <Hab_RequisitoValor_2 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</Hab_RequisitoValor_2>
-        <Hab_RequisitoValor_3 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Hab_RequisitoValor_3>
-        <Hab_RequisitoValor_4 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</Hab_RequisitoValor_4>
+        <Hab_RequisitoClave_1 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Control_Del_Ki"/>
+        <Hab_RequisitoClave_2 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Acumulación_Ki_DES"/>
+        <Hab_RequisitoClave_3 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Acumulación_Ki_FUE"/>
+        <Hab_RequisitoClave_4 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Acumulación_Ki_POD"/>
+        <Hab_RequisitoClave_5 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Acumulación_Ki_VOL"/>
+        <Hab_RequisitoValor_2 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Hab_RequisitoValor_2>
+        <Hab_RequisitoValor_3 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</Hab_RequisitoValor_3>
+        <Hab_RequisitoValor_4 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Hab_RequisitoValor_4>
+        <Hab_RequisitoValor_5 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</Hab_RequisitoValor_5>
         <Habilidad_Conocimiento_Marcial_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</Habilidad_Conocimiento_Marcial_Coste>
         <Habilidad_Nivel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</Habilidad_Nivel>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Esta Técnica desencadena una potente bola de fuego, que avanza hasta impactar con un objetivo que no se encuentre a más de 20 metros. Le Feu no utiliza el daño del arma del personaje, sino que emplea como base el doble de su presencia más el bono de Poder.
@@ -36638,7 +36676,7 @@ Vías Cerradas: Tierra</rdfs:comment>
     <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Liderazgo -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Liderazgo">
-        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidad_Sociales"/>
+        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidades_Sociales"/>
         <Hab_CarPrincipal rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Poder"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Refleja el carisma y la capacidad de ganarse la confianza de las personas a su cargo, incluso en condiciones difíciles. Es la aptitud que todo monarca, general o cabecilla tiene para mandar y conseguir que los demás le sigan. Un líder carismático puede levantar la moral a sus tropas en la peor de las situaciones o mandarlas a la muerte sin escuchar una sola queja. Sus efectos son completamente interpretativos.</rdfs:comment>
     </owl:NamedIndividual>
@@ -37240,12 +37278,13 @@ Mantenimiento: 10 / 10 / 15 / 15 Diario</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Magnus_Exactor">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Celéritas"/>
-        <Hab_RequisitoClave_1 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Acumulación_Ki_AGI"/>
-        <Hab_RequisitoClave_2 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Acumulación_Ki_DES"/>
-        <Hab_RequisitoClave_3 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Acumulación_Ki_POD"/>
-        <Hab_RequisitoValor_1 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</Hab_RequisitoValor_1>
+        <Hab_RequisitoClave_1 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Control_Del_Ki"/>
+        <Hab_RequisitoClave_2 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Acumulación_Ki_AGI"/>
+        <Hab_RequisitoClave_3 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Acumulación_Ki_DES"/>
+        <Hab_RequisitoClave_4 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Acumulación_Ki_POD"/>
         <Hab_RequisitoValor_2 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</Hab_RequisitoValor_2>
-        <Hab_RequisitoValor_3 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Hab_RequisitoValor_3>
+        <Hab_RequisitoValor_3 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</Hab_RequisitoValor_3>
+        <Hab_RequisitoValor_4 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Hab_RequisitoValor_4>
         <Habilidad_Conocimiento_Marcial_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">45</Habilidad_Conocimiento_Marcial_Coste>
         <Habilidad_Nivel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Habilidad_Nivel>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Como una tormenta de golpes, el personaje empieza a moverse a toda velocidad, destrozando cualquier cosa que encuentre a su paso en diez metros de radio. Aparentemente, quienes sufren este ataque sólo pueden ver cómo alguien aparece delante de ellos y arremete en su contra, para después desaparecer. Emplea el daño base del arma que utiliza el personaje que lo ejecuta.
@@ -37818,7 +37857,7 @@ Mantenimiento: No</rdfs:comment>
     <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Medicina -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Medicina">
-        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidad_Intelectuales"/>
+        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidades_Intelectuales"/>
         <Hab_CarPrincipal rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Inteligencia"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La Medicina proporciona conocimientos sobre la anatomía humana, las heridas, la prescripción de enfermedades y su tratamiento. Un personaje puede diagnosticar una enfermedad y determinar su cura, si supera un control de Medicina contra una dificultad del triple del nivel de dicha dolencia. Por ejemplo, una enfermedad de nivel 30 requeriría superar una dificultad de 90. Si es diagnosticada con éxito y su tratamiento seguido correctamente, el enfermo tendrá derecho a una nueva Resistencia (RE), aplicando un bonificador equivalente a la cantidad por la que el médico superó la dificultad requerida.
 
@@ -37918,7 +37957,7 @@ Bono: +10 a la habilidad de ataque sin armas.</rdfs:comment>
     <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Memorizar -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Memorizar">
-        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidad_Intelectuales"/>
+        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidades_Intelectuales"/>
         <Hab_CarPrincipal rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Inteligencia"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mide la capacidad mnemotécnica del personaje. Permite recordar cosas y los detalles más pequeños con completa exactitud, ya sean libros, canciones, o las facciones de un individuo.</rdfs:comment>
     </owl:NamedIndividual>
@@ -38542,7 +38581,7 @@ Descripción: Este poder permite transformar varias intensidades de energía de 
     <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Montar -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Montar">
-        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidad_Atléticas"/>
+        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidades_Atléticas"/>
         <Hab_CarPrincipal rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Agilidad"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Se utiliza para medir la habilidad de equitación. Normalmente, cualquiera podrá montar sobre un caballo que se mueve dócilmente, pero la cosa se complica si está trotando o se encabrita por alguna razón. Esta habilidad permite al personaje doblegar la voluntad de su montura en estas situaciones problemáticas, obligándola a saltar por encima de obstáculos o continuar la marcha a pesar de que se encuentre agotada. También otorga la capacidad de realizar acciones acrobáticas desde la grupa, como cubrirse o recoger cosas en el suelo sin perder la marcha. Aunque tradicionalmente se emplea con caballos, esta pericia permite montar otros animales (como camellos o elefantes) cuya naturaleza les permita ser usados con dicha finalidad.</rdfs:comment>
     </owl:NamedIndividual>
@@ -39077,7 +39116,7 @@ Mantenimiento: 5 / 10 / 10 / 15</rdfs:comment>
     <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Música -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Música">
-        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidad_Creativas"/>
+        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidades_Creativas"/>
         <Hab_CarPrincipal rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Poder"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Recoge la habilidad de tocar correctamente instrumentos musicales y la capacidad de componer y leer partituras. Es posible especializarse en un único instrumento y obtener un +40 al realizar sus controles.</rdfs:comment>
     </owl:NamedIndividual>
@@ -39104,7 +39143,7 @@ Mantenimiento: 5 / 10 / 10 / 15</rdfs:comment>
     <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Nadar -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Nadar">
-        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidad_Atléticas"/>
+        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidades_Atléticas"/>
         <Hab_CarPrincipal rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Agilidad"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Representa cómo se las apaña un personaje en el agua y, a niveles superiores, lo rápido que es capaz de desplazarse nadando y buceando. Sufre el penalizador por armadura, pero al contrario de lo que ocurre en las otras habilidades, el negativo no puede reducirse mediante Llevar Armadura. Si el agua está revuelta, el Director de Juego puede aplicar un penalizador adicional entre -1 y -4 al Tipo de Movimiento. Si en cualquier caso la velocidad del personaje llega a cero o menos, se considera que no es capaz de permanecer a flote y se hunde irremisiblemente.</rdfs:comment>
     </owl:NamedIndividual>
@@ -39131,7 +39170,7 @@ Mantenimiento: 5 / 10 / 10 / 15</rdfs:comment>
     <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Navegación -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Navegación">
-        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidad_Intelectuales"/>
+        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidades_Intelectuales"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Se utiliza para navegar en cualquier tipo de embarcación y leer mapas marítimos. No mide únicamente el manejo del timón, sino también cómo aprovechar las mejores corrientes para ganar velocidad y evitar accidentes.</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -40224,7 +40263,7 @@ Descripción: Esconde las habilidades mentales del psíquico contra el poder de 
     <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Ocultarse -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Ocultarse">
-        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidad_Subterfugio"/>
+        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidades_Subterfugio"/>
         <Hab_CarPrincipal rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Percepción"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Es la capacidad de esconderse y pasar desapercibido. Esta habilidad permite a un personaje encontrar el lugar más apropiado en un entorno para ocultarse y no ser descubierto por los demás. También se utiliza para esconder objetos que se lleven encima. Si se usa para ocultar cosas o personas en un lugar, el Director de Juego podrá aplicar el penalizador o bonificador que considere apropiado, dependiendo del entorno y su tamaño. Ocultarse se enfrenta a la habilidad de advertir y buscar de los demás. Si alguien permanece quieto en su escondite, para detectarlo se requiere superar por más de 80 puntos un control enfrentado empleando advertir, o por 20 si usa buscar. Existen varios modificadores que pueden alterar la habilidad de ocultarse del personaje. Sufre el penalizador por armadura.</rdfs:comment>
     </owl:NamedIndividual>
@@ -40354,7 +40393,7 @@ Mantenimiento: 10 / 15 / 15 / 20 Diario</rdfs:comment>
     <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Ocultismo -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Ocultismo">
-        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidad_Intelectuales"/>
+        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidades_Intelectuales"/>
         <Hab_CarPrincipal rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Inteligencia"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El conocimiento de los campos sobrenaturales desde el punto de vista mitológico. Esta es la habilidad que permite reconocer el significado de dagas rituales o los métodos tradicionales de acabar con un licántropo. A consideración del Director de Juego, es posible utilizarla para reconocer criaturas de carácter sobrenatural.</rdfs:comment>
     </owl:NamedIndividual>
@@ -41556,7 +41595,7 @@ Mantenimiento: 5 / 10 / 15 / 15</rdfs:comment>
     <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Persuasión -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Persuasión">
-        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidad_Sociales"/>
+        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidades_Sociales"/>
         <Hab_CarPrincipal rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Inteligencia"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Esta habilidad permite influir y convencer a otros individuos, aunque el Director de Juego no debería sustituir la interpretación por ella. Incluso sin haberla desarrollado, un buen jugador puede ser tan persuasivo como intérprete si sus argumentos son lo suficientemente sólidos. De este modo, si el personaje realiza un buen control de persuasión, un Director de Juego razonable podría darle pistas de qué palabras parecen convencer más a las personas con las que habla o lo sugestionadas que parecen estar.</rdfs:comment>
     </owl:NamedIndividual>
@@ -42495,7 +42534,7 @@ Mantenimiento: No</rdfs:comment>
     <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Proezas_De_Fuerza -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Proezas_De_Fuerza">
-        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidad_Vigor"/>
+        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidades_Vigor"/>
         <Hab_CarPrincipal rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Fuerza"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Permite sacar el mayor rendimiento posible a la fuerza física de un personaje, dándole conocimientos exactos de cómo flexionar los músculos para realizar mayor presión y las mejores técnicas de alzamiento de pesos. No significa que sea más fuerte, sino que sabrá obtener mejor partido a su potencia física en momentos extremos. Si el personaje lo desea, puede tratar de incrementar su fuerza e índice de peso máximo durante unos instantes, doblando barrotes de metal, levantando carros o cualquier otra cosa increíble. Para calcular como usar apropiadamente esta con respecto al Índice de Peso, cuyos efectos duran entre dos y cinco asaltos. Si un personaje hace uso de sus proezas de fuerza más de una vez por minuto, pierde automáticamente un punto de cansancio por intento adicional. Naturalmente, queda a discreción del DJ decidir si permite a un personaje repetir un control fallido de esta habilidad. Estos modificadores no permiten aumentar la Fuerza de un personaje por encima de 10 si no posee inhumanidad o Zen. Sufre el penalizador por armadura.</rdfs:comment>
     </owl:NamedIndividual>
@@ -42945,7 +42984,7 @@ Mantenimiento: 10 / 10 / 15 / 20</rdfs:comment>
     <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Rastrear -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Rastrear">
-        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidad_Perceptivas"/>
+        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidades_Perceptivas"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Permite seguir rastros y deducir información de ellos, como el número de personas que compone un grupo o cuánto tiempo hace desde que pasaron. También se incluye dentro de esta habilidad la orientación del personaje, es decir, evitar perderse siguiendo un camino y reconocer las señales de un entorno para saber donde se encuentra.</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -44191,7 +44230,7 @@ Vías Cerradas: Destrucción</rdfs:comment>
     <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Resistir_El_Dolor -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Resistir_El_Dolor">
-        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidad_Vigor"/>
+        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidades_Vigor"/>
         <Hab_CarPrincipal rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Voluntad"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Permite soportar el dolor físico y psicológico. Su fuerza de voluntad le otorga la capacidad de abstraer la mente para ignorarlo, incluso si su cuerpo se encuentra ya al límite. A niveles bajos, un personaje puede emplear esta habilidad para recibir daños sin quejarse, mientras que en dificultades más elevadas, podrá tolerar terribles torturas sin amedrentarse.</rdfs:comment>
     </owl:NamedIndividual>
@@ -44445,7 +44484,7 @@ Vías Cerradas: Ninguna</rdfs:comment>
     <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Robo -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Robo">
-        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidad_Subterfugio"/>
+        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidades_Subterfugio"/>
         <Hab_CarPrincipal rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Destreza"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Se utiliza para realizar robos de objetos pequeños sin que la persona desvalijada se dé cuenta. Se enfrenta directamente al Advertir del individuo al que se le sustrae la cosa, por lo que si la habilidad del ladrón es superior, el afectado no se percatará de su pérdida. Si lo que se trata de robar está directamente en contacto con la piel o en una posición muy difícil, como un anillo o un pendiente, el Director de Juego podrá aplicar el bonificador o penalizador que considere oportuno. Para darse cuenta de que otra persona está siendo robada en presencia de un personaje, debe aplicarse un negativo de –40 a la habilidad de advertir.</rdfs:comment>
     </owl:NamedIndividual>
@@ -44797,7 +44836,7 @@ Mantenimiento: 10 / 10 / 15 / 15 Diario</rdfs:comment>
     <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Saltar -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Saltar">
-        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidad_Atléticas"/>
+        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidades_Atléticas"/>
         <Hab_CarPrincipal rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Fuerza"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Permite a los personajes incrementar su capacidad de saltar vertical y horizontalmente. Cuanto mayor sea la dificultad alcanzada, más aumentará su Tipo de movimiento únicamente a la hora de determinar la distancia a la que puede saltar. Estos modificadores no permiten aumentar el Tipo de Movimiento del personaje por encima de 10 si no posee inhumanidad o Zen. Sufre el penalizador por armadura.</rdfs:comment>
     </owl:NamedIndividual>
@@ -45699,7 +45738,7 @@ Bono: +10 a la habilidad de ataque sin armas.</rdfs:comment>
     <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Sigilo -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Sigilo">
-        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidad_Subterfugio"/>
+        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidades_Subterfugio"/>
         <Hab_CarPrincipal rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Agilidad"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Permite realizar acciones sin ser percibido por los demás, como desplazarse, trepar o incluso desenfundar un arma en completo silencio. El Sigilo se enfrenta directamente a la capacidad de Advertir de otros individuos. Si la habilidad de sigilo del personaje es superior a la de Advertir de alguien que no sabe que se encuentra cerca, este sorprenderá a su adversario. Cuando un personaje se mueve en silencio debe restar cuatro puntos a su Tipo de movimiento, o aplicará un penalizador de –80 a su habilidad. También puede usarse para evitar dejar rastros, en cuyo caso se enfrentaría directamente a la pericia de Rastreo de sus perseguidores sin aplicar ningun modificador. Sufre el penalizador por armadura, pero al contrario de lo que ocurre en otras habilidades, el negativo sólo puede reducirse hasta la mitad de su valor mediante la capacidad de Llevar Armadura.</rdfs:comment>
     </owl:NamedIndividual>
@@ -46635,12 +46674,13 @@ Beneficio: 1</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Summun">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Celéritas"/>
-        <Hab_RequisitoClave_1 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Acumulación_Ki_AGI"/>
-        <Hab_RequisitoClave_2 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Acumulación_Ki_DES"/>
-        <Hab_RequisitoClave_3 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Acumulación_Ki_POD"/>
-        <Hab_RequisitoValor_1 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</Hab_RequisitoValor_1>
-        <Hab_RequisitoValor_2 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">17</Hab_RequisitoValor_2>
-        <Hab_RequisitoValor_3 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</Hab_RequisitoValor_3>
+        <Hab_RequisitoClave_1 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Control_Del_Ki"/>
+        <Hab_RequisitoClave_2 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Acumulación_Ki_AGI"/>
+        <Hab_RequisitoClave_3 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Acumulación_Ki_DES"/>
+        <Hab_RequisitoClave_4 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Acumulación_Ki_POD"/>
+        <Hab_RequisitoValor_2 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</Hab_RequisitoValor_2>
+        <Hab_RequisitoValor_3 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">17</Hab_RequisitoValor_3>
+        <Hab_RequisitoValor_4 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</Hab_RequisitoValor_4>
         <Habilidad_Conocimiento_Marcial_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">85</Habilidad_Conocimiento_Marcial_Coste>
         <Habilidad_Nivel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Habilidad_Nivel>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La Técnica arcana de Celéritas es un espectáculo sobrecogedor. El personaje extiende sus brazos y desaparece momentáneamente. En ese instante, comienza a manifestarse alrededor de su adversario, haciendo continuas pasadas de un lado a otro de su cuerpo y destrozándolo completamente en el proceso. Esta Técnica permite al personaje ejecutar nueve ataques en el mismo asalto, el primero de los cuales suele ir acompañado de sorpresa a causa de su velocidad de reacción.
@@ -47122,7 +47162,7 @@ Mantenimiento: No</rdfs:comment>
     <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Tasación -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Tasación">
-        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidad_Intelectuales"/>
+        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidades_Intelectuales"/>
         <Hab_CarPrincipal rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Inteligencia"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Analiza el valor de los objetos y permite calcular su precio aproximado en dinero. Incluso sin entender de arte o de antigüedades, un personaje con esta habilidad siempre podrá intentar averiguar qué objeto es el de valor más elevado y por cuánto se podría vender en el mercado.</rdfs:comment>
     </owl:NamedIndividual>
@@ -48204,7 +48244,7 @@ Mantenimiento: 10 / 10 / 15 / 15</rdfs:comment>
     <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Trampería -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Trampería">
-        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidad_Subterfugio"/>
+        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidades_Subterfugio"/>
         <Hab_CarPrincipal rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Destreza"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Esta habilidad se utiliza para montar y desactivar trampas. Los efectos y el funcionamiento de la trampa serán descritos por el personaje que la instale, empleando la Tabla 18 de Trampería para designar su nivel de complejidad Desactivar una trampa localizada requiere superar un nivel de dificultad menos que el necesario para montarla, salvo si el Director de Juego establece lo contrario. Si al intentar desarmarla se fracasa por una diferencia superior a 40, la activa por error. Para montar correctamente una trampa se necesita tiempo y material.</rdfs:comment>
     </owl:NamedIndividual>
@@ -48526,7 +48566,7 @@ Descripción: Permite al psíquico proyectar uno de sus sentidos hasta una dista
     <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Trepar -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Trepar">
-        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidad_Atléticas"/>
+        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidades_Atléticas"/>
         <Hab_CarPrincipal rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Agilidad"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Se utiliza para subir o bajar por cualquier tipo de superficie vertical, como muros o árboles. Si se usa con un equipo de escalada apropiado, el personaje podrá aplicar un bonificador de +40 a su habilidad. Normalmente, el índice de velocidad de un sujeto escalando es de una cuarta parte de su Tipo de movimiento redondeado hacia abajo, pero puede aumentarse en un punto por cada nivel que consiga por encima de la dificultad requerida. Sufre el penalizador por armadura.</rdfs:comment>
     </owl:NamedIndividual>
@@ -48587,7 +48627,7 @@ Descripción: Permite al psíquico proyectar uno de sus sentidos hasta una dista
     <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Trucos_De_Manos -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Trucos_De_Manos">
-        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidad_Creativas"/>
+        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidades_Creativas"/>
         <Hab_CarPrincipal rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Destreza"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Permite explotar la destreza manual para realizar juegos malabares y prestidigitación. Se utiliza para hacer trucos y trampas, como sacar una carta de la manga en mitad de una partida, o jugar con los objetos en el aire y atraparlos antes de que caigan al suelo. Es posible especializarse en uno de ellos, aplicando un bonificar de +40 a sus controles en dicho campo.</rdfs:comment>
     </owl:NamedIndividual>
@@ -48919,7 +48959,7 @@ Conocimiento marcial: 40</rdfs:comment>
     <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Uso_Forja -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Uso_Forja">
-        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidad_Creativas"/>
+        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidades_Creativas"/>
         <Hab_CarPrincipal rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Destreza"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Refleja la habilidad de un personaje en la forja de los metales y en la elaboración de utensilios con otros materiales, como la madera o el cuero. Se pueden fraguar objetos simples como herraduras, al igual que elaborar armas y armaduras de todo tipo. Por supuesto, también es posible reparar objetos dañados o mantener el equipo en perfectas condiciones. Para desarrollar plenamente esta pericia deben usarse las siguientes reglas: 
 
@@ -48950,7 +48990,7 @@ La forja requiere también una gran inversión de tiempo, esfuerzo y recursos po
     <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Uso_Venenos -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Uso_Venenos">
-        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidad_Subterfugio"/>
+        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidades_Subterfugio"/>
         <Hab_CarPrincipal rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Inteligencia"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Permite conocer, usar y preparar venenos o antídotos. Pueden reconocerse al verlos, probándolos o simplemente observando sus síntomas. Si se tienen los componentes adecuados, es posible mezclar antídotos y toxinas.</rdfs:comment>
     </owl:NamedIndividual>
@@ -49234,7 +49274,7 @@ Mantenimiento: 25 / 40 / 45 / 55</rdfs:comment>
     <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Valoración_Mágica -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Valoración_Mágica">
-        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidad_Intelectuales"/>
+        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidades_Intelectuales"/>
         <Hab_CarPrincipal rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Poder"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Permite juzgar y valorar las fuerzas mágicas. Mediante esta habilidad, un personaje puede detectar a los seres mágicos, los objetos sobrenaturales y los conjuros. Sólo los individuos que posean el Don o la facultad de ver la magia son capaces de desarrollar esta habilidad.</rdfs:comment>
     </owl:NamedIndividual>
@@ -49318,16 +49358,17 @@ Mantenimiento: No</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Vatra">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Ignis"/>
-        <Hab_RequisitoClave_1 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Acumulación_Ki_CON"/>
-        <Hab_RequisitoClave_2 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Acumulación_Ki_DES"/>
-        <Hab_RequisitoClave_3 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Acumulación_Ki_FUE"/>
-        <Hab_RequisitoClave_4 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Acumulación_Ki_POD"/>
-        <Hab_RequisitoClave_5 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Acumulación_Ki_VOL"/>
-        <Hab_RequisitoValor_1 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Hab_RequisitoValor_1>
-        <Hab_RequisitoValor_2 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</Hab_RequisitoValor_2>
-        <Hab_RequisitoValor_3 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</Hab_RequisitoValor_3>
-        <Hab_RequisitoValor_4 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</Hab_RequisitoValor_4>
-        <Hab_RequisitoValor_5 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</Hab_RequisitoValor_5>
+        <Hab_RequisitoClave_1 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Control_Del_Ki"/>
+        <Hab_RequisitoClave_2 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Acumulación_Ki_CON"/>
+        <Hab_RequisitoClave_3 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Acumulación_Ki_DES"/>
+        <Hab_RequisitoClave_4 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Acumulación_Ki_FUE"/>
+        <Hab_RequisitoClave_5 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Acumulación_Ki_POD"/>
+        <Hab_RequisitoClave_6 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Acumulación_Ki_VOL"/>
+        <Hab_RequisitoValor_2 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Hab_RequisitoValor_2>
+        <Hab_RequisitoValor_3 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</Hab_RequisitoValor_3>
+        <Hab_RequisitoValor_4 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</Hab_RequisitoValor_4>
+        <Hab_RequisitoValor_5 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</Hab_RequisitoValor_5>
+        <Hab_RequisitoValor_6 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</Hab_RequisitoValor_6>
         <Habilidad_Conocimiento_Marcial_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">40</Habilidad_Conocimiento_Marcial_Coste>
         <Habilidad_Nivel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Habilidad_Nivel>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Como un ave de fuego, el personaje se lanza sobre su antagonista envuelto en llamas, consumiéndolo física y espiritualmente. Este ataque aumenta el daño, la habilidad y el crítico resultante (en el caso de que se produzca). Vatra requiere que el luchador mantenga activa la Técnica de primer nivel Feuer.
@@ -49442,12 +49483,13 @@ Mantenimiento: 10 / 10 / 15 / 15 Diario</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Velocitas_Ventus">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Celéritas"/>
-        <Hab_RequisitoClave_1 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Acumulación_Ki_AGI"/>
-        <Hab_RequisitoClave_2 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Acumulación_Ki_DES"/>
-        <Hab_RequisitoClave_3 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Acumulación_Ki_POD"/>
-        <Hab_RequisitoValor_1 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</Hab_RequisitoValor_1>
+        <Hab_RequisitoClave_1 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Control_Del_Ki"/>
+        <Hab_RequisitoClave_2 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Acumulación_Ki_AGI"/>
+        <Hab_RequisitoClave_3 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Acumulación_Ki_DES"/>
+        <Hab_RequisitoClave_4 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Acumulación_Ki_POD"/>
         <Hab_RequisitoValor_2 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</Hab_RequisitoValor_2>
-        <Hab_RequisitoValor_3 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</Hab_RequisitoValor_3>
+        <Hab_RequisitoValor_3 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</Hab_RequisitoValor_3>
+        <Hab_RequisitoValor_4 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</Hab_RequisitoValor_4>
         <Habilidad_Conocimiento_Marcial_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25</Habilidad_Conocimiento_Marcial_Coste>
         <Habilidad_Nivel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</Habilidad_Nivel>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aumentando inhumanamente su velocidad, el personaje se traslada tan rápido que su cuerpo parece dividirse. De este modo, es capaz incluso de atacar cuatro veces en ese asalto, sumando además un bono a su turno.
@@ -54422,39 +54464,11 @@ el potencial psíquico al usar esta disciplina.</rdfs:comment>
         <StageGroupCost rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">1</StageGroupCost>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Esta disciplina permite al psíquico usar sus poderes para generar energía pura, e influir en menor grado en el calor, el frio y la electricidad. La matriz psíquica se materializa, afectando físicamente al mundo material de muy diversos modos. No tiene ningún modificador.</rdfs:comment>
     </rdf:Description>
-    <rdf:Description rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidad_Atléticas">
-        <ViewType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ValuedListView</ViewType>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Son las habilidades que dependen de la movilidad del personaje, de su equilibrio y de su agilidad.</rdfs:comment>
-    </rdf:Description>
-    <rdf:Description rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidad_Creativas">
-        <ViewType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ValuedListView</ViewType>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Son todas las habilidades referentes a la capacidad artística e inventiva de los personajes.</rdfs:comment>
-    </rdf:Description>
-    <rdf:Description rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidad_Intelectuales">
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Las habilidades intelectuales son las que dependen principalmente del conocimiento, la sabiduría y el raciocinio de los personajes.</rdfs:comment>
-        <ViewType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ValuedListView</ViewType>
-    </rdf:Description>
     <rdf:Description rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidad_Ki">
         <EditStageLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</EditStageLimit>
         <ViewType>MultipleChoiceDynamicLimitView</ViewType>
-        <StageLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Disponible_Conocimiento_Marcial</StageLimit>
         <rdfs:comment>Las habilidades del Ki son una serie de capacidades especiales que pueden desarrollar los personajes, utilizando sus puntos de Conocimiento Marcial. Cuando alguien domina una de ellas, esta le permite realizar acciones especiales que ningún otro ser humano es capaz de ejecutar. Cada una tiene un coste en puntos de CM, que es necesario invertir para adquirirla. Las habilidades del Ki se desarrollan siguiendo una lógica en su conocimiento y por tanto es posible que, para aprender a utilizar algunas, un individuo tenga que dominar anteriormente otras.</rdfs:comment>
-    </rdf:Description>
-    <rdf:Description rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidad_Perceptivas">
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">En este grupo se reúnen todas las habilidades perceptivas del personaje. Son las pericias que le permitirán explotar al máximo sus cinco sentidos y analizar la información obtenida.</rdfs:comment>
-        <ViewType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ValuedListView</ViewType>
-    </rdf:Description>
-    <rdf:Description rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidad_Sociales">
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Es el grupo de habilidades que reflejan la capacidad del personaje para interactuar con otros individuos e influir de algún modo en ellos.</rdfs:comment>
-        <ViewType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ValuedListView</ViewType>
-    </rdf:Description>
-    <rdf:Description rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidad_Subterfugio">
-        <ViewType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ValuedListView</ViewType>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Es el campo en el que se reúnen aquellas pericias basadas en el disimulo y en la capacidad de actuar sin que los demás puedan percatarse.</rdfs:comment>
-    </rdf:Description>
-    <rdf:Description rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidad_Vigor">
-        <ViewType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ValuedListView</ViewType>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Son las habilidades que recogen aquellas pericias basadas en el esfuerzo corporal, el aguante físico y la resistencia mental.</rdfs:comment>
+        <StageLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Disponible_Conocimiento_Marcial</StageLimit>
     </rdf:Description>
     <rdf:Description rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Honda">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pedazo de cuero atado a una cuerda, con el que se lanzan piedras haciéndolo girar.</rdfs:comment>

@@ -89,9 +89,25 @@ namespace ARPEGOS
             this.Class = Class;
             IsEnabled = true;
             if(this.Class != string.Empty)
-                if (ShortName.Contains(Class))
-                    if (!ShortName.Contains("_de_"))
-                        ShortName = ShortName.Replace(Class,"").Trim();
+            {
+                var classWords = this.Class.Split('#').Last().Split('_').ToList();
+                foreach (var word in classWords)
+                {
+                    var itemWords = ShortName.Split('_').ToList();
+                    var index = itemWords.IndexOf(word);
+                    if(index > 0)
+                    {
+                        var wordlist = new List<string> { "de","del","por" };
+                        var previousWord = itemWords.ElementAt(index - 1);
+                        if (wordlist.All(word => previousWord.ToLower() != word))
+                            ShortName = ShortName.Replace(word, "");
+                    }
+                    else
+                        ShortName = ShortName.Replace(word, "");
+                }
+                    
+            }
+                
             FormattedName = ShortName.Replace("Per_","").Replace("_Total","").Replace('_',' ').Trim();
             Description = description;
             this.Value = elementValue;

@@ -2,15 +2,16 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ARPEGOS.Views.ValuedGroupView"
-             x:Name="ValuedGroup">
+             x:Name="ValuedGroup"
+             Title="{Binding StageName}">
     <ContentPage.Content>
         <Grid>
-            <StackLayout Spacing="10" Padding="10" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+            <StackLayout  Spacing="20" Padding="0" Margin="20,20,20,20" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
                 <StackLayout Orientation="Vertical">
-                    <StackLayout Orientation="Vertical" Spacing="0" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" IsVisible="{Binding HasGeneralLimit}">
+                    <StackLayout Orientation="Vertical" Spacing="5" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" IsVisible="{Binding HasGeneralLimit}">
                         <StackLayout Orientation="Horizontal">
                             <Label Text="Límite general" HorizontalOptions="StartAndExpand" FontSize="Medium" />
-                            <Label Text="{Binding GeneralProgress, StringFormat='{0:F0}'}" HorizontalOptions="EndAndExpand" FontSize="Medium"/>
+                            <Label Text="{Binding GeneralProgressLabel, StringFormat='{0:F0}'}" HorizontalOptions="EndAndExpand" FontSize="Medium"/>
                         </StackLayout>
                         <ProgressBar x:Name="GeneralProgressBar"  HeightRequest="10"
                                          HorizontalOptions="FillAndExpand"
@@ -73,7 +74,7 @@
                             <ViewCell>
                                 <Frame x:Name="ItemFrame"
                                        VerticalOptions="Start"
-                                       Margin="0,0,0,0"
+                                       Margin="10,10,10,0"
                                        BorderColor="{DynamicResource SeparatorColor}">
                                     <Grid x:Name="SliderItem" 
                                               HorizontalOptions="FillAndExpand"
@@ -90,7 +91,7 @@
                                             <Label x:Name="ValueLabel"
                                                    FontSize="Medium"                                               
                                                    VerticalOptions="Center"
-                                                   HorizontalTextAlignment="Start"
+                                                   HorizontalTextAlignment="Center"
                                                    Text="{Binding Source={x:Reference ValueEntry}, Path=Value, StringFormat='{0:F0}'}"/>
                                             <Stepper x:Name="ValueEntry"
                                                    BindingContext="{Binding .}"
@@ -101,13 +102,15 @@
                                                    ValueChanged="OnValueChanged"/>
                                         </StackLayout>
                                         <ImageButton x:Name="InformationButton" Aspect="AspectFit" VerticalOptions="Center"
-                                                   Grid.Row="0"
-                                                   Grid.Column="2"
-                                                   Source="description.png"
-                                                   HeightRequest="30" WidthRequest="30"
-                                                   BackgroundColor="Transparent"
-                                                   IsEnabled="{Binding HasDescription}"
-                                                   IsVisible="{Binding HasDescription}"/>
+                                               Grid.Row="0"
+                                               Grid.Column="2"
+                                               Source="description.png"
+                                               HeightRequest="30" WidthRequest="30"
+                                               BackgroundColor="Transparent"
+                                               Command="{Binding Source={x:Reference ValuedGroup}, Path=BindingContext.InfoCommand}"
+                                               CommandParameter="{Binding .}"
+                                               IsEnabled="{Binding HasDescription}"
+                                               IsVisible="{Binding HasDescription}"/>
 
                                     </Grid>
                             </Frame>
