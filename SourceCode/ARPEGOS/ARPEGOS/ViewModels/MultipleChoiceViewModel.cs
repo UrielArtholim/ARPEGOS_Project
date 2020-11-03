@@ -241,6 +241,7 @@ namespace ARPEGOS.ViewModels
                 }
                 else
                 {
+                    await dialogService.DisplayAlert("Nota informativa", "Proceso de creación finalizado correctamente");
                     await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.PopToRootAsync());
                 }
             });
