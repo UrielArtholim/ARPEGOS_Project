@@ -222,6 +222,7 @@ namespace ARPEGOS.ViewModels
 
             this.NextCommand = new Command(async () => 
             {
+                this.IsBusy = true;
                 var character = DependencyHelper.CurrentContext.CurrentCharacter;
                 var game = DependencyHelper.CurrentContext.CurrentGame;
                 foreach(var item in Data)
@@ -288,32 +289,44 @@ namespace ARPEGOS.ViewModels
                 }
 
                 ++StageViewModel.CurrentStep;
-                if (StageViewModel.CurrentStep < StageViewModel.CreationScheme.Count())
+                try
                 {
-                    var nextStage = StageViewModel.CreationScheme.ElementAt(StageViewModel.CurrentStep);
-                    if (nextStage.IsGrouped)
+                    if (StageViewModel.CurrentStep < StageViewModel.CreationScheme.Count())
                     {
-                        switch (nextStage.Type)
+                        var nextStage = StageViewModel.CreationScheme.ElementAt(StageViewModel.CurrentStep);
+                        if (nextStage.IsGrouped)
                         {
-                            case Stage.StageType.MultipleChoice: await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.PushAsync(new MultipleChoiceGroupView())); break;
-                            default: await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.PushAsync(new ValuedGroupView())); break;
+                            switch (nextStage.Type)
+                            {
+                                case Stage.StageType.MultipleChoice: await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.PushAsync(new MultipleChoiceGroupView())); break;
+                                default: await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.PushAsync(new ValuedGroupView())); break;
+                            }
+                        }
+                        else
+                        {
+                            switch (nextStage.Type)
+                            {
+                                case Stage.StageType.SingleChoice: await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.PushAsync(new SingleChoiceView())); break;
+                                case Stage.StageType.MultipleChoice: await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.PushAsync(new MultipleChoiceView())); break;
+                                default: await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.PushAsync(new ValuedView())); break;
+                            }
                         }
                     }
                     else
                     {
-                        switch (nextStage.Type)
-                        {
-                            case Stage.StageType.SingleChoice: await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.PushAsync(new SingleChoiceView())); break;
-                            case Stage.StageType.MultipleChoice: await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.PushAsync(new MultipleChoiceView())); break;
-                            default: await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.PushAsync(new ValuedView())); break;
-                        }
+                        await dialogService.DisplayAlert("Nota informativa", "Proceso de creación finalizado correctamente");
+                        await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.PopToRootAsync());
                     }
                 }
-                else
-                {
-                    await dialogService.DisplayAlert("Nota informativa", "Proceso de creación finalizado correctamente");
-                    await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.PopToRootAsync());
+                catch(Exception e) 
+                { 
+                    await dialogService.DisplayAlert("Exception", e.Message); 
                 }
+                finally
+                {
+                    this.IsBusy = false;
+                }
+                
             });
 
             this.InfoCommand = new Command<Item>(async (item) =>

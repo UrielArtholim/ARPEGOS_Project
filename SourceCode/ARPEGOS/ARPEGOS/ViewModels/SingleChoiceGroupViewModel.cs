@@ -108,35 +108,44 @@ namespace ARPEGOS.ViewModels
                 var predicateString = character.GetObjectPropertyAssociated(this.stageString);
                 var predicateName = predicateString.Split('#').Last();
                 character.UpdateObjectAssertion($"{character.Context}{predicateName}", $"{character.Context}{ItemFullShortName}");
-                this.IsBusy = false;
 
                 ++StageViewModel.CurrentStep;
-                if (StageViewModel.CurrentStep < StageViewModel.CreationScheme.Count())
+                try
                 {
-                    var nextStage = StageViewModel.CreationScheme.ElementAt(StageViewModel.CurrentStep);
-                    if (nextStage.IsGrouped)
+                    if (StageViewModel.CurrentStep < StageViewModel.CreationScheme.Count())
                     {
-                        switch (nextStage.Type)
+                        var nextStage = StageViewModel.CreationScheme.ElementAt(StageViewModel.CurrentStep);
+                        if (nextStage.IsGrouped)
                         {
-                            case Stage.StageType.SingleChoice: await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.PushAsync(new SingleChoiceGroupView())); break;
-                            case Stage.StageType.MultipleChoice: await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.PushAsync(new MultipleChoiceGroupView())); break;
-                            default: await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.PushAsync(new ValuedGroupView())); break;
+                            switch (nextStage.Type)
+                            {
+                                case Stage.StageType.MultipleChoice: await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.PushAsync(new MultipleChoiceGroupView())); break;
+                                default: await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.PushAsync(new ValuedGroupView())); break;
+                            }
+                        }
+                        else
+                        {
+                            switch (nextStage.Type)
+                            {
+                                case Stage.StageType.SingleChoice: await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.PushAsync(new SingleChoiceView())); break;
+                                case Stage.StageType.MultipleChoice: await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.PushAsync(new MultipleChoiceView())); break;
+                                default: await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.PushAsync(new ValuedView())); break;
+                            }
                         }
                     }
                     else
                     {
-                        switch (nextStage.Type)
-                        {
-                            case Stage.StageType.SingleChoice: await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.PushAsync(new SingleChoiceView())); break;
-                            case Stage.StageType.MultipleChoice: await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.PushAsync(new MultipleChoiceView())); break;
-                            default: await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.PushAsync(new ValuedView())); break;
-                        }
+                        await dialogService.DisplayAlert("Nota informativa", "Proceso de creación finalizado correctamente");
+                        await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.PopToRootAsync());
                     }
                 }
-                else
+                catch (Exception e)
                 {
-                    await dialogService.DisplayAlert("Nota informativa", "Proceso de creación finalizado correctamente");
-                    await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.PopToRootAsync());
+                    await dialogService.DisplayAlert("Exception", e.Message);
+                }
+                finally
+                {
+                    this.IsBusy = false;
                 }
             });
 
