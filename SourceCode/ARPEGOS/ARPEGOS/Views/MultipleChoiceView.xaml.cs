@@ -33,6 +33,7 @@ namespace ARPEGOS.Views
         {
             var activeCheckBox = sender as CheckBox;
             var viewModel = this.BindingContext as MultipleChoiceViewModel;
+            await MainThread.InvokeOnMainThreadAsync(() => viewModel.IsBusy = true);
             var activeItem = activeCheckBox.BindingContext as Item;
             var character = DependencyHelper.CurrentContext.CurrentCharacter;
             var predicate = character.GetObjectPropertyAssociated(viewModel.CurrentStage.FullName, activeItem, StageViewModel.ApplyOnCharacter);
@@ -80,6 +81,7 @@ namespace ARPEGOS.Views
                 }
             }            
             await viewModel.UpdateView();
+            await MainThread.InvokeOnMainThreadAsync(() => viewModel.IsBusy = false);
         }
     }
 }

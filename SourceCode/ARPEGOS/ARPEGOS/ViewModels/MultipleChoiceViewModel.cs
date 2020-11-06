@@ -195,64 +195,7 @@ namespace ARPEGOS.ViewModels
 
             Data = new ObservableCollection<Item>(datalist);
 
-            this.NextCommand = new Command(async () =>
-            {
-                this.IsBusy = true;
-                var character = DependencyHelper.CurrentContext.CurrentCharacter;
-
-                if (this.CurrentStage.EditStageLimit)
-                {
-                    var characterStageLimitProperty = $"{character.Context}{this.stageLimitProperty}";
-                    character.UpdateDatatypeAssertion(characterStageLimitProperty, Convert.ToString(Convert.ToInt32(this.StageProgressLabel)));
-                }
-
-                if (this.CurrentStage.EditGeneralLimit)
-                {
-                    var characterStageLimitProperty = $"{character.Context}{StageViewModel.GeneralLimitProperty}";
-                    character.UpdateDatatypeAssertion(characterStageLimitProperty, Convert.ToString(Convert.ToInt32(this.GeneralProgressLabel)));
-                    StageViewModel.GeneralLimit = this.GeneralProgressLabel;
-                    StageViewModel.GeneralProgress = this.GeneralProgress;
-                }
-
-                ++StageViewModel.CurrentStep;
-                try
-                {
-                    if (StageViewModel.CurrentStep < StageViewModel.CreationScheme.Count())
-                    {
-                        var nextStage = StageViewModel.CreationScheme.ElementAt(StageViewModel.CurrentStep);
-                        if (nextStage.IsGrouped)
-                        {
-                            switch (nextStage.Type)
-                            {
-                                case Stage.StageType.MultipleChoice: await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.PushAsync(new MultipleChoiceGroupView())); break;
-                                default: await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.PushAsync(new ValuedGroupView())); break;
-                            }
-                        }
-                        else
-                        {
-                            switch (nextStage.Type)
-                            {
-                                case Stage.StageType.SingleChoice: await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.PushAsync(new SingleChoiceView())); break;
-                                case Stage.StageType.MultipleChoice: await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.PushAsync(new MultipleChoiceView())); break;
-                                default: await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.PushAsync(new ValuedView())); break;
-                            }
-                        }
-                    }
-                    else
-                    {
-                        await dialogService.DisplayAlert("Nota informativa", "Proceso de creación finalizado correctamente");
-                        await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.PopToRootAsync());
-                    }
-                }
-                catch (Exception e)
-                {
-                    await dialogService.DisplayAlert("Exception", e.Message);
-                }
-                finally
-                {
-                    this.IsBusy = false;
-                }
-            });
+            this.NextCommand = new Command(async () => await Task.Run(() => Next()));
 
             this.InfoCommand = new Command<Item>(async (item) =>
             {
@@ -262,6 +205,66 @@ namespace ARPEGOS.ViewModels
         #endregion
 
         #region Methods
+
+        private async Task Next()
+        {
+            await MainThread.InvokeOnMainThreadAsync(() => this.IsBusy = true);
+            var character = DependencyHelper.CurrentContext.CurrentCharacter;
+
+            if (this.CurrentStage.EditStageLimit)
+            {
+                var characterStageLimitProperty = $"{character.Context}{this.stageLimitProperty}";
+                character.UpdateDatatypeAssertion(characterStageLimitProperty, Convert.ToString(Convert.ToInt32(this.StageProgressLabel)));
+            }
+
+            if (this.CurrentStage.EditGeneralLimit)
+            {
+                var characterStageLimitProperty = $"{character.Context}{StageViewModel.GeneralLimitProperty}";
+                character.UpdateDatatypeAssertion(characterStageLimitProperty, Convert.ToString(Convert.ToInt32(this.GeneralProgressLabel)));
+                StageViewModel.GeneralLimit = this.GeneralProgressLabel;
+                StageViewModel.GeneralProgress = this.GeneralProgress;
+            }
+
+            ++StageViewModel.CurrentStep;
+            try
+            {
+                if (StageViewModel.CurrentStep < StageViewModel.CreationScheme.Count())
+                {
+                    var nextStage = StageViewModel.CreationScheme.ElementAt(StageViewModel.CurrentStep);
+                    if (nextStage.IsGrouped)
+                    {
+                        switch (nextStage.Type)
+                        {
+                            case Stage.StageType.SingleChoice: await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.PushAsync(new SingleChoiceGroupView())); break;
+                            case Stage.StageType.MultipleChoice: await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.PushAsync(new MultipleChoiceGroupView())); break;
+                            default: await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.PushAsync(new ValuedGroupView())); break;
+                        }
+                    }
+                    else
+                    {
+                        switch (nextStage.Type)
+                        {
+                            case Stage.StageType.SingleChoice: await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.PushAsync(new SingleChoiceView())); break;
+                            case Stage.StageType.MultipleChoice: await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.PushAsync(new MultipleChoiceView())); break;
+                            default: await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.PushAsync(new ValuedView())); break;
+                        }
+                    }
+                }
+                else
+                {
+                    await dialogService.DisplayAlert("Nota informativa", "Proceso de creación finalizado correctamente");
+                    await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.PopToRootAsync());
+                }
+            }
+            catch (Exception e)
+            {
+                await dialogService.DisplayAlert(this.StageName, e.Message);
+            }
+            finally
+            {
+                await MainThread.InvokeOnMainThreadAsync(() => this.IsBusy = false);
+            }
+        }
         public async Task UpdateView()
         {
             var character = DependencyHelper.CurrentContext.CurrentCharacter;

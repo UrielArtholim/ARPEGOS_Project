@@ -168,118 +168,9 @@ namespace ARPEGOS.ViewModels
 
             Data = new ObservableCollection<Group>(datalist);
 
-            this.SelectGroupCommand = new Command<Group>(async (group) => await MainThread.InvokeOnMainThreadAsync(() =>
-            {
-                if (lastGroup == group)
-                {
-                    group.Expanded = !group.Expanded;
-                    UpdateGroup(group);
-                }
-                else
-                {
-                    if (lastGroup != null)
-                    {
-                        lastGroup.Expanded = false;
-                        UpdateGroup(lastGroup);
-                    }
-                    group.Expanded = true;
-                    UpdateGroup(group);
-                }
-                lastGroup = group;
-            }));
+            this.SelectGroupCommand = new Command<Group>(async (group) => await MainThread.InvokeOnMainThreadAsync(() => SelectGroup(group)));
 
-            this.NextCommand = new Command(async () =>
-            {
-                this.IsBusy = true;
-                var character = DependencyHelper.CurrentContext.CurrentCharacter;
-                var game = DependencyHelper.CurrentContext.CurrentGame;
-                foreach (var group in Data)
-                {
-                    foreach(var item in group)
-                    {
-                        var itemName = item.FullName.Split('#').Last();
-                        var characterItemString = $"{character.Context}{itemName}";
-                        var itemValue = item.Value.ToString();
-
-                        if (!character.CheckDatatypeProperty(item.FullName, false))
-                        {
-                            var itemProperties = game.Ontology.Model.PropertyModel.Where(property => property.ToString().Contains(itemName));
-                            if (itemProperties.Count() > 0)
-                            {
-                                var itemTotalPropertyEntries = itemProperties.Where(property => property.ToString().Contains("Total"));
-                                if (itemTotalPropertyEntries.Count() > 0)
-                                {
-                                    var itemPropertyName = string.Empty;
-                                    if (itemTotalPropertyEntries.Count() > 1)
-                                    {
-                                        var name = $"Per_{itemName}_Total";
-                                        itemPropertyName = itemTotalPropertyEntries.Where(entry => entry.ToString().Split('#').Last() == name).Single().ToString().Split('#').Last();
-                                    }
-                                    else
-                                        itemPropertyName = itemTotalPropertyEntries.Single().ToString().Split('#').Last();
-                                    characterItemString = $"{character.Context}{itemPropertyName}";
-                                    character.UpdateDatatypeAssertion(characterItemString, itemValue);
-                                }
-                            }
-                        }
-                        else
-                            character.UpdateDatatypeAssertion(characterItemString, itemValue);
-                    }                    
-                }
-
-                if (this.CurrentStage.EditStageLimit)
-                {
-                    var characterStageLimitProperty = $"{character.Context}{this.stageLimitProperty}";
-                    character.UpdateDatatypeAssertion(characterStageLimitProperty, Convert.ToString(Convert.ToInt32(this.StageProgressLabel)));
-                }
-
-                if (this.CurrentStage.EditGeneralLimit)
-                {
-                    var characterStageLimitProperty = $"{character.Context}{StageViewModel.GeneralLimitProperty}";
-                    character.UpdateDatatypeAssertion(characterStageLimitProperty, Convert.ToString(Convert.ToInt32(this.GeneralProgressLabel)));
-                    StageViewModel.GeneralLimit = this.GeneralProgressLabel;
-                    StageViewModel.GeneralProgress = this.GeneralProgress;
-                }
-
-                ++StageViewModel.CurrentStep;
-                try
-                {
-                    if (StageViewModel.CurrentStep < StageViewModel.CreationScheme.Count())
-                    {
-                        var nextStage = StageViewModel.CreationScheme.ElementAt(StageViewModel.CurrentStep);
-                        if (nextStage.IsGrouped)
-                        {
-                            switch (nextStage.Type)
-                            {
-                                case Stage.StageType.MultipleChoice: await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.PushAsync(new MultipleChoiceGroupView())); break;
-                                default: await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.PushAsync(new ValuedGroupView())); break;
-                            }
-                        }
-                        else
-                        {
-                            switch (nextStage.Type)
-                            {
-                                case Stage.StageType.SingleChoice: await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.PushAsync(new SingleChoiceView())); break;
-                                case Stage.StageType.MultipleChoice: await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.PushAsync(new MultipleChoiceView())); break;
-                                default: await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.PushAsync(new ValuedView())); break;
-                            }
-                        }
-                    }
-                    else
-                    {
-                        await dialogService.DisplayAlert("Nota informativa", "Proceso de creación finalizado correctamente");
-                        await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.PopToRootAsync());
-                    }
-                }
-                catch (Exception e)
-                {
-                    await dialogService.DisplayAlert("Exception", e.Message);
-                }
-                finally
-                {
-                    this.IsBusy = false;
-                }
-            });
+            this.NextCommand = new Command(async () => await Task.Run(() => Next()));
 
             this.InfoCommand = new Command<Item>(async (item) =>
             {
@@ -291,6 +182,120 @@ namespace ARPEGOS.ViewModels
                 await this.dialogService.DisplayAlert(group.FormattedTitle, group.Description);
             });
 
+        }
+
+        private void SelectGroup(Group group)
+        {
+            if (lastGroup == group)
+            {
+                group.Expanded = !group.Expanded;
+                UpdateGroup(group);
+            }
+            else
+            {
+                if (lastGroup != null)
+                {
+                    lastGroup.Expanded = false;
+                    UpdateGroup(lastGroup);
+                }
+                group.Expanded = true;
+                UpdateGroup(group);
+            }
+            lastGroup = group;
+        }
+
+        private async Task Next()
+        {
+            await MainThread.InvokeOnMainThreadAsync(() => this.IsBusy = true);
+            var character = DependencyHelper.CurrentContext.CurrentCharacter;
+            var game = DependencyHelper.CurrentContext.CurrentGame;
+            foreach (var group in Data)
+            {
+                foreach (var item in group)
+                {
+                    var itemName = item.FullName.Split('#').Last();
+                    var characterItemString = $"{character.Context}{itemName}";
+                    var itemValue = item.Value.ToString();
+
+                    if (!character.CheckDatatypeProperty(item.FullName, false))
+                    {
+                        var itemProperties = game.Ontology.Model.PropertyModel.Where(property => property.ToString().Contains(itemName));
+                        if (itemProperties.Count() > 0)
+                        {
+                            var itemTotalPropertyEntries = itemProperties.Where(property => property.ToString().Contains("Total"));
+                            if (itemTotalPropertyEntries.Count() > 0)
+                            {
+                                var itemPropertyName = string.Empty;
+                                if (itemTotalPropertyEntries.Count() > 1)
+                                {
+                                    var name = $"Per_{itemName}_Total";
+                                    itemPropertyName = itemTotalPropertyEntries.Where(entry => entry.ToString().Split('#').Last() == name).Single().ToString().Split('#').Last();
+                                }
+                                else
+                                    itemPropertyName = itemTotalPropertyEntries.Single().ToString().Split('#').Last();
+                                characterItemString = $"{character.Context}{itemPropertyName}";
+                                character.UpdateDatatypeAssertion(characterItemString, itemValue);
+                            }
+                        }
+                    }
+                    else
+                        character.UpdateDatatypeAssertion(characterItemString, itemValue);
+                }
+            }
+
+            if (this.CurrentStage.EditStageLimit)
+            {
+                var characterStageLimitProperty = $"{character.Context}{this.stageLimitProperty}";
+                character.UpdateDatatypeAssertion(characterStageLimitProperty, Convert.ToString(Convert.ToInt32(this.StageProgressLabel)));
+            }
+
+            if (this.CurrentStage.EditGeneralLimit)
+            {
+                var characterStageLimitProperty = $"{character.Context}{StageViewModel.GeneralLimitProperty}";
+                character.UpdateDatatypeAssertion(characterStageLimitProperty, Convert.ToString(Convert.ToInt32(this.GeneralProgressLabel)));
+                StageViewModel.GeneralLimit = this.GeneralProgressLabel;
+                StageViewModel.GeneralProgress = this.GeneralProgress;
+            }
+
+            ++StageViewModel.CurrentStep;
+            try
+            {
+                if (StageViewModel.CurrentStep < StageViewModel.CreationScheme.Count())
+                {
+                    var nextStage = StageViewModel.CreationScheme.ElementAt(StageViewModel.CurrentStep);
+                    if (nextStage.IsGrouped)
+                    {
+                        switch (nextStage.Type)
+                        {
+                            case Stage.StageType.SingleChoice: await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.PushAsync(new SingleChoiceGroupView())); break;
+                            case Stage.StageType.MultipleChoice: await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.PushAsync(new MultipleChoiceGroupView())); break;
+                            default: await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.PushAsync(new ValuedGroupView())); break;
+                        }
+                    }
+                    else
+                    {
+                        switch (nextStage.Type)
+                        {
+                            case Stage.StageType.SingleChoice: await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.PushAsync(new SingleChoiceView())); break;
+                            case Stage.StageType.MultipleChoice: await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.PushAsync(new MultipleChoiceView())); break;
+                            default: await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.PushAsync(new ValuedView())); break;
+                        }
+                    }
+                }
+                else
+                {
+                    await dialogService.DisplayAlert("Nota informativa", "Proceso de creación finalizado correctamente");
+                    await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.PopToRootAsync());
+                }
+            }
+            catch (Exception e)
+            {
+                await dialogService.DisplayAlert(this.StageName, e.Message);
+            }
+            finally
+            {
+                await MainThread.InvokeOnMainThreadAsync(()=> this.IsBusy = false);
+            }
         }
         private void UpdateGroup(Group g)
         {

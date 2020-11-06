@@ -12168,7 +12168,7 @@ Per_Item_Total, numerical: true, User_Edit: false, Per_Item_Base:+: Per_Item_Tem
         <rdfs:subClassOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Conjuro"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Conjuro perteneciente a alguna de las 11 vías de la Magia</rdfs:comment>
         <EditStageLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</EditStageLimit>
-        <StageLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Disponible_Magia</StageLimit>
+        <StageLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Disponible_Nivel_Magia</StageLimit>
         <ViewType>MultipleChoiceDynamicLimitView</ViewType>
     </owl:Class>
     
@@ -12275,7 +12275,7 @@ No todos los seres vivos se ven sometidos a las habilidades de convocatoria. Est
         <rdfs:subClassOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Desventaja"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sólo quienes tengan el Don podrán elegir desventajas de esta lista. Los Puntos de Creación que consigas con ellas sólo podrán utilizarse para comprar ventajas mágicas para personajes con el Don. De todas formas, recuerda que el total de desventajas no puede ser mayor de tres, por lo que si ya has elegido tres generales, no podrás elegir ninguna de aquí.</rdfs:comment>
         <EditStageLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</EditStageLimit>
-        <StageLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Disponible_Desventaja</StageLimit>
+        <StageLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Desventaja_Disponible</StageLimit>
         <ViewType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MultipleChoiceStaticLimitView</ViewType>
     </owl:Class>
     
@@ -12287,7 +12287,7 @@ No todos los seres vivos se ven sometidos a las habilidades de convocatoria. Est
         <rdfs:subClassOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Desventaja"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sólo los personajes con capacidades psíquicas podrán elegir desventajas de esta lista. Los Puntos de Creación que consigas con ellas, únicamente podrán utilizarse para comprar ventajas mentales para psíquicos. De todas formas, recuerda que el total de desventajas no puede ser mayor de tres, por lo que si ya has elegido tres generales, no podrás elegir ninguna de aquí.</rdfs:comment>
         <EditStageLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</EditStageLimit>
-        <StageLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Disponible_Desventaja</StageLimit>
+        <StageLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Desventaja_Disponible</StageLimit>
         <ViewType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MultipleChoiceStaticLimitView</ViewType>
     </owl:Class>
     

@@ -13,8 +13,7 @@
                           SelectionMode="None" 
 
                           IsGroupingEnabled="True"
-                          SeparatorVisibility="None"
-                          GroupDisplayBinding="{Binding FormattedTitle}">
+                          SeparatorVisibility="None">
                     <ListView.GroupHeaderTemplate>
                         <DataTemplate>
                             <ViewCell>
@@ -58,7 +57,6 @@
                                                  Spacing="20">
                                         <RadioButton  Grid.Row="0"
                                                                           Grid.Column="0" 
-                                                                          IsChecked="{Binding SelectItemCommand}" 
                                                                           HorizontalOptions="Start" 
                                                                           VerticalOptions="Center" 
                                                                           CheckedChanged="OnCheckedChanged" 

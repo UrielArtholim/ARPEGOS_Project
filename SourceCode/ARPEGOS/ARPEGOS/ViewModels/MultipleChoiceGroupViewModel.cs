@@ -199,32 +199,135 @@ namespace ARPEGOS.ViewModels
 
             Data = new ObservableCollection<Group>(datalist);
 
-            this.NextCommand = new Command(async () =>
+            this.NextCommand = new Command(async () => await Task.Run(() => Next()));
+
+            this.SelectGroupCommand = new Command<Group>(async (group) => await MainThread.InvokeOnMainThreadAsync(() => SelectGroup(group)));
+
+            this.InfoCommand = new Command<Item>(async (item) =>
             {
-                this.IsBusy = true;
-                var character = DependencyHelper.CurrentContext.CurrentCharacter;
+                await this.dialogService.DisplayAlert(item.FormattedName, item.Description);
+            });
 
-                if (this.CurrentStage.EditStageLimit)
+            this.GroupInfoCommand = new Command<Group>(async (group) =>
+            {
+                await this.dialogService.DisplayAlert(group.FormattedTitle, group.Description);
+            });
+        }
+        #endregion
+
+        #region Methods
+
+        private void SelectGroup(Group group)
+        {
+            var character = DependencyHelper.CurrentContext.CurrentCharacter;
+            var availableItems = character.CheckAvailableOptions(this.CurrentStage.FullName, this.HasGeneralLimit, StageViewModel.GeneralLimitProperty, this.GeneralLimit, this.StageLimitProperty, this.StageLimit);
+
+            if (lastGroup == group)
+            {
+                group.Expanded = !group.Expanded;
+                if (availableItems.Count > 0)
                 {
-                    var characterStageLimitProperty = $"{character.Context}{this.stageLimitProperty}";
-                    character.UpdateDatatypeAssertion(characterStageLimitProperty, Convert.ToString(Convert.ToInt32(this.StageProgressLabel)));
+                    foreach (var groupItem in group.Elements)
+                    {
+                        foreach (var item in availableItems)
+                        {
+                            if (groupItem.FullName.Split('#').Last() == item.FullName.Split('#').Last())
+                            {
+                                groupItem.IsEnabled = true;
+                                break;
+                            }
+                            else
+                                groupItem.IsEnabled = false;
+                        }
+                    }
+                    foreach (var item in group.Elements)
+                    {
+                        if (item.IsEnabled == true && group.Expanded == true)
+                        {
+                            if (!group.Contains(item))
+                                group.Add(item);
+                        }
+                        else if (item.IsEnabled == true && group.Expanded == false)
+                        {
+                            if (!group.Contains(item))
+                                group.Add(item);
+                        }
+                        else if (item.IsEnabled == false && group.Expanded == true)
+                        {
+                            if (group.Contains(item))
+                                group.Remove(item);
+                        }
+                        else
+                            if (group.Contains(item))
+                            group.Remove(item);
+                    }                        
                 }
 
-                if (this.CurrentStage.EditGeneralLimit)
+                UpdateGroup(group);
+            }
+            else
+            {
+                if (lastGroup != null)
                 {
-                    var characterStageLimitProperty = $"{character.Context}{StageViewModel.GeneralLimitProperty}";
-                    character.UpdateDatatypeAssertion(characterStageLimitProperty, Convert.ToString(Convert.ToInt32(this.GeneralProgressLabel)));
-                    StageViewModel.GeneralLimit = this.GeneralProgressLabel;
-                    StageViewModel.GeneralProgress = this.GeneralProgress;
+                    lastGroup.Expanded = false;
+                    UpdateGroup(lastGroup);
                 }
+                group.Expanded = true;
+                if (availableItems.Count() > 0)
+                {
+                    foreach (var groupItem in group.Elements)
+                    {
+                        foreach (var item in availableItems)
+                        {
+                            if (groupItem.FullName.Split('#').Last() == item.FullName.Split('#').Last())
+                            {
+                                groupItem.IsEnabled = true;
+                                break;
+                            }
+                            else
+                                groupItem.IsEnabled = false;
+                        }
+                    }
+                    foreach (var item in group.Elements)
+                        if (item.IsEnabled == true)
+                        {
+                            if (!group.Contains(item))
+                                group.Add(item);
+                        }
+                        else
+                            if (group.Contains(item))
+                            group.Remove(item);
+                }
+                UpdateGroup(group);
+            }
+            lastGroup = group;
+        }
 
-                this.IsBusy = false;
+        private async Task Next()
+        {
+            await MainThread.InvokeOnMainThreadAsync(() => this.IsBusy = true);
+            var character = DependencyHelper.CurrentContext.CurrentCharacter;
 
-                ++StageViewModel.CurrentStep;
+            if (this.CurrentStage.EditStageLimit)
+            {
+                var characterStageLimitProperty = $"{character.Context}{this.stageLimitProperty}";
+                character.UpdateDatatypeAssertion(characterStageLimitProperty, Convert.ToString(Convert.ToInt32(this.StageProgressLabel)));
+            }
+
+            if (this.CurrentStage.EditGeneralLimit)
+            {
+                var characterStageLimitProperty = $"{character.Context}{StageViewModel.GeneralLimitProperty}";
+                character.UpdateDatatypeAssertion(characterStageLimitProperty, Convert.ToString(Convert.ToInt32(this.GeneralProgressLabel)));
+                StageViewModel.GeneralLimit = this.GeneralProgressLabel;
+                StageViewModel.GeneralProgress = this.GeneralProgress;
+            }
+
+            ++StageViewModel.CurrentStep;
+            try
+            {
                 if (StageViewModel.CurrentStep < StageViewModel.CreationScheme.Count())
                 {
                     var nextStage = StageViewModel.CreationScheme.ElementAt(StageViewModel.CurrentStep);
-                    this.IsBusy = false;
                     if (nextStage.IsGrouped)
                     {
                         switch (nextStage.Type)
@@ -249,95 +352,17 @@ namespace ARPEGOS.ViewModels
                     await dialogService.DisplayAlert("Nota informativa", "Proceso de creación finalizado correctamente");
                     await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.PopToRootAsync());
                 }
-            });
-
-
-            this.SelectGroupCommand = new Command<Group>(async (group) => await MainThread.InvokeOnMainThreadAsync(() =>
+            }
+            catch (Exception e)
             {
-                var availableItems = character.CheckAvailableOptions(this.CurrentStage.FullName, this.HasGeneralLimit, StageViewModel.GeneralLimitProperty, this.GeneralLimit, this.StageLimitProperty, this.StageLimit);
-                
-                if (lastGroup == group)
-                {
-                    group.Expanded = !group.Expanded;
-                    if(availableItems.Count > 0)
-                    {
-                        foreach (var groupItem in group.Elements)
-                        {
-                            foreach (var item in availableItems)
-                            {
-                                if (groupItem.FullName.Split('#').Last() == item.FullName.Split('#').Last())
-                                {
-                                    groupItem.IsEnabled = true;
-                                    break;
-                                }
-                                else
-                                    groupItem.IsEnabled = false;
-                            }
-                        }
-                        foreach (var item in group.Elements)
-                            if (item.IsEnabled == true && group.Expanded == true)
-                            {
-                                if (!group.Contains(item))
-                                    group.Add(item);
-                            }
-                            else
-                                if (group.Contains(item))
-                                group.Remove(item);
-                    }                   
-
-                    UpdateGroup(group);
-                }
-                else
-                {
-                    if (lastGroup != null)
-                    {
-                        lastGroup.Expanded = false;
-                        UpdateGroup(lastGroup);
-                    }
-                    group.Expanded = true;
-                    if(availableItems.Count() > 0)
-                    {
-                        foreach (var groupItem in group.Elements)
-                        {
-                            foreach (var item in availableItems)
-                            {
-                                if (groupItem.FullName.Split('#').Last() == item.FullName.Split('#').Last())
-                                {
-                                    groupItem.IsEnabled = true;
-                                    break;
-                                }
-                                else
-                                    groupItem.IsEnabled = false;
-                            }
-                        }
-                        foreach (var item in group.Elements)
-                            if (item.IsEnabled == true)
-                            {
-                                if (!group.Contains(item))
-                                    group.Add(item);
-                            }
-                            else
-                                if (group.Contains(item))
-                                group.Remove(item);
-                    }                    
-                    UpdateGroup(group);
-                }
-                lastGroup = group;
-            }));
-
-            this.InfoCommand = new Command<Item>(async (item) =>
+                await dialogService.DisplayAlert(this.StageName, e.Message);
+            }
+            finally
             {
-                await this.dialogService.DisplayAlert(item.FormattedName, item.Description);
-            });
-
-            this.GroupInfoCommand = new Command<Group>(async (group) =>
-            {
-                await this.dialogService.DisplayAlert(group.FormattedTitle, group.Description);
-            });
+                await MainThread.InvokeOnMainThreadAsync(() => this.IsBusy = false);
+            }
         }
-        #endregion
 
-        #region Methods
         public async Task UpdateView()
         {
             var character = DependencyHelper.CurrentContext.CurrentCharacter;

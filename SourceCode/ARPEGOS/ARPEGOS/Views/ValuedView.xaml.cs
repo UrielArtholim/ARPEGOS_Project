@@ -30,6 +30,7 @@ namespace ARPEGOS.Views
         async void OnValueChanged(object sender, ValueChangedEventArgs e)
         {
             var viewModel = this.BindingContext as ValuedViewModel;
+            await MainThread.InvokeOnMainThreadAsync(() => viewModel.IsBusy = true);
             var entry = sender as Stepper;
             var item = entry.BindingContext as Item;
             double NewValue, OldValue;
@@ -97,6 +98,7 @@ namespace ARPEGOS.Views
                     });
                 }
             }
+            await MainThread.InvokeOnMainThreadAsync(() => viewModel.IsBusy = false);
         }
     }
 }

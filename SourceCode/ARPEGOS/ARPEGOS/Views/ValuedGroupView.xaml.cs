@@ -27,9 +27,10 @@ namespace ARPEGOS.Views
             return base.OnBackButtonPressed();
         }
 
-        void OnValueChanged(object sender, ValueChangedEventArgs e)
+        async void OnValueChanged(object sender, ValueChangedEventArgs e)
         {
             var viewModel = this.BindingContext as ValuedViewModel;
+            await MainThread.InvokeOnMainThreadAsync(() => viewModel.IsBusy = true);
             var entry = sender as Stepper;
             var item = entry.BindingContext as Item;
             double NewValue, OldValue;
@@ -69,7 +70,7 @@ namespace ARPEGOS.Views
                 ++item.Value;
                 if (viewModel.CurrentStage.EditStageLimit == true)
                 {
-                    Task.Run(async () => await MainThread.InvokeOnMainThreadAsync(() =>
+                    await MainThread.InvokeOnMainThreadAsync(() =>
                     {
                         viewModel.StageProgressLabel -= Convert.ToDouble(item.Step);
                         viewModel.StageProgress -= Convert.ToDouble(item.Step / viewModel.StageLimit);
@@ -78,14 +79,14 @@ namespace ARPEGOS.Views
                             viewModel.GeneralProgressLabel -= Convert.ToDouble(item.Step);
                             viewModel.GeneralProgress -= Convert.ToDouble(item.Step / viewModel.GeneralLimit);
                         }
-                    }));
+                    });
                 }
             }
             else if (OldValue > NewValue)
             {
                 if (viewModel.CurrentStage.EditStageLimit == true)
                 {
-                    Task.Run(async () => await MainThread.InvokeOnMainThreadAsync(() =>
+                    await MainThread.InvokeOnMainThreadAsync(() =>
                     {
                         --item.Value;
                         viewModel.StageProgressLabel += Convert.ToDouble(item.Step);
@@ -95,9 +96,11 @@ namespace ARPEGOS.Views
                             viewModel.GeneralProgressLabel += Convert.ToDouble(item.Step);
                             viewModel.GeneralProgress += Convert.ToDouble(item.Step / viewModel.GeneralLimit);
                         }
-                    }));
+                    });
                 }
             }
+            await MainThread.InvokeOnMainThreadAsync(() => viewModel.IsBusy = false);
+
         }
     }
 }

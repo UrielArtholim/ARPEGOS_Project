@@ -31,8 +31,15 @@ namespace ARPEGOS.Views
 
         async void OnCheckedChanged(object sender, CheckedChangedEventArgs e)
         {
+            await Task.Run(() => OperateCheck(sender, e));    
+        }
+
+        private async Task OperateCheck(object sender, CheckedChangedEventArgs e)
+        {
             var activeCheckBox = sender as CheckBox;
             var viewModel = this.BindingContext as MultipleChoiceGroupViewModel;
+            await MainThread.InvokeOnMainThreadAsync(() => viewModel.IsBusy = true);
+
             var activeItem = activeCheckBox.BindingContext as Item;
             var character = DependencyHelper.CurrentContext.CurrentCharacter;
             var predicate = character.GetObjectPropertyAssociated(viewModel.CurrentStage.FullName, activeItem, StageViewModel.ApplyOnCharacter);
@@ -76,6 +83,7 @@ namespace ARPEGOS.Views
                 }
             }
             await viewModel.UpdateView();
+            await MainThread.InvokeOnMainThreadAsync(() => viewModel.IsBusy = false);
         }
     }
 }
