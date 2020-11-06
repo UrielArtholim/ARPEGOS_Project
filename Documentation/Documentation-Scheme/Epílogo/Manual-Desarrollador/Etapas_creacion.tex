@@ -239,7 +239,7 @@ para que ésta funcione correctamente:
     \begin{figure}[H]
         \centering
         \includegraphics[scale=0.6]{Figures/Protege/Ref_example.png}
-        \caption{Ejemplo de uso de la cadena de texto \textit{Ref} en una anotación de tipo \textit{ValuedListInfo}}.
+        \caption{Ejemplo de uso de la cadena de texto \textit{Ref} en una anotación de tipo \textit{ValuedListInfo}.}
         \label{Ref_example}
     \end{figure}
 \end{itemize}
@@ -254,6 +254,14 @@ se muestra el método para introducir un límite en una etapa de creación:
 
 \begin{enumerate}
     \item Acceder a la vista \textit{Data Properties}
+    \item Crear anotacion \textit{EditGeneralLimit} con valor booleano \textit{true}.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.6]{Figures/Protege/MultipleChoice_3.png}
+        \caption{Crear anotacion \textit{EditGeneralLimit}.}
+        \label{MultipleChoice_3}
+    \end{figure}
+
     \item Crear una propiedad de datos \textit{Etapa\_Límite} con la clase de la etapa como dominio y tipo de valor 
     \textit{xsd:unsignedInt} (Figura \ref*{MultipleChoice_2}).
     \begin{figure}[H]
@@ -262,37 +270,74 @@ se muestra el método para introducir un límite en una etapa de creación:
         \caption{Crear propiedad \textit{Etapa\_Límite}}.
         \label{MultipleChoice_2}
     \end{figure}
-    \item Crear anotación \textit{rdfs:IsDefinedBy} con el valor límite de la propiedad \textit{Etapa\_Límite} 
-    (Figura \ref*{MultipleChoice_3} ). En caso de que el límite sea el valor de otra propiedad de datos, indicar 
+    
+    \item Crear anotación \textit{rdfs:IsDefinedBy} con el valor límite de la propiedad
+    (Figura \ref*{MultipleChoice_4} ). En caso de que el límite sea el valor de otra propiedad de datos, indicar 
     el nombre de la propiedad de manera exacta (Figura \ref*{MultipleChoice_4}).
     \begin{figure}[H]
         \centering
-        \includegraphics[scale=0.6]{Figures/Protege/MultipleChoice_3.png}
-        \caption{Crear anotación \textit{IsDefinedBy} con valor numérico}.
-        \label{MultipleChoice_3}
+        \includegraphics[scale=0.6]{Figures/Protege/MultipleChoice_4.png}
+        \caption{Crear anotación \textit{IsDefinedBy} con valor numérico.}
+        \label{MultipleChoice_4}
     \end{figure}
+    \item Crear anotacion \textit{GeneralCost} con el nombre de la propiedad de datos creada previamente.
     \begin{figure}[H]
         \centering
-        \includegraphics[scale=0.6]{Figures/Protege/MultipleChoice_4.png}
-        \caption{Crear anotación \textit{IsDefinedBy} con referencia a otra propiedad}.
-        \label{MultipleChoice_4}
+        \includegraphics[scale=0.6]{Figures/Protege/MultipleChoice_5.png}
+        \caption{Crear anotación \textit{IsDefinedBy} con valor numérico.}
+        \label{MultipleChoice_5}
+    \end{figure}
+
+\end{enumerate}
+
+\subsubsection{Indicar un valor máximo para los elementos de una etapa de introducción de valores}
+En algunas etapas de introducción de valores, los elementos pueden tener un valor máximo concreto.
+Para añadir este límite, hay que realizar los siguientes pasos:
+\begin{enumerate}
+    \item Acceder a la vista \textit{Data Properties}
+    \item Crear una propiedad de datos \textit{Elemento\_Límite}, con la clase de la etapa como dominio 
+    y tipo de valor \textit{xsd:unsignedInt}.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.8]{Figures/Protege/ElementLimit_1.png}
+        \caption{Crear propiedad de datos \textit{Elemento\_Límite}.}
+        \label{ElementLimit_1}
+    \end{figure}
+    \item Crear anotación \textit{IsDefinedBy} indicando el valor límite deseado.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.8]{Figures/Protege/ElementLimit_2.png}
+        \caption{Crear propiedad de datos \textit{Elemento\_Límite}.}
+        \label{ElementLimit_2}
+    \end{figure}
+    \item Crear anotación \textit{ElementLimit} cuyo valor será el nombre de la propiedad creada en el paso anterior.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.8]{Figures/Protege/ElementLimit_3.png}
+        \caption{Crear propiedad de datos \textit{Elemento\_Límite}.}
+        \label{ElementLimit_3}
     \end{figure}
 \end{enumerate}
 
 \subsubsection{Añadir un límite específico de puntos a una etapa de creación}\label{SpecificLimit}
-En algunos casos es necesario añadir un límite distinto al establecido por el método anterior, ya sea porque la etapa tenga varios 
-límites, o porque sea necesario limitar otro tipo de puntos. Un buen ejemplo para este caso son los poderes psíquicos en \anima, 
-puesto que los poderes psíquicos no gastan \textit{puntos de desarrollo} como el resto de habilidades, sino que gastan 
-\textit{Consumos de Voluntad}, por lo que el límite de puntos de desarrollo no resulta útil en este caso.\medskip
+En algunos casos es necesario añadir un límite distinto al establecido por el método anterior, ya sea porque la etapa no pueda 
+disponer de la totalidad de puntos indicados en el límite general, tenga varios límites, o varíe el tipo de puntos que se gastan 
+de una etapa a otra. Un buen ejemplo para este caso son las técnicas de dominio en \anima, 
+puesto que no gastan \textit{puntos de desarrollo} como el resto de habilidades, sino que gastan 
+\textit{Conocimiento Marcial}, que ha sido canjeado previamente por \textit{puntos de desarrollo}, 
+por lo que el límite de puntos de desarrollo no resulta útil en este caso.\medskip
 
-Para declarar este nuevo límite, 
-hay que añadir una anotación \underline{GeneralCostDefinedBy} indicando el valor o la propiedad que indica el 
-límite de puntos a gastar en la etapa (Figura \ref*{MultipleChoiceGroupCost_1}).
+A continuación se indican los pasos a seguir para introducir un límite de etapa:
+\begin{enumerate}
+    \item Añadir una anotación \textit{EditStageLimit} con valor booleano \textit{true}
+    \item Añadir una anotación \textit{StageLimit} indicando el valor 
+    o la propiedad que indica el límite de puntos a gastar en la etapa (Figura \ref*{MultipleChoiceGroupCost_1}).
+\end{enumerate}
 
 \begin{figure}[H]
     \centering
     \includegraphics[scale=0.6]{Figures/Protege/MultipleChoiceGroupCost_1.png}
-    \caption{Añadir anotación \textit{GeneralCostDefinedBy}}.
+    \caption{Añadir límite específico de puntos a una etapa.}
     \label{MultipleChoiceGroupCost_1}
 \end{figure}
 
@@ -310,7 +355,7 @@ En estos casos, hay que llevar a cabo los siguientes pasos:
     \begin{figure}[H]
         \centering
         \includegraphics[scale=0.6]{Figures/Protege/ElementoComun_1.png}
-        \caption{Crear subclase para el elemento específico}.
+        \caption{Crear subclase para el elemento específico.}
         \label{ElementoComun_1}
     \end{figure}
 
@@ -320,7 +365,7 @@ En estos casos, hay que llevar a cabo los siguientes pasos:
     \begin{figure}[H]
         \centering
         \includegraphics[scale=0.6]{Figures/Protege/ElementoComun_2.png}
-        \caption{Crear subclase para el elemento específico}.
+        \caption{Crear subclase para el elemento específico.}
         \label{ElementoComun_2}
     \end{figure}
 
