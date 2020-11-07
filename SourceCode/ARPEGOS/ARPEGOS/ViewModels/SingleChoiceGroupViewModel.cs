@@ -96,6 +96,7 @@ namespace ARPEGOS.ViewModels
 
         private void SelectGroup(Group group)
         {
+            this.IsBusy = true;
             if (lastGroup == group)
             {
                 group.Expanded = !group.Expanded;
@@ -112,6 +113,7 @@ namespace ARPEGOS.ViewModels
                 UpdateGroup(group);
             }
             lastGroup = group;
+            this.IsBusy = false;
         }
 
         private async Task Next()

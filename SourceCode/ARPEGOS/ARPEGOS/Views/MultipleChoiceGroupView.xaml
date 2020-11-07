@@ -81,7 +81,7 @@
                                                  VerticalOptions="CenterAndExpand" >
                                         <CheckBox  Grid.Row="0"
                                                    Grid.Column="0" 
-                                                   IsChecked="{Binding SelectItemCommand}" 
+                                                   IsChecked="{Binding IsSelected}" 
                                                    HorizontalOptions="Start" 
                                                    VerticalOptions="Center" 
                                                    CheckedChanged="OnCheckedChanged" 

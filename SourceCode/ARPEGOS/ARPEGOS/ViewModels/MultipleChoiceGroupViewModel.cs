@@ -219,6 +219,7 @@ namespace ARPEGOS.ViewModels
 
         private void SelectGroup(Group group)
         {
+            this.IsBusy = true;
             var character = DependencyHelper.CurrentContext.CurrentCharacter;
             var availableItems = character.CheckAvailableOptions(this.CurrentStage.FullName, this.HasGeneralLimit, StageViewModel.GeneralLimitProperty, this.GeneralLimit, this.StageLimitProperty, this.StageLimit);
 
@@ -301,6 +302,7 @@ namespace ARPEGOS.ViewModels
                 UpdateGroup(group);
             }
             lastGroup = group;
+            this.IsBusy = false;
         }
 
         private async Task Next()

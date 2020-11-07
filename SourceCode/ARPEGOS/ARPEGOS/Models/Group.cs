@@ -118,7 +118,21 @@ namespace ARPEGOS
                         this.Add(item);
                 }
                 else
-                    this.Clear();
+                {
+                    var currentList = new ObservableCollection<Item>(this);
+                    foreach(var item in currentList)
+                    {
+                        if (item.IsSelected != true)
+                            this.Remove(item);
+                    }
+
+                    if(this.Count() > 0)
+                    {
+                        expanded = true;
+                        OnPropertyChanged("Expanded");
+                        OnPropertyChanged("StateIcon");
+                    }
+                }
             }
         }
 

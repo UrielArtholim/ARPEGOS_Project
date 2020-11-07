@@ -100,19 +100,25 @@ namespace ARPEGOS.ViewModels
                 switch(this.CurrentStatus)
                 {
                     case SelectionStatus.SelectingGame:
+                        await MainThread.InvokeOnMainThreadAsync(() => this.IsBusy = true);
                         await App.Navigation.PushAsync(new AddGameView());
+                        await MainThread.InvokeOnMainThreadAsync(() => this.IsBusy = false);
                         this.Load(this.CurrentStatus);
                         break;
                     case SelectionStatus.DeletingGame:
+                        await MainThread.InvokeOnMainThreadAsync(() => this.IsBusy = true);
                         await App.Navigation.PushAsync(new AddGameView());
+                        await MainThread.InvokeOnMainThreadAsync(() => this.IsBusy = false);
                         this.Load(this.CurrentStatus);
                         break;
                     case SelectionStatus.SelectingCharacter:
                         var item = await this.dialogService.DisplayTextPrompt("Crear nuevo personaje", "Introduce el nombre:", "Crear");
                         if (!string.IsNullOrWhiteSpace(item))
                         {
+                            await MainThread.InvokeOnMainThreadAsync(()=> this.IsBusy = true);
                             DependencyHelper.CurrentContext.CurrentCharacter = await OntologyService.CreateCharacter(item, DependencyHelper.CurrentContext.CurrentGame);
                             await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.PushAsync((new CreationRootView())));
+                            await MainThread.InvokeOnMainThreadAsync(() => this.IsBusy = false);
                         }
                         this.Load(this.CurrentStatus);
                         break;
@@ -120,8 +126,10 @@ namespace ARPEGOS.ViewModels
                         item = await this.dialogService.DisplayTextPrompt("Crear nuevo personaje", "Introduce el nombre:", "Crear");
                         if (!string.IsNullOrWhiteSpace(item))
                         {
+                            await MainThread.InvokeOnMainThreadAsync(() => this.IsBusy = true);
                             DependencyHelper.CurrentContext.CurrentCharacter = await OntologyService.CreateCharacter(item, DependencyHelper.CurrentContext.CurrentGame);
-                            await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.PushAsync(new CreationRootView()));
+                            await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.PushAsync((new CreationRootView())));
+                            await MainThread.InvokeOnMainThreadAsync(() => this.IsBusy = false);
                         }
                         this.Load(this.CurrentStatus);
                         break;
@@ -177,6 +185,7 @@ namespace ARPEGOS.ViewModels
             switch (this.CurrentStatus)
             {
                 case SelectionStatus.SelectingGame:
+
                     this.SelectedGame = item;
                     MainThread.BeginInvokeOnMainThread(async() => await App.Navigation.PushAsync(new SelectVersionView(dialogService)));
                     this.PreviousStatus = this.CurrentStatus;

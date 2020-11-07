@@ -47,6 +47,7 @@ namespace ARPEGOS.Views
             {
                 await MainThread.InvokeOnMainThreadAsync(() =>
                 {
+                    activeItem.IsSelected = true;
                     viewModel.StageProgressLabel -= activeItem.Value;
                     viewModel.StageProgress -= activeItem.Value / viewModel.StageLimit;
                     if (viewModel.HasGeneralLimit == true)
@@ -62,6 +63,7 @@ namespace ARPEGOS.Views
             {
                 await MainThread.InvokeOnMainThreadAsync(() =>
                 {
+                    activeItem.IsSelected = false;
                     viewModel.StageProgressLabel += activeItem.Value;
                     viewModel.StageProgress += activeItem.Value / viewModel.StageLimit;
                     if (viewModel.HasGeneralLimit == true)
