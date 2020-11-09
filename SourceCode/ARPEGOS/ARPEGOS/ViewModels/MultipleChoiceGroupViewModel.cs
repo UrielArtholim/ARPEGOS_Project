@@ -19,7 +19,7 @@ namespace ARPEGOS.ViewModels
     {
         #region Properties
         #region Private
-        private DialogService dialogService = new DialogService();
+        public DialogService dialogService = new DialogService();
         private ObservableCollection<Group> data, datalist;
         private Stage currentStage;
         private string stageName, stageLimitProperty;
@@ -360,14 +360,21 @@ namespace ARPEGOS.ViewModels
         {
             var character = DependencyHelper.CurrentContext.CurrentCharacter;
             var availableItems = character.CheckAvailableOptions(this.CurrentStage.FullName, this.HasGeneralLimit, StageViewModel.GeneralLimitProperty, this.GeneralProgressLabel, this.StageLimitProperty, this.StageProgressLabel);
-            var updatedDatalist = new ObservableCollection<Group>();
+            var groupEnumerator = Datalist.GetEnumerator();
+            groupEnumerator.Reset();
 
-            foreach(var group in Datalist)
+            while(groupEnumerator.MoveNext())
             {
-                int elementIndex = 0;
-                foreach (var element in group)
+                var elementIndex = 0;
+                var group = groupEnumerator.Current;
+                var elementEnumerator = group.GetEnumerator();
+                elementEnumerator.Reset();
+
+                while(elementEnumerator.MoveNext())
                 {
+                    var element = elementEnumerator.Current;
                     bool elementFound = false;
+
                     foreach (var item in availableItems)
                     {
                         var elementName = element.FullName.Split('#').Last();
@@ -395,7 +402,6 @@ namespace ARPEGOS.ViewModels
                     ++elementIndex;
                 }
             }
-            
         }
         private void UpdateGroup(Group g)
         {

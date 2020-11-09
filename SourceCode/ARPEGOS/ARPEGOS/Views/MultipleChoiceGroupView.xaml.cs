@@ -36,56 +36,67 @@ namespace ARPEGOS.Views
 
         private async Task OperateCheck(object sender, CheckedChangedEventArgs e)
         {
-            var activeCheckBox = sender as CheckBox;
             var viewModel = this.BindingContext as MultipleChoiceGroupViewModel;
-            await MainThread.InvokeOnMainThreadAsync(() => viewModel.IsBusy = true);
 
-            var activeItem = activeCheckBox.BindingContext as Item;
-            var character = DependencyHelper.CurrentContext.CurrentCharacter;
-            var predicate = character.GetObjectPropertyAssociated(viewModel.CurrentStage.FullName, activeItem, StageViewModel.ApplyOnCharacter);
-            if (activeCheckBox.IsChecked == true)
+            try
             {
-                await MainThread.InvokeOnMainThreadAsync(() =>
-                {
-                    activeItem.IsSelected = true;
-                    viewModel.StageProgressLabel -= activeItem.Value;
-                    viewModel.StageProgress -= activeItem.Value / viewModel.StageLimit;
-                    if (viewModel.HasGeneralLimit == true)
-                    {
-                        viewModel.GeneralProgressLabel -= activeItem.Value;
-                        viewModel.GeneralProgress -= activeItem.Value / viewModel.StageLimit;
-                    }
-                });
-                character.UpdateObjectAssertion(predicate, activeItem.FullName);
-            }
-            // Update assertion of item selected
-            else
-            {
-                await MainThread.InvokeOnMainThreadAsync(() =>
-                {
-                    activeItem.IsSelected = false;
-                    viewModel.StageProgressLabel += activeItem.Value;
-                    viewModel.StageProgress += activeItem.Value / viewModel.StageLimit;
-                    if (viewModel.HasGeneralLimit == true)
-                    {
-                        viewModel.GeneralProgressLabel += activeItem.Value;
-                        viewModel.GeneralProgress += activeItem.Value / viewModel.StageLimit;
-                    }
-                });
+                var activeCheckBox = sender as CheckBox;
+                await MainThread.InvokeOnMainThreadAsync(() => viewModel.IsBusy = true);
 
-                // Remove assertion of item selected
-                var characterAssertions = character.GetCharacterProperties();
-                var predicateName = predicate.Split('#').Last();
-                var itemName = activeItem.FullName.Split('#').Last();
-                if (characterAssertions.ContainsKey(predicateName))
+                var activeItem = activeCheckBox.BindingContext as Item;
+                var character = DependencyHelper.CurrentContext.CurrentCharacter;
+                var predicate = character.GetObjectPropertyAssociated(viewModel.CurrentStage.FullName, activeItem, StageViewModel.ApplyOnCharacter);
+                if (activeCheckBox.IsChecked == true)
                 {
-                    characterAssertions.TryGetValue(predicateName, out var valueList);
-                    if (valueList.Contains(itemName))
-                        character.RemoveObjectProperty(predicate, activeItem.FullName);
+                    await MainThread.InvokeOnMainThreadAsync(() =>
+                    {
+                        activeItem.IsSelected = true;
+                        viewModel.StageProgressLabel -= activeItem.Value;
+                        viewModel.StageProgress -= activeItem.Value / viewModel.StageLimit;
+                        if (viewModel.HasGeneralLimit == true)
+                        {
+                            viewModel.GeneralProgressLabel -= activeItem.Value;
+                            viewModel.GeneralProgress -= activeItem.Value / viewModel.StageLimit;
+                        }
+                    });
+                    character.UpdateObjectAssertion(predicate, activeItem.FullName);
                 }
+                // Update assertion of item selected
+                else
+                {
+                    await MainThread.InvokeOnMainThreadAsync(() =>
+                    {
+                        activeItem.IsSelected = false;
+                        viewModel.StageProgressLabel += activeItem.Value;
+                        viewModel.StageProgress += activeItem.Value / viewModel.StageLimit;
+                        if (viewModel.HasGeneralLimit == true)
+                        {
+                            viewModel.GeneralProgressLabel += activeItem.Value;
+                            viewModel.GeneralProgress += activeItem.Value / viewModel.StageLimit;
+                        }
+                    });
+
+                    // Remove assertion of item selected
+                    var characterAssertions = character.GetCharacterProperties();
+                    var predicateName = predicate.Split('#').Last();
+                    var itemName = activeItem.FullName.Split('#').Last();
+                    if (characterAssertions.ContainsKey(predicateName))
+                    {
+                        characterAssertions.TryGetValue(predicateName, out var valueList);
+                        if (valueList.Contains(itemName))
+                            character.RemoveObjectProperty(predicate, activeItem.FullName);
+                    }
+                }
+                await viewModel.UpdateView();
             }
-            await viewModel.UpdateView();
-            await MainThread.InvokeOnMainThreadAsync(() => viewModel.IsBusy = false);
+            catch(Exception exception)
+            {
+                await viewModel.dialogService.DisplayAlert("On Check Exception", exception.Message);
+            }
+            finally
+            {
+                await MainThread.InvokeOnMainThreadAsync(() => viewModel.IsBusy = false);
+            }
         }
     }
 }
