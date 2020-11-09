@@ -3,6 +3,7 @@ namespace ARPEGOS.Services
 {
     using System.Collections.Generic;
     using System.Linq;
+    using System.Threading.Tasks;
     using ARPEGOS.Helpers;
     using RDFSharp.Semantics.OWL;
 
@@ -15,6 +16,7 @@ namespace ARPEGOS.Services
         /// <param name="update">Updated value of the limit</param>
         internal bool UpdateAvailablePoints(string stageString, float? update)
         {
+            
             var stageName = stageString.Split('#').Last();
             var hasUpdated = false;
             var AvailableWords = new List<string>()
@@ -64,6 +66,7 @@ namespace ARPEGOS.Services
         /// <param name="value">New value of the assertion</param>
         internal void UpdateDatatypeAssertion(string predicateString, string value)
         {
+            
             string predicateName = predicateString.Split('#').Last();
             var hasPredicate = CheckDatatypeProperty(predicateString);
             RDFOntologyDatatypeProperty predicate;
@@ -93,7 +96,7 @@ namespace ARPEGOS.Services
                 subjectString = $"{this.Context}{this.Name}";
                 valuetype = predicate.Range.Value.ToString().Split('#').Last();
             }
-            AddDatatypeProperty(subjectString, predicateString, value, valuetype);
+            AddDatatypeProperty(subjectString, predicateString, value, valuetype);            
             this.Save();
         }
 
@@ -104,6 +107,7 @@ namespace ARPEGOS.Services
         /// <param name="objectName">New object of the assertion</param>
         internal void UpdateObjectAssertion(string predicateString, string objectString)
         {
+            
             var predicateName = predicateString.Split('#').Last();
             var hasPredicate = CheckObjectProperty(predicateString);
             RDFOntologyObjectProperty predicate;
@@ -136,6 +140,7 @@ namespace ARPEGOS.Services
 
         internal bool UpdateLimit(string elementString, float? update)
         {
+            
             var elementName = elementString.Split('#').Last();
             var hasUpdated = false;
             var LimitWords = new List<string>()

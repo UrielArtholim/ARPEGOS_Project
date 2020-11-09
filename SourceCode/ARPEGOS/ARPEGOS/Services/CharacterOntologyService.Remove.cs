@@ -2,7 +2,7 @@
 namespace ARPEGOS.Services
 {
     using System.Linq;
-
+    using System.Threading.Tasks;
     using RDFSharp.Semantics.OWL;
 
     public partial class CharacterOntologyService
@@ -14,6 +14,7 @@ namespace ARPEGOS.Services
         /// <param name="literal">Value of the property</param>
         internal void RemoveDatatypeProperty(string predicateString, string literalString = null)
         {
+            
             var predicate = this.Ontology.Model.PropertyModel.SelectProperty(predicateString) as RDFOntologyDatatypeProperty;
             var CharacterPredicateAssertions = this.Ontology.Data.Relations.Assertions.SelectEntriesByPredicate(predicate);
             if(literalString == null)
@@ -45,6 +46,7 @@ namespace ARPEGOS.Services
         /// <param name="objectFactName"></param>
         internal void RemoveObjectProperty(string predicateString, string objectFactString = null)
         {
+            
             var predicate = this.Ontology.Model.PropertyModel.SelectProperty(predicateString) as RDFOntologyObjectProperty;
             var CharacterPredicateAssertions = this.Ontology.Data.Relations.Assertions.SelectEntriesByPredicate(predicate);
             if (objectFactString == null)

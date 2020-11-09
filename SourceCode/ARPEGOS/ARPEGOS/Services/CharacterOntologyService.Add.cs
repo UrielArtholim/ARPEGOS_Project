@@ -3,6 +3,7 @@ namespace ARPEGOS.Services
 {
     using System.Collections.Generic;
     using System.Linq;
+    using System.Threading.Tasks;
     using RDFSharp.Model;
     using RDFSharp.Semantics.OWL;
 
@@ -30,7 +31,6 @@ namespace ARPEGOS.Services
             var objectFact = !this.CheckIndividual(objectCharacterString) ? this.CreateIndividual(objectName) : characterDataModel.SelectFact(objectCharacterString);
             characterDataModel.AddAssertionRelation(subjectFact, predicate as RDFOntologyObjectProperty, objectFact);
             AddClassification(predicateName);
-            this.Save();
         }
 
         /// <summary>
@@ -53,7 +53,6 @@ namespace ARPEGOS.Services
             var objectLiteral = this.CreateLiteral(value, valuetype);
             characterDataModel.AddAssertionRelation(subjectFact, predicate as RDFOntologyDatatypeProperty, objectLiteral);
             AddClassification(predicateName);
-            this.Save();
         }
 
         /// <summary>
@@ -62,6 +61,7 @@ namespace ARPEGOS.Services
         /// <param name="propertyName">Name of the property</param>
         internal void AddClassification (string propertyName)
         {
+            
             var text = string.Empty;
             var descriptionType = "string";
             var hierarchy = new List<string>();

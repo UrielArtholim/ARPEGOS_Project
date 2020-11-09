@@ -243,25 +243,16 @@ namespace ARPEGOS.ViewModels
                     }
                     foreach (var item in group.Elements)
                     {
-                        if (item.IsEnabled == true && group.Expanded == true)
+                        if (item.IsEnabled == true)
                         {
                             if (!group.Contains(item))
                                 group.Add(item);
-                        }
-                        else if (item.IsEnabled == true && group.Expanded == false)
-                        {
-                            if (!group.Contains(item))
-                                group.Add(item);
-                        }
-                        else if (item.IsEnabled == false && group.Expanded == true)
-                        {
-                            if (group.Contains(item))
-                                group.Remove(item);
                         }
                         else
                             if (group.Contains(item))
-                            group.Remove(item);
-                    }                        
+                                group.Remove(item);
+                    }
+                        
                 }
 
                 UpdateGroup(group);

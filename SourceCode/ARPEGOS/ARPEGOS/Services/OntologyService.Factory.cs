@@ -62,7 +62,7 @@ namespace ARPEGOS.Services
             }
             name = FileService.FormatName(name);
             var path = FileService.GetGameFilePath(name, version);
-            var graph =  RDFGraph.FromFile(RDFFormat, path);
+            var graph =  await Task.Run(()=> RDFGraph.FromFile(RDFFormat, path));
             var context = $"{graph.Context}#";
             graph.SetContext(new Uri(context));
             //var prefix = string.Concat(Regex.Matches(FileService.EscapedName(name), "[A-Z]").Select(match => match.Value)).ToLower();
@@ -92,6 +92,7 @@ namespace ARPEGOS.Services
 
         public static async Task<CharacterOntologyService> CreateCharacter(string name, GameOntologyService game)
         {
+            
             var path = FileService.GetCharacterFilePath(name, game);
             if (File.Exists(path))
             {

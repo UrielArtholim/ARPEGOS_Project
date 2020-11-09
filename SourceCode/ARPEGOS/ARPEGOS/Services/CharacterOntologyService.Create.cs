@@ -5,6 +5,8 @@ namespace ARPEGOS.Services
     using System.Collections.Generic;
     using System.Linq;
     using System.Reflection;
+    using System.Threading;
+    using System.Threading.Tasks;
     using ARPEGOS.Helpers;
     using RDFSharp.Model;
     using RDFSharp.Semantics.OWL;
@@ -19,7 +21,7 @@ namespace ARPEGOS.Services
         /// <param name="type">Semantic datatype of the literal</param>
         /// <returns></returns>
         internal RDFOntologyLiteral CreateLiteral(string value, string type)
-        {
+        {            
             var CharacterDataModel = this.Ontology.Data;
             var CharacterLiteral = new RDFOntologyLiteral(new RDFTypedLiteral(value, CheckDatatypeFromString(type)));
             if (!CheckLiteral(value, type))
@@ -34,7 +36,7 @@ namespace ARPEGOS.Services
         /// <param name="name">Name of the fact</param>
         /// <returns></returns>
         internal RDFOntologyFact CreateFact (string elementName)
-        {
+        {            
             var GameDataModel = DependencyHelper.CurrentContext.CurrentGame.Ontology.Data;
             var CharacterDataModel = this.Ontology.Data;
             var GameFactString = GetString(elementName);
@@ -94,7 +96,7 @@ namespace ARPEGOS.Services
         /// <param name="name">Name of the class</param>
         /// <returns></returns>
         internal RDFOntologyClass CreateClass(string elementName)
-        {
+        {            
             var GameClassModel = DependencyHelper.CurrentContext.CurrentGame.Ontology.Model.ClassModel;
             var CharacterClassModel = this.Ontology.Model.ClassModel;
             elementName = FileService.EscapedName(elementName.Split('#').Last());
@@ -177,7 +179,7 @@ namespace ARPEGOS.Services
         /// <param name="name">Name of the object property</param>
         /// <returns></returns>
         internal RDFOntologyObjectProperty CreateObjectProperty(string elementName)
-        {
+        {            
             var GamePropertyModel = DependencyHelper.CurrentContext.CurrentGame.Ontology.Model.PropertyModel;
             var CharacterPropertyModel = this.Ontology.Model.PropertyModel;
             var CharacterClassModel = this.Ontology.Model.ClassModel;
@@ -239,7 +241,8 @@ namespace ARPEGOS.Services
             if (CharacterPreviousObjectProperty != null)
                 CharacterPropertyModel.AddSubPropertyOfRelation(CharacterObjectProperty, CharacterPreviousObjectProperty);
             var GameAnnotations = GamePropertyModel.Annotations;
-            foreach (var propertyInfo in GameAnnotations.GetType().GetProperties())
+            var GameAnnotationsProperties = GameAnnotations.GetType().GetProperties();
+            foreach (var propertyInfo in GameAnnotationsProperties)
             {
                 var AnnotationsList = new List<RDFOntologyTaxonomyEntry>();
                 var propertyTaxonomy = GameAnnotations.GetType().GetProperty(propertyInfo.Name).GetValue(GameAnnotations) as RDFOntologyTaxonomy;
@@ -294,7 +297,7 @@ namespace ARPEGOS.Services
         /// <param name="name">Name of the datatype property</param>
         /// <returns></returns>
         internal RDFOntologyDatatypeProperty CreateDatatypeProperty(string elementName)
-        {
+        {            
             var GamePropertyModel = DependencyHelper.CurrentContext.CurrentGame.Ontology.Model.PropertyModel;
             var CharacterPropertyModel = this.Ontology.Model.PropertyModel;
             var CharacterClassModel = this.Ontology.Model.ClassModel;
@@ -404,6 +407,7 @@ namespace ARPEGOS.Services
         /// <returns></returns>
         internal RDFOntologyFact CreateIndividual(string elementName)
         {
+            
             RDFOntologyFact CharacterSubject = null;
             elementName = FileService.EscapedName(elementName);
             if (elementName.Contains(FileService.EscapedName(this.Name)))
