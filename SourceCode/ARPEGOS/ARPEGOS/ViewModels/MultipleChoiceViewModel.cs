@@ -205,7 +205,6 @@ namespace ARPEGOS.ViewModels
         #endregion
 
         #region Methods
-
         private async Task Next()
         {
             await MainThread.InvokeOnMainThreadAsync(() => this.IsBusy = true);

@@ -82,7 +82,7 @@ namespace ARPEGOS
         #endregion
 
         #region Constructors
-        public Item(string elementString, string description = "This is a description", string Class = "No class available", double elementValue = 1, double elementMaximum = 1)
+        public Item(string elementString, string description = "This is a description", string Class = "No class available", double elementStep = 1, double elementMaximum = 1, double elementValue = 0)
         {
             FullName = elementString;
             ShortName = elementString.Split('#').Last();
@@ -113,7 +113,7 @@ namespace ARPEGOS
             Description = description;
             this.Value = elementValue;
             this.Maximum = elementMaximum;
-            this.Step = elementValue;
+            this.Step = elementStep;
             if (string.IsNullOrEmpty(Description))
                 HasDescription = false;
             else

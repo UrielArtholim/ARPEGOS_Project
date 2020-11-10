@@ -232,16 +232,21 @@ namespace ARPEGOS.ViewModels
                     {
                         foreach (var groupItem in group.Elements)
                         {
-                            foreach (var item in availableItems)
+                            if (availableItems.Count() > 0)
                             {
-                                if (groupItem.FullName.Split('#').Last() == item.FullName.Split('#').Last())
+                                foreach (var item in availableItems)
                                 {
-                                    groupItem.IsEnabled = true;
-                                    break;
+                                    if (groupItem.FullName.Split('#').Last() == item.FullName.Split('#').Last())
+                                    {
+                                        groupItem.IsEnabled = true;
+                                        break;
+                                    }
+                                    else
+                                        groupItem.IsEnabled = false;
                                 }
-                                else
-                                    groupItem.IsEnabled = false;
                             }
+                            else
+                                groupItem.IsEnabled = false;                            
                         }
                         foreach (var item in group.Elements)
                         {

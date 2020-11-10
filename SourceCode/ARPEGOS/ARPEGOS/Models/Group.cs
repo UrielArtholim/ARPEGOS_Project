@@ -115,7 +115,8 @@ namespace ARPEGOS
                 if(expanded == true)
                 {
                     foreach(var item in this.Elements)
-                        this.Add(item);
+                        if(item.IsEnabled == true)
+                            this.Add(item);
                 }
                 else
                 {

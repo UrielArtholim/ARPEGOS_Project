@@ -60,7 +60,7 @@
                                                FontSize="Medium"                                               
                                                VerticalOptions="Center"
                                                HorizontalTextAlignment="Center"
-                                               Text="{Binding Source={x:Reference ValueEntry}, Path=Value, StringFormat='{0:F0}'}"/>
+                                               Text="{Binding Value, StringFormat='{0:F0}'}"/>
                                             <Stepper x:Name="ValueEntry"
                                                BindingContext="{Binding .}"
                                                VerticalOptions="Center"

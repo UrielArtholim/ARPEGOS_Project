@@ -38,65 +38,59 @@ namespace ARPEGOS.Views
             NewValue = e.NewValue;
             OldValue = e.OldValue;
 
-            if (viewModel.ElementLimit != null)
-            {
-                var lowerLimit = viewModel.StageProgressLabel;
-                if (viewModel.HasGeneralLimit == true)
-                    lowerLimit = Math.Min(viewModel.GeneralProgressLabel, lowerLimit);
-                lowerLimit = Math.Min(lowerLimit, Convert.ToDouble(viewModel.ElementLimit));
-                foreach (var element in viewModel.Data)
-                {
-                    if (lowerLimit > 0)
-                    {
-                        if (lowerLimit == 1)
-                        {
-                            element.IsEnabled = true;
-                            element.Maximum = element.Value + 1;
-                        }
-                    }
-                    else if (lowerLimit == 0)
-                    {
-                        if (element.Value != 0)
-                            element.Maximum = element.Value;
-                        else
-                            element.IsEnabled = false;
-                    }
-                }
-            }
+            double lowerProgressValue = viewModel.StageProgressLabel;
+            if (viewModel.HasGeneralLimit == true)
+                lowerProgressValue = Math.Min(viewModel.GeneralProgressLabel, viewModel.StageProgressLabel);
+
+            double lowerLimit = viewModel.StageLimit;
+            if (viewModel.HasGeneralLimit == true)
+                lowerProgressValue = Math.Min(viewModel.GeneralLimit, viewModel.StageLimit);
 
             if (NewValue > OldValue)
             {
-                ++item.Value;
-                if (viewModel.CurrentStage.EditStageLimit == true)
+                if(lowerProgressValue > 0)
                 {
-                    await MainThread.InvokeOnMainThreadAsync(() =>
+                    if(item.Value < lowerLimit)
                     {
-                        viewModel.StageProgressLabel -= Convert.ToDouble(item.Step);
-                        viewModel.StageProgress -= Convert.ToDouble(item.Step / viewModel.StageLimit);
-                        if (viewModel.CurrentStage.EditGeneralLimit == true)
+                        ++item.Value;
+                        if (viewModel.CurrentStage.EditStageLimit == true)
                         {
-                            viewModel.GeneralProgressLabel -= Convert.ToDouble(item.Step);
-                            viewModel.GeneralProgress -= Convert.ToDouble(item.Step / viewModel.GeneralLimit);
+                            await MainThread.InvokeOnMainThreadAsync(() =>
+                            {
+                                viewModel.StageProgressLabel -= Convert.ToDouble(item.Step);
+                                viewModel.StageProgress -= Convert.ToDouble(item.Step / viewModel.StageLimit);
+                                if (viewModel.CurrentStage.EditGeneralLimit == true)
+                                {
+                                    viewModel.GeneralProgressLabel -= Convert.ToDouble(item.Step);
+                                    viewModel.GeneralProgress -= Convert.ToDouble(item.Step / viewModel.GeneralLimit);
+                                }
+                            });
                         }
-                    });
-                }
+                    }                    
+                }                
             }
             else if (OldValue > NewValue)
             {
-                if (viewModel.CurrentStage.EditStageLimit == true)
+                if (lowerProgressValue >= 0)
                 {
-                    await MainThread.InvokeOnMainThreadAsync(() =>
+                    if(item.Value > 0)
                     {
                         --item.Value;
-                        viewModel.StageProgressLabel += Convert.ToDouble(item.Step);
-                        viewModel.StageProgress += Convert.ToDouble(item.Step / viewModel.StageLimit);
-                        if (viewModel.CurrentStage.EditGeneralLimit == true)
+                        if (viewModel.CurrentStage.EditStageLimit == true)
                         {
-                            viewModel.GeneralProgressLabel += Convert.ToDouble(item.Step);
-                            viewModel.GeneralProgress += Convert.ToDouble(item.Step / viewModel.GeneralLimit);
+                            await MainThread.InvokeOnMainThreadAsync(() =>
+                            {
+                                viewModel.StageProgressLabel += Convert.ToDouble(item.Step);
+                                viewModel.StageProgress += Convert.ToDouble(item.Step / viewModel.StageLimit);
+                                if (viewModel.CurrentStage.EditGeneralLimit == true)
+                                {
+                                    viewModel.GeneralProgressLabel += Convert.ToDouble(item.Step);
+                                    viewModel.GeneralProgress += Convert.ToDouble(item.Step / viewModel.GeneralLimit);
+                                }
+                            });
                         }
-                    });
-                }
+                    }                    
+                }                
             }
             await MainThread.InvokeOnMainThreadAsync(() => viewModel.IsBusy = false);
         }

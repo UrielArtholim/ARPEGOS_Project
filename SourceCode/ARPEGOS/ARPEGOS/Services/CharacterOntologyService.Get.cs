@@ -346,7 +346,7 @@ namespace ARPEGOS.Services
                 else if (individualCostAssertions.Count() == 1)
                     individualValue = Convert.ToDouble(individualCostAssertions.Single().TaxonomyObject.ToString().Split('^').First());
 
-                individuals.Add(new Item(individualString, individualDescription, currentClassName, individualValue));
+                individuals.Add(new Item(individualString, individualDescription, currentClassName, individualValue, 1, individualValue));
             }
             return individuals;
         }//MODIFIED

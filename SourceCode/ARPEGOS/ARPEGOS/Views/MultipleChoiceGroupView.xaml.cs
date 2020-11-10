@@ -38,11 +38,10 @@ namespace ARPEGOS.Views
         private async Task OperateCheck(object sender, CheckedChangedEventArgs e)
         {
             var viewModel = this.BindingContext as MultipleChoiceGroupViewModel;
+            await MainThread.InvokeOnMainThreadAsync(() => viewModel.IsBusy = true);
             var activeCheckBox = sender as CheckBox;
             var activeItem = activeCheckBox.BindingContext as Item;
             var character = DependencyHelper.CurrentContext.CurrentCharacter;
-            await MainThread.InvokeOnMainThreadAsync(() => viewModel.IsBusy = true);
-
             try
             {                
                 var predicate = character.GetObjectPropertyAssociated(viewModel.CurrentStage.FullName, activeItem, StageViewModel.ApplyOnCharacter);
