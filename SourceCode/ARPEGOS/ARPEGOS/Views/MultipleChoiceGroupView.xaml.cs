@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using Xamarin.Essentials;
 using Xamarin.Forms;
@@ -31,26 +32,25 @@ namespace ARPEGOS.Views
 
         async void OnCheckedChanged(object sender, CheckedChangedEventArgs e)
         {
-            await Task.Run(() => OperateCheck(sender, e));    
+           await OperateCheck(sender, e);            
         }
 
         private async Task OperateCheck(object sender, CheckedChangedEventArgs e)
         {
             var viewModel = this.BindingContext as MultipleChoiceGroupViewModel;
+            var activeCheckBox = sender as CheckBox;
+            var activeItem = activeCheckBox.BindingContext as Item;
+            var character = DependencyHelper.CurrentContext.CurrentCharacter;
+            await MainThread.InvokeOnMainThreadAsync(() => viewModel.IsBusy = true);
 
             try
-            {
-                var activeCheckBox = sender as CheckBox;
-                await MainThread.InvokeOnMainThreadAsync(() => viewModel.IsBusy = true);
-
-                var activeItem = activeCheckBox.BindingContext as Item;
-                var character = DependencyHelper.CurrentContext.CurrentCharacter;
+            {                
                 var predicate = character.GetObjectPropertyAssociated(viewModel.CurrentStage.FullName, activeItem, StageViewModel.ApplyOnCharacter);
                 if (activeCheckBox.IsChecked == true)
                 {
+                    activeItem.IsSelected = true;
                     await MainThread.InvokeOnMainThreadAsync(() =>
                     {
-                        activeItem.IsSelected = true;
                         viewModel.StageProgressLabel -= activeItem.Value;
                         viewModel.StageProgress -= activeItem.Value / viewModel.StageLimit;
                         if (viewModel.HasGeneralLimit == true)
@@ -87,7 +87,7 @@ namespace ARPEGOS.Views
                             character.RemoveObjectProperty(predicate, activeItem.FullName);
                     }
                 }
-                await viewModel.UpdateView();
+                Task.Run(()=> viewModel.UpdateView()).GetAwaiter().GetResult();
             }
             catch(Exception exception)
             {

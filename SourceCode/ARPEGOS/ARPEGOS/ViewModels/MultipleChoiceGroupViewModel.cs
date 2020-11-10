@@ -226,35 +226,44 @@ namespace ARPEGOS.ViewModels
             if (lastGroup == group)
             {
                 group.Expanded = !group.Expanded;
-                if (availableItems.Count > 0)
+                if(group.Expanded == true)
                 {
-                    foreach (var groupItem in group.Elements)
+                    if (availableItems.Count > 0)
                     {
-                        foreach (var item in availableItems)
+                        foreach (var groupItem in group.Elements)
                         {
-                            if (groupItem.FullName.Split('#').Last() == item.FullName.Split('#').Last())
+                            foreach (var item in availableItems)
                             {
-                                groupItem.IsEnabled = true;
-                                break;
+                                if (groupItem.FullName.Split('#').Last() == item.FullName.Split('#').Last())
+                                {
+                                    groupItem.IsEnabled = true;
+                                    break;
+                                }
+                                else
+                                    groupItem.IsEnabled = false;
+                            }
+                        }
+                        foreach (var item in group.Elements)
+                        {
+                            if (item.IsEnabled == true)
+                            {
+                                if (!group.Contains(item))
+                                    group.Add(item);
                             }
                             else
-                                groupItem.IsEnabled = false;
-                        }
-                    }
-                    foreach (var item in group.Elements)
-                    {
-                        if (item.IsEnabled == true)
-                        {
-                            if (!group.Contains(item))
-                                group.Add(item);
-                        }
-                        else
-                            if (group.Contains(item))
+                                if (group.Contains(item))
                                 group.Remove(item);
+                        }
                     }
-                        
                 }
-
+                else
+                {
+                    foreach (var groupItem in group.Elements)
+                        if (groupItem.IsSelected == false)
+                            if (group.Contains(groupItem))
+                                group.Remove(groupItem);
+                }
+                
                 UpdateGroup(group);
             }
             else
@@ -356,7 +365,7 @@ namespace ARPEGOS.ViewModels
             }
         }
 
-        public async Task UpdateView()
+        public void UpdateView()
         {
             var character = DependencyHelper.CurrentContext.CurrentCharacter;
             var availableItems = character.CheckAvailableOptions(this.CurrentStage.FullName, this.HasGeneralLimit, StageViewModel.GeneralLimitProperty, this.GeneralProgressLabel, this.StageLimitProperty, this.StageProgressLabel);

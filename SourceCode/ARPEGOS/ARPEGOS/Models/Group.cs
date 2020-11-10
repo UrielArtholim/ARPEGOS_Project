@@ -125,13 +125,6 @@ namespace ARPEGOS
                         if (item.IsSelected != true)
                             this.Remove(item);
                     }
-
-                    if(this.Count() > 0)
-                    {
-                        expanded = true;
-                        OnPropertyChanged("Expanded");
-                        OnPropertyChanged("StateIcon");
-                    }
                 }
             }
         }

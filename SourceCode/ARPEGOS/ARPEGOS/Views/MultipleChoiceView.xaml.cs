@@ -39,7 +39,6 @@ namespace ARPEGOS.Views
             var predicate = character.GetObjectPropertyAssociated(viewModel.CurrentStage.FullName, activeItem, StageViewModel.ApplyOnCharacter);
             if(activeCheckBox.IsChecked == true)
             {
-                activeItem.IsSelected = true;
                 await MainThread.InvokeOnMainThreadAsync(() => 
                 {
                     viewModel.StageProgressLabel -= activeItem.Value;
@@ -55,7 +54,6 @@ namespace ARPEGOS.Views
             // Update assertion of item selected
             else
             {
-                activeItem.IsSelected = false;
                 await MainThread.InvokeOnMainThreadAsync(() =>
                 {
                     viewModel.StageProgressLabel += activeItem.Value;

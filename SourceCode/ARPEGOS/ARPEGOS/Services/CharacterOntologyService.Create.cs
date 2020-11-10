@@ -3,6 +3,7 @@ namespace ARPEGOS.Services
 {
     using System;
     using System.Collections.Generic;
+    using System.Collections.ObjectModel;
     using System.Linq;
     using System.Reflection;
     using System.Threading;
@@ -241,10 +242,12 @@ namespace ARPEGOS.Services
             if (CharacterPreviousObjectProperty != null)
                 CharacterPropertyModel.AddSubPropertyOfRelation(CharacterObjectProperty, CharacterPreviousObjectProperty);
             var GameAnnotations = GamePropertyModel.Annotations;
-            var GameAnnotationsProperties = GameAnnotations.GetType().GetProperties();
-            foreach (var propertyInfo in GameAnnotationsProperties)
+            var GameAnnotationsPropertiesEnumerator = GameAnnotations.GetType().GetProperties().GetEnumerator();
+            GameAnnotationsPropertiesEnumerator.Reset();
+            while (GameAnnotationsPropertiesEnumerator.MoveNext())
             {
-                var AnnotationsList = new List<RDFOntologyTaxonomyEntry>();
+                PropertyInfo propertyInfo = GameAnnotationsPropertiesEnumerator.Current as PropertyInfo;
+                var AnnotationsList = new Collection<RDFOntologyTaxonomyEntry>();
                 var propertyTaxonomy = GameAnnotations.GetType().GetProperty(propertyInfo.Name).GetValue(GameAnnotations) as RDFOntologyTaxonomy;
                 if (propertyTaxonomy.EntriesCount > 0)
                 {
@@ -253,16 +256,22 @@ namespace ARPEGOS.Services
                             AnnotationsList.Add(entry);
                     if (propertyInfo.Name != "CustomAnnotations")
                     {
-                        foreach (var entry in AnnotationsList)
+                        var annotationsListEnumerator = AnnotationsList.GetEnumerator();
+                        annotationsListEnumerator.Reset();
+                        while(annotationsListEnumerator.MoveNext())
                         {
-                            RDFSemanticsEnums.RDFOntologyStandardAnnotation type = (RDFSemanticsEnums.RDFOntologyStandardAnnotation) Enum.Parse(typeof(RDFSemanticsEnums.RDFOntologyStandardAnnotation), propertyInfo.Name);
+                            var entry = annotationsListEnumerator.Current;
+                            RDFSemanticsEnums.RDFOntologyStandardAnnotation type = (RDFSemanticsEnums.RDFOntologyStandardAnnotation)Enum.Parse(typeof(RDFSemanticsEnums.RDFOntologyStandardAnnotation), propertyInfo.Name);
                             CharacterPropertyModel.AddStandardAnnotation(type, CharacterObjectProperty, entry.TaxonomyObject);
                         }
                     }
                     else
                     {
-                        foreach (var entry in AnnotationsList)
+                        var annotationsListEnumerator = AnnotationsList.GetEnumerator();
+                        annotationsListEnumerator.Reset();
+                        while (annotationsListEnumerator.MoveNext())
                         {
+                            var entry = annotationsListEnumerator.Current;
                             var annotationShortName = entry.TaxonomyPredicate.ToString().Split('#').Last();
                             RDFOntologyAnnotationProperty annotation;
                             var CharacterPropertyCustomAnnotations = this.Ontology.Model.PropertyModel.Annotations.CustomAnnotations;
