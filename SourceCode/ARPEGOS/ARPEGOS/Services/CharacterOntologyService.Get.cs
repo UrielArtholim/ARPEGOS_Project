@@ -204,6 +204,9 @@ namespace ARPEGOS.Services
                 CurrentContext = DependencyHelper.CurrentContext.CurrentGame.Context;
             }
 
+            if (!elementString.Contains('#'))
+                currentElementString = this.GetString(elementString, applyOnCharacter);                
+
             var DataModel = CurrentOntology.Data;
             var currentElementClass = CurrentOntology.Model.ClassModel.SelectClass(currentElementString);
             if(currentElementClass != null)
@@ -213,6 +216,18 @@ namespace ARPEGOS.Services
                 var elementClassResource = this.Ontology.Model.ClassModel.SelectClass(elementClassString);
                 var elementClassDescription = this.Ontology.Model.ClassModel.Annotations.Comment.SelectEntriesBySubject(elementClassResource).Single().TaxonomyObject.ToString().Split('^').First();
                 elementClass = new Item(elementClassString, elementClassDescription);
+            }
+            else
+            {
+                var currentElementFact = DataModel.SelectFact(currentElementString);
+                if(currentElementFact != null)
+                {
+                    var elementClassType = DataModel.Relations.ClassType.SelectEntriesBySubject(currentElementFact).Single();
+                    var elementClassString = elementClassType.TaxonomyObject.ToString();
+                    var elementClassResource = this.Ontology.Model.ClassModel.SelectClass(elementClassString);
+                    var elementClassDescription = this.GetElementDescription(elementClassString);
+                    elementClass = new Item(elementClassString, elementClassDescription);
+                }
             }
             
             return elementClass;
@@ -338,13 +353,23 @@ namespace ARPEGOS.Services
                                 var currentClassGeneralCost = currentClassGeneralCostAnnotation.Single().TaxonomyObject.ToString().Split('^').First();
                                 var individualGeneralCostAssertion = individualCostAssertions.Where(entry => entry.TaxonomyPredicate.ToString().Contains(currentClassGeneralCost));
                                 if(individualGeneralCostAssertion.Count() > 0)
-                                    individualValue = Convert.ToDouble(individualGeneralCostAssertion.Single().TaxonomyObject.ToString().Split('^').First());
+                                {
+                                    var definition = individualGeneralCostAssertion.Single().TaxonomyObject.ToString();
+                                    if (definition.Contains('^'))
+                                        definition = definition.Split('^').First();
+                                    individualValue = GetValue(definition);
+                                }
                             }
                         }
                     }
                 }
                 else if (individualCostAssertions.Count() == 1)
-                    individualValue = Convert.ToDouble(individualCostAssertions.Single().TaxonomyObject.ToString().Split('^').First());
+                {
+                    var definition = individualCostAssertions.Single().TaxonomyObject.ToString();
+                    if (definition.Contains('^'))
+                        definition = definition.Split('^').First();
+                    individualValue = GetValue(definition, individualString.Split('#').Last());
+                }
 
                 individuals.Add(new Item(individualString, individualDescription, currentClassName, individualValue, 1, individualValue));
             }
@@ -1290,8 +1315,9 @@ namespace ARPEGOS.Services
         {            
             // 0 - Select current ontology using applyOnCharacter (true: characterOntology, false: gameOntology)
             RDFOntology CurrentOntology;
+            var game = DependencyHelper.CurrentContext.CurrentGame;
             var CharacterOntology = this.Ontology;
-            var GameOntology = DependencyHelper.CurrentContext.CurrentGame.Ontology;
+            var GameOntology = game.Ontology;
 
             if (applyOnCharacter)
                 CurrentOntology = this.Ontology;
@@ -1451,7 +1477,10 @@ namespace ARPEGOS.Services
                 {
                     // 3.3.1 Get current element property and the previous element 
                     var elementPropertyName = formulaElements.ElementAt(index);
-                    var previousElement = formulaElements.ElementAt(index - 1);
+                    var previousElement = string.Empty;
+                    if (index > 0)
+                        previousElement = formulaElements.ElementAt(index - 1);
+
                     // Declare a variable to know which property are we referring at every moment
                     var currentPropertyName = elementPropertyName;
                     // 3.3.2 Check if the previous element is not an operator.
@@ -2055,6 +2084,14 @@ namespace ARPEGOS.Services
                                 }
                             }
                         }
+                        else
+                        {
+                            var itemString = GetString(itemName);
+                            var itemClass = GetElementClass(itemString);
+                            var itemClassName = itemClass.ToString().Split('#').Last();
+                            var definition = valueDefinition.Replace(itemName, itemClassName);
+                            nextElementValue = GetValue(definition);                
+                        }
                     }
 
                     // 3.6.3 If current element matches with the division operator, and denominator is 0, then next value is the neutral value of division (1).
@@ -2087,7 +2124,16 @@ namespace ARPEGOS.Services
                             CurrentValue = operatorResult.ToString();
                     }
                 }
+                else
+                {
+                    var itemString = GetString(itemName);
+                    var itemClass = GetElementClass(itemString);
+                    var itemClassName = itemClass.FullName.Split('#').Last();
+                    var definition = valueDefinition.Replace("Item", itemClassName);
+                    CurrentValue = GetValue(definition).ToString();
+                }
             }
+            
             // Check if currentValue is null, remove type and return value
             if (string.IsNullOrEmpty(CurrentValue))
                 CurrentValue = "0";

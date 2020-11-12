@@ -17,7 +17,7 @@ namespace ARPEGOS.ViewModels
 {
     public class ValuedGroupViewModel: BaseViewModel
     {
-        private DialogService dialogService = new DialogService();
+        public DialogService dialogService = new DialogService();
         private ObservableCollection<Group> data, datalist;
         private Stage currentStage;
         private string stageName;
@@ -25,9 +25,10 @@ namespace ARPEGOS.ViewModels
 
         private double stageLimit, stageProgress, stageProgressLabel;
         private double generalLimit, generalProgress, generalProgressLabel;
-        private bool hasGeneralLimit;
+        private bool hasGeneralLimit, hasStageLimit;
 
         private double currentLimit;
+        private double? elementLimit;
         private bool showDescription;
         private Group lastGroup;
 
@@ -98,10 +99,22 @@ namespace ARPEGOS.ViewModels
             set => SetProperty(ref this.hasGeneralLimit, value);
         }
 
+        public bool HasStageLimit
+        {
+            get => this.hasStageLimit;
+            set => SetProperty(ref this.hasStageLimit, value);
+        }
+
         public double CurrentLimit
         {
             get => this.currentLimit;
             set => SetProperty(ref this.currentLimit, value);
+        }
+
+        public double? ElementLimit
+        {
+            get => this.elementLimit;
+            set => SetProperty(ref this.elementLimit, value);
         }
 
         public bool ShowDescription
@@ -126,6 +139,7 @@ namespace ARPEGOS.ViewModels
             this.StageLimit = character.GetLimitValue(this.stageLimitProperty);
             this.ShowDescription = true;
             this.HasGeneralLimit = this.CurrentStage.EditGeneralLimit;
+            this.HasStageLimit = true;
             this.CurrentLimit = this.StageLimit;
             this.StageProgressLabel = this.StageLimit;
 
@@ -156,19 +170,27 @@ namespace ARPEGOS.ViewModels
                         this.StageProgress = this.StageProgressLabel / stageMax;
                     }                    
                 }
-            }
-                
+            }                
             else
                 this.StageProgress = 1;
 
             Datalist = new ObservableCollection<Group>(character.GetIndividualsGrouped(this.CurrentStage.FullName));
-            foreach (var item in datalist)
-                if (string.IsNullOrEmpty(item.Description) || string.IsNullOrWhiteSpace(item.Description))
-                    item.HasDescription = false;
+            foreach (var group in Datalist)
+            {
+                foreach (var groupItem in group.Elements)
+                {
+                    groupItem.Value = 0;
+                    if (string.IsNullOrEmpty(groupItem.Description) || string.IsNullOrWhiteSpace(groupItem.Description))
+                        groupItem.HasDescription = false;
+                }
 
-            Data = new ObservableCollection<Group>(datalist);
+                if (string.IsNullOrEmpty(group.Description) || string.IsNullOrWhiteSpace(group.Description))
+                    group.HasDescription = false;                
+            }                
 
-            this.SelectGroupCommand = new Command<Group>(async (group) => await MainThread.InvokeOnMainThreadAsync(() => SelectGroup(group)));
+            Data = new ObservableCollection<Group>(Datalist);
+
+            this.SelectGroupCommand = new Command<Group>(async (group) => await Task.Run(async() => await SelectGroup(group)));
 
             this.NextCommand = new Command(async () => await Task.Run(() => Next()));
 
@@ -184,26 +206,21 @@ namespace ARPEGOS.ViewModels
 
         }
 
-        private void SelectGroup(Group group)
+        private async Task SelectGroup(Group group)
         {
-            this.IsBusy = true;
-            if (lastGroup == group)
-            {
-                group.Expanded = !group.Expanded;
-                UpdateGroup(group);
-            }
-            else
+            await MainThread.InvokeOnMainThreadAsync(() => this.IsBusy = true);
+            if (lastGroup != group)           
             {
                 if (lastGroup != null)
-                {
                     lastGroup.Expanded = false;
-                    UpdateGroup(lastGroup);
-                }
                 group.Expanded = true;
-                UpdateGroup(group);
             }
+            else
+                group.Expanded = !group.Expanded;
+
             lastGroup = group;
-            this.IsBusy = false;
+            await RefreshView();
+            await MainThread.InvokeOnMainThreadAsync(() => this.IsBusy = false);
         }
 
         private async Task Next()
@@ -299,11 +316,9 @@ namespace ARPEGOS.ViewModels
                 await MainThread.InvokeOnMainThreadAsync(()=> this.IsBusy = false);
             }
         }
-        private void UpdateGroup(Group g)
+        private async Task RefreshView()
         {
-            var index = Data.IndexOf(g);
-            Data.Remove(g);
-            Data.Insert(index, g);
+            await MainThread.InvokeOnMainThreadAsync(()=>RefreshCollection());
         }
     }
 }

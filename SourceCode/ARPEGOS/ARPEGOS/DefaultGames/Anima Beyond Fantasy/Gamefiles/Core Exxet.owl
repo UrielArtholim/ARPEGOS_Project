@@ -11589,6 +11589,7 @@ Per_Item_Total, numerical: true, User_Edit: false, Per_Item_Base:+: Per_Item_Tem
 
     <owl:Class rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arma_Similar">
         <rdfs:subClassOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Tabla_Armas"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El personaje domina el empleo de dos armas parecidas.</rdfs:comment>
         <ViewType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MultipleChoiceDynamicLimitView</ViewType>
     </owl:Class>
     
@@ -11617,6 +11618,7 @@ Las armaduras no protegen necesariamente todo el cuerpo de un personaje. Sin con
 
     <owl:Class rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Armas_Arquetípo">
         <rdfs:subClassOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Tabla_Armas"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El personaje domina el uso de dos armas con algunas similitudes.</rdfs:comment>
         <ViewType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MultipleChoiceDynamicLimitView</ViewType>
     </owl:Class>
     
@@ -11626,6 +11628,8 @@ Las armaduras no protegen necesariamente todo el cuerpo de un personaje. Sin con
 
     <owl:Class rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Armas_Tipología">
         <rdfs:subClassOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Tabla_Armas"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El personaje ha conseguido dominar el estilo de uso de una determinada clase
+de armas, pudiendo utilizar indistintamente cualquiera de ellas.</rdfs:comment>
         <ViewType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MultipleChoiceDynamicLimitView</ViewType>
     </owl:Class>
     
@@ -12348,18 +12352,18 @@ No todos los seres vivos se ven sometidos a las habilidades de convocatoria. Est
     
 
 
-    <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Dureza -->
+    <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Dragón -->
 
-    <owl:Class rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Dureza">
-        <rdfs:subClassOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Propiedades_Armadura"/>
+    <owl:Class rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Dragón">
+        <rdfs:subClassOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Tabla_De_Técnicas_De_Dominio"/>
     </owl:Class>
     
 
 
-    <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#El_Dragón -->
+    <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Dureza -->
 
-    <owl:Class rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#El_Dragón">
-        <rdfs:subClassOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Tabla_De_Técnicas_De_Dominio"/>
+    <owl:Class rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Dureza">
+        <rdfs:subClassOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Propiedades_Armadura"/>
     </owl:Class>
     
 
@@ -13573,14 +13577,6 @@ De cualquier modo, si los jugadores lo desean, hay diferentes razas que se puede
     
 
 
-    <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Tabla_Armas_Generales -->
-
-    <owl:Class rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Tabla_Armas_Generales">
-        <rdfs:subClassOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Tabla_Armas"/>
-    </owl:Class>
-    
-
-
     <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Tabla_De_Técnicas_De_Dominio -->
 
     <owl:Class rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Tabla_De_Técnicas_De_Dominio">
@@ -13616,6 +13612,15 @@ De cualquier modo, si los jugadores lo desean, hay diferentes razas que se puede
     <owl:Class rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Tabla_Psíquica">
         <rdfs:subClassOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Propiedades_Habilidad_Psíquica"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Esta tabla están incluida como una habilidad primaria psíquica, por lo que los PD que los personajes inviertan en ellas cuentan dentro de dicho límite de puntos.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Tablas_Armas_Generales -->
+
+    <owl:Class rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Tablas_Armas_Generales">
+        <rdfs:subClassOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Tabla_Armas"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aquí se agrupan las armas agrupadas según las características que comparten.</rdfs:comment>
     </owl:Class>
     
 
@@ -14102,6 +14107,7 @@ Descripción: Es una aleación excepcionalmente rara. Se llama así por su color
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Acrobacias">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidades_Atléticas"/>
         <Hab_CarPrincipal rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Agilidad"/>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tieneCategoría:Cat_Item_Coste</Hab_Disponible_PD_Coste>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mide la capacidad acrobática. Las Acrobacias no sólo permiten realizar volteretas y cabriolas circenses, sino muchas otras maniobras físicas que requieran equilibrio y movilidad, como andar por la cuerda floja. También puede emplearse para caer desde grandes alturas sin sufrir daños: un personaje que se esté cayendo tiene la oportunidad de realizar una tirada de Acrobacias para colocarse en una posición favorable y evitar fracturas. Sufre el penalizador por armadura.</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -14520,6 +14526,7 @@ Mantenimiento: 20 / 40 / 50 / 60</rdfs:comment>
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Advertir">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidades_Perceptivas"/>
         <Hab_CarPrincipal rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Percepción"/>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tieneCategoría:Cat_Item_Coste</Hab_Disponible_PD_Coste>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Refleja la habilidad perceptiva que permite ser consciente de lo que sucede alrededor. Un personaje puede advertir cualquier cosa extraña que pase o se encuentre en su entorno, desde un grabado inusual en la pared a un asesino que se acerque sigilosamente por su espalda. Las personas advierten utilizando sus cinco sentidos, aunque lo más común es que empleen principalmente la vista y el oído. Si un sujeto está privado de uno de ellos reduce su habilidad a la mitad, salvo si las circunstancias requieren que se utilicen solo determinados sentidos. En esta misma página podéis ver los modificadores de Advertir, separada en los cinco sentidos del personaje. Además de estos, un individuo distraído sufre un penalizador adicional comprendido entre -20 y -40 a sus controles, según crea apropiado el Director de Juego.</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -15143,6 +15150,7 @@ Vías Cerradas: Agua</rdfs:comment>
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Animales">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidades_Intelectuales"/>
         <Hab_CarPrincipal rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Inteligencia"/>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tieneCategoría:Cat_Item_Coste</Hab_Disponible_PD_Coste>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Recoge el conocimiento sobre todo lo relacionado con el mundo animal. Mediante esta habilidad no sólo se pueden reconocer sus características y costumbres, sino también ser un experto en su crianza y adiestramiento. Es posible especializarse en una especie en concreto, en cuyo caso el personaje obtendrá un bonificador de +40 a los controles de la habilidad.</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -16589,6 +16597,7 @@ Mantenimiento: 15 / 30 / 50 / 100 Diario</rdfs:comment>
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arte">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidades_Creativas"/>
         <Hab_CarPrincipal rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Poder"/>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tieneCategoría:Cat_Item_Coste</Hab_Disponible_PD_Coste>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mide la pericia de un individuo en los campos artísticos, como la pintura o la escultura. Un personaje puede especializarse en una única habilidad artística,  en cuyo caso aplicará un bonificador de +40 al realizar dichos controles.</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -17100,6 +17109,7 @@ Mantenimiento: No</rdfs:comment>
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Atletismo">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidades_Atléticas"/>
         <Hab_CarPrincipal rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Agilidad"/>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tieneCategoría:Cat_Item_Coste</Hab_Disponible_PD_Coste>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Es la capacidad del personaje de forzar sus habilidades atléticas, manteniendo el ritmo en una carrera, saltando obstáculos o incluso remando. Con ella podrá correr por encima de sus límites y distribuir mejor sus energías para aguantar más sin agotarse. Para saber cada cuanto tiempo un personaje pierde un punto de Cansancio corriendo o desplazándose a su movimiento máximo es necesario realizar un control de Atletismo.
 
 En el caso de que el personaje trate de correr por encima de su Tipo de Movimiento durante un asalto, también puede realizar un control de Atletismo. No obstante, desplazarse por encima de su velocidad natural es terriblemente estresante para el cuerpo, por lo que pierde automáticamente un punto de Cansancio por cada asalto que siga manteniendo esa velocidad incrementada. Estos modificadores no permiten aumentar el Tipo de Movimiento del personaje por encima de 10 si no posee inhumanidad o Zen. Sufre el penalizador por armadura.</rdfs:comment>
@@ -17651,6 +17661,7 @@ Mantenimiento: 10 / 15 / 25 / 35</rdfs:comment>
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Baile">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidades_Creativas"/>
         <Hab_CarPrincipal rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Agilidad"/>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tieneCategoría:Cat_Item_Coste</Hab_Disponible_PD_Coste>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Es la facultad de bailar y de aprender nuevas danzas. Cuanto más elevada sea la habilidad, el personaje podrá dominar un mayor número de bailes y estilos distintos. Es sin duda una buena manera de ganarse la vida: un gran bailarín siempre podrá conseguir unas monedas si sabe sacar provecho de su capacidad. Un personaje puede especializarse únicamente en un tipo concreto de danza, como por ejemplo baile de salón, en cuyo caso aplicará un bonificador de +40 a sus controles. Sufre el penalizador por armadura.</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -18644,6 +18655,7 @@ Mantenimiento: 5 / 5 / 10 / 10</rdfs:comment>
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Buscar">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidades_Perceptivas"/>
         <Hab_CarPrincipal rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Percepción"/>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tieneCategoría:Cat_Item_Coste</Hab_Disponible_PD_Coste>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Es la capacidad visual e intuitiva del personaje para buscar algo concreto empleando sus sentidos, ya sea una entrada secreta o a alguien oculto. Es una habilidad mucho más precisa que advertir, puesto que es una acción consciente. Para buscar algo hace falta declararlo previamente, aunque lo que se encuentre al final puede que no sea exactamente lo que se pretendía hallar (un personaje podría tratar de buscar una puerta secreta en una habitación, y en el proceso encontrar algún objeto oculto). También sirve para buscar cosas concretas, como un libro en una biblioteca. Si un individuo trata de buscar una trampa, requiere un nivel de dificultad menos del que indique el artilugio. Esta habilidad utiliza también los mismos modificadores que Advertir.</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -21050,6 +21062,7 @@ Descripción: El psíquico disminuye la temperatura a su alrededor hasta el cero
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Cerrajería">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidades_Subterfugio"/>
         <Hab_CarPrincipal rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Destreza"/>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tieneCategoría:Cat_Item_Coste</Hab_Disponible_PD_Coste>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Se emplea para abrir o cerrar todo tipo de cerraduras o mecanismos similares de los que no se tenga la llave. En el caso de que se trate de un cerrojo o candado tradicional, será necesario utilizar una ganzúa o el personaje aplicará un penalizador de –40 a su habilidad.</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -21276,6 +21289,7 @@ Beneficio: 2</rdfs:comment>
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Ciencia">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidades_Intelectuales"/>
         <Hab_CarPrincipal rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Inteligencia"/>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tieneCategoría:Cat_Item_Coste</Hab_Disponible_PD_Coste>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Con la única excepción de la Medicina, la ciencia es la reunión de todos los conocimientos intelectuales que constituyen disciplinas de estudios. Algunos ejemplos de las nociones ligadas a esta habilidad son las matemáticas, la mecánica, la astronomía o la filosofía. Naturalmente, las aptitudes que desarrolle un personaje en estos campos no serán tan avanzadas como las ideas científicas actuales, puesto que su formación no constituye una disciplina unificada como lo es hoy en día. Es posible especializarse en una ciencia en concreto, en cuyo caso se obtendrá un bonificador de +40 a los controles de la habilidad.</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -27935,6 +27949,7 @@ Mantenimiento: No</rdfs:comment>
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Disfraz">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidades_Subterfugio"/>
         <Hab_CarPrincipal rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Destreza"/>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tieneCategoría:Cat_Item_Coste</Hab_Disponible_PD_Coste>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mide la pericia para caracterizarse tomando una apariencia distinta a la propia, vistiéndose y maquillándose debidamente. También evalúa la capacidad de interpretar el papel que trata de imitar, como la forma de moverse y su manera de hablar. Disfraz se enfrenta directamente a las habilidades de advertir y buscar de los otros personajes. Para que alguien que no conoce al individuo disfrazado se percate de que hay algo raro en su aspecto, debe de superar por 80 puntos el control de habilidades enfrentadas si utiliza Advertir, o por 20 si emplea Buscar. En el caso de que sí le hubiese visto antes, ambas se reducen a la mitad. Para emplear correctamente esta habilidad, un personaje necesita tiempo y material para disfrazarse.</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -28362,6 +28377,14 @@ Vías Cerradas: Ninguna</rdfs:comment>
     
 
 
+    <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Dragón -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Dragón">
+        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Tabla_De_Técnicas_De_Dominio"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Drenar_Almas -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Drenar_Almas">
@@ -28544,7 +28567,7 @@ Bono: +20 a la habilidad de ataque sin armas.</rdfs:comment>
     <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#El_Aliento_Del_Dragón -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#El_Aliento_Del_Dragón">
-        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#El_Dragón"/>
+        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Dragón"/>
         <Hab_RequisitoClave_1 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Control_Del_Ki"/>
         <Hab_RequisitoClave_2 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Acumulación_Ki_AGI"/>
         <Hab_RequisitoClave_3 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Acumulación_Ki_CON"/>
@@ -28576,7 +28599,7 @@ Desventaja: Predeterminación</rdfs:comment>
     <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#El_Colmillo -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#El_Colmillo">
-        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#El_Dragón"/>
+        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Dragón"/>
         <Hab_RequisitoClave_1 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Control_Del_Ki"/>
         <Hab_RequisitoClave_2 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Acumulación_Ki_AGI"/>
         <Hab_RequisitoClave_3 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Acumulación_Ki_CON"/>
@@ -28753,14 +28776,6 @@ Avanzado: +400 de bono.
 Arcano: +600 de bono.
 Mantenimiento: 30 / 45 / 60 / 75 Diario
 Vías Cerradas: Destrucción</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#El_Dragón -->
-
-    <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#El_Dragón">
-        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Tabla_De_Técnicas_De_Dominio"/>
     </owl:NamedIndividual>
     
 
@@ -31238,6 +31253,7 @@ Mantenimiento: 15 / 20 / 25 / 30</rdfs:comment>
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Estilo">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidades_Sociales"/>
         <Hab_CarPrincipal rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Poder"/>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tieneCategoría:Cat_Item_Coste</Hab_Disponible_PD_Coste>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Estilo es la capacidad de quedar “estéticamente” bien ante cualquier situación, ya sea en una fiesta o en mitad de una pelea. Alguien con Estilo sabrá que, por mucho que se tuerzan las cosas, al menos va a quedar con clase. Incluso si recibe un duro golpe en la cara, un personaje puede tirar Estilo para que el pelo se le mueva de manera dramáticamente apropiada y el hilillo de sangre que le sale de la comisura de los labios quede resultón. Permite también que las cicatrices sean atrayentes en lugar de horribles o, incluso a niveles muy elevados, que los truenos de una tormenta suenen acorde a sus movimientos más teatrales. Vamos, pura cinematografía.</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -32142,6 +32158,7 @@ Mantenimiento: 5 / 10 / 15 / 15</rdfs:comment>
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Frialdad">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidades_Vigor"/>
         <Hab_CarPrincipal rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Voluntad"/>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tieneCategoría:Cat_Item_Coste</Hab_Disponible_PD_Coste>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Es la capacidad de permanecer impávido ante las situaciones más críticas. Con esta habilidad, un individuo puede mantener la calma y la cabeza fría incluso cuando afronta la muerte. Si un personaje es blanco de un efecto sobrenatural que afecte a su ánimo o emociones, podrá añadir el bono a la Resistencia que corresponda.</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -33083,6 +33100,7 @@ Bono: +20 al turno cuando se utilicen artes marciales, y +10 a la habilidad de a
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Herbolaria">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidades_Intelectuales"/>
         <Hab_CarPrincipal rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Inteligencia"/>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tieneCategoría:Cat_Item_Coste</Hab_Disponible_PD_Coste>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Recoge todo el campo del conocimiento del mundo vegetal, sus posibles usos, naturaleza y dónde pueden encontrarse. Esta habilidad permite, por ejemplo, reconocer qué plantas son comestibles y cuáles son antídotos o remedios. A niveles avanzados, un buen herbolario puede también realizar compuestos de todo tipo.</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -33158,6 +33176,7 @@ Descripción: El hierro es el material por excelencia para construir armas y arm
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Historia">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidades_Intelectuales"/>
         <Hab_CarPrincipal rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Inteligencia"/>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tieneCategoría:Cat_Item_Coste</Hab_Disponible_PD_Coste>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Otorga erudición tanto de la historia actual como de la pasada. El personaje puede reconocer insignias, tener nociones políticas sobre la situación de un territorio o conocer las leyendas de una zona. Es posible especializarse en un tema concreto, como individuos de renombre, fábulas o economía, lo que otorgará un bonificador de +40 a los controles de la habilidad.</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -35364,6 +35383,7 @@ Descripción:Intensifica el sentimiento o estado de ánimo principal del individ
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Intimidar">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidades_Sociales"/>
         <Hab_CarPrincipal rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Voluntad"/>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tieneCategoría:Cat_Item_Coste</Hab_Disponible_PD_Coste>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intimidar es la capacidad de asustar a alguien con la actitud, las palabras o la simple presencia. Un individuo no tiene por qué parecer amenazador para utilizar esta habilidad, basta con saber cómo debe comportarse para atemorizar a cualquiera. Sus efectos son completamente interpretativos.</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -35931,7 +35951,7 @@ Mantenimiento: 40 / 45 / 45 / 50 Diario</rdfs:comment>
     <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#La_Cola -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#La_Cola">
-        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#El_Dragón"/>
+        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Dragón"/>
         <Hab_RequisitoClave_1 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Control_Del_Ki"/>
         <Hab_RequisitoClave_2 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Acumulación_Ki_AGI"/>
         <Hab_RequisitoClave_3 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Acumulación_Ki_CON"/>
@@ -36064,7 +36084,7 @@ La orden fue creada por Zhorne Giovanni, quien otorgó ese título a los caballe
     <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Las_Escamas -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Las_Escamas">
-        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#El_Dragón"/>
+        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Dragón"/>
         <Hab_RequisitoClave_1 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Control_Del_Ki"/>
         <Hab_RequisitoClave_2 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Acumulación_Ki_AGI"/>
         <Hab_RequisitoClave_3 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Acumulación_Ki_CON"/>
@@ -36089,7 +36109,7 @@ Efectos: +6 defensas adicionales.</rdfs:comment>
     <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Las_Garras -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Las_Garras">
-        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#El_Dragón"/>
+        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Dragón"/>
         <Hab_RequisitoClave_1 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Control_Del_Ki"/>
         <Hab_RequisitoClave_2 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Acumulación_Ki_AGI"/>
         <Hab_RequisitoClave_3 rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Acumulación_Ki_CON"/>
@@ -36678,6 +36698,7 @@ Vías Cerradas: Tierra</rdfs:comment>
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Liderazgo">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidades_Sociales"/>
         <Hab_CarPrincipal rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Poder"/>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tieneCategoría:Cat_Item_Coste</Hab_Disponible_PD_Coste>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Refleja el carisma y la capacidad de ganarse la confianza de las personas a su cargo, incluso en condiciones difíciles. Es la aptitud que todo monarca, general o cabecilla tiene para mandar y conseguir que los demás le sigan. Un líder carismático puede levantar la moral a sus tropas en la peor de las situaciones o mandarlas a la muerte sin escuchar una sola queja. Sus efectos son completamente interpretativos.</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -37859,6 +37880,7 @@ Mantenimiento: No</rdfs:comment>
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Medicina">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidades_Intelectuales"/>
         <Hab_CarPrincipal rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Inteligencia"/>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tieneCategoría:Cat_Item_Coste</Hab_Disponible_PD_Coste>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La Medicina proporciona conocimientos sobre la anatomía humana, las heridas, la prescripción de enfermedades y su tratamiento. Un personaje puede diagnosticar una enfermedad y determinar su cura, si supera un control de Medicina contra una dificultad del triple del nivel de dicha dolencia. Por ejemplo, una enfermedad de nivel 30 requeriría superar una dificultad de 90. Si es diagnosticada con éxito y su tratamiento seguido correctamente, el enfermo tendrá derecho a una nueva Resistencia (RE), aplicando un bonificador equivalente a la cantidad por la que el médico superó la dificultad requerida.
 
 Esta habilidad también puede emplearse para curar diversas heridas de naturaleza física, como tajos o golpes. Para utilizarla correctamente, es necesario contar con el instrumental apropiado, como gasas o vendas, ya que si no el médico aplicará un penalizador de –40 a su control. Medicina únicamente se puede lanzar una vez por herida o conjunto de heridas, y sólo durante las escasas horas posteriores a haberlas sufrido. La cantidad de puntos de vida recuperados depende del daño recibido. Naturalmente, un médico puede tratarse a sí mismo, pero aplicará un penalizador de –20 a su habilidad.
@@ -37959,6 +37981,7 @@ Bono: +10 a la habilidad de ataque sin armas.</rdfs:comment>
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Memorizar">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidades_Intelectuales"/>
         <Hab_CarPrincipal rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Inteligencia"/>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tieneCategoría:Cat_Item_Coste</Hab_Disponible_PD_Coste>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mide la capacidad mnemotécnica del personaje. Permite recordar cosas y los detalles más pequeños con completa exactitud, ya sean libros, canciones, o las facciones de un individuo.</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -38583,6 +38606,7 @@ Descripción: Este poder permite transformar varias intensidades de energía de 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Montar">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidades_Atléticas"/>
         <Hab_CarPrincipal rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Agilidad"/>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tieneCategoría:Cat_Item_Coste</Hab_Disponible_PD_Coste>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Se utiliza para medir la habilidad de equitación. Normalmente, cualquiera podrá montar sobre un caballo que se mueve dócilmente, pero la cosa se complica si está trotando o se encabrita por alguna razón. Esta habilidad permite al personaje doblegar la voluntad de su montura en estas situaciones problemáticas, obligándola a saltar por encima de obstáculos o continuar la marcha a pesar de que se encuentre agotada. También otorga la capacidad de realizar acciones acrobáticas desde la grupa, como cubrirse o recoger cosas en el suelo sin perder la marcha. Aunque tradicionalmente se emplea con caballos, esta pericia permite montar otros animales (como camellos o elefantes) cuya naturaleza les permita ser usados con dicha finalidad.</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -39118,6 +39142,7 @@ Mantenimiento: 5 / 10 / 10 / 15</rdfs:comment>
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Música">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidades_Creativas"/>
         <Hab_CarPrincipal rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Poder"/>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tieneCategoría:Cat_Item_Coste</Hab_Disponible_PD_Coste>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Recoge la habilidad de tocar correctamente instrumentos musicales y la capacidad de componer y leer partituras. Es posible especializarse en un único instrumento y obtener un +40 al realizar sus controles.</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -39145,6 +39170,7 @@ Mantenimiento: 5 / 10 / 10 / 15</rdfs:comment>
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Nadar">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidades_Atléticas"/>
         <Hab_CarPrincipal rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Agilidad"/>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tieneCategoría:Cat_Item_Coste</Hab_Disponible_PD_Coste>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Representa cómo se las apaña un personaje en el agua y, a niveles superiores, lo rápido que es capaz de desplazarse nadando y buceando. Sufre el penalizador por armadura, pero al contrario de lo que ocurre en las otras habilidades, el negativo no puede reducirse mediante Llevar Armadura. Si el agua está revuelta, el Director de Juego puede aplicar un penalizador adicional entre -1 y -4 al Tipo de Movimiento. Si en cualquier caso la velocidad del personaje llega a cero o menos, se considera que no es capaz de permanecer a flote y se hunde irremisiblemente.</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -39171,6 +39197,7 @@ Mantenimiento: 5 / 10 / 10 / 15</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Navegación">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidades_Intelectuales"/>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tieneCategoría:Cat_Item_Coste</Hab_Disponible_PD_Coste>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Se utiliza para navegar en cualquier tipo de embarcación y leer mapas marítimos. No mide únicamente el manejo del timón, sino también cómo aprovechar las mejores corrientes para ganar velocidad y evitar accidentes.</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -40265,6 +40292,7 @@ Descripción: Esconde las habilidades mentales del psíquico contra el poder de 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Ocultarse">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidades_Subterfugio"/>
         <Hab_CarPrincipal rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Percepción"/>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tieneCategoría:Cat_Item_Coste</Hab_Disponible_PD_Coste>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Es la capacidad de esconderse y pasar desapercibido. Esta habilidad permite a un personaje encontrar el lugar más apropiado en un entorno para ocultarse y no ser descubierto por los demás. También se utiliza para esconder objetos que se lleven encima. Si se usa para ocultar cosas o personas en un lugar, el Director de Juego podrá aplicar el penalizador o bonificador que considere apropiado, dependiendo del entorno y su tamaño. Ocultarse se enfrenta a la habilidad de advertir y buscar de los demás. Si alguien permanece quieto en su escondite, para detectarlo se requiere superar por más de 80 puntos un control enfrentado empleando advertir, o por 20 si usa buscar. Existen varios modificadores que pueden alterar la habilidad de ocultarse del personaje. Sufre el penalizador por armadura.</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -40395,6 +40423,7 @@ Mantenimiento: 10 / 15 / 15 / 20 Diario</rdfs:comment>
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Ocultismo">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidades_Intelectuales"/>
         <Hab_CarPrincipal rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Inteligencia"/>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tieneCategoría:Cat_Item_Coste</Hab_Disponible_PD_Coste>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El conocimiento de los campos sobrenaturales desde el punto de vista mitológico. Esta es la habilidad que permite reconocer el significado de dagas rituales o los métodos tradicionales de acabar con un licántropo. A consideración del Director de Juego, es posible utilizarla para reconocer criaturas de carácter sobrenatural.</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -41597,6 +41626,7 @@ Mantenimiento: 5 / 10 / 15 / 15</rdfs:comment>
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Persuasión">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidades_Sociales"/>
         <Hab_CarPrincipal rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Inteligencia"/>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tieneCategoría:Cat_Item_Coste</Hab_Disponible_PD_Coste>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Esta habilidad permite influir y convencer a otros individuos, aunque el Director de Juego no debería sustituir la interpretación por ella. Incluso sin haberla desarrollado, un buen jugador puede ser tan persuasivo como intérprete si sus argumentos son lo suficientemente sólidos. De este modo, si el personaje realiza un buen control de persuasión, un Director de Juego razonable podría darle pistas de qué palabras parecen convencer más a las personas con las que habla o lo sugestionadas que parecen estar.</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -42536,6 +42566,7 @@ Mantenimiento: No</rdfs:comment>
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Proezas_De_Fuerza">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidades_Vigor"/>
         <Hab_CarPrincipal rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Fuerza"/>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tieneCategoría:Cat_Item_Coste</Hab_Disponible_PD_Coste>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Permite sacar el mayor rendimiento posible a la fuerza física de un personaje, dándole conocimientos exactos de cómo flexionar los músculos para realizar mayor presión y las mejores técnicas de alzamiento de pesos. No significa que sea más fuerte, sino que sabrá obtener mejor partido a su potencia física en momentos extremos. Si el personaje lo desea, puede tratar de incrementar su fuerza e índice de peso máximo durante unos instantes, doblando barrotes de metal, levantando carros o cualquier otra cosa increíble. Para calcular como usar apropiadamente esta con respecto al Índice de Peso, cuyos efectos duran entre dos y cinco asaltos. Si un personaje hace uso de sus proezas de fuerza más de una vez por minuto, pierde automáticamente un punto de cansancio por intento adicional. Naturalmente, queda a discreción del DJ decidir si permite a un personaje repetir un control fallido de esta habilidad. Estos modificadores no permiten aumentar la Fuerza de un personaje por encima de 10 si no posee inhumanidad o Zen. Sufre el penalizador por armadura.</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -42985,6 +43016,7 @@ Mantenimiento: 10 / 10 / 15 / 20</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Rastrear">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidades_Perceptivas"/>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tieneCategoría:Cat_Item_Coste</Hab_Disponible_PD_Coste>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Permite seguir rastros y deducir información de ellos, como el número de personas que compone un grupo o cuánto tiempo hace desde que pasaron. También se incluye dentro de esta habilidad la orientación del personaje, es decir, evitar perderse siguiendo un camino y reconocer las señales de un entorno para saber donde se encuentra.</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -44232,6 +44264,7 @@ Vías Cerradas: Destrucción</rdfs:comment>
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Resistir_El_Dolor">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidades_Vigor"/>
         <Hab_CarPrincipal rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Voluntad"/>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tieneCategoría:Cat_Item_Coste</Hab_Disponible_PD_Coste>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Permite soportar el dolor físico y psicológico. Su fuerza de voluntad le otorga la capacidad de abstraer la mente para ignorarlo, incluso si su cuerpo se encuentra ya al límite. A niveles bajos, un personaje puede emplear esta habilidad para recibir daños sin quejarse, mientras que en dificultades más elevadas, podrá tolerar terribles torturas sin amedrentarse.</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -44486,6 +44519,7 @@ Vías Cerradas: Ninguna</rdfs:comment>
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Robo">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidades_Subterfugio"/>
         <Hab_CarPrincipal rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Destreza"/>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tieneCategoría:Cat_Item_Coste</Hab_Disponible_PD_Coste>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Se utiliza para realizar robos de objetos pequeños sin que la persona desvalijada se dé cuenta. Se enfrenta directamente al Advertir del individuo al que se le sustrae la cosa, por lo que si la habilidad del ladrón es superior, el afectado no se percatará de su pérdida. Si lo que se trata de robar está directamente en contacto con la piel o en una posición muy difícil, como un anillo o un pendiente, el Director de Juego podrá aplicar el bonificador o penalizador que considere oportuno. Para darse cuenta de que otra persona está siendo robada en presencia de un personaje, debe aplicarse un negativo de –40 a la habilidad de advertir.</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -44838,6 +44872,7 @@ Mantenimiento: 10 / 10 / 15 / 15 Diario</rdfs:comment>
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Saltar">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidades_Atléticas"/>
         <Hab_CarPrincipal rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Fuerza"/>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tieneCategoría:Cat_Item_Coste</Hab_Disponible_PD_Coste>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Permite a los personajes incrementar su capacidad de saltar vertical y horizontalmente. Cuanto mayor sea la dificultad alcanzada, más aumentará su Tipo de movimiento únicamente a la hora de determinar la distancia a la que puede saltar. Estos modificadores no permiten aumentar el Tipo de Movimiento del personaje por encima de 10 si no posee inhumanidad o Zen. Sufre el penalizador por armadura.</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -45740,6 +45775,7 @@ Bono: +10 a la habilidad de ataque sin armas.</rdfs:comment>
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Sigilo">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidades_Subterfugio"/>
         <Hab_CarPrincipal rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Agilidad"/>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tieneCategoría:Cat_Item_Coste</Hab_Disponible_PD_Coste>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Permite realizar acciones sin ser percibido por los demás, como desplazarse, trepar o incluso desenfundar un arma en completo silencio. El Sigilo se enfrenta directamente a la capacidad de Advertir de otros individuos. Si la habilidad de sigilo del personaje es superior a la de Advertir de alguien que no sabe que se encuentra cerca, este sorprenderá a su adversario. Cuando un personaje se mueve en silencio debe restar cuatro puntos a su Tipo de movimiento, o aplicará un penalizador de –80 a su habilidad. También puede usarse para evitar dejar rastros, en cuyo caso se enfrentaría directamente a la pericia de Rastreo de sus perseguidores sin aplicar ningun modificador. Sufre el penalizador por armadura, pero al contrario de lo que ocurre en otras habilidades, el negativo sólo puede reducirse hasta la mitad de su valor mediante la capacidad de Llevar Armadura.</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -46809,7 +46845,7 @@ Limitación: Esta ventaja puede comprarse tantas veces como se desee. Coste: 2</
     <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Tabla_Arma_Distinta_Y_Desarmado -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Tabla_Arma_Distinta_Y_Desarmado">
-        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Tabla_Armas_Generales"/>
+        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Tablas_Armas_Generales"/>
         <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</Hab_Disponible_PD_Coste>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El personaje domina el uso de dos armas distintas.
 
@@ -46823,7 +46859,7 @@ Coste: 20 PD</rdfs:comment>
     <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Tabla_Arma_Mixta -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Tabla_Arma_Mixta">
-        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Tabla_Armas_Generales"/>
+        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Tablas_Armas_Generales"/>
         <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</Hab_Disponible_PD_Coste>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El personaje domina el uso de dos armas con algunas similitudes.
 
@@ -46837,7 +46873,7 @@ Coste: 15 PD</rdfs:comment>
     <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Tabla_Arma_Similar -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Tabla_Arma_Similar">
-        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Tabla_Armas_Generales"/>
+        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Tablas_Armas_Generales"/>
         <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</Hab_Disponible_PD_Coste>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El personaje domina el empleo de dos armas parecidas.
 
@@ -46851,7 +46887,7 @@ Coste: 10 PD</rdfs:comment>
     <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Tabla_Armas_Arquetípicas -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Tabla_Armas_Arquetípicas">
-        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Tabla_Armas_Generales"/>
+        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Tablas_Armas_Generales"/>
         <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</Hab_Disponible_PD_Coste>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Estas tablas recogen una serie de armas, que utilizan ciertas profesiones tradicionales con gran maestría. Si lo deseas, puedes componer las tuyas propias, siempre que consideres que el grupo elegido guarda la suficiente relación con una profesión o figura arquetípica.</rdfs:comment>
         <ViewType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Estas tablas recogen una serie de armas, que utilizan ciertas profesiones tradicionales con gran maestría. Si lo deseas, puedes componer las tuyas propias, siempre que consideres que el grupo elegido guarda la suficiente relación con una profesión o figura arquetípica.</ViewType>
@@ -46863,7 +46899,7 @@ Coste: 10 PD</rdfs:comment>
     <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Tabla_Armas_Tipología -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Tabla_Armas_Tipología">
-        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Tabla_Armas_Generales"/>
+        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Tablas_Armas_Generales"/>
         <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</Hab_Disponible_PD_Coste>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El personaje ha conseguido dominar el estilo de uso de una determinada clase de armas, pudiendo utilizar indistintamente cualquiera de ellas.
 
@@ -46933,7 +46969,7 @@ Coste: 50 PD</rdfs:comment>
     <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Tabla_Improvisadas -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Tabla_Improvisadas">
-        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Tabla_Armas_Generales"/>
+        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Tablas_Armas_Generales"/>
         <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</Hab_Disponible_PD_Coste>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El luchador es muy hábil usando las cosas que hay a su alrededor en combate.
 
@@ -46947,7 +46983,7 @@ Coste: 50 PD</rdfs:comment>
     <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Tabla_Lanzamiento -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Tabla_Lanzamiento">
-        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Tabla_Armas_Generales"/>
+        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Tablas_Armas_Generales"/>
         <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</Hab_Disponible_PD_Coste>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El personaje es capaz de utilizar su puntería lanzando cualquier tipo de arma u objeto.
 
@@ -47002,7 +47038,7 @@ Coste: 100 PD</rdfs:comment>
     <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Tabla_Proyectiles -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Tabla_Proyectiles">
-        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Tabla_Armas_Generales"/>
+        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Tablas_Armas_Generales"/>
         <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</Hab_Disponible_PD_Coste>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El personaje es capaz de utilizar su puntería con todas las armas de disparo.
 
@@ -47164,6 +47200,7 @@ Mantenimiento: No</rdfs:comment>
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Tasación">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidades_Intelectuales"/>
         <Hab_CarPrincipal rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Inteligencia"/>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tieneCategoría:Cat_Item_Coste</Hab_Disponible_PD_Coste>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Analiza el valor de los objetos y permite calcular su precio aproximado en dinero. Incluso sin entender de arte o de antigüedades, un personaje con esta habilidad siempre podrá intentar averiguar qué objeto es el de valor más elevado y por cuánto se podría vender en el mercado.</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -48246,6 +48283,7 @@ Mantenimiento: 10 / 10 / 15 / 15</rdfs:comment>
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Trampería">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidades_Subterfugio"/>
         <Hab_CarPrincipal rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Destreza"/>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tieneCategoría:Cat_Item_Coste</Hab_Disponible_PD_Coste>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Esta habilidad se utiliza para montar y desactivar trampas. Los efectos y el funcionamiento de la trampa serán descritos por el personaje que la instale, empleando la Tabla 18 de Trampería para designar su nivel de complejidad Desactivar una trampa localizada requiere superar un nivel de dificultad menos que el necesario para montarla, salvo si el Director de Juego establece lo contrario. Si al intentar desarmarla se fracasa por una diferencia superior a 40, la activa por error. Para montar correctamente una trampa se necesita tiempo y material.</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -48568,6 +48606,7 @@ Descripción: Permite al psíquico proyectar uno de sus sentidos hasta una dista
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Trepar">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidades_Atléticas"/>
         <Hab_CarPrincipal rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Agilidad"/>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tieneCategoría:Cat_Item_Coste</Hab_Disponible_PD_Coste>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Se utiliza para subir o bajar por cualquier tipo de superficie vertical, como muros o árboles. Si se usa con un equipo de escalada apropiado, el personaje podrá aplicar un bonificador de +40 a su habilidad. Normalmente, el índice de velocidad de un sujeto escalando es de una cuarta parte de su Tipo de movimiento redondeado hacia abajo, pero puede aumentarse en un punto por cada nivel que consiga por encima de la dificultad requerida. Sufre el penalizador por armadura.</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -48629,6 +48668,7 @@ Descripción: Permite al psíquico proyectar uno de sus sentidos hasta una dista
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Trucos_De_Manos">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidades_Creativas"/>
         <Hab_CarPrincipal rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Destreza"/>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tieneCategoría:Cat_Item_Coste</Hab_Disponible_PD_Coste>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Permite explotar la destreza manual para realizar juegos malabares y prestidigitación. Se utiliza para hacer trucos y trampas, como sacar una carta de la manga en mitad de una partida, o jugar con los objetos en el aire y atraparlos antes de que caigan al suelo. Es posible especializarse en uno de ellos, aplicando un bonificar de +40 a sus controles en dicho campo.</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -48961,6 +49001,7 @@ Conocimiento marcial: 40</rdfs:comment>
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Uso_Forja">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidades_Creativas"/>
         <Hab_CarPrincipal rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Destreza"/>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tieneCategoría:Cat_Item_Coste</Hab_Disponible_PD_Coste>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Refleja la habilidad de un personaje en la forja de los metales y en la elaboración de utensilios con otros materiales, como la madera o el cuero. Se pueden fraguar objetos simples como herraduras, al igual que elaborar armas y armaduras de todo tipo. Por supuesto, también es posible reparar objetos dañados o mantener el equipo en perfectas condiciones. Para desarrollar plenamente esta pericia deben usarse las siguientes reglas: 
 
 En primer lugar, hay que determinar el objeto que se desea crear. Cada uno tiene una dificultad distinta para ser forjado. Si el personaje consigue superarla, habrá logrado fabricar el objeto con un nivel de calidad normal. Por cada dos grados de dificultad que el herrero consiga por encima de la base requerida, el objeto tiene un +5 adicional a su calidad, y por cada nivel por debajo, un –5. El bono máximo que puede recibir un objeto así es de +15. Los bonos superiores no se adquieren mediante forja, sino con medios de índole sobrenatural. Ten en cuenta que un arma +5 ya es de por sí una obra maestra, mientras que una +10 es única y legendaria.
@@ -48992,6 +49033,7 @@ La forja requiere también una gran inversión de tiempo, esfuerzo y recursos po
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Uso_Venenos">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidades_Subterfugio"/>
         <Hab_CarPrincipal rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Inteligencia"/>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tieneCategoría:Cat_Item_Coste</Hab_Disponible_PD_Coste>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Permite conocer, usar y preparar venenos o antídotos. Pueden reconocerse al verlos, probándolos o simplemente observando sus síntomas. Si se tienen los componentes adecuados, es posible mezclar antídotos y toxinas.</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -49276,6 +49318,7 @@ Mantenimiento: 25 / 40 / 45 / 55</rdfs:comment>
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Valoración_Mágica">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidades_Intelectuales"/>
         <Hab_CarPrincipal rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Poder"/>
+        <Hab_Disponible_PD_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tieneCategoría:Cat_Item_Coste</Hab_Disponible_PD_Coste>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Permite juzgar y valorar las fuerzas mágicas. Mediante esta habilidad, un personaje puede detectar a los seres mágicos, los objetos sobrenaturales y los conjuros. Sólo los individuos que posean el Don o la facultad de ver la magia son capaces de desarrollar esta habilidad.</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -54457,7 +54500,7 @@ Coste: 30 PD</rdfs:comment>
 Modificador: Como en la Piroquinesis, el entorno aumenta o disminuye
 el potencial psíquico al usar esta disciplina.</rdfs:comment>
     </rdf:Description>
-    <rdf:Description rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#El_Dragón">
+    <rdf:Description rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Dragón">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Los orígenes de este arte son anteriores al Imperio. Desarrollada originariamente por un sacerdote guerrero de Lannet, se dice que sus secretos le fueron enseñados por una de las grandes bestias. Todas sus técnicas resultan tan variadas como potentes, a imagen y semejanza de las habilidades de la criatura en la que se inspiran. Cada vez que su usuario ejecuta una de ellas, durante unos instantes su cuerpo se cubre con diversos tatuajes en alusión al poder del dragón.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Energía">

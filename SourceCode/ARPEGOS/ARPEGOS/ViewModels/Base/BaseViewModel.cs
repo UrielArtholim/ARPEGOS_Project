@@ -2,15 +2,18 @@
 namespace ARPEGOS.ViewModels.Base
 {
     using System.Collections.Generic;
+    using System.Collections.ObjectModel;
+    using System.Collections.Specialized;
     using System.ComponentModel;
     using System.Runtime.CompilerServices;
 
     using Xamarin.Essentials;
 
-    public class BaseViewModel : INotifyPropertyChanged
+    public class BaseViewModel : INotifyPropertyChanged, INotifyCollectionChanged
     {
         /// <inheritdoc />
         public event PropertyChangedEventHandler PropertyChanged;
+        public event NotifyCollectionChangedEventHandler CollectionChanged;
 
         private bool _isBusy;
 
@@ -40,6 +43,17 @@ namespace ARPEGOS.ViewModels.Base
         {
             MainThread.BeginInvokeOnMainThread(() => this.PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName)));
         }
+
+        protected virtual void OnCollectionChanged()
+        {
+            MainThread.BeginInvokeOnMainThread(() => this.CollectionChanged?.Invoke(this, new NotifyCollectionChangedEventArgs(NotifyCollectionChangedAction.Replace)));
+        }
+
+        protected void RefreshCollection()
+        {
+            this.OnCollectionChanged();
+        }
+
 
         protected bool SetProperty<T>(ref T storage, T value, [CallerMemberName] string propertyName = null)
         {

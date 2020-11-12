@@ -36,7 +36,7 @@
                           ItemsSource="{Binding Data}" 
                           HasUnevenRows="True" 
                           SelectionMode="None" 
-
+                          CachingStrategy="RecycleElement"
                           IsGroupingEnabled="True"
                           SeparatorVisibility="None"
                           GroupDisplayBinding="{Binding FormattedTitle}">
@@ -89,15 +89,14 @@
                                                    Text="{Binding FormattedName}"/>
                                         <StackLayout Orientation="Vertical" Grid.Row="0" Grid.Column="1" VerticalOptions="Center" HorizontalOptions="Center">
                                             <Label x:Name="ValueLabel"
-                                                   FontSize="Medium"                                               
-                                                   VerticalOptions="Center"
-                                                   HorizontalTextAlignment="Center"
-                                                   Text="{Binding Source={x:Reference ValueEntry}, Path=Value, StringFormat='{0:F0}'}"/>
+                                               FontSize="Medium"                                               
+                                               VerticalOptions="Center"
+                                               HorizontalTextAlignment="Center"
+                                               Text="{Binding Value, StringFormat='{0:F0}'}"/>
                                             <Stepper x:Name="ValueEntry"
                                                    BindingContext="{Binding .}"
                                                    VerticalOptions="Center"
                                                    HorizontalOptions="FillAndExpand"
-                                                   Maximum="{Binding Maximum}"
                                                    IsEnabled="{Binding IsEnabled}"
                                                    ValueChanged="OnValueChanged"/>
                                         </StackLayout>
@@ -109,7 +108,6 @@
                                                BackgroundColor="Transparent"
                                                Command="{Binding Source={x:Reference ValuedGroup}, Path=BindingContext.InfoCommand}"
                                                CommandParameter="{Binding .}"
-                                               IsEnabled="{Binding HasDescription}"
                                                IsVisible="{Binding HasDescription}"/>
 
                                     </Grid>
@@ -120,7 +118,7 @@
                 </ListView>
                 <Button Text="Siguiente" 
                         Command="{Binding NextCommand}" 
-                        IsVisible="{Binding Continue}"
+                        IsVisible="true"
                         BackgroundColor="{DynamicResource ButtonColor}"
                         AbsoluteLayout.LayoutFlags="PositionProportional"
                         AbsoluteLayout.LayoutBounds=".95,.95,80,80"

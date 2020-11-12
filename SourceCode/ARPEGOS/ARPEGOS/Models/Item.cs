@@ -82,7 +82,7 @@ namespace ARPEGOS
         #endregion
 
         #region Constructors
-        public Item(string elementString, string description = "This is a description", string Class = "No class available", double elementStep = 1, double elementMaximum = 1, double elementValue = 0)
+        public Item(string elementString, string description = "This is a description", string Class = "No class available", double elementStep = 1, double elementMaximum = 200, double elementValue = 0)
         {
             FullName = elementString;
             ShortName = elementString.Split('#').Last();

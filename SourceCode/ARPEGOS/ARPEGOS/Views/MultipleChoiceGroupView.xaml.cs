@@ -32,13 +32,14 @@ namespace ARPEGOS.Views
 
         async void OnCheckedChanged(object sender, CheckedChangedEventArgs e)
         {
-           await OperateCheck(sender, e);            
+           await Task.Run(async()=> await OperateCheck(sender, e));            
         }
 
         private async Task OperateCheck(object sender, CheckedChangedEventArgs e)
         {
             var viewModel = this.BindingContext as MultipleChoiceGroupViewModel;
             await MainThread.InvokeOnMainThreadAsync(() => viewModel.IsBusy = true);
+
             var activeCheckBox = sender as CheckBox;
             var activeItem = activeCheckBox.BindingContext as Item;
             var character = DependencyHelper.CurrentContext.CurrentCharacter;

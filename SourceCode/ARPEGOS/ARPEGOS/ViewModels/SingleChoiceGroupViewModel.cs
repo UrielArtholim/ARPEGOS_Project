@@ -79,7 +79,7 @@ namespace ARPEGOS.ViewModels
 
             Data = currentStage.Groups;
 
-            this.SelectGroupCommand = new Command<Group>(async (group) => await MainThread.InvokeOnMainThreadAsync(() => SelectGroup(group)));
+            this.SelectGroupCommand = new Command<Group>(async (group) => await Task.Run(async() => await SelectGroup(group)));
 
             this.NextCommand = new Command(async () => await Task.Run(() => Next()));
 
@@ -94,26 +94,26 @@ namespace ARPEGOS.ViewModels
             });
         }
 
-        private void SelectGroup(Group group)
+        private async Task SelectGroup(Group group)
         {
-            this.IsBusy = true;
+            await MainThread.InvokeOnMainThreadAsync(() => this.IsBusy = true);
             if (lastGroup == group)
             {
                 group.Expanded = !group.Expanded;
-                UpdateGroup(group);
+                await RefreshView();
+                if (group.Expanded == false)
+                    this.Continue = false;
             }
             else
             {
+                this.Continue = false;
                 if (lastGroup != null)
-                {
                     lastGroup.Expanded = false;
-                    UpdateGroup(lastGroup);
-                }
                 group.Expanded = true;
-                UpdateGroup(group);
+                await RefreshView();
             }
             lastGroup = group;
-            this.IsBusy = false;
+            await MainThread.InvokeOnMainThreadAsync(() => this.IsBusy = false);
         }
 
         private async Task Next()
@@ -165,11 +165,9 @@ namespace ARPEGOS.ViewModels
                 await MainThread.InvokeOnMainThreadAsync(() => this.IsBusy = false);
             }
         }
-        private void UpdateGroup(Group g)
+        private async Task RefreshView()
         {
-            var index = Data.IndexOf(g);
-            Data.Remove(g);
-            Data.Insert(index, g);
+            await MainThread.InvokeOnMainThreadAsync(() => RefreshCollection());
         }
     }
 }

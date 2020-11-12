@@ -77,7 +77,6 @@
                                                BackgroundColor="Transparent"
                                                Command="{Binding Source={x:Reference ValuedChoice}, Path=BindingContext.InfoCommand}"
                                                CommandParameter="{Binding .}"
-                                               IsEnabled="{Binding HasDescription}"
                                                IsVisible="{Binding HasDescription}"/>                                        
                                     </Grid>
                                 </Frame>

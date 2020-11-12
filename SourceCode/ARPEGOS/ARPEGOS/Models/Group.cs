@@ -116,21 +116,22 @@ namespace ARPEGOS
                 {
                     foreach(var item in this.Elements)
                         if(item.IsEnabled == true)
-                            this.Add(item);
+                            if(!this.Contains(item))
+                                this.Add(item);
                 }
                 else
                 {
                     var currentList = new ObservableCollection<Item>(this);
                     foreach(var item in currentList)
                     {
-                        if (item.IsSelected != true)
+                        if (item.IsSelected == false)
                             this.Remove(item);
                     }
                 }
             }
         }
 
-        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        protected void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
             MainThread.BeginInvokeOnMainThread(() => this.PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName)));
         }

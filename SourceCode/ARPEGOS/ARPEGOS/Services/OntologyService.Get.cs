@@ -71,14 +71,17 @@ namespace ARPEGOS.Services
                     {
                         var stepStageClass = game.Ontology.Model.ClassModel.SelectClass(stepStageString);
                         bool isGrouped = false;
-                        var subclasses = character.GetSubClasses(stepStageString, StageViewModel.ApplyOnCharacter);
+                        var subclasses = game.Ontology.Model.ClassModel.GetSubClassesOf(stepStageClass);
                         if (subclasses != null)
                         {
-                            if (subclasses.Count > 0)
+                            if(subclasses.ClassesCount > 0)
                             {
                                 isGrouped = true;
                                 Scheme.Add(new Stage(stepStageString, isGrouped, editGeneralLimit, editStageLimit));
                             }
+                            else
+                                Scheme.Add(new Stage(stepStageString, false, editGeneralLimit, editStageLimit));
+
                         }                            
                         else
                             Scheme.Add(new Stage(stepStageString, false, editGeneralLimit, editStageLimit));

@@ -36,7 +36,7 @@
                           ItemsSource="{Binding Data}" 
                           HasUnevenRows="True" 
                           SelectionMode="None" 
-                          
+                          CachingStrategy="RetainElement"                          
                           IsGroupingEnabled="True"
                           SeparatorVisibility="None"
                           GroupDisplayBinding="{Binding FormattedTitle}">
@@ -60,7 +60,7 @@
                                                 HorizontalOptions="CenterAndExpand" 
                                                 VerticalOptions="Center" 
                                                 Text="{Binding FormattedTitle}"/>
-                                        <ImageButton Source="description.png" HeightRequest="25" WidthRequest="25"
+                                        <ImageButton Source="description.png" HeightRequest="25" WidthRequest="25" IsVisible="{Binding HasDescription}"
                                                      Command="{Binding Source={x:Reference MultipleChoiceGroup}, Path=BindingContext.GroupInfoCommand}"
                                                      CommandParameter="{Binding .}"
                                                      BackgroundColor="Transparent"/>
@@ -92,7 +92,7 @@
                                                 HorizontalTextAlignment="Start"
                                                 VerticalOptions="Center" 
                                                 Text="{Binding FormattedName}"/>
-                                        <ImageButton Source="description.png"  HeightRequest="25" WidthRequest="25"
+                                        <ImageButton Source="description.png"  HeightRequest="25" WidthRequest="25" IsVisible="{Binding HasDescription}"
                                                      Command="{Binding Source={x:Reference MultipleChoiceGroup}, Path=BindingContext.InfoCommand}"
                                                      CommandParameter="{Binding .}"
                                                      BackgroundColor="Transparent"/>

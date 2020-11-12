@@ -6,6 +6,7 @@ using ARPEGOS.Views;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Collections.Specialized;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -201,7 +202,7 @@ namespace ARPEGOS.ViewModels
 
             this.NextCommand = new Command(async () => await Task.Run(() => Next()));
 
-            this.SelectGroupCommand = new Command<Group>(async (group) => await MainThread.InvokeOnMainThreadAsync(() => SelectGroup(group)));
+            this.SelectGroupCommand = new Command<Group>(async (group) => await Task.Run(async() => await SelectGroup(group)));
 
             this.InfoCommand = new Command<Item>(async (item) =>
             {
@@ -217,9 +218,9 @@ namespace ARPEGOS.ViewModels
 
         #region Methods
 
-        private void SelectGroup(Group group)
+        private async Task SelectGroup(Group group)
         {
-            this.IsBusy = true;
+            await MainThread.InvokeOnMainThreadAsync(()=>this.IsBusy = true);
             var character = DependencyHelper.CurrentContext.CurrentCharacter;
             var availableItems = character.CheckAvailableOptions(this.CurrentStage.FullName, this.HasGeneralLimit, StageViewModel.GeneralLimitProperty, this.GeneralLimit, this.StageLimitProperty, this.StageLimit);
 
@@ -263,20 +264,23 @@ namespace ARPEGOS.ViewModels
                 }
                 else
                 {
-                    foreach (var groupItem in group.Elements)
-                        if (groupItem.IsSelected == false)
-                            if (group.Contains(groupItem))
-                                group.Remove(groupItem);
-                }
-                
-                UpdateGroup(group);
+                    var collection = new Collection<Item>(group);
+                    var enumerator = collection.GetEnumerator();
+                    enumerator.Reset();
+                    while(enumerator.MoveNext())
+                    {
+                        var item = enumerator.Current;
+                        if (item.IsSelected == false)
+                            group.Remove(item);
+                    }                        
+                }                
             }
             else
             {
                 if (lastGroup != null)
                 {
                     lastGroup.Expanded = false;
-                    UpdateGroup(lastGroup);
+                    await RefreshView();
                 }
                 group.Expanded = true;
                 if (availableItems.Count() > 0)
@@ -304,10 +308,10 @@ namespace ARPEGOS.ViewModels
                             if (group.Contains(item))
                             group.Remove(item);
                 }
-                UpdateGroup(group);
             }
+            await RefreshView();
             lastGroup = group;
-            this.IsBusy = false;
+            await MainThread.InvokeOnMainThreadAsync(() => this.IsBusy = false);
         }
 
         private async Task Next()
@@ -417,14 +421,10 @@ namespace ARPEGOS.ViewModels
                 }
             }
         }
-        private void UpdateGroup(Group g)
+        private async Task RefreshView()
         {
-            var index = Data.IndexOf(Data.Where(group => group.GroupString == g.GroupString).Single());
-            Data.Remove(g);
-            if (index >= Data.Count())
-                Data.Add(g);
-            else
-                Data.Insert(index, g);
+            await MainThread.InvokeOnMainThreadAsync(() => RefreshCollection()); 
+            await MainThread.InvokeOnMainThreadAsync(() => RefreshCollection());
         }
         #endregion
     }
