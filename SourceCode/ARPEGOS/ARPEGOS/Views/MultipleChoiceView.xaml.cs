@@ -52,7 +52,7 @@ namespace ARPEGOS.Views
                     if (viewModel.HasGeneralLimit == true)
                     {
                         viewModel.GeneralProgressLabel -= activeItem.Value;
-                        viewModel.GeneralProgress -= activeItem.Value / viewModel.StageLimit;
+                        viewModel.GeneralProgress -= activeItem.Value / viewModel.GeneralLimit;
                     }
                 });
                 character.UpdateObjectAssertion(predicate, activeItem.FullName);
@@ -68,7 +68,7 @@ namespace ARPEGOS.Views
                     if (viewModel.HasGeneralLimit == true)
                     {
                         viewModel.GeneralProgressLabel += activeItem.Value;
-                        viewModel.GeneralProgress += activeItem.Value / viewModel.StageLimit;
+                        viewModel.GeneralProgress += activeItem.Value / viewModel.GeneralLimit;
                     }
                 });
                 // Remove assertion of item selected

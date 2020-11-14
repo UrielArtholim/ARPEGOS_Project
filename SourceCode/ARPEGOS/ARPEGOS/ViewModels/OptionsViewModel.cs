@@ -19,7 +19,7 @@ namespace ARPEGOS.ViewModels
         {
             NavigationPage.SetHasBackButton(App.Navigation.NavigationStack.Last(), false);
             this.InfoCommand = new Command(async () => await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.PushAsync(new CharacterInfoView())));
-            this.SkillCommand = new Command(async () => await MainThread.InvokeOnMainThreadAsync(() => App.Navigation.PushAsync(new SkillView())));
+            this.SkillCommand = new Command(async () => await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.PushAsync(new SkillView())));
         }
     }
 }

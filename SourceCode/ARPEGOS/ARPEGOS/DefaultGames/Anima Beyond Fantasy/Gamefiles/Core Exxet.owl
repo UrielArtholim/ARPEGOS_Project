@@ -1321,7 +1321,7 @@
     <owl:ObjectProperty rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tieneTablaArquetípica">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tieneTabla_Armas"/>
         <rdfs:domain rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Personaje"/>
-        <rdfs:range rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Armas_Arquetípo"/>
+        <rdfs:range rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Armas_Arquetipo"/>
     </owl:ObjectProperty>
     
 
@@ -3677,18 +3677,6 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Desventaja"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Desventaja_Disponible -->
-
-    <owl:DatatypeProperty rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Desventaja_Disponible">
-        <rdfs:subPropertyOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#DesventajaTieneValor"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Personaje"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
-        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Desventaja_Límite</rdfs:isDefinedBy>
     </owl:DatatypeProperty>
     
 
@@ -6306,6 +6294,18 @@
     
 
 
+    <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Per_Disponible_Desventaja -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Per_Disponible_Desventaja">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Personaje_Disponible"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Personaje"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Desventaja_Límite</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Per_Disponible_Habilidad_Combate -->
 
     <owl:DatatypeProperty rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Per_Disponible_Habilidad_Combate">
@@ -6375,6 +6375,18 @@
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Límite_PD</rdfs:isDefinedBy>
         <GeneralLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</GeneralLimit>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Per_Disponible_Ventaja -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Per_Disponible_Ventaja">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Personaje_Disponible"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Personaje"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ventaja_Límite</rdfs:isDefinedBy>
     </owl:DatatypeProperty>
     
 
@@ -11371,18 +11383,6 @@
     
 
 
-    <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Ventaja_Disponible -->
-
-    <owl:DatatypeProperty rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Ventaja_Disponible">
-        <rdfs:subPropertyOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#VentajaTieneValor"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Personaje"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
-        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ventaja_Límite</rdfs:isDefinedBy>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Ventaja_Límite -->
 
     <owl:DatatypeProperty rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Ventaja_Límite">
@@ -11614,9 +11614,9 @@ Las armaduras no protegen necesariamente todo el cuerpo de un personaje. Sin con
     
 
 
-    <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Armas_Arquetípo -->
+    <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Armas_Arquetipo -->
 
-    <owl:Class rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Armas_Arquetípo">
+    <owl:Class rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Armas_Arquetipo">
         <rdfs:subClassOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Tabla_Armas"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El personaje domina el uso de dos armas con algunas similitudes.</rdfs:comment>
         <ViewType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MultipleChoiceDynamicLimitView</ViewType>
@@ -12267,7 +12267,7 @@ No todos los seres vivos se ven sometidos a las habilidades de convocatoria. Est
         <rdfs:subClassOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Desventaja"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Esta es la lista de desventajas comunes que puedes elegir para tu personaje. El beneficio indica la cantidad de Puntos de Creación que obtendrás adquiriendo cada una de ellas. Recuerda que no has de elegir más de tres desventajas.</rdfs:comment>
         <EditStageLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</EditStageLimit>
-        <StageLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Desventaja_Disponible</StageLimit>
+        <StageLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Disponible_Desventaja</StageLimit>
         <ViewType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MultipleChoiceStaticLimitView</ViewType>
     </owl:Class>
     
@@ -12279,7 +12279,7 @@ No todos los seres vivos se ven sometidos a las habilidades de convocatoria. Est
         <rdfs:subClassOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Desventaja"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sólo quienes tengan el Don podrán elegir desventajas de esta lista. Los Puntos de Creación que consigas con ellas sólo podrán utilizarse para comprar ventajas mágicas para personajes con el Don. De todas formas, recuerda que el total de desventajas no puede ser mayor de tres, por lo que si ya has elegido tres generales, no podrás elegir ninguna de aquí.</rdfs:comment>
         <EditStageLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</EditStageLimit>
-        <StageLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Desventaja_Disponible</StageLimit>
+        <StageLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Disponible_Desventaja</StageLimit>
         <ViewType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MultipleChoiceStaticLimitView</ViewType>
     </owl:Class>
     
@@ -12291,7 +12291,7 @@ No todos los seres vivos se ven sometidos a las habilidades de convocatoria. Est
         <rdfs:subClassOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Desventaja"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sólo los personajes con capacidades psíquicas podrán elegir desventajas de esta lista. Los Puntos de Creación que consigas con ellas, únicamente podrán utilizarse para comprar ventajas mentales para psíquicos. De todas formas, recuerda que el total de desventajas no puede ser mayor de tres, por lo que si ya has elegido tres generales, no podrás elegir ninguna de aquí.</rdfs:comment>
         <EditStageLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</EditStageLimit>
-        <StageLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Desventaja_Disponible</StageLimit>
+        <StageLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Disponible_Desventaja</StageLimit>
         <ViewType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MultipleChoiceStaticLimitView</ViewType>
     </owl:Class>
     
@@ -13773,7 +13773,7 @@ Al contrario que las habilidades, las ventajas no se adquieren con PD, sino con 
         <rdfs:subClassOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Ventaja"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Esta es la lista de ventajas comunes que puedes elegir para tu personaje. El coste indica la cantidad de Puntos de Creación que gastarás adquiriendo cada una de ellas.</rdfs:comment>
         <EditStageLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</EditStageLimit>
-        <StageLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ventaja_Disponible</StageLimit>
+        <StageLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Disponible_Ventaja</StageLimit>
         <ViewType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MultipleChoiceStaticLimitView</ViewType>
     </owl:Class>
     
@@ -13785,7 +13785,7 @@ Al contrario que las habilidades, las ventajas no se adquieren con PD, sino con 
         <rdfs:subClassOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Ventaja"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sólo quienes tengan el Don podrán elegir ventajas de esta lista.</rdfs:comment>
         <EditStageLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</EditStageLimit>
-        <StageLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ventaja_Disponible</StageLimit>
+        <StageLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Disponible_Ventaja</StageLimit>
         <ViewType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MultipleChoiceStaticLimitView</ViewType>
     </owl:Class>
     
@@ -13797,7 +13797,7 @@ Al contrario que las habilidades, las ventajas no se adquieren con PD, sino con 
         <rdfs:subClassOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Ventaja"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sólo los personajes con capacidades psíquicas podrán elegir ventajas de esta lista.</rdfs:comment>
         <EditStageLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</EditStageLimit>
-        <StageLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ventaja_Disponible</StageLimit>
+        <StageLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Disponible_Ventaja</StageLimit>
         <ViewType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MultipleChoiceStaticLimitView</ViewType>
     </owl:Class>
     
@@ -16315,7 +16315,7 @@ Mantenimiento: 90 / 100 / 105 / 110</rdfs:comment>
     <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arquetipo_Aborigen -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arquetipo_Aborigen">
-        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Armas_Arquetípo"/>
+        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Armas_Arquetipo"/>
         <TablaArmas_Arma rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arco_Compuesto"/>
         <TablaArmas_Arma rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arco_Corto"/>
         <TablaArmas_Arma rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arco_Largo"/>
@@ -16336,7 +16336,7 @@ Coste: 50 PD</rdfs:comment>
     <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arquetipo_Asesino -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arquetipo_Asesino">
-        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Armas_Arquetípo"/>
+        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Armas_Arquetipo"/>
         <TablaArmas_Arma rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Ballesta_De_Mano"/>
         <TablaArmas_Arma rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Cerbatana"/>
         <TablaArmas_Arma rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Espada_Corta"/>
@@ -16355,7 +16355,7 @@ Coste: 50 PD</rdfs:comment>
     <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arquetipo_Bandido -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arquetipo_Bandido">
-        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Armas_Arquetípo"/>
+        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Armas_Arquetipo"/>
         <TablaArmas_Arma rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Ballesta"/>
         <TablaArmas_Arma rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Daga"/>
         <TablaArmas_Arma rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Espada_Corta"/>
@@ -16374,7 +16374,7 @@ Coste: 50 PD</rdfs:comment>
     <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arquetipo_Bárbaro -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arquetipo_Bárbaro">
-        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Armas_Arquetípo"/>
+        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Armas_Arquetipo"/>
         <TablaArmas_Arma rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Espada_Bastarda"/>
         <TablaArmas_Arma rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Hacha_A_2_Manos"/>
         <TablaArmas_Arma rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Hacha_De_Guerra"/>
@@ -16393,7 +16393,7 @@ Coste: 50 PD</rdfs:comment>
     <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arquetipo_Caballero -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arquetipo_Caballero">
-        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Armas_Arquetípo"/>
+        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Armas_Arquetipo"/>
         <TablaArmas_Arma rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Espada_Bastarda"/>
         <TablaArmas_Arma rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Espada_Larga"/>
         <TablaArmas_Arma rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Lanza_De_Caballería"/>
@@ -16411,7 +16411,7 @@ Coste: 50 PD</rdfs:comment>
     <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arquetipo_Cazador -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arquetipo_Cazador">
-        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Armas_Arquetípo"/>
+        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Armas_Arquetipo"/>
         <TablaArmas_Arma rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arco_Compuesto"/>
         <TablaArmas_Arma rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arco_Corto"/>
         <TablaArmas_Arma rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arco_Largo"/>
@@ -16432,7 +16432,7 @@ Coste: 50 PD</rdfs:comment>
     <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arquetipo_Duelista -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arquetipo_Duelista">
-        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Armas_Arquetípo"/>
+        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Armas_Arquetipo"/>
         <TablaArmas_Arma rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Daga_De_Parada"/>
         <TablaArmas_Arma rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Espada_Larga"/>
         <TablaArmas_Arma rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Estoque"/>
@@ -16451,7 +16451,7 @@ Coste: 50 PD</rdfs:comment>
     <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arquetipo_Gladiador -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arquetipo_Gladiador">
-        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Armas_Arquetípo"/>
+        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Armas_Arquetipo"/>
         <TablaArmas_Arma rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Espada_Corta"/>
         <TablaArmas_Arma rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Látigo"/>
         <TablaArmas_Arma rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Red_De_Gladiador"/>
@@ -16470,7 +16470,7 @@ Coste: 50 PD</rdfs:comment>
     <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arquetipo_Ninja -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arquetipo_Ninja">
-        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Armas_Arquetípo"/>
+        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Armas_Arquetipo"/>
         <TablaArmas_Arma rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Garras"/>
         <TablaArmas_Arma rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Katana"/>
         <TablaArmas_Arma rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Kusari-Gama"/>
@@ -16489,7 +16489,7 @@ Coste: 50 PD</rdfs:comment>
     <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arquetipo_Nómada -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arquetipo_Nómada">
-        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Armas_Arquetípo"/>
+        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Armas_Arquetipo"/>
         <TablaArmas_Arma rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arco_Largo"/>
         <TablaArmas_Arma rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Cimitarra"/>
         <TablaArmas_Arma rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Daga"/>
@@ -16508,7 +16508,7 @@ Coste: 50 PD</rdfs:comment>
     <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arquetipo_Pirata -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arquetipo_Pirata">
-        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Armas_Arquetípo"/>
+        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Armas_Arquetipo"/>
         <TablaArmas_Arma rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arpón"/>
         <TablaArmas_Arma rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Garfio"/>
         <TablaArmas_Arma rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Hacha_De_Mano"/>
@@ -16527,7 +16527,7 @@ Coste: 50 PD</rdfs:comment>
     <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arquetipo_Soldado -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arquetipo_Soldado">
-        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Armas_Arquetípo"/>
+        <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Armas_Arquetipo"/>
         <TablaArmas_Arma rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Alabarda"/>
         <TablaArmas_Arma rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Ballesta"/>
         <TablaArmas_Arma rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Espada_Larga"/>

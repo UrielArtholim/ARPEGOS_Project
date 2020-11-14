@@ -30,7 +30,7 @@ namespace ARPEGOS.Services
             var predicate = !this.CheckObjectProperty(predicateCharacterString) ? this.CreateObjectProperty(predicateName) : this.Ontology.Model.PropertyModel.SelectProperty(predicateCharacterString);
             var objectFact = !this.CheckIndividual(objectCharacterString) ? this.CreateIndividual(objectName) : characterDataModel.SelectFact(objectCharacterString);
             characterDataModel.AddAssertionRelation(subjectFact, predicate as RDFOntologyObjectProperty, objectFact);
-            AddClassification(predicateName);
+            AddClassification(predicate.ToString());
         }
 
         /// <summary>
@@ -52,20 +52,19 @@ namespace ARPEGOS.Services
             var predicate = !this.CheckDatatypeProperty(predicateCharacterString) ? this.CreateDatatypeProperty(predicateName) : this.Ontology.Model.PropertyModel.SelectProperty(predicateCharacterString);
             var objectLiteral = this.CreateLiteral(value, valuetype);
             characterDataModel.AddAssertionRelation(subjectFact, predicate as RDFOntologyDatatypeProperty, objectLiteral);
-            AddClassification(predicateName);
+            AddClassification(predicate.ToString());
         }
 
         /// <summary>
         /// Asserts an annotation property to classify a character property
         /// </summary>
         /// <param name="propertyName">Name of the property</param>
-        internal void AddClassification (string propertyName)
+        internal void AddClassification (string propertyString)
         {
-            
+            var currentProperty = this.Ontology.Model.PropertyModel.SelectProperty(propertyString);
             var text = string.Empty;
             var descriptionType = "string";
             var hierarchy = new List<string>();
-            var currentProperty = this.Ontology.Model.PropertyModel.SelectProperty(propertyName);
             var propertyParents = this.Ontology.Model.PropertyModel.GetSuperPropertiesOf(currentProperty).ToList();
             propertyParents.Reverse();
 
@@ -73,7 +72,7 @@ namespace ARPEGOS.Services
             {
                 var parentString = parent.ToString();
                 var parentName = parent.ToString().Split('#').Last();
-                var groupName = parentName.Replace("tiene", "").Replace("Personaje", "").Replace("Per", "").Replace("_", " ");
+                var groupName = parentName.Replace("tiene", "").Replace("Personaje", "").Replace("Per_", "").Replace("_", " ");
                 groupName = System.Text.RegularExpressions.Regex.Replace(groupName, "([A-Z])", " $1", System.Text.RegularExpressions.RegexOptions.Compiled).Trim();
                 hierarchy.Add(groupName);
             }
@@ -105,6 +104,8 @@ namespace ARPEGOS.Services
                 }
             }
             text = string.Join(":", hierarchy).Replace(" ", "");
+            if (string.IsNullOrEmpty(text))
+                text = "General";
             var AnnotationType = "Visualization";
             RDFOntologyLiteral description = CreateLiteral(text, descriptionType);
             var annotationPropertyString = $"{this.Context}{AnnotationType}";
@@ -114,7 +115,8 @@ namespace ARPEGOS.Services
                 annotation = new RDFOntologyAnnotationProperty(new RDFResource(annotationPropertyString));
                 this.Ontology.Model.PropertyModel.AddProperty(annotation);
             }
-            this.Ontology.Model.PropertyModel.AddCustomAnnotation(annotation, currentProperty, description);
+
+            this.Ontology.Model.PropertyModel.AddCustomAnnotation(annotation, currentProperty, description);           
 
             //Comprobar que la propiedad es de una habilidad
             var activeSkillIdentifier = "Activa";
@@ -135,9 +137,9 @@ namespace ARPEGOS.Services
 
                 if(propertyParent != null)
                 {
-                    if (this.CheckDatatypeProperty(propertyName))
+                    if (this.CheckDatatypeProperty(propertyString))
                     {
-                        if (propertyName.Contains("_Total"))
+                        if (propertyString.Contains("_Total"))
                         {
                             description = CreateLiteral("true", "boolean");
                             AnnotationType = "SkillProperty";
@@ -151,7 +153,7 @@ namespace ARPEGOS.Services
                             this.Ontology.Model.PropertyModel.AddCustomAnnotation(annotation as RDFOntologyAnnotationProperty, currentProperty, description);
                         }
                     }
-                    else if (this.CheckObjectProperty(propertyName))
+                    else if (this.CheckObjectProperty(propertyString))
                     {
                         description = CreateLiteral("true", "boolean");
                         AnnotationType = "SkillProperty";
