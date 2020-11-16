@@ -38,4 +38,6 @@ namespace ARPEGOS.Droid
             base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
         }
     }
+
+
 }

@@ -141,6 +141,14 @@ namespace ARPEGOS.ViewModels
             this.ElementLimit = null;
             this.Data = new ObservableCollection<Item>();
 
+            if (StageViewModel.GeneralLimitProperty == null && StageName != "Nivel")
+            {
+                StageViewModel.GeneralLimitProperty = character.GetLimit(stageString, true);
+                StageViewModel.GeneralMaximum = character.GetLimitValue(StageViewModel.GeneralLimitProperty);
+                StageViewModel.GeneralLimit = StageViewModel.GeneralMaximum;
+                StageViewModel.GeneralProgress = 1;
+            }
+
             if (this.HasGeneralLimit == true)
             {
                 this.HasGeneralLimit = true;
@@ -295,7 +303,7 @@ namespace ARPEGOS.ViewModels
                 var characterStageLimitProperty = $"{character.Context}{StageViewModel.GeneralLimitProperty}";
                 character.UpdateDatatypeAssertion(characterStageLimitProperty, Convert.ToString(Convert.ToInt32(this.GeneralProgressLabel)));
                 StageViewModel.GeneralLimit = this.GeneralProgressLabel;
-                StageViewModel.GeneralProgress = this.GeneralProgress;
+                StageViewModel.GeneralProgress = this.GeneralProgressLabel/StageViewModel.GeneralMaximum;
             }
 
             ++StageViewModel.CurrentStep;

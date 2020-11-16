@@ -2,12 +2,16 @@
 namespace ARPEGOS.Services
 {
     using ARPEGOS.Helpers;
+    using ARPEGOS.Services.Interfaces;
     using System;
     using System.Collections.Generic;
+    using System.Diagnostics;
     using System.Globalization;
     using System.IO;
     using System.Linq;
     using System.Threading;
+    using System.Threading.Tasks;
+    using Xamarin.Forms;
 
     public static class FileService
     {
@@ -171,6 +175,20 @@ namespace ARPEGOS.Services
         public static CultureInfo Culture()
         {
             return CultureInfo.InvariantCulture;
+        }
+
+        public static async Task ExportCharacters(GameOntologyService game)
+        {
+            var characters = ListCharacters(game.Name);
+            var exportDirectory = DependencyService.Get<IPathService>().PublicExternalFolder;
+            foreach (var item in characters)
+            {
+                var exportPath = Path.Combine(exportDirectory, FileName(item));
+                var itemPath = GetCharacterFilePath(item, game);
+                if (File.Exists(itemPath))
+                    Debug.WriteLine($"Origin file found: {itemPath}");
+                await Task.Run(() => File.Copy(itemPath, exportPath, true));
+            }           
         }
     }
 }

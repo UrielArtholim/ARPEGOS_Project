@@ -2,6 +2,7 @@
 namespace ARPEGOS.Services
 {
     using System;
+    using System.Diagnostics;
     using System.IO;
     using System.Linq;
     using System.Runtime.CompilerServices;
@@ -109,6 +110,6 @@ namespace ARPEGOS.Services
             var character = new CharacterOntologyService(name, path, context, ontology);
             character.Save();
             return character;            
-        }
+        }        
     }
 }

@@ -12,12 +12,12 @@
             </StackLayout>
             <ScrollView Grid.Row="0" BackgroundColor="{DynamicResource SecondaryBackgroundColor}" VerticalOptions="FillAndExpand">
                 <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
-                    <FlexLayout Direction="Row" AlignItems="Start" JustifyContent="SpaceEvenly" Wrap="Wrap" BindableLayout.ItemsSource="{Binding SelectableElements}" Padding="5, 20, 5, 0" AlignContent="Start" AlignSelf="Auto"  >
+                    <FlexLayout Direction="Row" AlignItems="Start" JustifyContent="SpaceEvenly" Wrap="Wrap" BindableLayout.ItemsSource="{Binding SelectableItems}" Padding="5, 20, 5, 0" AlignContent="Start" AlignSelf="Auto"  >
                         <BindableLayout.ItemTemplate>
                             <DataTemplate>
                                 <Frame CornerRadius="5" BorderColor="{DynamicResource SeparatorColor}" Padding="5" WidthRequest="110" HeightRequest="110" Margin="0, 0, 0, 20">
                                     <Frame.GestureRecognizers>
-                                        <TapGestureRecognizer Command="{Binding Path=BindingContext.SelectItemCommand, Source={x:Reference P}}" CommandParameter="{Binding .}" />
+                                        <TapGestureRecognizer Command="{Binding Path=BindingContext.SelectItemCommand, Source={x:Reference CharacterInfoPage}}" CommandParameter="{Binding .}" />
                                     </Frame.GestureRecognizers>
                                     <StackLayout Padding="10">
                                         <Image Source="{Binding ., Converter={StaticResource GetInitialsImageConverter}, ConverterParameter=128}" />

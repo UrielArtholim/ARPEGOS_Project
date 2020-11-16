@@ -1,10 +1,18 @@
 ﻿using ARPEGOS.Helpers;
+using ARPEGOS.Services;
 using ARPEGOS.ViewModels.Base;
+using ARPEGOS.Views;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Input;
+using Xamarin.Essentials;
+using Xamarin.Forms;
 
 namespace ARPEGOS.ViewModels
 {
@@ -14,6 +22,7 @@ namespace ARPEGOS.ViewModels
         #region Private
         private ObservableCollection<string> selectableItems;
         private string characterName;
+
 
         #endregion
 
@@ -26,9 +35,11 @@ namespace ARPEGOS.ViewModels
 
         public string CharacterName
         {
-            get => this.CharacterName;
+            get => this.characterName;
             set => SetProperty<string>(ref this.characterName, value);
         }
+
+        public ICommand SelectItemCommand { get; set; }
 
         #endregion
         #endregion
@@ -37,15 +48,13 @@ namespace ARPEGOS.ViewModels
         public CharacterInfoViewModel()
         {
             var character = DependencyHelper.CurrentContext.CurrentCharacter;
-            this.SelectableItems = new ObservableCollection<string>();
-            this.CharacterName = character.FormattedName;
             var ClassificationDictionary = new Dictionary<string, string>();
 
             var characterClassificationAssertions = character.Ontology.Model.PropertyModel.Annotations.CustomAnnotations.Where(entry => entry.TaxonomyPredicate.ToString().Contains("Visualization"));
-            if(characterClassificationAssertions.Count() > 0)
+            if (characterClassificationAssertions.Count() > 0)
             {
                 var enumerator = characterClassificationAssertions.GetEnumerator();
-                while(enumerator.MoveNext())
+                while (enumerator.MoveNext())
                 {
                     var assertion = enumerator.Current;
                     var propertyString = assertion.TaxonomySubject.ToString().Split('#').Last();
@@ -65,6 +74,13 @@ namespace ARPEGOS.ViewModels
                 }
 
                 SelectableItems = new ObservableCollection<string>(items.OrderBy(item => item).ToList());
+
+                this.SelectItemCommand = new Command<string>(async (item) =>
+                {
+                    this.IsBusy = true;
+                    await App.Navigation.PushAsync(new DetailInfoView(item));
+                    this.IsBusy = false;
+                });
             }            
         }
 
@@ -72,7 +88,6 @@ namespace ARPEGOS.ViewModels
         #endregion
 
         #region Methods
-
 
 
         #endregion

@@ -13,7 +13,6 @@
 
   <ItemGroup>
     <None Remove="DefaultGames\Anima Beyond Fantasy\characters\Ctuchik.owl" />
-    <None Remove="DefaultGames\Anima Beyond Fantasy\characters\Test.owl" />
     <None Remove="DefaultGames\Anima Beyond Fantasy\gamefiles\Core Exxet Safe.owl" />
     <None Remove="DefaultGames\Anima Beyond Fantasy\Gamefiles\Core Exxet.owl" />
     <None Remove="DefaultGames\Anima Beyond Fantasy\Nanatsu No Taizai.owl" />
@@ -27,7 +26,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="DefaultGames\Anima Beyond Fantasy\characters\Test.owl" />
     <EmbeddedResource Include="DefaultGames\Anima Beyond Fantasy\Gamefiles\Core Exxet.owl" />
     <EmbeddedResource Include="DefaultGames\Nanatsu No Taizai\gamefiles\Nanatsu No Taizai.owl">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
@@ -122,6 +120,9 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\CreationRootView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\DetailInfoView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\MultipleChoiceGroupView.xaml">

@@ -896,9 +896,9 @@
     
 
 
-    <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tieneClaseSocial -->
+    <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tieneClase_Social -->
 
-    <owl:ObjectProperty rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tieneClaseSocial">
+    <owl:ObjectProperty rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tieneClase_Social">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#PersonajeTieneObjeto"/>
         <rdfs:domain rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Clase_Social"/>

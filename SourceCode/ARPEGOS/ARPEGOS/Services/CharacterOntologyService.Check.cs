@@ -6,6 +6,7 @@ namespace ARPEGOS.Services
     using System.Collections.ObjectModel;
     using System.Diagnostics;
     using System.Linq;
+    using System.Threading.Tasks;
     using ARPEGOS.Helpers;
     using RDFSharp.Model;
     using RDFSharp.Semantics.OWL;
@@ -331,7 +332,7 @@ namespace ARPEGOS.Services
 
             Debug.WriteLine($"Item Available Checks |-| ");
             var itemNumber = 1;
-            foreach (Item item in stageOptions)
+            Parallel.ForEach(stageOptions, item =>
             {
                 Debug.WriteLine($"Item {itemNumber} - {item.ShortName}");
 
@@ -359,7 +360,7 @@ namespace ARPEGOS.Services
                                 currentObject = currentObject.Split('#').Last();
                             var predicateNumber = currentPredicate.Split('_').Last();
 
-                            if(!requirementPropertyDictionary.ContainsKey(currentObject))
+                            if (!requirementPropertyDictionary.ContainsKey(currentObject))
                                 requirementPropertyDictionary.Add(currentObject, currentPredicate);
 
 
@@ -372,7 +373,7 @@ namespace ARPEGOS.Services
                             if (coincidences.Count() > 0)
                             {
                                 var elements = coincidences.Where(req => req.TaxonomyPredicate.ToString().Split('#').Last() != currentPredicate);
-                                if(elements.Count() == 1)
+                                if (elements.Count() == 1)
                                     if (!requirementsDictionary.ContainsKey(currentPredicate))
                                         requirementsDictionary.Add(currentPredicate, "Datatype");
                             }
@@ -396,10 +397,10 @@ namespace ARPEGOS.Services
                                 {
                                     var requirementNumber = datatypeRequirementName.Split('_').ToList().LastOrDefault();
                                     var itemObjectRequirements = itemFactAssertions.Where(entry => entry.TaxonomyPredicate.ToString().Contains(datatypeRequirementName) == false);
-                                    if(itemObjectRequirements.Count() > 0)
+                                    if (itemObjectRequirements.Count() > 0)
                                     {
                                         itemObjectRequirements = itemObjectRequirements.Where(entry => entry.ToString().Contains("_" + requirementNumber));
-                                        if(itemObjectRequirements.Count() > 0)
+                                        if (itemObjectRequirements.Count() > 0)
                                         {
                                             foreach (var requirementEntry in itemObjectRequirements)
                                             {
@@ -408,8 +409,8 @@ namespace ARPEGOS.Services
                                                 objectRequirementNameList.Add(requirementShortName);
                                                 requirementsChecked.Add(predicateString);
                                             }
-                                        }                                        
-                                    }                                    
+                                        }
+                                    }
                                 }
                                 else
                                     objectRequirementNameList.Add(entry.TaxonomyObject.ToString());
@@ -425,19 +426,19 @@ namespace ARPEGOS.Services
                                     else
                                     {
                                         var elementStringEntries = this.Ontology.Model.PropertyModel.Where(property => property.ToString().Contains(elementName));
-                                        if(elementStringEntries.Count() > 0)
+                                        if (elementStringEntries.Count() > 0)
                                         {
                                             if (elementStringEntries.Count() > 1)
                                                 elementString = elementStringEntries.Where(property => property.ToString().Contains("Total")).Single().ToString();
                                             else
                                                 elementString = elementStringEntries.Single().ToString();
                                             elementProperty = this.Ontology.Model.PropertyModel.SelectProperty(elementString) as RDFOntologyDatatypeProperty;
-                                        }                                        
+                                        }
                                         else
                                             allRequirementsFulfilled = false;
                                     }
-                                        
-                                    if(allRequirementsFulfilled == true)
+
+                                    if (allRequirementsFulfilled == true)
                                     {
                                         var characterFact = this.Ontology.Data.SelectFact($"{character.Context}{FileService.EscapedName(this.Name)}");
                                         var characterAssertions = this.Ontology.Data.Relations.Assertions.SelectEntriesBySubject(characterFact);
@@ -445,26 +446,26 @@ namespace ARPEGOS.Services
                                         if (isDatatype)
                                         {
                                             characterRequirementAssertions = characterAssertions.SelectEntriesByPredicate(elementProperty);
-                                            if(characterRequirementAssertions.Count() > 0)
+                                            if (characterRequirementAssertions.Count() > 0)
                                             {
                                                 var requirementAssertion = characterRequirementAssertions.Single();
                                                 var requirementValue = Convert.ToSingle(entry.TaxonomyObject.ToString().Split('^').First());
                                                 var characterValue = Convert.ToSingle(requirementAssertion.TaxonomyObject.ToString().Split('^').First());
                                                 var result = ConvertToOperator("<", characterValue, requirementValue);
-                                                if(!objectRequirementNameDictionary.ContainsKey(name))
+                                                if (!objectRequirementNameDictionary.ContainsKey(name))
                                                     objectRequirementNameDictionary.Add(name, result != true);
-                                            }                                            
+                                            }
                                         }
                                         else
                                         {
                                             requirementPropertyDictionary.TryGetValue(elementName, out var requirementProperty);
                                             requirementsDictionary.TryGetValue(requirementProperty, out var requirementType);
 
-                                            if(requirementType == "Multiple")
+                                            if (requirementType == "Multiple")
                                             {
                                                 var requirementNumber = requirementProperty.Split('#').Last().Split('_').Last();
                                                 var valueRequirementEntries = itemRequirements.Where(assertion => assertion.TaxonomyPredicate.ToString().Split('#').Last().Contains(requirementNumber) && assertion.TaxonomyPredicate.ToString().Split('#').Last() != requirementProperty);
-                                                if(valueRequirementEntries.Count() > 0)
+                                                if (valueRequirementEntries.Count() > 0)
                                                 {
                                                     var requirementCheckValue = Convert.ToDouble(valueRequirementEntries.Single().TaxonomyObject.ToString().Split('^').First());
                                                     var requirementEntries = itemRequirements.Where(assertion => assertion.TaxonomyPredicate.ToString().Split('#').Last() == requirementProperty);
@@ -482,10 +483,10 @@ namespace ARPEGOS.Services
                                                             {
                                                                 if (!similarRequirementsDictionary.ContainsKey(elementName))
                                                                     similarRequirementsDictionary.Add(elementName, true);
-                                                            }                                                                
+                                                            }
                                                             else
                                                                 if (!similarRequirementsDictionary.ContainsKey(elementName))
-                                                                    similarRequirementsDictionary.Add(elementName, false);
+                                                                similarRequirementsDictionary.Add(elementName, false);
                                                         }
                                                         else
                                                         {
@@ -497,40 +498,40 @@ namespace ARPEGOS.Services
                                                                 {
                                                                     var currentRequirementValue = Convert.ToDouble(characterCurrentRequirementAssertions.Single().TaxonomyObject.ToString().Split('^').First());
                                                                     var result = ConvertToOperator("<", currentRequirementValue, requirementCheckValue);
-                                                                    if(result == false)
+                                                                    if (result == false)
                                                                     {
                                                                         if (!similarRequirementsDictionary.ContainsKey(elementName))
                                                                             similarRequirementsDictionary.Add(elementName, true);
-                                                                    }                                                                        
+                                                                    }
                                                                     else
                                                                         if (!similarRequirementsDictionary.ContainsKey(elementName))
-                                                                            similarRequirementsDictionary.Add(elementName, false);
+                                                                        similarRequirementsDictionary.Add(elementName, false);
                                                                 }
                                                             }
                                                             else
                                                                 if (!similarRequirementsDictionary.ContainsKey(elementName))
-                                                                    similarRequirementsDictionary.Add(elementName, false);
+                                                                similarRequirementsDictionary.Add(elementName, false);
                                                         }
                                                     }
-                                                    if(!similarRequirementsDictionary.Values.Any(check => check == true))
+                                                    if (!similarRequirementsDictionary.Values.Any(check => check == true))
                                                         allRequirementsFulfilled = false;
                                                 }
                                             }
-                                            else if(requirementType == "Object")
+                                            else if (requirementType == "Object")
                                             {
                                                 characterRequirementAssertions = characterAssertions.SelectEntriesByObject(elementFact);
                                                 if (characterRequirementAssertions.Any())
                                                 {
-                                                    if(!objectRequirementNameDictionary.ContainsKey(elementName))
+                                                    if (!objectRequirementNameDictionary.ContainsKey(elementName))
                                                         objectRequirementNameDictionary.Add(elementName, true);
 
                                                 }
                                                 else
                                                     if (!objectRequirementNameDictionary.ContainsKey(elementName))
-                                                        objectRequirementNameDictionary.Add(elementName, false);
-                                            }                                            
+                                                    objectRequirementNameDictionary.Add(elementName, false);
+                                            }
                                         }
-                                    }                                    
+                                    }
                                 }
                                 if (objectRequirementNameDictionary.Values.Count() > 0)
                                     if (objectRequirementNameDictionary.Values.All(value => value == false))
@@ -640,7 +641,7 @@ namespace ARPEGOS.Services
                     }
                 }
                 ++itemNumber;
-            }
+            });
             return availableOptions;
         }
     }

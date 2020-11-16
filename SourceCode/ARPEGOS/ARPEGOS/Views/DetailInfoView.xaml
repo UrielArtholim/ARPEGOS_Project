@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ARPEGOS.Views.DetailInfoView"
+             Title="{Binding ViewName}">
+    <ContentPage.Content>
+        <Grid>
+            <ListView x:Name="MultipleChoiceList" 
+                          ItemsSource="{Binding Data}" 
+                          HasUnevenRows="True" 
+                          SelectionMode="None" 
+                          CachingStrategy="RetainElement"                          
+                          IsGroupingEnabled="True"
+                          SeparatorVisibility="None">
+                <ListView.GroupHeaderTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Frame x:Name="GroupFrame" 
+                                       Padding="15" 
+                                       Margin="10,10,10,0" 
+                                       BorderColor="{DynamicResource SeparatorColor}">
+                                <StackLayout Orientation="Horizontal"  
+                                                 HorizontalOptions="FillAndExpand" 
+                                                 VerticalOptions="CenterAndExpand" >
+                                    <Label  FontSize="Large" 
+                                                HorizontalOptions="CenterAndExpand" 
+                                                VerticalOptions="Center" 
+                                                Text="{Binding FormattedTitle}"/>
+                                </StackLayout>
+                            </Frame>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.GroupHeaderTemplate>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Frame x:Name="ItemFrame" 
+                                       Padding="15" 
+                                       Margin="10,10,10,0" 
+                                       BorderColor="{DynamicResource SeparatorColor}">
+                                <StackLayout Orientation="Horizontal"  
+                                                 HorizontalOptions="FillAndExpand" 
+                                                 VerticalOptions="CenterAndExpand" >
+                                    <Label  Grid.Row="0" 
+                                                Grid.Column="1" 
+                                                FontSize="Medium" 
+                                                HorizontalOptions="StartAndExpand" 
+                                                HorizontalTextAlignment="Start"
+                                                VerticalOptions="Center" 
+                                                Text="{Binding FormattedName}"/>
+                                    <Label  Grid.Row="0" 
+                                                Grid.Column="2" 
+                                                FontSize="Medium" 
+                                                HorizontalOptions="EndAndExpand" 
+                                                HorizontalTextAlignment="End"
+                                                VerticalOptions="Center" 
+                                                Text="{Binding PropertyValue}"/>
+                                </StackLayout>
+                            </Frame>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

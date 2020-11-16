@@ -35,12 +35,12 @@ namespace ARPEGOS.Controls
                 item.Value = slider.Value * viewModel.CurrentLimit;
                 if (e.NewValue > e.OldValue)
                 {
-                    viewModel.GeneralProgress -= e.NewValue * viewModel.CurrentLimit / viewModel.GeneralLimit;
+                    viewModel.GeneralProgress -= e.NewValue * viewModel.CurrentLimit / StageViewModel.GeneralMaximum;
                     viewModel.StageProgress -= e.NewValue * viewModel.CurrentLimit / viewModel.StageLimit;   
                 }
                 else if (e.NewValue < e.OldValue)
                 {
-                    viewModel.GeneralProgress += e.NewValue * viewModel.CurrentLimit / viewModel.GeneralLimit;
+                    viewModel.GeneralProgress += e.NewValue * viewModel.CurrentLimit / StageViewModel.GeneralMaximum;
                     viewModel.StageProgress += e.NewValue * viewModel.CurrentLimit / viewModel.StageLimit;
                 }
             }
@@ -50,12 +50,12 @@ namespace ARPEGOS.Controls
                 /*item.Value = slider.Value * viewModel.CurrentLimit;
                 if (e.NewValue > e.OldValue)
                 {
-                    viewModel.GeneralProgress -= e.NewValue * viewModel.CurrentLimit / viewModel.GeneralLimit;
+                    viewModel.GeneralProgress -= e.NewValue * viewModel.CurrentLimit / StageViewModel.GeneralMaximum;
                     viewModel.StageProgress -= e.NewValue * viewModel.CurrentLimit / viewModel.StageLimit;
                 }
                 else if (e.NewValue < e.OldValue)
                 {
-                    viewModel.GeneralProgress += e.NewValue * viewModel.CurrentLimit / viewModel.GeneralLimit;
+                    viewModel.GeneralProgress += e.NewValue * viewModel.CurrentLimit / StageViewModel.GeneralMaximum;
                     viewModel.StageProgress += e.NewValue * viewModel.CurrentLimit / viewModel.StageLimit;
                 }*/
             }

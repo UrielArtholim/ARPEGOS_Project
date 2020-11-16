@@ -43,6 +43,7 @@ namespace ARPEGOS.ViewModels
         public ICommand PushSkillViewCommand { get; }
 
         public ICommand LoadNewStateCommand { get; set; }
+        public ICommand ExportCommand { get; set; }
 
         public string SelectedGame
         {
@@ -156,6 +157,12 @@ namespace ARPEGOS.ViewModels
             });
 
             this.LoadNewStateCommand = new Command<SelectionStatus>(status => {this.PreviousStatus = this.CurrentStatus; this.CurrentStatus = status;  this.Load(status); });
+
+            this.ExportCommand = new Command(async () =>
+            {
+                if (DependencyHelper.CurrentContext.CurrentGame != null)
+                    await FileService.ExportCharacters(DependencyHelper.CurrentContext.CurrentGame);
+            });
         }
 
         public async Task Init()

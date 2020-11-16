@@ -154,7 +154,8 @@ namespace ARPEGOS.ViewModels
             if (StageViewModel.GeneralLimitProperty == null && StageName != "Nivel")
             {
                 StageViewModel.GeneralLimitProperty = character.GetLimit(stageString, true);
-                StageViewModel.GeneralLimit = character.GetLimitValue(StageViewModel.GeneralLimitProperty);
+                StageViewModel.GeneralMaximum = character.GetLimitValue(StageViewModel.GeneralLimitProperty);
+                StageViewModel.GeneralLimit = StageViewModel.GeneralMaximum;
                 StageViewModel.GeneralProgress = 1;
             }
 
@@ -330,7 +331,7 @@ namespace ARPEGOS.ViewModels
                 var characterStageLimitProperty = $"{character.Context}{StageViewModel.GeneralLimitProperty}";
                 character.UpdateDatatypeAssertion(characterStageLimitProperty, Convert.ToString(Convert.ToInt32(this.GeneralProgressLabel)));
                 StageViewModel.GeneralLimit = this.GeneralProgressLabel;
-                StageViewModel.GeneralProgress = this.GeneralProgress;
+                StageViewModel.GeneralProgress = this.GeneralProgressLabel / StageViewModel.GeneralMaximum;
             }
 
             ++StageViewModel.CurrentStep;

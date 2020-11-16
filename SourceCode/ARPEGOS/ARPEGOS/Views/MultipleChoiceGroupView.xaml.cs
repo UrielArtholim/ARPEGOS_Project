@@ -56,7 +56,7 @@ namespace ARPEGOS.Views
                         if (viewModel.HasGeneralLimit == true)
                         {
                             viewModel.GeneralProgressLabel -= activeItem.Value;
-                            viewModel.GeneralProgress -= activeItem.Value / viewModel.StageLimit;
+                            viewModel.GeneralProgress -= Convert.ToDouble(activeItem.Step / StageViewModel.GeneralMaximum);
                         }
                     });
                     character.UpdateObjectAssertion(predicate, activeItem.FullName);
@@ -72,7 +72,7 @@ namespace ARPEGOS.Views
                         if (viewModel.HasGeneralLimit == true)
                         {
                             viewModel.GeneralProgressLabel += activeItem.Value;
-                            viewModel.GeneralProgress += activeItem.Value / viewModel.StageLimit;
+                            viewModel.GeneralProgress -= Convert.ToDouble(activeItem.Step / StageViewModel.GeneralMaximum);
                         }
                     });
 

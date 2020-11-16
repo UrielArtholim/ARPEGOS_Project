@@ -64,7 +64,8 @@ namespace ARPEGOS.ViewModels
             if (StageViewModel.GeneralLimitProperty == null && StageName != "Nivel")
             {
                 StageViewModel.GeneralLimitProperty = character.GetLimit(stageString, true);
-                StageViewModel.GeneralLimit = character.GetLimitValue(StageViewModel.GeneralLimitProperty);
+                StageViewModel.GeneralMaximum = character.GetLimitValue(StageViewModel.GeneralLimitProperty);
+                StageViewModel.GeneralLimit = StageViewModel.GeneralMaximum;
                 StageViewModel.GeneralProgress = 1;
             }
 

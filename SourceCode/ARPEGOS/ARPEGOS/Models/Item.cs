@@ -135,10 +135,6 @@ namespace ARPEGOS
         #endregion
 
         #region Methods 
-        public void ShowItem(string tree)
-        {
-            Console.WriteLine( tree + "====>" + FormattedName);
-        }
 
         protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
