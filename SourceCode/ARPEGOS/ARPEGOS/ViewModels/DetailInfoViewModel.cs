@@ -56,18 +56,22 @@ namespace ARPEGOS.ViewModels
                     var infoGroupName = classification;
                     if (infoGroupName.Contains(':'))
                     {
-                        var nameList = infoGroupName.Replace(item, "").Split(':').ToList();
-                        infoGroupName = $"{nameList.ElementAt(0)} {nameList.ElementAt(1)}";
-
-                        if (!PropertyGroups.Contains(infoGroupName))
-                        {
-                            currentGroup = new InfoGroup(infoGroupName, new ObservableCollection<Info>());
-                            PropertyGroups.Add(infoGroupName);
-                        }
+                        var nameText = infoGroupName.Replace(item, "");
+                        var nameList = nameText.Split(':').ToList();
+                        if (nameList.Count() > 1)
+                            infoGroupName = $"{nameList.ElementAt(0)}{nameList.ElementAt(1)}".Trim();
                         else
-                            currentGroup = datalist.Where(group => group.Title == infoGroupName).Single();                            
+                            infoGroupName = $"{nameList.ElementAt(0)}";                                                                         
                     }
-                    
+
+                    if (!PropertyGroups.Contains(infoGroupName))
+                    {
+                        currentGroup = new InfoGroup(infoGroupName, new ObservableCollection<Info>());
+                        PropertyGroups.Add(infoGroupName);
+                    }
+                    else
+                        currentGroup = datalist.Where(group => group.Title == infoGroupName).Single();
+
                     foreach (var propertyString in ClassificationDictionary.Keys)
                     {
                         ClassificationDictionary.TryGetValue(propertyString, out string propertyClassification);
@@ -86,7 +90,11 @@ namespace ARPEGOS.ViewModels
 
                                 var infoName = propertyString.Split('#').Last().ToLower().Replace("tiene", "").Replace("per_", "").Replace("total", "");
                                 Info propertyInfo = new Info(FileService.FormatName(infoName), FileService.FormatName(propertyValue));
-                                currentGroup.Add(propertyInfo);
+                                if ((currentGroup.Where(item => item.PropertyName == propertyInfo.PropertyName).Count() < 1))
+                                    currentGroup.Add(propertyInfo);
+                                else
+                                    if(currentGroup.Where(item => item.PropertyName == propertyInfo.PropertyName && item.PropertyValue == propertyInfo.PropertyValue).Count() < 1)
+                                        currentGroup.Add(propertyInfo);
                             }
                             else
                             {
@@ -94,7 +102,10 @@ namespace ARPEGOS.ViewModels
                             }
                         }
                     }
-                    datalist.Add(currentGroup);
+                    if (datalist.Where(group => group.Title == currentGroup.Title).Count() == 0)
+                        datalist.Add(currentGroup);
+                    else
+                        RefreshCollection();
                 }
                 Data = new ObservableCollection<InfoGroup>(datalist);
             }

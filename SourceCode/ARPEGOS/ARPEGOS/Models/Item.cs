@@ -84,33 +84,12 @@ namespace ARPEGOS
         #region Constructors
         public Item(string elementString, string description = "This is a description", string Class = "No class available", double elementStep = 1, double elementMaximum = 200, double elementValue = 0)
         {
-            FullName = elementString;
-            ShortName = elementString.Split('#').Last();
+            this.FullName = elementString;
+            this.ShortName = elementString.Split('#').Last();
             this.Class = Class;
-            IsEnabled = true;
-            if (this.Class != string.Empty)
-            {
-                var classWords = this.Class.Split('#').Last().Split('_').ToList();
-                foreach (var word in classWords)
-                {
-                    var itemWords = ShortName.Split('_').ToList();
-                    var index = itemWords.IndexOf(word);
-                    if (index > 0)
-                    {
-                        var wordlist = new List<string> { "de", "del", "por" };
-                        var previousWord = itemWords.ElementAt(index - 1);
-                        if (wordlist.All(word => previousWord.ToLower() != word))
-                            ShortName = ShortName.Replace(word, "");
-                    }
-                    else
-                        ShortName = ShortName.Replace(word, "");
-
-                    if (ShortName.Split('_').Count() < 2)
-                        ShortName = elementString.Split('#').Last().Replace(word, "");
-                }
-            }
-            FormattedName = ShortName.Replace("Per_","").Replace("_Total","").Replace('_',' ').Trim();
-            Description = description;
+            this.IsEnabled = true;            
+            this.FormattedName = ShortName.Replace("Per_","").Replace("_Total","").Replace('_',' ').Trim();
+            this.Description = description;
             this.Value = elementValue;
             this.Maximum = elementMaximum;
             this.Step = elementStep;
@@ -150,6 +129,13 @@ namespace ARPEGOS
             storage = value;
             this.OnPropertyChanged(propertyName);
             return true;
+        }
+
+        private string FormatName(string shortName)
+        {
+            string formattedName = string.Empty;
+
+            return formattedName;
         }
         #endregion
     }

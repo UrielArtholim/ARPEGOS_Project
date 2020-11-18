@@ -16,8 +16,8 @@
                         <ProgressBar x:Name="GeneralProgressBar"  HeightRequest="10"
                                          HorizontalOptions="FillAndExpand"
                                          Progress="{Binding GeneralProgress}" 
-                                         ProgressColor="{DynamicResource GeneralColor}"
-                                         BackgroundColor="{DynamicResource ProgressBarBackgroundColor}"
+                                         ProgressColor="{DynamicResource LightGeneralColor}"
+                                         BackgroundColor="{DynamicResource LightPrimaryBackgroundColor}"
                                          IsVisible="{Binding HasGeneralLimit}"/>
                     </StackLayout>
                     <StackLayout Orientation="Vertical" Spacing="5" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" IsVisible="{Binding HasStageLimit}">
@@ -28,8 +28,8 @@
                         <ProgressBar x:Name="StageProgressBar" HeightRequest="10"
                                      HorizontalOptions="FillAndExpand"
                                      Progress="{Binding StageProgress}" 
-                                     ProgressColor="{DynamicResource StageColor}"
-                                     BackgroundColor="{DynamicResource ProgressBarBackgroundColor}"/>
+                                     ProgressColor="{DynamicResource LightStageColor}"
+                                     BackgroundColor="{DynamicResource LightPrimaryBackgroundColor}"/>
                     </StackLayout>
                 </StackLayout>
                 <ListView x:Name="ValuedGroupedList" 
@@ -46,7 +46,7 @@
                                 <Frame x:Name="GroupFrame" 
                                        Padding="15" 
                                        Margin="10,10,10,0" 
-                                       BorderColor="{DynamicResource SeparatorColor}">
+                                       BorderColor="{DynamicResource LightSeparatorColor}">
                                     <Frame.GestureRecognizers>
                                         <TapGestureRecognizer Command="{Binding Source={x:Reference ValuedGroup}, Path=BindingContext.SelectGroupCommand}" CommandParameter="{Binding .}"/>
                                     </Frame.GestureRecognizers>
@@ -75,7 +75,7 @@
                                 <Frame x:Name="ItemFrame"
                                        VerticalOptions="Start"
                                        Margin="10,10,10,0"
-                                       BorderColor="{DynamicResource SeparatorColor}">
+                                       BorderColor="{DynamicResource LightSeparatorColor}">
                                     <Grid x:Name="SliderItem" 
                                               HorizontalOptions="FillAndExpand"
                                               RowDefinitions="1*"
@@ -119,7 +119,7 @@
                 <Button Text="Siguiente" 
                         Command="{Binding NextCommand}" 
                         IsVisible="true"
-                        BackgroundColor="{DynamicResource ButtonColor}"
+                        BackgroundColor="{DynamicResource LightButtonColor}"
                         AbsoluteLayout.LayoutFlags="PositionProportional"
                         AbsoluteLayout.LayoutBounds=".95,.95,80,80"
                         HeightRequest="40"/>

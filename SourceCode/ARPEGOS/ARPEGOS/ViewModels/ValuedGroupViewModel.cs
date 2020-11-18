@@ -231,7 +231,7 @@ namespace ARPEGOS.ViewModels
             var game = DependencyHelper.CurrentContext.CurrentGame;
             foreach (var group in Data)
             {
-                foreach (var item in group)
+                foreach (var item in group.Elements)
                 {
                     var itemName = item.FullName.Split('#').Last();
                     var characterItemString = $"{character.Context}{itemName}";

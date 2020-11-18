@@ -15,7 +15,7 @@
                                 <Frame x:Name="ItemFrame" 
                                        Padding="15" 
                                        Margin="10,10,10,0" 
-                                       BorderColor="{DynamicResource SeparatorColor}">
+                                       BorderColor="{DynamicResource LightSeparatorColor}">
                                     <Frame.GestureRecognizers>
                                         <TapGestureRecognizer Command="{Binding SelectItem}" CommandParameter="{Binding .}"/>
                                     </Frame.GestureRecognizers>
@@ -49,7 +49,7 @@
                 <Button Text="Siguiente" 
                         Command="{Binding NextCommand}" 
                         IsVisible="{Binding Continue}"
-                        BackgroundColor="{DynamicResource ButtonColor}"
+                        BackgroundColor="{DynamicResource LightButtonColor}"
                         AbsoluteLayout.LayoutFlags="PositionProportional"
                         AbsoluteLayout.LayoutBounds=".95,.95,80,80"
                         HeightRequest="50"/>

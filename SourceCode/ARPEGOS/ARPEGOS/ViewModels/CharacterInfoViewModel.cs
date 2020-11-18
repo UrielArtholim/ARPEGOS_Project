@@ -48,6 +48,7 @@ namespace ARPEGOS.ViewModels
         public CharacterInfoViewModel()
         {
             var character = DependencyHelper.CurrentContext.CurrentCharacter;
+            this.CharacterName = character.Name;
             var ClassificationDictionary = new Dictionary<string, string>();
 
             var characterClassificationAssertions = character.Ontology.Model.PropertyModel.Annotations.CustomAnnotations.Where(entry => entry.TaxonomyPredicate.ToString().Contains("Visualization"));

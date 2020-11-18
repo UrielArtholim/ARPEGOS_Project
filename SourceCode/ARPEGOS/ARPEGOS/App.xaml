@@ -5,17 +5,18 @@
              x:Class="ARPEGOS.App">
     <Application.Resources>
         <ResourceDictionary>
-            <Color x:Key="Primary">#4899de</Color>
-            <Color x:Key="Contrast">#ffffff</Color>
-            <Color x:Key="PrimaryTextColor">#0e1723</Color>
-            <Color x:Key="SecondaryTextColor">#6b7380</Color>
-            <Color x:Key="PrimaryBackgroundColor">#ffffff</Color>
-            <Color x:Key="SecondaryBackgroundColor">#f2f4f8</Color>
-            <Color x:Key="ButtonColor">#096ee8</Color>
-            <Color x:Key="GeneralColor">#b405ff</Color>
-            <Color x:Key="StageColor">#096ee8</Color>
-            <Color x:Key="ProgressBarBackgroundColor">#b5b1fc</Color>
-            <Color x:Key="SeparatorColor">#a2a3a2</Color>
+            <Color x:Key="LightPrimaryColor">#4899de</Color>
+            <Color x:Key="LightContrastColor">#ffffff</Color>
+            <Color x:Key="LightPrimaryTextColor">#0e1723</Color>
+            <Color x:Key="LightSecondaryTextColor">#6b7380</Color>
+            <Color x:Key="LightPrimaryBackgroundColor">#7FCCF3</Color>
+            <Color x:Key="LightSecondaryBackgroundColor">#99d3fb</Color>
+            <Color x:Key="LightLabelPrimaryColor">#ffa54f</Color>
+            <Color x:Key="LightLabelSecondaryColor">#f0e68c</Color> 
+            <Color x:Key="LightButtonColor">#096ee8</Color>
+            <Color x:Key="LightGeneralColor">#b405ff</Color>
+            <Color x:Key="LightStageColor">#096ee8</Color>
+            <Color x:Key="LightSeparatorColor">#a2a3a2</Color>
             <converter:GetInitialsImageConverter x:Key="GetInitialsImageConverter" />
         </ResourceDictionary>
     </Application.Resources>

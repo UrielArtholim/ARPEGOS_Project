@@ -2,13 +2,15 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ARPEGOS.Views.OptionsView"
-             Title="Selecciona una opción">
+             Title="Selecciona una opción"
+             BackgroundColor="{DynamicResource LightSecondaryBackgroundColor}">
     <ContentPage.Content>
-        <StackLayout  Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand">
+        <StackLayout  Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" Spacing="50">
             <Frame VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand"
                Margin="20,20,20,20"
-               BorderColor="{DynamicResource SeparatorColor}"
-               HeightRequest="100">
+               BorderColor="{DynamicResource LightSeparatorColor}"
+               HeightRequest="100"
+               BackgroundColor="{DynamicResource LightLabelSecondaryColor}">
                 <Grid HorizontalOptions="FillAndExpand"
                   VerticalOptions="Start"
                   RowDefinitions="Auto"                   
@@ -16,21 +18,29 @@
                     <Label Grid.Row="0"
                        Grid.Column="0"
                        VerticalOptions="Center"
+                       HorizontalOptions="Center"
                        Text="Visualizar personaje"
                        FontSize="Title"/>
-                    <Image Source="info.png" 
-                         Grid.Row="0"
+                    <!--Frame Grid.Row="0"
                          Grid.Column="1" 
-                         Aspect="AspectFit"/>
+                         HorizontalOptions="FillAndExpand"
+                         Padding="5"
+                         BorderColor="{DynamicResource LightSeparatorColor}"-->
+                        <Image Source="info.png" 
+                               Grid.Row="0"
+                               Grid.Column="1" 
+                               Aspect="AspectFit"/>
+                    <!--/Frame-->
                 </Grid>
                 <Frame.GestureRecognizers>
                     <TapGestureRecognizer Command="{Binding InfoCommand}"/>
                 </Frame.GestureRecognizers>
             </Frame>
             <Frame  VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand"
-                    Margin="20,20,20,20"
-                    BorderColor="{DynamicResource SeparatorColor}"
-                    HeightRequest="100">
+                    Margin="20,10,20,20"
+                    BorderColor="{DynamicResource LightSeparatorColor}"
+                    HeightRequest="100"
+                    BackgroundColor="{DynamicResource LightLabelSecondaryColor}">
                 <Grid
                   HorizontalOptions="FillAndExpand"
                   VerticalOptions="Start"
@@ -39,12 +49,19 @@
                     <Label Grid.Row="0"
                        Grid.Column="0"
                        VerticalOptions="Center"
+                       HorizontalOptions="Center"
                        Text="Calcular habilidad"
                        FontSize="Title"/>
-                    <Image Source="skill.png" 
-                         Grid.Row="0"
+                    <!--Frame Grid.Row="0"
                          Grid.Column="1" 
-                         Aspect="AspectFit"/>
+                         HorizontalOptions="FillAndExpand"
+                         Padding="5"
+                         BorderColor="{DynamicResource LightSeparatorColor}"-->
+                    <Image Source="skill.png" 
+                               Grid.Row="0"
+                               Grid.Column="1" 
+                               Aspect="AspectFit"/>
+                    <!--/Frame-->
                 </Grid>
                 <Frame.GestureRecognizers>
                     <TapGestureRecognizer Command="{Binding SkillCommand}"/>

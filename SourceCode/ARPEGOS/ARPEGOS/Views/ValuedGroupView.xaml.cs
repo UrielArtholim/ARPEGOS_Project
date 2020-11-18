@@ -33,6 +33,8 @@ namespace ARPEGOS.Views
             await MainThread.InvokeOnMainThreadAsync(() => viewModel.IsBusy = true);
             var entry = sender as Stepper;
             var item = entry.BindingContext as Item;
+            var elementGroup = viewModel.Data.Where(group => group.Elements.Contains(item)).Single();
+            var element = elementGroup.ElementAt(elementGroup.IndexOf(item));
             double NewValue, OldValue;
 
             NewValue = e.NewValue;
@@ -92,6 +94,7 @@ namespace ARPEGOS.Views
                     }
                 }
             }
+            element.Value = item.Value;
             await MainThread.InvokeOnMainThreadAsync(() => viewModel.IsBusy = false);
         }
     }

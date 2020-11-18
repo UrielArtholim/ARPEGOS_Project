@@ -836,9 +836,9 @@
     
 
 
-    <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tieneArteMarcialAvanzada -->
+    <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tieneArte_Marcial_Avanzada -->
 
-    <owl:ObjectProperty rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tieneArteMarcialAvanzada">
+    <owl:ObjectProperty rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tieneArte_Marcial_Avanzada">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tieneArteMarcial"/>
         <rdfs:domain rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arte_Marcial_Avanzada"/>
@@ -846,9 +846,9 @@
     
 
 
-    <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tieneArteMarcialBásica -->
+    <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tieneArte_Marcial_Básica -->
 
-    <owl:ObjectProperty rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tieneArteMarcialBásica">
+    <owl:ObjectProperty rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tieneArte_Marcial_Básica">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tieneArteMarcial"/>
         <rdfs:domain rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arte_Marcial_Básica"/>
@@ -936,9 +936,9 @@
     
 
 
-    <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tieneDesventajaComún -->
+    <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tieneDesventaja_Común -->
 
-    <owl:ObjectProperty rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tieneDesventajaComún">
+    <owl:ObjectProperty rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tieneDesventaja_Común">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tieneDesventaja"/>
         <rdfs:domain rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Desventaja_General"/>
@@ -946,9 +946,9 @@
     
 
 
-    <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tieneDesventajaMística -->
+    <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tieneDesventaja_Mística -->
 
-    <owl:ObjectProperty rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tieneDesventajaMística">
+    <owl:ObjectProperty rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tieneDesventaja_Mística">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tieneDesventaja"/>
         <rdfs:domain rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Desventaja_Mística"/>
@@ -956,9 +956,9 @@
     
 
 
-    <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tieneDesventajaPsíquica -->
+    <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tieneDesventaja_Psíquica -->
 
-    <owl:ObjectProperty rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tieneDesventajaPsíquica">
+    <owl:ObjectProperty rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tieneDesventaja_Psíquica">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tieneDesventaja"/>
         <rdfs:domain rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Desventaja_Psíquica"/>
@@ -1044,16 +1044,6 @@
         <rdfs:subPropertyOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tieneHabilidadSecundaria"/>
         <rdfs:domain rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidades_Intelectuales"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tieneHabilidadKi -->
-
-    <owl:ObjectProperty rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tieneHabilidadKi">
-        <rdfs:subPropertyOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tieneKi"/>
-        <rdfs:domain rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Personaje"/>
-        <rdfs:range rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidad_Ki"/>
     </owl:ObjectProperty>
     
 
@@ -1170,6 +1160,16 @@
     
 
 
+    <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tieneHabilidad_De_Ki -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tieneHabilidad_De_Ki">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tieneKi"/>
+        <rdfs:domain rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Personaje"/>
+        <rdfs:range rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Habilidad_Ki"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tieneInvocación -->
 
     <owl:ObjectProperty rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tieneInvocación">
@@ -1209,7 +1209,7 @@
     <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tienePoderCrioquinesis -->
 
     <owl:ObjectProperty rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tienePoderCrioquinesis">
-        <rdfs:subPropertyOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tienePoderPsíquico"/>
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tienePoder_Psíquico"/>
         <rdfs:domain rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Crioquinesis"/>
     </owl:ObjectProperty>
@@ -1219,7 +1219,7 @@
     <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tienePoderEnergía -->
 
     <owl:ObjectProperty rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tienePoderEnergía">
-        <rdfs:subPropertyOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tienePoderPsíquico"/>
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tienePoder_Psíquico"/>
         <rdfs:domain rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Energía"/>
     </owl:ObjectProperty>
@@ -1229,7 +1229,7 @@
     <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tienePoderIncremento_Físico -->
 
     <owl:ObjectProperty rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tienePoderIncremento_Físico">
-        <rdfs:subPropertyOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tienePoderPsíquico"/>
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tienePoder_Psíquico"/>
         <rdfs:domain rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Incremento_Físico"/>
     </owl:ObjectProperty>
@@ -1239,7 +1239,7 @@
     <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tienePoderMatricial -->
 
     <owl:ObjectProperty rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tienePoderMatricial">
-        <rdfs:subPropertyOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tienePoderPsíquico"/>
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tienePoder_Psíquico"/>
         <rdfs:domain rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Matricial"/>
     </owl:ObjectProperty>
@@ -1249,19 +1249,9 @@
     <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tienePoderPiroquinesis -->
 
     <owl:ObjectProperty rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tienePoderPiroquinesis">
-        <rdfs:subPropertyOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tienePoderPsíquico"/>
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tienePoder_Psíquico"/>
         <rdfs:domain rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Piroquinesis"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tienePoderPsíquico -->
-
-    <owl:ObjectProperty rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tienePoderPsíquico">
-        <rdfs:subPropertyOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tieneHabilidadPsíquicaActiva"/>
-        <rdfs:domain rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Personaje"/>
-        <rdfs:range rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Poder_Psíquico"/>
     </owl:ObjectProperty>
     
 
@@ -1269,7 +1259,7 @@
     <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tienePoderTelemetría -->
 
     <owl:ObjectProperty rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tienePoderTelemetría">
-        <rdfs:subPropertyOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tienePoderPsíquico"/>
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tienePoder_Psíquico"/>
         <rdfs:domain rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Telemetría"/>
     </owl:ObjectProperty>
@@ -1279,7 +1269,7 @@
     <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tienePoderTelepatía -->
 
     <owl:ObjectProperty rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tienePoderTelepatía">
-        <rdfs:subPropertyOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tienePoderPsíquico"/>
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tienePoder_Psíquico"/>
         <rdfs:domain rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Telepatía"/>
     </owl:ObjectProperty>
@@ -1289,9 +1279,19 @@
     <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tienePoderTelequinesis -->
 
     <owl:ObjectProperty rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tienePoderTelequinesis">
-        <rdfs:subPropertyOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tienePoderPsíquico"/>
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tienePoder_Psíquico"/>
         <rdfs:domain rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Telequinesia"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tienePoder_Psíquico -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tienePoder_Psíquico">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tieneHabilidadPsíquicaActiva"/>
+        <rdfs:domain rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Personaje"/>
+        <rdfs:range rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Poder_Psíquico"/>
     </owl:ObjectProperty>
     
 
@@ -1319,29 +1319,9 @@
     <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tieneTablaArquetípica -->
 
     <owl:ObjectProperty rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tieneTablaArquetípica">
-        <rdfs:subPropertyOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tieneTabla_Armas"/>
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tieneTabla_De_Armas"/>
         <rdfs:domain rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Armas_Arquetipo"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tieneTablaMística -->
-
-    <owl:ObjectProperty rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tieneTablaMística">
-        <rdfs:subPropertyOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tieneHabilidadMísticaPasiva"/>
-        <rdfs:domain rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Personaje"/>
-        <rdfs:range rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Tabla_Mística"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tieneTablaPsíquica -->
-
-    <owl:ObjectProperty rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tieneTablaPsíquica">
-        <rdfs:subPropertyOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tieneHabilidadPsíquicaPasiva"/>
-        <rdfs:domain rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Personaje"/>
-        <rdfs:range rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Tabla_Psíquica"/>
     </owl:ObjectProperty>
     
 
@@ -1349,16 +1329,16 @@
     <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tieneTablaSimilar -->
 
     <owl:ObjectProperty rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tieneTablaSimilar">
-        <rdfs:subPropertyOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tieneTabla_Armas"/>
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tieneTabla_De_Armas"/>
         <rdfs:domain rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arma_Similar"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tieneTabla_Armas -->
+    <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tieneTabla_De_Armas -->
 
-    <owl:ObjectProperty rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tieneTabla_Armas">
+    <owl:ObjectProperty rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tieneTabla_De_Armas">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tieneHabilidadCombatePasiva"/>
         <rdfs:domain rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Tabla_Armas"/>
@@ -1366,9 +1346,29 @@
     
 
 
-    <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tieneTécnicaDominio -->
+    <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tieneTabla_Mística -->
 
-    <owl:ObjectProperty rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tieneTécnicaDominio">
+    <owl:ObjectProperty rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tieneTabla_Mística">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tieneHabilidadMísticaPasiva"/>
+        <rdfs:domain rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Personaje"/>
+        <rdfs:range rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Tabla_Mística"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tieneTabla_Psíquica -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tieneTabla_Psíquica">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tieneHabilidadPsíquicaPasiva"/>
+        <rdfs:domain rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Personaje"/>
+        <rdfs:range rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Tabla_Psíquica"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tieneTécnica_De_Dominio -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tieneTécnica_De_Dominio">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tieneKi"/>
         <rdfs:domain rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Tabla_De_Técnicas_De_Dominio"/>
@@ -1386,9 +1386,9 @@
     
 
 
-    <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tieneVentajaComún -->
+    <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tieneVentaja_Común -->
 
-    <owl:ObjectProperty rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tieneVentajaComún">
+    <owl:ObjectProperty rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tieneVentaja_Común">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tieneVentaja"/>
         <rdfs:domain rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Ventaja_General"/>
@@ -1396,9 +1396,9 @@
     
 
 
-    <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tieneVentajaMística -->
+    <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tieneVentaja_Mística -->
 
-    <owl:ObjectProperty rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tieneVentajaMística">
+    <owl:ObjectProperty rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tieneVentaja_Mística">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tieneVentaja"/>
         <rdfs:domain rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Ventaja_Mística"/>
@@ -1406,9 +1406,9 @@
     
 
 
-    <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tieneVentajaPsíquica -->
+    <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tieneVentaja_Psíquica -->
 
-    <owl:ObjectProperty rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tieneVentajaPsíquica">
+    <owl:ObjectProperty rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tieneVentaja_Psíquica">
         <rdfs:subPropertyOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#tieneVentaja"/>
         <rdfs:domain rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Personaje"/>
         <rdfs:range rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Ventaja_Psíquica"/>
@@ -33475,9 +33475,9 @@ Apariencia habitual: Aparece comúnmente como una mujer hermosa, ataviada con ro
     
 
 
-    <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#III_La_Emperatriz_Invertida -->
+    <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#III_La_Emperatriz_Invertido -->
 
-    <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#III_La_Emperatriz_Invertida">
+    <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#III_La_Emperatriz_Invertido">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arcano_Invertido"/>
         <Arcano_Acción rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Acción_Activa"/>
         <Arcano_Dificultad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</Arcano_Dificultad>
@@ -33529,9 +33529,9 @@ Apariencia habitual: La Sacerdotisa se manifiesta como una joven excepcionalment
     
 
 
-    <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#II_La_Suma_Sacerdotisa_Invertida -->
+    <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#II_La_Suma_Sacerdotisa_Invertido -->
 
-    <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#II_La_Suma_Sacerdotisa_Invertida">
+    <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#II_La_Suma_Sacerdotisa_Invertido">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arcano_Invertido"/>
         <Arcano_Acción rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Acción_Activa"/>
         <Arcano_Dificultad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">140</Arcano_Dificultad>
@@ -49083,9 +49083,9 @@ Apariencia habitual: Se manifiesta como un colosal titán de musculatura perfect
     
 
 
-    <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#VIII_La_Fuerza_Invertida -->
+    <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#VIII_La_Fuerza_Invertido -->
 
-    <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#VIII_La_Fuerza_Invertida">
+    <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#VIII_La_Fuerza_Invertido">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arcano_Invertido"/>
         <Arcano_Acción rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Acción_Activa"/>
         <Arcano_Dificultad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">200</Arcano_Dificultad>
@@ -49191,9 +49191,9 @@ Apariencia habitual: Se manifiesta como una pareja de ángeles, uno masculino y 
     
 
 
-    <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#VI_Los_Enamorados_Invertidos -->
+    <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#VI_Los_Enamorados_Invertido -->
 
-    <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#VI_Los_Enamorados_Invertidos">
+    <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#VI_Los_Enamorados_Invertido">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arcano_Invertido"/>
         <Arcano_Acción rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Acción_Activa"/>
         <Arcano_Dificultad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">180</Arcano_Dificultad>
@@ -50587,9 +50587,9 @@ capa rota y atraviesa al personaje, regenerándolo completamente.</rdfs:comment>
     
 
 
-    <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#XIII_La_Muerte_Invertida -->
+    <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#XIII_La_Muerte_Invertido -->
 
-    <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#XIII_La_Muerte_Invertida">
+    <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#XIII_La_Muerte_Invertido">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arcano_Invertido"/>
         <Arcano_Acción rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Acción_Activa"/>
         <Arcano_Dificultad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">300</Arcano_Dificultad>
@@ -50695,9 +50695,9 @@ Apariencia habitual: Su forma más común es la de un ángel sin ningún sexo de
     
 
 
-    <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#XIV_La_Templanza_Invertida -->
+    <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#XIV_La_Templanza_Invertido -->
 
-    <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#XIV_La_Templanza_Invertida">
+    <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#XIV_La_Templanza_Invertido">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arcano_Invertido"/>
         <Arcano_Acción rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Acción_Pasiva"/>
         <Arcano_Dificultad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">320</Arcano_Dificultad>
@@ -50802,9 +50802,9 @@ Apariencia habitual: La Justicia aparece siempre como una guerrera, armada con u
     
 
 
-    <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#XI_La_Justicia_Invertida -->
+    <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#XI_La_Justicia_Invertido -->
 
-    <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#XI_La_Justicia_Invertida">
+    <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#XI_La_Justicia_Invertido">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arcano_Invertido"/>
         <Arcano_Acción rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Acción_Activa"/>
         <Arcano_Dificultad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">260</Arcano_Dificultad>
@@ -50856,9 +50856,9 @@ Apariencia habitual: Su encarnación es una fascinante mujer vestida completamen
     
 
 
-    <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#XVIII_La_Luna_Invertida -->
+    <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#XVIII_La_Luna_Invertido -->
 
-    <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#XVIII_La_Luna_Invertida">
+    <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#XVIII_La_Luna_Invertido">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arcano_Invertido"/>
         <Arcano_Acción rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Acción_Activa"/>
         <Arcano_Dificultad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">400</Arcano_Dificultad>
@@ -50912,9 +50912,9 @@ Apariencia habitual: Cuando se manifiesta por primera vez, aparece con una estre
     
 
 
-    <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#XVII_La_Estrella_Invertida -->
+    <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#XVII_La_Estrella_Invertido -->
 
-    <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#XVII_La_Estrella_Invertida">
+    <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#XVII_La_Estrella_Invertido">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arcano_Invertido"/>
         <Arcano_Acción rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Acción_Activa"/>
         <Arcano_Dificultad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">380</Arcano_Dificultad>
@@ -50967,9 +50967,9 @@ fuerza se acerca hacia ellos, pero no verán ninguna forma concreta.</rdfs:comme
     
 
 
-    <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#XVI_La_Torre_Invertida -->
+    <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#XVI_La_Torre_Invertido -->
 
-    <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#XVI_La_Torre_Invertida">
+    <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#XVI_La_Torre_Invertido">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arcano_Invertido"/>
         <Arcano_Acción rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Acción_Activa"/>
         <Arcano_Dificultad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">340</Arcano_Dificultad>
@@ -51184,9 +51184,9 @@ Apariencia habitual: La apariencia de La Rueda es completamente imprevisible. Au
     
 
 
-    <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#X_La_Rueda_Invertida -->
+    <!-- urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#X_La_Rueda_Invertido -->
 
-    <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#X_La_Rueda_Invertida">
+    <owl:NamedIndividual rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#X_La_Rueda_Invertido">
         <rdf:type rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Arcano_Invertido"/>
         <Arcano_Acción rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Acción_Activa"/>
         <Arcano_Dificultad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">240</Arcano_Dificultad>

@@ -10,25 +10,25 @@
         <ToolbarItem Order="Primary" Priority="0" Command="{Binding DeleteButtonCommand}" IconImageSource="delete.png"/>
     </ContentPage.ToolbarItems>
     <Grid>
-        <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="{DynamicResource SecondaryBackgroundColor}">
+        <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="{DynamicResource LightSecondaryBackgroundColor}">
             <StackLayout Padding="5" Margin="20,20,20,0" Orientation="Horizontal" VerticalOptions="Start" HorizontalOptions="CenterAndExpand" IsVisible="true">
                 <Button Text="Exportar personajes" BackgroundColor="DarkGray" Command="{Binding ExportCommand}" HorizontalOptions="Center"/>
             </StackLayout>
             <StackLayout Padding="5" Margin="20,20,20,0" Orientation="Horizontal" VerticalOptions="Start" HorizontalOptions="CenterAndExpand" IsVisible="{Binding CancelEnabled}">
                 <Button Text="Cancelar" BackgroundColor="DarkGray" Command="{Binding CancelButtonCommand}" HorizontalOptions="Center"/>
             </StackLayout>
-            <ScrollView Grid.Row="0" BackgroundColor="{DynamicResource SecondaryBackgroundColor}" VerticalOptions="FillAndExpand">
+            <ScrollView Grid.Row="0" BackgroundColor="{DynamicResource LightSecondaryBackgroundColor}" VerticalOptions="FillAndExpand">
                 <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
                     <FlexLayout Direction="Row" AlignItems="Start" JustifyContent="SpaceEvenly" Wrap="Wrap" BindableLayout.ItemsSource="{Binding SelectableElements}" Padding="5, 20, 5, 0" AlignContent="Start" AlignSelf="Auto"  >
                         <BindableLayout.ItemTemplate>
                             <DataTemplate>
-                                <Frame CornerRadius="5" BorderColor="{DynamicResource SeparatorColor}" Padding="5" WidthRequest="110" HeightRequest="110" Margin="0, 0, 0, 20">
+                                <Frame CornerRadius="5" BorderColor="{DynamicResource LightSeparatorColor}" Padding="5" WidthRequest="110" HeightRequest="110" Margin="0, 0, 0, 20" BackgroundColor="{DynamicResource LightLabelSecondaryColor}">
                                     <Frame.GestureRecognizers>
                                         <TapGestureRecognizer Command="{Binding Path=BindingContext.SelectItemCommand, Source={x:Reference P}}" CommandParameter="{Binding .}" />
                                     </Frame.GestureRecognizers>
                                     <StackLayout Padding="10">
                                         <Image Source="{Binding ., Converter={StaticResource GetInitialsImageConverter}, ConverterParameter=128}" />
-                                        <Label Text="{Binding .}" TextColor="{DynamicResource PrimaryTextColor}" HorizontalTextAlignment="Center" LineBreakMode="WordWrap" />
+                                        <Label Text="{Binding .}" TextColor="{DynamicResource LightPrimaryTextColor}" HorizontalTextAlignment="Center" LineBreakMode="WordWrap" />
                                     </StackLayout>
                                 </Frame>
                             </DataTemplate>
