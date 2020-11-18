@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ARPEGOS.Services;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -88,7 +89,7 @@ namespace ARPEGOS
             this.ShortName = elementString.Split('#').Last();
             this.Class = Class;
             this.IsEnabled = true;            
-            this.FormattedName = ShortName.Replace("Per_","").Replace("_Total","").Replace('_',' ').Trim();
+            this.FormattedName = FormatName(this.ShortName);
             this.Description = description;
             this.Value = elementValue;
             this.Maximum = elementMaximum;
@@ -133,8 +134,14 @@ namespace ARPEGOS
 
         private string FormatName(string shortName)
         {
-            string formattedName = string.Empty;
-
+            string formattedName = shortName.Replace("Per_", string.Empty).Replace("_Total", string.Empty);
+            if(!string.IsNullOrEmpty(this.Class))
+            {
+                var firstWord = formattedName.Split('_').First();
+                if (this.Class.Contains(firstWord))
+                    formattedName = formattedName.Replace(firstWord, string.Empty);
+                formattedName = FileService.FormatName(formattedName);
+            }
             return formattedName;
         }
         #endregion

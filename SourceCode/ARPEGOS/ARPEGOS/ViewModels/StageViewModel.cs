@@ -10,7 +10,7 @@ namespace ARPEGOS.ViewModels
 {
     public abstract class StageViewModel: BaseViewModel
     {
-        public static ObservableCollection<Stage> CreationScheme = new ObservableCollection<Stage>();
+        public static ObservableCollection<Stage> CreationScheme = null;
         public static int CurrentStep { get; set; }
         public static double GeneralLimit { get; set; }
         public static double GeneralMaximum { get; set; }

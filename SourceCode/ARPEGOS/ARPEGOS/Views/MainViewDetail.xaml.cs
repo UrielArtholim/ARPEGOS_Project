@@ -17,7 +17,6 @@ namespace ARPEGOS.Views
             this.InitializeComponent();
             this.BindingContext = DependencyHelper.Container.Resolve<MainViewModel>();
         }
-
         protected override async void OnAppearing()
         {
             base.OnAppearing();
