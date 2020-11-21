@@ -81,6 +81,8 @@ namespace ARPEGOS.ViewModels
             {
                 await this.dialogService.DisplayAlert(item.FormattedName, item.Description);
             });
+
+            
         }
 
         private async Task Next()
@@ -127,6 +129,7 @@ namespace ARPEGOS.ViewModels
             catch (Exception e)
             {
                 await dialogService.DisplayAlert(this.StageName, e.Message);
+                --StageViewModel.CurrentStep;
             }
             finally
             {

@@ -50,7 +50,7 @@ namespace ARPEGOS.Views
 
             if (NewValue > OldValue)
             {
-                if (lowerProgressValue > 0)
+                if (lowerProgressValue >= item.Step)
                 {
                     if (item.Value < lowerLimit)
                     {

@@ -39,12 +39,6 @@ namespace ARPEGOS.ViewModels
             set => SetProperty(ref this.data, value);
         }
 
-        private ObservableCollection<Group> Datalist
-        {
-            get => this.datalist;
-            set => SetProperty(ref this.datalist, value);
-        }
-
         public Stage CurrentStage
         {
             get => this.currentStage;
@@ -140,13 +134,12 @@ namespace ARPEGOS.ViewModels
             var character = DependencyHelper.CurrentContext.CurrentCharacter;
             var game = DependencyHelper.CurrentContext.CurrentGame;
             this.CurrentStage = StageViewModel.CreationScheme.ElementAt(StageViewModel.CurrentStep);
-            var stageString = this.CurrentStage.FullName; //https://arpegos-project.org/games/anima/characters/1#Arte_Marcial
+            var stageString = this.CurrentStage.FullName;
             this.StageName = FileService.FormatName(stageString.Split('#').Last());
             this.StageLimitProperty = character.GetLimit(this.CurrentStage.FullName.Split('#').Last(), false, this.CurrentStage.EditGeneralLimit);
             this.StageLimit = character.GetLimitValue(this.stageLimitProperty);
             this.StageProgressLabel = this.StageLimit;
-            // Actualizar stageProgress
-            //this.StageProgress = 1; Buscar limite 1500 y dividir stageprogresslabel / 1500 
+            this.StageProgress = this.StageProgressLabel != 0 ? 1 : 0;
             this.ShowDescription = true;
             this.HasGeneralLimit = this.CurrentStage.EditGeneralLimit;
             this.hasStageLimit = true;
@@ -174,17 +167,18 @@ namespace ARPEGOS.ViewModels
                 this.StageProgress = this.StageProgressLabel / stageMax;
             }
             else
-                this.StageProgress = 1; 
+                this.CurrentLimit = this.StageLimit;
 
-            Datalist = new ObservableCollection<Group>(character.GetIndividualsGrouped(this.CurrentStage.FullName));
-            foreach (var item in datalist)
-                if (string.IsNullOrEmpty(item.Description) || string.IsNullOrWhiteSpace(item.Description))
-                    item.HasDescription = false;
+            var datalist = new ObservableCollection<Group>(character.GetIndividualsGrouped(this.CurrentStage.FullName));
+            foreach (var group in datalist)
+                foreach(var item in group.Elements)
+                    if (string.IsNullOrEmpty(item.Description) || string.IsNullOrWhiteSpace(item.Description))
+                        item.HasDescription = false;
 
-            var availableItems = character.CheckAvailableOptions(this.CurrentStage.FullName, this.HasGeneralLimit, StageViewModel.GeneralLimitProperty, this.GeneralLimit, this.StageLimitProperty, this.StageLimit);
+            //var availableItems = character.CheckAvailableOptions(this.CurrentStage.FullName, this.HasGeneralLimit, StageViewModel.GeneralLimitProperty, this.GeneralLimit, this.StageLimitProperty, this.StageLimit);
             // Add data aux & group
-            
-            foreach(var group in Datalist)
+            /*
+            foreach(var group in datalist)
             {
                 var updatedGroup = group;
                 foreach(var item in group.Elements)
@@ -197,7 +191,7 @@ namespace ARPEGOS.ViewModels
                             item.IsEnabled = false;
                     }
                 }
-            }
+            }*/
 
             Data = new ObservableCollection<Group>(datalist);
 
@@ -223,13 +217,13 @@ namespace ARPEGOS.ViewModels
         {
             await MainThread.InvokeOnMainThreadAsync(()=>this.IsBusy = true);
             var character = DependencyHelper.CurrentContext.CurrentCharacter;
-            var availableItems = character.CheckAvailableOptions(this.CurrentStage.FullName, this.HasGeneralLimit, StageViewModel.GeneralLimitProperty, this.GeneralLimit, this.StageLimitProperty, this.StageLimit);
 
             if (lastGroup == group)
             {
                 group.Expanded = !group.Expanded;
                 if(group.Expanded == true)
                 {
+                    var availableItems = character.CheckAvailableOptions(this.CurrentStage.FullName, this.HasGeneralLimit, StageViewModel.GeneralLimitProperty, this.GeneralLimit, this.StageLimitProperty, this.StageLimit, group.Title);
                     if (availableItems.Count > 0)
                     {
                         foreach (var groupItem in group.Elements)
@@ -248,7 +242,7 @@ namespace ARPEGOS.ViewModels
                                 }
                             }
                             else
-                                groupItem.IsEnabled = false;                            
+                                groupItem.IsEnabled = false;
                         }
                         foreach (var item in group.Elements)
                         {
@@ -262,6 +256,8 @@ namespace ARPEGOS.ViewModels
                                 group.Remove(item);
                         }
                     }
+                    else
+                        group.Clear();
                 }
                 else
                 {
@@ -284,6 +280,7 @@ namespace ARPEGOS.ViewModels
                     await RefreshView();
                 }
                 group.Expanded = true;
+                var availableItems = character.CheckAvailableOptions(this.CurrentStage.FullName, this.HasGeneralLimit, StageViewModel.GeneralLimitProperty, this.GeneralLimit, this.StageLimitProperty, this.StageLimit, group.Title);
                 if (availableItems.Count() > 0)
                 {
                     foreach (var groupItem in group.Elements)
@@ -368,6 +365,7 @@ namespace ARPEGOS.ViewModels
             catch (Exception e)
             {
                 await dialogService.DisplayAlert(this.StageName, e.Message);
+                --StageViewModel.CurrentStep;
             }
             finally
             {
@@ -375,52 +373,62 @@ namespace ARPEGOS.ViewModels
             }
         }
 
-        public void UpdateView()
+        public void UpdateView(string itemClassName = null)
         {
             var character = DependencyHelper.CurrentContext.CurrentCharacter;
-            var availableItems = character.CheckAvailableOptions(this.CurrentStage.FullName, this.HasGeneralLimit, StageViewModel.GeneralLimitProperty, this.GeneralProgressLabel, this.StageLimitProperty, this.StageProgressLabel);
-            var groupEnumerator = Datalist.GetEnumerator();
+            var availableItems = character.CheckAvailableOptions(this.CurrentStage.FullName, this.HasGeneralLimit, StageViewModel.GeneralLimitProperty, this.GeneralProgressLabel, this.StageLimitProperty, this.StageProgressLabel, itemClassName);
+            //var datalist = new ObservableCollection<Group>(Data);
+            var groupEnumerator = Data.GetEnumerator();
             groupEnumerator.Reset();
-
             while(groupEnumerator.MoveNext())
             {
+                var removableItems = new List<Item>();
+
                 var elementIndex = 0;
                 var group = groupEnumerator.Current;
-                var elementEnumerator = group.GetEnumerator();
-                elementEnumerator.Reset();
-
-                while(elementEnumerator.MoveNext())
+                if(group.Title == itemClassName)
                 {
-                    var element = elementEnumerator.Current;
-                    bool elementFound = false;
-
-                    foreach (var item in availableItems)
+                    var elementEnumerator = group.Elements.GetEnumerator();
+                    while (elementEnumerator.MoveNext())
                     {
-                        var elementName = element.FullName.Split('#').Last();
-                        var itemName = item.FullName.Split('#').Last();
-                        if (element.FullName == item.FullName)
+                        var element = elementEnumerator.Current;
+                        bool elementFound = false;
+
+                        var availableEnumerator = availableItems.GetEnumerator();
+                        while (availableEnumerator.MoveNext())
                         {
-                            elementFound = true;
-                            if (group.Contains(element) == false)
+                            var item = availableEnumerator.Current;
+                            var elementName = element.FullName.Split('#').Last();
+                            var itemName = item.FullName.Split('#').Last();
+                            if (element.FullName == item.FullName)
                             {
-                                if (elementIndex >= group.Count())
-                                    group.Add(element);
-                                else
-                                    group.Insert(elementIndex, element);
-                                break;
+                                elementFound = true;
+                                if (group.Contains(element) == false)
+                                {
+                                    if (elementIndex >= group.Count())
+                                        group.Add(element);
+                                    else
+                                        group.Insert(elementIndex, element);
+                                    break;
+                                }
                             }
                         }
+                        if (elementFound == false)
+                            if (group.Contains(element))
+                            {
+                                var item = group.ElementAt(group.IndexOf(element));
+                                if (item.IsSelected == false)
+                                    removableItems.Add(item);
+                            }
+                        ++elementIndex;
                     }
-                    if (elementFound == false)
-                        if (group.Contains(element))
-                        {
-                            var item = group.ElementAt(group.IndexOf(element));
-                            if (item.IsSelected == false)
-                                group.Remove(element);
-                        }
-                    ++elementIndex;
-                }
+
+                    foreach (var itemToRemove in removableItems)
+                        if (group.Contains(itemToRemove))
+                            group.Remove(itemToRemove);
+                }                
             }
+            RefreshCollection();
         }
         private async Task RefreshView()
         {

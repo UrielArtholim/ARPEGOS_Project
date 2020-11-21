@@ -160,6 +160,7 @@ namespace ARPEGOS.ViewModels
             catch (Exception e)
             {
                 await dialogService.DisplayAlert("Exception", e.Message);
+                --StageViewModel.CurrentStep;
             }
             finally
             {

@@ -24,10 +24,11 @@ namespace ARPEGOS.Services
         internal RDFOntologyLiteral CreateLiteral(string value, string type)
         {            
             var CharacterDataModel = this.Ontology.Data;
+            if ((type.ToLower().Contains("int")) && (value.Contains('.') || value.Contains(',')))
+                value = Convert.ToInt32(Math.Floor(Convert.ToSingle(value))).ToString();
             var CharacterLiteral = new RDFOntologyLiteral(new RDFTypedLiteral(value, CheckDatatypeFromString(type)));
             if (!CheckLiteral(value, type))
                 CharacterDataModel.AddLiteral(CharacterLiteral);
-            this.Save();
             return CharacterLiteral;
         }
 
@@ -421,7 +422,7 @@ namespace ARPEGOS.Services
             elementName = FileService.EscapedName(elementName);
             if (elementName.Contains(FileService.EscapedName(this.Name)))
             {
-                if (!CheckFact($"{this.Context}{this.Name}"))
+                if (!CheckFact($"{this.Context}{FileService.EscapedName(this.Name)}"))
                     CharacterSubject = CreateFact(FileService.EscapedName(this.Name));
                 RDFOntologyClass subjectClass;
                 var subjectClassName = "Personaje_Jugador";
@@ -496,11 +497,7 @@ namespace ARPEGOS.Services
                             CharacterPredicate = GamePropertyModel.SelectProperty(PredicateString) as RDFOntologyDatatypeProperty;
                         var value = assertion.TaxonomyObject.Value.ToString().Split('^').First();
                         var valuetype = assertion.TaxonomyObject.Value.ToString().Split('#').Last();
-                        RDFOntologyLiteral Literal;
-                        if (!CheckLiteral(value, valuetype))
-                            Literal = CreateLiteral(value, valuetype);
-                        else
-                            Literal = CharacterDataModel.SelectLiteral(new RDFOntologyLiteral(new RDFTypedLiteral(value, CheckDatatypeFromString(valuetype))).ToString());
+                        RDFOntologyLiteral Literal = CreateLiteral(value, valuetype);
                         CharacterDataModel.AddAssertionRelation(CharacterSubject, CharacterPredicate, Literal);
                     }
                 }

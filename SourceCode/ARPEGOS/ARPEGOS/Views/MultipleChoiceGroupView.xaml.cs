@@ -42,6 +42,7 @@ namespace ARPEGOS.Views
 
             var activeCheckBox = sender as CheckBox;
             var activeItem = activeCheckBox.BindingContext as Item;
+            var activeItemClassName = activeItem.Class.Split('#').Last();
             var character = DependencyHelper.CurrentContext.CurrentCharacter;
             try
             {                
@@ -87,7 +88,7 @@ namespace ARPEGOS.Views
                             character.RemoveObjectProperty(predicate, activeItem.FullName);
                     }
                 }
-                Task.Run(()=> viewModel.UpdateView()).GetAwaiter().GetResult();
+                Task.Run(()=> viewModel.UpdateView(activeItemClassName)).GetAwaiter().GetResult();
             }
             catch(Exception exception)
             {

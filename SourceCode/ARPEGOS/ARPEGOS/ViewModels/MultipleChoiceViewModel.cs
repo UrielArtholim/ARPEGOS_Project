@@ -140,7 +140,7 @@ namespace ARPEGOS.ViewModels
             this.StageLimitProperty = character.GetLimit(this.CurrentStage.FullName.Split('#').Last(), false, this.CurrentStage.EditGeneralLimit);
             this.StageLimit = character.GetLimitValue(this.stageLimitProperty);
             this.StageProgressLabel = this.StageLimit;
-            this.StageProgress = 1;
+            this.StageProgress = this.StageProgressLabel != 0 ? 1 : 0;
             this.ShowDescription = true;
             this.HasGeneralLimit = this.CurrentStage.EditGeneralLimit;
             this.hasStageLimit = true;
@@ -166,8 +166,6 @@ namespace ARPEGOS.ViewModels
                 var stageMax = Convert.ToDouble(character.GetValue(definition));
                 this.StageProgress = this.StageProgressLabel / stageMax;
             }
-            else
-                this.StageProgress = 1;
 
             this.Elements = new ObservableCollection<Item>(character.GetIndividuals(this.CurrentStage.FullName));
             var availableItems = character.CheckAvailableOptions(this.CurrentStage.FullName, this.HasGeneralLimit, StageViewModel.GeneralLimitProperty, this.GeneralLimit, this.StageLimitProperty, this.StageLimit);
@@ -189,10 +187,7 @@ namespace ARPEGOS.ViewModels
                             datalist.Remove(item);
                     }
                 }
-            }
-            else
-                Data.Clear();
-            
+            }            
 
             Data = new ObservableCollection<Item>(datalist);
 
@@ -259,6 +254,7 @@ namespace ARPEGOS.ViewModels
             catch (Exception e)
             {
                 await dialogService.DisplayAlert(this.StageName, e.Message);
+                --StageViewModel.CurrentStep;
             }
             finally
             {

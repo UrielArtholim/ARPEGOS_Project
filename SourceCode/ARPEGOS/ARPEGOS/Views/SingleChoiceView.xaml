@@ -16,13 +16,14 @@
                                        Padding="15" 
                                        Margin="10,10,10,0" 
                                        BorderColor="{DynamicResource LightSeparatorColor}">
-                                    <Frame.GestureRecognizers>
-                                        <TapGestureRecognizer Command="{Binding SelectItem}" CommandParameter="{Binding .}"/>
-                                    </Frame.GestureRecognizers>
+                                    <!--Frame.GestureRecognizers>
+                                        <TapGestureRecognizer Command="{Binding RadioChecked}" CommandParameter="{Binding .}"/>
+                                    <Frame.GestureRecognizers/-->
                                     <StackLayout Orientation="Horizontal"  
                                                  HorizontalOptions="FillAndExpand" 
                                                  VerticalOptions="CenterAndExpand" >
-                                        <RadioButton  Grid.Row="0"
+                                        <RadioButton x:Name="Radio"  
+                                                   Grid.Row="0"
                                                    Grid.Column="0" 
                                                    IsChecked="{Binding SelectItem}" 
                                                    HorizontalOptions="Start" 

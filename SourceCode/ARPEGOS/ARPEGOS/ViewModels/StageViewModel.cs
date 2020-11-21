@@ -18,5 +18,15 @@ namespace ARPEGOS.ViewModels
         public static string GeneralLimitProperty { get; set; } = null;
         public static string RootStage { get; set; }
         public static bool ApplyOnCharacter { get; set; } = false;
+        public static void Reset()
+        {
+            CreationScheme = null;
+            GeneralLimit = 0;
+            GeneralMaximum = 0;
+            GeneralProgress = 0;
+            GeneralLimitProperty = null;
+            RootStage = null;
+            ApplyOnCharacter = false;
+        }
     }
 }

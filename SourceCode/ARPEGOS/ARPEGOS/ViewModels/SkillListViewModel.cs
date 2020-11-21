@@ -21,7 +21,7 @@ namespace ARPEGOS.ViewModels
         private ObservableCollection<string> data;
         public ObservableCollection<string> Data
         {
-            get => data;
+            get => this.data;
             set => this.SetProperty(ref this.data, value);
         }
 

@@ -267,7 +267,7 @@ namespace ARPEGOS.Services
         /// <param name="GeneralLimitValue">Value of the general limit</param>
         /// <param name="PartialLimitValue">Value of the partial limit</param>
         /// <returns></returns>
-        public List<Item> CheckAvailableOptions (string stageString, bool hasGeneralLimitValue, string GeneralLimitName, double generalLimitValue, string StageLimitName, double partialLimitValue)
+        public List<Item> CheckAvailableOptions (string stageString, bool hasGeneralLimitValue, string GeneralLimitName, double generalLimitValue, string StageLimitName, double partialLimitValue, string groupName = null)
         {
             var character = DependencyHelper.CurrentContext.CurrentCharacter;
             var game = DependencyHelper.CurrentContext.CurrentGame;
@@ -282,19 +282,51 @@ namespace ARPEGOS.Services
             bool stageHasGroups = false;
             var stageGroups = this.GetIndividualsGrouped(stageString);
 
-            if (stageSubclassesEntries.EntriesCount > 0)
+            if(groupName != null)
             {
-                stageHasGroups = true;
-                foreach (var group in stageGroups)
-                    foreach (var item in group)
+                var groupString = character.GetString(groupName);
+                var groupIsClass = character.CheckClass(groupString, false);
+                if(groupIsClass == true)
+                {
+                    var groupElements = this.GetIndividuals(groupString);
+                    foreach (var item in groupElements)
                         stageOptions.Add(item);
+                }
+                else
+                {
+                    if (stageSubclassesEntries.EntriesCount > 0)
+                    {
+                        stageHasGroups = true;
+                        foreach (var group in stageGroups)
+                            foreach (var item in group)
+                                stageOptions.Add(item);
+                    }
+                    else
+                    {
+                        var stageElements = this.GetIndividuals(stageString);
+                        foreach (var item in stageElements)
+                            stageOptions.Add(item);
+                    }
+                }
             }
             else
             {
-                var stageElements = this.GetIndividuals(stageString);
-                foreach (var item in stageElements)
-                    stageOptions.Add(item);
+                if (stageSubclassesEntries.EntriesCount > 0)
+                {
+                    stageHasGroups = true;
+                    foreach (var group in stageGroups)
+                        foreach (var item in group)
+                            stageOptions.Add(item);
+                }
+                else
+                {
+                    var stageElements = this.GetIndividuals(stageString);
+                    foreach (var item in stageElements)
+                        stageOptions.Add(item);
+                }
             }
+
+            
 
             if(stageHasGroups == true)
             {

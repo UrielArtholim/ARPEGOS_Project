@@ -44,13 +44,13 @@ namespace ARPEGOS.Views
 
             double lowerLimit = viewModel.StageLimit;
             if (viewModel.HasGeneralLimit == true)
-                lowerProgressValue = Math.Min(viewModel.GeneralLimit, viewModel.StageLimit);
+                lowerLimit = Math.Min(viewModel.GeneralLimit, viewModel.StageLimit);
 
             if (NewValue > OldValue)
             {
                 if(lowerProgressValue > 0)
                 {
-                    if(item.Value < lowerLimit)
+                    if(item.Step <= lowerProgressValue)
                     {
                         ++item.Value;
                         if (viewModel.CurrentStage.EditStageLimit == true)

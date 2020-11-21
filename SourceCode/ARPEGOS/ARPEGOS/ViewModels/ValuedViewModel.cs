@@ -135,6 +135,7 @@ namespace ARPEGOS.ViewModels
             this.StageLimit = character.GetLimitValue(this.stageLimitProperty);
             this.CurrentLimit = this.StageLimit;
             this.StageProgressLabel = this.StageLimit;
+            this.StageProgress = (this.StageProgressLabel > 0 )? 1 : 0;
             this.ShowDescription = true;
             this.HasGeneralLimit = this.CurrentStage.EditGeneralLimit;
             this.hasStageLimit = true;
@@ -157,27 +158,16 @@ namespace ARPEGOS.ViewModels
                 this.GeneralProgressLabel = this.GeneralLimit;
                 this.CurrentLimit = Math.Min(this.GeneralLimit, this.StageLimit);
 
+                // To maintain stage progress bar state
                 var stageProperty = game.Ontology.Model.PropertyModel.SelectProperty(character.GetString(this.stageLimitProperty));
                 var stagePropertyDefinedAnnotations = game.Ontology.Model.PropertyModel.Annotations.IsDefinedBy.SelectEntriesBySubject(stageProperty);
                 var definition = stagePropertyDefinedAnnotations.Single().TaxonomyObject.ToString().Split('^').First();
                 var stageMax = Convert.ToDouble(character.GetValue(definition));
-                this.StageProgress = this.StageProgressLabel / stageMax;
+                //this.StageProgress = this.StageProgressLabel / stageMax;       
+                this.StageProgress = this.StageProgressLabel > 0 ? 1 : 0;
             }
             else
-                this.StageProgress = 1;
-
-            if (this.HasGeneralLimit == true)
-            {
-                this.HasGeneralLimit = true;
-                this.GeneralLimit = StageViewModel.GeneralLimit;
-                this.GeneralProgress = StageViewModel.GeneralProgress;
-                this.GeneralProgressLabel = this.GeneralLimit;
-            }
-
-            if (this.HasGeneralLimit == true)
-                this.CurrentLimit = Math.Min(Convert.ToInt32(StageViewModel.GeneralLimit), this.StageLimit);
-            else
-                this.CurrentLimit = this.StageLimit;
+                this.CurrentLimit = this.StageLimit;            
 
             if(character.CheckClass(this.CurrentStage.FullName, false))
             {
@@ -340,6 +330,7 @@ namespace ARPEGOS.ViewModels
             catch (Exception e)
             {
                 await dialogService.DisplayAlert(this.StageName, e.Message);
+                --StageViewModel.CurrentStep;
             }
             finally
             {

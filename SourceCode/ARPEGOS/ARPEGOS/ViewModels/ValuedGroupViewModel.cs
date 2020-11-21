@@ -142,6 +142,7 @@ namespace ARPEGOS.ViewModels
             this.HasStageLimit = true;
             this.CurrentLimit = this.StageLimit;
             this.StageProgressLabel = this.StageLimit;
+            this.StageProgress = this.StageProgressLabel != 0 ? 1 : 0;
 
             if (StageViewModel.GeneralLimitProperty == null && StageName != "Nivel")
             {
@@ -172,8 +173,6 @@ namespace ARPEGOS.ViewModels
                     }                    
                 }
             }                
-            else
-                this.StageProgress = 1;
 
             Datalist = new ObservableCollection<Group>(character.GetIndividualsGrouped(this.CurrentStage.FullName));
             foreach (var group in Datalist)
@@ -311,6 +310,7 @@ namespace ARPEGOS.ViewModels
             catch (Exception e)
             {
                 await dialogService.DisplayAlert(this.StageName, e.Message);
+                --StageViewModel.CurrentStep;
             }
             finally
             {

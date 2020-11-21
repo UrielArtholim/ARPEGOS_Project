@@ -3,6 +3,7 @@ namespace ARPEGOS.Services
 {
     using RDFSharp.Semantics.OWL;
     using System.Threading.Tasks;
+    using Xamarin.Essentials;
 
     public partial class CharacterOntologyService : OntologyService
     {
@@ -14,7 +15,7 @@ namespace ARPEGOS.Services
             lock(SaveLock)
             {
                 var graph = this.Ontology.ToRDFGraph(RDFSemanticsEnums.RDFOntologyInferenceExportBehavior.ModelAndData);
-                Task.Run(()=> graph.ToFile(RDFFormat, this.Path)).GetAwaiter().GetResult();
+                MainThread.BeginInvokeOnMainThread(()=> graph.ToFile(RDFFormat, this.Path));
             }            
         }
     }

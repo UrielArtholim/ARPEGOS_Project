@@ -4,6 +4,7 @@ namespace ARPEGOS.Services
     using System.Collections.Generic;
     using System.Linq;
     using System.Threading.Tasks;
+    using ARPEGOS.Helpers;
     using RDFSharp.Model;
     using RDFSharp.Semantics.OWL;
 
@@ -30,7 +31,7 @@ namespace ARPEGOS.Services
             var predicate = !this.CheckObjectProperty(predicateCharacterString) ? this.CreateObjectProperty(predicateName) : this.Ontology.Model.PropertyModel.SelectProperty(predicateCharacterString);
             var objectFact = !this.CheckIndividual(objectCharacterString) ? this.CreateIndividual(objectName) : characterDataModel.SelectFact(objectCharacterString);
             characterDataModel.AddAssertionRelation(subjectFact, predicate as RDFOntologyObjectProperty, objectFact);
-            AddClassification(predicate.ToString());
+            AddClassification(predicate.ToString(), objectFact.ToString());
         }
 
         /// <summary>
@@ -59,8 +60,9 @@ namespace ARPEGOS.Services
         /// Asserts an annotation property to classify a character property
         /// </summary>
         /// <param name="propertyName">Name of the property</param>
-        internal void AddClassification (string propertyString)
+        internal void AddClassification (string propertyString, string objectString = null)
         {
+            var game = DependencyHelper.CurrentContext.CurrentGame;
             var currentProperty = this.Ontology.Model.PropertyModel.SelectProperty(propertyString);
             var text = string.Empty;
             var descriptionType = "string";
@@ -115,59 +117,46 @@ namespace ARPEGOS.Services
                 annotation = new RDFOntologyAnnotationProperty(new RDFResource(annotationPropertyString));
                 this.Ontology.Model.PropertyModel.AddProperty(annotation);
             }
+            this.Ontology.Model.PropertyModel.AddCustomAnnotation(annotation, currentProperty, description);
 
-            this.Ontology.Model.PropertyModel.AddCustomAnnotation(annotation, currentProperty, description);           
-
-            //Comprobar que la propiedad es de una habilidad
-            var activeSkillIdentifier = "Activa";
-            var propertyParentEntries = this.Ontology.Model.PropertyModel.Relations.SubPropertyOf.SelectEntriesBySubject(currentProperty);
-            if (propertyParentEntries.Count() > 0)
+            if(objectString != null)
             {
-                var propertyParent = propertyParentEntries.Single().TaxonomyObject;
-                var propertyParentName = propertyParent.ToString().Split('#').Last();
-                while (propertyParent != null && propertyParentName.Contains(activeSkillIdentifier))
-                {
-                    var propertyParentTaxonomy = this.Ontology.Model.PropertyModel.Relations.SubPropertyOf.SelectEntriesBySubject(propertyParent);
-                    if (propertyParentTaxonomy.EntriesCount > 0)
+                bool activeSkillAnnotationFound = false;
+                var objectFact = this.Ontology.Data.SelectFact(objectString);
+                var objectFactCustomAnnotations = this.Ontology.Data.Annotations.CustomAnnotations.SelectEntriesBySubject(objectFact);
+                if(objectFactCustomAnnotations.Count()> 0)
+                    activeSkillAnnotationFound = objectFactCustomAnnotations.Where(entry => entry.TaxonomyPredicate.ToString().Contains("ActiveSkill")).Count() > 0 ? true : false;
+                if (activeSkillAnnotationFound == false)
+                {                    
+                    var objectClass = currentProperty.Range.ToString();
+                    if (objectClass != null)
                     {
-                        propertyParent = propertyParentTaxonomy.Single().TaxonomyObject;
-                        propertyParentName = propertyParent.ToString().Split('#').Last();
-                    }
-                }
-
-                if(propertyParent != null)
-                {
-                    if (this.CheckDatatypeProperty(propertyString))
-                    {
-                        if (propertyString.Contains("_Total"))
+                        var objectClassName = objectClass.Split('#').Last();
+                        var gameObjectClassString = $"{game.Context}{objectClassName}";
+                        var gameObjectClass = game.Ontology.Model.ClassModel.SelectClass(gameObjectClassString);
+                        var gameCustomAnnotations = game.Ontology.Model.ClassModel.Annotations.CustomAnnotations;
+                        var objectClassCustomAnnotations = gameCustomAnnotations.SelectEntriesBySubject(gameObjectClass);
+                        if (objectClassCustomAnnotations.Count() > 0)
                         {
-                            description = CreateLiteral("true", "boolean");
-                            AnnotationType = "SkillProperty";
-                            annotation = this.Ontology.Model.PropertyModel.SelectProperty($"{this.Context}{AnnotationType}") as RDFOntologyAnnotationProperty;
-                            if (annotation == null)
+                            var objectClassActiveSkillAnnotation = objectClassCustomAnnotations.Where(entry => entry.TaxonomyPredicate.ToString().Contains("ActiveSkill"));
+                            if (objectClassActiveSkillAnnotation.Count() > 0)
                             {
-                                annotation = new RDFOntologyAnnotationProperty(new RDFResource($"{this.Context}{AnnotationType}"));
-                                this.Ontology.Model.PropertyModel.AddProperty(annotation);
-                                this.Save();
+                                annotationPropertyString = $"{this.Context}ActiveSkill";
+                                annotation = this.Ontology.Model.PropertyModel.SelectProperty(annotationPropertyString) as RDFOntologyAnnotationProperty;
+                                if (annotation == null)
+                                {
+                                    annotation = new RDFOntologyAnnotationProperty(new RDFResource(annotationPropertyString));
+                                    this.Ontology.Model.PropertyModel.AddProperty(annotation);
+                                }
+
+                                var annotationValue = new RDFOntologyLiteral(new RDFTypedLiteral("true", RDFModelEnums.RDFDatatypes.XSD_BOOLEAN));
+                                this.Ontology.Data.AddCustomAnnotation(annotation, objectFact, annotationValue);
                             }
-                            this.Ontology.Model.PropertyModel.AddCustomAnnotation(annotation as RDFOntologyAnnotationProperty, currentProperty, description);
                         }
-                    }
-                    else if (this.CheckObjectProperty(propertyString))
-                    {
-                        description = CreateLiteral("true", "boolean");
-                        AnnotationType = "SkillProperty";
-                        annotation = this.Ontology.Model.PropertyModel.SelectProperty($"{this.Context}{AnnotationType}") as RDFOntologyAnnotationProperty;
-                        if (annotation == null)
-                        {
-                            annotation = new RDFOntologyAnnotationProperty(new RDFResource($"{this.Context}{AnnotationType}"));
-                            this.Ontology.Model.PropertyModel.AddProperty(annotation);
-                            this.Save();
-                        }
-                        this.Ontology.Model.PropertyModel.AddCustomAnnotation(annotation as RDFOntologyAnnotationProperty, currentProperty, description);
                     }
                 }
             }
+            
             this.Save();
         }
     }

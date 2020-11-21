@@ -80,8 +80,15 @@ namespace ARPEGOS.Services
                         {
                             skillName = item;
                             var skillObjectFact = this.Ontology.Data.SelectFact(skillName);
-                            skillDescription = this.Ontology.Data.Annotations.Comment.SelectEntriesBySubject(skillObjectFact).Single().TaxonomyObject.ToString();
-                            skills.Add(new Item(skillName, skillDescription));
+                            if(skillObjectFact != null)
+                            {
+                                var skillDescriptionEntries = this.Ontology.Data.Annotations.Comment.SelectEntriesBySubject(skillObjectFact);
+                                if (skillDescriptionEntries.Count() == 1)
+                                {
+                                    skillDescription = skillDescriptionEntries.Single().TaxonomyObject.ToString();
+                                    skills.Add(new Item(skillName, skillDescription));
+                                }
+                            }                            
                         }
                         else
                         {
@@ -1362,7 +1369,7 @@ namespace ARPEGOS.Services
                     {
                         // 3.2.1.1 If element is a datatype property, check if the character has any entry with it
                         // 3.2.1.1 Get character fact
-                        var CharacterFact = CharacterOntology.Data.SelectFact($"{this.Context}{this.Name}");
+                        var CharacterFact = CharacterOntology.Data.SelectFact($"{this.Context}{FileService.EscapedName(this.Name)}");
                         // 3.2.1.2 Check if character has element datatype property defined
                         var characterElementPropertyString = GetString(element, true);
                         var characterElementProperty = CharacterOntology.Model.PropertyModel.SelectProperty(characterElementPropertyString) as RDFOntologyDatatypeProperty;
@@ -1388,7 +1395,7 @@ namespace ARPEGOS.Services
                                     //3.2.1.2.3A.2 To get its value, we call the function GetValue with it, and convert it to string
                                     var gameElementPropertyValue = GetValue(definition).ToString();
                                     //3.2.1.2.3A.3 Now we can add the property with its default value inside the character (So we use the character context strings)
-                                    AddDatatypeProperty($"{this.Context}{this.Name}", gameElementPropertyString, gameElementPropertyValue, definitionType);
+                                    AddDatatypeProperty($"{this.Context}{FileService.EscapedName(this.Name)}", gameElementPropertyString, gameElementPropertyValue, definitionType);
                                 }
                                 else
                                 {
@@ -1396,7 +1403,7 @@ namespace ARPEGOS.Services
                                     // 3.2.1.2.3B.1 We access the range of the property, so we can know its value type
                                     var valuetype = gameElementProperty.Range.ToString().Split('#').Last();
                                     // 3.2.1.2.3B.2 Now we can add the property with the user input inside the character (So we use the character context strings)
-                                    AddDatatypeProperty($"{this.Context}{this.Name}", characterElementPropertyString, User_Input.ToString(), valuetype);
+                                    AddDatatypeProperty($"{this.Context}{FileService.EscapedName(this.Name)}", characterElementPropertyString, User_Input.ToString(), valuetype);
                                 }
                                 // After adding the property, now we can access it
                                 // 3.2.1.2.4 Get the character property added from the character ontology assertions using the character fact and the propertyname as filters
@@ -1487,7 +1494,8 @@ namespace ARPEGOS.Services
                     if (!Operators.Any(op => previousElement == op))
                     {
                         // 3.3.2.1 Get character fact
-                        var characterFact = CharacterOntology.Data.SelectFact($"{this.Context}{this.Name}");
+                        var characterString = $"{this.Context}{FileService.EscapedName(this.Name)}";
+                        var characterFact = CharacterOntology.Data.SelectFact(characterString);
                         // 3.3.2.2 Get character class
                         var characterClass = CharacterOntology.Data.Relations.ClassType.SelectEntriesBySubject(characterFact).Single().TaxonomyObject;
                         // 3.3.2.3 Get characterClassName
@@ -1806,13 +1814,13 @@ namespace ARPEGOS.Services
                     if (nextElementIsValue == false)
                     {
                         // 3.6.2A.1 Get character fact
-                        var CharacterFact = CharacterOntology.Data.SelectFact($"{this.Context}{this.Name}");
+                        var CharacterFact = CharacterOntology.Data.SelectFact($"{this.Context}{FileService.EscapedName(this.Name)}");
                         var SubjectFact = CharacterFact;
                         // 3.6.2A.2 Check if nextElement is a datatypeProperty 
                         if (CheckDatatypeProperty(GetString(nextElement, true)))
                         {
                             // 3.6.2A.2A.1 Get character class name
-                            var characterClassName = GetElementClass($"{this.Context}{this.Name}", true).ToString().Split('#').Last();
+                            var characterClassName = GetElementClass($"{this.Context}{FileService.EscapedName(this.Name)}", true).ToString().Split('#').Last();
                             // 3.6.2A.2A.2 Get nextElement first word
                             var nextElementFirstWord = nextElement.Split('_').First();
                             // 3.6.2A.2A.3 Check if character class name contains next element first word

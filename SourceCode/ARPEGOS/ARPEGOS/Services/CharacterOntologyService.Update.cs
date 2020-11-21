@@ -86,14 +86,14 @@ namespace ARPEGOS.Services
                 }
                 else
                 {
-                    subjectString = $"{this.Context}{this.Name}";
+                    subjectString = $"{this.Context}{FileService.EscapedName(this.Name)}";
                     valuetype = predicate.Range.Value.ToString().Split('#').Last();
                 }
             }
             else
             {
                 predicate = CreateDatatypeProperty(predicateName);
-                subjectString = $"{this.Context}{this.Name}";
+                subjectString = $"{this.Context}{FileService.EscapedName(this.Name)}";
                 valuetype = predicate.Range.Value.ToString().Split('#').Last();
             }
             AddDatatypeProperty(subjectString, predicateString, value, valuetype);            
@@ -126,13 +126,13 @@ namespace ARPEGOS.Services
                 else
                 {
                     predicate = CreateObjectProperty(predicateName);
-                    subject = $"{this.Context}{this.Name}";
+                    subject = $"{this.Context}{FileService.EscapedName(this.Name)}";
                 }
             }
             else
             {
                 predicate = CreateObjectProperty(predicateName);
-                subject = $"{this.Context}{this.Name}";
+                subject = $"{this.Context}{FileService.EscapedName(this.Name)}";
             }
             AddObjectProperty(subject, predicateString, objectString);
             this.Save();
