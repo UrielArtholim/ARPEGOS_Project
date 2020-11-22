@@ -3,12 +3,14 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ARPEGOS.Views.MultipleChoiceGroupView"
              x:Name="MultipleChoiceGroup"
-             Title="{Binding StageName}">
+             Title="{Binding StageName}"
+             NavigationPage.HasBackButton="False"
+             Visual="Material">
     <ContentPage.Content>
         <Grid>
             <StackLayout Spacing="20" Padding="10" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
-                <StackLayout Orientation="Vertical">
-                    <StackLayout Orientation="Vertical" Spacing="0" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" IsVisible="{Binding HasGeneralLimit}">
+                <StackLayout Orientation="Vertical" Padding="10">
+                    <StackLayout Orientation="Vertical" Spacing="5" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" IsVisible="{Binding HasGeneralLimit}">
                         <StackLayout Orientation="Horizontal">
                             <Label Text="Límite general" HorizontalOptions="StartAndExpand" FontSize="Medium" />
                             <Label Text="{Binding GeneralProgressLabel, StringFormat='{0:F0}'}" HorizontalOptions="EndAndExpand" FontSize="Medium"/>

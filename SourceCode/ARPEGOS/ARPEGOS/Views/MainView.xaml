@@ -11,7 +11,7 @@
     <pages:MainViewMaster x:Name="MasterPage" />
   </MasterDetailPage.Master>
   <MasterDetailPage.Detail>
-    <NavigationPage>
+    <NavigationPage x:Name="Navigation">
       <x:Arguments>
         <pages:MainViewDetail />
       </x:Arguments>

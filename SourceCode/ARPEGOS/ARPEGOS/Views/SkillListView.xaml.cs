@@ -18,7 +18,7 @@ namespace ARPEGOS.Views
         public SkillListView ()
         {
             InitializeComponent();
-            this.BindingContext = DependencyHelper.Container.Resolve<SkillListViewModel>();
+            this.BindingContext = new SkillListViewModel();
         }
     }
 }

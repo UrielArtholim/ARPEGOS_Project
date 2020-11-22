@@ -2,6 +2,7 @@
 namespace ARPEGOS.Configuration
 {
     using ARPEGOS.Services;
+    using ARPEGOS.Views;
 
     public class Context
     {
@@ -18,5 +19,7 @@ namespace ARPEGOS.Configuration
                 this._currentCharacter = value;
             }
         }
+
+        public MainView AppMainView { get; set; }
     }
 }

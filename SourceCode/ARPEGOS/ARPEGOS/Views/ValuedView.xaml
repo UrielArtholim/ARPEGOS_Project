@@ -5,7 +5,8 @@
              x:Class="ARPEGOS.Views.ValuedView"
              Visual="Material"
              Title="{Binding StageName}"
-             x:Name="ValuedChoice">
+             x:Name="ValuedChoice"
+             NavigationPage.HasBackButton="False">
     <ContentPage.Content>
         <Grid>
             <StackLayout Spacing="20" Padding="0" Margin="20,20,20,20">

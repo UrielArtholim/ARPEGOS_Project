@@ -3,7 +3,9 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ARPEGOS.Views.ValuedGroupView"
              x:Name="ValuedGroup"
-             Title="{Binding StageName}">
+             Title="{Binding StageName}"
+             NavigationPage.HasBackButton="False"
+             Visual="Material">
     <ContentPage.Content>
         <Grid>
             <StackLayout  Spacing="20" Padding="0" Margin="20,20,20,20" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">

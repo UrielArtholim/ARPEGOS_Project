@@ -1,4 +1,5 @@
-﻿using ARPEGOS.Helpers;
+﻿using ARPEGOS.Controls;
+using ARPEGOS.Helpers;
 using ARPEGOS.Models;
 using ARPEGOS.Services;
 using ARPEGOS.ViewModels.Base;
@@ -21,6 +22,8 @@ namespace ARPEGOS.ViewModels
         private Stage currentStage;
         private string stageString;
         private string stageName;
+        private MainView mainPage = Application.Current.MainPage as MainView;
+
         public string StageName
         {
             get => stageName;
@@ -50,6 +53,7 @@ namespace ARPEGOS.ViewModels
         public ICommand NextCommand { get; private set; }
         public ICommand InfoCommand { get; private set; }
         public ICommand SelectCommand { get; private set; }
+        public ICommand BackButtonCommand { get; private set; }
 
         public SingleChoiceViewModel()
         {
@@ -82,7 +86,14 @@ namespace ARPEGOS.ViewModels
                 await this.dialogService.DisplayAlert(item.FormattedName, item.Description);
             });
 
+            this.BackButtonCommand = new Command(async () => await CreationProcessBack());
             
+        }
+        private async Task CreationProcessBack()
+        {
+            if (StageViewModel.CreationScheme != null && StageViewModel.CurrentStep > 0)
+                --StageViewModel.CurrentStep;
+            await App.Navigation.PopAsync();
         }
 
         private async Task Next()
@@ -123,7 +134,11 @@ namespace ARPEGOS.ViewModels
                 else
                 {
                     await dialogService.DisplayAlert("Nota informativa", "Proceso de creación finalizado correctamente");
-                    await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.PopToRootAsync());
+                    await MainThread.InvokeOnMainThreadAsync(() =>
+                    {
+                        App.Navigation = DependencyHelper.CurrentContext.AppMainView.Navigation;
+                        App.Current.MainPage = DependencyHelper.CurrentContext.AppMainView;
+                    });
                 }
             }
             catch (Exception e)

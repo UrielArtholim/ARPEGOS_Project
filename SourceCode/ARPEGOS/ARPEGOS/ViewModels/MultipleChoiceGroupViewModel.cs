@@ -257,7 +257,7 @@ namespace ARPEGOS.ViewModels
                         }
                     }
                     else
-                        group.Clear();
+                        await MainThread.InvokeOnMainThreadAsync(() => group.Clear());
                 }
                 else
                 {
@@ -275,10 +275,8 @@ namespace ARPEGOS.ViewModels
             else
             {
                 if (lastGroup != null)
-                {
                     lastGroup.Expanded = false;
-                    await RefreshView();
-                }
+
                 group.Expanded = true;
                 var availableItems = character.CheckAvailableOptions(this.CurrentStage.FullName, this.HasGeneralLimit, StageViewModel.GeneralLimitProperty, this.GeneralLimit, this.StageLimitProperty, this.StageLimit, group.Title);
                 if (availableItems.Count() > 0)
@@ -306,6 +304,8 @@ namespace ARPEGOS.ViewModels
                             if (group.Contains(item))
                             group.Remove(item);
                 }
+                else
+                    await MainThread.InvokeOnMainThreadAsync(() => group.Clear());
             }
             await RefreshView();
             lastGroup = group;
@@ -359,7 +359,11 @@ namespace ARPEGOS.ViewModels
                 else
                 {
                     await dialogService.DisplayAlert("Nota informativa", "Proceso de creación finalizado correctamente");
-                    await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.PopToRootAsync());
+                    await MainThread.InvokeOnMainThreadAsync(() =>
+                    {
+                        App.Navigation = DependencyHelper.CurrentContext.AppMainView.Navigation;
+                        App.Current.MainPage = DependencyHelper.CurrentContext.AppMainView;
+                    });
                 }
             }
             catch (Exception e)

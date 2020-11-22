@@ -4,11 +4,12 @@
              xmlns:controls="clr-namespace:ARPEGOS.Controls"
              x:Class="ARPEGOS.Views.CreationRootView"
              Title="{Binding FirstStage}"
-             x:Name="CreationPage">
+             x:Name="CreationPage"
+             Visual="Material">
     <ContentPage.Content>
         <Grid>
             <StackLayout Spacing="10" Padding="10" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
-                <ListView x:Name="CreationRootList" ItemsSource="{Binding Data}" HasUnevenRows="True" SelectionMode="None" CachingStrategy="RecycleElementAndDataTemplate">
+                <ListView x:Name="CreationRootList" ItemsSource="{Binding Data}" HasUnevenRows="True" SelectionMode="None" CachingStrategy="RetainElement">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>
@@ -60,4 +61,5 @@
             </Frame>
         </Grid>
     </ContentPage.Content>
+
 </ContentPage>

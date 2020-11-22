@@ -60,11 +60,40 @@ namespace ARPEGOS.Services
         /// <returns> Set of string which contains the names of the skills </returns>
         public IEnumerable<Item> GetCharacterSkills ()
         {
+            var character = DependencyHelper.CurrentContext.CurrentCharacter;
             var characterProperties = GetCharacterProperties();
             var skills = new ObservableCollection<Item>();
-            var AnnotationType = "SkillProperty";
+            var AnnotationType = "ActiveSkill";
             foreach (var pair in characterProperties)
             {
+                var propertyName = pair.Key.Split('#').Last().Replace("Per_", string.Empty).Replace("_Total", string.Empty);
+                var propertyString = character.GetString(propertyName);
+                if(propertyString != null)
+                {
+                    var propertyFact = character.Ontology.Data.SelectFact(propertyString);
+                    if (propertyFact != null)
+                    {
+                        var propertyFactCustomAnnotations = character.Ontology.Data.Annotations.CustomAnnotations.SelectEntriesBySubject(propertyFact);
+                        if(propertyFactCustomAnnotations.Count() > 0)
+                        {
+                            var propertyFactSkillAnnotations = propertyFactCustomAnnotations.Where(entry => entry.TaxonomyPredicate.ToString().Contains(AnnotationType));
+                            if(propertyFactSkillAnnotations.Count()>0)
+                            {
+                                var skillDescriptionEntries = character.Ontology.Data.Annotations.Comment.SelectEntriesBySubject(propertyFact);
+                                if(skillDescriptionEntries.Count() > 0)
+                                {
+                                    var skillDescription = skillDescriptionEntries.Single().TaxonomyObject.ToString();
+                                    skills.Add(new Item(propertyName, skillDescription));
+                                }
+                            }
+                        }
+
+                    }
+                }
+
+                
+
+                /*
                 var itemList = pair.Value;
                 foreach(var item in itemList)
                 {
@@ -95,7 +124,7 @@ namespace ARPEGOS.Services
                             skills.Add(new Item(pair.Key, skillDescription)); //DataItem
                         }
                     }
-                }                
+                }   */             
             }
             return skills;
         }//MODIFIED

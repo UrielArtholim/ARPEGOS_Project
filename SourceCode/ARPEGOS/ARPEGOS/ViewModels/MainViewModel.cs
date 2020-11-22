@@ -118,7 +118,11 @@ namespace ARPEGOS.ViewModels
                         {
                             await MainThread.InvokeOnMainThreadAsync(()=> this.IsBusy = true);
                             DependencyHelper.CurrentContext.CurrentCharacter = await OntologyService.CreateCharacter(item, DependencyHelper.CurrentContext.CurrentGame);
-                            await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.PushAsync((new CreationRootView())));
+                            await MainThread.InvokeOnMainThreadAsync(() =>
+                            {
+                                App.Current.MainPage = new NavigationPage(new CreationRootView());
+                                App.Navigation = App.Current.MainPage.Navigation;
+                            });                            
                             await MainThread.InvokeOnMainThreadAsync(() => this.IsBusy = false);
                         }
                         this.Load(this.CurrentStatus);
@@ -129,7 +133,11 @@ namespace ARPEGOS.ViewModels
                         {
                             await MainThread.InvokeOnMainThreadAsync(() => this.IsBusy = true);
                             DependencyHelper.CurrentContext.CurrentCharacter = await OntologyService.CreateCharacter(item, DependencyHelper.CurrentContext.CurrentGame);
-                            await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.PushAsync((new CreationRootView())));
+                            await MainThread.InvokeOnMainThreadAsync(() =>
+                            {
+                                App.Current.MainPage = new NavigationPage(new CreationRootView());
+                                App.Navigation = App.Current.MainPage.Navigation;
+                            });
                             await MainThread.InvokeOnMainThreadAsync(() => this.IsBusy = false);
                         }
                         this.Load(this.CurrentStatus);
@@ -137,7 +145,7 @@ namespace ARPEGOS.ViewModels
                 }
             });
 
-            this.DeleteButtonCommand = new Command(async() => 
+            this.DeleteButtonCommand = new Command(() => 
             {
                 this.PreviousStatus = this.CurrentStatus;
                 switch(this.PreviousStatus)
@@ -206,9 +214,15 @@ namespace ARPEGOS.ViewModels
                         item = await this.dialogService.DisplayTextPrompt("Crear nuevo personaje", "Introduce el nombre:", "Crear");
                         if (string.IsNullOrWhiteSpace(item))
                             break;
+                        await MainThread.InvokeOnMainThreadAsync(() => this.IsBusy = true);
                         DependencyHelper.CurrentContext.CurrentCharacter = await OntologyService.CreateCharacter(item, DependencyHelper.CurrentContext.CurrentGame);
-                        await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.PushAsync(new CreationRootView()));
-                        await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.PushAsync(new OptionsView()));
+                        await MainThread.InvokeOnMainThreadAsync(() =>
+                        {
+                            App.Current.MainPage = new NavigationPage(new CreationRootView());
+                            App.Navigation = App.Current.MainPage.Navigation;
+                        });
+                        await MainThread.InvokeOnMainThreadAsync(() => this.IsBusy = false);
+
                     }
                     else
                     {

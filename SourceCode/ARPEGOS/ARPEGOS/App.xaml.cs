@@ -14,7 +14,7 @@ namespace ARPEGOS
 
     public partial class App : Application
     {
-        public static INavigation Navigation => (App.Current.MainPage as MainView)?.Detail?.Navigation;
+        public static INavigation Navigation { get; set; }        
 
         public App()
         {
@@ -24,8 +24,9 @@ namespace ARPEGOS
             if (VersionTracking.IsFirstLaunchEver)
                 this.CreateTestGame();
             Device.SetFlags(new string[] { "RadioButton_Experimental" });
-
-            this.MainPage = new MainView();
+            DependencyHelper.CurrentContext.AppMainView = new MainView();
+            App.Navigation = DependencyHelper.CurrentContext.AppMainView?.Detail?.Navigation;
+            this.MainPage = DependencyHelper.CurrentContext.AppMainView;
         }
 
         private void CreateTestGame()

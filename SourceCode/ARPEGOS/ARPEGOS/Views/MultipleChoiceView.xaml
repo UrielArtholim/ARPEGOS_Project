@@ -4,7 +4,8 @@
              x:Class="ARPEGOS.Views.MultipleChoiceView"
              Visual="Material"
              x:Name="MultipleChoice"
-             Title="{Binding StageName}">
+             Title="{Binding StageName}"
+             NavigationPage.HasBackButton="False">
     <ContentPage.Content>
         <Grid>
             <StackLayout Spacing="10" Padding="10"  VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
