@@ -63,6 +63,12 @@ namespace ARPEGOS.ViewModels
             set => SetProperty(ref this.stageLimit, value);
         }
 
+        public string StageLimitProperty
+        {
+            get => this.stageLimitProperty;
+            set => SetProperty(ref this.stageLimitProperty, value);
+        }
+
         public double StageProgress
         {
             get => this.stageProgress;
@@ -135,7 +141,7 @@ namespace ARPEGOS.ViewModels
             this.CurrentStage = StageViewModel.CreationScheme.ElementAt(StageViewModel.CurrentStep);
             var stageString = this.CurrentStage.FullName;
             this.StageName = FileService.FormatName(stageString.Split('#').Last());
-            this.stageLimitProperty = character.GetLimit(this.CurrentStage.FullName.Split('#').Last(), false, this.CurrentStage.EditGeneralLimit);
+            this.StageLimitProperty = character.GetLimit(this.CurrentStage.FullName.Split('#').Last(), false, this.CurrentStage.EditGeneralLimit);
             this.StageLimit = character.GetLimitValue(this.stageLimitProperty);
             this.ShowDescription = true;
             this.HasGeneralLimit = this.CurrentStage.EditGeneralLimit;

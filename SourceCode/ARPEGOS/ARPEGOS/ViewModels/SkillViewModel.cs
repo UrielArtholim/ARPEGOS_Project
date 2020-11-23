@@ -62,7 +62,7 @@ namespace ARPEGOS.ViewModels
                 if(this.SkillSelected != null || this.previousSkillSelected != this.SkillSelected || this.previousDice != this.Dice)
                 {
                     this.previousSkillSelected = this.SkillSelected;
-                    this.SkillValue = await Task.Run(() => DependencyHelper.CurrentContext.CurrentCharacter.GetSkillValue(this.SkillSelected.FullName));
+                    this.SkillValue = await Task.Run(() => DependencyHelper.CurrentContext.CurrentCharacter.GetSkillValue(this.SkillSelected.FullName.Split('#').Last()));
                     this.TotalValue= this.SkillValue + Convert.ToInt32(this.Dice);
                     this.previousDice = this.Dice;
                 }

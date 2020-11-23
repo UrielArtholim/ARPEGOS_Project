@@ -120,7 +120,7 @@ namespace ARPEGOS.Services
                 if(CharacterPredicateAssertions != null)
                 {
                     subject = CharacterPredicateAssertions.TaxonomySubject.ToString();
-                    RemoveDatatypeProperty(predicateString);
+                    RemoveObjectProperty(predicateString);
                     this.Save();
                 }
                 else

@@ -46,7 +46,6 @@ namespace ARPEGOS.Services
         /// <param name="objectFactName"></param>
         internal void RemoveObjectProperty(string predicateString, string objectFactString = null)
         {
-            
             var predicate = this.Ontology.Model.PropertyModel.SelectProperty(predicateString) as RDFOntologyObjectProperty;
             var CharacterPredicateAssertions = this.Ontology.Data.Relations.Assertions.SelectEntriesByPredicate(predicate);
             if (objectFactString == null)
@@ -55,6 +54,19 @@ namespace ARPEGOS.Services
                 {
                     var entrySubject = entry.TaxonomySubject as RDFOntologyFact;
                     var entryObject = entry.TaxonomyObject as RDFOntologyFact;
+
+                    var entryObjectAssertions = this.Ontology.Data.Relations.Assertions.SelectEntriesBySubject(entryObject);
+                    if (entryObjectAssertions.Count() > 0)
+                    {
+                        foreach(var assertion in entryObjectAssertions)
+                        {
+                            var assertionPredicateString = assertion.TaxonomyPredicate.ToString();
+                            if (this.CheckObjectProperty(assertionPredicateString))
+                                RemoveObjectProperty(assertionPredicateString);
+                            else if (this.CheckDatatypeProperty(assertionPredicateString))
+                                RemoveDatatypeProperty(assertionPredicateString);
+                        }
+                    }
                     this.Ontology.Data.RemoveAssertionRelation(entrySubject, predicate, entryObject);
                 }
             }

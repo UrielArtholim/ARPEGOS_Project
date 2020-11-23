@@ -22,10 +22,23 @@ namespace ARPEGOS.Views
         }
         protected override bool OnBackButtonPressed()
         {
+            var character = DependencyHelper.CurrentContext.CurrentCharacter;
+            var viewModel = this.BindingContext as MultipleChoiceViewModel;
+
+            var stageLimitPropertyString = character.GetString(viewModel.StageLimitProperty, true);
+            character.UpdateDatatypeAssertion(stageLimitPropertyString, viewModel.StageLimit.ToString());
+
+            if (viewModel.HasGeneralLimit == true)
+            {
+                var generalLimitPropertyString = character.GetString(StageViewModel.GeneralLimitProperty, true);
+                character.UpdateDatatypeAssertion(generalLimitPropertyString, viewModel.GeneralLimit.ToString());
+            }
+
             if (StageViewModel.CreationScheme.Count() > 0 && StageViewModel.CurrentStep > 1)
                 --StageViewModel.CurrentStep;
             else
                 StageViewModel.CurrentStep = 0;
+
             return base.OnBackButtonPressed();
         }
 

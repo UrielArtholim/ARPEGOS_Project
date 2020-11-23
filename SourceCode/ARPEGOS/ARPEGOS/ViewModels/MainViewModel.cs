@@ -118,11 +118,8 @@ namespace ARPEGOS.ViewModels
                         {
                             await MainThread.InvokeOnMainThreadAsync(()=> this.IsBusy = true);
                             DependencyHelper.CurrentContext.CurrentCharacter = await OntologyService.CreateCharacter(item, DependencyHelper.CurrentContext.CurrentGame);
-                            await MainThread.InvokeOnMainThreadAsync(() =>
-                            {
-                                App.Current.MainPage = new NavigationPage(new CreationRootView());
-                                App.Navigation = App.Current.MainPage.Navigation;
-                            });                            
+                            App.Current.MainPage = new NavigationPage(new CreationRootView());
+                            App.Navigation = App.Current.MainPage.Navigation;
                             await MainThread.InvokeOnMainThreadAsync(() => this.IsBusy = false);
                         }
                         this.Load(this.CurrentStatus);
@@ -133,11 +130,8 @@ namespace ARPEGOS.ViewModels
                         {
                             await MainThread.InvokeOnMainThreadAsync(() => this.IsBusy = true);
                             DependencyHelper.CurrentContext.CurrentCharacter = await OntologyService.CreateCharacter(item, DependencyHelper.CurrentContext.CurrentGame);
-                            await MainThread.InvokeOnMainThreadAsync(() =>
-                            {
-                                App.Current.MainPage = new NavigationPage(new CreationRootView());
-                                App.Navigation = App.Current.MainPage.Navigation;
-                            });
+                            App.Current.MainPage = new NavigationPage(new CreationRootView());
+                            App.Navigation = App.Current.MainPage.Navigation;
                             await MainThread.InvokeOnMainThreadAsync(() => this.IsBusy = false);
                         }
                         this.Load(this.CurrentStatus);
@@ -216,11 +210,8 @@ namespace ARPEGOS.ViewModels
                             break;
                         await MainThread.InvokeOnMainThreadAsync(() => this.IsBusy = true);
                         DependencyHelper.CurrentContext.CurrentCharacter = await OntologyService.CreateCharacter(item, DependencyHelper.CurrentContext.CurrentGame);
-                        await MainThread.InvokeOnMainThreadAsync(() =>
-                        {
-                            App.Current.MainPage = new NavigationPage(new CreationRootView());
-                            App.Navigation = App.Current.MainPage.Navigation;
-                        });
+                        App.Current.MainPage = new NavigationPage(new CreationRootView());
+                        App.Navigation = App.Current.MainPage.Navigation;
                         await MainThread.InvokeOnMainThreadAsync(() => this.IsBusy = false);
 
                     }

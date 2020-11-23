@@ -61,6 +61,7 @@ namespace ARPEGOS.Services
         public IEnumerable<Item> GetCharacterSkills ()
         {
             var character = DependencyHelper.CurrentContext.CurrentCharacter;
+            var game = DependencyHelper.CurrentContext.CurrentGame;
             var characterProperties = GetCharacterProperties();
             var skills = new ObservableCollection<Item>();
             var AnnotationType = "ActiveSkill";
@@ -68,27 +69,44 @@ namespace ARPEGOS.Services
             {
                 var propertyName = pair.Key.Split('#').Last().Replace("Per_", string.Empty).Replace("_Total", string.Empty);
                 var propertyString = character.GetString(propertyName);
-                if(propertyString != null)
+                if(!string.IsNullOrEmpty(propertyString))
                 {
-                    var propertyFact = character.Ontology.Data.SelectFact(propertyString);
+                    var propertyFact = game.Ontology.Data.SelectFact(propertyString);
                     if (propertyFact != null)
                     {
-                        var propertyFactCustomAnnotations = character.Ontology.Data.Annotations.CustomAnnotations.SelectEntriesBySubject(propertyFact);
+                        var propertyFactCustomAnnotations = game.Ontology.Data.Annotations.CustomAnnotations.SelectEntriesBySubject(propertyFact);
                         if(propertyFactCustomAnnotations.Count() > 0)
                         {
                             var propertyFactSkillAnnotations = propertyFactCustomAnnotations.Where(entry => entry.TaxonomyPredicate.ToString().Contains(AnnotationType));
                             if(propertyFactSkillAnnotations.Count()>0)
                             {
-                                var skillDescriptionEntries = character.Ontology.Data.Annotations.Comment.SelectEntriesBySubject(propertyFact);
+                                var skillDescriptionEntries = game.Ontology.Data.Annotations.Comment.SelectEntriesBySubject(propertyFact);
                                 if(skillDescriptionEntries.Count() > 0)
                                 {
                                     var skillDescription = skillDescriptionEntries.Single().TaxonomyObject.ToString();
-                                    skills.Add(new Item(propertyName, skillDescription));
+                                    skills.Add(new Item(propertyString, skillDescription));
                                 }
                             }
                         }
-
-                    }
+                        else
+                        {
+                            var propertyClass = game.Ontology.Data.Relations.ClassType.SelectEntriesBySubject(propertyFact).Single().TaxonomyObject as RDFOntologyClass;
+                            var propertyClassCustomAnnotations = game.Ontology.Model.ClassModel.Annotations.CustomAnnotations.SelectEntriesBySubject(propertyClass);
+                            if(propertyClassCustomAnnotations.Count() > 0)
+                            {
+                                var propertyClassSkillAnnotations = propertyClassCustomAnnotations.Where(entry => entry.TaxonomyPredicate.ToString().Contains(AnnotationType));
+                                if(propertyClassSkillAnnotations.Count() > 0)
+                                {
+                                    var skillDescriptionEntries = game.Ontology.Data.Annotations.Comment.SelectEntriesBySubject(propertyFact);
+                                    if (skillDescriptionEntries.Count() > 0)
+                                    {
+                                        var skillDescription = skillDescriptionEntries.Single().TaxonomyObject.ToString();
+                                        skills.Add(new Item(propertyName, skillDescription));
+                                    }
+                                }
+                            }
+                        }
+                    } 
                 }
 
                 
@@ -133,13 +151,15 @@ namespace ARPEGOS.Services
         public int GetSkillValue (string skillName)
         {
             var skillPropertyName = $"Per_{skillName}_Total";
-            if (this.CheckDatatypeProperty(skillPropertyName) == true)
+            var skillPropertyString = this.GetString(skillPropertyName, true);
+            if (this.CheckDatatypeProperty(skillPropertyString) == true)
                 skillName = skillPropertyName;
+            var currentPropertyString = this.GetString(skillName, true);
 
             int skillValue = 0;
             var character = this.Ontology.Data.SelectFact($"{this.Context}{FileService.EscapedName(this.Name)}");
-            var currentProperty = this.Ontology.Model.PropertyModel.SelectProperty($"{this.Context}{skillName}");
-            if (this.CheckIndividual(skillName) == true)
+            var currentProperty = this.Ontology.Model.PropertyModel.SelectProperty(currentPropertyString);
+            if (this.CheckIndividual(currentPropertyString) == true)
             {
                 var annotationPropertyName = "SkillValue";
                 var annotationProperty = this.Ontology.Model.PropertyModel.SelectProperty($"{this.Context}{annotationPropertyName}");
@@ -207,7 +227,7 @@ namespace ARPEGOS.Services
                     }
                 }
             }
-            else if (this.CheckDatatypeProperty(skillName) == true)
+            else if (this.CheckDatatypeProperty(currentPropertyString) == true)
             {
                 var assertion = this.Ontology.Data.Relations.Assertions.SelectEntriesBySubject(character).SelectEntriesByPredicate(currentProperty).Single();
                 skillValue = Convert.ToInt32(assertion.TaxonomyObject.ToString().Split('^').First());
