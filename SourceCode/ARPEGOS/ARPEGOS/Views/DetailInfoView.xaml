@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ARPEGOS.Views.DetailInfoView"
              Title="{Binding ViewName}"
-             BackgroundColor="{DynamicResource LightSecondaryBackgroundColor}">
+             BackgroundColor="{DynamicResource LightPantone7}">
     <ContentPage.Content>
         <Grid>
             <ListView x:Name="MultipleChoiceList" 
@@ -20,7 +20,7 @@
                                        Padding="15" 
                                        Margin="15,15,15,15" 
                                        BorderColor="{DynamicResource LightSeparatorColor}"
-                                       BackgroundColor="{DynamicResource LightLabelPrimaryColor}">
+                                       BackgroundColor="{DynamicResource LightPantone3}">
                                 <StackLayout Orientation="Horizontal"  
                                                  HorizontalOptions="FillAndExpand" 
                                                  VerticalOptions="CenterAndExpand">
@@ -28,6 +28,7 @@
                                                 HorizontalOptions="CenterAndExpand" 
                                                 VerticalOptions="Center" 
                                                 Text="{Binding FormattedTitle}"
+                                                TextColor="{x:DynamicResource DarkPantone5}"
                                                 FontAttributes="Bold"/>
                                 </StackLayout>
                             </Frame>
@@ -41,7 +42,7 @@
                                        Padding="15" 
                                        Margin="30,0,30,10" 
                                        BorderColor="{DynamicResource LightSeparatorColor}"
-                                   BackgroundColor="{DynamicResource LightLabelSecondaryColor}">
+                                   BackgroundColor="{DynamicResource LightPantone5}">
                                 <StackLayout Orientation="Horizontal"  
                                                  HorizontalOptions="FillAndExpand" 
                                                  VerticalOptions="CenterAndExpand" >
@@ -51,7 +52,8 @@
                                                 HorizontalOptions="StartAndExpand" 
                                                 HorizontalTextAlignment="Start"
                                                 VerticalOptions="Center" 
-                                                Text="{Binding FormattedName}"/>
+                                                Text="{Binding FormattedName}"
+                                                TextColor="{x:DynamicResource DarkPantone4}"/>
                                     <Label  Grid.Row="0" 
                                                 Grid.Column="2" 
                                                 FontSize="Medium" 

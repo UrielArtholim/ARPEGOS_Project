@@ -4,20 +4,61 @@
              xmlns:converter="clr-namespace:ARPEGOS.Converter;assembly=ARPEGOS"
              x:Class="ARPEGOS.App">
     <Application.Resources>
+        <Style TargetType="NavigationPage">
+            <Setter Property="BarBackgroundColor" Value="{x:DynamicResource DarkTheme1}"/>
+            <Setter Property="BarTextColor" Value="{x:DynamicResource DarkTheme8}"/>
+        </Style>
         <ResourceDictionary>
-            <Color x:Key="LightPrimaryColor">#4899de</Color>
+            <Color x:Key="LightPrimaryColor">#389dff</Color>
             <Color x:Key="LightContrastColor">#ffffff</Color>
-            <Color x:Key="LightPrimaryTextColor">#0e1723</Color>
+            <Color x:Key="LightPrimaryTextColor">#ffffff</Color>
             <Color x:Key="LightSecondaryTextColor">#6b7380</Color>
             <Color x:Key="LightPrimaryBackgroundColor">#7FCCF3</Color>
             <Color x:Key="LightSecondaryBackgroundColor">#99d3fb</Color>
-            <Color x:Key="LightLabelPrimaryColor">#ffa54f</Color>
-            <Color x:Key="LightLabelSecondaryColor">#f0e68c</Color> 
+            <Color x:Key="LightLabelPrimaryColor">#389dff</Color>
+            <Color x:Key="LightLabelSecondaryColor">#6ab6ff</Color> 
             <Color x:Key="LightButtonColor">#096ee8</Color>
             <Color x:Key="LightGeneralColor">#b405ff</Color>
             <Color x:Key="LightStageColor">#096ee8</Color>
             <Color x:Key="LightSeparatorColor">#a2a3a2</Color>
+            <Color x:Key="LightNavigationBarColor">#1e90ff</Color>
+            <Color x:Key="LightNavigationBarText">#ffffff</Color>
+
+            <Color x:Key="LightPantone1">#1e90ff</Color>
+            <Color x:Key="LightPantone2">#389dff</Color>
+            <Color x:Key="LightPantone3">#51a9ff</Color>
+            <Color x:Key="LightPantone4">#6ab6ff</Color>
+            <Color x:Key="LightPantone5">#84c2ff</Color>
+            <Color x:Key="LightPantone6">#9ecfff</Color>
+            <Color x:Key="LightPantone7">#b7dbff</Color>
+            <Color x:Key="LightPantone8">#d1e8ff</Color>
+            <Color x:Key="LightPantone9">#eaf5ff</Color>
+            <Color x:Key="LightPantone10">#ffffff</Color>
+
+            <Color x:Key="DarkPantone1">#1e90ff</Color>
+            <Color x:Key="DarkPantone2">#0077e2</Color>
+            <Color x:Key="DarkPantone3">#005fc5</Color>
+            <Color x:Key="DarkPantone4">#0048aa</Color>
+            <Color x:Key="DarkPantone5">#00338f</Color>
+            <Color x:Key="DarkPantone6">#001f74</Color>
+            <Color x:Key="DarkPantone7">#00085b</Color>
+            <Color x:Key="DarkPantone8">#000742</Color>
+            <Color x:Key="DarkPantone9">#00032b</Color>
+            <Color x:Key="DarkPantone10">#000116</Color>
+
+
+            <Color x:Key="DarkTheme1">#000000</Color>
+            <Color x:Key="DarkTheme2">#121212</Color>
+            <Color x:Key="DarkTheme3">#1f1f1f</Color>
+            <Color x:Key="DarkTheme4">#242424</Color>
+            <Color x:Key="DarkTheme5">#363636</Color>
+            <Color x:Key="DarkTheme6">#515151</Color>
+            <Color x:Key="DarkTheme7">#717171</Color>
+            <Color x:Key="DarkTheme8">#633CCC</Color>
+            <Color x:Key="DarkTheme9">#dedede</Color>
+
             <converter:GetInitialsImageConverter x:Key="GetInitialsImageConverter" />
         </ResourceDictionary>
+        
     </Application.Resources>
 </Application>
