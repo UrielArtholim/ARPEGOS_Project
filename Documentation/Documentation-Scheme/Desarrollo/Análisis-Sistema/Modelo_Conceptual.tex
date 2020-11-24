@@ -67,11 +67,6 @@ que conforman una ontología y sus propiedades:
     o un \textit{Identificador de Recursos Internacionalizado (\textbf{IRI})}.
 \end{itemize}
 
-Como las anotaciones solo pueden relacionarse con ontologías completas, axiomas o \textit{IRIs}, resulta imposible asignarlas a cualquier clase, 
-por lo que se ha tomado la decisión de incluir una clase llamada \textbf{ClassDefinition}, en la que cada individuo está 
-directamente relacionado con una clase de la ontología, y que dispone de todas las anotaciones necesarias para que la información 
-de la clase a la que hace referencia esté completa. 
-
 \subsection{Relaciones}
 Los elementos del modelo conforman una parte importante, pero éste no quedaría completo sin tratar las relaciones que hay entre 
 ellos. Para tratarlas vamos a separarlas en función de los elementos que relacionan.
@@ -87,11 +82,6 @@ ellos. Para tratarlas vamos a separarlas en función de los elementos que relaci
     \item Una clase puede o no estar formada por un conjunto de individuos.
     \item Una clase puede o no estar relacionada con una o varias clases superiores en la jerarquía.
     \item Una clase está relacionada con una definición de clase.
-\end{itemize}
-
-\subsubsection{ClassDefinition}
-\begin{itemize}
-    \item Una definición de clase tiene una o varias propiedades de anotación.
 \end{itemize}
 
 \begin{figure}[H]

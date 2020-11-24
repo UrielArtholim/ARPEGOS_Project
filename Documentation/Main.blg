@@ -1,17 +1,17 @@
 [0] Config.pm:312> INFO - This is Biber 2.15 (beta)
 [0] Config.pm:315> INFO - Logfile is 'Main.blg'
-[110] biber-MSWIN64:330> INFO - === 
-[130] Biber.pm:415> INFO - Reading 'Main.bcf'
-[253] Biber.pm:952> INFO - Found 75 citekeys in bib section 0
-[274] Biber.pm:4334> INFO - Processing section 0
-[290] Biber.pm:4523> INFO - Looking for bibtex format file 'ARPEGOS.bib' for section 0
-[311] bibtex.pm:1682> INFO - LaTeX decoding ...
-[587] bibtex.pm:1494> INFO - Found BibTeX data source 'ARPEGOS.bib'
-[640] Utils.pm:395> WARN - month field 'jul' in entry 'Tychsen2008' is not an integer - this will probably not sort properly.
-[912] Utils.pm:395> WARN - BibTeX subsystem: C:\Users\ALEJAN~1\AppData\Local\Temp\biber_tmp_JuMM\2462702c2759bbabd9e70feac79d3302_18824.utf8, line 6, warning: 172 characters of junk seen at toplevel
-[995] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
-[995] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[995] Biber.pm:4162> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'es-ES'
-[1067] bbl.pm:651> INFO - Writing 'Main.bbl' with encoding 'UTF-8'
-[1107] bbl.pm:754> INFO - Output to Main.bbl
-[1112] Biber.pm:128> INFO - WARNINGS: 2
+[101] biber-MSWIN64:330> INFO - === 
+[124] Biber.pm:415> INFO - Reading 'Main.bcf'
+[245] Biber.pm:952> INFO - Found 75 citekeys in bib section 0
+[263] Biber.pm:4334> INFO - Processing section 0
+[279] Biber.pm:4523> INFO - Looking for bibtex format file 'ARPEGOS.bib' for section 0
+[299] bibtex.pm:1682> INFO - LaTeX decoding ...
+[563] bibtex.pm:1494> INFO - Found BibTeX data source 'ARPEGOS.bib'
+[616] Utils.pm:395> WARN - month field 'jul' in entry 'Tychsen2008' is not an integer - this will probably not sort properly.
+[870] Utils.pm:395> WARN - BibTeX subsystem: C:\Users\ALEJAN~1\AppData\Local\Temp\biber_tmp_tD5R\2462702c2759bbabd9e70feac79d3302_29680.utf8, line 6, warning: 172 characters of junk seen at toplevel
+[944] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
+[944] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[944] Biber.pm:4162> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'es-ES'
+[999] bbl.pm:651> INFO - Writing 'Main.bbl' with encoding 'UTF-8'
+[1036] bbl.pm:754> INFO - Output to Main.bbl
+[1042] Biber.pm:128> INFO - WARNINGS: 2

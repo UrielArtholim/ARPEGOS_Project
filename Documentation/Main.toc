@@ -133,75 +133,73 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{Class}{51}{section*.15}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{ClassDefinition}{51}{section*.16}%
-\defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {5.2}Modelo de Casos de Uso}{52}{section.5.2}%
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {5.2.1}Actores}{52}{subsection.5.2.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.2.2}Descripción de casos de uso}{53}{subsection.5.2.2}%
+\contentsline {subsection}{\numberline {5.2.2}Descripción de casos de uso}{52}{subsection.5.2.2}%
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {5.2.3}Gestión de juegos}{53}{subsection.5.2.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Caso de uso: Añadir juego}{54}{section*.17}%
+\contentsline {subsubsection}{Caso de uso: Añadir juego}{53}{section*.16}%
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\textit {Identificación de escenarios}}{54}{section*.18}%
+\contentsline {paragraph}{\textit {Identificación de escenarios}}{53}{section*.17}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subparagraph}{Escenario principal}{54}{section*.19}%
+\contentsline {subparagraph}{Escenario principal}{53}{section*.18}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subparagraph}{Escenario alternativo: Añadir nueva versión de un juego ya existente}{54}{section*.20}%
+\contentsline {subparagraph}{Escenario alternativo: Añadir nueva versión de un juego ya existente}{54}{section*.19}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Caso de uso: Seleccionar juego}{55}{section*.21}%
+\contentsline {subsubsection}{Caso de uso: Seleccionar juego}{54}{section*.20}%
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\textit {Identificación de escenarios}}{55}{section*.22}%
+\contentsline {paragraph}{\textit {Identificación de escenarios}}{54}{section*.21}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subparagraph}{Escenario principal}{55}{section*.23}%
+\contentsline {subparagraph}{Escenario principal}{54}{section*.22}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Caso de uso: Eliminar juego}{55}{section*.24}%
+\contentsline {subsubsection}{Caso de uso: Eliminar juego}{55}{section*.23}%
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\textit {Identificación de escenarios}}{56}{section*.25}%
+\contentsline {paragraph}{\textit {Identificación de escenarios}}{56}{section*.24}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subparagraph}{Escenario principal}{56}{section*.26}%
+\contentsline {subparagraph}{Escenario principal}{56}{section*.25}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subparagraph}{Escenario alternativo: Eliminar una versión de un juego sin eliminar el juego completo}{56}{section*.27}%
+\contentsline {subparagraph}{Escenario alternativo: Eliminar una versión de un juego sin eliminar el juego completo}{56}{section*.26}%
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {5.2.4}Gestión de personajes}{57}{subsection.5.2.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Caso de uso: Crear personaje}{57}{section*.28}%
+\contentsline {subsubsection}{Caso de uso: Crear personaje}{57}{section*.27}%
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\textit {Identificación de escenarios}}{57}{section*.29}%
+\contentsline {paragraph}{\textit {Identificación de escenarios}}{57}{section*.28}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subparagraph}{Escenario principal}{57}{section*.30}%
+\contentsline {subparagraph}{Escenario principal}{57}{section*.29}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Caso de uso: Visualizar personaje}{58}{section*.31}%
+\contentsline {subsubsection}{Caso de uso: Visualizar personaje}{58}{section*.30}%
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\textit {Identificación de escenarios}}{58}{section*.32}%
+\contentsline {paragraph}{\textit {Identificación de escenarios}}{58}{section*.31}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subparagraph}{Escenario principal}{58}{section*.33}%
+\contentsline {subparagraph}{Escenario principal}{58}{section*.32}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subparagraph}{Escenario alternativo: Editar información del personaje}{58}{section*.34}%
+\contentsline {subparagraph}{Escenario alternativo: Editar información del personaje}{58}{section*.33}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subparagraph}{Escenario alternativo: Eliminar personaje}{58}{section*.35}%
+\contentsline {subparagraph}{Escenario alternativo: Eliminar personaje}{58}{section*.34}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Caso de uso: Editar personaje}{58}{section*.36}%
+\contentsline {subsubsection}{Caso de uso: Editar personaje}{58}{section*.35}%
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\textit {Identificación de escenarios}}{59}{section*.37}%
+\contentsline {paragraph}{\textit {Identificación de escenarios}}{59}{section*.36}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subparagraph}{Escenario principal}{59}{section*.38}%
+\contentsline {subparagraph}{Escenario principal}{59}{section*.37}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Caso de uso: Eliminar personaje}{59}{section*.39}%
+\contentsline {subsubsection}{Caso de uso: Eliminar personaje}{59}{section*.38}%
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\textit {Identificación de escenarios}}{59}{section*.40}%
+\contentsline {paragraph}{\textit {Identificación de escenarios}}{59}{section*.39}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subparagraph}{Escenario principal}{59}{section*.41}%
+\contentsline {subparagraph}{Escenario principal}{59}{section*.40}%
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {5.2.5}Gestión de habilidades}{60}{subsection.5.2.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Caso de uso: Calcular habilidad}{60}{section*.42}%
+\contentsline {subsubsection}{Caso de uso: Calcular habilidad}{60}{section*.41}%
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\textit {Identificación de escenarios}}{60}{section*.43}%
+\contentsline {paragraph}{\textit {Identificación de escenarios}}{60}{section*.42}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subparagraph}{Escenario principal}{60}{section*.44}%
+\contentsline {subparagraph}{Escenario principal}{60}{section*.43}%
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {5.3}Modelo de Comportamiento}{61}{section.5.3}%
 \defcounter {refsection}{0}\relax 
@@ -225,15 +223,15 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {6.1.1}Arquitectura Física}{65}{subsection.6.1.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Requisitos para usuarios}{65}{section*.45}%
+\contentsline {subsubsection}{Requisitos para usuarios}{65}{section*.44}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Requisitos para desarrolladores}{66}{section*.46}%
+\contentsline {subsubsection}{Requisitos para desarrolladores}{66}{section*.45}%
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {6.1.2}Arquitectura Lógica}{66}{subsection.6.1.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Ventajas}{66}{section*.47}%
+\contentsline {subsubsection}{Ventajas}{66}{section*.46}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Elementos}{66}{section*.48}%
+\contentsline {subsubsection}{Elementos}{66}{section*.47}%
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {6.2}Diseño Lógico de Datos}{67}{section.6.2}%
 \defcounter {refsection}{0}\relax 
@@ -241,15 +239,15 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {6.2.2}Metodología}{67}{subsection.6.2.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Individuos}{68}{section*.49}%
+\contentsline {subsubsection}{Individuos}{68}{section*.48}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Clase}{68}{section*.50}%
+\contentsline {subsubsection}{Clase}{68}{section*.49}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Propiedades}{68}{section*.51}%
+\contentsline {subsubsection}{Propiedades}{68}{section*.50}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Anotaciones}{68}{section*.52}%
+\contentsline {subsubsection}{Anotaciones}{68}{section*.51}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Etapas de creación}{70}{section*.53}%
+\contentsline {subsubsection}{Etapas de creación}{70}{section*.52}%
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {7}Codificación}{73}{chapter.7}%
 \defcounter {refsection}{0}\relax 
@@ -313,13 +311,13 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {11.2.2}Entities}{90}{subsection.11.2.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Classes}{92}{section*.54}%
+\contentsline {subsubsection}{Classes}{92}{section*.53}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Object Properties}{93}{section*.55}%
+\contentsline {subsubsection}{Object Properties}{93}{section*.54}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Data Properties}{95}{section*.56}%
+\contentsline {subsubsection}{Data Properties}{95}{section*.55}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Datatypes}{95}{section*.57}%
+\contentsline {subsubsection}{Datatypes}{95}{section*.56}%
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {11.2.3}Individuals by class}{96}{subsection.11.2.3}%
 \defcounter {refsection}{0}\relax 
@@ -327,71 +325,71 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {11.3.1}Ontología}{99}{subsection.11.3.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Configurar ontología}{99}{section*.58}%
+\contentsline {subsubsection}{Configurar ontología}{99}{section*.57}%
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {11.3.2}Anotaciones}{100}{subsection.11.3.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Crear una anotación}{100}{section*.59}%
+\contentsline {subsubsection}{Crear una anotación}{100}{section*.58}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Crear un tipo de anotación personalizado}{102}{section*.60}%
+\contentsline {subsubsection}{Crear un tipo de anotación personalizado}{102}{section*.59}%
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {11.3.3}Clases}{103}{subsection.11.3.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Crear una clase o subclase}{103}{section*.61}%
+\contentsline {subsubsection}{Crear una clase o subclase}{103}{section*.60}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Crear una clase hermana}{104}{section*.62}%
+\contentsline {subsubsection}{Crear una clase hermana}{104}{section*.61}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Eliminar clase de la ontología}{106}{section*.63}%
+\contentsline {subsubsection}{Eliminar clase de la ontología}{106}{section*.62}%
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {11.3.4}Propiedades}{106}{subsection.11.3.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Crear una propiedad de objeto}{107}{section*.64}%
+\contentsline {subsubsection}{Crear una propiedad de objeto}{107}{section*.63}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Crear una propiedad de datos}{111}{section*.65}%
+\contentsline {subsubsection}{Crear una propiedad de datos}{111}{section*.64}%
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {11.3.5}Jerarquía de propiedades}{113}{subsection.11.3.5}%
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {11.3.6}Individuos}{115}{subsection.11.3.6}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Crear un individio de una clase}{115}{section*.66}%
+\contentsline {subsubsection}{Crear un individio de una clase}{115}{section*.65}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Añadir propiedades a un individuo}{116}{section*.67}%
+\contentsline {subsubsection}{Añadir propiedades a un individuo}{116}{section*.66}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Eliminar un individuo}{118}{section*.68}%
+\contentsline {subsubsection}{Eliminar un individuo}{118}{section*.67}%
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {11.4}Etapas de creación}{118}{section.11.4}%
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {11.4.1}Etapas de creación}{119}{subsection.11.4.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Etapa de selección única}{119}{section*.69}%
+\contentsline {subsubsection}{Etapa de selección única}{119}{section*.68}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Etapa de selección múltiple}{119}{section*.70}%
+\contentsline {subsubsection}{Etapa de selección múltiple}{119}{section*.69}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Etapa de selección múltiple con coste uniforme}{120}{section*.71}%
+\contentsline {subsubsection}{Etapa de selección múltiple con coste uniforme}{120}{section*.70}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Etapa de selección múltiple con coste uniforme y coste de grupo}{121}{section*.72}%
+\contentsline {subsubsection}{Etapa de selección múltiple con coste uniforme y coste de grupo}{121}{section*.71}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Etapa de selección múltiple con coste heterogéneo}{122}{section*.73}%
+\contentsline {subsubsection}{Etapa de selección múltiple con coste heterogéneo}{122}{section*.72}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Etapa de introducción de valores}{123}{section*.74}%
+\contentsline {subsubsection}{Etapa de introducción de valores}{123}{section*.73}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Etapa raíz de creación}{123}{section*.75}%
+\contentsline {subsubsection}{Etapa raíz de creación}{123}{section*.74}%
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {11.4.2}Configuración avanzada}{125}{subsection.11.4.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Crear una anotación de tipo \textit {ValuedListInfo}}{125}{section*.76}%
+\contentsline {subsubsection}{Crear una anotación de tipo \textit {ValuedListInfo}}{125}{section*.75}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Añadir un límite general de puntos a una etapa de creación}{128}{section*.77}%
+\contentsline {subsubsection}{Añadir un límite general de puntos a una etapa de creación}{128}{section*.76}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Indicar un valor máximo para los elementos de una etapa de introducción de valores}{129}{section*.78}%
+\contentsline {subsubsection}{Indicar un valor máximo para los elementos de una etapa de introducción de valores}{129}{section*.77}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Añadir un límite específico de puntos a una etapa de creación}{131}{section*.79}%
+\contentsline {subsubsection}{Añadir un límite específico de puntos a una etapa de creación}{131}{section*.78}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Añadir un elemento específico en una etapa}{131}{section*.80}%
+\contentsline {subsubsection}{Añadir un elemento específico en una etapa}{131}{section*.79}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Añadir un requisito a un individuo}{133}{section*.81}%
+\contentsline {subsubsection}{Añadir un requisito a un individuo}{133}{section*.80}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Indicar el orden de una subetapa}{134}{section*.82}%
+\contentsline {subsubsection}{Indicar el orden de una subetapa}{134}{section*.81}%
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {12}Conclusiones}{135}{chapter.12}%
 \defcounter {refsection}{0}\relax 
