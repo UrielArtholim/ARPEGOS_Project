@@ -1,19 +1,17 @@
-[2] Config.pm:304> INFO - This is Biber 2.14
-[3] Config.pm:307> INFO - Logfile is 'Main.blg'
-[122] biber-MSWIN64:322> INFO - === 
-[158] Biber.pm:415> INFO - Reading 'Main.bcf'
-[320] Biber.pm:943> INFO - Found 75 citekeys in bib section 0
-[342] Biber.pm:4256> INFO - Processing section 0
-[343] Utils.pm:75> INFO - Globbing data source 'ARPEGOS.bib'
-[355] Utils.pm:91> INFO - Globbed data source 'ARPEGOS.bib' to ARPEGOS.bib
-[376] Biber.pm:4455> INFO - Looking for bibtex format file 'ARPEGOS.bib' for section 0
-[396] bibtex.pm:1653> INFO - LaTeX decoding ...
-[680] bibtex.pm:1471> INFO - Found BibTeX data source 'ARPEGOS.bib'
-[749] Utils.pm:304> WARN - month field 'jul' in entry 'Tychsen2008' is not an integer - this will probably not sort properly.
-[1091] Utils.pm:304> WARN - BibTeX subsystem: C:\Users\uriel\AppData\Local\Temp\biber_tmp_c8uW\ARPEGOS.bib_23060.utf8, line 6, warning: 172 characters of junk seen at toplevel
-[1180] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
-[1180] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[1180] Biber.pm:4084> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'es-ES'
-[1267] bbl.pm:652> INFO - Writing 'Main.bbl' with encoding 'UTF-8'
-[1326] bbl.pm:755> INFO - Output to Main.bbl
-[1332] Biber.pm:128> INFO - WARNINGS: 2
+[0] Config.pm:312> INFO - This is Biber 2.15 (beta)
+[0] Config.pm:315> INFO - Logfile is 'Main.blg'
+[110] biber-MSWIN64:330> INFO - === 
+[130] Biber.pm:415> INFO - Reading 'Main.bcf'
+[253] Biber.pm:952> INFO - Found 75 citekeys in bib section 0
+[274] Biber.pm:4334> INFO - Processing section 0
+[290] Biber.pm:4523> INFO - Looking for bibtex format file 'ARPEGOS.bib' for section 0
+[311] bibtex.pm:1682> INFO - LaTeX decoding ...
+[587] bibtex.pm:1494> INFO - Found BibTeX data source 'ARPEGOS.bib'
+[640] Utils.pm:395> WARN - month field 'jul' in entry 'Tychsen2008' is not an integer - this will probably not sort properly.
+[912] Utils.pm:395> WARN - BibTeX subsystem: C:\Users\ALEJAN~1\AppData\Local\Temp\biber_tmp_JuMM\2462702c2759bbabd9e70feac79d3302_18824.utf8, line 6, warning: 172 characters of junk seen at toplevel
+[995] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
+[995] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[995] Biber.pm:4162> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'es-ES'
+[1067] bbl.pm:651> INFO - Writing 'Main.bbl' with encoding 'UTF-8'
+[1107] bbl.pm:754> INFO - Output to Main.bbl
+[1112] Biber.pm:128> INFO - WARNINGS: 2
