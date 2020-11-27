@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                    x:Class="ARPEGOS.Themes.DarkTheme">
+    
+    <!-- Title Background Color -->
+    <Color x:Key="TitleBackgroundColor">#1f1f1f</Color>
+    
+    <!-- Title Text Color -->
+    <Color x:Key="TitleTextColor">#84c2ff</Color>
+    
+    <!-- Separator Color -->
+    <Color x:Key="SeparatorColor">#a2a3a2</Color>
+
+    <!-- Page Background Color -->
+    <Color x:Key="PageBackgroundColor">#171717</Color>
+    
+    <!-- Header Background Color -->
+    <Color x:Key="HeaderBackgroundColor">#242424</Color>
+
+    <!-- Header Text Color -->
+    <Color x:Key="HeaderTextColor">#1e90ff</Color>
+    
+    <!-- Item Background Color -->
+    <Color x:Key="ItemBackgroundColor">#303030</Color>
+
+    <!-- Item Text Color -->
+    <Color x:Key="ItemTextColor">#005fc5</Color>
+    
+    <!-- Button Background Color -->
+    <Color x:Key="ButtonBackgroundColor">#242424</Color>
+
+    <!-- Button Text Color -->
+    <Color x:Key="ButtonTextColor">#00338f</Color>
+    
+    <!-- Main Item Label -->
+    <Color x:Key="MainItemTextColor">#0077e2</Color>
+</ResourceDictionary>

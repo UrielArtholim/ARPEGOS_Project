@@ -5,7 +5,7 @@
              Visual="Material"
              Title="{Binding Title}"
              x:Name="P"
-             BackgroundColor="{DynamicResource DarkTheme2}">
+             Style="{x:DynamicResource PageBackground}">
     <ContentPage.ToolbarItems>
         <ToolbarItem Order="Primary" Priority="0" Command="{Binding AddButtonCommand}" IconImageSource="add.png"/>
         <ToolbarItem Order="Primary" Priority="0" Command="{Binding DeleteButtonCommand}" IconImageSource="delete.png"/>
@@ -13,19 +13,19 @@
     <Grid>
         <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
             <StackLayout Padding="5" Margin="20,20,20,0" Orientation="Horizontal" VerticalOptions="Start" HorizontalOptions="CenterAndExpand" IsVisible="true">
-                <Frame CornerRadius="5" BorderColor="{DynamicResource LightSeparatorColor}"  BackgroundColor="{x:DynamicResource DarkTheme4}" HorizontalOptions="Center">
+                <Frame CornerRadius="5" Style="{StaticResource HeaderFrame}" HorizontalOptions="Center">
                     <Frame.GestureRecognizers>
                         <TapGestureRecognizer Command="{Binding ExportCommand}"/>
                     </Frame.GestureRecognizers>
-                    <Label Text="EXPORTAR PERSONAJES" FontAttributes="Bold" TextColor="{x:DynamicResource DarkTheme6}"/>
+                    <Label Text="EXPORTAR PERSONAJES" FontAttributes="Bold" Style="{x:DynamicResource HeaderLabel}"/>
                 </Frame>
             </StackLayout>
             <StackLayout Padding="5" Margin="20,20,20,0" Orientation="Horizontal" VerticalOptions="Start" HorizontalOptions="CenterAndExpand" IsVisible="{Binding CancelEnabled}">
-                <Frame CornerRadius="5" BorderColor="{DynamicResource LightSeparatorColor}"  BackgroundColor="{x:DynamicResource DarkTheme4}" IsVisible="{Binding CancelEnabled}" HorizontalOptions="Center">
+                <Frame CornerRadius="5"  Style="{DynamicResource HeaderBackground}" IsVisible="{Binding CancelEnabled}" HorizontalOptions="Center">
                     <Frame.GestureRecognizers>
                         <TapGestureRecognizer Command="{Binding CancelButtonCommand}"/>
                     </Frame.GestureRecognizers>
-                    <Label Text="Cancelar" TextColor="{x:DynamicResource LightPantone10}"/>                    
+                    <Label Text="Cancelar" Style="{x:DynamicResource HeaderLabel}"/>                    
                 </Frame>
             </StackLayout>
             <ScrollView Grid.Row="0" VerticalOptions="FillAndExpand">
@@ -33,13 +33,13 @@
                     <FlexLayout Direction="Row" AlignItems="Start" JustifyContent="SpaceEvenly" Wrap="Wrap" BindableLayout.ItemsSource="{Binding SelectableElements}" Padding="5, 20, 5, 0" AlignContent="Start" AlignSelf="Auto"  >
                         <BindableLayout.ItemTemplate>
                             <DataTemplate>
-                                <Frame CornerRadius="5" BorderColor="{DynamicResource LightSeparatorColor}" Padding="5" WidthRequest="110" HeightRequest="110" Margin="0, 0, 0, 20" BackgroundColor="{DynamicResource DarkTheme6}">
+                                <Frame Style="{DynamicResource MainItemFrame}">
                                     <Frame.GestureRecognizers>
                                         <TapGestureRecognizer Command="{Binding Path=BindingContext.SelectItemCommand, Source={x:Reference P}}" CommandParameter="{Binding .}" />
                                     </Frame.GestureRecognizers>
                                     <StackLayout Padding="10">
                                         <Image Source="{Binding ., Converter={StaticResource GetInitialsImageConverter}, ConverterParameter=128}" />
-                                        <Label Text="{Binding .}" TextColor="{DynamicResource DarkPantone4}" HorizontalTextAlignment="Center" LineBreakMode="WordWrap" />
+                                        <Label Text="{Binding .}" Style="{x:DynamicResource MainItemLabel}" HorizontalTextAlignment="Center" LineBreakMode="WordWrap" />
                                     </StackLayout>
                                 </Frame>
                             </DataTemplate>
