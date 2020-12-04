@@ -3,6 +3,7 @@
     using ARPEGOS.Configuration;
     using ARPEGOS.Services;
     using ARPEGOS.Services.Interfaces;
+    using ARPEGOS.Themes;
     using ARPEGOS.ViewModels;
     using Autofac;
 
@@ -38,6 +39,7 @@
 
         private void RegisterViewModels(ContainerBuilder builder)
         {
+            builder.RegisterType<MasterViewModel>().SingleInstance();
             builder.RegisterType<MainViewModel>().SingleInstance();
             builder.RegisterType<SelectVersionViewModel>().SingleInstance();
             builder.RegisterType<OptionsViewModel>().SingleInstance();
@@ -45,6 +47,14 @@
             builder.RegisterType<SkillListViewModel>().SingleInstance();
             builder.RegisterType<CreationRootViewModel>().SingleInstance();
             builder.RegisterType<StageViewModel>().SingleInstance();
+            builder.RegisterType<ThemeSelectionViewModel>().SingleInstance();
+            builder.RegisterType<LightTheme>().SingleInstance();
+            builder.RegisterType<DarkTheme>().SingleInstance();
+            builder.RegisterType<ForestTheme>().SingleInstance();
+            builder.RegisterType<ValleyTheme>().SingleInstance();
+            builder.RegisterType<OceanTheme>().SingleInstance();
+            builder.RegisterType<TundraTheme>().SingleInstance();
+            builder.RegisterType<DesertTheme>().SingleInstance();
         }
     }
 }

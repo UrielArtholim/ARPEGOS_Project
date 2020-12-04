@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ARPEGOS.Themes.ValleyTheme">
+    
+    <!-- Title Background Color -->
+    <Color x:Key="TitleBackgroundColor">#328914</Color>
+
+    <!-- Title Text Color -->
+    <Color x:Key="TitleTextColor">#cbf2de</Color>
+
+    <!-- Separator Color -->
+    <Color x:Key="SeparatorColor">#a2a3a2</Color>
+
+    <!-- Page Background Color -->
+    <Color x:Key="PageBackgroundColor">#a5e1a5</Color>
+
+    <!-- Header Background Color -->
+    <Color x:Key="HeaderBackgroundColor">#31a709</Color>
+
+    <!-- Header Text Color -->
+    <Color x:Key="HeaderTextColor">#a6e970</Color>
+
+    <!-- Item Background Color -->
+    <Color x:Key="ItemBackgroundColor">#65d12f</Color>
+
+    <!-- Item Text Color -->
+    <Color x:Key="ItemTextColor">#044404</Color>
+
+    <!-- Button Background Color -->
+    <Color x:Key="ButtonBackgroundColor">#31a709</Color>
+
+    <!-- Button Text Color -->
+    <Color x:Key="ButtonTextColor">#a6e970</Color>
+
+    <!-- Main Item Label -->
+    <Color x:Key="MainItemTextColor">#044404</Color>
+
+    <!-- Menu Background Color -->
+    <Color x:Key="MenuBackgroundColor">#fae056</Color>
+
+    <!-- Menu Text Color -->
+    <Color x:Key="MenuTextColor">#fae056</Color>
+    
+    <!-- Background Image Path -->
+    <ImageSource x:Key="BackgroundImageSource">valley.png</ImageSource>
+</ResourceDictionary>

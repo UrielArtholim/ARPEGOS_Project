@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ARPEGOS.Themes.ForestTheme">
+    <!-- Title Background Color -->
+    <Color x:Key="TitleBackgroundColor">#0a3304</Color>
+
+    <!-- Title Text Color -->
+    <Color x:Key="TitleTextColor">#62a279</Color>
+
+    <!-- Separator Color -->
+    <Color x:Key="SeparatorColor">#a2a3a2</Color>
+
+    <!-- Page Background Color -->
+    <Color x:Key="PageBackgroundColor">#5fb05c</Color>
+
+    <!-- Header Background Color -->
+    <Color x:Key="HeaderBackgroundColor">#1f5f17</Color>
+
+    <!-- Header Text Color -->
+    <Color x:Key="HeaderTextColor">#7ebf96</Color>
+
+    <!-- Item Background Color -->
+    <Color x:Key="ItemBackgroundColor">#2e742a</Color>
+
+    <!-- Item Text Color -->
+    <Color x:Key="ItemTextColor">#b4e3d3</Color>
+
+    <!-- Button Background Color -->
+    <Color x:Key="ButtonBackgroundColor">#1f5f17</Color>
+
+    <!-- Button Text Color -->
+    <Color x:Key="ButtonTextColor">#7ebf96</Color>
+
+    <!-- Main Item Label -->
+    <Color x:Key="MainItemTextColor">#b4e3d3</Color>
+
+    <!-- Menu Background Color -->
+    <Color x:Key="MenuBackgroundColor">#fae056</Color>
+
+    <!-- Menu Text Color -->
+    <Color x:Key="MenuTextColor">#fae056</Color>
+
+    <!-- Background Image Path -->
+    <ImageSource x:Key="BackgroundImageSource">forest.png</ImageSource>
+</ResourceDictionary>

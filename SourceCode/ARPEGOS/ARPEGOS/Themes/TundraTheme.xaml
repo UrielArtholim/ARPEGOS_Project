@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:images="clr-namespace:Xamarin.Forms.PlatformConfiguration.GTKSpecific;assembly=Xamarin.Forms.Core"
+             x:Class="ARPEGOS.Themes.TundraTheme">
+    <!-- Title Background Color -->
+    <Color x:Key="TitleBackgroundColor">#2c626d</Color>
+
+    <!-- Title Text Color -->
+    <Color x:Key="TitleTextColor">#a2a3a2</Color>
+
+    <!-- Separator Color -->
+    <Color x:Key="SeparatorColor">#a2a3a2</Color>
+
+    <!-- Page Background Color -->
+    <Color x:Key="PageBackgroundColor">#a8e7ff</Color>
+
+    <!-- Header Background Color -->
+    <Color x:Key="HeaderBackgroundColor">#2b758b</Color>
+
+    <!-- Header Text Color -->
+    <Color x:Key="HeaderTextColor">#95d3e2</Color>
+
+    <!-- Item Background Color -->
+    <Color x:Key="ItemBackgroundColor">#3990a9</Color>
+
+    <!-- Item Text Color -->
+    <Color x:Key="ItemTextColor">#ffffff</Color>
+
+    <!-- Button Background Color -->
+    <Color x:Key="ButtonBackgroundColor">#2b758b</Color>
+
+    <!-- Button Text Color -->
+    <Color x:Key="ButtonTextColor">#95d3e2</Color>
+
+    <!-- Main Item Label -->
+    <Color x:Key="MainItemTextColor">#ffffff</Color>
+
+    <!-- Menu Background Color -->
+    <Color x:Key="MenuBackgroundColor">#fae056</Color>
+
+    <!-- Menu Text Color -->
+    <Color x:Key="MenuTextColor">#fae056</Color>
+    
+    <!-- Background Image Path -->
+    <ImageSource x:Key="BackgroundImageSource">tundra.png</ImageSource>
+</ResourceDictionary>

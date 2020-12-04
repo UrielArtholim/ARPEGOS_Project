@@ -28,11 +28,34 @@ namespace ARPEGOS.ViewModels
         private IDialogService dialogService;
 
         private bool _cancelEnabled;
+        private string theme;
+
+
+        public string BackgroundImageSource
+        {
+            get => DependencyHelper.CurrentContext.Themes.CurrentThemeBackground;
+        }
+
+        public string AddButtonImageSource
+        {
+            get => DependencyHelper.CurrentContext.Themes.CurrentThemeAddButton;
+        }
+
+        public string RemoveButtonImageSource
+        {
+            get => DependencyHelper.CurrentContext.Themes.CurrentThemeRemoveButton;
+        }
 
         public bool CancelEnabled
         { 
             get => _cancelEnabled;
             set => this.SetProperty(ref this._cancelEnabled, value);
+        }
+
+        public string Theme
+        {
+            get => theme;
+            set => this.SetProperty(ref this.theme, value);
         }
 
         public ICommand AddButtonCommand { get; set; }
@@ -90,6 +113,7 @@ namespace ARPEGOS.ViewModels
 
         public MainViewModel (IDialogService dialogService)
         {
+            this.Theme = DependencyHelper.CurrentContext.Themes.CurrentThemeBackground;
             this.SelectableElements = new ObservableCollection<string>();
             this.SelectItemCommand = new Command<string>(s => Task.Factory.StartNew(async () => await this.SelectItem(s)));
             this.CurrentStatus = SelectionStatus.SelectingGame;
@@ -250,7 +274,7 @@ namespace ARPEGOS.ViewModels
             this.IsBusy = false;
         }
 
-        private void Load(SelectionStatus status)
+        public void Load(SelectionStatus status)
         {
             IEnumerable<string> items;
             List<string> updatedItems;

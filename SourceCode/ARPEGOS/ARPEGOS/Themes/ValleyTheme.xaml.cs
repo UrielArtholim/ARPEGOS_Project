@@ -10,11 +10,11 @@ using Xamarin.Forms.Xaml;
 namespace ARPEGOS.Themes
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class DarkTheme : ResourceDictionary
+    public partial class ValleyTheme : ResourceDictionary
     {
-        public DarkTheme()
+        public ValleyTheme()
         {
-            InitializeComponent();            
+            InitializeComponent();
         }
     }
 }

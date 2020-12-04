@@ -23,8 +23,7 @@ namespace ARPEGOS
 
             if (VersionTracking.IsFirstLaunchEver)
                 this.CreateTestGame();
-            Device.SetFlags(new string[] { "RadioButton_Experimental" });
-            Device.SetFlags(new string[] { "AppTheme_Experimental" });
+            Device.SetFlags(new string[] { "RadioButton_Experimental", "AppTheme_Experimental" });
             DependencyHelper.CurrentContext.AppMainView = new MainView();
             App.Navigation = DependencyHelper.CurrentContext.AppMainView?.Detail?.Navigation;
             this.MainPage = DependencyHelper.CurrentContext.AppMainView;

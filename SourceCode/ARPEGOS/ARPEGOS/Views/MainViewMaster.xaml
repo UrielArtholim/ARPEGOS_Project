@@ -12,18 +12,8 @@
               <StackLayout.GestureRecognizers>
                   <TapGestureRecognizer Command="{Binding HomeCommand}" NumberOfTapsRequired="1" />
               </StackLayout.GestureRecognizers>
-              <Label Text=">" VerticalOptions="Center" />
-              <Label Margin="10,0,0,0" Text="Inicio" VerticalOptions="Center" />
-          </StackLayout>
-
-          <BoxView BackgroundColor="Black" HeightRequest="2" />
-
-          <StackLayout Orientation="Horizontal" HorizontalOptions="Fill" Margin="0,0,0,10" Padding="60,10,0,10">
-              <StackLayout.GestureRecognizers>
-                  <TapGestureRecognizer Command="{Binding ShowGamesCommand}" NumberOfTapsRequired="1" />
-              </StackLayout.GestureRecognizers>
-              <Label Text=">" VerticalOptions="Center" />
-              <Label Margin="10,0,0,0" Text="Selección de personajes" VerticalOptions="Center" />
+              <Label Text=">" VerticalOptions="Center" FontSize="20" />
+              <Label Margin="10,0,0,0" Text="Inicio" FontSize="20" VerticalOptions="Center" />
           </StackLayout>
 
           <BoxView BackgroundColor="Black" HeightRequest="2" />
@@ -33,10 +23,17 @@
                   <TapGestureRecognizer Command="{Binding ShowCharactersCommand}" NumberOfTapsRequired="1" />
               </StackLayout.GestureRecognizers>
               <Label Text=">" VerticalOptions="Center" />
-              <Label Margin="10,0,0,0" Text="Tema Oscuro" VerticalOptions="Center" />
-                <Switch OnColor="{x:DynamicResource LightPantone3}"
-                        ThumbColor="{x:DynamicResource LightPantone1}"
-                        Toggled="OnToggled"/>
+              <Label Margin="10,0,0,0" Text="Selección de personajes" FontSize="20" VerticalOptions="Center" />
+          </StackLayout>
+
+          <BoxView BackgroundColor="Black" HeightRequest="2" />
+
+          <StackLayout Orientation="Horizontal" HorizontalOptions="Fill" Margin="0,0,0,10" Padding="60,10,0,10">
+              <StackLayout.GestureRecognizers>
+                  <TapGestureRecognizer Command="{Binding SelectThemeCommand}" NumberOfTapsRequired="1" />
+              </StackLayout.GestureRecognizers>
+              <Label Text=">" VerticalOptions="Center" />
+                <Label Margin="10,0,0,0" Text="Seleccionar Tema" FontSize="20" VerticalOptions="Center" />
             </StackLayout>
 
             <BoxView BackgroundColor="Black" HeightRequest="2" />

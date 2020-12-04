@@ -4,14 +4,16 @@
              xmlns:converter="clr-namespace:ARPEGOS.Converter;assembly=ARPEGOS"
              x:Class="ARPEGOS.App">
     <Application.Resources>
-        <converter:GetInitialsImageConverter x:Key="GetInitialsImageConverter" />
+        <converter:GetInitialsImageConverter x:Key="GetInitialsImageConverter"/>
+        <converter:GetBackgroundImageConverter x:Key="GetBackgroundImageConverter"/>
+        <converter:GetThemeColorConverter x:Key="GetThemeColorConverter"/>
         <ResourceDictionary Source="Themes/LightTheme.xaml"/>
-        <Style x:Key="Title" TargetType="NavigationPage">
+        <Style TargetType="NavigationPage">
             <Setter Property="BarBackgroundColor" Value="{x:DynamicResource TitleBackgroundColor}"/>
             <Setter Property="BarTextColor" Value="{x:DynamicResource TitleTextColor}"/>
         </Style>
         <Style x:Key="PageBackground" TargetType="ContentPage">
-            <Setter Property="BackgroundColor" Value="{x:DynamicResource PageBackgroundColor}"/>
+            <Setter Property="BackgroundImageSource" Value="{x:DynamicResource PageBackgroundColor}" />
         </Style>
         <Style x:Key="HeaderFrame" TargetType="Frame">
             <Setter Property="BorderColor" Value="{x:DynamicResource SeparatorColor}"/>
@@ -39,10 +41,16 @@
             <Setter Property="WidthRequest" Value="110"/>
             <Setter Property="HeightRequest" Value="110"/>
             <Setter Property="Margin" Value="0, 0, 0, 20"/>
-            <Setter Property="BackgroundColor" Value="{x:DynamicResource ButtonBackgroundColor}"/>
+            <Setter Property="BackgroundColor" Value="{x:DynamicResource ItemBackgroundColor}"/>
         </Style>
         <Style x:Key="MainItemLabel" TargetType="Label">
             <Setter Property="TextColor" Value="{x:DynamicResource MainItemTextColor}"/>
+        </Style>
+        <Style x:Key="MenuBackground" TargetType="Label">
+            <Setter Property="BackgroundColor" Value="{x:DynamicResource MenuBackgroundColor}"/>
+        </Style>
+        <Style x:Key="MenuLabel" TargetType="Label">
+            <Setter Property="TextColor" Value="{x:DynamicResource MenuTextColor}"/>
         </Style>
     </Application.Resources>
 </Application>

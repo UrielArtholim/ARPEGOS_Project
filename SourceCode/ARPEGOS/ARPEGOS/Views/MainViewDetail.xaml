@@ -4,13 +4,13 @@
              x:Class="ARPEGOS.Views.MainViewDetail"
              Visual="Material"
              Title="{Binding Title}"
-             x:Name="P"
-             Style="{x:DynamicResource PageBackground}">
+             x:Name="P">
     <ContentPage.ToolbarItems>
         <ToolbarItem Order="Primary" Priority="0" Command="{Binding AddButtonCommand}" IconImageSource="add.png"/>
         <ToolbarItem Order="Primary" Priority="0" Command="{Binding DeleteButtonCommand}" IconImageSource="delete.png"/>
     </ContentPage.ToolbarItems>
     <Grid>
+        <Image Source="{Binding Theme, Converter={StaticResource GetBackgroundImageConverter}}" Aspect="AspectFill" />
         <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
             <StackLayout Padding="5" Margin="20,20,20,0" Orientation="Horizontal" VerticalOptions="Start" HorizontalOptions="CenterAndExpand" IsVisible="true">
                 <Frame CornerRadius="5" Style="{StaticResource HeaderFrame}" HorizontalOptions="Center">

@@ -4,35 +4,44 @@
                     x:Class="ARPEGOS.Themes.DarkTheme">
     
     <!-- Title Background Color -->
-    <Color x:Key="TitleBackgroundColor">#1f1f1f</Color>
+    <Color x:Key="TitleBackgroundColor">#0f0437</Color>
     
     <!-- Title Text Color -->
-    <Color x:Key="TitleTextColor">#84c2ff</Color>
+    <Color x:Key="TitleTextColor">#4c49bd</Color>
     
     <!-- Separator Color -->
     <Color x:Key="SeparatorColor">#a2a3a2</Color>
 
     <!-- Page Background Color -->
-    <Color x:Key="PageBackgroundColor">#171717</Color>
+    <Color x:Key="PageBackgroundColor">#587af2</Color>
     
     <!-- Header Background Color -->
-    <Color x:Key="HeaderBackgroundColor">#242424</Color>
+    <Color x:Key="HeaderBackgroundColor">#2b117c</Color>
 
     <!-- Header Text Color -->
-    <Color x:Key="HeaderTextColor">#1e90ff</Color>
+    <Color x:Key="HeaderTextColor">#858aba</Color>
     
     <!-- Item Background Color -->
-    <Color x:Key="ItemBackgroundColor">#303030</Color>
+    <Color x:Key="ItemBackgroundColor">#341699</Color>
 
     <!-- Item Text Color -->
-    <Color x:Key="ItemTextColor">#005fc5</Color>
+    <Color x:Key="ItemTextColor">#babed9</Color>
     
     <!-- Button Background Color -->
-    <Color x:Key="ButtonBackgroundColor">#242424</Color>
+    <Color x:Key="ButtonBackgroundColor">#2b117c</Color>
 
     <!-- Button Text Color -->
-    <Color x:Key="ButtonTextColor">#00338f</Color>
+    <Color x:Key="ButtonTextColor">#858aba</Color>
     
     <!-- Main Item Label -->
-    <Color x:Key="MainItemTextColor">#0077e2</Color>
+    <Color x:Key="MainItemTextColor">#babed9</Color>
+
+    <!-- Menu Background Color -->
+    <Color x:Key="MenuBackgroundColor">#fae056</Color>
+
+    <!-- Menu Text Color -->
+    <Color x:Key="MenuTextColor">#fae056</Color>
+
+    <!-- Background Image Path -->
+    <ImageSource x:Key="BackgroundImageSource">night.png</ImageSource>
 </ResourceDictionary>
