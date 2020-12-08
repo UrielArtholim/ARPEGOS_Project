@@ -44,4 +44,13 @@
     
     <!-- Background Image Path -->
     <ImageSource x:Key="BackgroundImageSource">valley.png</ImageSource>
+    
+    <!-- Add Button Image Path-->
+    <ImageSource x:Key="AddButtonImageSource">valley_add.png</ImageSource>
+    
+    <!-- Remove Button Image Path-->
+    <ImageSource x:Key="RemoveButtonImageSource">valley_delete.png</ImageSource>
+
+    <!-- Theme HUD Opacity -->
+    <x:Double x:Key="HUD_Opacity">0.7</x:Double>
 </ResourceDictionary>

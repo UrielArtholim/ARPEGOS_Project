@@ -21,7 +21,7 @@
                                     </Frame.GestureRecognizers>
                                     <StackLayout Padding="10">
                                         <Image Source="{Binding ., Converter={StaticResource GetInitialsImageConverter}, ConverterParameter=128}" />
-                                        <Label Text="{Binding .}" TextColor="{DynamicResource Li}" HorizontalTextAlignment="Center" LineBreakMode="WordWrap" />
+                                        <Label Text="{Binding .}" TextColor="{DynamicResource ItemTextColor}" HorizontalTextAlignment="Center" LineBreakMode="WordWrap" />
                                     </StackLayout>
                                 </Frame>
                             </DataTemplate>

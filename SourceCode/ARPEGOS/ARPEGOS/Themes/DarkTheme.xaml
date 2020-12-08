@@ -44,4 +44,11 @@
 
     <!-- Background Image Path -->
     <ImageSource x:Key="BackgroundImageSource">night.png</ImageSource>
+    
+    <!-- Add Button Image Path-->
+    <ImageSource x:Key="AddButtonImageSource">night_add.png</ImageSource>
+
+    <!-- Remove Button Image Path-->
+    <ImageSource x:Key="RemoveButtonImageSource">night_delete.png</ImageSource>
+   
 </ResourceDictionary>

@@ -5,37 +5,33 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using Xamarin.Essentials;
+using Xamarin.Forms;
 
 namespace ARPEGOS.Helpers
 {
     public class ThemeHelper : INotifyPropertyChanged
     {
-        private string backgroundSource, addSource, removeSource, currentTheme, currentThemeImage;
+        private string backgroundSource, addSource, removeSource, currentTheme;
         public string CurrentThemeBackground 
         { 
             get => backgroundSource; 
-            private set => SetProperty(ref this.backgroundSource, value); 
+            set => SetProperty(ref this.backgroundSource, value); 
         }
 
         public string CurrentThemeAddButton
         {
             get => addSource;
-            private set => SetProperty(ref this.addSource, value);
+            set => SetProperty(ref this.addSource, value);
         }
         public string CurrentThemeRemoveButton
         {
-            get => backgroundSource;
-            private set => SetProperty(ref this.removeSource, value);
+            get => removeSource;
+            set => SetProperty(ref this.removeSource, value);
         }
         public string CurrentTheme
         {
             get => currentTheme;
-            private set => SetProperty(ref this.currentTheme, value);
-        }
-        public string CurrentThemeImage
-        {
-            get => currentThemeImage;
-            private set => SetProperty(ref this.currentTheme, value);
+            set => SetProperty(ref this.currentTheme, value);
         }
 
         public Dictionary<string, string> BackgroundThemes;
@@ -80,20 +76,20 @@ namespace ARPEGOS.Helpers
                 {"Oceano", "ocean_delete.png"}
             };
             this.CurrentTheme = this.BackgroundThemes.Keys.First();
-            this.SetBackground(this.currentTheme);
-            this.SetAddImage(this.currentTheme);
-            this.SetRemoveImage(this.currentTheme);
+            this.SetBackground(this.CurrentTheme);
+            this.SetAddImage(this.CurrentTheme);
+            this.SetRemoveImage(this.CurrentTheme);
         }
 
         public void SetCurrentTheme(string theme)
         {
-            CurrentTheme = theme;
+            this.CurrentTheme = theme;
         }
 
         public void SetBackground(string theme)
         {
             BackgroundThemes.TryGetValue(theme, out var background);
-            CurrentThemeBackground = background;
+            this.CurrentThemeBackground = background;
         }
 
         public void SetAddImage(string theme)
@@ -105,7 +101,7 @@ namespace ARPEGOS.Helpers
         public void SetRemoveImage(string theme)
         {
             RemoveButtonThemes.TryGetValue(theme, out var remove);
-            CurrentThemeRemoveButton = remove;
+            this.CurrentThemeRemoveButton = remove;
         }
 
         protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)

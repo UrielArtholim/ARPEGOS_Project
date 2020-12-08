@@ -43,4 +43,10 @@
 
     <!-- Background Image Path -->
     <ImageSource x:Key="BackgroundImageSource">forest.png</ImageSource>
+
+    <!-- Add Button Image Path-->
+    <ImageSource x:Key="AddButtonImageSource">forest_add.png</ImageSource>
+
+    <!-- Remove Button Image Path-->
+    <ImageSource x:Key="RemoveButtonImageSource">forest_delete.png</ImageSource>
 </ResourceDictionary>

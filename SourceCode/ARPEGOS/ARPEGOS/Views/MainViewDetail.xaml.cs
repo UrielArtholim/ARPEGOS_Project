@@ -5,7 +5,7 @@ namespace ARPEGOS.Views
     using ARPEGOS.ViewModels;
 
     using Autofac;
-
+    using System;
     using Xamarin.Forms;
     using Xamarin.Forms.Xaml;
 
@@ -24,6 +24,11 @@ namespace ARPEGOS.Views
             {
                 await vm.Init();
             }
+        }
+        void OnBackgroundChanged(object sender, EventArgs e)
+        {
+            Image image = sender as Image;
+            image.Source = DependencyHelper.CurrentContext.Themes.CurrentThemeBackground;
         }
     }
 }

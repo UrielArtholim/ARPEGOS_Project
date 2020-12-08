@@ -4,15 +4,21 @@ namespace ARPEGOS.Configuration
     using ARPEGOS.Helpers;
     using ARPEGOS.Services;
     using ARPEGOS.Views;
+    using System.Collections.Generic;
+    using System.ComponentModel;
+    using System.Runtime.CompilerServices;
     using Xamarin.Essentials;
     using Xamarin.Forms;
 
     public class Context
     {
         private CharacterOntologyService _currentCharacter;
-        private ThemeHelper themes = new ThemeHelper();
+        private ThemeHelper _themes = new ThemeHelper();
         public GameOntologyService CurrentGame { get; set; }
-        public ThemeHelper Themes { get => themes; }
+        public ThemeHelper Themes 
+        { 
+            get => _themes; 
+        }
 
         public CharacterOntologyService CurrentCharacter
         {

@@ -1,4 +1,5 @@
 ﻿using ARPEGOS.Helpers;
+using ARPEGOS.Models;
 using ARPEGOS.Services;
 using ARPEGOS.ViewModels.Base;
 using FFImageLoading.Helpers.Exif;
@@ -17,7 +18,6 @@ namespace ARPEGOS.ViewModels
     {
         private string game, gamefolder, checkMessage, selectMessage, addMessage;
         private Plugin.FilePicker.Abstractions.FileData file;
-        private string theme;
 
         public string Game 
         { 
@@ -44,15 +44,9 @@ namespace ARPEGOS.ViewModels
             get => addMessage; 
             set => this.SetProperty(ref this.addMessage, value);
         }
-        public string Theme
-        {
-            get => theme;
-            set => this.SetProperty(ref this.theme, value);
-        }
 
         public AddGameViewModel () 
         {
-            this.Theme = DependencyHelper.CurrentContext.Themes.CurrentTheme;
             this.CheckCommand = new Command(()=> 
             {
                 var gameFolder = FileService.GetGameBasePath(Game);

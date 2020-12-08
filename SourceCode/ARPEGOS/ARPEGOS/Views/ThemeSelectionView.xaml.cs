@@ -31,8 +31,6 @@ namespace ARPEGOS.Views
             if (activeRadioButton != lastChecked && lastChecked != null)
                 lastChecked.IsChecked = false;
             lastChecked = activeRadioButton.IsChecked ? activeRadioButton : null;
-            var viewModel = this.BindingContext as ThemeSelectionViewModel;
-
             var option = activeRadioButton.BindingContext as string;
             Application.Current.Resources.MergedDictionaries.Clear();
             switch (option)
@@ -46,10 +44,10 @@ namespace ARPEGOS.Views
                 default: App.Current.Resources.MergedDictionaries.Add(new LightTheme()); break;
             }
             var themeHelper = DependencyHelper.CurrentContext.Themes;
+            themeHelper.SetCurrentTheme(option);
             themeHelper.SetBackground(option);
             themeHelper.SetAddImage(option);
             themeHelper.SetRemoveImage(option);
-            themeHelper.SetCurrentTheme(option);
         }
     }
 }

@@ -42,5 +42,11 @@
     <Color x:Key="MenuTextColor">#fae056</Color>
 
     <!-- Background Image Path -->
-    <ImageSource x:Key="BackgroundImagePath">ocean.png</ImageSource>
+    <ImageSource x:Key="BackgroundImageSource">ocean.png</ImageSource>
+
+    <!-- Add Button Image Path-->
+    <ImageSource x:Key="AddButtonImagePath">ocean_add.png</ImageSource>
+
+    <!-- Remove Button Image Path-->
+    <ImageSource x:Key="RemoveButtonImageSource">ocean_delete.png</ImageSource>
 </ResourceDictionary>

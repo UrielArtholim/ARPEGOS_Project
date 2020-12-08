@@ -44,4 +44,10 @@
     
     <!-- Background Image Path -->
     <ImageSource x:Key="BackgroundImageSource">tundra.png</ImageSource>
+
+    <!-- Add Button Image Path-->
+    <ImageSource x:Key="AddButtonImageSource">tundra_add.png</ImageSource>
+
+    <!-- Remove Button Image Path-->
+    <ImageSource x:Key="RemoveButtonImageSource">tundra_delete.png</ImageSource>
 </ResourceDictionary>

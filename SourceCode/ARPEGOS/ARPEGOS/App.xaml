@@ -5,7 +5,6 @@
              x:Class="ARPEGOS.App">
     <Application.Resources>
         <converter:GetInitialsImageConverter x:Key="GetInitialsImageConverter"/>
-        <converter:GetBackgroundImageConverter x:Key="GetBackgroundImageConverter"/>
         <converter:GetThemeColorConverter x:Key="GetThemeColorConverter"/>
         <ResourceDictionary Source="Themes/LightTheme.xaml"/>
         <Style TargetType="NavigationPage">

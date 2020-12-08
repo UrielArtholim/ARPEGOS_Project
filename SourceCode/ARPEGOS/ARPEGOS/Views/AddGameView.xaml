@@ -7,7 +7,7 @@
              x:Class="ARPEGOS.Views.AddGameView">
     <ContentPage.Content>
         <Grid>
-            <Image Source="{Binding Theme, Converter={StaticResource GetBackgroundImageConverter}}" Aspect="AspectFill"/>
+            <Image Style="{x:DynamicResource BackgroundImageSource}"/>
             <StackLayout Grid.Column="0" Spacing="10" Padding="20,20,20,20" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" BackgroundColor="Transparent">
                 <Entry Text ="{Binding Game}" Placeholder="Enter game name" HorizontalOptions="FillAndExpand" 
                    BackgroundColor="{x:DynamicResource ItemBackgroundColor}"  TextColor="{x:DynamicResource ButtonTextColor}"/>
