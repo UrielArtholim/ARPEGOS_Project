@@ -1,4 +1,5 @@
 ﻿using ARPEGOS.Helpers;
+using ARPEGOS.Models;
 using ARPEGOS.ViewModels.Base;
 using System;
 using System.Collections.Generic;
@@ -10,11 +11,11 @@ namespace ARPEGOS.ViewModels
 {
     public class ThemeSelectionViewModel: BaseViewModel
     {
-        private List<string> themes;
+        private List<ThemeItem> themes;
         public ICommand NextCommand { get; private set; }
         
         
-        public List<string> Themes
+        public List<ThemeItem> Themes
         {
             get => this.themes;
             set => SetProperty(ref this.themes, value);
@@ -22,8 +23,19 @@ namespace ARPEGOS.ViewModels
 
         public ThemeSelectionViewModel()
         {
-            this.Themes = new List<string>(DependencyHelper.CurrentContext.Themes.BackgroundThemes.Keys);
-            this.NextCommand = new Command(() => App.Navigation.PopModalAsync());
+            this.Themes = new List<ThemeItem>();
+            foreach (var item in DependencyHelper.CurrentContext.Themes.BackgroundThemes.Keys)
+            {
+                var isCurrentTheme = (item == DependencyHelper.CurrentContext.Themes.CurrentTheme) ? true : false;
+                this.Themes.Add(new ThemeItem(item,isCurrentTheme));
+            }
+
+            this.NextCommand = new Command(() => 
+            { 
+                var mainpage = App.Current.MainPage as MasterDetailPage;
+                mainpage.IsPresented = false;
+                App.Navigation.PopModalAsync(); 
+            });
         }
     }
 }

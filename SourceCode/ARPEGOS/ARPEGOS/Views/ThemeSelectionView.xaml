@@ -30,15 +30,17 @@
                                                    Grid.Column="0" 
                                                    HorizontalOptions="Start" 
                                                    VerticalOptions="Center" 
+                                                   IsChecked="{Binding IsSelected}"
                                                    CheckedChanged="OnCheckedChanged" 
                                                    BindingContext="{Binding .}"/>
-                                        <Label  Grid.Row="0" 
+                                        <Label  x:Name="ItemName"
+                                                Grid.Row="0" 
                                                 Grid.Column="1" 
                                                 FontSize="Medium" 
                                                 HorizontalOptions="StartAndExpand" 
                                                 HorizontalTextAlignment="Start"
                                                 VerticalOptions="Center" 
-                                                Text="{Binding .}"
+                                                Text="{Binding Theme}"
                                                 TextColor="{DynamicResource ItemTextColor}"/>
                                         <BoxView Color="{Binding ., Converter={StaticResource themeColorConverter}}" HorizontalOptions="EndAndExpand"/>
                                     </StackLayout>

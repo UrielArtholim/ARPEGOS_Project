@@ -38,7 +38,7 @@
                                         <TapGestureRecognizer Command="{Binding Path=BindingContext.SelectItemCommand, Source={x:Reference P}}" CommandParameter="{Binding .}" />
                                     </Frame.GestureRecognizers>
                                     <StackLayout Padding="10">
-                                        <Image Source="{Binding ., Converter={StaticResource GetInitialsImageConverter}, ConverterParameter=128}" />
+                                        <Image Source="{Binding ., Converter={x:StaticResource GetInitialsImageConverter}, ConverterParameter=128}" />
                                         <Label Text="{Binding .}" Style="{x:DynamicResource MainItemLabel}" HorizontalTextAlignment="Center" LineBreakMode="WordWrap" />
                                     </StackLayout>
                                 </Frame>

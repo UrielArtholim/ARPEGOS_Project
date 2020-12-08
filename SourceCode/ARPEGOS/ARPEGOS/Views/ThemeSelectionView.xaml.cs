@@ -1,4 +1,5 @@
 ﻿using ARPEGOS.Helpers;
+using ARPEGOS.Models;
 using ARPEGOS.Themes;
 using ARPEGOS.ViewModels;
 using Autofac;
@@ -31,7 +32,8 @@ namespace ARPEGOS.Views
             if (activeRadioButton != lastChecked && lastChecked != null)
                 lastChecked.IsChecked = false;
             lastChecked = activeRadioButton.IsChecked ? activeRadioButton : null;
-            var option = activeRadioButton.BindingContext as string;
+            var themeItem = activeRadioButton.BindingContext as ThemeItem;
+            var option = themeItem.Theme;            
             Application.Current.Resources.MergedDictionaries.Clear();
             switch (option)
             {
