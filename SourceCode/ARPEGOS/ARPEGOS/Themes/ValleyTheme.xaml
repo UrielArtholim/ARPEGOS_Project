@@ -2,6 +2,9 @@
 <ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ARPEGOS.Themes.ValleyTheme">
+
+    <!-- HUD Opacity Value -->
+    <x:Double x:Key="OpacityValue">0.75</x:Double>
     
     <!-- Title Background Color -->
     <Color x:Key="TitleBackgroundColor">#328914</Color>

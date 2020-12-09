@@ -3,6 +3,10 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:images="clr-namespace:Xamarin.Forms.PlatformConfiguration.GTKSpecific;assembly=Xamarin.Forms.Core"
              x:Class="ARPEGOS.Themes.TundraTheme">
+
+    <!-- HUD Opacity Value -->
+    <x:Double x:Key="OpacityValue">0.75</x:Double>
+    
     <!-- Title Background Color -->
     <Color x:Key="TitleBackgroundColor">#2c626d</Color>
 

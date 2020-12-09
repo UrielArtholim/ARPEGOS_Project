@@ -4,22 +4,18 @@
              xmlns:converter="clr-namespace:ARPEGOS.Converter"
              Visual="Material"
              Title="Añadir juego"
-             x:Class="ARPEGOS.Views.AddGameView">
+             x:Class="ARPEGOS.Views.AddGameView"
+             BackgroundImageSource="{x:DynamicResource BackgroundImageSource}">
     <ContentPage.Content>
         <Grid>
-            <Image Style="{x:DynamicResource BackgroundImageSource}"/>
             <StackLayout Grid.Column="0" Spacing="10" Padding="20,20,20,20" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" BackgroundColor="Transparent">
-                <Entry Text ="{Binding Game}" Placeholder="Enter game name" HorizontalOptions="FillAndExpand" 
-                   BackgroundColor="{x:DynamicResource ItemBackgroundColor}"  TextColor="{x:DynamicResource ButtonTextColor}"/>
-                <Button Text="Comprobar juego" Command="{Binding CheckCommand}" HorizontalOptions="CenterAndExpand"
-                    BackgroundColor="{x:DynamicResource ButtonBackgroundColor}" TextColor="{x:DynamicResource ButtonTextColor}"/>
-                <Label Text="{Binding CheckMessage}" HorizontalOptions="CenterAndExpand" />
-                <Button Text="Seleccionar fichero" Command="{Binding SelectCommand}" HorizontalOptions="CenterAndExpand"
-                    BackgroundColor="{x:DynamicResource ButtonBackgroundColor}" TextColor="{x:DynamicResource ButtonTextColor}"/>
-                <Label Text="{Binding SelectMessage}" HorizontalOptions="CenterAndExpand" />
-                <Button Text="Añadir fichero" Command="{Binding AddCommand}" HorizontalOptions="CenterAndExpand"
-                    BackgroundColor="{x:DynamicResource ButtonBackgroundColor}" TextColor="{x:DynamicResource ButtonTextColor}"/>
-                <Label Text="{Binding AddMessage}" HorizontalOptions="CenterAndExpand" />
+                <Entry Text ="{Binding Game}" Placeholder="Enter game name" Style="{x:DynamicResource Entry}"/>
+                <Button Text="Comprobar juego" Command="{Binding CheckCommand}" Style="{x:DynamicResource Button}"/>
+                <Label Text="{Binding CheckMessage}" Style="{x:DynamicResource OutsideLabel}"/>
+                <Button Text="Seleccionar fichero" Command="{Binding SelectCommand}" Style="{x:DynamicResource Button}"/>
+                <Label Text="{Binding SelectMessage}" Style="{x:DynamicResource OutsideLabel}"/>
+                <Button Text="Añadir fichero" Command="{Binding AddCommand}" Style="{x:DynamicResource Button}"/>
+                <Label Text="{Binding AddMessage}" Style="{x:DynamicResource OutsideLabel}"/>
             </StackLayout>
         </Grid>        
     </ContentPage.Content>

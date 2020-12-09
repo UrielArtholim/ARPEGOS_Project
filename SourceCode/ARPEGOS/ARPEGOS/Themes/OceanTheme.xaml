@@ -2,6 +2,10 @@
 <ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ARPEGOS.Themes.OceanTheme">
+
+    <!-- HUD Opacity Value -->
+    <x:Double x:Key="OpacityValue">0.75</x:Double>
+    
     <!-- Title Background Color -->
     <Color x:Key="TitleBackgroundColor">#052fe0</Color>
 
@@ -45,7 +49,7 @@
     <ImageSource x:Key="BackgroundImageSource">ocean.png</ImageSource>
 
     <!-- Add Button Image Path-->
-    <ImageSource x:Key="AddButtonImagePath">ocean_add.png</ImageSource>
+    <ImageSource x:Key="AddButtonImageSource">ocean_add.png</ImageSource>
 
     <!-- Remove Button Image Path-->
     <ImageSource x:Key="RemoveButtonImageSource">ocean_delete.png</ImageSource>

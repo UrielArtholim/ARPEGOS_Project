@@ -2,7 +2,10 @@
 <ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms"
                     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
                     x:Class="ARPEGOS.Themes.LightTheme">
-    
+
+    <!-- HUD Opacity Value -->
+    <x:Double x:Key="OpacityValue">0.75</x:Double>
+
     <!-- Title Background Color -->
     <Color x:Key="TitleBackgroundColor">#047bfb</Color>
 
@@ -28,7 +31,7 @@
     <Color x:Key="ItemTextColor">#ffffff</Color>
 
     <!-- Button Background Color -->
-    <Color x:Key="ButtonBackgroundColor">#51a9ff</Color>
+    <Color x:Key="ButtonBackgroundColor">#2ba7fb</Color>
 
     <!-- Button Text Color -->
     <Color x:Key="ButtonTextColor">#00338f</Color>

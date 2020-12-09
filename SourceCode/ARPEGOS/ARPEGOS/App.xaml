@@ -17,6 +17,7 @@
         <Style x:Key="HeaderFrame" TargetType="Frame">
             <Setter Property="BorderColor" Value="{x:DynamicResource SeparatorColor}"/>
             <Setter Property="BackgroundColor" Value="{x:DynamicResource HeaderBackgroundColor}"/>
+            <Setter Property="Opacity" Value="{x:DynamicResource OpacityValue}"/>
         </Style>
         <Style x:Key="HeaderLabel" TargetType="Label">
             <Setter Property="TextColor" Value="{x:DynamicResource HeaderTextColor}"/>
@@ -24,6 +25,7 @@
         <Style x:Key="ItemFrame" TargetType="Frame">
             <Setter Property="BorderColor" Value="{x:DynamicResource SeparatorColor}"/>
             <Setter Property="BackgroundColor" Value="{x:DynamicResource ItemBackgroundColor}"/>
+            <Setter Property="Opacity" Value="{x:DynamicResource OpacityValue}"/>
         </Style>
         <Style x:Key="ItemLabel" TargetType="Label">
             <Setter Property="TextColor" Value="{x:DynamicResource ItemTextColor}"/>
@@ -32,6 +34,17 @@
             <Setter Property="BorderColor" Value="{x:DynamicResource SeparatorColor}"/>
             <Setter Property="BackgroundColor" Value="{x:DynamicResource ButtonBackgroundColor}"/>
             <Setter Property="TextColor" Value="{x:DynamicResource ButtonTextColor}"/>
+            <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
+        </Style>
+        <Style x:Key="OutsideLabel" TargetType="Label">
+            <Setter Property="BackgroundColor" Value="{x:DynamicResource ItemBackgroundColor}"/>
+            <Setter Property="TextColor" Value="{x:DynamicResource ItemTextColor}"/>
+            <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
+        </Style>
+        <Style x:Key="Entry" TargetType="Entry">
+            <Setter Property="BackgroundColor" Value="{x:DynamicResource ItemBackgroundColor}"/>
+            <Setter Property="TextColor" Value="{x:DynamicResource ButtonTextColor}"/>
+            <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
         </Style>
         <Style x:Key="MainItemFrame" TargetType="Frame">
             <Setter Property="BorderColor" Value="{x:DynamicResource SeparatorColor}"/>
@@ -41,6 +54,7 @@
             <Setter Property="HeightRequest" Value="110"/>
             <Setter Property="Margin" Value="0, 0, 0, 20"/>
             <Setter Property="BackgroundColor" Value="{x:DynamicResource ItemBackgroundColor}"/>
+            <Setter Property="Opacity" Value="{x:DynamicResource OpacityValue}"/>
         </Style>
         <Style x:Key="MainItemLabel" TargetType="Label">
             <Setter Property="TextColor" Value="{x:DynamicResource MainItemTextColor}"/>

@@ -4,7 +4,7 @@
              xmlns:converter="clr-namespace:ARPEGOS.Converter"
              x:Class="ARPEGOS.Views.ThemeSelectionView"
              Title="Temas"
-             BackgroundColor="{DynamicResource PageBackgroundColor}">
+             BackgroundImageSource="{DynamicResource BackgroundImageSource}">
     <ContentPage.Resources>
         <converter:GetThemeColorConverter x:Key="themeColorConverter"/>
     </ContentPage.Resources>
@@ -19,7 +19,8 @@
                                        Padding="15" 
                                        Margin="10,10,10,0" 
                                        BorderColor="{DynamicResource LightSeparatorColor}"
-                                       BackgroundColor="{DynamicResource ItemBackgroundColor}">
+                                       BackgroundColor="{DynamicResource ItemBackgroundColor}"
+                                       Opacity="{x:DynamicResource OpacityValue}">
                                     <StackLayout Orientation="Horizontal"  
                                                  HorizontalOptions="FillAndExpand" 
                                                  VerticalOptions="CenterAndExpand" >
@@ -42,7 +43,14 @@
                                                 VerticalOptions="Center" 
                                                 Text="{Binding Theme}"
                                                 TextColor="{DynamicResource ItemTextColor}"/>
-                                        <BoxView Color="{Binding ., Converter={StaticResource themeColorConverter}}" HorizontalOptions="EndAndExpand"/>
+                                        <Grid BackgroundColor="{x:DynamicResource SeparatorColor}" 
+                                              Padding="3" 
+                                              HorizontalOptions="Center" 
+                                              VerticalOptions="Center"
+                                              ColumnDefinitions="*"
+                                              RowDefinitions="Auto">
+                                            <BoxView Grid.Column ="0" Color="{Binding Theme, Converter={StaticResource themeColorConverter}}" HeightRequest="20" WidthRequest="20"/>
+                                        </Grid>
                                     </StackLayout>
                                 </Frame>
                             </ViewCell>

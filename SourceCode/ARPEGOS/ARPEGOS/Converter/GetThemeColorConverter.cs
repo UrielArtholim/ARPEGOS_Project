@@ -27,7 +27,7 @@ namespace ARPEGOS.Converter
                     "Oceano" => DependencyHelper.Container.Resolve<OceanTheme>(),
                     _ => DependencyHelper.Container.Resolve<LightTheme>(),
                 };
-                currentDictionary.TryGetValue("TitleBackgroundColor", out themeColor);
+                currentDictionary.TryGetValue("ItemBackgroundColor", out themeColor);
             }
             return themeColor;
         }
