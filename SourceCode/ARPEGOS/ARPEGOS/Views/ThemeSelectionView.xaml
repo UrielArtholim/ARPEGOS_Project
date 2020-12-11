@@ -43,12 +43,7 @@
                                                 VerticalOptions="Center" 
                                                 Text="{Binding Theme}"
                                                 TextColor="{DynamicResource ItemTextColor}"/>
-                                        <Grid BackgroundColor="{x:DynamicResource SeparatorColor}" 
-                                              Padding="3" 
-                                              HorizontalOptions="Center" 
-                                              VerticalOptions="Center"
-                                              ColumnDefinitions="*"
-                                              RowDefinitions="Auto">
+                                        <Grid Style="{x:DynamicResource FrameGrid}">
                                             <BoxView Grid.Column ="0" Color="{Binding Theme, Converter={StaticResource themeColorConverter}}" HeightRequest="20" WidthRequest="20"/>
                                         </Grid>
                                     </StackLayout>
@@ -59,12 +54,7 @@
                 </ListView>
                 <Button Text="Siguiente" 
                         Command="{Binding NextCommand}" 
-                        IsVisible="True"
-                        BackgroundColor="{DynamicResource ButtonBackgroundColor}"
-                        TextColor="{DynamicResource ButtonTextColor}"
-                        AbsoluteLayout.LayoutFlags="PositionProportional"
-                        AbsoluteLayout.LayoutBounds=".95,.95,80,80"
-                        HeightRequest="50"/>
+                        Style="{x:DynamicResource NextButton}"/>
             </StackLayout>
         </Grid>
     </ContentPage.Content>

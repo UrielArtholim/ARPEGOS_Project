@@ -5,33 +5,38 @@
              Visual="Material"
              x:Name="MultipleChoice"
              Title="{Binding StageName}"
-             NavigationPage.HasBackButton="False">
+             NavigationPage.HasBackButton="False"
+             BackgroundImageSource="{x:DynamicResource BackgroundImageSource}">
     <ContentPage.Content>
         <Grid>
             <StackLayout Spacing="10" Padding="10"  VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
-                <StackLayout Orientation="Vertical" Padding="10">
-                    <StackLayout Orientation="Vertical" Spacing="0" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" IsVisible="{Binding HasGeneralLimit}">
-                        <StackLayout Orientation="Horizontal">
-                            <Label Text="Límite general" HorizontalOptions="StartAndExpand" FontSize="Medium" />
-                            <Label Text="{Binding GeneralProgressLabel, StringFormat='{0:F0}'}" HorizontalOptions="EndAndExpand" FontSize="Medium"/>
-                        </StackLayout>
-                        <ProgressBar x:Name="GeneralProgressBar"  HeightRequest="10"
-                                         HorizontalOptions="FillAndExpand"
-                                         Progress="{Binding GeneralProgress}" 
-                                         ProgressColor="{DynamicResource LightGeneralColor}"
-                                         BackgroundColor="{DynamicResource LightPrimaryBackgroundColor}"
-                                         IsVisible="{Binding HasGeneralLimit}"/>
+                <StackLayout Orientation="Vertical" Spacing="20">
+                    <StackLayout Style="{x:DynamicResource LimitLayout}" IsVisible="{Binding HasGeneralLimit}">
+                        <Frame Style="{x:DynamicResource ProgressFrame}">
+                            <StackLayout Orientation="Vertical">
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="Límite general" HorizontalOptions="StartAndExpand" Style="{x:DynamicResource ItemLabel}" />
+                                    <Label Text="{Binding GeneralProgressLabel, StringFormat='{0:F0}'}" HorizontalOptions="EndAndExpand" FontSize="Medium"/>
+                                </StackLayout>
+                                <ProgressBar x:Name="GeneralProgressBar"  
+                                             Style="{x:DynamicResource GeneralProgressBar}"
+                                             Progress="{Binding GeneralProgress}" 
+                                             IsVisible="{Binding HasGeneralLimit}"/>
+                            </StackLayout>
+                        </Frame>
                     </StackLayout>
-                    <StackLayout Orientation="Vertical" Spacing="5" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" IsVisible="{Binding HasStageLimit}">
-                        <StackLayout Orientation="Horizontal" Spacing="5" HorizontalOptions="FillAndExpand">
-                            <Label Text="Límite" HorizontalOptions="StartAndExpand" FontSize="Medium"/>
-                            <Label Text="{Binding StageProgressLabel, StringFormat='{0:F0}'}" HorizontalOptions="EndAndExpand" FontSize="Medium"/>
-                        </StackLayout>
-                        <ProgressBar x:Name="StageProgressBar" HeightRequest="10"
-                                     HorizontalOptions="FillAndExpand"
-                                     Progress="{Binding StageProgress}" 
-                                     ProgressColor="{DynamicResource LightStageColor}"
-                                     BackgroundColor="{DynamicResource LightPrimaryBackgroundColor}"/>
+                    <StackLayout Style="{x:DynamicResource LimitLayout}" IsVisible="{Binding HasStageLimit}">
+                        <Frame Style="{x:DynamicResource ProgressFrame}">
+                            <StackLayout Orientation="Vertical">
+                                <StackLayout Orientation="Horizontal" Spacing="5" HorizontalOptions="FillAndExpand">
+                                    <Label Text="Límite de etapa" HorizontalOptions="StartAndExpand" Style="{x:DynamicResource ItemLabel}"/>
+                                    <Label Text="{Binding StageProgressLabel, StringFormat='{0:F0}'}" HorizontalOptions="EndAndExpand" FontSize="Medium"/>
+                                </StackLayout>
+                                <ProgressBar x:Name="StageProgressBar" 
+                                             Style="{x:DynamicResource StageProgressBar}"
+                                             Progress="{Binding StageProgress}"/>
+                            </StackLayout>
+                        </Frame>
                     </StackLayout>
                 </StackLayout>
                 <ListView x:Name="SingleChoiceList" ItemsSource="{Binding Data}" HasUnevenRows="True" SelectionMode="None" >
@@ -41,7 +46,7 @@
                                 <Frame x:Name="ItemFrame" 
                                        Padding="15" 
                                        Margin="10,10,10,0" 
-                                       BorderColor="{DynamicResource LightSeparatorColor}">
+                                       Style="{x:DynamicResource ItemFrame}">
                                     <Frame.GestureRecognizers>
                                         <TapGestureRecognizer Command="{Binding SelectItem}" CommandParameter="{Binding .}"/>
                                     </Frame.GestureRecognizers>
@@ -57,7 +62,7 @@
                                                    BindingContext="{Binding .}"/>
                                         <Label  Grid.Row="0" 
                                                 Grid.Column="1" 
-                                                FontSize="Medium" 
+                                                Style="{x:DynamicResource ItemLabel}"
                                                 HorizontalOptions="StartAndExpand" 
                                                 HorizontalTextAlignment="Start"
                                                 VerticalOptions="Center" 
@@ -72,13 +77,9 @@
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
-                <Button Text="Siguiente" 
-                        Command="{Binding NextCommand}" 
-                        IsVisible="True"
-                        BackgroundColor="{DynamicResource LightButtonColor}"
-                        AbsoluteLayout.LayoutFlags="PositionProportional"
-                        AbsoluteLayout.LayoutBounds=".95,.95,80,80"
-                        HeightRequest="50"/>
+                <Button Command="{Binding Source={x:Reference MultipleChoice}, Path=BindingContext.NextCommand}" 
+                        IsVisible="{Binding Continue}"
+                        Style="{x:DynamicResource NextButton}"/>
             </StackLayout>
             <Frame Grid.Row="0" BackgroundColor="Black" Opacity="0.7" HasShadow="False" CornerRadius="0" IsVisible="{Binding IsBusy}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
                 <ActivityIndicator Color="White" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" IsRunning="{Binding IsBusy}"

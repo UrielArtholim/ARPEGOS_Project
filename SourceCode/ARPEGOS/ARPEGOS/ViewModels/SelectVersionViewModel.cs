@@ -43,13 +43,14 @@ namespace ARPEGOS.ViewModels
         public ICommand ReturnCommand { get; }
         public ObservableCollection<string> SelectableElements { get; }
 
-        public SelectVersionViewModel (IDialogService dialogService)
+        public SelectVersionViewModel (string title)
         {
-            this.Title = "Selecciona la versión";
+            dialogService = DependencyHelper.CurrentContext.Dialog;
+            this.Title = title;
             this.SelectableElements = new ObservableCollection<string>();
             this.SelectItemCommand = new Command<string>(s => Task.Factory.StartNew(async () => await this.SelectItem(s)));
             this.CurrentStatus = SelectionStatus.SelectingVersion;
-            this.dialogService = dialogService;
+            this.dialogService = DependencyHelper.CurrentContext.Dialog;
             this.CancelEnabled = false;
             this.selectedGame = string.Empty;
             this.AddButtonCommand = new Command(async () => await App.Navigation.PushAsync(new AddGameView()));

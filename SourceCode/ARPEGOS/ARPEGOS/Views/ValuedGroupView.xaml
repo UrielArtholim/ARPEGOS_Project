@@ -5,33 +5,38 @@
              x:Name="ValuedGroup"
              Title="{Binding StageName}"
              NavigationPage.HasBackButton="False"
-             Visual="Material">
+             Visual="Material"
+             BackgroundImageSource="{x:DynamicResource BackgroundImageSource}">
     <ContentPage.Content>
         <Grid>
             <StackLayout  Spacing="20" Padding="0" Margin="20,20,20,20" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
                 <StackLayout Orientation="Vertical">
-                    <StackLayout Orientation="Vertical" Spacing="5" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" IsVisible="{Binding HasGeneralLimit}">
-                        <StackLayout Orientation="Horizontal">
-                            <Label Text="Límite general" HorizontalOptions="StartAndExpand" FontSize="Medium" />
-                            <Label Text="{Binding GeneralProgressLabel, StringFormat='{0:F0}'}" HorizontalOptions="EndAndExpand" FontSize="Medium"/>
-                        </StackLayout>
-                        <ProgressBar x:Name="GeneralProgressBar"  HeightRequest="10"
-                                         HorizontalOptions="FillAndExpand"
-                                         Progress="{Binding GeneralProgress}" 
-                                         ProgressColor="{DynamicResource LightGeneralColor}"
-                                         BackgroundColor="{DynamicResource LightPrimaryBackgroundColor}"
-                                         IsVisible="{Binding HasGeneralLimit}"/>
+                    <StackLayout Style="{x:DynamicResource LimitLayout}" IsVisible="{Binding HasGeneralLimit}">
+                        <Frame Style="{x:DynamicResource GeneralProgressFrame}">
+                            <StackLayout Orientation="Vertical">
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="Límite general" HorizontalOptions="StartAndExpand" Style="{x:DynamicResource ItemLabel}" />
+                                    <Label Text="{Binding GeneralProgressLabel, StringFormat='{0:F0}'}" HorizontalOptions="EndAndExpand" FontSize="Medium"/>
+                                </StackLayout>
+                                <ProgressBar x:Name="GeneralProgressBar"  
+                                             Style="{x:DynamicResource GeneralProgressBar}"
+                                             Progress="{Binding GeneralProgress}" 
+                                             IsVisible="{Binding HasGeneralLimit}"/>
+                            </StackLayout>
+                        </Frame>
                     </StackLayout>
-                    <StackLayout Orientation="Vertical" Spacing="5" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" IsVisible="{Binding HasStageLimit}">
-                        <StackLayout Orientation="Horizontal" Spacing="5" HorizontalOptions="FillAndExpand">
-                            <Label Text="Límite" HorizontalOptions="StartAndExpand" FontSize="Medium"/>
-                            <Label Text="{Binding StageProgressLabel, StringFormat='{0:F0}'}" HorizontalOptions="EndAndExpand" FontSize="Medium"/>
-                        </StackLayout>
-                        <ProgressBar x:Name="StageProgressBar" HeightRequest="10"
-                                     HorizontalOptions="FillAndExpand"
-                                     Progress="{Binding StageProgress}" 
-                                     ProgressColor="{DynamicResource LightStageColor}"
-                                     BackgroundColor="{DynamicResource LightPrimaryBackgroundColor}"/>
+                    <StackLayout Style="{x:DynamicResource LimitLayout}" IsVisible="{Binding HasStageLimit}">
+                        <Frame Style="{x:DynamicResource StageProgressFrame}">
+                            <StackLayout Orientation="Vertical">
+                                <StackLayout Orientation="Horizontal" Spacing="5" HorizontalOptions="FillAndExpand">
+                                    <Label Text="Límite de etapa" HorizontalOptions="StartAndExpand" Style="{x:DynamicResource ItemLabel}"/>
+                                    <Label Text="{Binding StageProgressLabel, StringFormat='{0:F0}'}" HorizontalOptions="EndAndExpand" FontSize="Medium"/>
+                                </StackLayout>
+                                <ProgressBar x:Name="StageProgressBar" 
+                                             Style="{x:DynamicResource StageProgressBar}"
+                                             Progress="{Binding StageProgress}"/>
+                            </StackLayout>
+                        </Frame>
                     </StackLayout>
                 </StackLayout>
                 <ListView x:Name="ValuedGroupedList" 
@@ -48,7 +53,7 @@
                                 <Frame x:Name="GroupFrame" 
                                        Padding="15" 
                                        Margin="10,10,10,0" 
-                                       BorderColor="{DynamicResource LightSeparatorColor}">
+                                       Style="{x:DynamicResource HeaderFrame}">
                                     <Frame.GestureRecognizers>
                                         <TapGestureRecognizer Command="{Binding Source={x:Reference ValuedGroup}, Path=BindingContext.SelectGroupCommand}" CommandParameter="{Binding .}"/>
                                     </Frame.GestureRecognizers>
@@ -58,9 +63,7 @@
                                         <Image Source="{Binding StateIcon}" HeightRequest="25" WidthRequest="25" BackgroundColor="Transparent"/>
                                         <Label  Grid.Row="0" 
                                                 Grid.Column="1" 
-                                                FontSize="Large" 
-                                                HorizontalOptions="CenterAndExpand" 
-                                                VerticalOptions="Center" 
+                                                Style="{x:DynamicResource HeaderLabel}"
                                                 Text="{Binding FormattedTitle}"/>
                                         <ImageButton Source="description.png" HeightRequest="25" WidthRequest="25"
                                                      Command="{Binding Source={x:Reference ValuedGroup}, Path=BindingContext.GroupInfoCommand}"
@@ -77,21 +80,21 @@
                                 <Frame x:Name="ItemFrame"
                                        VerticalOptions="Start"
                                        Margin="10,10,10,0"
-                                       BorderColor="{DynamicResource LightSeparatorColor}">
+                                       Style="{x:DynamicResource ItemFrame}">
                                     <Grid x:Name="SliderItem" 
                                               HorizontalOptions="FillAndExpand"
                                               RowDefinitions="1*"
                                               ColumnDefinitions="*,*,*">
                                         <Label x:Name="ItemNameLabel"
-                                                   FontSize="Medium"
-                                                   Grid.Row="0"
-                                                   Grid.Column="0"
-                                                   VerticalOptions="Center"
-                                                   HorizontalTextAlignment="Center"
-                                                   Text="{Binding FormattedName}"/>
+                                               Style="{x:DynamicResource ItemLabel}"
+                                               Grid.Row="0"
+                                               Grid.Column="0"
+                                               VerticalOptions="Center"
+                                               HorizontalTextAlignment="Center"
+                                               Text="{Binding FormattedName}"/>
                                         <StackLayout Orientation="Vertical" Grid.Row="0" Grid.Column="1" VerticalOptions="Center" HorizontalOptions="Center">
                                             <Label x:Name="ValueLabel"
-                                               FontSize="Medium"                                               
+                                               Style="{x:DynamicResource ItemLabel}"                                         
                                                VerticalOptions="Center"
                                                HorizontalTextAlignment="Center"
                                                Text="{Binding Value, StringFormat='{0:F0}'}"/>
@@ -118,13 +121,9 @@
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
-                <Button Text="Siguiente" 
-                        Command="{Binding NextCommand}" 
-                        IsVisible="true"
-                        BackgroundColor="{DynamicResource LightButtonColor}"
-                        AbsoluteLayout.LayoutFlags="PositionProportional"
-                        AbsoluteLayout.LayoutBounds=".95,.95,80,80"
-                        HeightRequest="40"/>
+                <Button Command="{Binding Source={x:Reference ValuedGroup}, Path=BindingContext.NextCommand}" 
+                        IsVisible="{Binding Continue}"
+                        Style="{x:DynamicResource NextButton}"/>
             </StackLayout>
             <Frame Grid.Row="0" BackgroundColor="Black" Opacity="0.7" HasShadow="False" CornerRadius="0" IsVisible="{Binding IsBusy}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
                 <ActivityIndicator Color="White" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" IsRunning="{Binding IsBusy}"

@@ -14,6 +14,7 @@ namespace ARPEGOS.Configuration
     {
         private CharacterOntologyService _currentCharacter;
         private ThemeHelper _themes = new ThemeHelper();
+        public DialogService Dialog = new DialogService();
         public GameOntologyService CurrentGame { get; set; }
         public ThemeHelper Themes 
         { 

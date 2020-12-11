@@ -31,10 +31,10 @@
     <Color x:Key="ItemTextColor">#bbcdfb</Color>
 
     <!-- Button Background Color -->
-    <Color x:Key="ButtonBackgroundColor">#0450f7</Color>
+    <Color x:Key="ButtonBackgroundColor">#047bfb</Color>
 
     <!-- Button Text Color -->
-    <Color x:Key="ButtonTextColor">#5dcbf8</Color>
+    <Color x:Key="ButtonTextColor">#bbcdfb</Color>
 
     <!-- Main Item Label -->
     <Color x:Key="MainItemTextColor">#bbcdfb</Color>
@@ -44,6 +44,18 @@
 
     <!-- Menu Text Color -->
     <Color x:Key="MenuTextColor">#fae056</Color>
+
+    <!-- General Progress Bar Color -->
+    <Color x:Key="GeneralBarColor">#000000</Color>
+
+    <!-- General Progress Bar Background Label -->
+    <Color x:Key="GeneralBarBackgroundColor">#000000</Color>
+
+    <!-- Stage Progress Bar Color -->
+    <Color x:Key="StageBarColor">#000000</Color>
+
+    <!-- General Progress Bar Background Color -->
+    <Color x:Key="StageBarBackgroundColor">#000000</Color>
 
     <!-- Background Image Path -->
     <ImageSource x:Key="BackgroundImageSource">ocean.png</ImageSource>

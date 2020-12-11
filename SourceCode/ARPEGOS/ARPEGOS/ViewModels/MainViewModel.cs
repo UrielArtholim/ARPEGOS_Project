@@ -1,5 +1,4 @@
-﻿
-namespace ARPEGOS.ViewModels
+﻿namespace ARPEGOS.ViewModels
 {
     using System.Collections.Generic;
     using System.Collections.ObjectModel;
@@ -83,13 +82,13 @@ namespace ARPEGOS.ViewModels
                     };
             }
         }
-        public MainViewModel (IDialogService dialogService)
+        public MainViewModel ()
         {
             this.SelectableElements = new ObservableCollection<string>();
             this.SelectItemCommand = new Command<string>(s => Task.Factory.StartNew(async () => await this.SelectItem(s)));
             this.CurrentStatus = SelectionStatus.SelectingGame;
             this.PreviousStatus = this.CurrentStatus;
-            this.dialogService = dialogService;
+            this.dialogService = DependencyHelper.CurrentContext.Dialog;
             this.CancelEnabled = false;
             this.AddButtonCommand = new Command(async() => 
             {
@@ -191,7 +190,7 @@ namespace ARPEGOS.ViewModels
                 case SelectionStatus.SelectingGame:
 
                     this.SelectedGame = item;
-                    MainThread.BeginInvokeOnMainThread(async() => await App.Navigation.PushAsync(new SelectVersionView(dialogService)));
+                    MainThread.BeginInvokeOnMainThread(async() => await App.Navigation.PushAsync(new SelectVersionView(this.SelectedGame)));
                     this.PreviousStatus = this.CurrentStatus;
                     this.CurrentStatus = SelectionStatus.SelectingGame;
                     this.Load(this.CurrentStatus);

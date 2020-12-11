@@ -5,7 +5,8 @@
              Title="{Binding StageName}"
              Visual="Material"
              x:Name="SingleChoice"
-             NavigationPage.HasBackButton="False">
+             NavigationPage.HasBackButton="False"
+             BackgroundImageSource="{x:DynamicResource BackgroundImageSource}">
     <ContentPage.Content>
         <Grid>
             <StackLayout Spacing="10" Padding="10" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
@@ -16,7 +17,7 @@
                                 <Frame x:Name="ItemFrame" 
                                        Padding="15" 
                                        Margin="10,10,10,0" 
-                                       BorderColor="{DynamicResource LightSeparatorColor}">
+                                       Style="{x:DynamicResource ItemFrame}">
                                     <!--Frame.GestureRecognizers>
                                         <TapGestureRecognizer Command="{Binding RadioChecked}" CommandParameter="{Binding .}"/>
                                     <Frame.GestureRecognizers/-->
@@ -35,7 +36,7 @@
                                                    BindingContext="{Binding .}"/>
                                         <Label  Grid.Row="0" 
                                                 Grid.Column="1" 
-                                                FontSize="Medium" 
+                                                Style="{x:DynamicResource ItemLabel}"
                                                 HorizontalOptions="StartAndExpand" 
                                                 HorizontalTextAlignment="Start"
                                                 VerticalOptions="Center" 
@@ -50,13 +51,9 @@
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
-                <Button Text="Siguiente" 
-                        Command="{Binding NextCommand}" 
+                <Button Command="{Binding NextCommand}" 
                         IsVisible="{Binding Continue}"
-                        BackgroundColor="{DynamicResource LightButtonColor}"
-                        AbsoluteLayout.LayoutFlags="PositionProportional"
-                        AbsoluteLayout.LayoutBounds=".95,.95,80,80"
-                        HeightRequest="50"/>
+                        Style="{x:DynamicResource NextButton}"/>
             </StackLayout>
             <Frame Grid.Row="0" BackgroundColor="Black" Opacity="0.7" HasShadow="False" CornerRadius="0" IsVisible="{Binding IsBusy}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
                 <ActivityIndicator Color="White" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" IsRunning="{Binding IsBusy}"

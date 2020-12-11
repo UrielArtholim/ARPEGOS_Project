@@ -30,7 +30,7 @@
             </StackLayout>
             <ScrollView Grid.Row="0" VerticalOptions="FillAndExpand">
                 <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
-                    <FlexLayout Direction="Row" AlignItems="Start" JustifyContent="SpaceEvenly" Wrap="Wrap" BindableLayout.ItemsSource="{Binding SelectableElements}" Padding="5, 20, 5, 0" AlignContent="Start" AlignSelf="Auto"  >
+                    <FlexLayout  BindableLayout.ItemsSource="{Binding SelectableElements}" Style="{x:DynamicResource FlexLayout}">
                         <BindableLayout.ItemTemplate>
                             <DataTemplate>
                                 <Frame Style="{DynamicResource MainItemFrame}">
@@ -39,7 +39,7 @@
                                     </Frame.GestureRecognizers>
                                     <StackLayout Padding="10">
                                         <Image Source="{Binding ., Converter={x:StaticResource GetInitialsImageConverter}, ConverterParameter=128}" />
-                                        <Label Text="{Binding .}" Style="{x:DynamicResource MainItemLabel}" HorizontalTextAlignment="Center" LineBreakMode="WordWrap" />
+                                        <Label Text="{Binding .}" Style="{x:DynamicResource MainItemLabel}" />
                                     </StackLayout>
                                 </Frame>
                             </DataTemplate>

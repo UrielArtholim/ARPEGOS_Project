@@ -6,6 +6,7 @@ using ARPEGOS.Views;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Linq;
 using System.Text;
 using System.Windows.Input;
 using Xamarin.Forms;
@@ -31,9 +32,14 @@ namespace ARPEGOS.ViewModels
             this.Themes = new ObservableCollection<string>(themeList);
             this.HomeCommand = new Command(async() =>
             {
-                await App.Current.MainPage.Navigation.PopToRootAsync();
-                var viewModel = App.Current.MainPage.Navigation.NavigationStack[0].BindingContext as MainViewModel;
-                viewModel.Load(MainViewModel.SelectionStatus.SelectingGame);
+                var navigationStack = App.Current.MainPage.Navigation.NavigationStack;
+                if(navigationStack.Count > 0)
+                {
+                   var currentPage = App.Current.MainPage.Navigation.NavigationStack.Last() as NavigationPage;
+                   await currentPage.PopToRootAsync();
+                }
+                var mainPage = App.Current.MainPage as MasterDetailPage;
+                mainPage.IsPresented = false;
             });
 
             this.ShowCharactersCommand = new Command(async() =>

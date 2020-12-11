@@ -17,10 +17,10 @@ namespace ARPEGOS.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class SelectVersionView: ContentPage
     {
-        public SelectVersionView (IDialogService dialogService)
+        public SelectVersionView (string item)
         {
             InitializeComponent();
-            this.BindingContext = new SelectVersionViewModel(dialogService);
+            this.BindingContext = new SelectVersionViewModel(item);
         }
 
     }

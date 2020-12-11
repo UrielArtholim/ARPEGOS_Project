@@ -2,22 +2,26 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ARPEGOS.Views.SkillListView"
              Title="Selecciona una habilidad"
-             x:Name="ItemList">
-    <ListView ItemsSource="{Binding Data}"
-        CachingStrategy="RetainElement"
-        HasUnevenRows="True"
-        SeparatorVisibility="None">
-        <ListView.ItemTemplate>
-            <DataTemplate>
-                <ViewCell>
-                    <Frame CornerRadius="5" Padding="10" Margin="20,10,20,10" BorderColor="{DynamicResource LightSeparatorColor}" HorizontalOptions="FillAndExpand">
-                        <Label Text="{Binding .}" HorizontalOptions="StartAndExpand" FontSize="20"/>
-                        <Frame.GestureRecognizers>
-                            <TapGestureRecognizer Command="{Binding Path=BindingContext.SelectItemCommand, Source={x:Reference ItemList}}" CommandParameter="{Binding .}"/>
-                        </Frame.GestureRecognizers>
-                    </Frame>
-                </ViewCell>
-            </DataTemplate>
-        </ListView.ItemTemplate>
-    </ListView>
+             x:Name="ItemList"
+             BackgroundImageSource="{x:DynamicResource BackgroundImageSource}">
+        <ListView ItemsSource="{Binding Data}"
+                  CachingStrategy="RetainElement"
+                  HasUnevenRows="True"
+                  SeparatorVisibility="None">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                    <Frame x:Name="ItemFrame" 
+                           Padding="15" 
+                           Margin="10,10,10,0" 
+                           Style="{x:DynamicResource ItemFrame}">
+                        <Label Text="{Binding .}" Style="{x:DynamicResource ItemLabel}"/>
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding Path=BindingContext.SelectItemCommand, Source={x:Reference ItemList}}" CommandParameter="{Binding .}"/>
+                            </Frame.GestureRecognizers>
+                        </Frame>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
 </ContentPage>

@@ -5,15 +5,15 @@
              x:Name="SingleChoiceGroup"
              Title="{Binding StageName}"
              NavigationPage.HasBackButton="False"
-             Visual="Material">
+             Visual="Material"
+             BackgroundImageSource="{x:DynamicResource BackgroundImageSource}">
     <ContentPage.Content>
         <Grid>
             <StackLayout Spacing="10" Padding="10" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
                 <ListView x:Name="SingleChoiceList" 
                           ItemsSource="{Binding Data}" 
                           HasUnevenRows="True" 
-                          SelectionMode="None" 
-
+                          SelectionMode="None"
                           IsGroupingEnabled="True"
                           SeparatorVisibility="None">
                     <ListView.GroupHeaderTemplate>
@@ -22,7 +22,7 @@
                                 <Frame x:Name="GroupFrame" 
                                        Padding="15" 
                                        Margin="10,10,10,0" 
-                                       BorderColor="{DynamicResource LightSeparatorColor}">
+                                       Style="{x:DynamicResource HeaderFrame}">
                                     <Frame.GestureRecognizers>
                                         <TapGestureRecognizer Command="{Binding Source={x:Reference SingleChoiceGroup}, Path=BindingContext.SelectGroupCommand}" CommandParameter="{Binding .}"/>
                                     </Frame.GestureRecognizers>
@@ -33,7 +33,7 @@
                                         <Image Source="{Binding StateIcon}" HeightRequest="25" WidthRequest="25" BackgroundColor="Transparent" />
                                         <Label  Grid.Row="0" 
                                                 Grid.Column="1" 
-                                                FontSize="Large" 
+                                                Style="{x:DynamicResource HeaderLabel}" 
                                                 HorizontalOptions="StartAndExpand" 
                                                 VerticalOptions="Center" 
                                                 Text="{Binding FormattedTitle}"/>
@@ -52,7 +52,7 @@
                                 <Frame x:Name="ItemFrame" 
                                     Padding="15" 
                                     Margin="10,10,10,0" 
-                                    BorderColor="{DynamicResource LightSeparatorColor}">
+                                    Style="{x:DynamicResource ItemFrame}">
                                     <StackLayout Orientation="Horizontal"  
                                                  HorizontalOptions="FillAndExpand" 
                                                  VerticalOptions="CenterAndExpand" 
@@ -66,29 +66,27 @@
                                                       CheckedChanged="OnCheckedChanged" 
                                                       BindingContext="{Binding .}"/>
                                         <Label  Grid.Row="0" 
-                                                                    Grid.Column="1" 
-                                                                    FontSize="Medium" 
-                                                                    HorizontalOptions="StartAndExpand" 
-                                                                    HorizontalTextAlignment="Start"
-                                                                    VerticalOptions="Center" 
-                                                                    Text="{Binding .FormattedName}"/>
-                                        <ImageButton Source="description.png"  HeightRequest="25" WidthRequest="25"
-                                                                         Command="{Binding Source={x:Reference SingleChoiceGroup}, Path=BindingContext.InfoCommand}"
-                                                                         CommandParameter="{Binding .}"
-                                                                         BackgroundColor="Transparent"/>
+                                                Grid.Column="1" 
+                                                Style="{x:DynamicResource ItemLabel}"
+                                                HorizontalOptions="StartAndExpand" 
+                                                HorizontalTextAlignment="Start"
+                                                VerticalOptions="Center" 
+                                                Text="{Binding .FormattedName}"/>
+                                        <ImageButton Source="description.png"  
+                                                     HeightRequest="25" 
+                                                     WidthRequest="25"
+                                                     Command="{Binding Source={x:Reference SingleChoiceGroup}, Path=BindingContext.InfoCommand}"
+                                                     CommandParameter="{Binding .}"
+                                                     BackgroundColor="Transparent"/>
                                     </StackLayout>
                                 </Frame>
                             </ViewCell>
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
-                <Button Text="Siguiente" 
-                        Command="{Binding Source={x:Reference SingleChoiceGroup}, Path=BindingContext.NextCommand}" 
+                <Button Command="{Binding Source={x:Reference SingleChoiceGroup}, Path=BindingContext.NextCommand}" 
                         IsVisible="{Binding Continue}"
-                        BackgroundColor="{DynamicResource LightButtonColor}"
-                        AbsoluteLayout.LayoutFlags="PositionProportional"
-                        AbsoluteLayout.LayoutBounds=".95,.95,80,80"
-                        HeightRequest="50"/>
+                        Style="{x:DynamicResource NextButton}"/>
             </StackLayout>
             <Frame Grid.Row="0" BackgroundColor="Black" Opacity="0.7" HasShadow="False" CornerRadius="0" IsVisible="{Binding IsBusy}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
                 <ActivityIndicator Color="White" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" IsRunning="{Binding IsBusy}"

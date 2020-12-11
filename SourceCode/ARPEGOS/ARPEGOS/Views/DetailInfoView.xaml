@@ -3,33 +3,29 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ARPEGOS.Views.DetailInfoView"
              Title="{Binding ViewName}"
-             BackgroundColor="{DynamicResource LightPantone7}">
+             BackgroundImageSource="{x:DynamicResource BackgroundImageSource}">
     <ContentPage.Content>
         <Grid>
-            <ListView x:Name="MultipleChoiceList" 
-                          ItemsSource="{Binding Data}" 
-                          HasUnevenRows="True" 
-                          SelectionMode="None" 
-                          CachingStrategy="RetainElement"                          
-                          IsGroupingEnabled="True"
-                          SeparatorVisibility="None">
+            <ListView x:Name="DetailInfoList" 
+                      ItemsSource="{Binding Data}" 
+                      HasUnevenRows="True" 
+                      SelectionMode="None" 
+                      CachingStrategy="RetainElement"                          
+                      IsGroupingEnabled="True"
+                      SeparatorVisibility="None">
                 <ListView.GroupHeaderTemplate>
                     <DataTemplate>
                         <ViewCell>
                             <Frame x:Name="GroupFrame" 
-                                       Padding="15" 
-                                       Margin="15,15,15,15" 
-                                       BorderColor="{DynamicResource LightSeparatorColor}"
-                                       BackgroundColor="{DynamicResource LightPantone3}">
+                                   Padding="15" 
+                                   Margin="15,15,15,15" 
+                                   Style="{x:DynamicResource HeaderFrame}">
                                 <StackLayout Orientation="Horizontal"  
-                                                 HorizontalOptions="FillAndExpand" 
-                                                 VerticalOptions="CenterAndExpand">
-                                    <Label  FontSize="Large" 
-                                                HorizontalOptions="CenterAndExpand" 
-                                                VerticalOptions="Center" 
-                                                Text="{Binding FormattedTitle}"
-                                                TextColor="{x:DynamicResource DarkPantone5}"
-                                                FontAttributes="Bold"/>
+                                             HorizontalOptions="FillAndExpand" 
+                                             VerticalOptions="CenterAndExpand">
+                                    <Label Style="{x:DynamicResource HeaderLabel}"  
+                                           Text="{Binding FormattedTitle}"
+                                           FontAttributes="Bold"/>
                                 </StackLayout>
                             </Frame>
                         </ViewCell>
@@ -39,24 +35,22 @@
                     <DataTemplate>
                         <ViewCell>
                             <Frame x:Name="ItemFrame" 
-                                       Padding="15" 
-                                       Margin="30,0,30,10" 
-                                       BorderColor="{DynamicResource LightSeparatorColor}"
-                                   BackgroundColor="{DynamicResource LightPantone5}">
+                                   Padding="15" 
+                                   Margin="30,0,30,10" 
+                                   Style="{x:DynamicResource ItemFrame}">
                                 <StackLayout Orientation="Horizontal"  
                                                  HorizontalOptions="FillAndExpand" 
                                                  VerticalOptions="CenterAndExpand" >
                                     <Label  Grid.Row="0" 
                                                 Grid.Column="1" 
-                                                FontSize="Medium" 
+                                                Style="{x:DynamicResource ItemLabel}" 
                                                 HorizontalOptions="StartAndExpand" 
                                                 HorizontalTextAlignment="Start"
                                                 VerticalOptions="Center" 
-                                                Text="{Binding FormattedName}"
-                                                TextColor="{x:DynamicResource DarkPantone4}"/>
+                                                Text="{Binding FormattedName}"/>
                                     <Label  Grid.Row="0" 
                                                 Grid.Column="2" 
-                                                FontSize="Medium" 
+                                                Style="{x:DynamicResource ItemLabel}" 
                                                 HorizontalOptions="EndAndExpand" 
                                                 HorizontalTextAlignment="End"
                                                 VerticalOptions="Center" 

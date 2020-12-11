@@ -31,10 +31,10 @@
     <Color x:Key="ItemTextColor">#044404</Color>
 
     <!-- Button Background Color -->
-    <Color x:Key="ButtonBackgroundColor">#31a709</Color>
+    <Color x:Key="ButtonBackgroundColor">#65d12f</Color>
 
     <!-- Button Text Color -->
-    <Color x:Key="ButtonTextColor">#a6e970</Color>
+    <Color x:Key="ButtonTextColor">#044404</Color>
 
     <!-- Main Item Label -->
     <Color x:Key="MainItemTextColor">#044404</Color>
@@ -45,6 +45,18 @@
     <!-- Menu Text Color -->
     <Color x:Key="MenuTextColor">#fae056</Color>
     
+    <!-- General Progress Bar Color -->
+    <Color x:Key="GeneralBarColor">#00FF00</Color>
+
+    <!-- General Progress Bar Background Label -->
+    <Color x:Key="GeneralBarBackgroundColor">#008800</Color>
+
+    <!-- Stage Progress Bar Color -->
+    <Color x:Key="StageBarColor">#000000</Color>
+
+    <!-- General Progress Bar Background Color -->
+    <Color x:Key="StageBarBackgroundColor">#000000</Color>
+    
     <!-- Background Image Path -->
     <ImageSource x:Key="BackgroundImageSource">valley.png</ImageSource>
     
@@ -53,7 +65,4 @@
     
     <!-- Remove Button Image Path-->
     <ImageSource x:Key="RemoveButtonImageSource">valley_delete.png</ImageSource>
-
-    <!-- Theme HUD Opacity -->
-    <x:Double x:Key="HUD_Opacity">0.7</x:Double>
 </ResourceDictionary>

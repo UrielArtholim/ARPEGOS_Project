@@ -4,18 +4,16 @@
              x:Class="ARPEGOS.Views.CharacterInfoView"
              Visual="Material"
              Title="{Binding CharacterName}"
-             x:Name="CharacterInfoPage">
+             x:Name="CharacterInfoPage"
+             BackgroundImageSource="{x:DynamicResource BackgroundImageSource}">
     <Grid>
         <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="{DynamicResource LightSecondaryBackgroundColor}">
-            <StackLayout Padding="5" Margin="20,20,20,0" Orientation="Horizontal" VerticalOptions="Start" HorizontalOptions="CenterAndExpand" IsVisible="{Binding CancelEnabled}">
-                <Button Text="Cancelar" BackgroundColor="DarkGray" Command="{Binding CancelButtonCommand}" HorizontalOptions="Center"/>
-            </StackLayout>
             <ScrollView Grid.Row="0" BackgroundColor="{DynamicResource LightSecondaryBackgroundColor}" VerticalOptions="FillAndExpand">
                 <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
                     <FlexLayout Direction="Row" AlignItems="Start" JustifyContent="SpaceEvenly" Wrap="Wrap" BindableLayout.ItemsSource="{Binding SelectableItems}" Padding="5, 20, 5, 0" AlignContent="Start" AlignSelf="Auto"  >
                         <BindableLayout.ItemTemplate>
                             <DataTemplate>
-                                <Frame CornerRadius="5" BorderColor="{DynamicResource LightSeparatorColor}" Padding="5" WidthRequest="110" HeightRequest="110" Margin="0, 0, 0, 20" BackgroundColor="{DynamicResource LightLabelSecondaryColor}">
+                                <Frame Style="{x:DynamicResource MainItemFrame}">
                                     <Frame.GestureRecognizers>
                                         <TapGestureRecognizer Command="{Binding Path=BindingContext.SelectItemCommand, Source={x:Reference CharacterInfoPage}}" CommandParameter="{Binding .}" />
                                     </Frame.GestureRecognizers>

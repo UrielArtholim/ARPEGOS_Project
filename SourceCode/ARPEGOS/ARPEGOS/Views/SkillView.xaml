@@ -2,14 +2,33 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ARPEGOS.Views.SkillView"
-             Title="Cálculo de habilidades">
+             Title="Cálculo de habilidades"
+             BackgroundImageSource="{x:DynamicResource BackgroundImageSource}">
     <ContentPage.Content>
-        <StackLayout Padding="20" Spacing ="20" Margin="20,20,20,0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
-            <Button Text="Selecciona habilidad" Command="{Binding SelectSkillCommand}" HorizontalOptions="CenterAndExpand"/>
-            <Label Text="{Binding SkillSelectedName, StringFormat='Habilidad: {0}'}" HorizontalOptions="CenterAndExpand" />
-            <Entry Text ="{Binding Dice}" Keyboard="Numeric" Placeholder="Introduzca el valor de la tirada" HorizontalOptions="Fill"/>
-            <Button Text="Calcular habilidad" Command="{Binding CalculateSkillCommand}" CommandParameter="{Binding SkillSelected}" HorizontalOptions="CenterAndExpand" />
-            <Label Text="{Binding TotalValue}" FontSize="90" FontFamily="OldLondon" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+        <StackLayout Padding="20" 
+                     Spacing ="20" 
+                     Margin="20,20,20,0" 
+                     HorizontalOptions="FillAndExpand" 
+                     VerticalOptions="FillAndExpand">
+            <Button Text="Selecciona habilidad" 
+                    Command="{Binding SelectSkillCommand}" 
+                    Style="{x:DynamicResource Button}"/>
+            <Label Text="{Binding SkillSelectedName, StringFormat='Habilidad: {0}'}" 
+                   Style="{x:DynamicResource OutsideLabel}" />
+            <Entry Text ="{Binding Dice}" 
+                   Keyboard="Numeric" 
+                   Placeholder="Introduzca el valor de la tirada" 
+                   Style="{x:DynamicResource Entry}"/>
+            <Button Text="Calcular habilidad" 
+                    Command="{Binding CalculateSkillCommand}" 
+                    CommandParameter="{Binding SkillSelected}" 
+                    Style="{x:DynamicResource Button}"/>
+            <Label Text="{Binding TotalValue}" 
+                   FontSize="90" 
+                   FontFamily="OldLondon" 
+                   VerticalOptions="CenterAndExpand" 
+                   HorizontalOptions="CenterAndExpand" 
+                   TextColor="{x:DynamicResource ItemTextColor}"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
