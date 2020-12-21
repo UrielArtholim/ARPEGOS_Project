@@ -48,7 +48,7 @@ namespace ARPEGOS.ViewModels
                 ReturnCommand.Execute(null);
             });
 
-            this.ReturnCommand = new Command(async () => await MainThread.InvokeOnMainThreadAsync(async()=> await App.Navigation.PopAsync()));   
+            this.ReturnCommand = new Command(async () => await Device.InvokeOnMainThreadAsync(async()=> await App.Navigation.PopAsync()));   
         }
     }
 }

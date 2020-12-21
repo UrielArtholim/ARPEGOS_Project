@@ -66,7 +66,7 @@ namespace ARPEGOS.ViewModels
                 this.CurrentStatus = SelectionStatus.SelectingVersion;
                 this.Load(CurrentStatus);
             });
-            this.ReturnCommand = new Command(async() => await MainThread.InvokeOnMainThreadAsync(async() => await App.Navigation.PopToRootAsync()));
+            this.ReturnCommand = new Command(async() => await Device.InvokeOnMainThreadAsync(async() => await App.Navigation.PopToRootAsync()));
             this.Load(this.CurrentStatus);
         }
 
@@ -92,7 +92,7 @@ namespace ARPEGOS.ViewModels
                     this.CancelEnabled = true;
                     var confirmation = await this.dialogService.DisplayAcceptableAlert("Advertencia", $"¿Desea eliminar {item}? Una vez hecho no podrá ser recuperado", "Confirmar", "Cancelar");
                     if (confirmation == true)
-                        await MainThread.InvokeOnMainThreadAsync(() => FileService.DeleteGameVersion(selectedGame, item));
+                        await Device.InvokeOnMainThreadAsync(() => FileService.DeleteGameVersion(selectedGame, item));
                     this.CurrentStatus = SelectionStatus.SelectingVersion;
                     this.Load(CurrentStatus);
                     break;
@@ -122,7 +122,7 @@ namespace ARPEGOS.ViewModels
                     return;
             }
 
-            MainThread.BeginInvokeOnMainThread(() =>
+            Device.BeginInvokeOnMainThread(() =>
             {
                 if (items != null)
                 {

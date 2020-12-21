@@ -106,7 +106,7 @@ namespace ARPEGOS.Helpers
 
         protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
-            MainThread.BeginInvokeOnMainThread(() => this.PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName)));
+            Device.BeginInvokeOnMainThread(() => this.PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName)));
         }
 
         protected bool SetProperty<T>(ref T storage, T value, [CallerMemberName] string propertyName = null)

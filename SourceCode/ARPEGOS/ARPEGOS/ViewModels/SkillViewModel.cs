@@ -56,7 +56,7 @@ namespace ARPEGOS.ViewModels
 
         public SkillViewModel()
         {
-            this.SelectSkillCommand = new Command(async() => await MainThread.InvokeOnMainThreadAsync(async()=> await App.Navigation.PushAsync(new SkillListView())));
+            this.SelectSkillCommand = new Command(async() => await Device.InvokeOnMainThreadAsync(async()=> await App.Navigation.PushAsync(new SkillListView())));
             this.CalculateSkillCommand = new Command(async () => 
             {
                 if(this.SkillSelected != null || this.previousSkillSelected != this.SkillSelected || this.previousDice != this.Dice)

@@ -8,6 +8,7 @@ namespace ARPEGOS.ViewModels.Base
     using System.Runtime.CompilerServices;
 
     using Xamarin.Essentials;
+    using Xamarin.Forms;
 
     public class BaseViewModel : INotifyPropertyChanged, INotifyCollectionChanged
     {
@@ -41,12 +42,12 @@ namespace ARPEGOS.ViewModels.Base
 
         protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
-            MainThread.BeginInvokeOnMainThread(() => this.PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName)));
+            Device.BeginInvokeOnMainThread(() => this.PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName)));
         }
 
         protected virtual void OnCollectionChanged()
         {
-            MainThread.BeginInvokeOnMainThread(() => this.CollectionChanged?.Invoke(this, new NotifyCollectionChangedEventArgs(NotifyCollectionChangedAction.Replace)));
+            Device.BeginInvokeOnMainThread(() => this.CollectionChanged?.Invoke(this, new NotifyCollectionChangedEventArgs(NotifyCollectionChangedAction.Replace)));
         }
 
         protected void RefreshCollection()

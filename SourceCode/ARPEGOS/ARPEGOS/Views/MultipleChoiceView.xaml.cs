@@ -50,7 +50,7 @@ namespace ARPEGOS.Views
         private async Task OperateCheck(object sender, CheckedChangedEventArgs e)
         {
             var viewModel = this.BindingContext as MultipleChoiceViewModel;
-            await MainThread.InvokeOnMainThreadAsync(() => viewModel.IsBusy = true);
+            await Device.InvokeOnMainThreadAsync(() => viewModel.IsBusy = true);
             var activeCheckBox = sender as CheckBox;
             var activeItem = activeCheckBox.BindingContext as Item;
             var character = DependencyHelper.CurrentContext.CurrentCharacter;
@@ -58,7 +58,7 @@ namespace ARPEGOS.Views
             if (activeCheckBox.IsChecked == true)
             {
                 activeItem.IsSelected = true;
-                await MainThread.InvokeOnMainThreadAsync(() =>
+                await Device.InvokeOnMainThreadAsync(() =>
                 {
                     viewModel.StageProgressLabel -= activeItem.Value;
                     viewModel.StageProgress -= activeItem.Value / viewModel.StageLimit;
@@ -74,7 +74,7 @@ namespace ARPEGOS.Views
             else
             {
                 activeItem.IsSelected = false;
-                await MainThread.InvokeOnMainThreadAsync(() =>
+                await Device.InvokeOnMainThreadAsync(() =>
                 {
                     viewModel.StageProgressLabel += activeItem.Value;
                     viewModel.StageProgress += activeItem.Value / viewModel.StageLimit;
@@ -99,7 +99,7 @@ namespace ARPEGOS.Views
                 }
             }
             await viewModel.UpdateView();
-            await MainThread.InvokeOnMainThreadAsync(() => viewModel.IsBusy = false);
+            await Device.InvokeOnMainThreadAsync(() => viewModel.IsBusy = false);
         }
     }
 }

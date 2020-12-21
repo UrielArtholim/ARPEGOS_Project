@@ -95,26 +95,26 @@
                 switch(this.CurrentStatus)
                 {
                     case SelectionStatus.SelectingGame:
-                        await MainThread.InvokeOnMainThreadAsync(() => this.IsBusy = true);
+                        await Device.InvokeOnMainThreadAsync(() => this.IsBusy = true);
                         await App.Navigation.PushAsync(new AddGameView());
-                        await MainThread.InvokeOnMainThreadAsync(() => this.IsBusy = false);
+                        await Device.InvokeOnMainThreadAsync(() => this.IsBusy = false);
                         this.Load(this.CurrentStatus);
                         break;
                     case SelectionStatus.DeletingGame:
-                        await MainThread.InvokeOnMainThreadAsync(() => this.IsBusy = true);
+                        await Device.InvokeOnMainThreadAsync(() => this.IsBusy = true);
                         await App.Navigation.PushAsync(new AddGameView());
-                        await MainThread.InvokeOnMainThreadAsync(() => this.IsBusy = false);
+                        await Device.InvokeOnMainThreadAsync(() => this.IsBusy = false);
                         this.Load(this.CurrentStatus);
                         break;
                     case SelectionStatus.SelectingCharacter:
                         var item = await this.dialogService.DisplayTextPrompt("Crear nuevo personaje", "Introduce el nombre:", "Crear");
                         if (!string.IsNullOrWhiteSpace(item))
                         {
-                            await MainThread.InvokeOnMainThreadAsync(()=> this.IsBusy = true);
+                            await Device.InvokeOnMainThreadAsync(()=> this.IsBusy = true);
                             DependencyHelper.CurrentContext.CurrentCharacter = await OntologyService.CreateCharacter(item, DependencyHelper.CurrentContext.CurrentGame);
                             App.Current.MainPage = new NavigationPage(new CreationRootView());
                             App.Navigation = App.Current.MainPage.Navigation;
-                            await MainThread.InvokeOnMainThreadAsync(() => this.IsBusy = false);
+                            await Device.InvokeOnMainThreadAsync(() => this.IsBusy = false);
                         }
                         this.Load(this.CurrentStatus);
                         break;
@@ -122,11 +122,11 @@
                         item = await this.dialogService.DisplayTextPrompt("Crear nuevo personaje", "Introduce el nombre:", "Crear");
                         if (!string.IsNullOrWhiteSpace(item))
                         {
-                            await MainThread.InvokeOnMainThreadAsync(() => this.IsBusy = true);
+                            await Device.InvokeOnMainThreadAsync(() => this.IsBusy = true);
                             DependencyHelper.CurrentContext.CurrentCharacter = await OntologyService.CreateCharacter(item, DependencyHelper.CurrentContext.CurrentGame);
                             App.Current.MainPage = new NavigationPage(new CreationRootView());
                             App.Navigation = App.Current.MainPage.Navigation;
-                            await MainThread.InvokeOnMainThreadAsync(() => this.IsBusy = false);
+                            await Device.InvokeOnMainThreadAsync(() => this.IsBusy = false);
                         }
                         this.Load(this.CurrentStatus);
                         break;
@@ -190,7 +190,7 @@
                 case SelectionStatus.SelectingGame:
 
                     this.SelectedGame = item;
-                    MainThread.BeginInvokeOnMainThread(async() => await App.Navigation.PushAsync(new SelectVersionView(this.SelectedGame)));
+                    Device.BeginInvokeOnMainThread(async() => await App.Navigation.PushAsync(new SelectVersionView(this.SelectedGame)));
                     this.PreviousStatus = this.CurrentStatus;
                     this.CurrentStatus = SelectionStatus.SelectingGame;
                     this.Load(this.CurrentStatus);
@@ -202,17 +202,17 @@
                         item = await this.dialogService.DisplayTextPrompt("Crear nuevo personaje", "Introduce el nombre:", "Crear");
                         if (string.IsNullOrWhiteSpace(item))
                             break;
-                        await MainThread.InvokeOnMainThreadAsync(() => this.IsBusy = true);
+                        await Device.InvokeOnMainThreadAsync(() => this.IsBusy = true);
                         DependencyHelper.CurrentContext.CurrentCharacter = await OntologyService.CreateCharacter(item, DependencyHelper.CurrentContext.CurrentGame);
                         App.Current.MainPage = new NavigationPage(new CreationRootView());
                         App.Navigation = App.Current.MainPage.Navigation;
-                        await MainThread.InvokeOnMainThreadAsync(() => this.IsBusy = false);
+                        await Device.InvokeOnMainThreadAsync(() => this.IsBusy = false);
 
                     }
                     else
                     {
                         DependencyHelper.CurrentContext.CurrentCharacter = await OntologyService.LoadCharacter(item, DependencyHelper.CurrentContext.CurrentGame);
-                        await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.PushAsync(new OptionsView()));
+                        await Device.InvokeOnMainThreadAsync(async () => await App.Navigation.PushAsync(new OptionsView()));
                     }
                     this.Load(this.CurrentStatus);
                     break;
@@ -221,7 +221,7 @@
                     this.CancelEnabled = true;
                     var confirmation = await this.dialogService.DisplayAcceptableAlert("Advertencia", $"¿Desea eliminar {item}? Una vez hecho no podrá ser recuperado", "Confirmar", "Cancelar");
                     if (confirmation == true)
-                        await MainThread.InvokeOnMainThreadAsync(()=> FileService.DeleteGame(this.selectedGame));
+                        await Device.InvokeOnMainThreadAsync(()=> FileService.DeleteGame(this.selectedGame));
                     this.Load(CurrentStatus);
                     break;                    
 
@@ -229,7 +229,7 @@
                     this.CancelEnabled = true;
                     confirmation = await this.dialogService.DisplayAcceptableAlert("Advertencia", $"¿Desea eliminar {item}? Una vez hecho no podrá ser recuperado", "Confirmar", "Cancelar");
                     if(confirmation == true)
-                        await MainThread.InvokeOnMainThreadAsync(() => FileService.DeleteCharacter(item, this.selectedGame));                    
+                        await Device.InvokeOnMainThreadAsync(() => FileService.DeleteCharacter(item, this.selectedGame));                    
                     this.Load(this.CurrentStatus);
                     break;
 
@@ -286,7 +286,7 @@
                 default:
                     return;
             }
-            MainThread.BeginInvokeOnMainThread(() =>
+            Device.BeginInvokeOnMainThread(() =>
             {
                 if(items != null)
                 {

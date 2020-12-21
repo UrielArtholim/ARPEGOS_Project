@@ -69,7 +69,7 @@ namespace ARPEGOS.ViewModels
 
         private async Task Next()
         {
-            await MainThread.InvokeOnMainThreadAsync(() => this.IsBusy = true);
+            await Device.InvokeOnMainThreadAsync(() => this.IsBusy = true);
             var character = DependencyHelper.CurrentContext.CurrentCharacter;
             var currentItem = this.SelectedItem;
             var ItemFullShortName = this.SelectedItem.FullName.Split('#').Last();
@@ -100,18 +100,18 @@ namespace ARPEGOS.ViewModels
                     {
                         switch (currentStage.Type)
                         {
-                            case Stage.StageType.SingleChoice: await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.PushAsync(new SingleChoiceGroupView())); break;
-                            case Stage.StageType.MultipleChoice: await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.PushAsync(new MultipleChoiceGroupView())); break;
-                            default: await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.PushAsync(new ValuedGroupView())); break;
+                            case Stage.StageType.SingleChoice: await Device.InvokeOnMainThreadAsync(async () => await App.Navigation.PushAsync(new SingleChoiceGroupView())); break;
+                            case Stage.StageType.MultipleChoice: await Device.InvokeOnMainThreadAsync(async () => await App.Navigation.PushAsync(new MultipleChoiceGroupView())); break;
+                            default: await Device.InvokeOnMainThreadAsync(async () => await App.Navigation.PushAsync(new ValuedGroupView())); break;
                         }
                     }
                     else
                     {
                         switch (currentStage.Type)
                         {
-                            case Stage.StageType.SingleChoice: await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.PushAsync(new SingleChoiceView())); break;
-                            case Stage.StageType.MultipleChoice: await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.PushAsync(new MultipleChoiceView())); break;
-                            default: await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.PushAsync(new ValuedView())); break;
+                            case Stage.StageType.SingleChoice: await Device.InvokeOnMainThreadAsync(async () => await App.Navigation.PushAsync(new SingleChoiceView())); break;
+                            case Stage.StageType.MultipleChoice: await Device.InvokeOnMainThreadAsync(async () => await App.Navigation.PushAsync(new MultipleChoiceView())); break;
+                            default: await Device.InvokeOnMainThreadAsync(async () => await App.Navigation.PushAsync(new ValuedView())); break;
                         }
                     }
                 }
@@ -122,12 +122,12 @@ namespace ARPEGOS.ViewModels
                 }
                 finally
                 {
-                    await MainThread.InvokeOnMainThreadAsync(() => this.IsBusy = false);
+                    await Device.InvokeOnMainThreadAsync(() => this.IsBusy = false);
                 }
             }
             else
             {
-                await MainThread.InvokeOnMainThreadAsync(() => this.IsBusy = false);
+                await Device.InvokeOnMainThreadAsync(() => this.IsBusy = false);
             }
         }
     }

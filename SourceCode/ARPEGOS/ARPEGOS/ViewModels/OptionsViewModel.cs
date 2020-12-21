@@ -18,8 +18,8 @@ namespace ARPEGOS.ViewModels
         public OptionsViewModel ()
         {
             NavigationPage.SetHasBackButton(App.Navigation.NavigationStack.Last(), false);
-            this.InfoCommand = new Command(async () => await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.PushAsync(new CharacterInfoView())));
-            this.SkillCommand = new Command(async () => await MainThread.InvokeOnMainThreadAsync(async () => await App.Navigation.PushAsync(new SkillView())));
+            this.InfoCommand = new Command(async () => await Device.InvokeOnMainThreadAsync(async () => await App.Navigation.PushAsync(new CharacterInfoView())));
+            this.SkillCommand = new Command(async () => await Device.InvokeOnMainThreadAsync(async () => await App.Navigation.PushAsync(new SkillView())));
         }
     }
 }

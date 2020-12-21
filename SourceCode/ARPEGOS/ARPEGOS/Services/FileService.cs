@@ -44,7 +44,7 @@ namespace ARPEGOS.Services
         /// <returns> Formatted names </returns>
         public static IEnumerable<string> ListVersions(string game)
         {
-            var path = Path.Combine(BaseFolder, EscapedName(game), GamesPath);
+            var path = Path.Combine(BaseFolder, FormatName(game), GamesPath);
             var versions = Directory.GetFiles(path);
             return versions.Select(s => s.Split('/').Last().Split('.').First().Replace("_", " "));
         }
@@ -56,18 +56,18 @@ namespace ARPEGOS.Services
         /// <returns> Formatted names </returns>
         public static IEnumerable<string> ListCharacters(string game)
         {
-            var path = Path.Combine(BaseFolder, EscapedName(game), CharactersPath);
+            var path = Path.Combine(BaseFolder, FormatName(game), CharactersPath);
             var characters = Directory.GetFiles(path);
             return characters.Select(s => s.Split('/').Last().Split('.').First().Replace("_", " "));
         }
 
         public static bool CreateGameFolderStructure(string game)
         {
-            var escaped = EscapedName(game);
-            if (Directory.Exists(Path.Combine(BaseFolder, escaped)))
+            var formatted = FormatName(game);
+            if (Directory.Exists(Path.Combine(BaseFolder, formatted)))
                 return false;
-            Directory.CreateDirectory(Path.Combine(BaseFolder, escaped, GamesPath));
-            Directory.CreateDirectory(Path.Combine(BaseFolder, escaped, CharactersPath));
+            Directory.CreateDirectory(Path.Combine(BaseFolder, formatted, GamesPath));
+            Directory.CreateDirectory(Path.Combine(BaseFolder, formatted, CharactersPath));
             return true;
         }
 
@@ -110,7 +110,7 @@ namespace ARPEGOS.Services
 
         public static string GetGameBasePath(string name)
         {
-            return Path.Combine(BaseFolder, EscapedName(name));
+            return Path.Combine(BaseFolder, FormatName(name));
         }
 
         public static string GetGameBasePath(CharacterOntologyService character)
@@ -170,7 +170,7 @@ namespace ARPEGOS.Services
         /// <returns> Name of the file </returns>
         public static string FileName(string name)
         {
-            return $"{EscapedName(name)}.owl";
+            return $"{FormatName(name)}.owl";
         }
 
         /// <summary>

@@ -11,6 +11,7 @@ namespace ARPEGOS
     using System.Linq;
     using System.Runtime.CompilerServices;
     using Xamarin.Essentials;
+    using Xamarin.Forms;
 
     /// <summary>
     /// ItemGroup models a collection of items which belong to a group
@@ -133,7 +134,7 @@ namespace ARPEGOS
 
         protected void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
-            MainThread.BeginInvokeOnMainThread(() => this.PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName)));
+            Device.BeginInvokeOnMainThread(() => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName)));
         }
 
         protected bool SetProperty<T>(ref T storage, T value, [CallerMemberName] string propertyName = null)

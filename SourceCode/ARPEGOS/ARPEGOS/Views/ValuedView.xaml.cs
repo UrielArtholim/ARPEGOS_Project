@@ -44,7 +44,7 @@ namespace ARPEGOS.Views
         async void OnValueChanged(object sender, ValueChangedEventArgs e)
         {
             var viewModel = this.BindingContext as ValuedViewModel;
-            await MainThread.InvokeOnMainThreadAsync(() => viewModel.IsBusy = true);
+            await Device.InvokeOnMainThreadAsync(() => viewModel.IsBusy = true);
             var entry = sender as Stepper;
             var item = entry.BindingContext as Item;
             double NewValue, OldValue;
@@ -69,7 +69,7 @@ namespace ARPEGOS.Views
                         ++item.Value;
                         if (viewModel.CurrentStage.EditStageLimit == true)
                         {
-                            await MainThread.InvokeOnMainThreadAsync(() =>
+                            await Device.InvokeOnMainThreadAsync(() =>
                             {
                                 viewModel.StageProgressLabel -= Convert.ToDouble(item.Step);
                                 viewModel.StageProgress -= Convert.ToDouble(item.Step / viewModel.StageLimit);
@@ -92,7 +92,7 @@ namespace ARPEGOS.Views
                         --item.Value;
                         if (viewModel.CurrentStage.EditStageLimit == true)
                         {
-                            await MainThread.InvokeOnMainThreadAsync(() =>
+                            await Device.InvokeOnMainThreadAsync(() =>
                             {
                                 viewModel.StageProgressLabel += Convert.ToDouble(item.Step);
                                 viewModel.StageProgress += Convert.ToDouble(item.Step / viewModel.StageLimit);
@@ -106,7 +106,7 @@ namespace ARPEGOS.Views
                     }                    
                 }                
             }
-            await MainThread.InvokeOnMainThreadAsync(() => viewModel.IsBusy = false);
+            await Device.InvokeOnMainThreadAsync(() => viewModel.IsBusy = false);
         }
     }
 }
