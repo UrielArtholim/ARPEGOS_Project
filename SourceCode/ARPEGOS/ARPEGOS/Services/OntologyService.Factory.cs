@@ -110,6 +110,11 @@ namespace ARPEGOS.Services
             var character = new CharacterOntologyService(name, path, context, ontology);
             character.Save();
             return character;            
-        }        
+        }
+
+        public static async Task<bool> DeleteCharacter(string characterName, GameOntologyService currentGame)
+        {
+            return await FileService.DeleteCharacter(characterName, currentGame.Name);
+        }
     }
 }

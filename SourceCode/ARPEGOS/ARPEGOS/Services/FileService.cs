@@ -17,7 +17,11 @@ namespace ARPEGOS.Services
     {
         private static TextInfo ti => Thread.CurrentThread.CurrentCulture.TextInfo;
 
-        private static string BaseFolder => Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
+        private static string BaseFolderPath => Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
+        private static string BaseFolder { get; set; } = BaseFolderPath;
+        public static string GetBaseFolder() { return BaseFolder; }
+        public static void SetBaseFolder(string path) { BaseFolder = path; }
+        public static void ResetFolderPath() { BaseFolder = BaseFolderPath; }
 
         public static string GamesPath = "gamefiles";
 
@@ -67,6 +71,7 @@ namespace ARPEGOS.Services
             return true;
         }
 
+       
         public static bool DeleteGame(string name)
         {
             var path = GetGameBasePath(name);
@@ -91,16 +96,16 @@ namespace ARPEGOS.Services
             return false;
         }
 
-        public static bool DeleteCharacter(string name, string game)
+        public static async Task<bool> DeleteCharacter(string name, string game)
         {
+            bool deleteFileExecuted = false;
             var path = GetCharacterFilePath(name, game);
             if (File.Exists(path))
             {
-                File.Delete(path);
-                return true;
+                await Task.Run(()=>File.Delete(path));
+                deleteFileExecuted = true;
             }
-
-            return false;
+            return deleteFileExecuted;
         }
 
         public static string GetGameBasePath(string name)
