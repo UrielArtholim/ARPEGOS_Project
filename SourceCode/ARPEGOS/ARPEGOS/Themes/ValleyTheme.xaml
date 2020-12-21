@@ -46,16 +46,16 @@
     <Color x:Key="MenuTextColor">#fae056</Color>
     
     <!-- General Progress Bar Color -->
-    <Color x:Key="GeneralBarColor">#00FF00</Color>
+    <Color x:Key="GeneralBarColor">#347abf</Color>
 
     <!-- General Progress Bar Background Label -->
-    <Color x:Key="GeneralBarBackgroundColor">#008800</Color>
+    <Color x:Key="GeneralBarBackgroundColor">#74b1e2</Color>
 
     <!-- Stage Progress Bar Color -->
-    <Color x:Key="StageBarColor">#000000</Color>
+    <Color x:Key="StageBarColor">#1b350a</Color>
 
     <!-- General Progress Bar Background Color -->
-    <Color x:Key="StageBarBackgroundColor">#000000</Color>
+    <Color x:Key="StageBarBackgroundColor">#478713</Color>
     
     <!-- Background Image Path -->
     <ImageSource x:Key="BackgroundImageSource">valley.png</ImageSource>

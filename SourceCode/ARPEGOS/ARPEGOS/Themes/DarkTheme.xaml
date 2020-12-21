@@ -45,16 +45,16 @@
     <Color x:Key="MenuTextColor">#fae056</Color>
 
     <!-- General Progress Bar Color -->
-    <Color x:Key="GeneralBarColor">#000000</Color>
+    <Color x:Key="GeneralBarColor">#1b2e61</Color>
 
     <!-- General Progress Bar Background Label -->
-    <Color x:Key="GeneralBarBackgroundColor">#000000</Color>
+    <Color x:Key="GeneralBarBackgroundColor">#2d396b</Color>
 
     <!-- Stage Progress Bar Color -->
-    <Color x:Key="StageBarColor">#000000</Color>
+    <Color x:Key="StageBarColor">#625e87</Color>
 
     <!-- General Progress Bar Background Color -->
-    <Color x:Key="StageBarBackgroundColor">#000000</Color>
+    <Color x:Key="StageBarBackgroundColor">#9989ad</Color>
 
     <!-- Background Image Path -->
     <ImageSource x:Key="BackgroundImageSource">night.png</ImageSource>
