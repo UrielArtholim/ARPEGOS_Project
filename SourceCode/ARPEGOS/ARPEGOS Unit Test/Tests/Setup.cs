@@ -42,7 +42,7 @@ namespace ARPEGOS_Unit_Test.Tests
             SetBaseFolder();
             GameName = "Anima Beyond Fantasy";
             GameVersion = "Core Exxet";
-            CharacterName = "Allete Percivan";
+            CharacterName = "Guybrush Threepwood";
             DependencyHelper.CurrentContext.CurrentGame = await OntologyService.LoadGame(Setup.GameName, Setup.GameVersion);
         }
 
@@ -66,7 +66,7 @@ namespace ARPEGOS_Unit_Test.Tests
         [OneTimeTearDown]
         public void SetDefaultBaseFolder()
         {
-            FileService.SetBaseFolder(BaseFolder);
+            FileService.ResetFolderPath();
             Console.WriteLine("Base folder restored");
         }
         #endregion

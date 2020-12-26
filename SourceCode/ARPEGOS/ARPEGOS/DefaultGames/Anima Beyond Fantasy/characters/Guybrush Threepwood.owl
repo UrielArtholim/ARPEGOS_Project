@@ -1,0 +1,410 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xmlns:autoNS1="http://arpegos_project/Games/Anima_Beyond_Fantasy/characters/Guybrush_Threepwood#" xml:base="http://arpegos_project/Games/Anima_Beyond_Fantasy/characters/Guybrush_Threepwood#">
+  <rdf:Description rdf:about="http://arpegos_project/Games/Anima_Beyond_Fantasy/characters/Guybrush_Threepwood#">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://arpegos_project/Games/Anima_Beyond_Fantasy/characters/Guybrush_Threepwood#Personaje_Jugador">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <rdfs:subClassOf rdf:resource="http://arpegos_project/Games/Anima_Beyond_Fantasy/characters/Guybrush_Threepwood#Personaje" />
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Personaje interpretado por un jugador durante una partida.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://arpegos_project/Games/Anima_Beyond_Fantasy/characters/Guybrush_Threepwood#Personaje">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://arpegos_project/Games/Anima_Beyond_Fantasy/characters/Guybrush_Threepwood#Categoría">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ahora que ya conocemos los arquetipos de los personajes ha llegado el momento del elegir su categoría. Tener una categoría no significa que alguien se dedique a una profesión concreta en sentido estricto. Un ladrón no tiene por qué ganarse necesariamente la vida robando, al igual que un asesino no tiene que dedicarse sólo a matar gente. Las categorías te indicarán cuáles son los costes de desarrollo de tu personaje, sus límites en la distribución de puntos y alguna de sus habilidades especiales.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://arpegos_project/Games/Anima_Beyond_Fantasy/characters/Guybrush_Threepwood#Arquetipo">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Los arquetipos son prototipos, modelos ideales que recogen unos conceptos determinados sobre la categoría que vamos a elegir. Existen seis arquetipos, que a su vez engloban diversas categorías.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://arpegos_project/Games/Anima_Beyond_Fantasy/characters/Guybrush_Threepwood#Per_Nivel">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty" />
+    <rdfs:domain rdf:resource="http://arpegos_project/Games/Anima_Beyond_Fantasy/characters/Guybrush_Threepwood#Personaje" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt" />
+    <rdfs:subPropertyOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Personaje_General" />
+    <autoNS1:EditStageLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</autoNS1:EditStageLimit>
+    <autoNS1:EditStageLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Límite_Nivel</autoNS1:EditStageLimit>
+    <autoNS1:ViewType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ValuedListView</autoNS1:ViewType>
+    <autoNS1:Visualization rdf:datatype="http://www.w3.org/2001/XMLSchema#string">General</autoNS1:Visualization>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#PersonajeTieneValor">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Personaje_General">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdfs:subPropertyOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#PersonajeTieneValor" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://arpegos_project/Games/Anima_Beyond_Fantasy/characters/Guybrush_Threepwood#EditStageLimit">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://arpegos_project/Games/Anima_Beyond_Fantasy/characters/Guybrush_Threepwood#ViewType">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://arpegos_project/Games/Anima_Beyond_Fantasy/characters/Guybrush_Threepwood#Visualization">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://arpegos_project/Games/Anima_Beyond_Fantasy/characters/Guybrush_Threepwood#tieneCategoría">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+    <rdfs:range rdf:resource="http://arpegos_project/Games/Anima_Beyond_Fantasy/characters/Guybrush_Threepwood#Categoría" />
+    <rdfs:subPropertyOf rdf:resource="http://arpegos_project/Games/Anima_Beyond_Fantasy/characters/Guybrush_Threepwood#tieneGeneral" />
+    <autoNS1:Visualization rdf:datatype="http://www.w3.org/2001/XMLSchema#string">General</autoNS1:Visualization>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://arpegos_project/Games/Anima_Beyond_Fantasy/characters/Guybrush_Threepwood#PersonajeTieneObjeto">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://arpegos_project/Games/Anima_Beyond_Fantasy/characters/Guybrush_Threepwood#tieneGeneral">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+    <rdfs:subPropertyOf rdf:resource="http://arpegos_project/Games/Anima_Beyond_Fantasy/characters/Guybrush_Threepwood#PersonajeTieneObjeto" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://arpegos_project/Games/Anima_Beyond_Fantasy/characters/Guybrush_Threepwood#CreationScheme">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://arpegos_project/Games/Anima_Beyond_Fantasy/characters/Guybrush_Threepwood#Cat_Acumulación_Ki_Coste">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty" />
+    <rdfs:domain rdf:resource="http://arpegos_project/Games/Anima_Beyond_Fantasy/characters/Guybrush_Threepwood#Categoría" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt" />
+    <rdfs:subPropertyOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Cat_HabCombate_Coste" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#CategoríaTieneValor">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Cat_Hab_Prim_Coste">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdfs:subPropertyOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#CategoríaTieneValor" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Cat_HabCombate_Coste">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdfs:subPropertyOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Cat_Hab_Prim_Coste" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://arpegos_project/Games/Anima_Beyond_Fantasy/characters/Guybrush_Threepwood#Cat_Acumulación_Turno_Coste">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty" />
+    <rdfs:domain rdf:resource="http://arpegos_project/Games/Anima_Beyond_Fantasy/characters/Guybrush_Threepwood#Categoría" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt" />
+    <rdfs:subPropertyOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Cat_HabMísticas_Coste" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Cat_HabMísticas_Coste">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdfs:subPropertyOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Cat_Hab_Prim_Coste" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://arpegos_project/Games/Anima_Beyond_Fantasy/characters/Guybrush_Threepwood#Cat_Ataque_Coste">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty" />
+    <rdfs:domain rdf:resource="http://arpegos_project/Games/Anima_Beyond_Fantasy/characters/Guybrush_Threepwood#Categoría" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt" />
+    <rdfs:subPropertyOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Cat_HabCombate_Coste" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://arpegos_project/Games/Anima_Beyond_Fantasy/characters/Guybrush_Threepwood#Cat_Atar_Coste">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty" />
+    <rdfs:domain rdf:resource="http://arpegos_project/Games/Anima_Beyond_Fantasy/characters/Guybrush_Threepwood#Categoría" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt" />
+    <rdfs:subPropertyOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Cat_HabMísticas_Coste" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://arpegos_project/Games/Anima_Beyond_Fantasy/characters/Guybrush_Threepwood#Cat_BI_PuntosZeon">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty" />
+    <rdfs:domain rdf:resource="http://arpegos_project/Games/Anima_Beyond_Fantasy/characters/Guybrush_Threepwood#Categoría" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt" />
+    <rdfs:subPropertyOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Cat_BI_Mística" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Cat_Bonificador_Innato">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdfs:subPropertyOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#CategoríaTieneValor" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Cat_BI_Hab_Primaria">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdfs:subPropertyOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Cat_Bonificador_Innato" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Cat_BI_Mística">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdfs:subPropertyOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Cat_BI_Hab_Primaria" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://arpegos_project/Games/Anima_Beyond_Fantasy/characters/Guybrush_Threepwood#Cat_CV_Coste">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty" />
+    <rdfs:domain rdf:resource="http://arpegos_project/Games/Anima_Beyond_Fantasy/characters/Guybrush_Threepwood#Categoría" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt" />
+    <rdfs:subPropertyOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Cat_HabPsíquicas_Coste" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Cat_HabPsíquicas_Coste">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdfs:subPropertyOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Cat_Hab_Prim_Coste" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://arpegos_project/Games/Anima_Beyond_Fantasy/characters/Guybrush_Threepwood#Cat_CV_Innato_Nivel">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty" />
+    <rdfs:domain rdf:resource="http://arpegos_project/Games/Anima_Beyond_Fantasy/characters/Guybrush_Threepwood#Categoría" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt" />
+    <rdfs:subPropertyOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#CategoríaTieneValor" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://arpegos_project/Games/Anima_Beyond_Fantasy/characters/Guybrush_Threepwood#Cat_Conocimiento_Marcial_Coste">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty" />
+    <rdfs:domain rdf:resource="http://arpegos_project/Games/Anima_Beyond_Fantasy/characters/Guybrush_Threepwood#Categoría" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt" />
+    <rdfs:subPropertyOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Cat_HabCombate_Coste" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://arpegos_project/Games/Anima_Beyond_Fantasy/characters/Guybrush_Threepwood#Cat_Conocimiento_Marcial_Nivel">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty" />
+    <rdfs:domain rdf:resource="http://arpegos_project/Games/Anima_Beyond_Fantasy/characters/Guybrush_Threepwood#Categoría" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt" />
+    <rdfs:subPropertyOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#CategoríaTieneValor" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://arpegos_project/Games/Anima_Beyond_Fantasy/characters/Guybrush_Threepwood#Cat_Convocar_Coste">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty" />
+    <rdfs:domain rdf:resource="http://arpegos_project/Games/Anima_Beyond_Fantasy/characters/Guybrush_Threepwood#Categoría" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt" />
+    <rdfs:subPropertyOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Cat_HabMísticas_Coste" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://arpegos_project/Games/Anima_Beyond_Fantasy/characters/Guybrush_Threepwood#Cat_Desconvocar_Coste">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty" />
+    <rdfs:domain rdf:resource="http://arpegos_project/Games/Anima_Beyond_Fantasy/characters/Guybrush_Threepwood#Categoría" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt" />
+    <rdfs:subPropertyOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Cat_HabMísticas_Coste" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://arpegos_project/Games/Anima_Beyond_Fantasy/characters/Guybrush_Threepwood#Cat_Dominar_Coste">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty" />
+    <rdfs:domain rdf:resource="http://arpegos_project/Games/Anima_Beyond_Fantasy/characters/Guybrush_Threepwood#Categoría" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt" />
+    <rdfs:subPropertyOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Cat_HabMísticas_Coste" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://arpegos_project/Games/Anima_Beyond_Fantasy/characters/Guybrush_Threepwood#Cat_Esquiva_Coste">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty" />
+    <rdfs:domain rdf:resource="http://arpegos_project/Games/Anima_Beyond_Fantasy/characters/Guybrush_Threepwood#Categoría" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt" />
+    <rdfs:subPropertyOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Cat_HabCombate_Coste" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://arpegos_project/Games/Anima_Beyond_Fantasy/characters/Guybrush_Threepwood#Cat_Hab_Combate_Límite">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty" />
+    <rdfs:domain rdf:resource="http://arpegos_project/Games/Anima_Beyond_Fantasy/characters/Guybrush_Threepwood#Categoría" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float" />
+    <rdfs:subPropertyOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Cat_Hab_Primaria_Límite" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Cat_Hab_Primaria_Límite">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdfs:subPropertyOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#CategoríaTieneValor" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://arpegos_project/Games/Anima_Beyond_Fantasy/characters/Guybrush_Threepwood#Cat_Hab_Mística_Límite">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty" />
+    <rdfs:domain rdf:resource="http://arpegos_project/Games/Anima_Beyond_Fantasy/characters/Guybrush_Threepwood#Categoría" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float" />
+    <rdfs:subPropertyOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Cat_Hab_Primaria_Límite" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://arpegos_project/Games/Anima_Beyond_Fantasy/characters/Guybrush_Threepwood#Cat_Hab_Psíquica_Límite">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty" />
+    <rdfs:domain rdf:resource="http://arpegos_project/Games/Anima_Beyond_Fantasy/characters/Guybrush_Threepwood#Categoría" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float" />
+    <rdfs:subPropertyOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Cat_Hab_Primaria_Límite" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://arpegos_project/Games/Anima_Beyond_Fantasy/characters/Guybrush_Threepwood#Cat_Habilidades_Atléticas_Coste">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty" />
+    <rdfs:domain rdf:resource="http://arpegos_project/Games/Anima_Beyond_Fantasy/characters/Guybrush_Threepwood#Categoría" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt" />
+    <rdfs:subPropertyOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Cat_Hab_Sec_Coste" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Cat_Hab_Sec_Coste">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdfs:subPropertyOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#CategoríaTieneValor" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://arpegos_project/Games/Anima_Beyond_Fantasy/characters/Guybrush_Threepwood#Cat_Habilidades_Creativas_Coste">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty" />
+    <rdfs:domain rdf:resource="http://arpegos_project/Games/Anima_Beyond_Fantasy/characters/Guybrush_Threepwood#Categoría" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt" />
+    <rdfs:subPropertyOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Cat_Hab_Sec_Coste" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://arpegos_project/Games/Anima_Beyond_Fantasy/characters/Guybrush_Threepwood#Cat_Habilidades_Intelectuales_Coste">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty" />
+    <rdfs:domain rdf:resource="http://arpegos_project/Games/Anima_Beyond_Fantasy/characters/Guybrush_Threepwood#Categoría" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt" />
+    <rdfs:subPropertyOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Cat_Hab_Sec_Coste" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://arpegos_project/Games/Anima_Beyond_Fantasy/characters/Guybrush_Threepwood#Cat_Habilidades_Perceptivas_Coste">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty" />
+    <rdfs:domain rdf:resource="http://arpegos_project/Games/Anima_Beyond_Fantasy/characters/Guybrush_Threepwood#Categoría" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt" />
+    <rdfs:subPropertyOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Cat_Hab_Sec_Coste" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://arpegos_project/Games/Anima_Beyond_Fantasy/characters/Guybrush_Threepwood#Cat_Habilidades_Sociales_Coste">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty" />
+    <rdfs:domain rdf:resource="http://arpegos_project/Games/Anima_Beyond_Fantasy/characters/Guybrush_Threepwood#Categoría" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt" />
+    <rdfs:subPropertyOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Cat_Hab_Sec_Coste" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://arpegos_project/Games/Anima_Beyond_Fantasy/characters/Guybrush_Threepwood#Cat_Habilidades_Subterfugio_Coste">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty" />
+    <rdfs:domain rdf:resource="http://arpegos_project/Games/Anima_Beyond_Fantasy/characters/Guybrush_Threepwood#Categoría" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt" />
+    <rdfs:subPropertyOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Cat_Hab_Sec_Coste" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://arpegos_project/Games/Anima_Beyond_Fantasy/characters/Guybrush_Threepwood#Cat_Habilidades_Vigor_Coste">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty" />
+    <rdfs:domain rdf:resource="http://arpegos_project/Games/Anima_Beyond_Fantasy/characters/Guybrush_Threepwood#Categoría" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt" />
+    <rdfs:subPropertyOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Cat_Hab_Sec_Coste" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://arpegos_project/Games/Anima_Beyond_Fantasy/characters/Guybrush_Threepwood#Cat_Llevar_Armadura_Coste">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty" />
+    <rdfs:domain rdf:resource="http://arpegos_project/Games/Anima_Beyond_Fantasy/characters/Guybrush_Threepwood#Categoría" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt" />
+    <rdfs:subPropertyOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Cat_HabCombate_Coste" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://arpegos_project/Games/Anima_Beyond_Fantasy/characters/Guybrush_Threepwood#Cat_Múltiplo_Vida_Coste">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty" />
+    <rdfs:domain rdf:resource="http://arpegos_project/Games/Anima_Beyond_Fantasy/characters/Guybrush_Threepwood#Categoría" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt" />
+    <rdfs:subPropertyOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#CategoríaTieneValor" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://arpegos_project/Games/Anima_Beyond_Fantasy/characters/Guybrush_Threepwood#Cat_Parada_Coste">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty" />
+    <rdfs:domain rdf:resource="http://arpegos_project/Games/Anima_Beyond_Fantasy/characters/Guybrush_Threepwood#Categoría" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt" />
+    <rdfs:subPropertyOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Cat_HabCombate_Coste" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://arpegos_project/Games/Anima_Beyond_Fantasy/characters/Guybrush_Threepwood#Cat_Proyección_Mágica_Coste">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty" />
+    <rdfs:domain rdf:resource="http://arpegos_project/Games/Anima_Beyond_Fantasy/characters/Guybrush_Threepwood#Categoría" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt" />
+    <rdfs:subPropertyOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Cat_HabMísticas_Coste" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://arpegos_project/Games/Anima_Beyond_Fantasy/characters/Guybrush_Threepwood#Cat_Proyección_Psíquica_Coste">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty" />
+    <rdfs:domain rdf:resource="http://arpegos_project/Games/Anima_Beyond_Fantasy/characters/Guybrush_Threepwood#Categoría" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt" />
+    <rdfs:subPropertyOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Cat_HabPsíquicas_Coste" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://arpegos_project/Games/Anima_Beyond_Fantasy/characters/Guybrush_Threepwood#Cat_Puntos_Ki_Coste">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty" />
+    <rdfs:domain rdf:resource="http://arpegos_project/Games/Anima_Beyond_Fantasy/characters/Guybrush_Threepwood#Categoría" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt" />
+    <rdfs:subPropertyOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Cat_HabCombate_Coste" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://arpegos_project/Games/Anima_Beyond_Fantasy/characters/Guybrush_Threepwood#Cat_Puntos_Vida_Nivel">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty" />
+    <rdfs:domain rdf:resource="http://arpegos_project/Games/Anima_Beyond_Fantasy/characters/Guybrush_Threepwood#Categoría" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer" />
+    <rdfs:subPropertyOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#CategoríaTieneValor" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://arpegos_project/Games/Anima_Beyond_Fantasy/characters/Guybrush_Threepwood#Cat_Turno_Nivel">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty" />
+    <rdfs:domain rdf:resource="http://arpegos_project/Games/Anima_Beyond_Fantasy/characters/Guybrush_Threepwood#Categoría" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer" />
+    <rdfs:subPropertyOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#CategoríaTieneValor" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://arpegos_project/Games/Anima_Beyond_Fantasy/characters/Guybrush_Threepwood#Cat_Zeon_Coste">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty" />
+    <rdfs:domain rdf:resource="http://arpegos_project/Games/Anima_Beyond_Fantasy/characters/Guybrush_Threepwood#Categoría" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt" />
+    <rdfs:subPropertyOf rdf:resource="urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Cat_HabMísticas_Coste" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://arpegos_project/Games/Anima_Beyond_Fantasy/characters/Guybrush_Threepwood#Cat_Arquetipo">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+    <rdfs:range rdf:resource="http://arpegos_project/Games/Anima_Beyond_Fantasy/characters/Guybrush_Threepwood#Arquetipo" />
+    <rdfs:subPropertyOf rdf:resource="http://arpegos_project/Games/Anima_Beyond_Fantasy/characters/Guybrush_Threepwood#CategoríaTieneObjeto" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://arpegos_project/Games/Anima_Beyond_Fantasy/characters/Guybrush_Threepwood#CategoríaTieneObjeto">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://arpegos_project/Games/Anima_Beyond_Fantasy/characters/Guybrush_Threepwood#Guybrush_Threepwood">
+    <rdf:type rdf:resource="http://arpegos_project/Games/Anima_Beyond_Fantasy/characters/Guybrush_Threepwood#Personaje_Jugador" />
+    <autoNS1:Per_Nivel rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">1</autoNS1:Per_Nivel>
+    <autoNS1:tieneCategoría rdf:resource="http://arpegos_project/Games/Anima_Beyond_Fantasy/characters/Guybrush_Threepwood#Categoría_Novel" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://arpegos_project/Games/Anima_Beyond_Fantasy/characters/Guybrush_Threepwood#Categoría_Novel">
+    <rdf:type rdf:resource="http://arpegos_project/Games/Anima_Beyond_Fantasy/characters/Guybrush_Threepwood#Categoría" />
+    <autoNS1:Cat_Acumulación_Ki_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</autoNS1:Cat_Acumulación_Ki_Coste>
+    <autoNS1:Cat_Acumulación_Turno_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">60</autoNS1:Cat_Acumulación_Turno_Coste>
+    <autoNS1:Cat_Ataque_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</autoNS1:Cat_Ataque_Coste>
+    <autoNS1:Cat_Atar_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</autoNS1:Cat_Atar_Coste>
+    <autoNS1:Cat_BI_PuntosZeon rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</autoNS1:Cat_BI_PuntosZeon>
+    <autoNS1:Cat_CV_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</autoNS1:Cat_CV_Coste>
+    <autoNS1:Cat_CV_Innato_Nivel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</autoNS1:Cat_CV_Innato_Nivel>
+    <autoNS1:Cat_Conocimiento_Marcial_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">5</autoNS1:Cat_Conocimiento_Marcial_Coste>
+    <autoNS1:Cat_Conocimiento_Marcial_Nivel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</autoNS1:Cat_Conocimiento_Marcial_Nivel>
+    <autoNS1:Cat_Convocar_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</autoNS1:Cat_Convocar_Coste>
+    <autoNS1:Cat_Desconvocar_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</autoNS1:Cat_Desconvocar_Coste>
+    <autoNS1:Cat_Dominar_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</autoNS1:Cat_Dominar_Coste>
+    <autoNS1:Cat_Esquiva_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</autoNS1:Cat_Esquiva_Coste>
+    <autoNS1:Cat_Hab_Combate_Límite rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.6</autoNS1:Cat_Hab_Combate_Límite>
+    <autoNS1:Cat_Hab_Mística_Límite rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.6</autoNS1:Cat_Hab_Mística_Límite>
+    <autoNS1:Cat_Hab_Psíquica_Límite rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.6</autoNS1:Cat_Hab_Psíquica_Límite>
+    <autoNS1:Cat_Habilidades_Atléticas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</autoNS1:Cat_Habilidades_Atléticas_Coste>
+    <autoNS1:Cat_Habilidades_Creativas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</autoNS1:Cat_Habilidades_Creativas_Coste>
+    <autoNS1:Cat_Habilidades_Intelectuales_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</autoNS1:Cat_Habilidades_Intelectuales_Coste>
+    <autoNS1:Cat_Habilidades_Perceptivas_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</autoNS1:Cat_Habilidades_Perceptivas_Coste>
+    <autoNS1:Cat_Habilidades_Sociales_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</autoNS1:Cat_Habilidades_Sociales_Coste>
+    <autoNS1:Cat_Habilidades_Subterfugio_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</autoNS1:Cat_Habilidades_Subterfugio_Coste>
+    <autoNS1:Cat_Habilidades_Vigor_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</autoNS1:Cat_Habilidades_Vigor_Coste>
+    <autoNS1:Cat_Llevar_Armadura_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</autoNS1:Cat_Llevar_Armadura_Coste>
+    <autoNS1:Cat_Múltiplo_Vida_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</autoNS1:Cat_Múltiplo_Vida_Coste>
+    <autoNS1:Cat_Parada_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</autoNS1:Cat_Parada_Coste>
+    <autoNS1:Cat_Proyección_Mágica_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</autoNS1:Cat_Proyección_Mágica_Coste>
+    <autoNS1:Cat_Proyección_Psíquica_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</autoNS1:Cat_Proyección_Psíquica_Coste>
+    <autoNS1:Cat_Puntos_Ki_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</autoNS1:Cat_Puntos_Ki_Coste>
+    <autoNS1:Cat_Puntos_Vida_Nivel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</autoNS1:Cat_Puntos_Vida_Nivel>
+    <autoNS1:Cat_Turno_Nivel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</autoNS1:Cat_Turno_Nivel>
+    <autoNS1:Cat_Zeon_Coste rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</autoNS1:Cat_Zeon_Coste>
+    <autoNS1:Cat_Arquetipo rdf:resource="http://arpegos_project/Games/Anima_Beyond_Fantasy/characters/Guybrush_Threepwood#Sin_Categoria" />
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Los noveles representan el arquetipo de Sin categoría, o lo que es lo mismo, alguien que no se encuentra dentro de ninguno de los arquetipos que se han explicado hasta el momento. Puede ser cualquier tipo de persona que no tenga una verdadera especialización. Desde campesinos a bardos, pasando por nobles y bufones, el novel es la categoría estándar de Ánima, a la que podrá acceder cualquiera. El novel tiene buenas habilidades en todos los campos, desde la magia al combate, aunque no se especializa en ninguno. Además, le resulta excepcionalmente fácil cambiar posteriormente de categoría a la de cualquier otro arquetipo. En muchas ocasiones, cuando un jugador no tenga realmente decidido qué hacer con su personaje, puede empezar como novel y realizar después un cambio de categoría, cuando finalmente encuentre la apropiada.</rdfs:comment>
+    <autoNS1:CreationScheme rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per_Nivel,
+Sexo,
+Raza,
+Característica_Primaria,
+Desventaja_General,
+Desventaja_Mística,
+Desventaja_Psíquica,
+Ventaja_General,
+Ventaja_Mística,
+Ventaja_Psíquica,
+Habilidad_Mística_General,
+Habilidad_Mística_Específica,
+Conjuro_Vía_Mágica,
+Arcano,
+Habilidad_Psíquica_General,
+Poder_Psíquico,
+Habilidad_Combate_General,
+Arte_Marcial,
+Puntos_Ki,
+Acumulación_Ki,
+Habilidad_Ki,
+Tabla_De_Técnicas_De_Dominio,
+Tabla_Armas,
+Bonificador_Natural_Físico,
+Bonificador_Natural_Mental,
+Habilidad_Natural,
+Habilidad_Secundaria,
+Clase_Social</autoNS1:CreationScheme>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://arpegos_project/Games/Anima_Beyond_Fantasy/characters/Guybrush_Threepwood#Sin_Categoria">
+    <rdf:type rdf:resource="http://arpegos_project/Games/Anima_Beyond_Fantasy/characters/Guybrush_Threepwood#Arquetipo" />
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Este arquetipo es muy especial, ya que representa a todos aquellos personajes que no se han especializado en nada concreto durante su aprendizaje y, por tanto, no tienen ninguna preferencia específica. Dentro de este arquetipo pueden englobarse multitud de prototipos, desde la gente común y mundana, como posaderos o campesinos, a cualquier aprendiz que trata de decantarse por una profesión más adelante.</rdfs:comment>
+  </rdf:Description>
+</rdf:RDF>

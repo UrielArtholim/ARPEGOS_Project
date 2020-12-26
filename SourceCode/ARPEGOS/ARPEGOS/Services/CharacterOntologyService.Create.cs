@@ -424,6 +424,9 @@ namespace ARPEGOS.Services
             {
                 if (!CheckFact($"{this.Context}{FileService.EscapedName(this.Name)}"))
                     CharacterSubject = CreateFact(FileService.EscapedName(this.Name));
+                else
+                    CharacterSubject = this.Ontology.Data.SelectFact($"{this.Context}{FileService.EscapedName(this.Name)}");
+
                 RDFOntologyClass subjectClass;
                 var subjectClassName = "Personaje_Jugador";
                 var subjectClassString = GetString(subjectClassName);
