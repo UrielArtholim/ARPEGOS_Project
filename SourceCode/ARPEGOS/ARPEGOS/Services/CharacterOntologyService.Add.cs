@@ -31,7 +31,8 @@ namespace ARPEGOS.Services
             var predicate = !this.CheckObjectProperty(predicateCharacterString) ? this.CreateObjectProperty(predicateName) : this.Ontology.Model.PropertyModel.SelectProperty(predicateCharacterString);
             var objectFact = !this.CheckIndividual(objectCharacterString) ? this.CreateIndividual(objectName) : characterDataModel.SelectFact(objectCharacterString);
             characterDataModel.AddAssertionRelation(subjectFact, predicate as RDFOntologyObjectProperty, objectFact);
-            AddClassification(predicate.ToString(), objectFact.ToString());
+            AddClassification(predicate.ToString());
+            this.Save();
         }
 
         /// <summary>
@@ -54,13 +55,14 @@ namespace ARPEGOS.Services
             var objectLiteral = this.CreateLiteral(value, valuetype);
             characterDataModel.AddAssertionRelation(subjectFact, predicate as RDFOntologyDatatypeProperty, objectLiteral);
             AddClassification(predicate.ToString());
+            this.Save();
         }
 
         /// <summary>
         /// Asserts an annotation property to classify a character property
         /// </summary>
         /// <param name="propertyName">Name of the property</param>
-        internal void AddClassification (string propertyString, string objectString = null)
+        internal void AddClassification (string propertyString)
         {
             var game = DependencyHelper.CurrentContext.CurrentGame;
             var currentProperty = this.Ontology.Model.PropertyModel.SelectProperty(propertyString);
@@ -119,45 +121,20 @@ namespace ARPEGOS.Services
             }
             this.Ontology.Model.PropertyModel.AddCustomAnnotation(annotation, currentProperty, description);
 
-            if(objectString != null)
+            if (description.ToString().Contains("Activa"))
             {
-                bool activeSkillAnnotationFound = false;
-                var objectFact = this.Ontology.Data.SelectFact(objectString);
-                var objectFactCustomAnnotations = this.Ontology.Data.Annotations.CustomAnnotations.SelectEntriesBySubject(objectFact);
-                if(objectFactCustomAnnotations.Count()> 0)
-                    activeSkillAnnotationFound = objectFactCustomAnnotations.Where(entry => entry.TaxonomyPredicate.ToString().Contains("ActiveSkill")).Count() > 0 ? true : false;
-                if (activeSkillAnnotationFound == false)
-                {                    
-                    var objectClass = currentProperty.Range.ToString();
-                    if (objectClass != null)
-                    {
-                        var objectClassName = objectClass.Split('#').Last();
-                        var gameObjectClassString = $"{game.Context}{objectClassName}";
-                        var gameObjectClass = game.Ontology.Model.ClassModel.SelectClass(gameObjectClassString);
-                        var gameCustomAnnotations = game.Ontology.Model.ClassModel.Annotations.CustomAnnotations;
-                        var objectClassCustomAnnotations = gameCustomAnnotations.SelectEntriesBySubject(gameObjectClass);
-                        if (objectClassCustomAnnotations.Count() > 0)
-                        {
-                            var objectClassActiveSkillAnnotation = objectClassCustomAnnotations.Where(entry => entry.TaxonomyPredicate.ToString().Contains("ActiveSkill"));
-                            if (objectClassActiveSkillAnnotation.Count() > 0)
-                            {
-                                annotationPropertyString = $"{this.Context}ActiveSkill";
-                                annotation = this.Ontology.Model.PropertyModel.SelectProperty(annotationPropertyString) as RDFOntologyAnnotationProperty;
-                                if (annotation == null)
-                                {
-                                    annotation = new RDFOntologyAnnotationProperty(new RDFResource(annotationPropertyString));
-                                    this.Ontology.Model.PropertyModel.AddProperty(annotation);
-                                }
-
-                                var annotationValue = new RDFOntologyLiteral(new RDFTypedLiteral("true", RDFModelEnums.RDFDatatypes.XSD_BOOLEAN));
-                                this.Ontology.Data.AddCustomAnnotation(annotation, objectFact, annotationValue);
-                            }
-                        }
-                    }
+                annotationPropertyString = $"{this.Context}ActiveSkill";
+                annotation = this.Ontology.Model.PropertyModel.SelectProperty(annotationPropertyString) as RDFOntologyAnnotationProperty;
+                if (annotation == null)
+                {
+                    annotation = new RDFOntologyAnnotationProperty(new RDFResource(annotationPropertyString));
+                    this.Ontology.Model.PropertyModel.AddProperty(annotation);
                 }
+
+                var annotationValue = new RDFOntologyLiteral(new RDFTypedLiteral("true", RDFModelEnums.RDFDatatypes.XSD_BOOLEAN));
+                this.Ontology.Model.PropertyModel.AddCustomAnnotation(annotation, currentProperty, annotationValue);
+                this.Save();
             }
-            
-            this.Save();
         }
     }
 }

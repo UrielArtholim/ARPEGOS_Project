@@ -364,7 +364,7 @@ namespace ARPEGOS.Services
 
             Debug.WriteLine($"Item Available Checks |-| ");
             var itemNumber = 1;
-            Parallel.ForEach(stageOptions, item =>
+            foreach(var item in stageOptions)
             {
                 Debug.WriteLine($"Item {itemNumber} - {item.ShortName}");
 
@@ -673,7 +673,16 @@ namespace ARPEGOS.Services
                     }
                 }
                 ++itemNumber;
-            });
+            };
+
+            var availableOptionsSet = new HashSet<Item>();
+            foreach (var item in availableOptions)
+            {
+                var itemName = item.FullName;
+                if (!availableOptionsSet.Any(option => option.FullName == itemName))
+                    availableOptionsSet.Add(item);
+            }
+            availableOptions = availableOptionsSet.ToList();
             return availableOptions;
         }
     }

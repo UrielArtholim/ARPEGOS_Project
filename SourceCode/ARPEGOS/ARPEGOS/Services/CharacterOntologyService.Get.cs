@@ -109,40 +109,6 @@ namespace ARPEGOS.Services
                     } 
                 }
 
-                
-
-                /*
-                var itemList = pair.Value;
-                foreach(var item in itemList)
-                {
-                    var skillName = string.Empty;
-                    var skillDescription = string.Empty;
-                    var property = this.Ontology.Model.PropertyModel.SelectProperty(pair.Key);
-                    var annotationProperty = this.Ontology.Model.PropertyModel.SelectProperty($"{this.Context}{AnnotationType}");
-                    var propertyTaxonomy = this.Ontology.Model.PropertyModel.Annotations.CustomAnnotations.SelectEntriesBySubject(property);
-                    var propertySkillTaxonomy = propertyTaxonomy.Where(property => property.TaxonomyPredicate.ToString().Contains(AnnotationType));
-                    if (propertySkillTaxonomy.Count() > 0)
-                    {
-                        if (this.CheckObjectProperty(pair.Key) == true)
-                        {
-                            skillName = item;
-                            var skillObjectFact = this.Ontology.Data.SelectFact(skillName);
-                            if(skillObjectFact != null)
-                            {
-                                var skillDescriptionEntries = this.Ontology.Data.Annotations.Comment.SelectEntriesBySubject(skillObjectFact);
-                                if (skillDescriptionEntries.Count() == 1)
-                                {
-                                    skillDescription = skillDescriptionEntries.Single().TaxonomyObject.ToString();
-                                    skills.Add(new Item(skillName, skillDescription));
-                                }
-                            }                            
-                        }
-                        else
-                        {
-                            skills.Add(new Item(pair.Key, skillDescription)); //DataItem
-                        }
-                    }
-                }   */             
             }
             return skills;
         }//MODIFIED
@@ -150,18 +116,31 @@ namespace ARPEGOS.Services
 
         public int GetSkillValue (string skillName)
         {
+            var game = DependencyHelper.CurrentContext.CurrentGame;
             var skillPropertyName = $"Per_{skillName}_Total";
             var skillPropertyString = this.GetString(skillPropertyName, true);
+            var currentString = string.Empty;
             if (this.CheckDatatypeProperty(skillPropertyString) == true)
+            {
                 skillName = skillPropertyName;
-            var currentPropertyString = this.GetString(skillName, true);
+                currentString = skillPropertyString;
+            }
+            else
+                currentString = this.GetString(skillName, true);
 
             int skillValue = 0;
             var character = this.Ontology.Data.SelectFact($"{this.Context}{FileService.EscapedName(this.Name)}");
-            var currentProperty = this.Ontology.Model.PropertyModel.SelectProperty(currentPropertyString);
-            if (this.CheckIndividual(currentPropertyString) == true)
+            if (this.CheckIndividual(currentString))
             {
-                var annotationPropertyName = "SkillValue";
+                var skillFact = this.Ontology.Data.SelectFact(currentString);
+                var skillProperty = this.Ontology.Data.Relations.Assertions.SelectEntriesByObject(skillFact).Single().TaxonomyPredicate;
+                var valuePropertyEntries = this.Ontology.Model.PropertyModel.Annotations.CustomAnnotations.SelectEntriesBySubject(skillProperty);
+                var valuePropertyName = valuePropertyEntries.Where(entry => entry.TaxonomyPredicate.ToString().Contains("SkillValue")).Single().TaxonomyObject.ToString().Split('^').First();
+                var valuePropertyString = this.GetString(valuePropertyName, true);
+                var valueProperty = this.Ontology.Model.PropertyModel.SelectProperty(valuePropertyString);
+                skillValue = Convert.ToInt32(this.Ontology.Data.Relations.Assertions.SelectEntriesByPredicate(valueProperty).Single().TaxonomyObject.ToString().Split('^').First()); 
+
+                /*var annotationPropertyName = "SkillValue";
                 var annotationProperty = this.Ontology.Model.PropertyModel.SelectProperty($"{this.Context}{annotationPropertyName}");
                 var skillValueAssertionFound = false;
                 var parentClass = this.Ontology.Model.ClassModel.SelectClass($"{this.Context}{this.GetElementClass(skillName, true)}");
@@ -225,15 +204,16 @@ namespace ARPEGOS.Services
                             skillValue = Convert.ToInt32(elementPropertyValue);
                         }
                     }
-                }
+                }*/
             }
-            else if (this.CheckDatatypeProperty(currentPropertyString) == true)
+            else if (this.CheckDatatypeProperty(currentString) == true)
             {
+                var currentProperty = this.Ontology.Model.PropertyModel.SelectProperty(currentString);
                 var assertion = this.Ontology.Data.Relations.Assertions.SelectEntriesBySubject(character).SelectEntriesByPredicate(currentProperty).Single();
                 skillValue = Convert.ToInt32(assertion.TaxonomyObject.ToString().Split('^').First());
             }
             return skillValue;
-        } //DOESN'T NEED MODIFICATION
+        }
 
         /// <summary>
         /// Returns class of the given element, choosing if the element is from the character or not
@@ -430,7 +410,7 @@ namespace ARPEGOS.Services
                 individuals.Add(new Item(individualString, individualDescription, currentClassName, individualValue, 1, individualValue));
             }
             return individuals;
-        }//MODIFIED
+        }
 
         /// <summary>
         /// Returns a list of groups of individuals given the name of the root class
@@ -460,6 +440,8 @@ namespace ARPEGOS.Services
         /// <returns></returns>
         public string GetAvailablePoints (string ElementString, out double? AvailablePoints, bool applyOnCharacter = false)
         {
+            var Game = DependencyHelper.CurrentContext.CurrentGame;
+            var Character = DependencyHelper.CurrentContext.CurrentCharacter;
             AvailablePoints = null;
             var LimitPropertyString = string.Empty;
             var AvailableWords = new List<string>()
@@ -468,35 +450,22 @@ namespace ARPEGOS.Services
                 "Available"
             };
 
-            RDFOntology CurrentOntology;
-            string CurrentContext;
             string currentElementString = ElementString;
             var shortName = ElementString.Split('#').Last();
 
-            if (applyOnCharacter)
-            {
-                CurrentOntology = this.Ontology;
-                CurrentContext = this.Context;
-                currentElementString = $"{this.Context}{shortName}";
-            }
-            else
-            {
-                CurrentOntology = DependencyHelper.CurrentContext.CurrentGame.Ontology;
-                CurrentContext = DependencyHelper.CurrentContext.CurrentGame.Context;
-            }
 
-            var PropertyModel = CurrentOntology.Model.PropertyModel;
             var FilterResultsCounter = 0;
             var index = 0;
             var ElementWords = shortName.Split('_').ToList();
             var CompareList = new List<string>();
             var ResultProperties = new List<RDFOntologyProperty>();
 
-            var ElementClass = CurrentOntology.Model.ClassModel.SelectClass(currentElementString);
-            var ElementClassAnnotations = CurrentOntology.Data.Annotations.CustomAnnotations.SelectEntriesBySubject(ElementClass);
+            var GameElementString = Character.GetString(ElementString.Split('#').Last());
+            var GameElementClass = Game.Ontology.Model.ClassModel.SelectClass(currentElementString);
+            var ElementClassAnnotations = Game.Ontology.Data.Annotations.CustomAnnotations.SelectEntriesBySubject(GameElementClass);
             var GeneralLimitAnnotations = ElementClassAnnotations.Where(entry => entry.TaxonomyPredicate.ToString().Contains("GeneralLimit"));
             if(GeneralLimitAnnotations.Count() == 0)
-                GeneralLimitAnnotations = CurrentOntology.Model.PropertyModel.Annotations.CustomAnnotations.Where(entry => entry.TaxonomyPredicate.ToString().Contains("GeneralLimit"));
+                GeneralLimitAnnotations = Game.Ontology.Model.PropertyModel.Annotations.CustomAnnotations.Where(entry => entry.TaxonomyPredicate.ToString().Contains("GeneralLimit"));
 
             var GeneralLimitAnnotation = GeneralLimitAnnotations.First();
             var generalCostAnnotationFound = (GeneralLimitAnnotation != null);
@@ -506,14 +475,14 @@ namespace ARPEGOS.Services
                 if (string.IsNullOrEmpty(ElementValue))
                     return null;
 
-                var GeneralCostProperty = PropertyModel.SelectProperty(ElementValue);
+                var GeneralCostProperty = Game.Ontology.Model.PropertyModel.SelectProperty(ElementValue);
                 ResultProperties.Add(GeneralCostProperty);
                 FilterResultsCounter = ResultProperties.Count();
             }
             else
             {
                 index = 0;
-                ResultProperties = PropertyModel.Where(entry => AvailableWords.Any(word => entry.ToString().Contains(word))).ToList();
+                ResultProperties = Game.Ontology.Model.PropertyModel.Where(entry => AvailableWords.Any(word => entry.ToString().Contains(word))).ToList();
                 FilterResultsCounter = ResultProperties.Count();
                 while (FilterResultsCounter > 1 && CompareList.Count() < ElementWords.Count())
                 {
@@ -554,17 +523,24 @@ namespace ARPEGOS.Services
                 if (currentResultPropertiesCount != 0)
                 {
                     var LimitProperty = ResultProperties.Single();
-                    LimitPropertyString = LimitProperty.ToString().Split('#').Last();
-                    var LimitPropertyShortName = LimitPropertyString.Split('#').Last();
+                    LimitPropertyString = LimitProperty.ToString();
+                    var LimitPropertyName = LimitProperty.ToString().Split('#').Last();
                     RDFOntologyDatatypeProperty CharacterLimitProperty;
-                    if (CheckDatatypeProperty(LimitPropertyString) == false)
-                        CharacterLimitProperty = CreateDatatypeProperty(LimitPropertyString);
+                    RDFOntologyTaxonomyEntry LimitPropertyAssertion;
+                    if (CheckDatatypeProperty(LimitProperty.ToString()) == false)
+                    {
+                        CharacterLimitProperty = CreateDatatypeProperty(LimitPropertyName);
+                        LimitPropertyAssertion = null;
+                    }
                     else
-                        CharacterLimitProperty = this.Ontology.Model.PropertyModel.SelectProperty(LimitPropertyString) as RDFOntologyDatatypeProperty;
-                    var LimitPropertyAssertion = this.Ontology.Data.Relations.Assertions.SelectEntriesByPredicate(CharacterLimitProperty).Single();
+                    {
+                        CharacterLimitProperty = this.Ontology.Model.PropertyModel.SelectProperty(LimitProperty.ToString()) as RDFOntologyDatatypeProperty;
+                        LimitPropertyAssertion = this.Ontology.Data.Relations.Assertions.SelectEntriesByPredicate(CharacterLimitProperty).Single();
+                    }
+                        
                     if (LimitPropertyAssertion == null)
                     {
-                        IEnumerable<RDFOntologyTaxonomyEntry> ResultAnnotations = CurrentOntology.Model.PropertyModel.Annotations.IsDefinedBy.SelectEntriesBySubject(LimitProperty);
+                        IEnumerable<RDFOntologyTaxonomyEntry> ResultAnnotations = Game.Ontology.Model.PropertyModel.Annotations.IsDefinedBy.SelectEntriesBySubject(LimitProperty);
                         FilterResultsCounter = ResultAnnotations.Count();
                         CompareList.Clear();
 
@@ -670,8 +646,8 @@ namespace ARPEGOS.Services
                                 if (PropertyDefinitionAnnotationEntries.EntriesCount > 0)
                                 {
                                     CharacterLimitString = $"{character.Context}{LimitName}";
-                                    var definition = PropertyDefinitionAnnotationEntries.Single().TaxonomyObject.ToString().Split('^').First();
-                                    LimitValueString = character.GetValue(definition).ToString();
+                                    LimitName = PropertyDefinitionAnnotationEntries.Single().TaxonomyObject.ToString().Split('^').First();
+                                    LimitValueString = character.GetValue(LimitName).ToString();
                                     character.UpdateDatatypeAssertion(CharacterLimitString, LimitValueString);
                                 }
                             }
@@ -728,8 +704,8 @@ namespace ARPEGOS.Services
                         if(LimitAnnotationEntries.Count() > 0)
                         {
                             CharacterLimitString = $"{character.Context}{LimitName}";
-                            var definition = LimitAnnotationEntries.Single().TaxonomyObject.ToString().Split('^').First();
-                            LimitValueString = character.GetValue(definition).ToString();
+                            LimitName = LimitAnnotationEntries.Single().TaxonomyObject.ToString().Split('^').First();
+                            LimitValueString = character.GetValue(LimitName).ToString();
                             character.UpdateDatatypeAssertion(CharacterLimitString, LimitValueString);
                         }                        
                     }
@@ -743,73 +719,105 @@ namespace ARPEGOS.Services
             return LimitName;
         }//MODIFIED
 
+        /// <summary>
+        /// Returns item unitary cost for the view of given stage .
+        /// </summary>
+        /// <param name="itemName">Name of the element</param>
+        /// <param name="stageName">Name of the stage</param>
+        /// <returns></returns>
         public double GetStep(string itemName, string stageName)
         {
             double step = 1;
-            var characterTypeStageName = StageViewModel.RootStage.Split('#').Last();
+            var itemString = this.GetString(itemName , false);
+            var characterTypeStageName = this.GetCreationSchemeRootClass().Split('#').Last();
             var characterTypeStageString = DependencyHelper.CurrentContext.CurrentCharacter.GetString(characterTypeStageName, true);
             var characterTypePropertyString = this.GetObjectPropertyAssociated(characterTypeStageString, null, true);
             var characterTypeProperty = this.Ontology.Model.PropertyModel.SelectProperty(characterTypePropertyString);
             var characterTypeFact = this.Ontology.Data.Relations.Assertions.SelectEntriesByPredicate(characterTypeProperty).Single().TaxonomyObject;
             var characterTypeAssertions = this.Ontology.Data.Relations.Assertions.SelectEntriesBySubject(characterTypeFact);
+            bool stepFound = false;
 
-            foreach(var entry in characterTypeAssertions)
+            while(!stepFound && GetParentClasses(itemString).Count() > 0)
             {
-                var predicate = entry.TaxonomyPredicate;
-                var predicateName = predicate.ToString();
-                var itemNameWords = itemName.Split('_').ToList();
-                if(predicateName.Contains("Coste"))
+                foreach (var entry in characterTypeAssertions)
                 {
-                    var predicateNameWords = predicateName.Split('#').Last().Split('_').ToList();
-                    if(itemNameWords.Any(itemWord => predicateNameWords.Any(predicateWord => itemWord == predicateWord)))
+                    var predicate = entry.TaxonomyPredicate;
+                    var predicateName = predicate.ToString();
+                    var itemNameWords = itemName.Split('_').ToList();
+                    if (predicateName.Contains("Coste"))
                     {
-                        var stageWords = stageName.Split('_').ToList();
-                        var itemWords = itemName.Split('_').ToList();
-                        var filteredPredicateName = predicateName;
-                        foreach (var word in stageWords)
-                            filteredPredicateName = filteredPredicateName.Replace(word, "");
-                        foreach (var word in itemWords)
-                            filteredPredicateName = filteredPredicateName.Replace(word, "");
+                        var predicateNameWords = predicateName.Split('#').Last().Split('_').ToList();
+                        if (itemNameWords.Any(itemWord => predicateNameWords.Any(predicateWord => itemWord == predicateWord)))
+                        {
+                            var stageWords = stageName.Split('_').ToList();
+                            var itemWords = itemName.Split('_').ToList();
+                            var filteredPredicateName = predicateName;
+                            foreach (var word in stageWords)
+                                filteredPredicateName = filteredPredicateName.Replace(word , "");
+                            foreach (var word in itemWords)
+                                filteredPredicateName = filteredPredicateName.Replace(word , "");
 
-                        if(!string.IsNullOrEmpty(filteredPredicateName))
-                        {
-                            var predicateAssertionEntries = this.Ontology.Data.Relations.Assertions.SelectEntriesByPredicate(predicate);
-                            if (predicateAssertionEntries.Count() > 0)
-                            {
-                                var predicateAssertion = predicateAssertionEntries.Single();
-                                step = Convert.ToInt32(predicateAssertion.TaxonomyObject.ToString().Split('^').First());
-                            }
-                        }                        
-                    }
-                }
-                else
-                {
-                    var game = DependencyHelper.CurrentContext.CurrentGame;
-                    var itemString = this.GetString(itemName);
-                    var itemFact = game.Ontology.Data.SelectFact(itemString);
-                    if(itemFact != null)
-                    {
-                        var itemClass = game.Ontology.Data.Relations.ClassType.SelectEntriesBySubject(itemFact).Single().TaxonomyObject;
-                        var itemClassName = itemClass.ToString().Split('#').Last();
-                        var itemClassWords = itemClassName.Split('_').ToList();
-                        if (predicateName.Contains("Coste"))
-                        {
-                            if (itemClassWords.Any(word => predicateName.Contains(word)))
+                            if (!string.IsNullOrEmpty(filteredPredicateName))
                             {
                                 var predicateAssertionEntries = this.Ontology.Data.Relations.Assertions.SelectEntriesByPredicate(predicate);
                                 if (predicateAssertionEntries.Count() > 0)
                                 {
+                                    stepFound = true;
                                     var predicateAssertion = predicateAssertionEntries.Single();
                                     step = Convert.ToInt32(predicateAssertion.TaxonomyObject.ToString().Split('^').First());
                                 }
                             }
                         }
                     }
+                    else
+                    {
+                        var game = DependencyHelper.CurrentContext.CurrentGame;
+                        var itemFact = game.Ontology.Data.SelectFact(itemString);
+                        if (itemFact != null)
+                        {
+                            var itemClass = game.Ontology.Data.Relations.ClassType.SelectEntriesBySubject(itemFact).Single().TaxonomyObject;
+                            var itemClassName = itemClass.ToString().Split('#').Last();
+                            var itemClassWords = itemClassName.Split('_').ToList();
+                            if (predicateName.Contains("Coste"))
+                            {
+                                if (itemClassWords.Any(word => predicateName.Contains(word)))
+                                {
+                                    var predicateAssertionEntries = this.Ontology.Data.Relations.Assertions.SelectEntriesByPredicate(predicate);
+                                    if (predicateAssertionEntries.Count() > 0)
+                                    {
+                                        stepFound = true;
+                                        var predicateAssertion = predicateAssertionEntries.Single();
+                                        step = Convert.ToInt32(predicateAssertion.TaxonomyObject.ToString().Split('^').First());
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                if (!stepFound)
+                {
+                    var parents = string.Empty;
+                    if (CheckClass(itemString))
+                        parents = GetParentClasses(itemString);
+                    else
+                        parents = GetElementClass(itemString).ShortName;
+                    if (!string.IsNullOrEmpty(parents))
+                    {
+                        var parentList = parents.Split('|').ToList();
+                        foreach (string parent in parentList)
+                            step = GetStep(parent , stageName);
+                        stepFound = true;
+                    }
                 }
             }
             return step;
         }
 
+        /// <summary>
+        /// Returns value of the given limit
+        /// </summary>
+        /// <param name="name"></param>
+        /// <returns></returns>
         public double GetLimitValue (string name)
         {
             var character = DependencyHelper.CurrentContext.CurrentCharacter;
@@ -833,54 +841,9 @@ namespace ARPEGOS.Services
             else
                 valueString = valueList.Single();
 
-            var LimitValue = Convert.ToDouble(valueString.Split('^').First());
+            var LimitValue = Math.Round(Convert.ToDouble(valueString.Split('^').First()));
             return LimitValue;
         }
-
-        /// <summary>
-        /// Returns the name of a limit given its value
-        /// </summary>
-        /// <param name="value">Value of the limit</param>
-        /// <returns></returns>
-        public string GetLimitByValue (string stageString, string value)
-        {
-            var Limit = string.Empty;
-            var CharacterFact = this.Ontology.Data.SelectFact($"{this.Context}{FileService.EscapedName(this.Name)}");
-            var CharacterAssertions = this.Ontology.Data.Relations.Assertions.SelectEntriesBySubject(CharacterFact);
-            var CharacterAssertionsValueEntries = CharacterAssertions.Where(entry => entry.TaxonomyObject.ToString().Contains(value));
-            if (CharacterAssertionsValueEntries.Count() == 1)
-                Limit = CharacterAssertionsValueEntries.Single().TaxonomyPredicate.ToString().Split('#').Last();
-            else
-            {
-                if (CharacterAssertionsValueEntries.Count() > 1)
-                {
-                    var StageGeneralLimit = GetAvailablePoints(stageString, out double? LimitValue);
-                    if (LimitValue.ToString() != value)
-                    {
-                        var StagePartialLimitName = GetLimit(stageString);
-                        if(!string.IsNullOrEmpty(StagePartialLimitName))
-                        {
-                            LimitValue = GetLimitValue(StagePartialLimitName);
-                            if (LimitValue.ToString() != value)
-                            {
-                                var parents = GetParentClasses(stageString);
-                                if (parents != null)
-                                {
-                                    var parentList = parents.Split('|').ToList();
-                                    foreach (string parent in parentList)
-                                        Limit = GetLimitByValue(parent, value);
-                                }
-                            }
-                            else
-                                Limit = StagePartialLimitName;
-                        }                        
-                    }
-                    else
-                        Limit = StageGeneralLimit;
-                }
-            }
-            return Limit;
-        }//MODIFIED*/
 
         /// <summary>
         /// Returns the URI of the object property associated to the stage given
@@ -949,7 +912,7 @@ namespace ARPEGOS.Services
             }
             if (wordCounter == 0)
             {
-                var parents = GetParentClasses(stageString);
+                var parents = GetParentClasses(stageString,applyOnCharacter);
                 if (parents != null)
                 {
                     var parentList = parents.Split('|').ToList();
@@ -957,7 +920,7 @@ namespace ARPEGOS.Services
                     {
                         if (propertyNameFound == false)
                         {
-                            propertyString = GetObjectPropertyAssociated(parent);
+                            propertyString = GetObjectPropertyAssociated(parent, null, applyOnCharacter);
                             if (propertyString != null)
                                 propertyNameFound = true;
                         }
@@ -1004,7 +967,7 @@ namespace ARPEGOS.Services
                     OrderedSubstages.Add(Convert.ToInt32(Substage_OrderEntry.TaxonomyObject.ToString().Split('^').First()), currentStageString);
             }
             return new SortedList<int, string>(OrderedSubstages);
-        }//MODIFIED
+        }//MODIFIED //UNUSED
 
         /// <summary>
         /// Returns a string containing the names of the types of the given element
@@ -1014,44 +977,47 @@ namespace ARPEGOS.Services
         /// <returns></returns>
         public string GetParentClasses (string elementString, bool applyOnCharacter = false)
         {
-            RDFOntology CurrentOntology;
-            string CurrentContext;
-            string currentElementString = elementString;
-            var elementShortName = elementString.Split('#').Last();
-            if (applyOnCharacter)
-            {
-                CurrentOntology = this.Ontology;
-                CurrentContext = this.Context;
-                currentElementString = $"{this.Context}{elementShortName}";
-            }
-            else
-            {
-                CurrentOntology = DependencyHelper.CurrentContext.CurrentGame.Ontology;
-                CurrentContext = DependencyHelper.CurrentContext.CurrentGame.Context;
-            }
-
             var parent = string.Empty;
-            var elementClass = CurrentOntology.Model.ClassModel.SelectClass(currentElementString);
-            if (elementClass != null)
+            if(!string.IsNullOrEmpty(elementString))
             {
-                var elementClassEntries = CurrentOntology.Model.ClassModel.Relations.SubClassOf.SelectEntriesBySubject(elementClass);
-                foreach (var entry in elementClassEntries)
-                    parent += $"{entry.TaxonomyObject}{"|"}";
-                if (parent != null)
-                    if (parent.EndsWith('|'))
-                        parent = parent[0..^1];
-            }
-            else
-            {
-                var elementFact = CurrentOntology.Data.SelectFact(currentElementString);
-                var ElementClassAssertions = CurrentOntology.Data.Relations.ClassType.SelectEntriesBySubject(elementFact);
-                foreach (var entry in ElementClassAssertions)
-                    parent += $"{entry.TaxonomyObject.ToString()}{"|"}";
-                if (parent != null)
-                    if (parent.EndsWith('|'))
-                        parent = parent[0..^1];
-            }
+                RDFOntology CurrentOntology;
+                string CurrentContext;
+                string currentElementString = elementString;
+                var elementShortName = elementString.Split('#').Last();
+                if (applyOnCharacter)
+                {
+                    CurrentOntology = this.Ontology;
+                    CurrentContext = this.Context;
+                    currentElementString = $"{this.Context}{elementShortName}";
+                }
+                else
+                {
+                    CurrentOntology = DependencyHelper.CurrentContext.CurrentGame.Ontology;
+                    CurrentContext = DependencyHelper.CurrentContext.CurrentGame.Context;
+                }
 
+                var elementClass = CurrentOntology.Model.ClassModel.SelectClass(currentElementString);
+                if (elementClass != null)
+                {
+                    var elementClassEntries = CurrentOntology.Model.ClassModel.Relations.SubClassOf.SelectEntriesBySubject(elementClass);
+                    foreach (var entry in elementClassEntries)
+                        parent += $"{entry.TaxonomyObject}{"|"}";
+                    if (parent != null)
+                        if (parent.EndsWith('|'))
+                            parent = parent[0..^1];
+                }
+                else
+                {
+                    var elementFact = CurrentOntology.Data.SelectFact(currentElementString);
+                    var ElementClassAssertions = CurrentOntology.Data.Relations.ClassType.SelectEntriesBySubject(elementFact);
+                    foreach (var entry in ElementClassAssertions)
+                        parent += $"{entry.TaxonomyObject.ToString()}{"|"}";
+                    if (parent != null)
+                        if (parent.EndsWith('|'))
+                            parent = parent[0..^1];
+                }
+
+            }
             return parent;
         }//MODIFIED
 
@@ -1100,7 +1066,7 @@ namespace ARPEGOS.Services
             }
 
             return GeneralCostString;
-        }//MODIFIED
+        }//MODIFIED //UNUSED
 
         /// <summary>
         /// Returns the partial cost of an element given its name and the current stage
@@ -1148,7 +1114,7 @@ namespace ARPEGOS.Services
                     partialCost = Convert.ToSingle(ItemCostEntry.TaxonomyObject.ToString().Split('^').First());
 
             return ItemCostEntry.TaxonomyPredicate.ToString();
-        }//MODIFIED
+        }//MODIFIED //UNUSED
 
         /// <summary>
         /// Returns a collection of groups if given class has subclasses.
@@ -1462,6 +1428,15 @@ namespace ARPEGOS.Services
                         }
                         // Now its time to get the property value as the current value
                         // 3.2.1.3 Get property assertion in character
+                        var CharacterPropertyAssertionEntries = CharacterOntology.Data.Relations.Assertions.SelectEntriesBySubject(CharacterFact).SelectEntriesByPredicate(characterElementProperty);
+                        // Check if property has been asserted in character
+                        if(CharacterPropertyAssertionEntries.Count() < 1)
+                        {
+                            var definition = CharacterOntology.Model.PropertyModel.Annotations.IsDefinedBy.SelectEntriesBySubject(characterElementProperty).Single().TaxonomyObject.ToString().Split('^').First();
+                            var propertyValue = this.GetValue(definition).ToString();
+                            var propertyType = characterElementProperty.Range.ToString().Split('#').Last();
+                            AddDatatypeProperty($"{this.Context}{FileService.EscapedName(this.Name)}" , characterElementPropertyString , propertyValue , propertyType);
+                        }
                         var CharacterPropertyAssertion = CharacterOntology.Data.Relations.Assertions.SelectEntriesBySubject(CharacterFact).SelectEntriesByPredicate(characterElementProperty).Single();
                         // 3.2.1.4 Get property value
                         var propertyValueString = CharacterPropertyAssertion.TaxonomyObject.ToString();
@@ -1580,7 +1555,7 @@ namespace ARPEGOS.Services
                                         //  3.3.2.7.6 Check if the domain of the entry datatype property contains characterClassName
                                         if (entryDatatypeProperty.ToString().Contains(characterClassName))
                                         {
-                                            //  3.3.2.7.17 Get the first word of the datatype property, and check that it has been found
+                                            //  3.3.2.7.7 Get the first word of the datatype property, and check that it has been found
                                             datatypePropertyFound = true;
                                             datatypePropertyFirstWord = datatypePropertyFirstWord.ToString().Split('#').Last().Split('_').First();
                                         }
@@ -1869,7 +1844,7 @@ namespace ARPEGOS.Services
                         if (CheckDatatypeProperty(GetString(nextElement, true)))
                         {
                             // 3.6.2A.2A.1 Get character class name
-                            var characterClassName = GetElementClass($"{this.Context}{FileService.EscapedName(this.Name)}", true).ToString().Split('#').Last();
+                            var characterClassName = GetElementClass($"{this.Context}{FileService.EscapedName(this.Name)}", true).FullName.Split('#').Last();
                             // 3.6.2A.2A.2 Get nextElement first word
                             var nextElementFirstWord = nextElement.Split('_').First();
                             // 3.6.2A.2A.3 Check if character class name contains next element first word
@@ -1927,8 +1902,6 @@ namespace ARPEGOS.Services
                                 nextElementValueString = nextElementValueString.Substring(0, nextElementValueString.IndexOf('^'));
                                 nextElementValue = Convert.ToSingle(nextElementValueString, CultureInfo.InvariantCulture);
                             }
-
-
                         }
                         // 3.6.2A.3 Check if nextElement is an objectProperty
                         else if (CheckObjectProperty(GetString(nextElement, true)))

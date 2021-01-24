@@ -12,7 +12,7 @@ namespace ARPEGOS.Services
         /// </summary>
         /// <param name="predicateName">Name of the predicate</param>
         /// <param name="literal">Value of the property</param>
-        internal void RemoveDatatypeProperty(string predicateString, string literalString = null)
+        public void RemoveDatatypeProperty(string predicateString, string literalString = null)
         {
             
             var predicate = this.Ontology.Model.PropertyModel.SelectProperty(predicateString) as RDFOntologyDatatypeProperty;
@@ -44,7 +44,7 @@ namespace ARPEGOS.Services
         /// </summary>
         /// <param name="predicateName"></param>
         /// <param name="objectFactName"></param>
-        internal void RemoveObjectProperty(string predicateString, string objectFactString = null)
+        public void RemoveObjectProperty(string predicateString, string objectFactString = null)
         {
             var predicate = this.Ontology.Model.PropertyModel.SelectProperty(predicateString) as RDFOntologyObjectProperty;
             var CharacterPredicateAssertions = this.Ontology.Data.Relations.Assertions.SelectEntriesByPredicate(predicate);

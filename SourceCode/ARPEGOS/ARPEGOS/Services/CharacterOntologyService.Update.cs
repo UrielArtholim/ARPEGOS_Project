@@ -64,7 +64,7 @@ namespace ARPEGOS.Services
         /// </summary>
         /// <param name="predicateName">Name of the predicate</param>
         /// <param name="value">New value of the assertion</param>
-        internal void UpdateDatatypeAssertion(string predicateString, string value)
+        public void UpdateDatatypeAssertion(string predicateString, string value)
         {
             
             string predicateName = predicateString.Split('#').Last();
@@ -105,7 +105,7 @@ namespace ARPEGOS.Services
         /// </summary>
         /// <param name="predicateName">>Name of the predicate</param>
         /// <param name="objectName">New object of the assertion</param>
-        internal void UpdateObjectAssertion(string predicateString, string objectString)
+        public void UpdateObjectAssertion(string predicateString, string objectString)
         {
             
             var predicateName = predicateString.Split('#').Last();
