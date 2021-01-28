@@ -1,0 +1,34 @@
+% ARPEGOS:  Automatized Roleplaying-game Profile Extensible Generator Ontology based System %
+% Author : Alejandro Muñoz Del Álamo %
+% Copyright 2019 %
+
+% Section 8.1: Introducción %
+\section{Estrategia de pruebas}
+Durante el desarrollo de cualquier proyecto de software, uno de los apartados fundamentales debe ser 
+la realización de pruebas, que permitan conocer si el funcionamiento del sistema es correcto, o tiene 
+errores que deben ser solventados. En un sistema de pequeña envergadura, es posible que sea simple y 
+no requiera mucho esfuerzo, pero en sistemas más complejos no debe ser tomado a la ligera, pues 
+se necesita un análisis previo de todos los elementos que componen el sistema, para diseñar un 
+conjunto de pruebas que corroboren el correcto funcionamiento de dichos elementos, de manera individual y 
+del sistema en conjunto. \newpage
+
+A la hora de diseñar las pruebas, es conveniente planificar su desarrollo mediante una estrategia, 
+que permita a los desarrolladores encargados desempeñar su trabajo de manera organizada y lógica.
+La estrategia que se ha seguido para este proyecto ha sido la siguiente:\medskip
+
+En primer lugar, se lleva a cabo la realización de las pruebas unitarias, ya que inspeccionan 
+el correcto funcionamiento de los componentes de manera individualizada. Estas pruebas mejoran su 
+eficacia si las clases están débilmente acopladas, puesto que de esta manera es posible verificar 
+únicamente aquello que se desea, sin tener en cuenta otras clases distintas a las que se comprueban.\medskip
+
+El próximo paso trata de ejecutar las pruebas de integración, que comprueba que el ensamblado de los 
+componentes del sistema. Esta fase comienza cuando los diferentes componentes se agrupan para realizar 
+funciones más complejas, que no pueden realizarse de manera individual por los componentes. \medskip
+
+La tercera fase esta conformada por las pruebas de validación, en la que se revisan los requisitos
+establecidos con la funcionalidad del sistema y cuyo éxito garantiza que el software cumple con todos 
+los requerimientos establecidos en la sección \ref*{Requisitos}: \textit{Catálogo de Requisitos}. \medskip
+
+Finalmente queda comprobar que el sistema desarrollado pueda ser utilizado en un entorno de explotación, 
+ya sea para su ejecución con otros elementos, o su uso por parte del usuario final, lo que se realiza 
+mediante las pruebas de sistema.
