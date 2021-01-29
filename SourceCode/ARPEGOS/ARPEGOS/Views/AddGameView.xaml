@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:converter="clr-namespace:ARPEGOS.Converter"
+             Visual="Material"
+             Title="Añadir juego"
+             x:Class="ARPEGOS.Views.AddGameView"
+             BackgroundImageSource="{x:DynamicResource BackgroundImageSource}">
+    <ContentPage.Content>
+        <Grid>
+            <StackLayout Grid.Column="0" Spacing="10" Padding="20,20,20,20" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" BackgroundColor="Transparent">
+                <Entry Text ="{Binding Game}" Placeholder="Enter game name" Style="{x:DynamicResource Entry}"/>
+                <Button Text="Comprobar juego" Command="{Binding CheckCommand}" Style="{x:DynamicResource Button}"/>
+                <Label Text="{Binding CheckMessage}" Style="{x:DynamicResource OutsideLabel}"/>
+                <Button Text="Seleccionar fichero" Command="{Binding SelectCommand}" Style="{x:DynamicResource Button}"/>
+                <Label Text="{Binding SelectMessage}" Style="{x:DynamicResource OutsideLabel}"/>
+                <Button Text="Añadir fichero" Command="{Binding AddCommand}" Style="{x:DynamicResource Button}"/>
+                <Label Text="{Binding AddMessage}" Style="{x:DynamicResource OutsideLabel}"/>
+            </StackLayout>
+        </Grid>        
+    </ContentPage.Content>
+</ContentPage>

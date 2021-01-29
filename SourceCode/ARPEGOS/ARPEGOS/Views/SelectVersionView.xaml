@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ARPEGOS.Views.SelectVersionView"
+             x:Name="SelectVersionPage"
+             Title="{Binding Title}"
+             BackgroundImageSource="{x:DynamicResource BackgroundImageSource}">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Order="Primary" Priority="0" Command="{Binding AddButtonCommand}" IconImageSource="{x:DynamicResource AddButtonImageSource}"/>
+        <ToolbarItem Order="Primary" Priority="0" Command="{Binding DeleteButtonCommand}" IconImageSource="{x:DynamicResource RemoveButtonImageSource}"/>
+    </ContentPage.ToolbarItems>
+    <Grid>
+        <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <StackLayout Padding="5" Margin="20,20,20,0" Orientation="Horizontal" VerticalOptions="Start" HorizontalOptions="CenterAndExpand" IsVisible="{Binding CancelEnabled}">
+                <Button Text="Cancelar" Command="{Binding CancelButtonCommand}" Style="{x:DynamicResource Button}"/>
+            </StackLayout>
+            <ScrollView Grid.Row="0" VerticalOptions="FillAndExpand">
+                <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                    <FlexLayout BindableLayout.ItemsSource="{Binding SelectableElements}" Style="{x:DynamicResource FlexLayout}">
+                        <BindableLayout.ItemTemplate>
+                            <DataTemplate>
+                                <Frame Style="{x:DynamicResource MainItemFrame}">
+                                    <Frame.GestureRecognizers>
+                                        <TapGestureRecognizer Command="{Binding Path=BindingContext.SelectItemCommand, Source={x:Reference SelectVersionPage}}" CommandParameter="{Binding .}" />
+                                    </Frame.GestureRecognizers>
+                                    <StackLayout Padding="10">
+                                        <Image Source="{Binding ., Converter={StaticResource GetInitialsImageConverter}, ConverterParameter=128}" />
+                                        <Label Text="{Binding .}" Style="{x:DynamicResource MainItemLabel}" />
+                                    </StackLayout>
+                                </Frame>
+                            </DataTemplate>
+                        </BindableLayout.ItemTemplate>
+                    </FlexLayout>
+                </StackLayout>
+            </ScrollView>
+        </StackLayout>
+        <Frame Grid.Row="0" BackgroundColor="Black" Opacity="0.7" HasShadow="False" CornerRadius="0" IsVisible="{Binding IsBusy}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <ActivityIndicator Color="White" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" IsRunning="{Binding IsBusy}"
+                               WidthRequest="50" HeightRequest="50" />
+        </Frame>
+    </Grid>
+</ContentPage>

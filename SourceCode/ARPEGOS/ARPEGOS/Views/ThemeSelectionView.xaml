@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:converter="clr-namespace:ARPEGOS.Converter"
+             x:Class="ARPEGOS.Views.ThemeSelectionView"
+             Title="Temas"
+             BackgroundImageSource="{DynamicResource BackgroundImageSource}">
+    <ContentPage.Resources>
+        <converter:GetThemeColorConverter x:Key="themeColorConverter"/>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <Grid>
+            <StackLayout Spacing="10" Padding="10" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                <ListView x:Name="ThemeSelectionList" ItemsSource="{Binding Themes}" HasUnevenRows="True" SelectionMode="None" CachingStrategy="RetainElement">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Frame x:Name="ItemFrame" 
+                                       Padding="15" 
+                                       Margin="10,10,10,0" 
+                                       BorderColor="{DynamicResource LightSeparatorColor}"
+                                       BackgroundColor="{DynamicResource ItemBackgroundColor}"
+                                       Opacity="{x:DynamicResource OpacityValue}">
+                                    <StackLayout Orientation="Horizontal"  
+                                                 HorizontalOptions="FillAndExpand" 
+                                                 VerticalOptions="CenterAndExpand" >
+                                        <RadioButton x:Name="Radio"
+                                                   BorderColor="{DynamicResource ItemTextColor}"
+                                                   BackgroundColor="Transparent"
+                                                   Grid.Row="0"
+                                                   Grid.Column="0" 
+                                                   HorizontalOptions="Start" 
+                                                   VerticalOptions="Center" 
+                                                   IsChecked="{Binding IsSelected}"
+                                                   CheckedChanged="OnCheckedChanged" 
+                                                   BindingContext="{Binding .}"/>
+                                        <Label  x:Name="ItemName"
+                                                Grid.Row="0" 
+                                                Grid.Column="1" 
+                                                FontSize="Medium" 
+                                                HorizontalOptions="StartAndExpand" 
+                                                HorizontalTextAlignment="Start"
+                                                VerticalOptions="Center" 
+                                                Text="{Binding Theme}"
+                                                TextColor="{DynamicResource ItemTextColor}"/>
+                                        <Grid Style="{x:DynamicResource FrameGrid}">
+                                            <BoxView Grid.Column ="0" Color="{Binding Theme, Converter={StaticResource themeColorConverter}}" HeightRequest="20" WidthRequest="20"/>
+                                        </Grid>
+                                    </StackLayout>
+                                </Frame>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                <Button Text="Siguiente" 
+                        Command="{Binding NextCommand}" 
+                        Style="{x:DynamicResource NextButton}"/>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

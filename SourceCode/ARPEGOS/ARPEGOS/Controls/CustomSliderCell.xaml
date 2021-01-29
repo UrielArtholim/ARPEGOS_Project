@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ViewCell xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:controls="clr-namespace:ARPEGOS.Controls"
+          mc:Ignorable="d"
+             x:Class="ARPEGOS.Controls.CustomSliderCell">
+    <ViewCell.View>
+        <Frame x:Name="ItemFrame"
+               VerticalOptions="Start"
+               Margin="20,20,20,20"
+               BorderColor="DarkViolet">
+            <Grid x:Name="SliderItem" 
+            HorizontalOptions="FillAndExpand"
+            RowDefinitions="Auto,Auto"
+            ColumnDefinitions="2*,*,*,*">
+                <Label x:Name="ItemNameLabel"
+                       Grid.Row="0"
+                       Grid.Column="0"
+                       VerticalOptions="Center"
+                       HorizontalTextAlignment="Center"
+                       Text="{Binding Name}"/>
+                <Label x:Name="SliderValueLabel"
+                       Grid.Row="0"
+                       Grid.Column="1"
+                       VerticalOptions="Center"
+                       HorizontalTextAlignment="Center"
+                       Text="{Binding Source={x:Reference UserInputSlider},Path=Value}"/>
+                <Label x:Name="ItemValueLabel"
+                       Grid.Row="0"
+                       Grid.Column="2"
+                       VerticalOptions="Center"
+                       HorizontalTextAlignment="Center"
+                       Text="Final Value"/>
+                <ImageButton x:Name="InformationButton"
+                             Grid.Row="0"
+                             Grid.Column="3"
+                             Source=""/>
+                <controls:CustomSlider x:Name="UserInputSlider" 
+                        Grid.Row="1" 
+                        Grid.Column="0" 
+                        Grid.ColumnSpan="4"
+                        Step="{Binding Step}"/>
+            </Grid>
+        </Frame>
+    </ViewCell.View>
+</ViewCell>

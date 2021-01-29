@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ARPEGOS.Views.DetailInfoView"
+             Title="{Binding ViewName}"
+             BackgroundImageSource="{x:DynamicResource BackgroundImageSource}">
+    <ContentPage.Content>
+        <Grid>
+            <ListView x:Name="DetailInfoList" 
+                      ItemsSource="{Binding Data}" 
+                      HasUnevenRows="True" 
+                      SelectionMode="None" 
+                      CachingStrategy="RetainElement"                          
+                      IsGroupingEnabled="True"
+                      SeparatorVisibility="None">
+                <ListView.GroupHeaderTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Frame x:Name="GroupFrame" 
+                                   Padding="15" 
+                                   Margin="15,15,15,15" 
+                                   Style="{x:DynamicResource HeaderFrame}">
+                                <StackLayout Orientation="Horizontal"  
+                                             HorizontalOptions="FillAndExpand" 
+                                             VerticalOptions="CenterAndExpand">
+                                    <Label Style="{x:DynamicResource HeaderLabel}"  
+                                           Text="{Binding FormattedTitle}"
+                                           FontAttributes="Bold"/>
+                                </StackLayout>
+                            </Frame>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.GroupHeaderTemplate>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Frame x:Name="ItemFrame" 
+                                   Padding="15" 
+                                   Margin="30,0,30,10" 
+                                   Style="{x:DynamicResource ItemFrame}">
+                                <StackLayout Orientation="Horizontal"  
+                                                 HorizontalOptions="FillAndExpand" 
+                                                 VerticalOptions="CenterAndExpand" >
+                                    <Label  Grid.Row="0" 
+                                                Grid.Column="1" 
+                                                Style="{x:DynamicResource ItemLabel}" 
+                                                HorizontalOptions="StartAndExpand" 
+                                                HorizontalTextAlignment="Start"
+                                                VerticalOptions="Center" 
+                                                Text="{Binding FormattedName}"/>
+                                    <Label  Grid.Row="0" 
+                                                Grid.Column="2" 
+                                                Style="{x:DynamicResource ItemLabel}" 
+                                                HorizontalOptions="EndAndExpand" 
+                                                HorizontalTextAlignment="End"
+                                                VerticalOptions="Center" 
+                                                Text="{Binding PropertyValue}"/>
+                                </StackLayout>
+                            </Frame>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ARPEGOS.Views.SingleChoiceGroupView"
+             x:Name="SingleChoiceGroup"
+             Title="{Binding StageName}"
+             NavigationPage.HasBackButton="False"
+             Visual="Material"
+             BackgroundImageSource="{x:DynamicResource BackgroundImageSource}">
+    <ContentPage.Content>
+        <Grid>
+            <StackLayout Spacing="10" Padding="10" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                <ListView x:Name="SingleChoiceList" 
+                          ItemsSource="{Binding Data}" 
+                          HasUnevenRows="True" 
+                          SelectionMode="None"
+                          IsGroupingEnabled="True"
+                          SeparatorVisibility="None">
+                    <ListView.GroupHeaderTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Frame x:Name="GroupFrame" 
+                                       Padding="15" 
+                                       Margin="10,10,10,0" 
+                                       Style="{x:DynamicResource HeaderFrame}">
+                                    <Frame.GestureRecognizers>
+                                        <TapGestureRecognizer Command="{Binding Source={x:Reference SingleChoiceGroup}, Path=BindingContext.SelectGroupCommand}" CommandParameter="{Binding .}"/>
+                                    </Frame.GestureRecognizers>
+                                    <StackLayout Orientation="Horizontal"  
+                                                 HorizontalOptions="FillAndExpand" 
+                                                 VerticalOptions="CenterAndExpand"
+                                                 Spacing="20">
+                                        <Image Source="{Binding StateIcon}" HeightRequest="25" WidthRequest="25" BackgroundColor="Transparent" />
+                                        <Label  Grid.Row="0" 
+                                                Grid.Column="1" 
+                                                Style="{x:DynamicResource HeaderLabel}" 
+                                                HorizontalOptions="StartAndExpand" 
+                                                VerticalOptions="Center" 
+                                                Text="{Binding FormattedTitle}"/>
+                                        <ImageButton Source="description.png" HeightRequest="25" WidthRequest="25" IsVisible="{Binding HasDescription}"
+                                                     Command="{Binding Source={x:Reference SingleChoiceGroup}, Path=BindingContext.GroupInfoCommand}"
+                                                     CommandParameter="{Binding .}"
+                                                     BackgroundColor="Transparent"/>
+                                    </StackLayout>
+                                </Frame>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.GroupHeaderTemplate>
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Frame x:Name="ItemFrame" 
+                                    Padding="15" 
+                                    Margin="10,10,10,0" 
+                                    Style="{x:DynamicResource ItemFrame}">
+                                    <StackLayout Orientation="Horizontal"  
+                                                 HorizontalOptions="FillAndExpand" 
+                                                 VerticalOptions="CenterAndExpand" 
+                                                 Spacing="20">
+                                        <RadioButton  Grid.Row="0"
+                                                      BorderColor="Black"
+                                                      BackgroundColor="Transparent"
+                                                      Grid.Column="0" 
+                                                      HorizontalOptions="Start" 
+                                                      VerticalOptions="Center" 
+                                                      CheckedChanged="OnCheckedChanged" 
+                                                      BindingContext="{Binding .}"/>
+                                        <Label  Grid.Row="0" 
+                                                Grid.Column="1" 
+                                                Style="{x:DynamicResource ItemLabel}"
+                                                HorizontalOptions="StartAndExpand" 
+                                                HorizontalTextAlignment="Start"
+                                                VerticalOptions="Center" 
+                                                Text="{Binding .FormattedName}"/>
+                                        <ImageButton Source="description.png"  
+                                                     HeightRequest="25" 
+                                                     WidthRequest="25"
+                                                     Command="{Binding Source={x:Reference SingleChoiceGroup}, Path=BindingContext.InfoCommand}"
+                                                     CommandParameter="{Binding .}"
+                                                     BackgroundColor="Transparent"/>
+                                    </StackLayout>
+                                </Frame>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                <Button Command="{Binding Source={x:Reference SingleChoiceGroup}, Path=BindingContext.NextCommand}" 
+                        IsVisible="{Binding Continue}"
+                        Style="{x:DynamicResource NextButton}"/>
+            </StackLayout>
+            <Frame Grid.Row="0" BackgroundColor="Black" Opacity="0.7" HasShadow="False" CornerRadius="0" IsVisible="{Binding IsBusy}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                <ActivityIndicator Color="White" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" IsRunning="{Binding IsBusy}"
+                               WidthRequest="50" HeightRequest="50" />
+            </Frame>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

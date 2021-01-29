@@ -1,0 +1,175 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+	<LangVersion>8.0</LangVersion>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>portable</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="DefaultGames\Anima Beyond Fantasy\characters\Ctuchik.owl" />
+    <None Remove="DefaultGames\Anima Beyond Fantasy\characters\Test.owl" />
+    <None Remove="DefaultGames\Anima Beyond Fantasy\gamefiles\Core Exxet Safe.owl" />
+    <None Remove="DefaultGames\Anima Beyond Fantasy\Gamefiles\Core Exxet.owl" />
+    <None Remove="DefaultGames\Anima Beyond Fantasy\Nanatsu No Taizai.owl" />
+    <None Remove="DefaultGames\Core Exxet.owl" />
+    <None Remove="DefaultGames\Nanatsu No Taizai\gamefiles\Nanatsu No Taizai.owl" />
+    <None Remove="Models\Stage.cs~RFdcc0b.TMP" />
+    <None Remove="Resources\Fonts\OldLondon.ttf" />
+    <None Remove="Resources\Fonts\OldLondonAlternate.ttf" />
+    <None Remove="Resources\Fonts\Olondona.otf" />
+    <None Remove="Resources\Fonts\Olondon_.otf" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="DefaultGames\Anima Beyond Fantasy\characters\Test.owl" />
+    <EmbeddedResource Include="DefaultGames\Anima Beyond Fantasy\Gamefiles\Core Exxet.owl" />
+    <EmbeddedResource Include="DefaultGames\Nanatsu No Taizai\gamefiles\Nanatsu No Taizai.owl">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Fonts\OldLondon.ttf" />
+    <EmbeddedResource Include="Resources\Fonts\OldLondonAlternate.ttf" />
+    <EmbeddedResource Include="Resources\Fonts\Olondon_.otf" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac" Version="5.2.0" />
+    <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
+    <PackageReference Include="NUnit3TestAdapter" Version="3.17.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="RDFSharp" Version="2.18.1" />
+    <PackageReference Include="SkiaSharp.Views.Forms" Version="2.80.2" />
+    <PackageReference Include="System.Collections" Version="4.3.0" />
+    <PackageReference Include="System.Collections.NonGeneric" Version="4.3.0" />
+    <PackageReference Include="Xam.Plugin.Iconize" Version="3.5.0.129" />
+    <PackageReference Include="Xam.Plugins.Forms.ImageCircle" Version="3.0.0.5" />
+    <PackageReference Include="Xamarin.FFImageLoading" Version="2.4.11.982" />
+    <PackageReference Include="Xamarin.FFImageLoading.Forms" Version="2.4.11.982" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.6.0" />
+    <PackageReference Include="Xamarin.Forms" Version="4.8.0.1821" />
+    <PackageReference Include="Xamarin.Forms.Visual.Material" Version="4.8.0.1687" />
+    <PackageReference Include="Xamarin.Plugin.FilePicker" Version="2.1.41" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="DefaultGames\Nanatsu No Taizai\characters\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="DefaultGames\Anima Beyond Fantasy\characters\Ctuchik.owl" />
+    <Resource Include="Resources\Fonts\Olondona.otf" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Views\SkillListView.xaml.cs">
+      <DependentUpon>SkillListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\MainView.xaml.cs">
+      <DependentUpon>%(Filename)</DependentUpon>
+    </Compile>
+    <Compile Update="Views\MainViewDetail.xaml.cs">
+      <DependentUpon>%(Filename)</DependentUpon>
+    </Compile>
+    <Compile Update="Views\MainViewMaster.xaml.cs">
+      <DependentUpon>%(Filename)</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  
+  <ItemGroup>
+    <Compile Update="Services\OntologyService.Check.cs">
+      <DependentUpon>OntologyService.cs</DependentUpon>
+    </Compile>
+	<Compile Update="Services\OntologyService.Get.cs">
+      <DependentUpon>OntologyService.cs</DependentUpon>
+    </Compile>
+	<Compile Update="Services\OntologyService.Factory.cs">
+      <DependentUpon>OntologyService.cs</DependentUpon>
+    </Compile>
+	
+	<Compile Update="Services\CharacterOntologyService.Add.cs">
+      <DependentUpon>CharacterOntologyService.cs</DependentUpon>
+    </Compile>
+	<Compile Update="Services\CharacterOntologyService.Check.cs">
+      <DependentUpon>CharacterOntologyService.cs</DependentUpon>
+    </Compile>
+	<Compile Update="Services\CharacterOntologyService.Create.cs">
+      <DependentUpon>CharacterOntologyService.cs</DependentUpon>
+    </Compile>
+	<Compile Update="Services\CharacterOntologyService.Get.cs">
+      <DependentUpon>CharacterOntologyService.cs</DependentUpon>
+    </Compile>
+	<Compile Update="Services\CharacterOntologyService.Remove.cs">
+      <DependentUpon>CharacterOntologyService.cs</DependentUpon>
+    </Compile>
+	<Compile Update="Services\CharacterOntologyService.Update.cs">
+      <DependentUpon>CharacterOntologyService.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  
+  <ItemGroup>
+    <EmbeddedResource Update="Controls\CustomCheckCell.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Controls\CustomSliderCell.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Themes\DarkTheme.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Themes\LightTheme.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\AddGameView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\CharacterInfoView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\CreationRootView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\DetailInfoView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\MultipleChoiceGroupView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\MultipleChoiceView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\OptionsView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\SelectVersionView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\SingleChoiceGroupView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\SingleChoiceView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\SkillListView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\SkillView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\ThemeSelectionView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\ValuedGroupView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\ValuedView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>

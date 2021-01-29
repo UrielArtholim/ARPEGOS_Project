@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:images="clr-namespace:Xamarin.Forms.PlatformConfiguration.GTKSpecific;assembly=Xamarin.Forms.Core"
+             x:Class="ARPEGOS.Themes.TundraTheme">
+
+    <!-- HUD Opacity Value -->
+    <x:Double x:Key="OpacityValue">0.75</x:Double>
+    
+    <!-- Title Background Color -->
+    <Color x:Key="TitleBackgroundColor">#2c626d</Color>
+
+    <!-- Title Text Color -->
+    <Color x:Key="TitleTextColor">#a2a3a2</Color>
+
+    <!-- Separator Color -->
+    <Color x:Key="SeparatorColor">#a2a3a2</Color>
+
+    <!-- Page Background Color -->
+    <Color x:Key="PageBackgroundColor">#a8e7ff</Color>
+
+    <!-- Header Background Color -->
+    <Color x:Key="HeaderBackgroundColor">#2b758b</Color>
+
+    <!-- Header Text Color -->
+    <Color x:Key="HeaderTextColor">#95d3e2</Color>
+
+    <!-- Item Background Color -->
+    <Color x:Key="ItemBackgroundColor">#3990a9</Color>
+
+    <!-- Item Text Color -->
+    <Color x:Key="ItemTextColor">#ffffff</Color>
+
+    <!-- Button Background Color -->
+    <Color x:Key="ButtonBackgroundColor">#3990a9</Color>
+
+    <!-- Button Text Color -->
+    <Color x:Key="ButtonTextColor">#ffffff</Color>
+
+    <!-- Main Item Label -->
+    <Color x:Key="MainItemTextColor">#ffffff</Color>
+
+    <!-- Menu Background Color -->
+    <Color x:Key="MenuBackgroundColor">#fae056</Color>
+
+    <!-- Menu Text Color -->
+    <Color x:Key="MenuTextColor">#fae056</Color>
+
+    <!-- General Progress Bar Color -->
+    <Color x:Key="GeneralBarColor">#1c769c</Color>
+
+    <!-- General Progress Bar Background Label -->
+    <Color x:Key="GeneralBarBackgroundColor">#65a0bf</Color>
+
+    <!-- Stage Progress Bar Color -->
+    <Color x:Key="StageBarColor">#4687ab</Color>
+
+    <!-- General Progress Bar Background Color -->
+    <Color x:Key="StageBarBackgroundColor">#8fb7d7</Color>
+
+    <!-- Background Image Path -->
+    <ImageSource x:Key="BackgroundImageSource">tundra.png</ImageSource>
+
+    <!-- Add Button Image Path-->
+    <ImageSource x:Key="AddButtonImageSource">tundra_add.png</ImageSource>
+
+    <!-- Remove Button Image Path-->
+    <ImageSource x:Key="RemoveButtonImageSource">tundra_delete.png</ImageSource>
+</ResourceDictionary>

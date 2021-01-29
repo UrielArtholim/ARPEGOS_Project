@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ARPEGOS.Themes.ForestTheme">
+
+    <!-- HUD Opacity Value -->
+    <x:Double x:Key="OpacityValue">0.75</x:Double>
+
+    <!-- Title Background Color -->
+    <Color x:Key="TitleBackgroundColor">#0a3304</Color>
+
+    <!-- Title Text Color -->
+    <Color x:Key="TitleTextColor">#62a279</Color>
+
+    <!-- Separator Color -->
+    <Color x:Key="SeparatorColor">#a2a3a2</Color>
+
+    <!-- Page Background Color -->
+    <Color x:Key="PageBackgroundColor">#5fb05c</Color>
+
+    <!-- Header Background Color -->
+    <Color x:Key="HeaderBackgroundColor">#1f5f17</Color>
+
+    <!-- Header Text Color -->
+    <Color x:Key="HeaderTextColor">#7ebf96</Color>
+
+    <!-- Item Background Color -->
+    <Color x:Key="ItemBackgroundColor">#2e742a</Color>
+
+    <!-- Item Text Color -->
+    <Color x:Key="ItemTextColor">#b4e3d3</Color>
+
+    <!-- Button Background Color -->
+    <Color x:Key="ButtonBackgroundColor">#2e742a</Color>
+
+    <!-- Button Text Color -->
+    <Color x:Key="ButtonTextColor">#b4e3d3</Color>
+
+    <!-- Main Item Label -->
+    <Color x:Key="MainItemTextColor">#b4e3d3</Color>
+
+    <!-- Menu Background Color -->
+    <Color x:Key="MenuBackgroundColor">#fae056</Color>
+
+    <!-- Menu Text Color -->
+    <Color x:Key="MenuTextColor">#fae056</Color>
+
+    <!-- General Progress Bar Color -->
+    <Color x:Key="GeneralBarColor">#133f27</Color>
+
+    <!-- General Progress Bar Background Label -->
+    <Color x:Key="GeneralBarBackgroundColor">#4c5331</Color>
+
+    <!-- Stage Progress Bar Color -->
+    <Color x:Key="StageBarColor">#4d4e3e</Color>
+
+    <!-- General Progress Bar Background Color -->
+    <Color x:Key="StageBarBackgroundColor">#475e30</Color>
+
+    <!-- Background Image Path -->
+    <ImageSource x:Key="BackgroundImageSource">forest.png</ImageSource>
+
+    <!-- Add Button Image Path-->
+    <ImageSource x:Key="AddButtonImageSource">forest_add.png</ImageSource>
+
+    <!-- Remove Button Image Path-->
+    <ImageSource x:Key="RemoveButtonImageSource">forest_delete.png</ImageSource>
+</ResourceDictionary>

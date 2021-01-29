@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                    x:Class="ARPEGOS.Themes.DarkTheme">
+    <!-- HUD Opacity Value -->
+    <x:Double x:Key="OpacityValue">0.75</x:Double>
+    
+    <!-- Title Background Color -->
+    <Color x:Key="TitleBackgroundColor">#0f0437</Color>
+    
+    <!-- Title Text Color -->
+    <Color x:Key="TitleTextColor">#4c49bd</Color>
+    
+    <!-- Separator Color -->
+    <Color x:Key="SeparatorColor">#a2a3a2</Color>
+
+    <!-- Page Background Color -->
+    <Color x:Key="PageBackgroundColor">#587af2</Color>
+    
+    <!-- Header Background Color -->
+    <Color x:Key="HeaderBackgroundColor">#2b117c</Color>
+
+    <!-- Header Text Color -->
+    <Color x:Key="HeaderTextColor">#858aba</Color>
+    
+    <!-- Item Background Color -->
+    <Color x:Key="ItemBackgroundColor">#341699</Color>
+
+    <!-- Item Text Color -->
+    <Color x:Key="ItemTextColor">#babed9</Color>
+    
+    <!-- Button Background Color -->
+    <Color x:Key="ButtonBackgroundColor">#341699</Color>
+
+    <!-- Button Text Color -->
+    <Color x:Key="ButtonTextColor">#babed9</Color>
+    
+    <!-- Main Item Label -->
+    <Color x:Key="MainItemTextColor">#babed9</Color>
+
+    <!-- Menu Background Color -->
+    <Color x:Key="MenuBackgroundColor">#fae056</Color>
+
+    <!-- Menu Text Color -->
+    <Color x:Key="MenuTextColor">#fae056</Color>
+
+    <!-- General Progress Bar Color -->
+    <Color x:Key="GeneralBarColor">#1b2e61</Color>
+
+    <!-- General Progress Bar Background Label -->
+    <Color x:Key="GeneralBarBackgroundColor">#2d396b</Color>
+
+    <!-- Stage Progress Bar Color -->
+    <Color x:Key="StageBarColor">#625e87</Color>
+
+    <!-- General Progress Bar Background Color -->
+    <Color x:Key="StageBarBackgroundColor">#9989ad</Color>
+
+    <!-- Background Image Path -->
+    <ImageSource x:Key="BackgroundImageSource">night.png</ImageSource>
+    
+    <!-- Add Button Image Path-->
+    <ImageSource x:Key="AddButtonImageSource">night_add.png</ImageSource>
+
+    <!-- Remove Button Image Path-->
+    <ImageSource x:Key="RemoveButtonImageSource">night_delete.png</ImageSource>
+   
+</ResourceDictionary>

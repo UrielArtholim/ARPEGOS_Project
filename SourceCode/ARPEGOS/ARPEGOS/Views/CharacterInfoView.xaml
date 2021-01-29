@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ARPEGOS.Views.CharacterInfoView"
+             Visual="Material"
+             Title="{Binding CharacterName}"
+             x:Name="CharacterInfoPage"
+             BackgroundImageSource="{x:DynamicResource BackgroundImageSource}">
+    <Grid>
+        <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="{DynamicResource LightSecondaryBackgroundColor}">
+            <ScrollView Grid.Row="0" BackgroundColor="{DynamicResource LightSecondaryBackgroundColor}" VerticalOptions="FillAndExpand">
+                <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                    <FlexLayout Direction="Row" AlignItems="Start" JustifyContent="SpaceEvenly" Wrap="Wrap" BindableLayout.ItemsSource="{Binding SelectableItems}" Padding="5, 20, 5, 0" AlignContent="Start" AlignSelf="Auto"  >
+                        <BindableLayout.ItemTemplate>
+                            <DataTemplate>
+                                <Frame Style="{x:DynamicResource MainItemFrame}">
+                                    <Frame.GestureRecognizers>
+                                        <TapGestureRecognizer Command="{Binding Path=BindingContext.SelectItemCommand, Source={x:Reference CharacterInfoPage}}" CommandParameter="{Binding .}" />
+                                    </Frame.GestureRecognizers>
+                                    <StackLayout Padding="10">
+                                        <Image Source="{Binding ., Converter={StaticResource GetInitialsImageConverter}, ConverterParameter=128}" />
+                                        <Label Text="{Binding .}" TextColor="{DynamicResource ItemTextColor}" HorizontalTextAlignment="Center" LineBreakMode="WordWrap" />
+                                    </StackLayout>
+                                </Frame>
+                            </DataTemplate>
+                        </BindableLayout.ItemTemplate>
+                    </FlexLayout>
+                </StackLayout>
+            </ScrollView>
+        </StackLayout>
+        <Frame Grid.Row="0" BackgroundColor="Black" Opacity="0.7" HasShadow="False" CornerRadius="0" IsVisible="{Binding IsBusy}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <ActivityIndicator Color="White" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" IsRunning="{Binding IsBusy}"
+                               WidthRequest="50" HeightRequest="50" />
+        </Frame>
+    </Grid>
+</ContentPage>

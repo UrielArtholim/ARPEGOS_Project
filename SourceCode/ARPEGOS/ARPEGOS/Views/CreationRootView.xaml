@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:ARPEGOS.Controls"
+             x:Class="ARPEGOS.Views.CreationRootView"
+             Title="{Binding FirstStage}"
+             x:Name="CreationPage"
+             Visual="Material"
+             BackgroundImageSource="{x:DynamicResource BackgroundImageSource}">
+    <ContentPage.Content>
+        <Grid>
+            <StackLayout Spacing="10" Padding="10" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                <ListView x:Name="CreationRootList" ItemsSource="{Binding Data}" HasUnevenRows="True" SelectionMode="None" CachingStrategy="RetainElement">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Frame x:Name="ItemFrame" 
+                                       Padding="15" 
+                                       Margin="10,10,10,0" 
+                                       Style="{x:DynamicResource ItemFrame}">
+                                    <Frame.GestureRecognizers>
+                                        <TapGestureRecognizer Command="{Binding SelectItem}" CommandParameter="{Binding .}"/>
+                                    </Frame.GestureRecognizers>
+                                    <StackLayout Orientation="Horizontal"  
+                                                 HorizontalOptions="FillAndExpand" 
+                                                 VerticalOptions="CenterAndExpand" >
+                                        <RadioButton  Grid.Row="0"
+                                                   Grid.Column="0" 
+                                                   IsChecked="{Binding SelectItem}" 
+                                                   HorizontalOptions="Start" 
+                                                   VerticalOptions="Center" 
+                                                   CheckedChanged="OnCheckedChanged" 
+                                                   BindingContext="{Binding .}"/>
+                                        <Label  Grid.Row="0" 
+                                                Grid.Column="1" 
+                                                Style="{x:DynamicResource ItemLabel}"
+                                                HorizontalOptions="StartAndExpand" 
+                                                HorizontalTextAlignment="Start"
+                                                VerticalOptions="Center" 
+                                                Text="{Binding FormattedName}"/>
+                                        <ImageButton Source="description.png" HeightRequest="25" WidthRequest="25" Aspect="AspectFit"
+                                                     Command="{Binding Source={x:Reference CreationPage}, Path=BindingContext.InfoCommand}"
+                                                     CommandParameter="{Binding .}"
+                                                     BackgroundColor="Transparent"/>
+                                    </StackLayout>
+                                </Frame>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                <Button Text="Siguiente" 
+                        Command="{Binding NextCommand}" 
+                        IsVisible="{Binding Continue}"
+                        Style="{x:DynamicResource NextButton}"/>
+            </StackLayout>
+            <Frame Grid.Row="0" BackgroundColor="Black" Opacity="0.7" HasShadow="False" CornerRadius="0" IsVisible="{Binding IsBusy}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                <ActivityIndicator Color="White" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" IsRunning="{Binding IsBusy}"
+                               WidthRequest="50" HeightRequest="50" />
+            </Frame>
+        </Grid>
+    </ContentPage.Content>
+
+</ContentPage>

@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:controls="clr-namespace:ARPEGOS.Controls"
+             x:Class="ARPEGOS.Views.ValuedView"
+             Visual="Material"
+             Title="{Binding StageName}"
+             x:Name="ValuedChoice"
+             NavigationPage.HasBackButton="False"
+             BackgroundImageSource="{x:DynamicResource BackgroundImageSource}">
+    <ContentPage.Content>
+        <Grid>
+            <StackLayout Spacing="20" Padding="0" Margin="20,20,20,20">
+                <StackLayout Orientation="Vertical">
+                    <Frame Style="{x:DynamicResource ProgressFrame}">
+                        <StackLayout Style="{x:DynamicResource ProgressBarVerticalLayout}">
+                            <StackLayout Style="{x:DynamicResource LimitLayout}" IsVisible="{x:DynamicResource HasGeneralLimit}">
+                                <StackLayout Orientation="Vertical" >
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label Text="Límite general" HorizontalOptions="StartAndExpand" Style="{x:DynamicResource ItemLabel}" />
+                                        <Label Text="{Binding GeneralProgressLabel, StringFormat='{0:F0}'}" Style="{x:DynamicResource ItemLabel}" HorizontalOptions="EndAndExpand" FontSize="Medium"/>
+                                    </StackLayout>
+                                    <ProgressBar x:Name="GeneralProgressBar"  
+                                             Style="{x:DynamicResource GeneralProgressBar}"
+                                             Progress="{Binding GeneralProgress}" 
+                                             IsVisible="{Binding HasGeneralLimit}"/>
+                                </StackLayout>
+                            </StackLayout>
+                            <StackLayout Style="{x:DynamicResource LimitLayout}"  IsVisible="{Binding HasStageLimit}">
+                                <StackLayout Orientation="Vertical">
+                                    <StackLayout Orientation="Horizontal" Spacing="5" HorizontalOptions="FillAndExpand">
+                                        <Label Text="Límite de etapa" HorizontalOptions="StartAndExpand" Style="{x:DynamicResource ItemLabel}"/>
+                                        <Label Text="{Binding StageProgressLabel, StringFormat='{0:F0}'}" HorizontalOptions="EndAndExpand" FontSize="Medium" Style="{x:DynamicResource ItemLabel}"/>
+                                    </StackLayout>
+                                    <ProgressBar x:Name="StageProgressBar" 
+                                             Style="{x:DynamicResource StageProgressBar}"
+                                             Progress="{Binding StageProgress}"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </StackLayout>
+                    </Frame>
+                </StackLayout>
+                
+                <ListView ItemsSource="{Binding Data}" HasUnevenRows="True" SelectionMode="None">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Frame x:Name="ItemFrame"
+                                       VerticalOptions="Start"
+                                       Margin="0,0,0,0"
+                                       Padding="10"
+                                       Style="{x:DynamicResource ItemFrame}">
+                                    <Grid x:Name="SliderItem" 
+                                          HorizontalOptions="FillAndExpand"
+                                          RowDefinitions="1*"
+                                          ColumnDefinitions="*,*,*">
+                                        <Label x:Name="ItemNameLabel"
+                                               Style="{x:DynamicResource ItemLabel}"                                               
+                                               Grid.Row="0"
+                                               Grid.Column="0"
+                                               HorizontalOptions="Start"
+                                               HorizontalTextAlignment="Start"
+                                               Text="{Binding FormattedName}"/>
+                                        <StackLayout Orientation="Vertical" Grid.Row="0" Grid.Column="1" VerticalOptions="Center" HorizontalOptions="Center">
+                                            <Label x:Name="ValueLabel"
+                                               FontSize="Medium"                                               
+                                               HorizontalTextAlignment="Center"
+                                               Style="{x:DynamicResource ItemLabel}"
+                                               Text="{Binding Value, StringFormat='{0:F0}'}"/>
+                                            <Stepper x:Name="ValueEntry"
+                                               BindingContext="{Binding .}"
+                                               VerticalOptions="Center"
+                                               HorizontalOptions="FillAndExpand"
+                                               Maximum="{Binding Maximum}"
+                                               IsEnabled="{Binding IsEnabled}"
+                                               ValueChanged="OnValueChanged"/>
+                                        </StackLayout>                                        
+                                        <ImageButton x:Name="InformationButton" Aspect="AspectFit" VerticalOptions="Center"
+                                               Grid.Row="0"
+                                               Grid.Column="2"
+                                               Source="description.png"
+                                               HeightRequest="30" WidthRequest="30"
+                                               BackgroundColor="Transparent"
+                                               Command="{Binding Source={x:Reference ValuedChoice}, Path=BindingContext.InfoCommand}"
+                                               CommandParameter="{Binding .}"
+                                               IsVisible="{Binding HasDescription}"/>                                        
+                                    </Grid>
+                                </Frame>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                <Button Style="{x:DynamicResource NextButton}"
+                        Command="{Binding NextCommand}"/>
+            </StackLayout>
+            <Frame Grid.Row="0" BackgroundColor="Black" Opacity="0.7" HasShadow="False" CornerRadius="0" IsVisible="{Binding IsBusy}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                <ActivityIndicator Color="White" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" IsRunning="{Binding IsBusy}"
+                               WidthRequest="50" HeightRequest="50" />
+            </Frame>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="ARPEGOS.Views.MainViewMaster"
+             Title="Master"
+             BackgroundColor="{x:DynamicResource ItemBackgroundColor}"
+             Opacity="{x:DynamicResource OpacityValue}">
+    <ScrollView VerticalScrollBarVisibility="Never">
+        <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <BoxView BackgroundColor="{x:DynamicResource TitleBackgroundColor}" HeightRequest="2" />
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Fill" Margin="0,0,0,10" Padding="60,10,0,10">
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding HomeCommand}" NumberOfTapsRequired="1" />
+                </StackLayout.GestureRecognizers>
+            <Label Text=">" TextColor="{x:DynamicResource ItemTextColor}" FontSize="20"  VerticalOptions="Center"/>
+            <Label Margin="10,0,0,0" Text="Inicio" FontSize="20" TextColor="{x:DynamicResource ItemTextColor}" VerticalOptions="Center" />
+            </StackLayout>
+
+            <BoxView BackgroundColor="{x:DynamicResource TitleBackgroundColor}" HeightRequest="2" />
+
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Fill" Margin="0,0,0,10" Padding="60,10,0,10">
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding ShowCharactersCommand}" NumberOfTapsRequired="1" />
+                </StackLayout.GestureRecognizers>
+                <Label Text=">" TextColor="{x:DynamicResource ItemTextColor}" FontSize="20" VerticalOptions="Center"/>
+                <Label Margin="10,0,0,0" Text="Selección de personajes" TextColor="{x:DynamicResource ItemTextColor}" FontSize="20" VerticalOptions="Center" />
+            </StackLayout>
+
+            <BoxView BackgroundColor="{x:DynamicResource TitleBackgroundColor}" HeightRequest="2" />
+
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Fill" Margin="0,0,0,10" Padding="60,10,0,10">
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding SelectThemeCommand}" NumberOfTapsRequired="1" />
+                </StackLayout.GestureRecognizers>
+                <Label Text=">" TextColor="{x:DynamicResource ItemTextColor}" FontSize="20" VerticalOptions="Center"/>
+                <Label Margin="10,0,0,0" Text="Seleccionar Tema" TextColor="{x:DynamicResource ItemTextColor}" FontSize="20" VerticalOptions="Center" />
+            </StackLayout>
+
+            <BoxView BackgroundColor="{x:DynamicResource TitleBackgroundColor}" HeightRequest="2" />
+        </StackLayout>
+  </ScrollView>
+</ContentPage>

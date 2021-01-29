@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:converter="clr-namespace:ARPEGOS.Converter;assembly=ARPEGOS"
+             x:Class="ARPEGOS.App">
+    <Application.Resources>
+        <converter:GetInitialsImageConverter x:Key="GetInitialsImageConverter"/>
+        <converter:GetThemeColorConverter x:Key="GetThemeColorConverter"/>
+        <ResourceDictionary Source="Themes/LightTheme.xaml"/>
+        <Style TargetType="NavigationPage">
+            <Setter Property="BarBackgroundColor" Value="{x:DynamicResource TitleBackgroundColor}"/>
+            <Setter Property="BarTextColor" Value="{x:DynamicResource TitleTextColor}"/>
+        </Style>
+        <Style x:Key="PageBackground" TargetType="ContentPage">
+            <Setter Property="BackgroundImageSource" Value="{x:DynamicResource PageBackgroundColor}" />
+        </Style>
+        <Style x:Key="HeaderFrame" TargetType="Frame">
+            <Setter Property="BorderColor" Value="{x:DynamicResource SeparatorColor}"/>
+            <Setter Property="BackgroundColor" Value="{x:DynamicResource HeaderBackgroundColor}"/>
+            <Setter Property="Opacity" Value="{x:DynamicResource OpacityValue}"/>
+        </Style>
+        <Style x:Key="HeaderLabel" TargetType="Label">
+            <Setter Property="FontSize" Value="Medium"/>
+            <Setter Property="HorizontalTextAlignment" Value="Start"/>
+            <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
+            <Setter Property="VerticalOptions" Value="Center"/>
+            <Setter Property="TextColor" Value="{x:DynamicResource HeaderTextColor}"/>
+        </Style>
+        <Style x:Key="ItemFrame" TargetType="Frame">
+            <Setter Property="BorderColor" Value="{x:DynamicResource SeparatorColor}"/>
+            <Setter Property="BackgroundColor" Value="{x:DynamicResource ItemBackgroundColor}"/>
+            <Setter Property="Opacity" Value="{x:DynamicResource OpacityValue}"/>
+        </Style>
+        <Style x:Key="ItemLabel" TargetType="Label">
+            <Setter Property="FontSize" Value="Medium"/>
+            <Setter Property="VerticalOptions" Value="Center"/>
+            <Setter Property="TextColor" Value="{x:DynamicResource ItemTextColor}"/>
+        </Style>
+        <Style x:Key="Button" TargetType="Button">
+            <Setter Property="BorderColor" Value="{x:DynamicResource SeparatorColor}"/>
+            <Setter Property="BackgroundColor" Value="{x:DynamicResource ButtonBackgroundColor}"/>
+            <Setter Property="TextColor" Value="{x:DynamicResource ButtonTextColor}"/>
+            <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
+            <Setter Property="Opacity" Value="{x:DynamicResource OpacityValue}"/>
+        </Style>
+        <Style x:Key="OutsideLabel" TargetType="Label">
+            <Setter Property="BackgroundColor" Value="{x:DynamicResource ItemBackgroundColor}"/>
+            <Setter Property="TextColor" Value="{x:DynamicResource ItemTextColor}"/>
+            <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
+        </Style>
+        <Style x:Key="Entry" TargetType="Entry">
+            <Setter Property="BackgroundColor" Value="{x:DynamicResource ItemBackgroundColor}"/>
+            <Setter Property="TextColor" Value="{x:DynamicResource ButtonTextColor}"/>
+            <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
+        </Style>
+        <Style x:Key="MainItemFrame" TargetType="Frame">
+            <Setter Property="BorderColor" Value="{x:DynamicResource SeparatorColor}"/>
+            <Setter Property="CornerRadius" Value="5"/>
+            <Setter Property="Padding" Value="5"/>
+            <Setter Property="WidthRequest" Value="110"/>
+            <Setter Property="HeightRequest" Value="110"/>
+            <Setter Property="Margin" Value="0, 0, 0, 20"/>
+            <Setter Property="BackgroundColor" Value="{x:DynamicResource ItemBackgroundColor}"/>
+            <Setter Property="Opacity" Value="{x:DynamicResource OpacityValue}"/>
+        </Style>
+        <Style x:Key="MainItemLabel" TargetType="Label">
+            <Setter Property="FontSize" Value="Small"/>
+            <Setter Property="VerticalOptions" Value="Center"/>
+            <Setter Property="TextColor" Value="{x:DynamicResource ItemTextColor}"/>
+        </Style>
+        <Style x:Key="OptionsFrame" TargetType="Frame">
+            <Setter Property="VerticalOptions" Value="CenterAndExpand"/>
+            <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
+            <Setter Property="Margin" Value="20,10,20,20"/>
+            <Setter Property="HeightRequest" Value="100"/>
+            <Setter Property="BorderColor" Value="{x:DynamicResource SeparatorColor}"/>
+            <Setter Property="BackgroundColor" Value="{x:DynamicResource ItemBackgroundColor}"/>
+            <Setter Property="Opacity" Value="{x:DynamicResource OpacityValue}"/>
+        </Style>
+        <Style x:Key="FrameGrid" TargetType="Grid">
+            <Setter Property="BackgroundColor" Value="White"/>
+            <Setter Property="Padding" Value="3"/>
+            <Setter Property="HorizontalOptions" Value="Center"/>
+            <Setter Property="VerticalOptions" Value="Center"/>
+        </Style>
+        <Style x:Key="OptionsLabel" TargetType="Label">
+            <Setter Property="Grid.Row" Value="0"/>
+            <Setter Property="Grid.Column" Value="0"/>
+            <Setter Property="VerticalOptions" Value="Center"/>
+            <Setter Property="HorizontalOptions" Value="Center"/>
+            <Setter Property="FontSize" Value="Title"/>
+            <Setter Property="TextColor" Value="{x:DynamicResource ItemTextColor}"/>
+        </Style>
+        <Style x:Key="MenuBackground" TargetType="Label">
+            <Setter Property="BackgroundColor" Value="{x:DynamicResource MenuBackgroundColor}"/>
+        </Style>
+        <Style x:Key="MenuLabel" TargetType="Label">
+            <Setter Property="TextColor" Value="{x:DynamicResource MenuTextColor}"/>
+        </Style>
+        <Style x:Key="NextButton" TargetType="Button">
+            <Setter Property="Text" Value="Siguiente"/>
+            <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
+            <Setter Property="VerticalOptions" Value="EndAndExpand"/>
+            <Setter Property="HeightRequest" Value="50"/>
+            <Setter Property="BackgroundColor" Value="{DynamicResource ButtonBackgroundColor}" />
+            <Setter Property="TextColor" Value="{DynamicResource ButtonTextColor}"/>
+        </Style>
+        <Style x:Key="FlexLayout" TargetType="FlexLayout">
+            <Setter Property="Direction" Value="Row"/>
+            <Setter Property="AlignItems" Value="Start"/>
+            <Setter Property="JustifyContent" Value="SpaceEvenly"/>
+            <Setter Property="Wrap" Value="Wrap"/>
+            <Setter Property="Padding" Value="5, 20, 5, 0"/>
+            <Setter Property="AlignContent" Value="Start"/>
+            <Setter Property="AlignSelf" Value="Auto"/>
+        </Style>
+        <Style x:Key="LimitLayout" TargetType="StackLayout">
+            <Setter Property="Orientation" Value="Vertical"/>
+            <Setter Property="Spacing" Value="0"/>
+            <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
+            <Setter Property="VerticalOptions" Value="StartAndExpand"/>
+            <Setter Property="IsVisible" Value="{Binding HasGeneralLimit}"/>
+        </Style>
+        <Style x:Key="ProgressFrame" TargetType="Frame">
+            <Setter Property="VerticalOptions" Value="CenterAndExpand"/>
+            <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
+            <Setter Property="BorderColor" Value="{x:DynamicResource SeparatorColor}"/>
+            <Setter Property="BackgroundColor" Value="{x:DynamicResource ItemBackgroundColor}"/>
+            <Setter Property="Opacity" Value="{x:DynamicResource OpacityValue}"/>
+        </Style>
+        <Style x:Key="GeneralProgressBar" TargetType="ProgressBar">
+            <Setter Property="HeightRequest" Value="10"/>
+            <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
+            <Setter Property="ProgressColor" Value="{x:DynamicResource GeneralBarColor}"/>
+            <Setter Property="BackgroundColor" Value="{x:DynamicResource GeneralBarBackgroundColor}"/>
+        </Style>
+        <Style x:Key="StageProgressBar" TargetType="ProgressBar">
+            <Setter Property="HeightRequest" Value="10"/>
+            <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
+            <Setter Property="ProgressColor" Value="{x:DynamicResource StageBarColor}"/>
+            <Setter Property="BackgroundColor" Value="{x:DynamicResource StageBarBackgroundColor}"/>
+        </Style>
+        <Style x:Key="ProgressBarVerticalLayout" TargetType="StackLayout">
+            <Setter Property="Orientation" Value="Vertical"/>
+            <Setter Property="Spacing" Value="20"/>
+        </Style>
+    </Application.Resources>
+</Application>
