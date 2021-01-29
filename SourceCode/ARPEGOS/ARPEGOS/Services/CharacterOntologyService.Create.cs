@@ -317,31 +317,28 @@ namespace ARPEGOS.Services
             GameSuperProperties.Reverse();
             elementString = $"{this.Context}{elementName}";
             var CharacterDatatypeProperty = new RDFOntologyDatatypeProperty(new RDFResource(elementString));
-            if (!CheckDatatypeProperty(elementString))
+            if(GameDatatypeProperty.Domain != null)
             {
-                if(GameDatatypeProperty.Domain != null)
+                RDFOntologyClass DomainClass;
+                var DomainString = GameDatatypeProperty.Domain.ToString();
+                var DomainName = DomainString.Split('#').Last();
+                var CharacterDomainString = $"{this.Context}{DomainName}";
+                if (!CheckClass(CharacterDomainString))
                 {
-                    RDFOntologyClass DomainClass;
-                    var DomainString = GameDatatypeProperty.Domain.ToString();
-                    var DomainName = DomainString.Split('#').Last();
-                    var CharacterDomainString = $"{this.Context}{DomainName}";
-                    if (!CheckClass(CharacterDomainString))
-                    {
-                        DomainClass = CreateClass(DomainName);
-                        this.Save();
-                    }
-                    else
-                        DomainClass = CharacterClassModel.SelectClass(CharacterDomainString);
-                    CharacterDatatypeProperty.SetDomain(DomainClass);
+                    DomainClass = CreateClass(DomainName);
+                    this.Save();
                 }
-                if (GameDatatypeProperty.Range != null)
-                {
-                    var RangeName = GameDatatypeProperty.Range.ToString().Split('#').Last();
-                    CharacterDatatypeProperty.SetRange(CheckClassFromDatatype(CheckDatatypeFromString(RangeName)));
-                }
-                CharacterDatatypeProperty.SetFunctional(GameDatatypeProperty.Functional);
-                CharacterPropertyModel.AddProperty(CharacterDatatypeProperty);
+                else
+                    DomainClass = CharacterClassModel.SelectClass(CharacterDomainString);
+                CharacterDatatypeProperty.SetDomain(DomainClass);
             }
+            if (GameDatatypeProperty.Range != null)
+            {
+                var RangeName = GameDatatypeProperty.Range.ToString().Split('#').Last();
+                CharacterDatatypeProperty.SetRange(CheckClassFromDatatype(CheckDatatypeFromString(RangeName)));
+            }
+            CharacterDatatypeProperty.SetFunctional(GameDatatypeProperty.Functional);
+            CharacterPropertyModel.AddProperty(CharacterDatatypeProperty);
             RDFOntologyDatatypeProperty CharacterPreviousDatatypeProperty = null;
             foreach (var item in GameSuperProperties)
             {

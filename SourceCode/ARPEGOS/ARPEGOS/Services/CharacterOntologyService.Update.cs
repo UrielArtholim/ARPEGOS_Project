@@ -14,9 +14,8 @@ namespace ARPEGOS.Services
         /// </summary>
         /// <param name="stage">Element which contains the limit</param>
         /// <param name="update">Updated value of the limit</param>
-        internal bool UpdateAvailablePoints(string stageString, float? update)
-        {
-            
+        /*internal bool UpdateAvailablePoints(string stageString, float? update)
+        {            
             var stageName = stageString.Split('#').Last();
             var hasUpdated = false;
             var AvailableWords = new List<string>()
@@ -57,7 +56,7 @@ namespace ARPEGOS.Services
             }
             this.Save();
             return hasUpdated;
-        }
+        }*/
 
         /// <summary>
         /// Updates a datatype assertion in character given the predicate and the new value.
@@ -116,10 +115,10 @@ namespace ARPEGOS.Services
             if (hasPredicate == true)
             {
                 predicate = this.Ontology.Model.PropertyModel.SelectProperty(predicateString) as RDFOntologyObjectProperty;
-                var CharacterPredicateAssertions = this.Ontology.Data.Relations.Assertions.SelectEntriesByPredicate(predicate).SingleOrDefault();
-                if(CharacterPredicateAssertions != null)
+                var CharacterPredicateAssertionsEntries = this.Ontology.Data.Relations.Assertions.SelectEntriesByPredicate(predicate);
+                if(CharacterPredicateAssertionsEntries.EntriesCount > 0)
                 {
-                    subject = CharacterPredicateAssertions.TaxonomySubject.ToString();
+                    subject = CharacterPredicateAssertionsEntries.First().TaxonomySubject.ToString();
                     RemoveObjectProperty(predicateString);
                     this.Save();
                 }
@@ -138,6 +137,7 @@ namespace ARPEGOS.Services
             this.Save();
         }
 
+        /*
         internal bool UpdateLimit(string elementString, float? update)
         {
             
@@ -186,6 +186,6 @@ namespace ARPEGOS.Services
             }
             this.Save();
             return hasUpdated;
-        }
+        }*/
     }
 }
