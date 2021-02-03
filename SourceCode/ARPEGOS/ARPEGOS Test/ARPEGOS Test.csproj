@@ -6,4 +6,8 @@
     <RootNamespace>ARPEGOS_Test</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\ARPEGOS\ARPEGOS.csproj" />
+  </ItemGroup>
+
 </Project>
