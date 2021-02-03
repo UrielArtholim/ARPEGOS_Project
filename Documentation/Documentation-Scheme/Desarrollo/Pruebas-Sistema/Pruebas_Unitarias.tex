@@ -5,5 +5,102 @@
 % Section 8.1: Introducción %
 \section{Pruebas Unitarias}
 \subsection{Proyecto ARPEGOS Unit Test}
-Para poder realizar pruebas utilizando \textit{Nunit}, es necesario añadir un nuevo proyecto a la solución, al cual hemos llamado
-\textit{ARPEGOS Unit Test}. Este proyecto  
+Para poder realizar pruebas utilizando \textit{Nunit}, es necesario añadir un nuevo proyecto a la 
+solución, al cual hemos llamado \textit{ARPEGOS Unit Test}. Este proyecto se divide en dos partes 
+claramente diferenciadas: la clase \textit{Setup}, que contiene la configuración necesaria para la 
+ejecución de las pruebas, y las clases \textit{CharacterOntologyServiceTests} y 
+\textit{OntologyServiceTests}, en las que están definidas las pruebas. Todas las funciones de prueba están 
+nombradas de la siguiente manera:\medskip
+
+\lbrack\textit{nombre\textunderscore función}\rbrack\textbf{\textunderscore Test}
+
+
+\subsection{La clase \textit{Setup}}
+Esta clase está compuesta por un conjunto de atributos privados, cuyo valor puede apreciarse 
+mediante el uso de métodos observadores, y tres funciones: \textit{SetBaseFolder()},  
+\textit{SetDefaultBaseFolder()} y \textit{Init()}. Las dos primeras reconfiguran las rutas de 
+prueba, de manera que las pruebas puedan ejecutarse en una ruta local en vez de en un 
+dispositivo Android. La función restante, es la que inicializa los valores de los distintos 
+atributos de la clase, que pueden ser requeridos por algunas pruebas para su correcto funcionamiento.
+
+\subsection{La clase \textit{OntologyServiceTests}}
+La clase \textit{OntologyServiceTests} contiene las pruebas que comprueban la correcta ejecución 
+de los métodos y funciones de la clase \textit{OntologyService}, que permiten 
+crear, eliminar y cargar ontologías en la aplicación. Sus nombres y funciones quedan descritos en 
+la tabla \ref{OntologyServiceTests}.
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|l|l|}
+        \hline
+        \thead{\textit{\textbf{Nombre de la función}}} &\thead{\textit{\textbf{Descripción}}} \\ \hline \hline
+        \makecell[l]{\textit{LoadGame\textunderscore Test}} & \makecell[l]{Comprueba que la ontología del juego indicado\\ se carga correctamente.}\\ \hline
+        \makecell[l]{\textit{LoadCharacter\textunderscore Test}} & \makecell[l]{Comprueba que la ontología del personaje indicado\\ se carga correctamente.}\\ \hline
+        \makecell[l]{\textit{CreateCharacter\textunderscore Test}} & \makecell[l]{Comprueba que se genera un nuevo personaje\\ correctamente}\\ \hline
+        \makecell[l]{\textit{DeleteCharacter\textunderscore Test}} & \makecell[l]{Comprueba que se elimina el personaje indicado\\ correctamente. }\\ \hline 
+    \end{tabular}\medskip
+    \caption{Pruebas unitarias. Clase \textit{OntologyServiceTests}}
+    \label{OntologyServiceTests}
+\end{table}
+\justify
+\subsection{La clase \textit{CharacterOntologyServiceTests}}
+Las pruebas contenidas en esta clase prueban que todas las funciones relativas a la lectura o escritura 
+de ontologías de personaje cumplen su objetivo correctamente. Dichas funciones quedan descritas en 
+la tabla \ref*{CharacterOntologyServiceTests}.
+\centering
+\begin{longtable}{|l|l|}
+    \hline
+    \thead{\textit{\textbf{Nombre de la función}}} &\thead{\textit{\textbf{Descripción}}} \\ \hline \hline
+    \endfirsthead
+    
+    \hline 
+    \thead{\textit{\textbf{Nombre de la función}}} &\thead{\textit{\textbf{Descripción}}} \\ \hline \hline
+    \endhead
+    
+    \hline
+    \addlinespace \addlinespace
+    \multicolumn{2}{c}{Sigue en la página siguiente.}
+    \endfoot
+    
+    \addlinespace \addlinespace
+    \caption{Pruebas unitarias. Clase \textit{OntologyServiceTests}}
+    \label{CharacterOntologyServiceTests}
+    \endlastfoot
+    
+    \makecell[l]{\textit{AddObjectProperty\textunderscore Test}} & \makecell[l]{Comprueba que se añade una propiedad de\\ objeto correctamente.}\\ \hline
+    \makecell[l]{\textit{AddDatatypeProperty\textunderscore Test}} & \makecell[l]{Comprueba que se añade una propiedad de\\ datos correctamente.}\\ \hline
+    \makecell[l]{\textit{AddClassification\textunderscore Test}} & \makecell[l]{Comprueba que se clasifica una propiedad \\ correctamente.}\\ \hline
+    \makecell[l]{\textit{CheckLiteral\textunderscore Test}} & \makecell[l]{Comprueba que se valida un literal \\ correctamente.}\\ \hline
+    \makecell[l]{\textit{CheckFact\textunderscore Test}} & \makecell[l]{Comprueba que se valida un hecho \\ correctamente.}\\ \hline
+    \makecell[l]{\textit{CheckClass\textunderscore Test}} & \makecell[l]{Comprueba que se valida una clase \\ correctamente.}\\ \hline
+    \makecell[l]{\textit{CheckObjectProperty\textunderscore Test}} & \makecell[l]{Comprueba que se valida una propiedad\\ de objeto correctamente.}\\ \hline
+    \makecell[l]{\textit{CheckDatatypeProperty\textunderscore Test}} & \makecell[l]{Comprueba que se valida una propiedad\\ de datos correctamente.}\\ \hline
+    \makecell[l]{\textit{CheckIndividual\textunderscore Test}} & \makecell[l]{Comprueba que se valida un individuo \\ correctamente.}\\ \hline
+    \makecell[l]{\textit{CheckGeneralCost\textunderscore Test}} & \makecell[l]{Comprueba que se obtiene un coste\\ general correctamente.}\\ \hline
+    \makecell[l]{\textit{CheckValueListInfo\textunderscore Test}} & \makecell[l]{Comprueba que se obtiene una lista\\ informativa de valores correctamente.}\\ \hline
+    \makecell[l]{\textit{CheckAvailableOptions\textunderscore Test}} & \makecell[l]{Comprueba que se obtiene una lista\\ de opciones disponibles correctamente.}\\ \hline
+    \makecell[l]{\textit{GetPropertyVisualizationPosition\textunderscore Test}} & \makecell[l]{Comprueba que se obtiene una posición\\ de visualización correctamente.}\\ \hline
+    \makecell[l]{\textit{GetCharacterProperties\textunderscore Test}} & \makecell[l]{Comprueba que se obtiene la lista\\ de propiedades del personaje correctamente.}\\ \hline
+    \makecell[l]{\textit{GetCharacterSkills\textunderscore Test}} & \makecell[l]{Comprueba que se obtiene la lista\\ de habilidades del personaje correctamente.}\\ \hline
+    \makecell[l]{\textit{GetSkillValue\textunderscore Test}} & \makecell[l]{Comprueba que se obtiene el valor\\ de una habilidad correctamente.}\\ \hline
+    \makecell[l]{\textit{GetElementClass\textunderscore Test}} & \makecell[l]{Comprueba que se obtiene la clase\\ de un elemento correctamente.}\\ \hline
+    \makecell[l]{\textit{GetElementDescription\textunderscore Test}} & \makecell[l]{Comprueba que se obtiene la descripción\\ de un elemento correctamente.}\\ \hline
+    \makecell[l]{\textit{GetIndividuals\textunderscore Test}} & \makecell[l]{Comprueba que se obtiene la lista\\ de elementos de una clase correctamente.}\\ \hline
+    \makecell[l]{\textit{GetIndividualsGrouped\textunderscore Test}} & \makecell[l]{Comprueba que se obtienen la lista\\ de elementos agrupados de una clase\\ correctamente }\\ \hline
+    \makecell[l]{\textit{GetAvailablePoints\textunderscore Test}} & \makecell[l]{Comprueba que se obtienen los puntos\\ disponibles para gastar correctamente.}\\ \hline
+    \makecell[l]{\textit{GetLimit\textunderscore Test}} & \makecell[l]{Comprueba que se obtiene la propiedad\\ límite de una etapa de creación\\ correctamente.}\\ \hline
+    \makecell[l]{\textit{GetStep\textunderscore Test}} & \makecell[l]{Comprueba que se obtiene el coste\\ unitario de una habilidad correctamente.}\\ \hline
+    \makecell[l]{\textit{GetLimitValue\textunderscore Test}} & \makecell[l]{Comprueba que se obtiene el valor\\ de una propiedad límite correctamente.}\\ \hline
+    \makecell[l]{\textit{GetObjectPropertyAssociated\textunderscore Test}} & \makecell[l]{Comprueba que se obtiene la propiedad\\ de objeto asociada a un elemento\\ correctamente.}\\ \hline
+    \makecell[l]{\textit{GetOrderedSubstages\textunderscore Test}} & \makecell[l]{Comprueba que se pbtiene una lista\\ ordenada de etapas correctamente.}\\ \hline
+    \makecell[l]{\textit{GetParentClasses\textunderscore Test}} & \makecell[l]{Comprueba que se obtiene una lista\\ de clases superiores en la jerarquía\\ correctamente.}\\ \hline
+    \makecell[l]{\textit{GetGeneralCost\textunderscore Test}} & \makecell[l]{Comprueba que se obtiene el coste\\ general de una etapa correctamente.}\\ \hline
+    \makecell[l]{\textit{GetPartialCost\textunderscore Test}} & \makecell[l]{Comprueba que se obtiene el coste\\ parcial de una etapa correctamente.}\\ \hline
+    \makecell[l]{\textit{GetSubClasses\textunderscore Test}} & \makecell[l]{Comprueba que se obtiene una lista\\ de subclases correctamente.}\\ \hline
+    \makecell[l]{\textit{GetDatatypeUri\textunderscore Test}} & \makecell[l]{Comprueba que se obtiene la URI\\ de un tipo de dato correctamente.}\\ \hline
+    \makecell[l]{\textit{GetString\textunderscore Test}} & \makecell[l]{Comprueba que se obtiene la URI\\ de un elemento correctamente.}\\ \hline
+    \makecell[l]{\textit{GetValue\textunderscore Test}} & \makecell[l]{Comprueba que se obtiene el valor\\ de un elemento dada su fórmula correctamente.}\\ \hline
+    \makecell[l]{\textit{UpdateObjectAssertion\textunderscore Test}} & \makecell[l]{Comprueba que se actualiza una aserción\\ de objeto correctamente.}\\ \hline
+    \makecell[l]{\textit{UpdateDatatypeAssertion\textunderscore Test}} & \makecell[l]{Comprueba que se actualiza una aserción\\ de datos correctamente.}\\ \hline
+\end{longtable}
+\justify

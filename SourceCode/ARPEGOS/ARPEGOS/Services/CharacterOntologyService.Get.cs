@@ -113,7 +113,11 @@ namespace ARPEGOS.Services
             return skills;
         }//MODIFIED
 
-
+        /// <summary>
+        /// Returns the numeric value associated to the skill given
+        /// </summary>
+        /// <param name="skillName">Name of the skill</param>
+        /// <returns></returns>
         public int GetSkillValue (string skillName)
         {
             var game = DependencyHelper.CurrentContext.CurrentGame;
@@ -1226,7 +1230,6 @@ namespace ARPEGOS.Services
         /// <param name="applyOnCharacter">Check in character file</param>
         /// <returns></returns>
         /// 
-
         public string GetString(string elementName, bool applyToCharacter = false)
         {
             RDFOntology GameOntology = DependencyHelper.CurrentContext.CurrentGame.Ontology;
@@ -1333,6 +1336,14 @@ namespace ARPEGOS.Services
             return elementString;
         }
 
+        /// <summary>
+        /// Returns the value of item formula, given the item, the user imput (if needed) and its membership to the character.
+        /// </summary>
+        /// <param name="valueDefinition"></param>
+        /// <param name="itemName"></param>
+        /// <param name="User_Input"></param>
+        /// <param name="applyOnCharacter"></param>
+        /// <returns></returns>
         public float GetValue (string valueDefinition, string itemName = null, string User_Input = null, bool applyOnCharacter = false)
         {            
             // 0 - Select current ontology using applyOnCharacter (true: characterOntology, false: gameOntology)

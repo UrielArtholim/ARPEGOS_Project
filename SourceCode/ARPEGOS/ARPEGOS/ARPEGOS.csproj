@@ -12,13 +12,18 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="DefaultGames\Nanatsu No Taizai\**" />
+    <EmbeddedResource Remove="DefaultGames\Nanatsu No Taizai\**" />
+    <None Remove="DefaultGames\Nanatsu No Taizai\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Remove="DefaultGames\Anima Beyond Fantasy\characters\Ctuchik.owl" />
     <None Remove="DefaultGames\Anima Beyond Fantasy\characters\Test.owl" />
     <None Remove="DefaultGames\Anima Beyond Fantasy\gamefiles\Core Exxet Safe.owl" />
     <None Remove="DefaultGames\Anima Beyond Fantasy\Gamefiles\Core Exxet.owl" />
     <None Remove="DefaultGames\Anima Beyond Fantasy\Nanatsu No Taizai.owl" />
     <None Remove="DefaultGames\Core Exxet.owl" />
-    <None Remove="DefaultGames\Nanatsu No Taizai\gamefiles\Nanatsu No Taizai.owl" />
     <None Remove="Models\Stage.cs~RFdcc0b.TMP" />
     <None Remove="Resources\Fonts\OldLondon.ttf" />
     <None Remove="Resources\Fonts\OldLondonAlternate.ttf" />
@@ -29,9 +34,6 @@
   <ItemGroup>
     <EmbeddedResource Include="DefaultGames\Anima Beyond Fantasy\characters\Test.owl" />
     <EmbeddedResource Include="DefaultGames\Anima Beyond Fantasy\Gamefiles\Core Exxet.owl" />
-    <EmbeddedResource Include="DefaultGames\Nanatsu No Taizai\gamefiles\Nanatsu No Taizai.owl">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </EmbeddedResource>
     <EmbeddedResource Include="Resources\Fonts\OldLondon.ttf" />
     <EmbeddedResource Include="Resources\Fonts\OldLondonAlternate.ttf" />
     <EmbeddedResource Include="Resources\Fonts\Olondon_.otf" />
@@ -56,10 +58,6 @@
     <PackageReference Include="Xamarin.Forms" Version="4.8.0.1821" />
     <PackageReference Include="Xamarin.Forms.Visual.Material" Version="4.8.0.1687" />
     <PackageReference Include="Xamarin.Plugin.FilePicker" Version="2.1.41" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="DefaultGames\Nanatsu No Taizai\characters\" />
   </ItemGroup>
 
   <ItemGroup>
