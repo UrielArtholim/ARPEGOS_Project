@@ -44,8 +44,6 @@
                         <DataTemplate>
                             <ViewCell>
                                 <Frame x:Name="ItemFrame" 
-                                       Padding="15" 
-                                       Margin="10,10,10,0" 
                                        Style="{x:DynamicResource ItemFrame}">
                                     <Frame.GestureRecognizers>
                                         <TapGestureRecognizer Command="{Binding SelectItem}" CommandParameter="{Binding .}"/>

@@ -248,24 +248,22 @@ namespace ARPEGOS.Services
                 currentElementString = this.GetString(elementString, applyOnCharacter);                
 
             var DataModel = CurrentOntology.Data;
-            var currentElementClass = CurrentOntology.Model.ClassModel.SelectClass(currentElementString);
+            var currentElementClass = CurrentOntology.Model.ClassModel.SelectClass(currentElementString) as RDFOntologyClass;
             if(currentElementClass != null)
             {
-                var elementClassType = DataModel.Relations.ClassType.SelectEntriesBySubject(currentElementClass).Single();
-                var elementClassString = elementClassType.TaxonomyObject.ToString();
-                var elementClassResource = this.Ontology.Model.ClassModel.SelectClass(elementClassString);
-                var elementClassDescription = this.Ontology.Model.ClassModel.Annotations.Comment.SelectEntriesBySubject(elementClassResource).Single().TaxonomyObject.ToString().Split('^').First();
+                var elementClassTypeAssertion = CurrentOntology.Model.ClassModel.Relations.SubClassOf.SelectEntriesBySubject(currentElementClass).Single();
+                var elementClassString = elementClassTypeAssertion.TaxonomyObject.ToString();
+                var elementClassDescription = this.GetElementDescription(elementClassString, applyOnCharacter);
                 elementClass = new Item(elementClassString, elementClassDescription);
             }
             else
             {
-                var currentElementFact = DataModel.SelectFact(currentElementString);
+                var currentElementFact = CurrentOntology.Data.SelectFact(currentElementString);
                 if(currentElementFact != null)
                 {
-                    var elementClassType = DataModel.Relations.ClassType.SelectEntriesBySubject(currentElementFact).Single();
-                    var elementClassString = elementClassType.TaxonomyObject.ToString();
-                    var elementClassResource = this.Ontology.Model.ClassModel.SelectClass(elementClassString);
-                    var elementClassDescription = this.GetElementDescription(elementClassString);
+                    var elementClassTypeAssertion = CurrentOntology.Data.Relations.ClassType.SelectEntriesBySubject(currentElementFact).Single();
+                    var elementClassString = elementClassTypeAssertion.TaxonomyObject.ToString();
+                    var elementClassDescription = this.GetElementDescription(elementClassString, applyOnCharacter);
                     elementClass = new Item(elementClassString, elementClassDescription);
                 }
             }

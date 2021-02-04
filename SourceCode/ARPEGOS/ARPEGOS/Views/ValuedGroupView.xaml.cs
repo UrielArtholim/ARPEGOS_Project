@@ -44,7 +44,7 @@ namespace ARPEGOS.Views
         async void OnValueChanged(object sender, ValueChangedEventArgs e)
         {
             var viewModel = this.BindingContext as ValuedGroupViewModel;
-            await Device.InvokeOnMainThreadAsync(() => viewModel.IsBusy = true);
+            //await Device.InvokeOnMainThreadAsync(() => viewModel.IsBusy = true);
             var entry = sender as Stepper;
             var item = entry.BindingContext as Item;
             var elementGroup = viewModel.Data.Where(group => group.Elements.Contains(item)).Single();
@@ -109,7 +109,7 @@ namespace ARPEGOS.Views
                 }
             }
             element.Value = item.Value;
-            await Device.InvokeOnMainThreadAsync(() => viewModel.IsBusy = false);
+            //await Device.InvokeOnMainThreadAsync(() => viewModel.IsBusy = false);
         }
     }
 }

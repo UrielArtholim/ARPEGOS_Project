@@ -27,6 +27,8 @@
             <Setter Property="TextColor" Value="{x:DynamicResource HeaderTextColor}"/>
         </Style>
         <Style x:Key="ItemFrame" TargetType="Frame">
+            <Setter Property="Padding" Value="15"/>
+            <Setter Property="Margin" Value="10,10,10,0"/>
             <Setter Property="BorderColor" Value="{x:DynamicResource SeparatorColor}"/>
             <Setter Property="BackgroundColor" Value="{x:DynamicResource ItemBackgroundColor}"/>
             <Setter Property="Opacity" Value="{x:DynamicResource OpacityValue}"/>

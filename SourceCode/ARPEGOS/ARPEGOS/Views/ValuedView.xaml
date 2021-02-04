@@ -46,9 +46,6 @@
                         <DataTemplate>
                             <ViewCell>
                                 <Frame x:Name="ItemFrame"
-                                       VerticalOptions="Start"
-                                       Margin="0,0,0,0"
-                                       Padding="10"
                                        Style="{x:DynamicResource ItemFrame}">
                                     <Grid x:Name="SliderItem" 
                                           HorizontalOptions="FillAndExpand"
