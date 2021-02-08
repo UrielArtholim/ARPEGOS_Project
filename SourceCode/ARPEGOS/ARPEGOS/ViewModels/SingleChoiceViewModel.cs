@@ -7,6 +7,7 @@ using ARPEGOS.Views;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,7 +23,6 @@ namespace ARPEGOS.ViewModels
         private Stage currentStage;
         private string stageString;
         private string stageName;
-        private MainView mainPage = Application.Current.MainPage as MainView;
 
         public string StageName
         {
@@ -100,7 +100,6 @@ namespace ARPEGOS.ViewModels
         {
             await Device.InvokeOnMainThreadAsync(() => this.IsBusy = true);
             var character = DependencyHelper.CurrentContext.CurrentCharacter;
-            var currentItem = this.SelectedItem;
             var ItemFullShortName = this.SelectedItem.FullName.Split('#').Last();
             var predicateString = character.GetObjectPropertyAssociated(this.stageString);
             var predicateName = predicateString.Split('#').Last();
