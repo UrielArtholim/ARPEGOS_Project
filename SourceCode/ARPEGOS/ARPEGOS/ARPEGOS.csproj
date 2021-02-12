@@ -18,9 +18,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="DefaultGames\Anima Beyond Fantasy\Anima Beyond Fantasy.jpg" />
     <None Remove="DefaultGames\Anima Beyond Fantasy\characters\Ctuchik.owl" />
     <None Remove="DefaultGames\Anima Beyond Fantasy\characters\Test.owl" />
     <None Remove="DefaultGames\Anima Beyond Fantasy\gamefiles\Core Exxet Safe.owl" />
+    <None Remove="DefaultGames\Anima Beyond Fantasy\Gamefiles\Core Exxet.jpg" />
     <None Remove="DefaultGames\Anima Beyond Fantasy\Gamefiles\Core Exxet.owl" />
     <None Remove="DefaultGames\Anima Beyond Fantasy\Nanatsu No Taizai.owl" />
     <None Remove="DefaultGames\Core Exxet.owl" />
@@ -32,7 +34,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Include="DefaultGames\Anima Beyond Fantasy\Anima Beyond Fantasy.jpg" />
     <EmbeddedResource Include="DefaultGames\Anima Beyond Fantasy\characters\Test.owl" />
+    <EmbeddedResource Include="DefaultGames\Anima Beyond Fantasy\Gamefiles\Core Exxet.jpg" />
     <EmbeddedResource Include="DefaultGames\Anima Beyond Fantasy\Gamefiles\Core Exxet.owl" />
     <EmbeddedResource Include="Resources\Fonts\OldLondon.ttf" />
     <EmbeddedResource Include="Resources\Fonts\OldLondonAlternate.ttf" />
@@ -62,6 +66,7 @@
 
   <ItemGroup>
     <Resource Include="DefaultGames\Anima Beyond Fantasy\characters\Ctuchik.owl" />
+    <Resource Include="DefaultGames\Anima Beyond Fantasy\Gamefiles\Core Exxet.jpg" />
     <Resource Include="Resources\Fonts\Olondona.otf" />
   </ItemGroup>
 

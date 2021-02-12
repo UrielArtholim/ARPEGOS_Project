@@ -24,12 +24,7 @@
         private SelectionStatus _selectionStatus,_previousStatus;
         private string selectedGame;
         private IDialogService dialogService;
-        private bool _cancelEnabled;
-        public bool CancelEnabled
-        { 
-            get => _cancelEnabled;
-            set => this.SetProperty(ref this._cancelEnabled, value);
-        }
+        private bool deleteMode;
 
         public ICommand AddButtonCommand { get; set; }
         public ICommand ClearCheckCommand { get; }
@@ -44,6 +39,12 @@
         {
             get => this.selectedGame;
             set => this.SetProperty(ref this.selectedGame, value);
+        }
+
+        public bool DeleteMode
+        {
+            get => this.deleteMode;
+            set => this.SetProperty(ref this.deleteMode, value);
         }
 
         public ObservableCollection<string> SelectableElements { get; }
@@ -74,39 +75,44 @@
             {
                 return this.CurrentStatus switch
                     {
-                        SelectionStatus.SelectingGame => "Selecciona el juego",
-                        SelectionStatus.DeletingGame => "Selecciona el juego",
-                        SelectionStatus.SelectingCharacter => "Selecciona el personaje",
-                        SelectionStatus.DeletingCharacter => "Selecciona el personaje",
-                        _ => "Carga completada!"
+                        SelectionStatus.SelectingGame => "Inicio",
+                        SelectionStatus.DeletingGame => "Inicio",
+                        SelectionStatus.SelectingCharacter => "Selección de Personaje",
+                        SelectionStatus.DeletingCharacter => "Selección de Personaje",
+                        _ => "Unknown Status"
                     };
             }
         }
+
+
         public MainViewModel ()
         {
+            this.DeleteMode = false;
             this.SelectableElements = new ObservableCollection<string>();
             this.SelectItemCommand = new Command<string>(s => Task.Factory.StartNew(async () => await this.SelectItem(s)));
             this.CurrentStatus = SelectionStatus.SelectingGame;
             this.PreviousStatus = this.CurrentStatus;
             this.dialogService = DependencyHelper.CurrentContext.Dialog;
-            this.CancelEnabled = false;
             this.AddButtonCommand = new Command(async() => 
             {
                 switch(this.CurrentStatus)
                 {
                     case SelectionStatus.SelectingGame:
+                        DeleteMode = false;
                         await Device.InvokeOnMainThreadAsync(() => this.IsBusy = true);
                         await App.Navigation.PushAsync(new AddGameView());
                         await Device.InvokeOnMainThreadAsync(() => this.IsBusy = false);
                         this.Load(this.CurrentStatus);
                         break;
                     case SelectionStatus.DeletingGame:
+                        DeleteMode = false;
                         await Device.InvokeOnMainThreadAsync(() => this.IsBusy = true);
                         await App.Navigation.PushAsync(new AddGameView());
                         await Device.InvokeOnMainThreadAsync(() => this.IsBusy = false);
                         this.Load(this.CurrentStatus);
                         break;
                     case SelectionStatus.SelectingCharacter:
+                        DeleteMode = false;
                         var item = await this.dialogService.DisplayTextPrompt("Crear nuevo personaje", "Introduce el nombre:", "Crear");
                         if (!string.IsNullOrWhiteSpace(item))
                         {
@@ -119,6 +125,7 @@
                         this.Load(this.CurrentStatus);
                         break;
                     case SelectionStatus.DeletingCharacter:
+                        DeleteMode = false;
                         item = await this.dialogService.DisplayTextPrompt("Crear nuevo personaje", "Introduce el nombre:", "Crear");
                         if (!string.IsNullOrWhiteSpace(item))
                         {
@@ -146,11 +153,6 @@
                 this.Load(CurrentStatus); 
             });
 
-            this.CancelButtonCommand = new Command(() =>
-            { 
-                this.CurrentStatus = this.PreviousStatus;  
-                this.Load(CurrentStatus); 
-            });
 
             this.LoadNewStateCommand = new Command<SelectionStatus>(status => {this.PreviousStatus = this.CurrentStatus; this.CurrentStatus = status;  this.Load(status); });
 
@@ -218,7 +220,6 @@
                     break;
 
                 case SelectionStatus.DeletingGame:
-                    this.CancelEnabled = true;
                     var confirmation = await this.dialogService.DisplayAcceptableAlert("Advertencia", $"¿Desea eliminar {item}? Una vez hecho no podrá ser recuperado", "Confirmar", "Cancelar");
                     if (confirmation == true)
                         await Device.InvokeOnMainThreadAsync(()=> FileService.DeleteGame(this.selectedGame));
@@ -226,7 +227,6 @@
                     break;                    
 
                 case SelectionStatus.DeletingCharacter:
-                    this.CancelEnabled = true;
                     confirmation = await this.dialogService.DisplayAcceptableAlert("Advertencia", $"¿Desea eliminar {item}? Una vez hecho no podrá ser recuperado", "Confirmar", "Cancelar");
                     if(confirmation == true)
                         await Device.InvokeOnMainThreadAsync(() => FileService.DeleteCharacter(item, this.selectedGame));                    
@@ -251,33 +251,32 @@
             switch (status)
             {
                 case SelectionStatus.AddGame:
-                    this.CancelEnabled = false;
+                    DeleteMode = false;
                     items = FileService.ListGames();
                     break;
                 case SelectionStatus.SelectingGame:
-                    this.CancelEnabled = false;
+                    DeleteMode = false;
                     items = FileService.ListGames();
                     break;
                 case SelectionStatus.DeletingGame:
-                    this.CancelEnabled = true;
+                    DeleteMode = true;
                     updatedItems = FileService.ListGames().ToList();
                     if (updatedItems.Count() == 0)
                         this.CurrentStatus = SelectionStatus.SelectingGame;
                     items = updatedItems;
                     break;
                 case SelectionStatus.SelectingCharacter:
-                    this.CancelEnabled = false;
+                    DeleteMode = false;
                     items = FileService.ListCharacters(this.SelectedGame);
                     break;
                 case SelectionStatus.DeletingCharacter:
-                    this.CancelEnabled = true;
+                    DeleteMode = true;
                     updatedItems = FileService.ListCharacters(this.SelectedGame).ToList();
                     if (updatedItems.Count() == 0)
                         this.CurrentStatus = SelectionStatus.SelectingCharacter;
                     items = updatedItems;
                     break;
                 case SelectionStatus.Done:
-                    this.CancelEnabled = false;
                     items = new string[0];
                     #if DEBUG
                     items = new List<string> { "Volver a empezar" };
@@ -291,7 +290,6 @@
                 if(items != null)
                 {
                     this.SelectableElements.Clear();
-                    this.CancelEnabled = false;
                     this.SelectableElements.AddRange(items);
                     if (status == SelectionStatus.SelectingCharacter)
                         this.SelectableElements.Add(string.Empty);

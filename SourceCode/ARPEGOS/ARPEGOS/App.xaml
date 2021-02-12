@@ -60,7 +60,7 @@
             <Setter Property="CornerRadius" Value="5"/>
             <Setter Property="Padding" Value="5"/>
             <Setter Property="WidthRequest" Value="110"/>
-            <Setter Property="HeightRequest" Value="110"/>
+            <!--<Setter Property="HeightRequest" Value="110"/>-->
             <Setter Property="Margin" Value="0, 0, 0, 20"/>
             <Setter Property="BackgroundColor" Value="{x:DynamicResource ItemBackgroundColor}"/>
             <Setter Property="Opacity" Value="{x:DynamicResource OpacityValue}"/>

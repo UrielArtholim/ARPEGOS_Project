@@ -12,20 +12,9 @@
     </ContentPage.ToolbarItems>
     <Grid>
         <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
-            <StackLayout Padding="5" Margin="20,20,20,0" Orientation="Horizontal" VerticalOptions="Start" HorizontalOptions="CenterAndExpand" IsVisible="true">
+            <StackLayout Padding="5" Margin="20,20,20,0" Orientation="Horizontal" VerticalOptions="Start" HorizontalOptions="CenterAndExpand" IsVisible="{Binding DeleteMode}">
                 <Frame CornerRadius="5" Style="{DynamicResource HeaderFrame}" HorizontalOptions="Center">
-                    <Frame.GestureRecognizers>
-                        <TapGestureRecognizer Command="{Binding ExportCommand}"/>
-                    </Frame.GestureRecognizers>
-                    <Label Text="EXPORTAR PERSONAJES" FontAttributes="Bold" Style="{x:DynamicResource HeaderLabel}"/>
-                </Frame>
-            </StackLayout>
-            <StackLayout Padding="5" Margin="20,20,20,0" Orientation="Horizontal" VerticalOptions="Start" HorizontalOptions="CenterAndExpand" IsVisible="{Binding CancelEnabled}">
-                <Frame CornerRadius="5"  Style="{DynamicResource HeaderBackground}" IsVisible="{Binding CancelEnabled}" HorizontalOptions="Center">
-                    <Frame.GestureRecognizers>
-                        <TapGestureRecognizer Command="{Binding CancelButtonCommand}"/>
-                    </Frame.GestureRecognizers>
-                    <Label Text="Cancelar" Style="{x:DynamicResource HeaderLabel}"/>                    
+                    <Label Text="Modo Eliminar activado. Para cambiar de modo, presione el icono de la papelera." FontAttributes="Bold" Style="{x:DynamicResource HeaderLabel}"/>
                 </Frame>
             </StackLayout>
             <ScrollView Grid.Row="0" VerticalOptions="FillAndExpand">
@@ -38,7 +27,7 @@
                                         <TapGestureRecognizer Command="{Binding Path=BindingContext.SelectItemCommand, Source={x:Reference P}}" CommandParameter="{Binding .}" />
                                     </Frame.GestureRecognizers>
                                     <StackLayout Padding="10">
-                                        <Image Source="{Binding ., Converter={x:StaticResource GetInitialsImageConverter}, ConverterParameter=128}" />
+                                        <Image Source="{Binding ., Converter={x:StaticResource GetInitialsImageConverter}, ConverterParameter=128}"/>
                                         <Label Text="{Binding .}" Style="{x:DynamicResource MainItemLabel}" />
                                     </StackLayout>
                                 </Frame>
