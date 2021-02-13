@@ -13,8 +13,11 @@
             <Button Text="Selecciona habilidad" 
                     Command="{Binding SelectSkillCommand}" 
                     Style="{x:DynamicResource Button}"/>
-            <Label Text="{Binding SkillSelectedName, StringFormat='Habilidad: {0}'}" 
-                   Style="{x:DynamicResource OutsideLabel}" />
+            <Frame Style="{x:DynamicResource ItemFrame}">
+                <Label Text="{Binding SkillSelectedName, StringFormat='Habilidad Seleccionada: \&#x0a;{0}'}" 
+                   Style="{x:DynamicResource ItemLabel}" />
+            </Frame>
+            
             <Entry Text ="{Binding Dice}" 
                    Keyboard="Numeric" 
                    Placeholder="Introduzca el valor de la tirada" 
