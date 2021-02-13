@@ -16,7 +16,8 @@ namespace ARPEGOS.ViewModels
 {
     public class AddGameViewModel: BaseViewModel
     {
-        private string game, gamefolder, checkMessage, selectMessage, addMessage;
+        private DialogService dialog;
+        private string game, gamefolder;
         private Plugin.FilePicker.Abstractions.FileData file;
 
         public string Game 
@@ -29,61 +30,41 @@ namespace ARPEGOS.ViewModels
             get => gamefolder; 
             set => this.SetProperty(ref this.gamefolder, value); 
         }
-        public string CheckMessage 
-        { 
-            get => checkMessage; 
-            set => this.SetProperty(ref this.checkMessage, value);
-        }
-        public string SelectMessage 
-        { 
-            get => selectMessage; 
-            set => this.SetProperty(ref this.selectMessage, value);
-        }
-        public string AddMessage 
-        { 
-            get => addMessage; 
-            set => this.SetProperty(ref this.addMessage, value);
-        }
 
         public AddGameViewModel () 
         {
-            this.CheckCommand = new Command(()=> 
+            dialog = DependencyHelper.CurrentContext.Dialog;
+            this.CheckCommand = new Command(async ()=> 
             {
                 var gameFolder = FileService.GetGameBasePath(Game);
                 if (!System.IO.Directory.Exists(gameFolder))
                 {
                     FileService.CreateGameFolderStructure(Game);
-                    this.CheckMessage = $"Juego añadido";
+                    await dialog.DisplayAlert(string.Empty, "El juego indicado se ha añadido correctamente.");
                 }
                 else
-                    this.CheckMessage = $"El juego ya existe";
+                    await dialog.DisplayAlert(string.Empty , "El juego indicado ya existe.");
             });
 
             this.SelectCommand = new Command(async() =>
             {
                 this.file = await CrossFilePicker.Current.PickFile();
-                this.SelectMessage = $"Fichero seleccionado: {file.FileName}";
+                await DependencyHelper.CurrentContext.Dialog.DisplayAlert(string.Empty , $"El fichero seleccionado es:\n {file.FileName}");
             });
 
-            this.AddCommand = new Command(() =>
+            this.AddCommand = new Command(async() =>
             {
                 var filename = $"{FileService.EscapedName(file.FileName.Split('.').First())}{'.'}{file.FileName.Split('.').Last()}";
                 var oldPath = file.FilePath;
                 var newPath = Path.Combine(FileService.GetGameBasePath(Game), FileService.GamesPath, filename);
                 if (!File.Exists(newPath))
-                    this.AddMessage = $"El fichero {filename} no se ha podido añadir";
+                    await dialog.DisplayAlert(string.Empty , $"El fichero {filename} no se ha podido añadir");
                 else
-                {
-                    this.AddMessage = $"El fichero se ha añadido correctamente";
-                    //File.Delete(oldPath);
-                }
-                App.Navigation.PopAsync();
+                    await dialog.DisplayAlert(string.Empty , $"El fichero {filename} se ha añadido correctamente");
+                await App.Navigation.PopAsync();
             });
 
             this.Game = string.Empty;
-            this.CheckMessage = $"No game folder has been checked yet";
-            this.SelectMessage = $"No game file has been selected yet";
-            this.AddMessage = $"No game has been added yet";
         }
 
         public ICommand CheckCommand { get; set; }

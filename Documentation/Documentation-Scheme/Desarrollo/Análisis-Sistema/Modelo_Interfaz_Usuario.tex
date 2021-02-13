@@ -4,13 +4,368 @@
 
 % Section 4.4: Modelo de Interfaz de Usuario %
 \section{Modelo de Interfaz de Usuario}
-En esta sección se mostrarán las diferentes vistas de la interfaz de usuario del sistema, realizando capturas de 
-pantalla de la aplicación.
+En esta sección se trata la interacción entre el sistema y el usuario a través de las diferentes vistas 
+de las que dispone el sistema.
 
 \subsection{Pantalla de inicio}
-La pantalla de inicio de la aplicación es la vista que se muestra cuando la aplicación se inicia. En ella aparecen los diferentes 
-juegos que están disponibles en la aplicación, representados mediante cuadrados con el nombre del juego y sus iniciales.
-Para seleccionar un juego basta con pulsar sobre el cuadrado correspondiente.
+La pantalla de inicio de la aplicación se muestra cuando la aplicación se inicia. En ella se 
+muestran los diferentes juegos actualmente disponibles para la aplicación.
+Dispone de dos iconos interactivos en la esquina superior derecha de la pantalla, para añadir o eliminar 
+juegos en la aplicación, y un menú contextual, que se puede activar pulsando sobre el icono dispuesto 
+en la esquina superior izquierda de la pantalla. Esta vista se puede apreciar en la figura \ref*{PantallaInicio}.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.7]{Documentation-Scheme/Desarrollo/Análisis-Sistema/Modelo-Casos-Uso.pdf}
+    \caption{Pantalla de inicio}
+    \label{PantallaInicio}    
+\end{figure}
+
+En el caso de que el usuario desee eliminar uno o varios de los juegos existentes, al pulsar sobre el 
+icono de la papelera, surgirá un aviso indicando que está activado el modo de eliminación, de manera que 
+al seleccionar un elemento, en vez de acceder a su contenido, lo estará seleccionando para eliminarlo, tal 
+y como se muestra en la figura \ref*{ModoEliminacion}. Al seleccionar un juego para eliminarlo, 
+la aplicación realizará una pregunta de seguridad, ya que una vez eliminado el juego, no será posible 
+recuperarlo (Figura \ref{PreguntaSeguridad}).
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.7]{Documentation-Scheme/Desarrollo/Análisis-Sistema/Modelo-Casos-Uso.pdf}
+    \caption{Modo de eliminación}
+    \label{ModoEliminacion}    
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.7]{Documentation-Scheme/Desarrollo/Análisis-Sistema/Modelo-Casos-Uso.pdf}
+    \caption{Pregunta de seguridad}
+    \label{PreguntaSeguridad}    
+\end{figure}
+
+\subsection{Pantalla de adición de juego}
+A esta vista se puede acceder al pulsar sobre el icono de adición en la esquina superior derecha 
+de las pantallas de inicio, y de selección de versión. Esta vista dispone de un icono de flecha en la esquina superior 
+izquierda de la pantalla en caso de que se desee volver a la vista previa. En el centro de la pantalla se pueden apreciar 
+una caja de texto y tres botones, llamados \textit{Comprobar juego}, \textit{Seleccionar fichero} y \textit{Añadir fichero} 
+(figura \ref*{AnadirJuego}). 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.7]{Documentation-Scheme/Desarrollo/Análisis-Sistema/Modelo-Casos-Uso.pdf}
+    \caption{Pregunta de seguridad}
+    \label{AnadirJuego}    
+\end{figure}
+
+En primer lugar, aparece una caja de texto, en la que podemos introducir el nombre del juego que queremos añadir.
+A continuación se encuentra el botón \textit{Comprobar juego}, el cual creará la estructura del juego indicado en caso 
+de no existir (figura \ref*{ComprobarJuego}). En caso contrario, indicará que dicho juego ya existe. 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.7]{Documentation-Scheme/Desarrollo/Análisis-Sistema/Modelo-Casos-Uso.pdf}
+    \caption{Pregunta de seguridad}
+    \label{ComprobarJuego}    
+\end{figure}
+
+Seguidamente está dispuesto el 
+botón \textit{Seleccionar fichero}, que permite al usuario indicar el fichero en el que se encuentra la información del juego, 
+haciendo uso del sistema de ficheros del dispositivo (figura \ref*{SeleccionarFichero1}). Una vez seleccionado, el sistema mostrará por pantalla un aviso indicando 
+cuál es el fichero seleccionado (figura \ref*{SeleccionarFichero2}). 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.7]{Documentation-Scheme/Desarrollo/Análisis-Sistema/Modelo-Casos-Uso.pdf}
+    \caption{Pregunta de seguridad}
+    \label{SeleccionarFichero1}    
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.7]{Documentation-Scheme/Desarrollo/Análisis-Sistema/Modelo-Casos-Uso.pdf}
+    \caption{Pregunta de seguridad}
+    \label{SeleccionarFichero2}    
+\end{figure}
+
+En último lugar está el botón \textit{Añadir fichero}, que introduce el fichero previamente 
+seleccionado en la carpeta del juego indicado en la caja de texto, y muestra un aviso por pantalla indicando si 
+el fichero se ha añadido exitosamente (figura \ref*{AnadirFichero}). 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.7]{Documentation-Scheme/Desarrollo/Análisis-Sistema/Modelo-Casos-Uso.pdf}
+    \caption{Pregunta de seguridad}
+    \label{AnadirFichero}    
+\end{figure}
+
+\subsection{Menú contextual}
+El menú contextual consiste en una vista oculta en la aplicación que se despliega al pulsar un icono de 
+tres barras horizontales, ubicado en la esquina superior izquierda de la pantalla (figura \ref*{MenuContextualOculto}).
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.7]{Documentation-Scheme/Desarrollo/Análisis-Sistema/Modelo-Casos-Uso.pdf}
+    \caption{Pantalla con menú contextual disponible}
+    \label{MenuContextualOculto}    
+\end{figure}
+
+Al abrir el menú contextual se muestran tres opciones: \textit{Inicio}, \textit{Seleccionar personaje} y 
+\textit{Seleccionar tema}. La primera opción hace que la aplicación retroceda a la pantalla de inicio.
+La segunda lleva al usuario a la vista de selección de personaje, siempre y cuando el juego esté seleccionado. 
+En caso contrario, el sistema lanzará una alerta avisando que no es posible seleccionar personajes mientras no 
+se haya escogido un juego previamente (figura \ref*{MenuContextual}). Por último, la tercera opción abre la vista de 
+selección de tema.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.7]{Documentation-Scheme/Desarrollo/Análisis-Sistema/Modelo-Casos-Uso.pdf}
+    \caption{Pantalla con menú contextual disponible}
+    \label{MenuContextual}    
+\end{figure}
+
+\subsection{Pantalla de selección de tema}
+Esta vista sólo es accesible desde la opción \textit{Seleccionar tema} del menú contextual.
+En ella se muestran diversas opciones de temas de fondo, y un color, referente al color base del tema cuyo nombre acompaña.
+Hay siete temas de colores disponibles: 
+\begin{itemize}
+    \item \textit{Noche} (figura \ref*{Noche})
+    \item \textit{Día} (figura \ref*{Dia})
+    \item \textit{Bosque} (figura \ref*{Bosque})
+    \item \textit{Desierto} (figura \ref*{Desierto})
+    \item \textit{Tundra} (figura \ref*{Tundra})
+    \item \textit{Valle} (figura \ref*{Valle})
+    \item \textit{Océano} (figura \ref*{Oceano})
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.7]{Documentation-Scheme/Desarrollo/Análisis-Sistema/Modelo-Casos-Uso.pdf}
+    \caption{Tema \textit{Noche}}
+    \label{Noche}    
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.7]{Documentation-Scheme/Desarrollo/Análisis-Sistema/Modelo-Casos-Uso.pdf}
+    \caption{Tema \textit{Día}}
+    \label{Dia}    
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.7]{Documentation-Scheme/Desarrollo/Análisis-Sistema/Modelo-Casos-Uso.pdf}
+    \caption{Tema \textit{Bosque}}
+    \label{Bosque}    
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.7]{Documentation-Scheme/Desarrollo/Análisis-Sistema/Modelo-Casos-Uso.pdf}
+    \caption{Tema \textit{Desierto}}
+    \label{Desierto}    
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.7]{Documentation-Scheme/Desarrollo/Análisis-Sistema/Modelo-Casos-Uso.pdf}
+    \caption{Tema \textit{Tundra}}
+    \label{Tundra}    
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.7]{Documentation-Scheme/Desarrollo/Análisis-Sistema/Modelo-Casos-Uso.pdf}
+    \caption{Tema \textit{Valle}}
+    \label{Valle}    
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.7]{Documentation-Scheme/Desarrollo/Análisis-Sistema/Modelo-Casos-Uso.pdf}
+    \caption{Tema \textit{Océano}}
+    \label{Oceano}    
+\end{figure}
+
+\subsection{Pantalla de selección de versión}
+La pantalla de selección de versión se muestra al seleccionar un juego en la pantalla de inicio.
+Tiene la misma estructura visual que la pantalla de inicio, pero en este caso se listan las diferentes versiones 
+del juego disponibles para la aplicación (figura \ref*{SeleccionVersion}).
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.7]{Documentation-Scheme/Desarrollo/Análisis-Sistema/Modelo-Casos-Uso.pdf}
+    \caption{Pantalla de selección de versión}
+    \label{SeleccionVersion}    
+\end{figure}
+
+\subsection{Pantalla de selección de personaje}
+Una vez seleccionada la versión del juego a la que se desea acceder, aparece la vista de selección de personaje.
+Al igual que la pantalla de selección de versión, la estructura es idéntica a la pantalla de inicio, aunque presenta 
+algunas diferencias en funcionalidad. En caso de pulsar el icono de adición de la esquina superior derecha de la pantalla, 
+el sistema mostrará una ventana emergente para introducir un nombre, y poder comenzar el proceso de creación de personajes 
+(figura \ref*{NombrePersonajeNuevo}).
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.7]{Documentation-Scheme/Desarrollo/Análisis-Sistema/Modelo-Casos-Uso.pdf}
+    \caption{Pantalla de selección de personaje}
+    \label{NombrePersonajeNuevo}    
+\end{figure}
+
+\subsection{Pantallas de creación de personaje}
+El proceso de creación de personajes está formado por un conjunto de vistas, que se adaptan a las diferentes etapas del 
+proceso en función del tipo de entrada que requieran. Además, algunas de estas disponen de un sistema de control de puntos 
+para que el usuario tenga a su disposición el estado actual de puntos de los que dispone para gastar en el proceso.
+A continuación se desarrollarán brevemente cada una de ellas.
+
+\subsubsection{Pantalla de selección única}
+La vista de selección única forma parte del proceso de creación de personajes. En la parte superior de la 
+pantalla se pueden observar el icono de flecha para retroceder a la vista previa y el nombre de la etapa actual.
+En el centro de la pantalla se muestran las diversas opciones que se pueden escoger, estructuradas de la siguiente forma:
+\begin{itemize}
+    \item Un círculo de selección, que indica el elemento seleccionado actualmente.
+    \item El nombre del elemento seleccionado
+    \item En caso de que el elemento disponga de una descripción, se muestra un icono de información con forma de libro.
+\end{itemize}
+Esto se puede observar en la figura \ref*{SeleccionUnica}. El sistema no permitirá al usuario avanzar en el proceso de creación 
+hasta que haya optado por una de las opciones disponibles. Una vez haya realizado la selección aparecerá un botón \textit{Siguiente}
+flotante, para continuar con el proceso, tal y como se enseña en la figura \ref*{Siguiente}.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.7]{Documentation-Scheme/Desarrollo/Análisis-Sistema/Modelo-Casos-Uso.pdf}
+    \caption{Pantalla de selección única}
+    \label{SeleccionUnica}    
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.7]{Documentation-Scheme/Desarrollo/Análisis-Sistema/Modelo-Casos-Uso.pdf}
+    \caption{Pantalla de selección única con botón \textit{Siguiente} flotante.}
+    \label{Siguiente}    
+\end{figure}
+
+\subsubsection{Pantalla de selección única con grupos}
+La vista de selección única con grupos es similar en funcionalidad a la pantalla de selección única, con una ligera diferencia.
+Al acceder a la vista, los elementos que se muestran por pantalla son los diferentes grupos que forman parte de la etapa de creación
+(figura \ref*{SeleccionUnicaGrupoCerrado}). Al pulsar sobre uno de los grupos, éste se expande, mostrando todos los elementos 
+contenidos en él (figura \ref*{SeleccionUnicaGrupoAbierto}). En caso de intentar abrir varios grupos, sólo quedará expandido 
+el último seleccionado, quedando el resto contraídos, para facilitar la navegación por las distintas opciones de la etapa.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.7]{Documentation-Scheme/Desarrollo/Análisis-Sistema/Modelo-Casos-Uso.pdf}
+    \caption{Pantalla de selección única}
+    \label{SeleccionUnicaGrupoCerrado}    
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.7]{Documentation-Scheme/Desarrollo/Análisis-Sistema/Modelo-Casos-Uso.pdf}
+    \caption{Pantalla de selección única}
+    \label{SeleccionUnicaGrupoAbierto}    
+\end{figure}
+
+\subsubsection{Pantalla de selección múltiple}
+La vista de selección múltiple es una semejante a la vista de selección única, con la diferencia de que los círculos de selección 
+se han sustituido por cajas de selección múltiple (figura \ref*{SeleccionMultiple}).
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.7]{Documentation-Scheme/Desarrollo/Análisis-Sistema/Modelo-Casos-Uso.pdf}
+    \caption{Pantalla de selección única}
+    \label{SeleccionMultiple}    
+\end{figure}
+
+\subsubsection{Pantalla de selección múltiple con grupos}
+Esta vista es similar a la pantalla de selección única con grupos, habiendo sustituido los círculos de selección por 
+cajas de selección múltiple (figura \ref*{SeleccionMultipleGrupos}).
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.7]{Documentation-Scheme/Desarrollo/Análisis-Sistema/Modelo-Casos-Uso.pdf}
+    \caption{Pantalla de selección única}
+    \label{SeleccionMultipleGrupos}    
+\end{figure}
+
+\subsubsection{Pantalla de gasto de puntos}
+La vista de gasto de puntos muestra todos los elementos disponibles de una etapa de creación, y el valor del elemento 
+que se desea añadir, acompañado por dos botones (de restar y sumar, respectivamente) para modificar dicho valor 
+(figura \ref*{GastoPuntos}).
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.7]{Documentation-Scheme/Desarrollo/Análisis-Sistema/Modelo-Casos-Uso.pdf}
+    \caption{Pantalla de gasto de puntos}
+    \label{GastoPuntos}    
+\end{figure}
+
+\subsubsection{Pantalla de gasto de puntos con grupos}
+Esta vista funciona de la misma manera que la pantalla con gasto de puntos, pero incluyendo el trato de grupos del 
+que disponen las pantallas de vista única y vista múltiple con grupos (figura \ref*{SeleccionMultipleGrupos}).
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.7]{Documentation-Scheme/Desarrollo/Análisis-Sistema/Modelo-Casos-Uso.pdf}
+    \caption{Pantalla de gasto de puntos con grupos}
+    \label{GastoPuntosGrupos}    
+\end{figure}
+
+\subsection{Pantalla de opciones del personaje}
+Esta vista es muy sencilla, ya que solo muestra dos botones: uno para visualizar la información del personaje 
+(\textit{Visualizar información}), y otro para calcular el valor de las habilidades del personaje (\textit{Calcular habilidad}), 
+como se puede ver en la figura \ref*{OpcionesPersonaje}.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.7]{Documentation-Scheme/Desarrollo/Análisis-Sistema/Modelo-Casos-Uso.pdf}
+    \caption{Pantalla de opciones del personaje}
+    \label{OpcionesPersonaje}    
+\end{figure}
+
+\subsection{Pantalla de campos del personaje}
+En esta vista se muestran los diferentes campos de información de los que dispone el personaje.
+Para visualizar uno de los campos, basta con seleccionarlo. La estructura es similar a la de la 
+pantalla de inicio, a excepción de los iconos de la zona superior de la pantalla (figura \ref*{CamposPersonaje}).
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.7]{Documentation-Scheme/Desarrollo/Análisis-Sistema/Modelo-Casos-Uso.pdf}
+    \caption{Pantalla de campos del personaje}
+    \label{CamposPersonaje}    
+\end{figure}
+
+\subsection{Pantalla de información del personaje}
+Esta vista muestra la información de uno de los campos del personaje, agrupada por secciones, tal y como 
+se puede observar en la figura \ref*{InfoPersonaje}.
 
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.7]{Documentation-Scheme/Desarrollo/Análisis-Sistema/Modelo-Casos-Uso.pdf}
+    \caption{Pantalla de información del personaje}
+    \label{InfoPersonaje}    
+\end{figure}
+
+\subsection{Pantalla de cálculo de habilidad}
+Finalmente, la vista de cálculo de habilidad permite seleccionar una habilidad del personaje y 
+calcular el resultado total del intento del personaje al realizar dicha habilidad. La vista dispone de varios elementos, 
+que se pueden apreciar claramente en la figura \ref*{CalculoHabilidad}.
+\begin{itemize}
+    \item Un botón de selección de habilidad.
+    \item Un recuadro que indica la habilidad seleccionada.
+    \item Un cuadro de texto para introducir el valor de una tirada de dados.
+    \item Un botón para calcular el resultado de sumar el valor final de la habilidad del personaje al de la tirada.
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.7]{Documentation-Scheme/Desarrollo/Análisis-Sistema/Modelo-Casos-Uso.pdf}
+    \caption{Pantalla de cálculo de habilidad}
+    \label{CalculoHabilidad}    
+\end{figure}
+
+\subsection{Pantalla de selección de habilidad}
+La vista de selección de habilidad muestra las diferentes habilidades por las que el personaje podría 
+realizar un cálculo de habilidad. Para seleccionar una, basta con pulsar el recuadro en el que se encuentra 
+el nombre de dicha habilidad (figura \ref*{SeleccionHabilidad}).
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.7]{Documentation-Scheme/Desarrollo/Análisis-Sistema/Modelo-Casos-Uso.pdf}
+    \caption{antalla de selección de habilidad}
+    \label{SeleccionHabilidad}    
+\end{figure}
 

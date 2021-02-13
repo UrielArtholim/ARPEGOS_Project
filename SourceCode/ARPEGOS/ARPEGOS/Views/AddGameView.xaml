@@ -11,17 +11,8 @@
             <StackLayout Grid.Column="0" Spacing="10" Padding="20,20,20,20" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" BackgroundColor="Transparent">
                 <Entry Text ="{Binding Game}" Placeholder="Enter game name" Style="{x:DynamicResource Entry}"/>
                 <Button Text="Comprobar juego" Command="{Binding CheckCommand}" Style="{x:DynamicResource Button}"/>
-                <Frame Style="{x:DynamicResource ItemFrame}">
-                    <Label Text="{Binding CheckMessage}" Style="{x:DynamicResource ItemLabel}"/>
-                </Frame>
                 <Button Text="Seleccionar fichero" Command="{Binding SelectCommand}" Style="{x:DynamicResource Button}"/>
-                <Frame Style="{x:DynamicResource ItemFrame}">
-                    <Label Text="{Binding SelectMessage}" Style="{x:DynamicResource ItemLabel}"/>
-                </Frame>
                 <Button Text="Añadir fichero" Command="{Binding AddCommand}" Style="{x:DynamicResource Button}"/>
-                <Frame Style="{x:DynamicResource ItemFrame}">
-                    <Label Text="{Binding AddMessage}" Style="{x:DynamicResource ItemLabel}"/>
-                </Frame>
             </StackLayout>
         </Grid>        
     </ContentPage.Content>
