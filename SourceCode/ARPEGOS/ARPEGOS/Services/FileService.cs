@@ -45,7 +45,7 @@ namespace ARPEGOS.Services
         public static IEnumerable<string> ListVersions(string game)
         {
             var path = Path.Combine(BaseFolder, FormatName(game), GamesPath);
-            var versions = Directory.GetFiles(path);
+            var versions = Directory.GetFiles(path).Where(f => f.EndsWith(".owl"));
             return versions.Select(s => s.Split('/').Last().Split('.').First().Replace("_", " "));
         }
 

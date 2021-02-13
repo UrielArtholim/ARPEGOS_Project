@@ -201,15 +201,18 @@
                 case SelectionStatus.SelectingCharacter:
                     if (string.IsNullOrWhiteSpace(item))
                     {
-                        item = await this.dialogService.DisplayTextPrompt("Crear nuevo personaje", "Introduce el nombre:", "Crear");
-                        if (string.IsNullOrWhiteSpace(item))
-                            break;
-                        await Device.InvokeOnMainThreadAsync(() => this.IsBusy = true);
-                        DependencyHelper.CurrentContext.CurrentCharacter = await OntologyService.CreateCharacter(item, DependencyHelper.CurrentContext.CurrentGame);
-                        App.Current.MainPage = new NavigationPage(new CreationRootView());
-                        App.Navigation = App.Current.MainPage.Navigation;
-                        await Device.InvokeOnMainThreadAsync(() => this.IsBusy = false);
-
+                        DeleteMode = false;
+                        var characterName = await this.dialogService.DisplayTextPrompt("Crear nuevo personaje", "Introduce el nombre:", "Crear");
+                        if (!string.IsNullOrWhiteSpace(characterName))
+                        {
+                            await Device.InvokeOnMainThreadAsync(() => this.IsBusy = true);
+                            DependencyHelper.CurrentContext.CurrentCharacter = await OntologyService.CreateCharacter(characterName, DependencyHelper.CurrentContext.CurrentGame);
+                            App.Current.MainPage = new NavigationPage(new CreationRootView());
+                            App.Navigation = App.Current.MainPage.Navigation;
+                            await Device.InvokeOnMainThreadAsync(() => this.IsBusy = false);
+                        }
+                        this.Load(this.CurrentStatus);
+                        break;
                     }
                     else
                     {
@@ -291,8 +294,9 @@
                 {
                     this.SelectableElements.Clear();
                     this.SelectableElements.AddRange(items);
-                    if (status == SelectionStatus.SelectingCharacter)
-                        this.SelectableElements.Add(string.Empty);
+                    // Uncomment to get "Crear" option in Character selection
+                    //if (status == SelectionStatus.SelectingCharacter)
+                    //    this.SelectableElements.Add(string.Empty);
                 }
             });
         }

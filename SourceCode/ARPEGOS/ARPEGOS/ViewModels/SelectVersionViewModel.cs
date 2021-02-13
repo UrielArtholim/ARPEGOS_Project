@@ -6,6 +6,8 @@ using ARPEGOS.Views;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,9 +20,9 @@ namespace ARPEGOS.ViewModels
     public class SelectVersionViewModel: BaseViewModel
     {
         private SelectionStatus _selectionStatus;
-        private string selectedGame;
         private IDialogService dialogService;
-        private bool cancelEnabled;
+        private string selectedGame;
+        private bool deleteMode;
         public SelectionStatus CurrentStatus
         {
             get => this._selectionStatus;
@@ -30,15 +32,15 @@ namespace ARPEGOS.ViewModels
                 this.OnPropertyChanged(nameof(this.Title));
             }
         }
-        public bool CancelEnabled
-        {
-            get => cancelEnabled;
-            set => this.SetProperty(ref this.cancelEnabled, value);
+        public bool DeleteMode 
+        { 
+            get => this.deleteMode; 
+            set => this.SetProperty(ref this.deleteMode, value); 
         }
+
 
         public ICommand AddButtonCommand { get; set; }
         public ICommand DeleteButtonCommand { get; }
-        public ICommand CancelButtonCommand { get; }
         public ICommand SelectItemCommand { get; }
         public ICommand ReturnCommand { get; }
         public ObservableCollection<string> SelectableElements { get; }
@@ -51,7 +53,6 @@ namespace ARPEGOS.ViewModels
             this.SelectItemCommand = new Command<string>(s => Task.Factory.StartNew(async () => await this.SelectItem(s)));
             this.CurrentStatus = SelectionStatus.SelectingVersion;
             this.dialogService = DependencyHelper.CurrentContext.Dialog;
-            this.CancelEnabled = false;
             this.selectedGame = string.Empty;
             this.AddButtonCommand = new Command(async () => await App.Navigation.PushAsync(new AddGameView()));
             this.DeleteButtonCommand = new Command(() =>
@@ -60,12 +61,6 @@ namespace ARPEGOS.ViewModels
                 this.Load(this.CurrentStatus);
             });
 
-            this.CancelButtonCommand = new Command(() =>
-            {
-                this.CancelEnabled = false;
-                this.CurrentStatus = SelectionStatus.SelectingVersion;
-                this.Load(CurrentStatus);
-            });
             this.ReturnCommand = new Command(async() => await Device.InvokeOnMainThreadAsync(async() => await App.Navigation.PopToRootAsync()));
             this.Load(this.CurrentStatus);
         }
@@ -82,14 +77,13 @@ namespace ARPEGOS.ViewModels
                 case SelectionStatus.SelectingVersion:
                     var previousViewModel = App.Navigation.NavigationStack.First().BindingContext as MainViewModel;
                     selectedGame = previousViewModel.SelectedGame;
-                    DependencyHelper.CurrentContext.CurrentGame = await OntologyService.LoadGame(selectedGame, item);
+                    DependencyHelper.CurrentContext.CurrentGame = await Task.Run(async () => await OntologyService.LoadGame(selectedGame, item));
                     previousViewModel.LoadNewStateCommand.Execute(MainViewModel.SelectionStatus.SelectingCharacter);
                     this.CurrentStatus = SelectionStatus.Done;
                     this.Load(this.CurrentStatus);
                     break;
 
                 case SelectionStatus.DeletingVersion:
-                    this.CancelEnabled = true;
                     var confirmation = await this.dialogService.DisplayAcceptableAlert("Advertencia", $"¿Desea eliminar {item}? Una vez hecho no podrá ser recuperado", "Confirmar", "Cancelar");
                     if (confirmation == true)
                         await Device.InvokeOnMainThreadAsync(() => FileService.DeleteGameVersion(selectedGame, item));
@@ -112,8 +106,14 @@ namespace ARPEGOS.ViewModels
             switch (status)
             {
                 case SelectionStatus.SelectingVersion:
+                    DeleteMode = false;
                     var previousViewModel = App.Navigation.NavigationStack[App.Navigation.NavigationStack.Count - 1].BindingContext as MainViewModel;
                     selectedGame = previousViewModel.SelectedGame;
+                    items = FileService.ListVersions(selectedGame);
+                    break;
+
+                case SelectionStatus.DeletingVersion:
+                    DeleteMode = true;
                     items = FileService.ListVersions(selectedGame);
                     break;
 
@@ -127,7 +127,6 @@ namespace ARPEGOS.ViewModels
                 if (items != null)
                 {
                     this.SelectableElements.Clear();
-                    this.CancelEnabled = false;
                     this.SelectableElements.AddRange(items);
                 }
             });

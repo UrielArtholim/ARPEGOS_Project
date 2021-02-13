@@ -1,4 +1,5 @@
 ﻿using ARPEGOS.Services;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Reflection;
@@ -27,54 +28,58 @@ namespace ARPEGOS.Views
         private async Task CreateTestGame()
         {
             var assembly = Assembly.GetExecutingAssembly();
-            var status = await Xamarin.Essentials.Permissions.RequestAsync<Permissions.StorageWrite>();
-            if(status == PermissionStatus.Granted)
+            var statusWrite = PermissionStatus.Denied;
+            var statusRead = PermissionStatus.Denied;
+            statusWrite = await Permissions.RequestAsync<Permissions.StorageWrite>();
+            statusRead = await Permissions.RequestAsync<Permissions.StorageRead>();
+            if (statusWrite == PermissionStatus.Granted && statusRead == PermissionStatus.Granted)
             {
-                foreach (var game in assembly.GetManifestResourceNames().Where(x => x.EndsWith(".owl")).Select(x => x.Split('.')).GroupBy(x => x[2]))
+                var path = string.Empty;
+                foreach (var game in assembly.GetManifestResourceNames().Select(x => x.Split('.')).GroupBy(x => x[2]))
                 {
-                    if (!FileService.CreateGameFolderStructure(game.Key))
-                        continue;
-
-                    foreach (var file in game)
+                    if (!string.Equals("Fonts", game.Key))
                     {
-                        if (file[3].ToLowerInvariant() == "characters")
-                        {
-                            var path = FileService.GetCharacterFilePath(file[4], game.Key);
-                            this.WriteResourceToFile(string.Join('.', file), path);
-                        }
 
-                        if (file[3].ToLowerInvariant() == "gamefiles")
-                        {
-                            var path = FileService.GetGameFilePath(game.Key, file[4]);
-                            this.WriteResourceToFile(string.Join('.', file), path);
-                        }
-                    }
-                }
+                        if (!FileService.CreateGameFolderStructure(game.Key))
+                            continue;
 
-                foreach (var game in assembly.GetManifestResourceNames().Where(x => x.EndsWith(".jpg")).Select(x => x.Split('.')).GroupBy(x => x[2]))
-                {
-                    foreach (var file in game)
-                    {
-                        if (file[3].ToLowerInvariant() == "gamefiles")
+                        foreach (var file in game)
                         {
-                            var path = FileService.GetGameFilePath(game.Key, file[4]);
-                            this.WriteResourceToFile(string.Join('.', file), path);
-                        }
-                        else
-                        {
-                            var path = Path.Combine(FileService.GetGameBasePath(game.Key), $"{file[3]}.jpg");
-                            this.WriteResourceToFile(string.Join('.', file), path);
+                            if (file[3].ToLowerInvariant() == "characters")
+                            {
+                                if (file.Last() == "owl")
+                                    path = FileService.GetCharacterFilePath(file[4], game.Key);
+                                else
+                                    path = FileService.GetCharacterFilePath(file[4], game.Key).Replace(".owl", $".{file.Last()}");
+                            }
+                            else if (file[3].ToLowerInvariant() == "gamefiles")
+                            {
+                                if (file.Last() == "owl")
+                                    path = FileService.GetGameFilePath(game.Key, file[4]);
+                                else
+                                    path = FileService.GetGameFilePath(game.Key, file[4]).Replace(".owl", $".{file.Last()}");
+                            }
+                            else
+                            {
+                                if (file.Last() != "owl")
+                                    path = Path.Combine(FileService.GetGameBasePath(game.Key), $"{file[3]}.jpg");
+                            }
+                            await this.WriteResourceToFile(string.Join('.', file), path);
                         }
                     }
                 }
             }
         }
 
-        private void WriteResourceToFile(string resourcePath, string filePath)
+        private async Task WriteResourceToFile(string resourcePath, string filePath)
         {
-            using var resource = Assembly.GetExecutingAssembly().GetManifestResourceStream(resourcePath);
-            using var file = new FileStream(filePath, FileMode.Create, FileAccess.Write);
-            resource.CopyTo(file);
+            if(!File.Exists(filePath))
+            {
+                using var resource = Assembly.GetExecutingAssembly().GetManifestResourceStream(resourcePath);
+                using var file = new FileStream(filePath, FileMode.Create, FileAccess.Write);
+                await resource.CopyToAsync(file);
+                var fileLength = file.Length;
+            }            
         }
     }
 }

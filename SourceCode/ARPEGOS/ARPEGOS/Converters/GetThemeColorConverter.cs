@@ -19,13 +19,13 @@ namespace ARPEGOS.Converter
             {
                 currentDictionary = theme switch
                 {
-                    "Noche" => DependencyHelper.Container.Resolve<DarkTheme>(),
+                    "Día" => DependencyHelper.Container.Resolve<LightTheme>(),
                     "Bosque" => DependencyHelper.Container.Resolve<ForestTheme>(),
                     "Desierto" => DependencyHelper.Container.Resolve<DesertTheme>(),
                     "Tundra" => DependencyHelper.Container.Resolve<TundraTheme>(),
                     "Valle" => DependencyHelper.Container.Resolve<ValleyTheme>(),
                     "Oceano" => DependencyHelper.Container.Resolve<OceanTheme>(),
-                    _ => DependencyHelper.Container.Resolve<LightTheme>(),
+                    _ => DependencyHelper.Container.Resolve<DarkTheme>(),
                 };
                 currentDictionary.TryGetValue("ItemBackgroundColor", out themeColor);
             }

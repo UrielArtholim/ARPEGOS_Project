@@ -11,8 +11,10 @@
     </ContentPage.ToolbarItems>
     <Grid>
         <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
-            <StackLayout Padding="5" Margin="20,20,20,0" Orientation="Horizontal" VerticalOptions="Start" HorizontalOptions="CenterAndExpand" IsVisible="{Binding CancelEnabled}">
-                <Button Text="Cancelar" Command="{Binding CancelButtonCommand}" Style="{x:DynamicResource Button}"/>
+            <StackLayout Padding="5" Margin="20,20,20,0" Orientation="Horizontal" VerticalOptions="Start" HorizontalOptions="CenterAndExpand" IsVisible="{Binding DeleteMode}">
+                <Frame CornerRadius="5" Style="{DynamicResource HeaderFrame}" HorizontalOptions="Center">
+                    <Label Text="Modo Eliminar activado. Para cambiar de modo, presione el icono de la papelera." FontAttributes="Bold" Style="{x:DynamicResource HeaderLabel}"/>
+                </Frame>
             </StackLayout>
             <ScrollView Grid.Row="0" VerticalOptions="FillAndExpand">
                 <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">

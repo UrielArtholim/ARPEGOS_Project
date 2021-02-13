@@ -37,13 +37,13 @@ namespace ARPEGOS.Views
             Application.Current.Resources.MergedDictionaries.Clear();
             switch (option)
             {
-                case "Noche": App.Current.Resources.MergedDictionaries.Add(new DarkTheme()); break;
+                case "Día": App.Current.Resources.MergedDictionaries.Add(new LightTheme()); break;
                 case "Bosque": App.Current.Resources.MergedDictionaries.Add(new ForestTheme()); break;
                 case "Desierto": App.Current.Resources.MergedDictionaries.Add(new DesertTheme()); break;
                 case "Tundra": App.Current.Resources.MergedDictionaries.Add(new TundraTheme()); break;
                 case "Valle": App.Current.Resources.MergedDictionaries.Add(new ValleyTheme()); break;
                 case "Oceano": App.Current.Resources.MergedDictionaries.Add(new OceanTheme()); break;
-                default: App.Current.Resources.MergedDictionaries.Add(new LightTheme()); break;
+                default: App.Current.Resources.MergedDictionaries.Add(new DarkTheme()); break;
             }
             var themeHelper = DependencyHelper.CurrentContext.Themes;
             themeHelper.SetCurrentTheme(option);

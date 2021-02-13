@@ -46,9 +46,9 @@ namespace ARPEGOS.Helpers
         public ThemeHelper()
         {
             this.BackgroundThemes = new Dictionary<string, string>
-            {
-                {"Día", "day.png"},
+            {          
                 {"Noche", "night.png"},
+                {"Día", "day.png"},
                 {"Bosque", "forest.png"},
                 {"Desierto", "desert.png"},
                 {"Tundra", "tundra.png"},
@@ -57,8 +57,8 @@ namespace ARPEGOS.Helpers
             };
             this.AddButtonThemes = new Dictionary<string, string>
             {
-                {"Día", "day_add.png"},
                 {"Noche", "night_add.png"},
+                {"Día", "day_add.png"},
                 {"Bosque", "forest_add.png"},
                 {"Desierto", "desert_add.png"},
                 {"Tundra", "tundra_add.png"},
@@ -67,8 +67,8 @@ namespace ARPEGOS.Helpers
             };
             this.RemoveButtonThemes = new Dictionary<string, string>
             {
-                {"Día", "day_delete.png"},
                 {"Noche", "night_delete.png"},
+                {"Día", "day_delete.png"},
                 {"Bosque", "forest_delete.png"},
                 {"Desierto", "desert_delete.png"},
                 {"Tundra", "tundra_delete.png"},
