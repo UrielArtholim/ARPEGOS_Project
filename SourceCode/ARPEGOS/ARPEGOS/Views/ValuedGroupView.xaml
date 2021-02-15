@@ -4,7 +4,6 @@
              x:Class="ARPEGOS.Views.ValuedGroupView"
              x:Name="ValuedGroup"
              Title="{Binding StageName}"
-             NavigationPage.HasBackButton="False"
              Visual="Material"
              BackgroundImageSource="{x:DynamicResource BackgroundImageSource}">
     <ContentPage.Content>
@@ -98,7 +97,8 @@
                                                VerticalOptions="Center"
                                                HorizontalTextAlignment="Center"
                                                Text="{Binding Value, StringFormat='{0:F0}'}"/>
-                                            <Stepper x:Name="ValueEntry"
+                                            <Stepper x:Name="ValueEntry" 
+                                                   Opacity="1"                                                   
                                                    BindingContext="{Binding .}"
                                                    VerticalOptions="Center"
                                                    HorizontalOptions="FillAndExpand"

@@ -10,6 +10,14 @@ determinar qué elementos son etapas de creación, y cómo configurarlos para qu
 \subsection{Etapas de creación}
 En este apartado se indica cómo crear los diferentes tipos de etapas de creación disponibles para la aplicación de este proyecto.
 
+\subsubsection{Límite de etapa y límite general}
+Algunas etapas del proceso realizan un gasto de los puntos disponibles del personaje. Para facilitar al usuario el control 
+de gasto de dichos puntos, se han creado dos elmentos gráficos llamados \textit{Límite general} y \textit{Límite de etapa}, 
+que muestran los puntos que aún están disponibles para gastar para el personaje. Para hacer uso de éstas, 
+hay que indicar mediante las anotaciones \textit{\underline{EditGeneralLimit}} y \textit{\underline{EditStageLimit}} respectivamente
+para mostrar el límite de puntos restantes en todo el proceso de creación, y el límite de puntos de los que se dispone para la 
+etapa en cuestión.
+
 \subsubsection{Etapa de selección única}
 Este tipo de etapa se caracteriza por mostrar una lista de elementos seleccionables, y sólo permitir la selección de uno de ellos.
 Un buen ejemplo de este caso es la selección de \textit{Raza}, ya que un personaje sólo puede pertenecer a una raza:
