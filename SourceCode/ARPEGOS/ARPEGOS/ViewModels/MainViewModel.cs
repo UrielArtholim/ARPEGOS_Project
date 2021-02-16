@@ -77,8 +77,8 @@
                     {
                         SelectionStatus.SelectingGame => "Inicio",
                         SelectionStatus.DeletingGame => "Inicio",
-                        SelectionStatus.SelectingCharacter => "Selección de Personaje",
-                        SelectionStatus.DeletingCharacter => "Selección de Personaje",
+                        SelectionStatus.SelectingCharacter => "Personajes",
+                        SelectionStatus.DeletingCharacter => "Personajes",
                         _ => "Unknown Status"
                     };
             }

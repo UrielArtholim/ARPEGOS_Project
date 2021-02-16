@@ -4,7 +4,6 @@
              x:Class="ARPEGOS.Views.MultipleChoiceGroupView"
              x:Name="MultipleChoiceGroup"
              Title="{Binding StageName}"
-             NavigationPage.HasBackButton="False"
              BackgroundImageSource="{x:DynamicResource BackgroundImageSource}"
              Visual="Material">
     <ContentPage.Content>
