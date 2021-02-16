@@ -9,7 +9,7 @@
     <ContentPage.Content>
         <Grid>
             <StackLayout Grid.Column="0" Spacing="10" Padding="20,20,20,20" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" BackgroundColor="Transparent">
-                <Entry Text ="{Binding Game}" Placeholder="Enter game name" Style="{x:DynamicResource Entry}"/>
+                <Entry Text ="{Binding Game}" Placeholder="Introduce nombre del juego" Style="{x:DynamicResource Entry}"/>
                 <Button Text="Comprobar juego" Command="{Binding CheckCommand}" Style="{x:DynamicResource Button}"/>
                 <Button Text="Seleccionar fichero" Command="{Binding SelectCommand}" Style="{x:DynamicResource Button}"/>
                 <Button Text="Añadir fichero" Command="{Binding AddCommand}" Style="{x:DynamicResource Button}"/>

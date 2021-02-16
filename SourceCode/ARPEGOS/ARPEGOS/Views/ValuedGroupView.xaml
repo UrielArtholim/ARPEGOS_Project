@@ -5,6 +5,7 @@
              x:Name="ValuedGroup"
              Title="{Binding StageName}"
              Visual="Material"
+             NavigationPage.HasBackButton="false"
              BackgroundImageSource="{x:DynamicResource BackgroundImageSource}">
     <ContentPage.Content>
         <Grid>

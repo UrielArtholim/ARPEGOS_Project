@@ -6,7 +6,7 @@
     <Application.Resources>
         <converter:GetInitialsImageConverter x:Key="GetInitialsImageConverter"/>
         <converter:GetThemeColorConverter x:Key="GetThemeColorConverter"/>
-        <ResourceDictionary Source="Themes/DarkTheme.xaml"/>
+        <ResourceDictionary Source="Themes/LightTheme.xaml"/>
         <Style TargetType="NavigationPage">
             <Setter Property="BarBackgroundColor" Value="{x:DynamicResource TitleBackgroundColor}"/>
             <Setter Property="BarTextColor" Value="{x:DynamicResource TitleTextColor}"/>

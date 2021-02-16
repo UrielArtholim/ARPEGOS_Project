@@ -5,6 +5,7 @@
              Title="{Binding StageName}"
              Visual="Material"
              x:Name="SingleChoice"
+             NavigationPage.HasBackButton="false"
              BackgroundImageSource="{x:DynamicResource BackgroundImageSource}">
     <ContentPage.Content>
         <Grid>

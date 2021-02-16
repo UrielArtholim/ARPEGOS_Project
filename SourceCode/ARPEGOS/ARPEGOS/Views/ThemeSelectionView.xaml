@@ -52,7 +52,7 @@
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
-                <Button Text="Siguiente" 
+                <Button Text="Atrás" 
                         Command="{Binding NextCommand}" 
                         Style="{x:DynamicResource NextButton}"/>
             </StackLayout>

@@ -6,40 +6,41 @@
              Visual="Material"
              Title="{Binding StageName}"
              x:Name="ValuedChoice"
+             NavigationPage.HasBackButton="false"
              BackgroundImageSource="{x:DynamicResource BackgroundImageSource}">
     <ContentPage.Content>
         <Grid>
             <StackLayout Spacing="20" Padding="0" Margin="20,20,20,20">
                 <StackLayout Orientation="Vertical">
-                    <Frame Style="{x:DynamicResource ProgressFrame}">
-                        <StackLayout Style="{x:DynamicResource ProgressBarVerticalLayout}">
-                            <StackLayout Style="{x:DynamicResource LimitLayout}" IsVisible="{x:DynamicResource HasGeneralLimit}">
-                                <StackLayout Orientation="Vertical" >
-                                    <StackLayout Orientation="Horizontal">
-                                        <Label Text="Límite general" HorizontalOptions="StartAndExpand" Style="{x:DynamicResource ItemLabel}" />
-                                        <Label Text="{Binding GeneralProgressLabel, StringFormat='{0:F0}'}" Style="{x:DynamicResource ItemLabel}" HorizontalOptions="EndAndExpand" FontSize="Medium"/>
-                                    </StackLayout>
-                                    <ProgressBar x:Name="GeneralProgressBar"  
+                    <StackLayout Style="{x:DynamicResource LimitLayout}" IsVisible="{Binding HasGeneralLimit}">
+                        <Frame Style="{x:DynamicResource ProgressFrame}">
+                            <StackLayout Orientation="Vertical">
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="Límite general" HorizontalOptions="StartAndExpand" Style="{x:DynamicResource ItemLabel}" />
+                                    <Label Text="{Binding GeneralProgressLabel, StringFormat='{0:F0}'}" HorizontalOptions="EndAndExpand" FontSize="Medium"/>
+                                </StackLayout>
+                                <ProgressBar x:Name="GeneralProgressBar"  
                                              Style="{x:DynamicResource GeneralProgressBar}"
                                              Progress="{Binding GeneralProgress}" 
                                              IsVisible="{Binding HasGeneralLimit}"/>
-                                </StackLayout>
                             </StackLayout>
-                            <StackLayout Style="{x:DynamicResource LimitLayout}"  IsVisible="{Binding HasStageLimit}">
-                                <StackLayout Orientation="Vertical">
-                                    <StackLayout Orientation="Horizontal" Spacing="5" HorizontalOptions="FillAndExpand">
-                                        <Label Text="Límite de etapa" HorizontalOptions="StartAndExpand" Style="{x:DynamicResource ItemLabel}"/>
-                                        <Label Text="{Binding StageProgressLabel, StringFormat='{0:F0}'}" HorizontalOptions="EndAndExpand" FontSize="Medium" Style="{x:DynamicResource ItemLabel}"/>
-                                    </StackLayout>
-                                    <ProgressBar x:Name="StageProgressBar" 
+                        </Frame>
+                    </StackLayout>
+                    <StackLayout Style="{x:DynamicResource LimitLayout}" IsVisible="{Binding HasStageLimit}">
+                        <Frame Style="{x:DynamicResource ProgressFrame}">
+                            <StackLayout Orientation="Vertical">
+                                <StackLayout Orientation="Horizontal" Spacing="5" HorizontalOptions="FillAndExpand">
+                                    <Label Text="Límite de etapa" HorizontalOptions="StartAndExpand" Style="{x:DynamicResource ItemLabel}"/>
+                                    <Label Text="{Binding StageProgressLabel, StringFormat='{0:F0}'}" HorizontalOptions="EndAndExpand" FontSize="Medium"/>
+                                </StackLayout>
+                                <ProgressBar x:Name="StageProgressBar" 
                                              Style="{x:DynamicResource StageProgressBar}"
                                              Progress="{Binding StageProgress}"/>
-                                </StackLayout>
                             </StackLayout>
-                        </StackLayout>
-                    </Frame>
+                        </Frame>
+                    </StackLayout>
                 </StackLayout>
-                
+
                 <ListView ItemsSource="{Binding Data}" HasUnevenRows="True" SelectionMode="None">
                     <ListView.ItemTemplate>
                         <DataTemplate>

@@ -33,13 +33,16 @@ namespace ARPEGOS.ViewModels
             this.HomeCommand = new Command(async() =>
             {
                 var navigationStack = App.Current.MainPage.Navigation.NavigationStack;
-                if(navigationStack.Count > 0)
+                var viewModel = App.Current.MainPage.Navigation.NavigationStack[0].BindingContext as MainViewModel;
+                
+                if (navigationStack.Count > 0)
                 {
                    var currentPage = App.Current.MainPage.Navigation.NavigationStack.Last() as NavigationPage;
-                   await currentPage.PopToRootAsync();
+                   await currentPage.PopToRootAsync();                   
                 }
                 var mainPage = App.Current.MainPage as MasterDetailPage;
                 mainPage.IsPresented = false;
+                viewModel.Load(MainViewModel.SelectionStatus.SelectingGame);
             });
 
             this.ShowCharactersCommand = new Command(async() =>
