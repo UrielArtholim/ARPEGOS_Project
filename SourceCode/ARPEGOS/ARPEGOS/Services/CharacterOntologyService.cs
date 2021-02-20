@@ -10,7 +10,7 @@ namespace ARPEGOS.Services
     {
         public CharacterOntologyService (string name, string path, string context, RDFOntology ontology) : base(name, path, context, ontology) { }
 
-        public static object SaveLock = new object();
+        static object SaveLock = new object();
         public void Save()
         {
             lock(SaveLock)

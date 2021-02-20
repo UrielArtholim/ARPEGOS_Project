@@ -29,7 +29,7 @@ namespace ARPEGOS.Services
             return rootClassName;
         }
 
-        public ObservableCollection<Stage> GetCreationScheme(string objectString)
+        public IEnumerable<Stage> GetCreationScheme(string objectString)
         {
             var game = DependencyHelper.CurrentContext.CurrentGame;
             var character = DependencyHelper.CurrentContext.CurrentCharacter;
@@ -44,7 +44,7 @@ namespace ARPEGOS.Services
             {
                 editStageLimit = false;
                 editGeneralLimit = false;
-                var stepStageString = character.GetString(name, StageViewModel.ApplyOnCharacter);
+                var stepStageString = character.GetFullString(name, StageViewModel.ApplyOnCharacter);
 
                 RDFOntologyTaxonomy gameCustomAnnotations;
                 if(character.CheckDatatypeProperty(stepStageString,false))

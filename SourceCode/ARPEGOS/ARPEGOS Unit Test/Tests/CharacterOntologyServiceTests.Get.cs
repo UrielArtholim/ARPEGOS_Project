@@ -9,6 +9,7 @@ using RDFSharp.Semantics.OWL;
 using System.Collections;
 using ARPEGOS;
 using RDFSharp.Model;
+using System.Collections.ObjectModel;
 
 namespace ARPEGOS_Unit_Test.Tests
 {
@@ -144,12 +145,12 @@ namespace ARPEGOS_Unit_Test.Tests
             var testValue = random.Next(100).ToString();
 
             var skillName = $"{FileService.EscapedName(name)}";
-            var skillString = Character.GetString(skillName);
+            var skillString = Character.GetFullString(skillName);
             var characterSkillString = string.Empty;
 
             if (string.IsNullOrEmpty(skillString))
             {
-                var gameSkillString = Character.GetString($"Per_{skillName}_Total");
+                var gameSkillString = Character.GetFullString($"Per_{skillName}_Total");
                 if (gameSkillString != null)
                 {
                     var valuetypeProperty = Game.Ontology.Model.PropertyModel.SelectProperty(gameSkillString);
@@ -180,7 +181,7 @@ namespace ARPEGOS_Unit_Test.Tests
             else
             {
                 var newSkillName = $"Per_{skillName}_Total";
-                var gameSkillString = Character.GetString(newSkillName);
+                var gameSkillString = Character.GetFullString(newSkillName);
                 if (gameSkillString != null)
                 {
                     if (Character.CheckDatatypeProperty(gameSkillString , false))
@@ -245,7 +246,7 @@ namespace ARPEGOS_Unit_Test.Tests
                                 }
                                 if (objectPropertiesSet.Count > 0)
                                 {
-                                    var skillValueAnnotationString = character.GetString($"SkillValue");
+                                    var skillValueAnnotationString = character.GetFullString($"SkillValue");
                                     var skillValueAnnotation = Game.Ontology.Model.PropertyModel.SelectProperty(skillValueAnnotationString);
                                     foreach (var item in objectPropertiesSet)
                                     {
@@ -279,7 +280,7 @@ namespace ARPEGOS_Unit_Test.Tests
 
                             var valuePropertyEntries = Game.Ontology.Model.PropertyModel.Annotations.CustomAnnotations.SelectEntriesBySubject(skillValueProperty);
                             var valuePropertyName = valuePropertyEntries.Where(entry => entry.TaxonomyPredicate.ToString().Contains("SkillValue")).Single().TaxonomyObject.ToString().Split('^').First();
-                            var characterValuePropertyString = character.GetString(valuePropertyName , true);
+                            var characterValuePropertyString = character.GetFullString(valuePropertyName , true);
                             var value = string.Empty;
                             if (string.IsNullOrEmpty(characterValuePropertyString))
                             {
@@ -319,7 +320,7 @@ namespace ARPEGOS_Unit_Test.Tests
         {
             var elementClassName = string.Empty;
             var escapedElementName = FileService.EscapedName(elementName);
-            var elementString = character.GetString(escapedElementName , applyOnCharacter);
+            var elementString = character.GetFullString(escapedElementName , applyOnCharacter);
             if (!string.IsNullOrEmpty(elementString))
             {
                 var elementClass = Character.GetElementClass(elementString , applyOnCharacter);
@@ -386,7 +387,7 @@ namespace ARPEGOS_Unit_Test.Tests
             var gotExpectedResult = false;
             var gotExpectedDescription = false;
             var escapedElementName = FileService.EscapedName(elementName);
-            var elementString = character.GetString(escapedElementName , applyOnCharacter);
+            var elementString = character.GetFullString(escapedElementName , applyOnCharacter);
             if (!string.IsNullOrEmpty(elementString))
             {
                 var currentOntology = applyOnCharacter ? Character.Ontology : Game.Ontology;
@@ -501,7 +502,7 @@ namespace ARPEGOS_Unit_Test.Tests
         {
             var gotExpectedIndividuals = false;
             var escapedClassName = FileService.EscapedName(className);
-            var classString = character.GetString(escapedClassName , applyOnCharacter);
+            var classString = character.GetFullString(escapedClassName , applyOnCharacter);
             if (!string.IsNullOrEmpty(classString))
             {
                 var individuals = new List<string>();
@@ -582,11 +583,11 @@ namespace ARPEGOS_Unit_Test.Tests
         {
             var gotExpectedGroups = true;
             var escapedClassName = FileService.EscapedName(className);
-            var classString = character.GetString(escapedClassName , applyOnCharacter);
+            var classString = character.GetFullString(escapedClassName , applyOnCharacter);
             if (!string.IsNullOrEmpty(classString))
             {
                 bool errorDetected = false;
-                var groups = Character.GetIndividualsGrouped(classString , applyOnCharacter);
+                var groups = new ObservableCollection<Group>(Character.GetIndividualsGrouped(classString , applyOnCharacter));
                 var groupsCount = groups.Count;
                 var expectedGroupsCount = expectedGroups.Count();
                 if (int.Equals(expectedGroupsCount , groupsCount))
@@ -623,7 +624,7 @@ namespace ARPEGOS_Unit_Test.Tests
         [TestCase("Habilidad Combate General" , 1500 , true , ExpectedResult = true)]
         public bool GetAvailablePoints_Test( string elementName , double? expectedPoints , bool applyOnCharacter = true )
         {
-            var elementString = Character.GetString(FileService.EscapedName(elementName) , applyOnCharacter);
+            var elementString = Character.GetFullString(FileService.EscapedName(elementName) , applyOnCharacter);
             Character.GetAvailablePoints(elementString , out var availablePoints , applyOnCharacter);
             return expectedPoints == availablePoints;
         }
@@ -664,7 +665,7 @@ namespace ARPEGOS_Unit_Test.Tests
             var escapedStageName = FileService.EscapedName(stageName);
             var escapedItemName = FileService.EscapedName(itemName);
             var currentOntology = applyOnCharacter ? Character.Ontology : Game.Ontology;
-            var stageString = Character.GetString(escapedStageName , applyOnCharacter);
+            var stageString = Character.GetFullString(escapedStageName , applyOnCharacter);
             var stageElements = Character.GetIndividuals(stageString , applyOnCharacter);
             var item = stageElements.Where(element => string.Equals(element.FullName.Split('#').Last() , escapedItemName)).Single();
             var property = Character.GetObjectPropertyAssociated(stageString , item , applyOnCharacter).Split('#').Last();
@@ -678,7 +679,7 @@ namespace ARPEGOS_Unit_Test.Tests
         
         public bool GetParentClasses_Test(string itemName, bool applyOnCharacter, string expectedClassName)
         {
-            var itemString = Character.GetString(FileService.EscapedName(itemName) , applyOnCharacter);
+            var itemString = Character.GetFullString(FileService.EscapedName(itemName) , applyOnCharacter);
             var escapedExpectedClassName = FileService.EscapedName(expectedClassName);
             var expectedParentClassesString = Character.GetParentClasses(itemString , applyOnCharacter);
             var expectedParentClasses = expectedParentClassesString.Split('|').ToList();
@@ -726,7 +727,7 @@ namespace ARPEGOS_Unit_Test.Tests
         [TestCaseSource(nameof(Subclasses_TestCases))]
         public void GetSubclasses_Test(string className, bool applyOnCharacter, List<string> expectedSubclasses)
         {
-            var classString = Character.GetString(FileService.EscapedName(className) , applyOnCharacter);
+            var classString = Character.GetFullString(FileService.EscapedName(className) , applyOnCharacter);
             var groups = Character.GetSubClasses(classString , applyOnCharacter).ToList();
             var subclasses = new List<string>();
             foreach (var group in groups)
@@ -749,7 +750,7 @@ namespace ARPEGOS_Unit_Test.Tests
         [TestCase("Descrear", false, "urn:absolute:arpegos-project.org/games/anima_beyond_fantasy#Descrear")]
         public void GetString_Test(string elementName, bool applyOnCharacter, string expectedElementString)
         {
-            var elementString = Character.GetString(FileService.EscapedName(elementName) , applyOnCharacter);
+            var elementString = Character.GetFullString(FileService.EscapedName(elementName) , applyOnCharacter);
             Assert.IsTrue(string.Equals(expectedElementString ,elementString));
         }
 

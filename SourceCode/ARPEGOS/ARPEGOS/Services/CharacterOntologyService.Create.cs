@@ -41,10 +41,10 @@ namespace ARPEGOS.Services
         {            
             var GameDataModel = DependencyHelper.CurrentContext.CurrentGame.Ontology.Data;
             var CharacterDataModel = this.Ontology.Data;
-            var GameFactString = GetString(elementName);
+            var GameFactString = GetFullString(elementName);
             var GameFact = GameDataModel.SelectFact(GameFactString);
             var CharacterFact = new RDFOntologyFact(new RDFResource($"{this.Context}{elementName}"));
-            if (!CheckFact(GetString(elementName, true)))
+            if (!CheckFact(GetFullString(elementName, true)))
                 this.Ontology.Data.AddFact(CharacterFact);
 
             if(elementName != this.Name)
@@ -102,7 +102,7 @@ namespace ARPEGOS.Services
             var GameClassModel = DependencyHelper.CurrentContext.CurrentGame.Ontology.Model.ClassModel;
             var CharacterClassModel = this.Ontology.Model.ClassModel;
             elementName = FileService.EscapedName(elementName.Split('#').Last());
-            var elementString = GetString(elementName);
+            var elementString = GetFullString(elementName);
             var GameClass = GameClassModel.SelectClass(elementString);
             elementString = $"{this.Context}{elementName}";
             var CharacterClass = new RDFOntologyClass(new RDFResource(elementString));
@@ -185,7 +185,7 @@ namespace ARPEGOS.Services
             var GamePropertyModel = DependencyHelper.CurrentContext.CurrentGame.Ontology.Model.PropertyModel;
             var CharacterPropertyModel = this.Ontology.Model.PropertyModel;
             var CharacterClassModel = this.Ontology.Model.ClassModel;
-            var elementString = GetString(elementName);
+            var elementString = GetFullString(elementName);
             var GameObjectProperty = GamePropertyModel.SelectProperty(elementString) as RDFOntologyObjectProperty;
             elementString = $"{this.Context}{elementName}";
             var CharacterObjectProperty = new RDFOntologyObjectProperty(new RDFResource(elementString));
@@ -311,7 +311,7 @@ namespace ARPEGOS.Services
             var GamePropertyModel = DependencyHelper.CurrentContext.CurrentGame.Ontology.Model.PropertyModel;
             var CharacterPropertyModel = this.Ontology.Model.PropertyModel;
             var CharacterClassModel = this.Ontology.Model.ClassModel;
-            var elementString = GetString(elementName);
+            var elementString = GetFullString(elementName);
             var GameDatatypeProperty = GamePropertyModel.SelectProperty(elementString) as RDFOntologyDatatypeProperty;
             var GameSuperProperties = GamePropertyModel.GetSuperPropertiesOf(GameDatatypeProperty).ToList();
             GameSuperProperties.Reverse();
@@ -426,7 +426,7 @@ namespace ARPEGOS.Services
 
                 RDFOntologyClass subjectClass;
                 var subjectClassName = "Personaje_Jugador";
-                var subjectClassString = GetString(subjectClassName);
+                var subjectClassString = GetFullString(subjectClassName);
                 if (!CheckClass(subjectClassString))
                     subjectClass = CreateClass(subjectClassName);
                 else
@@ -441,7 +441,7 @@ namespace ARPEGOS.Services
                 var CharacterPropertyModel = this.Ontology.Model.PropertyModel;
                 var GameDataModel = DependencyHelper.CurrentContext.CurrentGame.Ontology.Data;
                 var CharacterDataModel = this.Ontology.Data;
-                var GameFactString = GetString(elementName);
+                var GameFactString = GetFullString(elementName);
                 var GameNamedFact = GameDataModel.SelectFact(GameFactString);
                 var GameNamedFactClasstype = GameDataModel.Relations.ClassType.SelectEntriesBySubject(GameNamedFact).Single();
                 var FactClassString = GameNamedFactClasstype.TaxonomyObject.ToString();

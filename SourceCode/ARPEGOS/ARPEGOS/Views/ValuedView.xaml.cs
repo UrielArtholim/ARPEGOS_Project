@@ -24,12 +24,12 @@ namespace ARPEGOS.Views
             var character = DependencyHelper.CurrentContext.CurrentCharacter;
             var viewModel = this.BindingContext as ValuedViewModel;
 
-            var stageLimitPropertyString = character.GetString(viewModel.StageLimitProperty, true);
+            var stageLimitPropertyString = character.GetFullString(viewModel.StageLimitProperty, true);
             character.UpdateDatatypeAssertion(stageLimitPropertyString, viewModel.StageLimit.ToString());
 
             if (viewModel.HasGeneralLimit == true)
             {
-                var generalLimitPropertyString = character.GetString(StageViewModel.GeneralLimitProperty, true);
+                var generalLimitPropertyString = character.GetFullString(StageViewModel.GeneralLimitProperty, true);
                 character.UpdateDatatypeAssertion(generalLimitPropertyString, viewModel.GeneralLimit.ToString());
             }
 

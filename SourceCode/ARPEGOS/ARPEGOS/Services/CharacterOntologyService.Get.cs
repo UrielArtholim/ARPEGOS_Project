@@ -68,7 +68,7 @@ namespace ARPEGOS.Services
             foreach (var pair in characterProperties)
             {
                 var propertyName = pair.Key.Split('#').Last().Replace("Per_", string.Empty).Replace("_Total", string.Empty);
-                var propertyString = character.GetString(propertyName);
+                var propertyString = character.GetFullString(propertyName);
                 if(!string.IsNullOrEmpty(propertyString))
                 {
                     var propertyFact = game.Ontology.Data.SelectFact(propertyString);
@@ -122,7 +122,7 @@ namespace ARPEGOS.Services
         {
             var game = DependencyHelper.CurrentContext.CurrentGame;
             var skillPropertyName = $"Per_{skillName}_Total";
-            var skillPropertyString = this.GetString(skillPropertyName, true);
+            var skillPropertyString = this.GetFullString(skillPropertyName, true);
             var currentString = string.Empty;
             if (this.CheckDatatypeProperty(skillPropertyString) == true)
             {
@@ -130,7 +130,7 @@ namespace ARPEGOS.Services
                 currentString = skillPropertyString;
             }
             else
-                currentString = this.GetString(skillName, true);
+                currentString = this.GetFullString(skillName, true);
 
             int skillValue = 0;
             var character = this.Ontology.Data.SelectFact($"{this.Context}{FileService.EscapedName(this.Name)}");
@@ -140,7 +140,7 @@ namespace ARPEGOS.Services
                 var skillProperty = this.Ontology.Data.Relations.Assertions.SelectEntriesByObject(skillFact).Single().TaxonomyPredicate;
                 var valuePropertyEntries = this.Ontology.Model.PropertyModel.Annotations.CustomAnnotations.SelectEntriesBySubject(skillProperty);
                 var valuePropertyName = valuePropertyEntries.Where(entry => entry.TaxonomyPredicate.ToString().Contains("SkillValue")).Single().TaxonomyObject.ToString().Split('^').First();
-                var valuePropertyString = this.GetString(valuePropertyName, true);
+                var valuePropertyString = this.GetFullString(valuePropertyName, true);
                 var valueProperty = this.Ontology.Model.PropertyModel.SelectProperty(valuePropertyString);
                 skillValue = Convert.ToInt32(this.Ontology.Data.Relations.Assertions.SelectEntriesByPredicate(valueProperty).Single().TaxonomyObject.ToString().Split('^').First()); 
 
@@ -245,7 +245,7 @@ namespace ARPEGOS.Services
             }
 
             if (!elementString.Contains('#'))
-                currentElementString = this.GetString(elementString, applyOnCharacter);                
+                currentElementString = this.GetFullString(elementString, applyOnCharacter);                
 
             var DataModel = CurrentOntology.Data;
             var currentElementClass = CurrentOntology.Model.ClassModel.SelectClass(currentElementString) as RDFOntologyClass;
@@ -420,10 +420,10 @@ namespace ARPEGOS.Services
         /// <param name="className">Name of the class</param>
         /// <param name="applyOnCharacter">Search inside character</param>
         /// <returns></returns>
-        public ObservableCollection<Group> GetIndividualsGrouped (string classString, bool applyOnCharacter = false)
+        public IEnumerable<Group> GetIndividualsGrouped (string classString, bool applyOnCharacter = false)
         {
             ObservableCollection<Group> groups = null;
-            ObservableCollection<Group> subclasses = GetSubClasses(classString, applyOnCharacter);
+            ObservableCollection<Group> subclasses =  new ObservableCollection<Group> (GetSubClasses(classString, applyOnCharacter));
             if (subclasses != null)
             {
                 groups = new ObservableCollection<Group>();
@@ -462,7 +462,7 @@ namespace ARPEGOS.Services
             var CompareList = new List<string>();
             var ResultProperties = new List<RDFOntologyProperty>();
 
-            var GameElementString = Character.GetString(ElementString.Split('#').Last());
+            var GameElementString = Character.GetFullString(ElementString.Split('#').Last());
             var GameElementClass = Game.Ontology.Model.ClassModel.SelectClass(currentElementString);
             var ElementClassAnnotations = Game.Ontology.Data.Annotations.CustomAnnotations.SelectEntriesBySubject(GameElementClass);
             var GeneralLimitAnnotations = ElementClassAnnotations.Where(entry => entry.TaxonomyPredicate.ToString().Contains("GeneralLimit"));
@@ -623,7 +623,7 @@ namespace ARPEGOS.Services
             if (stageName.Contains('#'))
                 stageName = stageName.Split('#').Last();
 
-            var stageString = character.GetString(stageName);
+            var stageString = character.GetFullString(stageName);
             var stageClass = game.Ontology.Model.ClassModel.SelectClass(stageString);
             if (stageClass != null)
             {
@@ -640,7 +640,7 @@ namespace ARPEGOS.Services
                         bool propertyFound = CharacterProperties.ContainsKey(LimitName);
                         if (!propertyFound)
                         {
-                            var LimitPropertyString = character.GetString(LimitName);
+                            var LimitPropertyString = character.GetFullString(LimitName);
                             var property = game.Ontology.Model.PropertyModel.SelectProperty(LimitPropertyString);
                             if (property != null)
                             {
@@ -666,18 +666,18 @@ namespace ARPEGOS.Services
                         if (AnnotationEntries.Count() > 0)
                         { // Sujeto Predicado Objeto
                             LimitName = AnnotationEntries.Single().TaxonomyObject.ToString().Split('^').First();
-                            bool propertyFound = CharacterProperties.ContainsKey(GetString(LimitName,true));
+                            bool propertyFound = CharacterProperties.ContainsKey(GetFullString(LimitName,true));
                             if (!propertyFound)
                             {
                                 CharacterLimitString = $"{character.Context}{LimitName}";
-                                var GameLimitString = character.GetString(LimitName);
+                                var GameLimitString = character.GetFullString(LimitName);
                                 var GameLimitProperty = game.Ontology.Model.PropertyModel.SelectProperty(GameLimitString);
                                 var GamePropertyIsDefinedByAnnotations = game.Ontology.Model.PropertyModel.Annotations.IsDefinedBy;
                                 var GameLimitIsDefinedByAnnotations = GamePropertyIsDefinedByAnnotations.SelectEntriesBySubject(GameLimitProperty);
                                 if (GameLimitIsDefinedByAnnotations.EntriesCount > 0)
                                 {
                                     var definitionValue = GameLimitIsDefinedByAnnotations.Single().TaxonomyObject.ToString().Split('^').First();
-                                    var definitionString = character.GetString(definitionValue);
+                                    var definitionString = character.GetFullString(definitionValue);
                                     var definitionProperty = game.Ontology.Model.PropertyModel.SelectProperty(definitionString);
                                     var GameDefinitionIsDefinedByAnnotations = GamePropertyIsDefinedByAnnotations.SelectEntriesBySubject(definitionProperty);
                                     if (GameDefinitionIsDefinedByAnnotations.EntriesCount > 0)
@@ -730,9 +730,9 @@ namespace ARPEGOS.Services
         public double GetStep(string itemName, string stageName)
         {
             double step = 1;
-            var itemString = this.GetString(itemName , false);
+            var itemString = this.GetFullString(itemName , false);
             var characterTypeStageName = this.GetCreationSchemeRootClass().Split('#').Last();
-            var characterTypeStageString = DependencyHelper.CurrentContext.CurrentCharacter.GetString(characterTypeStageName, true);
+            var characterTypeStageString = DependencyHelper.CurrentContext.CurrentCharacter.GetFullString(characterTypeStageName, true);
             var characterTypePropertyString = this.GetObjectPropertyAssociated(characterTypeStageString, null, true);
             var characterTypeProperty = this.Ontology.Model.PropertyModel.SelectProperty(characterTypePropertyString);
             var characterTypeFact = this.Ontology.Data.Relations.Assertions.SelectEntriesByPredicate(characterTypeProperty).Single().TaxonomyObject;
@@ -831,7 +831,7 @@ namespace ARPEGOS.Services
 
             if (!propertyFound)
             {
-                propertyString = character.GetString(name);
+                propertyString = character.GetFullString(name);
                 var property = game.Ontology.Model.PropertyModel.SelectProperty(propertyString);
                 var gamePropertyAnnotations = game.Ontology.Model.PropertyModel.Annotations.IsDefinedBy.SelectEntriesBySubject(property);
                 if (gamePropertyAnnotations.EntriesCount > 0)
@@ -930,7 +930,7 @@ namespace ARPEGOS.Services
                 }
             }
             if (!propertyString.Contains('#'))
-                propertyString = GetString(propertyString);
+                propertyString = GetFullString(propertyString);
             return propertyString;
         }//MODIFIED
 
@@ -1124,7 +1124,7 @@ namespace ARPEGOS.Services
         /// <param name="className">Name of the class</param>
         /// <param name="applyOnCharacter">Check in character file</param>
         /// <returns></returns>
-        public ObservableCollection<Group> GetSubClasses (string classString, bool applyOnCharacter = false)
+        public IEnumerable<Group> GetSubClasses (string classString, bool applyOnCharacter = false)
         {
             RDFOntology CurrentOntology;
             string CurrentContext;
@@ -1228,7 +1228,7 @@ namespace ARPEGOS.Services
         /// <param name="applyOnCharacter">Check in character file</param>
         /// <returns></returns>
         /// 
-        public string GetString(string elementName, bool applyToCharacter = false)
+        public string GetFullString(string elementName, bool applyToCharacter = false)
         {
             RDFOntology GameOntology = DependencyHelper.CurrentContext.CurrentGame.Ontology;
             RDFOntology CharacterOntology = this.Ontology;
@@ -1386,7 +1386,7 @@ namespace ARPEGOS.Services
                         continue;
                 } // Ended element as numeric value
                 // 3.2 Check if element is a datatype property in the current ontology
-                else if (CheckDatatypeProperty(GetString(element, applyOnCharacter), applyOnCharacter))
+                else if (CheckDatatypeProperty(GetFullString(element, applyOnCharacter), applyOnCharacter))
                 {
                     // 3.2.1 Check if element is in the first position. 
                     if (index == 0)
@@ -1395,7 +1395,7 @@ namespace ARPEGOS.Services
                         // 3.2.1.1 Get character fact
                         var CharacterFact = CharacterOntology.Data.SelectFact($"{this.Context}{FileService.EscapedName(this.Name)}");
                         // 3.2.1.2 Check if character has element datatype property defined
-                        var characterElementPropertyString = GetString(element, true);
+                        var characterElementPropertyString = GetFullString(element, true);
                         var characterElementProperty = CharacterOntology.Model.PropertyModel.SelectProperty(characterElementPropertyString) as RDFOntologyDatatypeProperty;
 
                         if (characterElementProperty == null)
@@ -1403,7 +1403,7 @@ namespace ARPEGOS.Services
                             /* 3.2.1.2.1 If character does not have element datatype property defined, it is time to define it. For doing it, 
                              * we will search inside the game ontology the same property, and we will assign its default value, which will be included as an
                              * "IsDefinedBy" annotation property.*/
-                            var gameElementPropertyString = GetString(element);
+                            var gameElementPropertyString = GetFullString(element);
                             var gameElementProperty = GameOntology.Model.PropertyModel.SelectProperty(gameElementPropertyString);
                             // 3.2.1.2.2 Check if gameElementProperty exists, to prevent unhandled exceptions
                             if (gameElementProperty != null)
@@ -1473,12 +1473,12 @@ namespace ARPEGOS.Services
                         var previousElement = formulaElements.ElementAt(index - 1);
 
                         // 3.2.2.2 Check if the element is an individual in the game ontology
-                        if (CheckIndividual(GetString(previousElement)))
+                        if (CheckIndividual(GetFullString(previousElement)))
                         {
                             // 3.2.2.3 Check if the element is has a version inside the character ontology. If it does not, then we create one
-                            var individualFact = CheckIndividual(GetString(previousElement, true)) ? CharacterOntology.Data.SelectFact(GetString(previousElement, applyOnCharacter)) : CreateIndividual(previousElement);
+                            var individualFact = CheckIndividual(GetFullString(previousElement, true)) ? CharacterOntology.Data.SelectFact(GetFullString(previousElement, applyOnCharacter)) : CreateIndividual(previousElement);
                             // 3.2.2.4 Now its time to find the current element inside the character ontology. As before, if it is not inside the character ontology, we create it.
-                            var elementProperty = CheckDatatypeProperty(GetString(element, true)) ? CharacterOntology.Model.PropertyModel.SelectProperty(GetString(element, true)) : CreateDatatypeProperty(element);
+                            var elementProperty = CheckDatatypeProperty(GetFullString(element, true)) ? CharacterOntology.Model.PropertyModel.SelectProperty(GetFullString(element, true)) : CreateDatatypeProperty(element);
                             // 3.2.2.5 Look if there is any assertion of the element property of the individual fact inside the character ontology
                             var individualFactElementPropertyAssertions = CharacterOntology.Data.Relations.Assertions.SelectEntriesBySubject(individualFact).SelectEntriesByPredicate(elementProperty);
                             // 3.2.2.6 Check if there is any assertion, to prevent unhandled exceptions
@@ -1513,7 +1513,7 @@ namespace ARPEGOS.Services
                     }
                 } // Ended element as datatype property 
                 // 3.3 Check if element is an object property in the current ontology
-                else if (CheckObjectProperty(GetString(element, applyOnCharacter), applyOnCharacter))
+                else if (CheckObjectProperty(GetFullString(element, applyOnCharacter), applyOnCharacter))
                 {
                     // 3.3.1 Get current element property and the previous element 
                     var elementPropertyName = formulaElements.ElementAt(index);
@@ -1584,7 +1584,7 @@ namespace ARPEGOS.Services
                                 SubjectFact = characterFact;
                             else
                                 // 3.3.2.8A.1B If it does not contain the word, then the subject is the item. If it is not declared inside the ontology, we create it.
-                                SubjectFact = CheckIndividual(GetString(itemName, true)) ? CharacterOntology.Data.SelectFact(GetString(itemName, true)) : CreateIndividual(itemName);
+                                SubjectFact = CheckIndividual(GetFullString(itemName, true)) ? CharacterOntology.Data.SelectFact(GetFullString(itemName, true)) : CreateIndividual(itemName);
                         }
                         else if (itemClassName == string.Empty)
                             // 3.3.2.8B If there is not any itemClass, the subject is the characterFact
@@ -1592,7 +1592,7 @@ namespace ARPEGOS.Services
                         else
                         {
                             // 3.3.2.8C.1 In case there is an item class but it does not contain the first word of any datatype property, get the element property
-                            PredicateProperty = CharacterOntology.Model.PropertyModel.SelectProperty(GetString(element, applyOnCharacter)) as RDFOntologyObjectProperty;
+                            PredicateProperty = CharacterOntology.Model.PropertyModel.SelectProperty(GetFullString(element, applyOnCharacter)) as RDFOntologyObjectProperty;
                             // 3.3.2.8C.2 The next step is check if the current property has characterFact as its domain
                             var PredicatePropertyDomain = PredicateProperty.Domain;
                             // Check if domain is null, to prevent unhandled exceptions
@@ -1602,7 +1602,7 @@ namespace ARPEGOS.Services
                                 if (!PredicatePropertyDomain.ToString().Contains(characterClassName))
                                 {
                                     // 3.3.2.8C.2A If it does not have it, then we have to check if the item passed by parameter is inside the character ontology. If it is not, we create it
-                                    if (!CheckIndividual(GetString(itemName, true), applyOnCharacter))
+                                    if (!CheckIndividual(GetFullString(itemName, true), applyOnCharacter))
                                         SubjectFact = CreateIndividual(itemName);
                                     else
                                         // 3.3.2.8C.2B If the element predicate domains is characterClass, then our subject is the characterFact.
@@ -1612,10 +1612,10 @@ namespace ARPEGOS.Services
                         }
                         /* Once we have the subject, then we need to get the predicate.*/
                         // 3.3.2.9 Check if the predicate exists inside the character ontology. If it does not exists, we create it
-                        if (!CheckObjectProperty(GetString(elementPropertyName, true)))
-                            PredicateProperty = CreateObjectProperty(GetString(elementPropertyName, true));
+                        if (!CheckObjectProperty(GetFullString(elementPropertyName, true)))
+                            PredicateProperty = CreateObjectProperty(GetFullString(elementPropertyName, true));
                         else
-                            PredicateProperty = CharacterOntology.Model.PropertyModel.SelectProperty(GetString(elementPropertyName, true)) as RDFOntologyObjectProperty;
+                            PredicateProperty = CharacterOntology.Model.PropertyModel.SelectProperty(GetFullString(elementPropertyName, true)) as RDFOntologyObjectProperty;
 
                         /* Once we have our subject and predicate, we can find the object we are looking for.*/
                         // 3.3.2.10 Get the triple assertions which have SubjectFact as subject.
@@ -1639,14 +1639,14 @@ namespace ARPEGOS.Services
                                 // 3.3.2.15 Create a counter for next elements
                                 var nextElementCounter = 1;
                                 // 3.3.2.16 Check if next property is a datatype property inside the character property
-                                if (CheckDatatypeProperty(GetString(nextElement, true)))
+                                if (CheckDatatypeProperty(GetFullString(nextElement, true)))
                                 {
                                     // 3.3.2.16A.1 If next property is a datatype property, get the property
-                                    var nextDatatypeProperty = CharacterOntology.Model.PropertyModel.SelectProperty(GetString(nextElement, true)) as RDFOntologyDatatypeProperty;
+                                    var nextDatatypeProperty = CharacterOntology.Model.PropertyModel.SelectProperty(GetFullString(nextElement, true)) as RDFOntologyDatatypeProperty;
                                     // 3.3.2.16A.2 Get next property first word
                                     var nextDatatypePropertyFirstWord = nextDatatypeProperty.ToString().Split('#').Last().Split('_').First();
                                     // 3.3.2.16A.3 Check if characterClassName contains next property first word. If it is true, the subject is the characterfact. If not, then the subject is the subject reference.
-                                    SubjectFact = !characterClassName.Contains(nextDatatypePropertyFirstWord) ? CharacterOntology.Data.SelectFact(GetString(SubjectRef, true)) : characterFact;
+                                    SubjectFact = !characterClassName.Contains(nextDatatypePropertyFirstWord) ? CharacterOntology.Data.SelectFact(GetFullString(SubjectRef, true)) : characterFact;
                                     // 3.3.2.16A.4 Get subject fact assertions
                                     SubjectAssertions = CharacterOntology.Data.Relations.Assertions.SelectEntriesBySubject(SubjectFact);
                                     // Check if SubjectAssertions is not null, to prevent unhandled exceptions
@@ -1689,16 +1689,16 @@ namespace ARPEGOS.Services
                                     // 3.3.2.16B.1 Declare variable to control if its the first tiem to check
                                     var firstTime = true;
                                     // 3.3.2.16B.2 if this is not the last property, get the next property
-                                    while (CheckObjectProperty(GetString(nextElement, true)))
+                                    while (CheckObjectProperty(GetFullString(nextElement, true)))
                                     {
                                         // 3.3.2.16B.2.1 Check if its the first time
                                         if (firstTime)
                                         {
                                             // 3.3.2.16B.2.1A Check if item exists inside the character ontology. If it does not exists, we create it.
-                                            SubjectFact = CheckIndividual(GetString(itemName, true)) ? CharacterOntology.Data.SelectFact(GetString(itemName, true)) : CreateIndividual(GetString(itemName, true));
+                                            SubjectFact = CheckIndividual(GetFullString(itemName, true)) ? CharacterOntology.Data.SelectFact(GetFullString(itemName, true)) : CreateIndividual(GetFullString(itemName, true));
                                         }
                                         // 3.3.2.16B.2.2 Check if element property exists inside the character ontology. If it does not exists, we create it.
-                                        var nextPredicateProperty = CheckObjectProperty(GetString(element, true)) ? CharacterOntology.Model.PropertyModel.SelectProperty(GetString(element, true)) as RDFOntologyObjectProperty : CreateObjectProperty(GetString(itemName, true));
+                                        var nextPredicateProperty = CheckObjectProperty(GetFullString(element, true)) ? CharacterOntology.Model.PropertyModel.SelectProperty(GetFullString(element, true)) as RDFOntologyObjectProperty : CreateObjectProperty(GetFullString(itemName, true));
                                         // 3.3.2.16B.2.3 Get subject fact assertions
                                         SubjectAssertions = CharacterOntology.Data.Relations.Assertions.SelectEntriesByObject(SubjectFact);
                                         // Check if SubjectAssertions is not null, to prevent unhandled exceptions
@@ -1721,14 +1721,14 @@ namespace ARPEGOS.Services
                                     currentPropertyName = nextElement;
                                 }
                                 // 3.3.2.17 Check if current element is datatype property inside the game ontology
-                                if (CheckDatatypeProperty(GetString(currentPropertyName), false))
+                                if (CheckDatatypeProperty(GetFullString(currentPropertyName), false))
                                 {
                                     // 3.3.2.17A.1 Get next element first word
                                     var nextElementFirstWord = currentPropertyName.Split('_').First();
                                     // 3.3.2.17A.2 Check if characterClassName contains next element first word. If it is true, then the subject is character fact. Otherwise, the subject is the subject reference.
-                                    SubjectFact = !characterClassName.Contains(nextElementFirstWord) ? CharacterOntology.Data.SelectFact(GetString(SubjectRef, true)) : characterFact;
+                                    SubjectFact = !characterClassName.Contains(nextElementFirstWord) ? CharacterOntology.Data.SelectFact(GetFullString(SubjectRef, true)) : characterFact;
                                     // 3.3.2.17A.3 Check if currentProperty exists inside the character ontology. If it does not exist, we create it.
-                                    var PredicateDatatypeProperty = CheckDatatypeProperty(GetString(currentPropertyName, true)) ? CharacterOntology.Model.PropertyModel.SelectProperty(GetString(currentPropertyName, true)) as RDFOntologyDatatypeProperty : CreateDatatypeProperty(GetString(currentPropertyName, true));
+                                    var PredicateDatatypeProperty = CheckDatatypeProperty(GetFullString(currentPropertyName, true)) ? CharacterOntology.Model.PropertyModel.SelectProperty(GetFullString(currentPropertyName, true)) as RDFOntologyDatatypeProperty : CreateDatatypeProperty(GetFullString(currentPropertyName, true));
                                     // 3.3.2.17A.4 Get subject fact asssertions
                                     SubjectAssertions = CharacterOntology.Data.Relations.Assertions.SelectEntriesByObject(SubjectFact);
                                     // Check if SubjectAssertions is not null, to prevent unhandled exceptions
@@ -1771,15 +1771,15 @@ namespace ARPEGOS.Services
                     }
                 }// Ended element as object property
                  // 3.4 Check if element is an class in the current ontology
-                else if (CheckClass(GetString(element, applyOnCharacter), applyOnCharacter))
+                else if (CheckClass(GetFullString(element, applyOnCharacter), applyOnCharacter))
                 {
                     // 3.4.1 Get next element
                     var nextElement = formulaElements.ElementAt(index + 1);
                     // 3.4.2 Get element as individual, adding itemName to the end of element string
                     var subjectFactName = $"{element}_{User_Input}";
-                    var SubjectFact = CurrentOntology.Data.SelectFact(GetString(subjectFactName, applyOnCharacter));
+                    var SubjectFact = CurrentOntology.Data.SelectFact(GetFullString(subjectFactName, applyOnCharacter));
                     // 3.4.3 Get next element as property
-                    var PredicateProperty = CurrentOntology.Model.PropertyModel.SelectProperty(GetString(nextElement, applyOnCharacter));
+                    var PredicateProperty = CurrentOntology.Model.PropertyModel.SelectProperty(GetFullString(nextElement, applyOnCharacter));
                     // 3.4.4 Get assertion
                     var assertion = CurrentOntology.Data.Relations.Assertions.SelectEntriesBySubject(SubjectFact).SelectEntriesByPredicate(PredicateProperty);
                     // Check if assertion is not null, to prevent unhandled exceptions
@@ -1790,14 +1790,14 @@ namespace ARPEGOS.Services
                     }
                 }// Ended element as class
                  // 3.5 Check if element is an individual in the current ontology
-                else if (CheckIndividual(GetString(element, applyOnCharacter), applyOnCharacter))
+                else if (CheckIndividual(GetFullString(element, applyOnCharacter), applyOnCharacter))
                 {
                     // 3.5.1 Get next element
                     var nextElement = formulaElements.ElementAt(index + 1);
                     // 3.5.2 Get current element as subject fact
-                    var SubjectFact = CurrentOntology.Data.SelectFact(GetString(element, applyOnCharacter));
+                    var SubjectFact = CurrentOntology.Data.SelectFact(GetFullString(element, applyOnCharacter));
                     // 3.5.3 Get next element as a property
-                    var PredicateProperty = CurrentOntology.Model.PropertyModel.SelectProperty(GetString(nextElement, applyOnCharacter));
+                    var PredicateProperty = CurrentOntology.Model.PropertyModel.SelectProperty(GetFullString(nextElement, applyOnCharacter));
                     // 3.5.4 Check if PredicateProperty is not null, to prevent unhandled exceptions
                     if (PredicateProperty == null)
                     {
@@ -1817,10 +1817,10 @@ namespace ARPEGOS.Services
                                 propertyName += PredicatePropertyWords.ElementAt(i) + "_";
                             propertyName += PredicatePropertyWords.Last();
                             // 3.5.4A.4 Check if propertyName exists as a datatype property inside the current
-                            if (CheckDatatypeProperty(GetString(propertyName, applyOnCharacter), applyOnCharacter))
+                            if (CheckDatatypeProperty(GetFullString(propertyName, applyOnCharacter), applyOnCharacter))
                             {
                                 //3.5.4A.4A.1 If propertyName is a datatype property, get it and update propertyFound indicator
-                                PredicateProperty = CurrentOntology.Model.PropertyModel.SelectProperty(GetString(propertyName, applyOnCharacter));
+                                PredicateProperty = CurrentOntology.Model.PropertyModel.SelectProperty(GetFullString(propertyName, applyOnCharacter));
                                 propertyFound = true;
                             }
                             // 3.5.4A.5 Substract one from wordCounter
@@ -1850,7 +1850,7 @@ namespace ARPEGOS.Services
                         var CharacterFact = CharacterOntology.Data.SelectFact($"{this.Context}{FileService.EscapedName(this.Name)}");
                         var SubjectFact = CharacterFact;
                         // 3.6.2A.2 Check if nextElement is a datatypeProperty 
-                        if (CheckDatatypeProperty(GetString(nextElement, true)))
+                        if (CheckDatatypeProperty(GetFullString(nextElement, true)))
                         {
                             // 3.6.2A.2A.1 Get character class name
                             var characterClassName = GetElementClass($"{this.Context}{FileService.EscapedName(this.Name)}", true).FullName.Split('#').Last();
@@ -1864,11 +1864,11 @@ namespace ARPEGOS.Services
                                 // 3.6.2A.2A.3A.2 Find the element whose class is nextElementClass
                                 var nextElementFactName = CurrentOntology.Data.Relations.ClassType.SelectEntriesByObject(nextElementClass).Single().TaxonomySubject.ToString().Split('#').Last();
                                 // 3.6.2A.2A.3A.3 Check if nextElementFact exists inside the character ontology. If it does not, we create it
-                                CharacterFact = CheckIndividual(GetString(nextElementFactName, true)) ? CharacterOntology.Data.SelectFact(GetString(nextElementFactName, true)) : CreateIndividual(nextElementFactName);
+                                CharacterFact = CheckIndividual(GetFullString(nextElementFactName, true)) ? CharacterOntology.Data.SelectFact(GetFullString(nextElementFactName, true)) : CreateIndividual(nextElementFactName);
                             }
                             // 3.6.2A.2A.4 Check if next element predicate exists inside the character ontology. If it does not, we create it
-                            var PredicateProperty = CheckDatatypeProperty(GetString(nextElement, true)) ? CharacterOntology.Model.PropertyModel.SelectProperty(GetString(nextElement, true))
-                                : CreateDatatypeProperty(GetString(nextElement, true));
+                            var PredicateProperty = CheckDatatypeProperty(GetFullString(nextElement, true)) ? CharacterOntology.Model.PropertyModel.SelectProperty(GetFullString(nextElement, true))
+                                : CreateDatatypeProperty(GetFullString(nextElement, true));
                             // 3.6.2A.2A.5 Declare variable to get next element value string
                             var nextElementValueString = string.Empty;
                             // 3.6.2A.2A.6 Get character assertions
@@ -1884,7 +1884,7 @@ namespace ARPEGOS.Services
                                     // 3.6.2A.2A.7A.1 Get predicate name
                                     var predicateName = PredicateProperty.ToString().Split('#').Last();
                                     // 3.6.2A.2A.7A.2 Search predicate inside the current ontology
-                                    var CurrentOntologyPredicate = CurrentOntology.Model.PropertyModel.SelectProperty(GetString(predicateName, applyOnCharacter));
+                                    var CurrentOntologyPredicate = CurrentOntology.Model.PropertyModel.SelectProperty(GetFullString(predicateName, applyOnCharacter));
                                     // 3.6.2A.2A.7A.3 Get CurrentOntologyPredicate definition annoation
                                     var propertyDefinition = CurrentOntology.Model.PropertyModel.Annotations.IsDefinedBy.SelectEntriesBySubject(CurrentOntologyPredicate).Single().TaxonomyObject.ToString().Split('^').First();
                                     // 3.6.2A.2A.7A.4 Get CurrentOntologyPredicate type
@@ -1913,12 +1913,12 @@ namespace ARPEGOS.Services
                             }
                         }
                         // 3.6.2A.3 Check if nextElement is an objectProperty
-                        else if (CheckObjectProperty(GetString(nextElement, true)))
+                        else if (CheckObjectProperty(GetFullString(nextElement, true)))
                         {
                             // 3.6.2A.4 It it is true, the first thing we will do is save the index in other variable
                             var currentIndex = index;
                             // 3.6.2A.5 Get next element property 
-                            var nextElementProperty = CharacterOntology.Model.PropertyModel.SelectProperty(GetString(nextElement,true));
+                            var nextElementProperty = CharacterOntology.Model.PropertyModel.SelectProperty(GetFullString(nextElement,true));
                             // 3.6.2A.6 Get character assertions
                             var characterAssertions = CharacterOntology.Data.Relations.Assertions.SelectEntriesBySubject(CharacterFact);
                             // Check if characterAssertions is null, to prevent unhandled exceptions
@@ -1936,10 +1936,10 @@ namespace ARPEGOS.Services
                                     // 3.6.2A.10 Get next element
                                     nextElement = formulaElements.ElementAt(currentIndex + 1).Replace("Item", itemName).Replace("Ref", SubjectRef);
                                     // 3.6.2A.11 Check if next element exists as property inside the current ontology
-                                    if (CheckDatatypeProperty(GetString(nextElement, applyOnCharacter), applyOnCharacter))
+                                    if (CheckDatatypeProperty(GetFullString(nextElement, applyOnCharacter), applyOnCharacter))
                                     {
                                         // 3.6.2A.11A.1 If next element is a datatype property, check if the property exists inside the character ontology. If it does not, we create it.
-                                        var PredicateProperty = CheckDatatypeProperty(GetString(nextElement, true)) ? CharacterOntology.Model.PropertyModel.SelectProperty(GetString(nextElement, true)) : CreateDatatypeProperty(GetString(nextElement, true));
+                                        var PredicateProperty = CheckDatatypeProperty(GetFullString(nextElement, true)) ? CharacterOntology.Model.PropertyModel.SelectProperty(GetFullString(nextElement, true)) : CreateDatatypeProperty(GetFullString(nextElement, true));
                                         //3.6.2A.11A.2 Get nextElementFact assertions
                                         var nextElementFactAssertions = CharacterOntology.Data.Relations.Assertions.SelectEntriesBySubject(nextElementFact);
                                         // Check if nextElementFactAssertions is null, to prevent unhandled exceptions
@@ -1976,7 +1976,7 @@ namespace ARPEGOS.Services
                                         // 3.6.2A.11B.2 Declare variable to count number of words in use currently
                                         var wordCounter = nextElementWords.Count() - 1;
                                         // 3.6.2A.11B.3 Mount new property name using next element words while we do not find a property
-                                        while (!CheckDatatypeProperty(GetString(nextElement)) && wordCounter > 1)
+                                        while (!CheckDatatypeProperty(GetFullString(nextElement)) && wordCounter > 1)
                                         {
                                             nextElement = "";
                                             for (int i = 0; i < wordCounter - 1; ++i)
@@ -1988,7 +1988,7 @@ namespace ARPEGOS.Services
                                         if (wordCounter > 1)
                                         {
                                             // 3.6.2A.11B.4A.1 Check if new nextElement is a datatype property inside the characterOntology. If it does not exists, we create it
-                                            var PredicateProperty = CheckDatatypeProperty(GetString(nextElement, true)) ? CharacterOntology.Model.PropertyModel.SelectProperty(GetString(nextElement, true)) : CreateDatatypeProperty(GetString(nextElement, true));
+                                            var PredicateProperty = CheckDatatypeProperty(GetFullString(nextElement, true)) ? CharacterOntology.Model.PropertyModel.SelectProperty(GetFullString(nextElement, true)) : CreateDatatypeProperty(GetFullString(nextElement, true));
                                             // 3.6.2A.11B.4A.2 Get next element fact assertions
                                             var nextElementFactAssertions = CharacterOntology.Data.Relations.Assertions.SelectEntriesBySubject(nextElementFact);
                                             // Check if nextElementFactAssertions is null, to prevent unhandled exceptions
@@ -2022,7 +2022,7 @@ namespace ARPEGOS.Services
                                         {
                                             /* If there is no property, then we need to find it searching upper in the property hierarchy.*/
                                             // 3.6.2A.11B.4B.1 Get item parents
-                                            var itemParents = GetParentClasses(GetString(itemName, applyOnCharacter), applyOnCharacter);
+                                            var itemParents = GetParentClasses(GetFullString(itemName, applyOnCharacter), applyOnCharacter);
                                             // Check if item parents is null, to prevent unhandled exceptions
                                             if (itemParents != null)
                                             {
@@ -2042,20 +2042,20 @@ namespace ARPEGOS.Services
                                                             // 3.6.2A.11B.4B.6 Get next element and replace item with parent
                                                             var newNextElement = formulaElements.ElementAt(i + 1).Replace(itemName, parent);
                                                             // 3.6.2A.11B.4B.7 Check if newNextElement is a datatype property inside the current ontology
-                                                            if (CheckDatatypeProperty(GetString(newNextElement, applyOnCharacter), applyOnCharacter))
+                                                            if (CheckDatatypeProperty(GetFullString(newNextElement, applyOnCharacter), applyOnCharacter))
                                                             {
                                                                 // 3.6.2A.11B.4B.8 Create a new list using the current definition 
                                                                 var newValueList = valueDefinition.Split(':').ToList();
                                                                 // 3.6.2A.11B.4B.9 declare some variables to get the new item definition
                                                                 var basePointsWord = string.Empty;
-                                                                var itemClassItem = GetElementClass(GetString(itemName, applyOnCharacter), applyOnCharacter);
+                                                                var itemClassItem = GetElementClass(GetFullString(itemName, applyOnCharacter), applyOnCharacter);
                                                                 var definitionFound = false;
                                                                 var itemClassDefinition = string.Empty;
                                                                 // 3.6.2A.11B.4B.10 Search while no definition has been found 
                                                                 while (!definitionFound)
                                                                 {
                                                                     // 3.6.2A.11B.4B.10.1 Search for valued list info annotations for item class
-                                                                    var itemClass = CurrentOntology.Model.ClassModel.SelectClass(GetString(itemClassItem.FullName.Split('#').Last(), applyOnCharacter));
+                                                                    var itemClass = CurrentOntology.Model.ClassModel.SelectClass(GetFullString(itemClassItem.FullName.Split('#').Last(), applyOnCharacter));
                                                                     var itemClassAnnotations = CurrentOntology.Model.ClassModel.Annotations.CustomAnnotations.SelectEntriesBySubject(itemClass);
                                                                     // Check if definitionAnnotations is null, to prevent unhandled exceptions
                                                                     if (itemClassAnnotations.EntriesCount > 0)
@@ -2125,7 +2125,7 @@ namespace ARPEGOS.Services
                         }
                         else
                         {
-                            var itemString = GetString(itemName);
+                            var itemString = GetFullString(itemName);
                             var itemClass = GetElementClass(itemString);
                             var itemClassName = itemClass.ToString().Split('#').Last();
                             var definition = valueDefinition.Replace(itemName, itemClassName);
@@ -2165,7 +2165,7 @@ namespace ARPEGOS.Services
                 }
                 else
                 {
-                    var itemString = GetString(itemName);
+                    var itemString = GetFullString(itemName);
                     var itemClass = GetElementClass(itemString);
                     var itemClassName = itemClass.FullName.Split('#').Last();
                     var definition = valueDefinition.Replace("Item", itemClassName);

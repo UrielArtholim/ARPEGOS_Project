@@ -16,7 +16,7 @@ namespace ARPEGOS_Unit_Test.Tests
         public bool UpdateObjectAssertion_Test(string predicateName, string newObjectName)
         {
             var hasUpdated = false;
-            var predicateString = Character.GetString(FileService.EscapedName(predicateName), true);
+            var predicateString = Character.GetFullString(FileService.EscapedName(predicateName), true);
             var characterFact = Character.Ontology.Data.SelectFact($"{Character.Context}{FileService.EscapedName(Character.Name)}");
             var predicateProperty = Character.Ontology.Model.PropertyModel.SelectProperty(predicateString);
             var predicateAssertionEntries = Character.Ontology.Data.Relations.Assertions.SelectEntriesByPredicate(predicateProperty);
@@ -43,7 +43,7 @@ namespace ARPEGOS_Unit_Test.Tests
         public bool UpdateDatatypeAssertion_Test (string predicateName , string newValue)
         {
             var hasUpdated = false;
-            var predicateString = Character.GetString(FileService.EscapedName(predicateName) , true);
+            var predicateString = Character.GetFullString(FileService.EscapedName(predicateName) , true);
             var characterFact = Character.Ontology.Data.SelectFact($"{Character.Context}{FileService.EscapedName(Character.Name)}");
             var predicateProperty = Character.Ontology.Model.PropertyModel.SelectProperty(predicateString);
             var predicateAssertionEntries = Character.Ontology.Data.Relations.Assertions.SelectEntriesByPredicate(predicateProperty);

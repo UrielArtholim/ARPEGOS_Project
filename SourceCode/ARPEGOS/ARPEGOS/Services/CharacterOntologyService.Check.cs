@@ -181,7 +181,7 @@ namespace ARPEGOS.Services
                 if (wordCounter > 0)
                 {
                     var subjectFactName = string.Join('_', stageWords.Take(wordCounter));
-                    var subjectFactString = GetString(subjectFactName, applyOnCharacter);
+                    var subjectFactString = GetFullString(subjectFactName, applyOnCharacter);
                     var subjectFact = CurrentOntology.Model.ClassModel.SelectClass(subjectFactString);
                     if (subjectFact != null)
                     {
@@ -284,7 +284,7 @@ namespace ARPEGOS.Services
 
             if(groupName != null)
             {
-                var groupString = character.GetString(groupName);
+                var groupString = character.GetFullString(groupName);
                 var groupIsClass = character.CheckClass(groupString, false);
                 if(groupIsClass == true)
                 {
@@ -629,12 +629,12 @@ namespace ARPEGOS.Services
                                         itemCostWords.Remove(itemCostWords.Last());
                                         itemCostWords.Add("Total");
                                         var itemCostName = string.Join("_", itemCostWords);
-                                        if (string.IsNullOrEmpty(this.GetString(itemCostName)))
+                                        if (string.IsNullOrEmpty(this.GetFullString(itemCostName)))
                                             itemCostWords.Remove(itemCostWords.Last());
                                     }
 
                                     var requirementCostName = string.Join('_', itemCostWords);
-                                    var requirementCostString = GetString(requirementCostName, true);
+                                    var requirementCostString = GetFullString(requirementCostName, true);
                                     if (string.IsNullOrEmpty(requirementCostString))
                                         requirementCostString = itemCostEntryPredicate;
                                     var characterFact = this.Ontology.Data.SelectFact($"{this.Context}{FileService.EscapedName(this.Name)}");

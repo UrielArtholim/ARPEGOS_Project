@@ -34,11 +34,11 @@ namespace ARPEGOS.Helpers
             set => SetProperty(ref this.currentTheme, value);
         }
 
-        public Dictionary<string, string> BackgroundThemes;
+        Dictionary<string, string> BackgroundThemes;
 
-        public Dictionary<string, string> AddButtonThemes;
+        Dictionary<string, string> AddButtonThemes;
 
-        public Dictionary<string, string> RemoveButtonThemes;
+        Dictionary<string, string> RemoveButtonThemes;
 
 
         public event PropertyChangedEventHandler PropertyChanged;

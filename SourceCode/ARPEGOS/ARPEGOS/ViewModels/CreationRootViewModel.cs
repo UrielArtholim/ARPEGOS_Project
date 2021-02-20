@@ -81,7 +81,7 @@ namespace ARPEGOS.ViewModels
 
             try
             {
-                var scheme = character.GetCreationScheme(this.SelectedItem.FullName);
+                var scheme = new ObservableCollection<Stage>(character.GetCreationScheme(this.SelectedItem.FullName));
                 StageViewModel.CreationScheme = scheme;
             }
             catch (Exception e)

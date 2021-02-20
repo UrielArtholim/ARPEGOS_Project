@@ -177,7 +177,7 @@ namespace ARPEGOS.ViewModels
                 this.CurrentLimit = Math.Min(this.GeneralLimit, this.StageLimit);
 
                 // To maintain stage progress bar state
-                var stageProperty = game.Ontology.Model.PropertyModel.SelectProperty(character.GetString(this.stageLimitProperty));
+                var stageProperty = game.Ontology.Model.PropertyModel.SelectProperty(character.GetFullString(this.stageLimitProperty));
                 var stagePropertyDefinedAnnotations = game.Ontology.Model.PropertyModel.Annotations.IsDefinedBy.SelectEntriesBySubject(stageProperty);
                 var definition = stagePropertyDefinedAnnotations.Single().TaxonomyObject.ToString().Split('^').First();
                 var stageMax = Convert.ToDouble(character.GetValue(definition));

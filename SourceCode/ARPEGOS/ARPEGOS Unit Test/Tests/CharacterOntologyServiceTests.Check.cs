@@ -74,7 +74,7 @@ namespace ARPEGOS_Unit_Test.Tests
         {
             string generalCost = null;
             string context = applyOnCharacter ? Character.Context : Game.Context;
-            string stageString = $"{context}{Character.GetString(FileService.EscapedName(stageName), applyOnCharacter)}";
+            string stageString = $"{context}{Character.GetFullString(FileService.EscapedName(stageName), applyOnCharacter)}";
             if (Character.CheckClass(stageString, applyOnCharacter))
                 generalCost = Character.CheckGeneralCost(FileService.EscapedName(stageName), applyOnCharacter);
             return generalCost;

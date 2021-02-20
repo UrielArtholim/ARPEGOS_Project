@@ -166,7 +166,7 @@ namespace ARPEGOS.ViewModels
                 this.GeneralProgressLabel = this.GeneralLimit;
                 this.CurrentLimit = Math.Min(this.GeneralLimit, this.StageLimit);
 
-                var gameStageProperty = character.GetString(this.stageLimitProperty);
+                var gameStageProperty = character.GetFullString(this.stageLimitProperty);
                 var stageProperty = game.Ontology.Model.PropertyModel.SelectProperty($"{game.Context}{this.stageLimitProperty}");
                 if(stageProperty != null)
                 {

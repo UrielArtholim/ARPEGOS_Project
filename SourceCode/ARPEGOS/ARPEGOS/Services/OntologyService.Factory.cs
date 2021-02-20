@@ -17,42 +17,6 @@ namespace ARPEGOS.Services
 
     public abstract partial class OntologyService
     {
-        /// <summary>
-        /// Gets the name of the ontology
-        /// </summary>
-        public string Name { get; }
-
-        /// <summary>
-        /// Gets the formatted name of the ontology
-        /// </summary>
-        public string FormattedName { get; }
-
-        /// <summary>
-        /// Gets the file path of the ontology
-        /// </summary>
-        public string Path { get; }
-
-        /// <summary>
-        /// Gets base URI of the ontology
-        /// </summary>
-        public string Context { get; }
-
-        /// <summary>
-        /// Gets the ontology accessor
-        /// </summary>
-        public RDFOntology Ontology { get; }
-
-        protected static RDFModelEnums.RDFFormats RDFFormat => RDFModelEnums.RDFFormats.RdfXml;
-
-        public OntologyService(string name, string path, string context, RDFOntology ontology)
-        {
-            this.Name = name;
-            this.FormattedName = FileService.FormatName(name);
-            this.Path = path;
-            this.Context = context;
-            this.Ontology = ontology;
-        }
-
         public static async Task<GameOntologyService> LoadGame(string name, string version)
         {
             if(DependencyHelper.CurrentContext.CurrentGame != null)
