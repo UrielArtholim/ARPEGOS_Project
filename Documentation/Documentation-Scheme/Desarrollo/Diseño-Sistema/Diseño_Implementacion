@@ -1,0 +1,18 @@
+% ARPEGOS:  Automatized Roleplaying-game Profile Extensible Generator Ontology based System %
+% Author : Alejandro Muñoz Del Álamo %
+% Copyright 2019 %
+
+% Section 5.3: Diagrama de clases %
+Después de realizar el diseño lógico de datos del sistema, el próximo paso es diseñar la estructura de clases del proyecto.
+Esta estructura está compuesta por las diversas clases que se consideran necesarias para el funcionamiento de cualquier sistema 
+orientado a objetos, y se puede representar mediante un \textit{diagrama de clases}, que muestra las clases de un sistema
+con sus atributos y operaciones, y las relaciones entre éstas. A continuación se muestra el diagrama de clases del proyecto en 
+la figura \ref*{DiagramaClases}:
+
+\begin{figure}
+    \centering
+    \includegraphics[scale=0.18]{Documentation-Scheme/Desarrollo/Diseño-Sistema/DiagramaClases.pdf}
+    \caption{Diagrama de clases de \textit{ARPEGOS}}
+    \label{DiagramaClases}
+\end{figure}
+
