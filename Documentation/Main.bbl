@@ -1,0 +1,2497 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global}
+    \entry{Adams2010}{article}{}
+      \name{author}{1}{}{%
+        {{hash=bc09d2ee0021dc728b7a1dc8fab7b359}{%
+           family={Adams},
+           familyi={A\bibinitperiod},
+           given={E},
+           giveni={E\bibinitperiod}}}%
+      }
+      \strng{namehash}{bc09d2ee0021dc728b7a1dc8fab7b359}
+      \strng{fullhash}{bc09d2ee0021dc728b7a1dc8fab7b359}
+      \strng{bibnamehash}{bc09d2ee0021dc728b7a1dc8fab7b359}
+      \strng{authorbibnamehash}{bc09d2ee0021dc728b7a1dc8fab7b359}
+      \strng{authornamehash}{bc09d2ee0021dc728b7a1dc8fab7b359}
+      \strng{authorfullhash}{bc09d2ee0021dc728b7a1dc8fab7b359}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{To create a great video game, you must start with a solid game design: A well-designed game is easier to build, more entertaining, and has a better chance of succeeding in the marketplace. Here to teach you the essential skills of player-centric game design is one of the industry's leading authorities, who offers a first-hand look into the process, from initial concept to final tuning. Now in its second edition, this updated classic reference by Ernest Adams offers a complete and practical approach to game design, and includes material on concept development, gameplay design, core mechanics, user interfaces, storytelling, and balancing. In an easy-to-follow approach, Adams analyzes the specific design challenges of all the major game genres and shows you how to apply the principles of game design to each one. You'll learn how to: Define the challenges and actions at the heart of the gameplay. Write a high-concept document, a treatment, and a full design script. Understand the essentials of user interface design and how to define a game's look and feel. Design for a variety of input mechanisms, including the Wii controller and multi-touch iPhone. Construct a game's core mechanics and flow of resources (money, points, ammunition, and more). Develop appealing stories, game characters, and worlds that players will want to visit, including persistent worlds. Work on design problems with engaging end-of-chapter exercises, design worksheets, and case studies. Make your game accessible to broader audiences such as children, adult women, people with disabilities, and casual players. "Ernest Adams provides encyclopedic coverage of process and design issues for every aspect of game design, expressed as practical lessons that can be immediately applied to a design in-progress. He offers the best framework I've seen for thinking about the relationships between core mechanics, gameplay, and player-one that I've found useful for both teaching and research." - Michael Mateas, University of California at Santa Cruz, co-creator of Façade}
+      \field{issn}{0009-4978}
+      \field{journaltitle}{Choice Rev. Online}
+      \field{number}{08}
+      \field{title}{{Fundamentals of game design}}
+      \field{volume}{47}
+      \field{year}{2010}
+      \field{pages}{47--4462--47\bibrangedash 4462}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.5860/choice.47-4462
+      \endverb
+      \verb{urlraw}
+      \verb https://tinyurl.com/y6nwvwum
+      \endverb
+      \verb{url}
+      \verb https://tinyurl.com/y6nwvwum
+      \endverb
+    \endentry
+    \entry{HistoriaRPG}{misc}{}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labeltitlesource}{title}
+      \field{title}{{Historia de los juegos de rol - Wikipedia, la enciclopedia libre}}
+      \field{urlday}{12}
+      \field{urlmonth}{8}
+      \field{urlyear}{2020}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://tinyurl.com/y5ej69wr
+      \endverb
+      \verb{url}
+      \verb https://tinyurl.com/y5ej69wr
+      \endverb
+    \endentry
+    \entry{LARPSchool}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=1e6a498d77460d27356791fda849361f}{%
+           family={Pearl},
+           familyi={P\bibinitperiod},
+           given={Mike},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{1e6a498d77460d27356791fda849361f}
+      \strng{fullhash}{1e6a498d77460d27356791fda849361f}
+      \strng{bibnamehash}{1e6a498d77460d27356791fda849361f}
+      \strng{authorbibnamehash}{1e6a498d77460d27356791fda849361f}
+      \strng{authornamehash}{1e6a498d77460d27356791fda849361f}
+      \strng{authorfullhash}{1e6a498d77460d27356791fda849361f}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{VICE}
+      \field{title}{{At This Danish School, LARPing Is the Future of Education}}
+      \field{urlday}{12}
+      \field{urlmonth}{8}
+      \field{urlyear}{2020}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://tinyurl.com/yyqz4o8v
+      \endverb
+      \verb{url}
+      \verb https://tinyurl.com/yyqz4o8v
+      \endverb
+      \keyw{Denmark,Hawke Robinson,Hobro,LARP,Lightning bolt,Live Action Role Play,Mads Lunau,RPG Research Center,RPGs,Role Playing,nerd stuff}
+    \endentry
+    \entry{Ramos-Villagrasa2010}{article}{}
+      \name{author}{2}{}{%
+        {{hash=cf972570d1f93ece710bf4892791b2a2}{%
+           family={{Ramos Villagrasa}},
+           familyi={R\bibinitperiod},
+           given={Pedro},
+           giveni={P\bibinitperiod}}}%
+        {{hash=a9ff91278e4f5b340d0442d115965292}{%
+           family={{Sueiro Abad}},
+           familyi={S\bibinitperiod},
+           given={Manuel},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{e8676728eb3864d85b8854463736e767}
+      \strng{fullhash}{e8676728eb3864d85b8854463736e767}
+      \strng{bibnamehash}{e8676728eb3864d85b8854463736e767}
+      \strng{authorbibnamehash}{e8676728eb3864d85b8854463736e767}
+      \strng{authornamehash}{e8676728eb3864d85b8854463736e767}
+      \strng{authorfullhash}{e8676728eb3864d85b8854463736e767}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Los juegos de rol son una forma de ocio en la que un conjunto de jugadores participa en un sistema de creación de historias episódicas y participativas. La personalidad es un constructo que ha mostrado su influencia en la toma de decisiones de múltiples aspectos de la vida, y en este estudio comprobamos si se relaciona con la elección de personaje. Se contó con cincuenta y siete jugadores de rol que cumplimentaron un cuestionario acerca del juego de rol Dungeons {\&} Dragons. Los resultados muestran diferencias en la elección de la clase de personaje según los factores de personalidad Apertura a la Experiencia, Amigabilidad y Extraversión. Junto a ello, se examinan las asociaciones existentes entre personalidad y preferencia de determinados tipos de partidas de rol. Finalmente, se reivindica la realización de más investigaciones que contribuyan a conocer la relación entre personalidad y elección de personaje en los juegos de rol}
+      \field{issn}{1138-9737}
+      \field{journaltitle}{Educ. Knowl. Soc.}
+      \field{number}{3}
+      \field{title}{{Personalidad y elección de personaje en los juegos de rol: dime quién eres y te diré quién prefieres ser}}
+      \field{volume}{11}
+      \field{year}{2010}
+      \field{pages}{8\bibrangedash 26}
+      \range{pages}{19}
+      \verb{file}
+      \verb :D$\backslash$:/ARPEGOS{\_}Project/Documentation/Docs/Ramos Villagrasa, Sueiro Abad - 2010 - Personalidad y elecci{\'{o}}n de personaje en los juegos de rol dime qui{\'{e}}n eres y te dir{\'{e}} qui{\'{e}}n prefier.pdf:pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.redalyc.org/pdf/2010/201021093002.pdf
+      \endverb
+      \verb{url}
+      \verb https://www.redalyc.org/pdf/2010/201021093002.pdf
+      \endverb
+      \keyw{decision processes.,juegos de rol,personalidad,personality,role-playing games,toma de decisiones.}
+    \endentry
+    \entry{Isaksson2012}{article}{}
+      \name{author}{1}{}{%
+        {{hash=e4aac485a4d82f05c2909cc217cde3f6}{%
+           family={Isaksson},
+           familyi={I\bibinitperiod},
+           given={Susanne},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{e4aac485a4d82f05c2909cc217cde3f6}
+      \strng{fullhash}{e4aac485a4d82f05c2909cc217cde3f6}
+      \strng{bibnamehash}{e4aac485a4d82f05c2909cc217cde3f6}
+      \strng{authorbibnamehash}{e4aac485a4d82f05c2909cc217cde3f6}
+      \strng{authornamehash}{e4aac485a4d82f05c2909cc217cde3f6}
+      \strng{authorfullhash}{e4aac485a4d82f05c2909cc217cde3f6}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Virtual worlds give us the opportunity to explore another self, a virtual character of the real life you. Massively Multiplayer Online Role Playing Games (MMORPGs) have become extremely popular over the last decade. It has also grown into a lucrative business. To keep the players, the game needs to be more than just a game. This study aimed at finding out what factors that determine which features of the character creation interface that are most important to players. The following research question was formed; " Which underlying factors affect how important different features of the character creation interface are to experienced MMORPG players? To be able to answer the question an extensive literature review was conducted. A qualitative approach was taken. Long interviews were made with five participants, two female and three male players. The interviews took place while they created a number of avatars in different MMORPGs. The interviews were then followed up. During the follow-ups, the impact the character creation process had for the players, were discussed. The findings indicate that the character creation interface is important for the players to get a good gaming experience. However different types of players require different things. Important features for the users to change were mainly; the head; the name; and adding parts of yourself on your character. The factors that determined the importance of these features were found to be; Player types; Identity types; Immersion levels; and whether or not the game or the gaming experience were new to the player. Another finding showed that the longer you have played a game the less bizarre the different races, classes and gender will seem. The study also indicated that the female participants had a hard time identifying with their male characters.}
+      \field{title}{{Character Creation Processes in MMORPGs -A qualitative study of determining important factors}}
+      \field{year}{2012}
+      \verb{file}
+      \verb :D$\backslash$:/ARPEGOS{\_}Project/Documentation/Docs/Isaksson - 2012 - Character Creation Processes in MMORPGs -A qualitative study of determining important factors.pdf:pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.diva-portal.org/smash/record.jsf?pid=diva2:543179
+      \endverb
+      \verb{url}
+      \verb https://www.diva-portal.org/smash/record.jsf?pid=diva2:543179
+      \endverb
+      \keyw{Immersion,MMO,MMORPG,Online games,Virtual world,avatar,character,character creation,gender,identity,motivations,player types,qualitative}
+    \endentry
+    \entry{Egri1960}{book}{}
+      \name{author}{1}{}{%
+        {{hash=f40fb7b72b89cfa77d09dfa03f5f4ba2}{%
+           family={Egri},
+           familyi={E\bibinitperiod},
+           given={Lajos},
+           giveni={L\bibinitperiod}}}%
+      }
+      \strng{namehash}{f40fb7b72b89cfa77d09dfa03f5f4ba2}
+      \strng{fullhash}{f40fb7b72b89cfa77d09dfa03f5f4ba2}
+      \strng{bibnamehash}{f40fb7b72b89cfa77d09dfa03f5f4ba2}
+      \strng{authorbibnamehash}{f40fb7b72b89cfa77d09dfa03f5f4ba2}
+      \strng{authornamehash}{f40fb7b72b89cfa77d09dfa03f5f4ba2}
+      \strng{authorfullhash}{f40fb7b72b89cfa77d09dfa03f5f4ba2}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{The Art of Dramatic Writing: Its Basis in the Creative Interpretation of Human Motives. With an Introd. by Gilbert Miller}}
+      \field{year}{1960}
+      \verb{file}
+      \verb :D$\backslash$:/ARPEGOS{\_}Project/Documentation/Docs/Egri - 1960 - The Art of Dramatic Writing Its Basis in the Creative Interpretation of Human Motives. With an Introd. by Gilbert Miller.pdf:pdf
+      \endverb
+    \endentry
+    \entry{Lankoski2003}{article}{}
+      \name{author}{3}{}{%
+        {{hash=845947861e72038353def4ef219aa847}{%
+           family={Lankoski},
+           familyi={L\bibinitperiod},
+           given={Petri},
+           giveni={P\bibinitperiod}}}%
+        {{hash=5a46fd239ca4ca1ca8328f5870355e95}{%
+           family={Heliö},
+           familyi={H\bibinitperiod},
+           given={Satu},
+           giveni={S\bibinitperiod}}}%
+        {{hash=f690f4117d97eacf095747fda62770c6}{%
+           family={Ekman},
+           familyi={E\bibinitperiod},
+           given={Inger},
+           giveni={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{951db844735c9a196977a4741b3af726}
+      \strng{fullhash}{951db844735c9a196977a4741b3af726}
+      \strng{bibnamehash}{951db844735c9a196977a4741b3af726}
+      \strng{authorbibnamehash}{951db844735c9a196977a4741b3af726}
+      \strng{authornamehash}{951db844735c9a196977a4741b3af726}
+      \strng{authorfullhash}{951db844735c9a196977a4741b3af726}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Interpretation of characters is a fundamental feature of human behavior. Even with limited information available, people will assign personality – even to inanimate objects. Characters in computer games will be attributed personality based on their appearance and behavior. The interpretation of these characters affects the whole game experience. Designing the protagonist character in computer games is different from the design of static characters (e.g. film or literature), because the player's actions will affect the nature of the character. There are, however, many ways to control and guide the actions of the protagonist and thus the character's nature. By setting goals, scripting pre-defined actions and choosing what kind of actions to implement, the game designer can restrict the player's freedom. This, together with the characterization of the character, will affect the interpretation of the character.}
+      \field{journaltitle}{DiGRA '03 - Proc. 2003 DiGRA Int. Conf. Lev. Up}
+      \field{title}{{Characters in Computer Games: Toward Understanding Interpretation and Design}}
+      \field{year}{2003}
+      \field{pages}{1\bibrangedash 12}
+      \range{pages}{12}
+      \verb{file}
+      \verb :D$\backslash$:/ARPEGOS{\_}Project/Documentation/Docs/Lankoski, Heli{\"{o}}, Ekman - 2003 - Characters in Computer Games Toward Understanding Interpretation and Design.pdf:pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://tinyurl.com/yxwzpade
+      \endverb
+      \verb{url}
+      \verb https://tinyurl.com/yxwzpade
+      \endverb
+      \keyw{Characters,Design,Interpretation}
+    \endentry
+    \entry{Tychsen2008}{article}{}
+      \name{author}{3}{}{%
+        {{hash=80e1ea6f49b507df7ebf19583f8c0230}{%
+           family={Tychsen},
+           familyi={T\bibinitperiod},
+           given={Anders},
+           giveni={A\bibinitperiod}}}%
+        {{hash=ad43db4005f465cb1349960399a028c8}{%
+           family={Hitchens},
+           familyi={H\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+        {{hash=f2bda083db3083e91a8da86b0b563680}{%
+           family={Brolund},
+           familyi={B\bibinitperiod},
+           given={Thea},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{b861ad9cf6f398bbe344a91cb9f3ab60}
+      \strng{fullhash}{b861ad9cf6f398bbe344a91cb9f3ab60}
+      \strng{bibnamehash}{b861ad9cf6f398bbe344a91cb9f3ab60}
+      \strng{authorbibnamehash}{b861ad9cf6f398bbe344a91cb9f3ab60}
+      \strng{authornamehash}{b861ad9cf6f398bbe344a91cb9f3ab60}
+      \strng{authorfullhash}{b861ad9cf6f398bbe344a91cb9f3ab60}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Avatars are a commonly used mechanism for representing the player within the world of a game. The avatar forms the main point of interaction between the player and the game, and thus the avatar is an important game design feature. Character-based games combine the concept of an avatar with that of a character, enhancing the avatar with specific features that commonly are changeable, and which can be defined within or outside the framework of the game rules. Within digital games, the rules-based features have received comparatively more attention than, for example, the personalities and background histories of game characters. This article presents results from a comprehensive empirical study of the way complex game characters are utilized by players in multiplayer role-playing games across two different media platforms. The results indicate that adult players are capable of comprehending and utilizing game characters with well-defined personalities and backgrounds, as well as rules-based components. Furthermore, that the game format plays a significant role in the pattern of usage of the character elements. This pattern appears directly linked with variations in the way that the different game formats handle player characters and activate or promote the activation of, different forms of character elements. The degree to which different character elements are activated also has implications for the degree of player engagement in the character. {©} 2008 ACM.}
+      \field{issn}{15443574}
+      \field{journaltitle}{Comput. Entertain.}
+      \field{month}{7}
+      \field{number}{2}
+      \field{title}{{Character play - The use of game characters in multi-player role-playing games across platforms}}
+      \field{volume}{6}
+      \field{year}{2008}
+      \verb{doi}
+      \verb 10.1145/1371216.1371225
+      \endverb
+      \verb{file}
+      \verb :D$\backslash$:/ARPEGOS{\_}Project/Documentation/Docs/Tychsen, Hitchens, Brolund - 2008 - Character play - The use of game characters in multi-player role-playing games across platforms.pdf:pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://doi.acm.org/10.1145/1371216.1371225
+      \endverb
+      \verb{url}
+      \verb http://doi.acm.org/10.1145/1371216.1371225
+      \endverb
+      \keyw{Characters,Interaction,Online communication,Personality,Role-playing games}
+    \endentry
+    \entry{ArsRolica}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=75550ae54006dcb2ca236c5b2322ca46}{%
+           family={Autores},
+           familyi={A\bibinitperiod},
+           given={Varios},
+           giveni={V\bibinitperiod}}}%
+      }
+      \strng{namehash}{75550ae54006dcb2ca236c5b2322ca46}
+      \strng{fullhash}{75550ae54006dcb2ca236c5b2322ca46}
+      \strng{bibnamehash}{75550ae54006dcb2ca236c5b2322ca46}
+      \strng{authorbibnamehash}{75550ae54006dcb2ca236c5b2322ca46}
+      \strng{authornamehash}{75550ae54006dcb2ca236c5b2322ca46}
+      \strng{authorfullhash}{75550ae54006dcb2ca236c5b2322ca46}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Generadores de personajes online | Ars Rolica}}
+      \field{urlday}{26}
+      \field{urlmonth}{6}
+      \field{urlyear}{2020}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://arsrolica.wordpress.com/2018/12/19/generadores-de-personajes-online/
+      \endverb
+      \verb{url}
+      \verb https://arsrolica.wordpress.com/2018/12/19/generadores-de-personajes-online/
+      \endverb
+    \endentry
+    \entry{JulianPerezPortoyMariaMerino2015}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=059dca4e1cc535f2e3ed1027a837cde6}{%
+           family={{Julián Pérez Porto y María Merino}},
+           familyi={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{059dca4e1cc535f2e3ed1027a837cde6}
+      \strng{fullhash}{059dca4e1cc535f2e3ed1027a837cde6}
+      \strng{bibnamehash}{059dca4e1cc535f2e3ed1027a837cde6}
+      \strng{authorbibnamehash}{059dca4e1cc535f2e3ed1027a837cde6}
+      \strng{authornamehash}{059dca4e1cc535f2e3ed1027a837cde6}
+      \strng{authorfullhash}{059dca4e1cc535f2e3ed1027a837cde6}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Android es el nombre de un sistema operativo que se emplea en dispositivos móviles}
+      \field{booktitle}{Definicion.de}
+      \field{title}{{Definición de Android - Qué es, Significado y Concepto}}
+      \field{urlday}{29}
+      \field{urlmonth}{6}
+      \field{urlyear}{2020}
+      \field{year}{2015}
+      \field{urldateera}{ce}
+      \field{pages}{3}
+      \range{pages}{1}
+      \verb{urlraw}
+      \verb https://definicion.de/android/
+      \endverb
+      \verb{url}
+      \verb https://definicion.de/android/
+      \endverb
+    \endentry
+    \entry{AndersHejlsbergScottWiltamuth2003}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=6ec84008a592879e8b651686ce59d25c}{%
+           family={{Anders Hejlsberg, Scott Wiltamuth}},
+           familyi={A\bibinitperiod},
+           given={Peter\bibnamedelima Golde},
+           giveni={P\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+      }
+      \strng{namehash}{6ec84008a592879e8b651686ce59d25c}
+      \strng{fullhash}{6ec84008a592879e8b651686ce59d25c}
+      \strng{bibnamehash}{6ec84008a592879e8b651686ce59d25c}
+      \strng{authorbibnamehash}{6ec84008a592879e8b651686ce59d25c}
+      \strng{authornamehash}{6ec84008a592879e8b651686ce59d25c}
+      \strng{authorfullhash}{6ec84008a592879e8b651686ce59d25c}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{The C{\#} Programming Language - Anders Hejlsberg, Scott Wiltamuth, Peter Golde - Google Libros}}
+      \field{urlday}{29}
+      \field{urlmonth}{6}
+      \field{urlyear}{2020}
+      \field{year}{2003}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://tinyurl.com/yxnagz67
+      \endverb
+      \verb{url}
+      \verb https://tinyurl.com/yxnagz67
+      \endverb
+    \endentry
+    \entry{JonLoeliger2012}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=4577c8cdbe90321ff998408a8b76d816}{%
+           family={{Jon Loeliger}},
+           familyi={J\bibinitperiod},
+           given={Matthew\bibnamedelima McCullough},
+           giveni={M\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \strng{namehash}{4577c8cdbe90321ff998408a8b76d816}
+      \strng{fullhash}{4577c8cdbe90321ff998408a8b76d816}
+      \strng{bibnamehash}{4577c8cdbe90321ff998408a8b76d816}
+      \strng{authorbibnamehash}{4577c8cdbe90321ff998408a8b76d816}
+      \strng{authornamehash}{4577c8cdbe90321ff998408a8b76d816}
+      \strng{authorfullhash}{4577c8cdbe90321ff998408a8b76d816}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Version Control with Git: Powerful tools and techniques for collaborative ... - Jon Loeliger, Matthew McCullough - Google Libros}}
+      \field{urlday}{29}
+      \field{urlmonth}{6}
+      \field{urlyear}{2020}
+      \field{year}{2012}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://tinyurl.com/y2zywczt
+      \endverb
+      \verb{url}
+      \verb https://tinyurl.com/y2zywczt
+      \endverb
+    \endentry
+    \entry{Dabbish2012}{inproceedings}{}
+      \name{author}{4}{}{%
+        {{hash=ee3652563ee1a2be2dd2a300df9eaba9}{%
+           family={Dabbish},
+           familyi={D\bibinitperiod},
+           given={Laura},
+           giveni={L\bibinitperiod}}}%
+        {{hash=770193e7566750bfb748744175747716}{%
+           family={Stuart},
+           familyi={S\bibinitperiod},
+           given={Colleen},
+           giveni={C\bibinitperiod}}}%
+        {{hash=8bb5c168eef58a8003337ca7a5c3b05d}{%
+           family={Tsay},
+           familyi={T\bibinitperiod},
+           given={Jason},
+           giveni={J\bibinitperiod}}}%
+        {{hash=7d892990203dccc5f8227d40ff4398f0}{%
+           family={Herbsleb},
+           familyi={H\bibinitperiod},
+           given={Jim},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{66fc616825744bb9e07368b8d40150be}
+      \strng{fullhash}{291dc0b9fe5ccd0f38ba02bcf1ae7186}
+      \strng{bibnamehash}{66fc616825744bb9e07368b8d40150be}
+      \strng{authorbibnamehash}{66fc616825744bb9e07368b8d40150be}
+      \strng{authornamehash}{66fc616825744bb9e07368b8d40150be}
+      \strng{authorfullhash}{291dc0b9fe5ccd0f38ba02bcf1ae7186}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Social applications on the web let users track and follow the activities of a large number of others regardless of location or affiliation. There is a potential for this transparency to radically improve collaboration and learning in complex knowledge-based activities. Based on a series of in-depth interviews with central and peripheral GitHub users, we examined the value of transparency for large-scale distributed collaborations and communities of practice. We find that people make a surprisingly rich set of social inferences from the networked activity information in GitHub, such as inferring someone else's technical goals and vision when they edit code, or guessing which of several similar projects has the best chance of thriving in the long term. Users combine these inferences into effective strategies for coordinating work, advancing technical skills and managing their reputation. {©} 2012 ACM.}
+      \field{booktitle}{Proc. ACM Conf. Comput. Support. Coop. Work. CSCW}
+      \field{isbn}{9781450310864}
+      \field{title}{{Social coding in GitHub: Transparency and collaboration in an open software repository}}
+      \field{year}{2012}
+      \field{pages}{1277\bibrangedash 1286}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1145/2145204.2145396
+      \endverb
+      \verb{file}
+      \verb :D$\backslash$:/ARPEGOS{\_}Project/Documentation/Docs/Dabbish et al. - 2012 - Social coding in GitHub Transparency and collaboration in an open software repository.pdf:pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://git-scm.com/
+      \endverb
+      \verb{url}
+      \verb http://git-scm.com/
+      \endverb
+      \keyw{awareness,collaboration,coordination,open source software development,social computing,transparency}
+    \endentry
+    \entry{LozanoPerez2000}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=b14b37ee4209fe77f6994443a2923af8}{%
+           family={{Lozano Pérez}},
+           familyi={L\bibinitperiod},
+           given={María\bibnamedelima Dolores;},
+           giveni={M\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \strng{namehash}{b14b37ee4209fe77f6994443a2923af8}
+      \strng{fullhash}{b14b37ee4209fe77f6994443a2923af8}
+      \strng{bibnamehash}{b14b37ee4209fe77f6994443a2923af8}
+      \strng{authorbibnamehash}{b14b37ee4209fe77f6994443a2923af8}
+      \strng{authornamehash}{b14b37ee4209fe77f6994443a2923af8}
+      \strng{authorfullhash}{b14b37ee4209fe77f6994443a2923af8}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Ingeniería del software y bases de datos: tendencias actuales - María Dolores Lozano Pérez - Google Libros}}
+      \field{urlday}{29}
+      \field{urlmonth}{6}
+      \field{urlyear}{2020}
+      \field{year}{2000}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://tinyurl.com/yyz55m6n
+      \endverb
+      \verb{url}
+      \verb https://tinyurl.com/yyz55m6n
+      \endverb
+    \endentry
+    \entry{AmayaBalaguera2015}{article}{}
+      \name{author}{1}{}{%
+        {{hash=174e2f6d981ec6c207178501dda94bfe}{%
+           family={{Amaya Balaguera}},
+           familyi={A\bibinitperiod},
+           given={Yohn\bibnamedelima Daniel},
+           giveni={Y\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \strng{namehash}{174e2f6d981ec6c207178501dda94bfe}
+      \strng{fullhash}{174e2f6d981ec6c207178501dda94bfe}
+      \strng{bibnamehash}{174e2f6d981ec6c207178501dda94bfe}
+      \strng{authorbibnamehash}{174e2f6d981ec6c207178501dda94bfe}
+      \strng{authornamehash}{174e2f6d981ec6c207178501dda94bfe}
+      \strng{authorfullhash}{174e2f6d981ec6c207178501dda94bfe}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Las metodologías ágiles han ganado popularidad desde hace algunos años, ya que constituyen una buena solución para proyectos a corto plazo, en especial, aquellos proyectos en dónde los requisitos están cambiando constantemente, un ejemplo de esto son las aplicaciones para dispositivos móviles, debido a que estás tienen que satisfacer una serie de características y condicionantes especiales, tales como: canal, movilidad, portabilidad, capacidades específicas de las terminales, entre otras, y aun cuando existen miles de aplicaciones para dispositivos móviles que corren en diferentes sistemas operativos IOs, Android, BlackBerry y Windows Mobile; éstas llenan las expectativas de los usuarios hasta cierto punto por su escasa calidad en el desarrollo, ya que el uso de metodologías de desarrollo de software no se considera importante en este ámbito, por tanto, los desarrollos para dispositivos móviles, hasta el momento, se han venido realizando, principalmente, de manera desordenada y en la mayoría de los casos por desarrolladores individuales que no aplican métodos de ingeniería de software que garanticen su mantenibilidad y por lo tanto su calidad.}
+      \field{issn}{1692-1399}
+      \field{journaltitle}{Rev. Tecnol.}
+      \field{number}{2}
+      \field{title}{{Metodologías ágiles en el desarrollo de aplicaciones para dispositivos móviles. Estado actual}}
+      \field{volume}{12}
+      \field{year}{2015}
+      \verb{doi}
+      \verb 10.18270/rt.v12i2.1291
+      \endverb
+      \verb{file}
+      \verb :D$\backslash$:/ARPEGOS{\_}Project/Documentation/Docs/Daniel, Balaguera - Unknown - Metodolog{\'{i}}as {\'{a}}giles en el desarrollo de aplicaciones para dispositivos m{\'{o}}viles. Estado actual Agile method.pdf:pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://revistas.unbosque.edu.co/index.php/RevTec/article/view/1291
+      \endverb
+      \verb{url}
+      \verb https://revistas.unbosque.edu.co/index.php/RevTec/article/view/1291
+      \endverb
+    \endentry
+    \entry{MicrosoftMVVM}{misc}{}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labeltitlesource}{title}
+      \field{title}{{Patrón Model-View-ViewModel - Xamarin | Microsoft Docs}}
+      \field{urlday}{29}
+      \field{urlmonth}{6}
+      \field{urlyear}{2020}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://docs.microsoft.com/es-es/xamarin/xamarin-forms/enterprise-application-patterns/mvvm
+      \endverb
+      \verb{url}
+      \verb https://docs.microsoft.com/es-es/xamarin/xamarin-forms/enterprise-application-patterns/mvvm
+      \endverb
+    \endentry
+    \entry{Gruber1995}{article}{}
+      \name{author}{1}{}{%
+        {{hash=afb9b0d3d5b76f30ab451acf45400285}{%
+           family={Gruber},
+           familyi={G\bibinitperiod},
+           given={Thomas\bibnamedelima R.},
+           giveni={T\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+      }
+      \strng{namehash}{afb9b0d3d5b76f30ab451acf45400285}
+      \strng{fullhash}{afb9b0d3d5b76f30ab451acf45400285}
+      \strng{bibnamehash}{afb9b0d3d5b76f30ab451acf45400285}
+      \strng{authorbibnamehash}{afb9b0d3d5b76f30ab451acf45400285}
+      \strng{authornamehash}{afb9b0d3d5b76f30ab451acf45400285}
+      \strng{authorfullhash}{afb9b0d3d5b76f30ab451acf45400285}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Recent work in Artificial Intelligence (AI) is exploring the use of formal ontologies as a way of specifying content-specific agreements for the sharing and reuse of knowledge among software entities. We take an engineering perspective on the development of such ontologies. Formal ontologies are viewed as designed artifacts, formulated for specific purposes and evaluated against objective design criteria. We describe the role of ontologies in supporting knowledge sharing activities, and then present a set of criteria to guide the development of ontologies for these purposes. We show how these criteria are applied in case studies from the design of ontologies for engineering mathematics and bibliographic data. Selected design decisions are discussed, and alternative representation choices are evaluated against the design criteria. {©} 1995 Academic Press, Inc.}
+      \field{issn}{10959300}
+      \field{journaltitle}{Int. J. Hum. - Comput. Stud.}
+      \field{number}{5-6}
+      \field{title}{{Toward principles for the design of ontologies used for knowledge sharing}}
+      \field{volume}{43}
+      \field{year}{1995}
+      \field{pages}{907\bibrangedash 928}
+      \range{pages}{22}
+      \verb{doi}
+      \verb 10.1006/ijhc.1995.1081
+      \endverb
+      \verb{file}
+      \verb :D$\backslash$:/ARPEGOS{\_}Project/Documentation/Docs/Gruber - 1995 - Toward principles for the design of ontologies used for knowledge sharing.pdf:pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S1071581985710816
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S1071581985710816
+      \endverb
+    \endentry
+    \entry{Guarino2009}{book}{}
+      \name{author}{3}{}{%
+        {{hash=daa1e3ed226808545f524143642ecf54}{%
+           family={Guarino},
+           familyi={G\bibinitperiod},
+           given={Nicola},
+           giveni={N\bibinitperiod}}}%
+        {{hash=ad8596d49553270898b40c1560703636}{%
+           family={Oberle},
+           familyi={O\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod}}}%
+        {{hash=3489f3873d85937d1977e3a21e5e76a7}{%
+           family={Staab},
+           familyi={S\bibinitperiod},
+           given={Steffen},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{991a5696e889a30328c95db9f6b06457}
+      \strng{fullhash}{991a5696e889a30328c95db9f6b06457}
+      \strng{bibnamehash}{991a5696e889a30328c95db9f6b06457}
+      \strng{authorbibnamehash}{991a5696e889a30328c95db9f6b06457}
+      \strng{authornamehash}{991a5696e889a30328c95db9f6b06457}
+      \strng{authorfullhash}{991a5696e889a30328c95db9f6b06457}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Includes bibliographical references An ontology is a description (like a formal specification of a program) of concepts and relationships that can exist for an agent or a community of agents. The concept is important for the purpose of enabling knowledge sharing and reuse. The Handbook on Ontologies provides a comprehensive overview of the current status and future prospectives of the field of ontologies. The handbook demonstrates standards that have been created recently, it surveys methods that have been developed and it shows how to bring both into practice of ontology infrastructures and applications that are the best of their kind.}
+      \field{booktitle}{Handb. Ontol.}
+      \field{title}{{Handbook on Ontologies}}
+      \field{year}{2009}
+      \verb{doi}
+      \verb 10.1007/978-3-540-92673-3
+      \endverb
+      \verb{file}
+      \verb :D$\backslash$:/ARPEGOS{\_}Project/Documentation/Docs/Guarino, Oberle, Staab - 2009 - Handbook on Ontologies.pdf:pdf
+      \endverb
+    \endentry
+    \entry{Bechhofer2004}{misc}{}
+      \name{author}{7}{}{%
+        {{hash=7009e710409f7099282afd8c387a98e4}{%
+           family={Bechhofer},
+           familyi={B\bibinitperiod},
+           given={S},
+           giveni={S\bibinitperiod}}}%
+        {{hash=ee480b6d2fd2c627ffb033d94c9691af}{%
+           family={Harmelen},
+           familyi={H\bibinitperiod},
+           given={Frank},
+           giveni={F\bibinitperiod},
+           prefix={van},
+           prefixi={v\bibinitperiod}}}%
+        {{hash=bc4f6004ab1c0d06e9b1bef4ead5b4fe}{%
+           family={Hendler},
+           familyi={H\bibinitperiod},
+           given={Jim},
+           giveni={J\bibinitperiod}}}%
+        {{hash=fb33c2b55c178be2daf66ac89cdac9cc}{%
+           family={Horrocks},
+           familyi={H\bibinitperiod},
+           given={Ian},
+           giveni={I\bibinitperiod}}}%
+        {{hash=1c75e12800e4181c2aae0a6753d2d812}{%
+           family={McGuinness},
+           familyi={M\bibinitperiod},
+           given={Deborah\bibnamedelima L},
+           giveni={D\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=0bab5b5cf2ed1e36120554671ebefb65}{%
+           family={Patel-Schneider},
+           familyi={P\bibinithyphendelim S\bibinitperiod},
+           given={Peter\bibnamedelima F},
+           giveni={P\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+        {{hash=e268c2db0fd13ff1191a2b39def9be3e}{%
+           family={Stein},
+           familyi={S\bibinitperiod},
+           given={Lynn\bibnamedelima Andrea},
+           giveni={L\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \strng{namehash}{7791dd9bc7f0f989e95d4f961a60e2b7}
+      \strng{fullhash}{2b2123ed5ace657b339b045ffd6b692e}
+      \strng{bibnamehash}{7791dd9bc7f0f989e95d4f961a60e2b7}
+      \strng{authorbibnamehash}{7791dd9bc7f0f989e95d4f961a60e2b7}
+      \strng{authornamehash}{7791dd9bc7f0f989e95d4f961a60e2b7}
+      \strng{authorfullhash}{2b2123ed5ace657b339b045ffd6b692e}
+      \field{extraname}{1}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{OWL is a semantic markup language for publishing and sharing ontologies on the World Wide Web. OWL is derived from the DAML+OIL Web Ontology Language DAML+OIL and builds upon the Resource Description Framework RDF/XML Syntax.}
+      \field{booktitle}{W3C Recomm.}
+      \field{number}{February}
+      \field{title}{{OWL Web Ontology Language Reference}}
+      \field{volume}{2008}
+      \field{year}{2004}
+      \field{pages}{1\bibrangedash 62}
+      \range{pages}{62}
+      \verb{file}
+      \verb :D$\backslash$:/ARPEGOS{\_}Project/Documentation/Docs/Bechhofer et al. - 2004 - OWL Web Ontology Language Reference.pdf:pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://tinyurl.com/y6euzhqy
+      \endverb
+      \verb{url}
+      \verb https://tinyurl.com/y6euzhqy
+      \endverb
+    \endentry
+    \entry{Gennari2003}{article}{}
+      \name{author}{8}{}{%
+        {{hash=e0a414a795ffc336e536019ffbc0d55c}{%
+           family={Gennari},
+           familyi={G\bibinitperiod},
+           given={John\bibnamedelima H},
+           giveni={J\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=daa3f61cc04957ea4bf038da94584e07}{%
+           family={Musen},
+           familyi={M\bibinitperiod},
+           given={Mark\bibnamedelima A},
+           giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=2d0cc607c5cf25dff11c54f503f590f5}{%
+           family={Fergerson},
+           familyi={F\bibinitperiod},
+           given={Ray\bibnamedelima W},
+           giveni={R\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+        {{hash=9575c5f4514f4f548a877717837b8d20}{%
+           family={Grosso},
+           familyi={G\bibinitperiod},
+           given={William\bibnamedelima E},
+           giveni={W\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=fc078456c09a059db5a9396125b15298}{%
+           family={Crubezy},
+           familyi={C\bibinitperiod},
+           given={Monica},
+           giveni={M\bibinitperiod}}}%
+        {{hash=aeadd65011a8fc93601059a4290274c4}{%
+           family={Eriksson},
+           familyi={E\bibinitperiod},
+           given={Henrik},
+           giveni={H\bibinitperiod}}}%
+        {{hash=459277a9c8ad3e369a89c831df64a660}{%
+           family={Noy},
+           familyi={N\bibinitperiod},
+           given={Natalya\bibnamedelima F},
+           giveni={N\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+        {{hash=1521fed2e9530cb66178766738af0c68}{%
+           family={Tu},
+           familyi={T\bibinitperiod},
+           given={Samson\bibnamedelima W},
+           giveni={S\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+      }
+      \strng{namehash}{73ceaa03801adb805b7ec49e8748b45a}
+      \strng{fullhash}{66dff0a8480d65a29aae592c1165336c}
+      \strng{bibnamehash}{73ceaa03801adb805b7ec49e8748b45a}
+      \strng{authorbibnamehash}{73ceaa03801adb805b7ec49e8748b45a}
+      \strng{authornamehash}{73ceaa03801adb805b7ec49e8748b45a}
+      \strng{authorfullhash}{66dff0a8480d65a29aae592c1165336c}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The Protégé project has come a long way since Mark Musen first built the Protégé meta-tool for knowledge-based systems in 1987. The original tool was a small application, aimed at building knowledge-acquisition tools for a few specialized programs in medical planning. From this initial tool, the Protégé system has evolved into a durable, extensible platform for knowledge-based systems development and research. The current version, Protégé-2000, can be run on a variety of platforms, supports customized user-interface extensions, incorporates the Open Knowledge-Base Connectivity (OKBC) knowledge model, interacts with standard storage formats such as relational databases, XML, and RDF, and has been used by hundreds of individuals and research groups. In this paper, we follow the evolution of the Protégé project through three distinct re-implementations. We describe our overall methodology, our design decisions, and the lessons we have learned over the duration of the project. We believe that our success is one of infrastructure: Protégé is a flexible, well-supported, and robust development environment. Using Protégé, developers and domain experts can easily build effective knowledge-based systems, and researchers can explore ideas in a variety of knowledge-based domains. {©} 2002 Elsevier Science Ltd. All rights reserved.}
+      \field{issn}{10715819}
+      \field{journaltitle}{Int. J. Hum. Comput. Stud.}
+      \field{number}{1}
+      \field{title}{{The evolution of Protégé: An environment for knowledge-based systems development}}
+      \field{volume}{58}
+      \field{year}{2003}
+      \field{pages}{89\bibrangedash 123}
+      \range{pages}{35}
+      \verb{doi}
+      \verb 10.1016/S1071-5819(02)00127-1
+      \endverb
+      \verb{file}
+      \verb :D$\backslash$:/ARPEGOS{\_}Project/Documentation/Docs/Gennari et al. - 2003 - The evolution of Prot{\'{e}}g{\'{e}} An environment for knowledge-based systems development.pdf:pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S1071581902001271
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S1071581902001271
+      \endverb
+      \keyw{Knowledge-bases,Problem-solving method,Protégé meta-tool}
+    \endentry
+    \entry{Lassila1999}{report}{}
+      \name{author}{2}{}{%
+        {{hash=00daa923f4208616e58ca5d8d756324c}{%
+           family={Lassila},
+           familyi={L\bibinitperiod},
+           given={O},
+           giveni={O\bibinitperiod}}}%
+        {{hash=116e537e47b25c542080e978214ff346}{%
+           family={Swick},
+           familyi={S\bibinitperiod},
+           given={R\bibnamedelima R},
+           giveni={R\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+      }
+      \strng{namehash}{8734d700f90c516c3b63868c8f32a367}
+      \strng{fullhash}{8734d700f90c516c3b63868c8f32a367}
+      \strng{bibnamehash}{8734d700f90c516c3b63868c8f32a367}
+      \strng{authorbibnamehash}{8734d700f90c516c3b63868c8f32a367}
+      \strng{authornamehash}{8734d700f90c516c3b63868c8f32a367}
+      \strng{authorfullhash}{8734d700f90c516c3b63868c8f32a367}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This document is a revision of the public working draft dated 1998-08-19 incorporating suggestions received in review comments and further deliberations of the W3C RDF Model and Syntax Working Group. With the publication of this draft, the RDF Model and Syntax Specification enters "last call." The last call period will end on October 23, 1998. Comments on this specification may be sent to www-rdf-commentsw3.org. The archive of public comments is available at http://www.w3.org/Archives/Public/www-rdf-comments. Significant changes from the previous draft are highlighted in Appendix E. While we do not anticipate substantial changes, we still caution that further changes are possible. Therefore while we encourage active implementation to test this specification we also recommend that only software that can be easily field-upgraded be implemented to this specification at this time. This is a W3C Working Draft for review by W3C members and other interested parties. Publication as a working draft does not imply endorsement by the W3C membership. The RDF Model and Syntax Working Group will not allow early implementation to constrain their ability to make changes to this specification prior to final release. This is a draft document and may be updated, replaced or obsoleted by other documents at any time. It is inappropriate to cite W3C Working Drafts as other than "work in progress". This work is part of the W3C Metadata Activity.}
+      \field{number}{19990222}
+      \field{title}{{Resource Description Framework (RDF) Model and Syntax Specification}}
+      \field{type}{techreport}
+      \field{year}{1999}
+      \verb{file}
+      \verb :D$\backslash$:/ARPEGOS{\_}Project/Documentation/Docs/Lassila, Swick - 1999 - Resource Description Framework (RDF) Model and Syntax Specification.pdf:pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.44.6030
+      \endverb
+      \verb{url}
+      \verb http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.44.6030
+      \endverb
+    \endentry
+    \entry{Kaoudi2008}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=acc2c908c3a72163a5d511d36d74a595}{%
+           family={Kaoudi},
+           familyi={K\bibinitperiod},
+           given={Zoi},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=1aafd9563cdac409f731d5eb47f26541}{%
+           family={Miliaraki},
+           familyi={M\bibinitperiod},
+           given={Iris},
+           giveni={I\bibinitperiod}}}%
+        {{hash=6584629e67063f48438695ec6ea966a3}{%
+           family={Koubarakis},
+           familyi={K\bibinitperiod},
+           given={Manolis},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{a61bb6931c8f684bc6f380e2a751c762}
+      \strng{fullhash}{a61bb6931c8f684bc6f380e2a751c762}
+      \strng{bibnamehash}{a61bb6931c8f684bc6f380e2a751c762}
+      \strng{authorbibnamehash}{a61bb6931c8f684bc6f380e2a751c762}
+      \strng{authornamehash}{a61bb6931c8f684bc6f380e2a751c762}
+      \strng{authorfullhash}{a61bb6931c8f684bc6f380e2a751c762}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We study the problem of distributed RDFS reasoning and query answering on top of distributed hash tables. Scalable, distributed RDFS reasoning is an essential functionality for providing the scalability and performance that large-scale Semantic Web applications require. Our goal in this paper is to compare and evaluate two well-known approaches to RDFS reasoning, namely backward and forward chaining, on top of distributed hash tables. We show how to implement both algorithms on top of the distributed hash table Bamboo and prove their correctness. We also study the time-space trade-off exhibited by the algorithms analytically, and experimentally by evaluating our algorithms on PlanetLab. {©} 2008 Springer Berlin Heidelberg.}
+      \field{booktitle}{Lect. Notes Comput. Sci. (including Subser. Lect. Notes Artif. Intell. Lect. Notes Bioinformatics)}
+      \field{isbn}{3540885633}
+      \field{issn}{03029743}
+      \field{title}{{RDFS reasoning and query answering on top of DHTs}}
+      \field{volume}{5318 LNCS}
+      \field{year}{2008}
+      \field{pages}{499\bibrangedash 516}
+      \range{pages}{18}
+      \verb{doi}
+      \verb 10.1007/978-3-540-88564-1-32
+      \endverb
+      \verb{file}
+      \verb :D$\backslash$:/ARPEGOS{\_}Project/Documentation/Docs/Kaoudi, Miliaraki, Koubarakis - 2008 - RDFS reasoning and query answering on top of DHTs.pdf:pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://atlas.di.uoa.gr
+      \endverb
+      \verb{url}
+      \verb http://atlas.di.uoa.gr
+      \endverb
+    \endentry
+    \entry{DeSalvo41}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=83d8c6b2c329a3b81cbee36b6a8cd1df}{%
+           family={{De Salvo}},
+           familyi={D\bibinitperiod},
+           given={Marco},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{83d8c6b2c329a3b81cbee36b6a8cd1df}
+      \strng{fullhash}{83d8c6b2c329a3b81cbee36b6a8cd1df}
+      \strng{bibnamehash}{83d8c6b2c329a3b81cbee36b6a8cd1df}
+      \strng{authorbibnamehash}{83d8c6b2c329a3b81cbee36b6a8cd1df}
+      \strng{authornamehash}{83d8c6b2c329a3b81cbee36b6a8cd1df}
+      \strng{authorfullhash}{83d8c6b2c329a3b81cbee36b6a8cd1df}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{RDFSharp Reference Guide (v2.13)}}
+      \field{year}{41}
+      \verb{file}
+      \verb :D$\backslash$:/ARPEGOS{\_}Project/Documentation/Docs/RDFSharp-2.13.0.pdf:pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://tinyurl.com/y6h2sxvs
+      \endverb
+      \verb{url}
+      \verb https://tinyurl.com/y6h2sxvs
+      \endverb
+    \endentry
+    \entry{AlonsoAlvarezGarciaRafaeldelasHerasdelDedo2012}{book}{}
+      \name{author}{1}{}{%
+        {{hash=9576a9b491262e6d62cd6c1c56224ef6}{%
+           family={{Alonso Álvarez García, Rafael de las Heras del Dedo}},
+           familyi={A\bibinitperiod},
+           given={Carmen\bibnamedelimb Lasa\bibnamedelima Gómez},
+           giveni={C\bibinitperiod\bibinitdelim L\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+      }
+      \strng{namehash}{9576a9b491262e6d62cd6c1c56224ef6}
+      \strng{fullhash}{9576a9b491262e6d62cd6c1c56224ef6}
+      \strng{bibnamehash}{9576a9b491262e6d62cd6c1c56224ef6}
+      \strng{authorbibnamehash}{9576a9b491262e6d62cd6c1c56224ef6}
+      \strng{authornamehash}{9576a9b491262e6d62cd6c1c56224ef6}
+      \strng{authorfullhash}{9576a9b491262e6d62cd6c1c56224ef6}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{La aplicación de los métodos ágiles no ha dejado de crecer y extenderse desde 2001, año en que se publicó el Manifiesto Ágil, al maximizar los resultados de un proyecto cumpliendo las expectativas de los clientes, sin desviarse del presupuesto. Al aplicar Scrum a la gestión de proyectos se pueden obtener resultados de alta calidad trabajando en iteraciones cortas llamadas Sprints. Scrum basa su funcionamiento en la flexibilidad, la comunicación, la colaboración, la simplicidad y en dar relevancia a las personas implicadas en el día a día del proyecto con el objetivo de construir productos de calidad y siempre orientados a cubrir las necesidades reales del cliente. Este libro permite y facilita el conocimiento de los métodos ágiles y el aprendizaje de Scrum. Surge como respuesta a la necesidad de contar con un texto introductorio y divulgativo sobre métodos ágiles en castellano ya que, aunque existe un amplia bibliografía en inglés, en español es realmente escasa.}
+      \field{booktitle}{Ediciones Anaya}
+      \field{isbn}{978-84-415-3104-8}
+      \field{title}{{Métodos Ágiles y Scrum}}
+      \field{year}{2012}
+      \field{pages}{352}
+      \range{pages}{1}
+    \endentry
+    \entry{Sirin2007}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=612a45e4b96f8bb391a930cf99cd7be8}{%
+           family={Sirin},
+           familyi={S\bibinitperiod},
+           given={Evren},
+           giveni={E\bibinitperiod}}}%
+        {{hash=d3a5757e7ae6ee7b209f2b76e6997a42}{%
+           family={Parsia},
+           familyi={P\bibinitperiod},
+           given={Bijan},
+           giveni={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{bb1596c26b0d6a1b0d8807305d77a0a5}
+      \strng{fullhash}{bb1596c26b0d6a1b0d8807305d77a0a5}
+      \strng{bibnamehash}{bb1596c26b0d6a1b0d8807305d77a0a5}
+      \strng{authorbibnamehash}{bb1596c26b0d6a1b0d8807305d77a0a5}
+      \strng{authornamehash}{bb1596c26b0d6a1b0d8807305d77a0a5}
+      \strng{authorfullhash}{bb1596c26b0d6a1b0d8807305d77a0a5}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{There are many query languages (QLs) that can be used to query RDF and OWL ontologies but neither type is satisfactory for querying OWL-DL ontologies. RDF-based QLs (RDQL, SeRQL, SPARQL) are harder to give a semantics w.r.t. OWL-DL and are more powerful than what OWL-DL reasoners can provide. DL-based QLs (DIG ask queries, nRQL) have clear semantics but are not powerful enough in the general case. In this paper we describe SPARQL-DL, a substantial subset of SPARQL for which we provide a clear OWL-DL based semantics. SPARQL-DL is significantly more expressive than existing DL QLs (by allowing mixed TBox/RBox/ABox queries) and can still be implemented without too much effort on top of existing OWL-DL reasoners. We discuss design decisions and practical issues that arise for defining SPARQL-DL and report about our preliminary prototype implemented on top of OWL-DL reasoner Pellet.}
+      \field{booktitle}{CEUR Workshop Proc.}
+      \field{issn}{16130073}
+      \field{title}{{SPARQL-DL: SPARQL query for OWL-DL}}
+      \field{volume}{258}
+      \field{year}{2007}
+      \verb{file}
+      \verb :D$\backslash$:/ARPEGOS{\_}Project/Documentation/Docs/Sirin, Parsia - 2007 - SPARQL-DL SPARQL query for OWL-DL.pdf:pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://www.w3.org/Submission/RDQL/
+      \endverb
+      \verb{url}
+      \verb http://www.w3.org/Submission/RDQL/
+      \endverb
+    \endentry
+    \entry{Sparks2008}{article}{}
+      \name{author}{1}{}{%
+        {{hash=594bb65a240d253627d4cd0272e9f94b}{%
+           family={Sparks},
+           familyi={S\bibinitperiod},
+           given={Geoffrey},
+           giveni={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{594bb65a240d253627d4cd0272e9f94b}
+      \strng{fullhash}{594bb65a240d253627d4cd0272e9f94b}
+      \strng{bibnamehash}{594bb65a240d253627d4cd0272e9f94b}
+      \strng{authorbibnamehash}{594bb65a240d253627d4cd0272e9f94b}
+      \strng{authornamehash}{594bb65a240d253627d4cd0272e9f94b}
+      \strng{authorfullhash}{594bb65a240d253627d4cd0272e9f94b}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Como la guerra de métodos de modelado de objetos no hacía progresar la tecnología de objetos, Rumbaugh y Booch decidieron unificar sus trabajos en un método único: el método unificado (The Unified Method). La primera versión de la descripción del método unificado fue presentada en octubre de 1995 en un documento titulado Unified Method 0.8. Un año después se les unió Jacobson y el método unificado se transformó en UML (The Unified Modeling Language). Asimismo durante el año 1996 se crea un consorcio de colaboradores para trabajar en la definición de la versión 1.0 de UML, que agrupa a grandes empresas del sector. De esta colaboración nace la descripción del UML versión 1.0 enviada el 17 de enero de 1997 al OMG (Object Management Group), constituyéndose en un estándar en el mes de julio del mismo año.}
+      \field{title}{{Una Introducción al UML}}
+      \field{year}{2008}
+      \field{pages}{1\bibrangedash 47}
+      \range{pages}{47}
+      \verb{file}
+      \verb :D$\backslash$:/ARPEGOS{\_}Project/Documentation/Docs/Sparks - 2008 - Una Introducci{\'{o}}n al UML.pdf:pdf
+      \endverb
+      \verb{urlraw}
+      \verb www.sparxsystems.com.ar-www.sparxsystems.cl
+      \endverb
+      \verb{url}
+      \verb www.sparxsystems.com.ar-www.sparxsystems.cl
+      \endverb
+    \endentry
+    \entry{VisualStudio}{misc}{}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labeltitlesource}{title}
+      \field{title}{{Microsoft Visual Studio - Wikipedia, la enciclopedia libre}}
+      \field{urlday}{30}
+      \field{urlmonth}{6}
+      \field{urlyear}{2020}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://es.wikipedia.org/wiki/Microsoft{\_}Visual{\_}Studio
+      \endverb
+      \verb{url}
+      \verb https://es.wikipedia.org/wiki/Microsoft%7B%5C_%7DVisual%7B%5C_%7DStudio
+      \endverb
+    \endentry
+    \entry{Xamarin}{misc}{}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labeltitlesource}{title}
+      \field{title}{{¿Qué es Xamarin? - Xamarin | Microsoft Docs}}
+      \field{urlday}{30}
+      \field{urlmonth}{6}
+      \field{urlyear}{2020}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://tinyurl.com/y3gacnoo
+      \endverb
+      \verb{url}
+      \verb https://tinyurl.com/y3gacnoo
+      \endverb
+    \endentry
+    \entry{XamForms}{misc}{}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labeltitlesource}{title}
+      \field{title}{{¿Qué es Xamarin.Forms? - Xamarin | Microsoft Docs}}
+      \field{urlday}{30}
+      \field{urlmonth}{6}
+      \field{urlyear}{2020}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://tinyurl.com/y6cvykdt
+      \endverb
+      \verb{url}
+      \verb https://tinyurl.com/y6cvykdt
+      \endverb
+    \endentry
+    \entry{Walsh}{report}{}
+      \name{author}{1}{}{%
+        {{hash=26012b506618b94cfb6ff5299cea5550}{%
+           family={Walsh},
+           familyi={W\bibinitperiod},
+           given={Norman},
+           giveni={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{26012b506618b94cfb6ff5299cea5550}
+      \strng{fullhash}{26012b506618b94cfb6ff5299cea5550}
+      \strng{bibnamehash}{26012b506618b94cfb6ff5299cea5550}
+      \strng{authorbibnamehash}{26012b506618b94cfb6ff5299cea5550}
+      \strng{authornamehash}{26012b506618b94cfb6ff5299cea5550}
+      \strng{authorfullhash}{26012b506618b94cfb6ff5299cea5550}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{A Technical Introduction to XML What is XML?}}
+      \field{type}{techreport}
+      \verb{file}
+      \verb :D$\backslash$:/ARPEGOS{\_}Project/Documentation/Docs/Walsh - Unknown - A Technical Introduction to XML What is XML.pdf:pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.math.unipd.it/{~}basidati/docs/introduction.pdf
+      \endverb
+      \verb{url}
+      \verb https://www.math.unipd.it/%7B~%7Dbasidati/docs/introduction.pdf
+      \endverb
+    \endentry
+    \entry{MacVittieA.2006}{book}{}
+      \name{author}{1}{}{%
+        {{hash=2a6e64922ab52386a2161794ab4b3256}{%
+           family={{MacVittie, A.}},
+           familyi={M\bibinitperiod},
+           given={Lori},
+           giveni={L\bibinitperiod}}}%
+      }
+      \strng{namehash}{2a6e64922ab52386a2161794ab4b3256}
+      \strng{fullhash}{2a6e64922ab52386a2161794ab4b3256}
+      \strng{bibnamehash}{2a6e64922ab52386a2161794ab4b3256}
+      \strng{authorbibnamehash}{2a6e64922ab52386a2161794ab4b3256}
+      \strng{authornamehash}{2a6e64922ab52386a2161794ab4b3256}
+      \strng{authorfullhash}{2a6e64922ab52386a2161794ab4b3256}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{0-596-52673-3}
+      \field{title}{{XAML in a Nutshell - Lori MacVittie - Google Knjige}}
+      \field{year}{2006}
+      \field{pages}{284}
+      \range{pages}{1}
+      \verb{urlraw}
+      \verb https://tinyurl.com/y3sr9xfu
+      \endverb
+      \verb{url}
+      \verb https://tinyurl.com/y3sr9xfu
+      \endverb
+    \endentry
+    \entry{Hendler2002}{misc}{}
+      \name{author}{3}{}{%
+        {{hash=b03c1c11511fa3c1c6224a741f227be4}{%
+           family={Hendler},
+           familyi={H\bibinitperiod},
+           given={James},
+           giveni={J\bibinitperiod}}}%
+        {{hash=d469e0df304c98f67b55d087ea6187a1}{%
+           family={Berners-Lee},
+           familyi={B\bibinithyphendelim L\bibinitperiod},
+           given={Tim},
+           giveni={T\bibinitperiod}}}%
+        {{hash=3ef11451147b897553ce15f7a8d52c7a}{%
+           family={Miller},
+           familyi={M\bibinitperiod},
+           given={Eric},
+           giveni={E\bibinitperiod}}}%
+      }
+      \strng{namehash}{263fcfb45852e72e0fd9be8daa6c8685}
+      \strng{fullhash}{263fcfb45852e72e0fd9be8daa6c8685}
+      \strng{bibnamehash}{263fcfb45852e72e0fd9be8daa6c8685}
+      \strng{authorbibnamehash}{263fcfb45852e72e0fd9be8daa6c8685}
+      \strng{authornamehash}{263fcfb45852e72e0fd9be8daa6c8685}
+      \strng{authorfullhash}{263fcfb45852e72e0fd9be8daa6c8685}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Eric Miller Semantic Web Activity Lead, World Wide Web Consortium The Semantic Web is an extension of the current Web in which information is given well-defined meaning, better enabling computers and people to work in cooperation. It is based on the idea of having data on the Web defined and linked such that it can be used for more effective discovery, automation, integration, and reuse across various applications. For the Web to reach its full potential, it must evolve into this Semantic Web, providing a universally accessible platform that allows data to be shared and processed by automated tools as well as by people. The Semantic Web will provide an infrastructure that enables not just web pages, but databases, services, programs, sensors, personal devices, and even household appliances to both consume and produce data on the web. Software agents can use this information to search, filter and prepare information in new and exciting ways to assist the web user. New languages, making significantly more of the information on the web machine-readable, power this vision and will enable the development of a new generation of technologies and toolkits. Currently, many parts of the Semantic Web are already in existence, and the business cases for this technology are becoming clearer all the time. In this article, we will focus on the near term objectives of the Semantic Web and discuss the potential benefits to web users that these objectives offer.}
+      \field{booktitle}{Inst. Electr. Eng. {\ldots}}
+      \field{title}{{Integrating Applications on the Semantic Web}}
+      \field{urlday}{30}
+      \field{urlmonth}{6}
+      \field{urlyear}{2020}
+      \field{year}{2002}
+      \field{urldateera}{ce}
+      \field{pages}{676\bibrangedash 680}
+      \range{pages}{5}
+      \verb{urlraw}
+      \verb https://www.w3.org/2002/07/swint
+      \endverb
+      \verb{url}
+      \verb https://www.w3.org/2002/07/swint
+      \endverb
+    \endentry
+    \entry{Shaw1995}{incollection}{}
+      \name{author}{2}{}{%
+        {{hash=a71c8aa98b158fa0b3a629457cda1498}{%
+           family={Shaw},
+           familyi={S\bibinitperiod},
+           given={Mary},
+           giveni={M\bibinitperiod}}}%
+        {{hash=5e93a0537dc9db010915acd5407760d4}{%
+           family={Garlan},
+           familyi={G\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{2f1c1b8d56655474bf41bee1ed639169}
+      \strng{fullhash}{2f1c1b8d56655474bf41bee1ed639169}
+      \strng{bibnamehash}{2f1c1b8d56655474bf41bee1ed639169}
+      \strng{authorbibnamehash}{2f1c1b8d56655474bf41bee1ed639169}
+      \strng{authornamehash}{2f1c1b8d56655474bf41bee1ed639169}
+      \strng{authorfullhash}{2f1c1b8d56655474bf41bee1ed639169}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Software architecture is the level of software design that addresses$\backslash$nthe overall structure and properties of software systems. It provides$\backslash$na focus for certain aspects of design and development that are not$\backslash$nappropriately addressed within the constituent modules. Architectural$\backslash$ndesign depends heavily on accurate specifications of subsystems and$\backslash$ntheir interactions. These specifications must cover a wide variety$\backslash$nof properties, so the specification notations and associated methods$\backslash$nmust be selected or developed to match the properties of interest.$\backslash$nUnfortunately, the available formal methods are only a partial match$\backslash$nfor architectural needs, which entail description of structure, packaging,$\backslash$nenvironmental assumptions, representation, and performance as well$\backslash$nas functionality. A prerequisite for devising or selecting a formal$\backslash$nmethod is sound understanding of what needs to be formalized. For$\backslash$nsoftware architecture, much of this understanding is arising through$\backslash$nprogressive codification, which begins with real-world examples and$\backslash$nprogressively creates more precise models that eventually support$\backslash$nformalization. This paper explores the progressive codification of$\backslash$nsoftware architectures: the relation between emerging models and$\backslash$nthe selection, development, and use of formal systems.}
+      \field{title}{{Formulations and formalisms in software architecture}}
+      \field{volume}{1000}
+      \field{year}{1995}
+      \field{pages}{307\bibrangedash 323}
+      \range{pages}{17}
+      \verb{doi}
+      \verb 10.1007/bfb0015251
+      \endverb
+      \verb{file}
+      \verb :D$\backslash$:/ARPEGOS{\_}Project/Documentation/Docs/Shaw, Garlan - 1995 - Formulations and formalisms in software architecture.pdf:pdf
+      \endverb
+    \endentry
+    \entry{Addati2013}{report}{}
+      \name{author}{1}{}{%
+        {{hash=2723ed0898506e8aa915a6a5670daf4a}{%
+           family={Addati},
+           familyi={A\bibinitperiod},
+           given={Gaston},
+           giveni={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{2723ed0898506e8aa915a6a5670daf4a}
+      \strng{fullhash}{2723ed0898506e8aa915a6a5670daf4a}
+      \strng{bibnamehash}{2723ed0898506e8aa915a6a5670daf4a}
+      \strng{authorbibnamehash}{2723ed0898506e8aa915a6a5670daf4a}
+      \strng{authornamehash}{2723ed0898506e8aa915a6a5670daf4a}
+      \strng{authorfullhash}{2723ed0898506e8aa915a6a5670daf4a}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{A lo largo de este trabajo se pretende focalizar en las metodologías del Project Management Institute (PMI), y en la metodología PRINCE2. Luego de analizar ambas metodologías en referencia a su modo tradicional de gestión, se analizará cómo aplica ambas metodologías el modelo de gestión de proyectos con equipos de trabajo distribuidos geográficamente en distintos países. Por último se propone un modelo adaptado de gestión a distancia, para minimizar los problemas detectados en la investigación que se ha realizado}
+      \field{title}{{Escuela Superior Técnica Facultad de Ingeniería}}
+      \field{type}{techreport}
+      \field{year}{2013}
+      \field{pages}{132}
+      \range{pages}{1}
+      \verb{file}
+      \verb :D$\backslash$:/ARPEGOS{\_}Project/Documentation/Docs/Addati - 2013 - Escuela Superior T{\'{e}}cnica Facultad de Ingenier{\'{i}}a.pdf:pdf
+      \endverb
+      \verb{urlraw}
+      \verb www.econstor.eu
+      \endverb
+      \verb{url}
+      \verb www.econstor.eu
+      \endverb
+    \endentry
+    \entry{Perez2017}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=75af9ce67b66fa6f5a822b0893d2554e}{%
+           family={{Pérez, J. {\&} Gardey}},
+           familyi={P\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{75af9ce67b66fa6f5a822b0893d2554e}
+      \strng{fullhash}{75af9ce67b66fa6f5a822b0893d2554e}
+      \strng{bibnamehash}{75af9ce67b66fa6f5a822b0893d2554e}
+      \strng{authorbibnamehash}{75af9ce67b66fa6f5a822b0893d2554e}
+      \strng{authornamehash}{75af9ce67b66fa6f5a822b0893d2554e}
+      \strng{authorfullhash}{75af9ce67b66fa6f5a822b0893d2554e}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Definición de modelo de datos - Qué es, Significado y Concepto}}
+      \field{urlday}{5}
+      \field{urlmonth}{7}
+      \field{urlyear}{2020}
+      \field{year}{2012}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://definicion.de/modelo-de-datos/
+      \endverb
+      \verb{url}
+      \verb https://definicion.de/modelo-de-datos/
+      \endverb
+    \endentry
+    \entry{Munoz2009}{article}{}
+      \name{author}{3}{}{%
+        {{hash=1c374a413596756fbdd120d7fc6abae2}{%
+           family={Muñoz},
+           familyi={M\bibinitperiod},
+           given={A},
+           giveni={A\bibinitperiod}}}%
+        {{hash=9323875969ff8154cdbdec13cf7eec85}{%
+           family={Informática},
+           familyi={I\bibinitperiod},
+           given={J\bibnamedelima Aguilar\bibnamedelimb -\bibnamedelimb Avances\bibnamedelimb en\bibnamedelimb Sistemas\bibnamedelima e},
+           giveni={J\bibinitperiod\bibinitdelim A\bibinitperiod\bibinitdelim \bibinithyphendelim \bibinitperiod\bibinitdelim A\bibinitperiod\bibinitdelim e\bibinitperiod\bibinitdelim S\bibinitperiod\bibinitdelim e\bibinitperiod}}}%
+        {{hash=3de36e110d92ab3a0587626f0000d4f2}{%
+           family={2009},
+           familyi={2\bibinitperiod},
+           given={Undefined},
+           giveni={U\bibinitperiod}}}%
+      }
+      \strng{namehash}{066e8009793de39c43d179ed1be16053}
+      \strng{fullhash}{066e8009793de39c43d179ed1be16053}
+      \strng{bibnamehash}{066e8009793de39c43d179ed1be16053}
+      \strng{authorbibnamehash}{066e8009793de39c43d179ed1be16053}
+      \strng{authornamehash}{066e8009793de39c43d179ed1be16053}
+      \strng{authorfullhash}{066e8009793de39c43d179ed1be16053}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Resunen- Las bases de datos multimedia han tenido un gran desarrollo en los últimos años. El uso efectivo de metadatos multimedia requiere de bases de datos multimedia para administrar, almacenar, buscar y entregar metadatos. Estas bases de datos necesitan tener conocimientos acerca de la ubicación de los datos media y de los metadatos, y debe enlazar descripciones de uso con los requerimientos de recursos media. Todo esto implica una serie de manipulaciones que deben definine a través de parámetros muy especificos que contemplen su semántica, es decir sus conceptos, operaciones y restricciones. En este articulo se muestra una ontología para representar los conceptos, operaciones y restricciones que tienen las bases de datos multimedia. Adicionalmente, como las bases de datos orientadas a objetos describen el cumportamiento de las bases de datos multimedia, también se presenta su descripción ontológica. Finalmente, se validan dichas ontologías a través de un caso de estudio utilizando Protégé.}
+      \field{issn}{1657-7663}
+      \field{journaltitle}{Rev. Av. en Sist. e Informática}
+      \field{number}{2}
+      \field{title}{{Ontología para bases de datos orientadas a objetos y multimedia}}
+      \field{volume}{6}
+      \field{year}{2009}
+      \field{pages}{167\bibrangedash 184}
+      \range{pages}{18}
+      \verb{file}
+      \verb :D$\backslash$:/ARPEGOS{\_}Project/Documentation/Docs/Mu{\~{n}}oz, Inform{\'{a}}tica, 2009 - 2009 - Ontolog{\'{i}}a para bases de datos orientadas a objetos y multimedia.pdf:pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://tinyurl.com/y46aakhd
+      \endverb
+      \verb{url}
+      \verb https://tinyurl.com/y46aakhd
+      \endverb
+      \keyw{Bases de Datos Multimedia,Bases de Datos Orientadas a Objetos,Objetos Multimedia.}
+    \endentry
+    \entry{Moyo}{article}{}
+      \name{author}{6}{}{%
+        {{hash=fc5a6e598cb7574c3e90e9848f206ce7}{%
+           family={Moyo},
+           familyi={M\bibinitperiod},
+           given={Benson},
+           giveni={B\bibinitperiod}}}%
+        {{hash=2066a41b55106907a2e96c7fa9e0f02c}{%
+           family={Soganile},
+           familyi={S\bibinitperiod},
+           given={Ndabezinhle},
+           giveni={N\bibinitperiod}}}%
+        {{hash=ac721793307a8ff9ccab6c2a9a267a63}{%
+           family={Dzawo},
+           familyi={D\bibinitperiod},
+           given={Gilbert},
+           giveni={G\bibinitperiod}}}%
+        {{hash=2b96dfc08ea05ac4c7868cd9f254560b}{%
+           family={Madzima},
+           familyi={M\bibinitperiod},
+           given={Kudakwashe},
+           giveni={K\bibinitperiod}}}%
+        {{hash=42f224753ce5109244de6dc6787925cc}{%
+           family={Science},
+           familyi={S\bibinitperiod},
+           given={Computer},
+           giveni={C\bibinitperiod}}}%
+        {{hash=ba206768eaea0b1a066a6452e225e019}{%
+           family={Africa},
+           familyi={A\bibinitperiod},
+           given={South},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{0e9660add840fab50a36e72658f4949b}
+      \strng{fullhash}{5b12c2a46daccf2f2c910db6c8ec8050}
+      \strng{bibnamehash}{0e9660add840fab50a36e72658f4949b}
+      \strng{authorbibnamehash}{0e9660add840fab50a36e72658f4949b}
+      \strng{authornamehash}{0e9660add840fab50a36e72658f4949b}
+      \strng{authorfullhash}{5b12c2a46daccf2f2c910db6c8ec8050}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{search.proquest.com}
+      \field{title}{{Empirical evaluation of software development methodology selection consistency : A case study using Analytical Hierarchy Process}}
+      \verb{urlraw}
+      \verb loading...
+      \endverb
+      \verb{url}
+      \verb loading...
+      \endverb
+      \keyw{ahp,methodology,selection consistency,software development methodology}
+    \endentry
+    \entry{Pressman1988}{article}{}
+      \name{author}{2}{}{%
+        {{hash=b92a423bae31729e13272e7637eee19d}{%
+           family={Pressman},
+           familyi={P\bibinitperiod},
+           given={RS},
+           giveni={R\bibinitperiod}}}%
+        {{hash=bf4fef822b7a6e085bc8971bb41c3fd3}{%
+           family={Troya},
+           familyi={T\bibinitperiod},
+           given={JM},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{78a9d027d583b273b3935e4418d74997}
+      \strng{fullhash}{78a9d027d583b273b3935e4418d74997}
+      \strng{bibnamehash}{78a9d027d583b273b3935e4418d74997}
+      \strng{authorbibnamehash}{78a9d027d583b273b3935e4418d74997}
+      \strng{authornamehash}{78a9d027d583b273b3935e4418d74997}
+      \strng{authorfullhash}{78a9d027d583b273b3935e4418d74997}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Ingeniería del software}}
+      \field{year}{1988}
+      \verb{urlraw}
+      \verb http://fondoeditorial.uneg.edu.ve/citeg/numeros/c02/c02{\_}art10.pdf
+      \endverb
+      \verb{url}
+      \verb http://fondoeditorial.uneg.edu.ve/citeg/numeros/c02/c02%7B%5C_%7Dart10.pdf
+      \endverb
+    \endentry
+    \entry{PrietoAlvarez2013}{article}{}
+      \name{author}{1}{}{%
+        {{hash=8ca2262fcb7de8dcb451bcd73894c6a2}{%
+           family={{Prieto Álvarez}},
+           familyi={P\bibinitperiod},
+           given={Carlos\bibnamedelima Gerardo},
+           giveni={C\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+      }
+      \strng{namehash}{8ca2262fcb7de8dcb451bcd73894c6a2}
+      \strng{fullhash}{8ca2262fcb7de8dcb451bcd73894c6a2}
+      \strng{bibnamehash}{8ca2262fcb7de8dcb451bcd73894c6a2}
+      \strng{authorbibnamehash}{8ca2262fcb7de8dcb451bcd73894c6a2}
+      \strng{authornamehash}{8ca2262fcb7de8dcb451bcd73894c6a2}
+      \strng{authorfullhash}{8ca2262fcb7de8dcb451bcd73894c6a2}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{HUAJUAPAN DE LEÓN, OAX.; 15 DE SEPTIEMBRE DEL 2015}
+      \field{title}{{Adaptación de las Metodologías Tradicionales Cascada y Espiral para la Inclusión de Evaluación Inicial de Usabilidad en el Desarrollo de Productos de Software en México.}}
+      \field{year}{2013}
+      \verb{file}
+      \verb :D$\backslash$:/ARPEGOS{\_}Project/Documentation/Docs/Robusto, Un, Boost - 2013 - Universidad tecnol{\'{o}}gica de la mixteca.pdf:pdf
+      \endverb
+    \endentry
+    \entry{DigitalGuideIONOS2019}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=87cd3cef8d106ac9ae4b219aa2bae091}{%
+           family={{Digital Guide IONOS}},
+           familyi={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{87cd3cef8d106ac9ae4b219aa2bae091}
+      \strng{fullhash}{87cd3cef8d106ac9ae4b219aa2bae091}
+      \strng{bibnamehash}{87cd3cef8d106ac9ae4b219aa2bae091}
+      \strng{authorbibnamehash}{87cd3cef8d106ac9ae4b219aa2bae091}
+      \strng{authornamehash}{87cd3cef8d106ac9ae4b219aa2bae091}
+      \strng{authorfullhash}{87cd3cef8d106ac9ae4b219aa2bae091}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Digit. Guid. IONOS}
+      \field{title}{{El modelo en cascada en el desarrollo de software -}}
+      \field{urlday}{9}
+      \field{urlmonth}{7}
+      \field{urlyear}{2020}
+      \field{year}{2019}
+      \field{urldateera}{ce}
+      \field{pages}{62\bibrangedash 63}
+      \range{pages}{2}
+      \verb{urlraw}
+      \verb https://tinyurl.com/y3j3prmd
+      \endverb
+      \verb{url}
+      \verb https://tinyurl.com/y3j3prmd
+      \endverb
+    \endentry
+    \entry{Espiral}{misc}{}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labeltitlesource}{title}
+      \field{title}{{Modelo En Espiral, Los Sistemas De Ciclo De Vida De Desarrollo, Proceso De Desarrollo De Software imagen png - imagen transparente descarga gratuita}}
+      \field{urlday}{9}
+      \field{urlmonth}{7}
+      \field{urlyear}{2020}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.freepng.es/png-zfl949/
+      \endverb
+      \verb{url}
+      \verb https://www.freepng.es/png-zfl949/
+      \endverb
+    \endentry
+    \entry{RoqueHernandez2015}{inproceedings}{}
+      \name{author}{4}{}{%
+        {{hash=5edee3283a37efccdc2f21396dcbc13a}{%
+           family={{Roque Hernandez}},
+           familyi={R\bibinitperiod},
+           given={Ramon\bibnamedelima Ventura},
+           giveni={R\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+        {{hash=1567f5962fba4f94322fa12ed5797d30}{%
+           family={{Salinas Escandon}},
+           familyi={S\bibinitperiod},
+           given={Juan\bibnamedelima Manuel},
+           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=0d9025ffc240647ac918b9f905f226f5}{%
+           family={{Alamos Acosta}},
+           familyi={A\bibinitperiod},
+           given={Caleb\bibnamedelima Alfredo},
+           giveni={C\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=029c2fe12fc2e1419fb3c464a6c296a5}{%
+           family={{Arreola Rivera}},
+           familyi={A\bibinitperiod},
+           given={Roberto},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{462970b245e8c8b08da0de6489b59034}
+      \strng{fullhash}{fe0bd1fc3e1e2aad4b98d15bfe368011}
+      \strng{bibnamehash}{462970b245e8c8b08da0de6489b59034}
+      \strng{authorbibnamehash}{462970b245e8c8b08da0de6489b59034}
+      \strng{authornamehash}{462970b245e8c8b08da0de6489b59034}
+      \strng{authorfullhash}{fe0bd1fc3e1e2aad4b98d15bfe368011}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{West. Hemispheric Trade Conf.}
+      \field{isbn}{0123566789}
+      \field{title}{{Comparación empírica entre el Proceso Unificado y el desarrollo de software por Prototipos}}
+      \field{year}{2015}
+      \field{pages}{235\bibrangedash 244}
+      \range{pages}{10}
+      \verb{urlraw}
+      \verb http://www.academia.edu/download/54580094/19Conf-Sessions.pdf{\#}page=245
+      \endverb
+      \verb{url}
+      \verb http://www.academia.edu/download/54580094/19Conf-Sessions.pdf%7B%5C#%7Dpage=245
+      \endverb
+    \endentry
+    \entry{Prototipos}{misc}{}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labeltitlesource}{title}
+      \field{title}{{Modelo de Prototipos - Portafolio de Evidencia Erika}}
+      \field{urlday}{2}
+      \field{urlmonth}{7}
+      \field{urlyear}{2020}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://tinyurl.com/y43f8q6z
+      \endverb
+      \verb{url}
+      \verb https://tinyurl.com/y43f8q6z
+      \endverb
+    \endentry
+    \entry{Zumba2018}{article}{}
+      \name{author}{1}{}{%
+        {{hash=5bb8feed4559bc358d64912ff112f048}{%
+           family={Zumba},
+           familyi={Z\bibinitperiod},
+           given={Johanna\bibnamedelima Patricia},
+           giveni={J\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Universidad Internacional del Ecuador}%
+      }
+      \strng{namehash}{5bb8feed4559bc358d64912ff112f048}
+      \strng{fullhash}{5bb8feed4559bc358d64912ff112f048}
+      \strng{bibnamehash}{5bb8feed4559bc358d64912ff112f048}
+      \strng{authorbibnamehash}{5bb8feed4559bc358d64912ff112f048}
+      \strng{authornamehash}{5bb8feed4559bc358d64912ff112f048}
+      \strng{authorfullhash}{5bb8feed4559bc358d64912ff112f048}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{las metodologías de Desarrollo de Software (DS.) han experimentado un proceso histórico y evolutivo que inicia en los años 40 con la aparición de las primeras computadoras, entonces no se contaban con parámetros ni estándares, el DS. Era prácticamente empírico y artesanal lo que llevó a que una buena parte de los proyectos fallaran en cubrir las exceptivas de los usuarios, así como en entregas extemporáneas y presupuestos excedidos, sobreviniendo la “crisis del Software” la respuesta para superarla fue la adopción de modelos y metodologías clásicas que progresivamente fueron incorporando estándares, controles y formalidades al DS. En un afán que llegó a ser definido como “triángulo de hierro.” La evolución no se detuvo, con la llegada del Internet surgen proyectos caracterizados por requerimientos cambiantes y tiempos de entregas breves para los que las metodologías existentes no se adaptaban idóneamente, surgen las metodologías ágiles, enfocadas en interacción equipo-usuarios, entregas tempranas y adaptación a los cambios; conviven con los esquemas tradicionales y agrupan a comunidades activas. Este esfuerzo documental busca reseñar de manera integral todo ese cambio evolutivo, por cuanto la mayoría de los trabajos en el área se enfocan en divulgar los métodos ágiles dejando subestimada su procedencia.}
+      \field{issn}{2477-9024}
+      \field{journaltitle}{INNOVA Res. J.}
+      \field{number}{10}
+      \field{title}{{Evolución de las Metodologías y Modelos utilizados en el Desarrollo de Software}}
+      \field{volume}{3}
+      \field{year}{2018}
+      \field{pages}{20\bibrangedash 33}
+      \range{pages}{14}
+      \verb{doi}
+      \verb 10.33890/innova.v3.n10.2018.651
+      \endverb
+      \verb{file}
+      \verb :D$\backslash$:/ARPEGOS{\_}Project/Documentation/Docs/Zumba - 2018 - Evoluci{\'{o}}n de las Metodolog{\'{i}}as y Modelos utilizados en el Desarrollo de Software.pdf:pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://tinyurl.com/y6ahh9lw
+      \endverb
+      \verb{url}
+      \verb https://tinyurl.com/y6ahh9lw
+      \endverb
+      \keyw{Agile methodologies,Models,Software Development methodologies}
+    \endentry
+    \entry{Alarcon2016}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=49d37317b382932af0c1915c97d8137a}{%
+           family={Alarcón},
+           familyi={A\bibinitperiod},
+           given={Alejandro\bibnamedelima Aldás},
+           giveni={A\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \strng{namehash}{49d37317b382932af0c1915c97d8137a}
+      \strng{fullhash}{49d37317b382932af0c1915c97d8137a}
+      \strng{bibnamehash}{49d37317b382932af0c1915c97d8137a}
+      \strng{authorbibnamehash}{49d37317b382932af0c1915c97d8137a}
+      \strng{authornamehash}{49d37317b382932af0c1915c97d8137a}
+      \strng{authorfullhash}{49d37317b382932af0c1915c97d8137a}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Modelo de proceso incremental Fuente:... | Download Scientific Diagram}}
+      \field{urlday}{2}
+      \field{urlmonth}{7}
+      \field{urlyear}{2020}
+      \field{year}{2016}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://tinyurl.com/yy4s2229
+      \endverb
+      \verb{url}
+      \verb https://tinyurl.com/yy4s2229
+      \endverb
+    \endentry
+    \entry{Beck2001}{misc}{}
+      \name{author}{2}{}{%
+        {{hash=c5dcbe71f60a8d55caa11fe1493614d0}{%
+           family={Beck},
+           familyi={B\bibinitperiod},
+           given={Kent},
+           giveni={K\bibinitperiod}}}%
+        {{hash=774073ac20d33f1680e7464fa3e774e1}{%
+           family={Et.al},
+           familyi={E\bibinitperiod}}}%
+      }
+      \strng{namehash}{cc3204830756f6c10ef1fe15ac7a526c}
+      \strng{fullhash}{cc3204830756f6c10ef1fe15ac7a526c}
+      \strng{bibnamehash}{cc3204830756f6c10ef1fe15ac7a526c}
+      \strng{authorbibnamehash}{cc3204830756f6c10ef1fe15ac7a526c}
+      \strng{authornamehash}{cc3204830756f6c10ef1fe15ac7a526c}
+      \strng{authorfullhash}{cc3204830756f6c10ef1fe15ac7a526c}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Seguimos estos principios: Nuestra mayor prioridad es satisfacer al cliente mediante la entrega temprana y continua de software con valor. Aceptamos que los requisitos cambien, incluso en etapas tardías del desarrollo. Los procesos Ágiles aprovechan el cambio para proporcionar ventaja competitiva al cliente. Entregamos software funcional frecuentemente, entre dos semanas y dos meses, con preferencia al periodo de tiempo más corto posible. Los responsables de negocio y los desarrolladores trabajamos juntos de forma cotidiana durante todo el proyecto. Los proyectos se desarrollan en torno a individuos motivados. Hay que darles el entorno y el apoyo que necesitan, y confiarles la ejecución del trabajo. El método más eficiente y efectivo de comunicar información al equipo de desarrollo y entre sus miembros es la conversación cara a cara. El software funcionando es la medida principal de progreso. Los procesos Ágiles promueven el desarrollo sostenible. Los promotores, desarrolladores y usuarios debemos ser capaces de mantener un ritmo constante de forma indefinida. La atención continua a la excelencia técnica y al buen diseño mejora la Agilidad. La simplicidad, o el arte de maximizar la cantidad de trabajo no realizado, es esencial. Las mejores arquitecturas, requisitos y diseños emergen de equipos auto-organizados. A intervalos regulares el equipo reflexiona sobre cómo ser más efectivo para a continuación ajustar y perfeccionar su comportamiento en consecuencia.}
+      \field{booktitle}{Agilemanifesto.Org}
+      \field{title}{{Principios del Manifiesto Ágil}}
+      \field{urlday}{2}
+      \field{urlmonth}{7}
+      \field{urlyear}{2020}
+      \field{year}{2001}
+      \field{urldateera}{ce}
+      \field{pages}{1}
+      \range{pages}{1}
+      \verb{urlraw}
+      \verb https://agilemanifesto.org/iso/es/principles.html
+      \endverb
+      \verb{url}
+      \verb https://agilemanifesto.org/iso/es/principles.html
+      \endverb
+    \endentry
+    \entry{Stephens2003}{book}{}
+      \name{author}{2}{}{%
+        {{hash=cca97e026cf80ca26ee06fc56e03f97e}{%
+           family={Stephens},
+           familyi={S\bibinitperiod},
+           given={Matt},
+           giveni={M\bibinitperiod}}}%
+        {{hash=83f3e8d83d294952a25b68699ed255f4}{%
+           family={Rosenberg},
+           familyi={R\bibinitperiod},
+           given={Doug},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{adda6d291102e9b20874ea8304dc9587}
+      \strng{fullhash}{adda6d291102e9b20874ea8304dc9587}
+      \strng{bibnamehash}{adda6d291102e9b20874ea8304dc9587}
+      \strng{authorbibnamehash}{adda6d291102e9b20874ea8304dc9587}
+      \strng{authornamehash}{adda6d291102e9b20874ea8304dc9587}
+      \strng{authorfullhash}{adda6d291102e9b20874ea8304dc9587}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This paper extends a theory of risk-based test planning that was outlined in a previous paper, introduces techniques to facilitate it, explains their practical application, and highlights opportunities for research to enquire into their feasibility and ...}
+      \field{booktitle}{Extrem. Program. Refactored Case Against XP}
+      \field{title}{{Extreme Programming Refactored: The Case Against XP}}
+      \field{year}{2003}
+      \verb{doi}
+      \verb 10.1007/978-1-4302-0810-5
+      \endverb
+    \endentry
+    \entry{Schwaber2011}{article}{}
+      \name{author}{2}{}{%
+        {{hash=3f80227d409f767149ce50c8e0c9daa5}{%
+           family={Schwaber},
+           familyi={S\bibinitperiod},
+           given={K},
+           giveni={K\bibinitperiod}}}%
+        {{hash=6e3f26f6f816a26c6ab36bc7a899bcde}{%
+           family={Sutherland},
+           familyi={S\bibinitperiod},
+           given={Jeff},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{cd71944eeecd31fff6279a628b2e0656}
+      \strng{fullhash}{cd71944eeecd31fff6279a628b2e0656}
+      \strng{bibnamehash}{cd71944eeecd31fff6279a628b2e0656}
+      \strng{authorbibnamehash}{cd71944eeecd31fff6279a628b2e0656}
+      \strng{authornamehash}{cd71944eeecd31fff6279a628b2e0656}
+      \strng{authorfullhash}{cd71944eeecd31fff6279a628b2e0656}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The Scrum Guide documents the Scrum framework and is maintained by Scrums creators, Ken Schwaber and Jeff Sutherland.}
+      \field{issn}{00195847}
+      \field{journaltitle}{Scrum. org, Oct.}
+      \field{number}{July}
+      \field{title}{{The scrum guide suomeksi}}
+      \field{volume}{2}
+      \field{year}{2011}
+      \field{pages}{17}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1053/j.jrn.2009.08.012
+      \endverb
+      \verb{urlraw}
+      \verb https://tinyurl.com/y5wmxzq9
+      \endverb
+      \verb{url}
+      \verb https://tinyurl.com/y5wmxzq9
+      \endverb
+      \keyw{Primer Guide Basics Scrum}
+    \endentry
+    \entry{Cockburn2004}{book}{}
+      \name{author}{1}{}{%
+        {{hash=c1e5acec4259bb4c17ca1a00866f32e1}{%
+           family={Cockburn},
+           familyi={C\bibinitperiod},
+           given={Alistair},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{c1e5acec4259bb4c17ca1a00866f32e1}
+      \strng{fullhash}{c1e5acec4259bb4c17ca1a00866f32e1}
+      \strng{bibnamehash}{c1e5acec4259bb4c17ca1a00866f32e1}
+      \strng{authorbibnamehash}{c1e5acec4259bb4c17ca1a00866f32e1}
+      \strng{authornamehash}{c1e5acec4259bb4c17ca1a00866f32e1}
+      \strng{authorfullhash}{c1e5acec4259bb4c17ca1a00866f32e1}
+      \field{extraname}{1}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Crystal Clear: A Human-Powered Methodology for Small Teams (The Agile Software Development Series)}}
+      \field{year}{2004}
+      \verb{file}
+      \verb :D$\backslash$:/ARPEGOS{\_}Project/Documentation/Docs/Cockburn - 2004 - Crystal Clear A Human-Powered Methodology for Small Teams (The Agile Software Development Series).pdf:pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://tinyurl.com/y6xaldge
+      \endverb
+      \verb{url}
+      \verb https://tinyurl.com/y6xaldge
+      \endverb
+    \endentry
+    \entry{Rodriguez}{report}{}
+      \name{author}{2}{}{%
+        {{hash=b34f743fc4ccf91cf0cf13dcae8f1af4}{%
+           family={Rodríguez},
+           familyi={R\bibinitperiod},
+           given={César},
+           giveni={C\bibinitperiod}}}%
+        {{hash=27ec0c9940309bd4774b9195604867f3}{%
+           family={Dorado},
+           familyi={D\bibinitperiod},
+           given={Rubén},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{191635b077828ecc2279217fd1a46706}
+      \strng{fullhash}{191635b077828ecc2279217fd1a46706}
+      \strng{bibnamehash}{191635b077828ecc2279217fd1a46706}
+      \strng{authorbibnamehash}{191635b077828ecc2279217fd1a46706}
+      \strng{authornamehash}{191635b077828ecc2279217fd1a46706}
+      \strng{authorfullhash}{191635b077828ecc2279217fd1a46706}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{journal.universidadean.edu.co}
+      \field{title}{{Porque implementar Scrum?}}
+      \field{type}{techreport}
+      \verb{file}
+      \verb :D$\backslash$:/ARPEGOS{\_}Project/Documentation/Docs/Rodr{\'{i}}guez, Dorado - Unknown - Porque implementar Scrum.pdf:pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://journal.universidadean.edu.co/index.php/Revistao/article/view/1253
+      \endverb
+      \verb{url}
+      \verb https://journal.universidadean.edu.co/index.php/Revistao/article/view/1253
+      \endverb
+    \endentry
+    \entry{ScrumLogo}{misc}{}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labeltitlesource}{title}
+      \field{title}{{Visual Studio Code Vector Logo - Download Free SVG Icon | Worldvectorlogo}}
+      \field{urlday}{7}
+      \field{urlmonth}{7}
+      \field{urlyear}{2020}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://tinyurl.com/y4jdcnnz
+      \endverb
+      \verb{url}
+      \verb https://tinyurl.com/y4jdcnnz
+      \endverb
+    \endentry
+    \entry{TrigasGallego2012}{article}{}
+      \name{author}{1}{}{%
+        {{hash=a02f29ae63f4fd843a8ae36edaa2d70d}{%
+           family={{Trigás Gallego}},
+           familyi={T\bibinitperiod},
+           given={Manuel},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{a02f29ae63f4fd843a8ae36edaa2d70d}
+      \strng{fullhash}{a02f29ae63f4fd843a8ae36edaa2d70d}
+      \strng{bibnamehash}{a02f29ae63f4fd843a8ae36edaa2d70d}
+      \strng{authorbibnamehash}{a02f29ae63f4fd843a8ae36edaa2d70d}
+      \strng{authornamehash}{a02f29ae63f4fd843a8ae36edaa2d70d}
+      \strng{authorfullhash}{a02f29ae63f4fd843a8ae36edaa2d70d}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Desarrollo detallado de la fase de aprobación de un proyecto informático mediante el desarrollo de tecnologías ágiles.}
+      \field{journaltitle}{Gest. Proy. informáticos}
+      \field{title}{{Metodología Scrum}}
+      \field{year}{2012}
+      \field{pages}{56}
+      \range{pages}{1}
+      \verb{file}
+      \verb :D$\backslash$:/ARPEGOS{\_}Project/Documentation/Docs/Trig{\'{a}}s Gallego - 2012 - Metodolog{\'{i}}a Scrum.pdf:pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://tinyurl.com/y5fen9sz
+      \endverb
+      \verb{url}
+      \verb https://tinyurl.com/y5fen9sz
+      \endverb
+    \endentry
+    \entry{ScrumRoles}{misc}{}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labeltitlesource}{title}
+      \field{title}{{Scrum: qué es y cómo puede salvar tu proyecto | Herizont}}
+      \field{urlday}{7}
+      \field{urlmonth}{7}
+      \field{urlyear}{2020}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.herizont.com/2019/03/07/metodologia-agil-scrum/
+      \endverb
+      \verb{url}
+      \verb https://www.herizont.com/2019/03/07/metodologia-agil-scrum/
+      \endverb
+    \endentry
+    \entry{businessAnalyst}{article}{}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labeltitlesource}{title}
+      \field{title}{{El rol del business analyst en entornos agile}}
+      \verb{urlraw}
+      \verb https://tinyurl.com/yy4ag4rz
+      \endverb
+      \verb{url}
+      \verb https://tinyurl.com/yy4ag4rz
+      \endverb
+    \endentry
+    \entry{solutionArchitect}{misc}{}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labeltitlesource}{title}
+      \field{title}{{Cuál es la diferencia entre un Enterprise Architect, un Solutions Architect y un Technical Architect}}
+      \field{urlday}{13}
+      \field{urlmonth}{7}
+      \field{urlyear}{2020}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.linkedin.com/pulse/cu{\'{a}}l-es-la-diferencia-entre-un-enterprise-architect-solutions-mu{\~{n}}oz/?originalSubdomain=es
+      \endverb
+      \verb{url}
+      \verb https://www.linkedin.com/pulse/cu%7B%5C'%7Ba%7D%7Dl-es-la-diferencia-entre-un-enterprise-architect-solutions-mu%7B%5C~%7Bn%7D%7Doz/?originalSubdomain=es
+      \endverb
+    \endentry
+    \entry{UXDesigner}{misc}{}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labeltitlesource}{title}
+      \field{title}{{Qué es un UX Designer y cuáles son sus roles | Blog de Marketing Digital | Making Science}}
+      \field{urlday}{13}
+      \field{urlmonth}{7}
+      \field{urlyear}{2020}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.makingscience.com/blog/que-es-un-ux-designer-y-cuales-son-sus-roles/
+      \endverb
+      \verb{url}
+      \verb https://www.makingscience.com/blog/que-es-un-ux-designer-y-cuales-son-sus-roles/
+      \endverb
+    \endentry
+    \entry{Developer}{misc}{}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labeltitlesource}{title}
+      \field{title}{{Roles desarrollo del software}}
+      \field{urlday}{13}
+      \field{urlmonth}{7}
+      \field{urlyear}{2020}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://tinyurl.com/yyddzg4f
+      \endverb
+      \verb{url}
+      \verb https://tinyurl.com/yyddzg4f
+      \endverb
+    \endentry
+    \entry{Tester}{misc}{}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labeltitlesource}{title}
+      \field{title}{{What are the roles and responsibilities of a Tester?}}
+      \field{urlday}{13}
+      \field{urlmonth}{7}
+      \field{urlyear}{2020}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb http://tryqa.com/what-are-the-roles-and-responsibilities-of-a-tester/
+      \endverb
+      \verb{url}
+      \verb http://tryqa.com/what-are-the-roles-and-responsibilities-of-a-tester/
+      \endverb
+    \endentry
+    \entry{Documentalist}{misc}{}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labeltitlesource}{title}
+      \field{title}{{Documentalist - Wikipedia}}
+      \field{urlday}{13}
+      \field{urlmonth}{7}
+      \field{urlyear}{2020}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://tinyurl.com/yyglttoo
+      \endverb
+      \verb{url}
+      \verb https://tinyurl.com/yyglttoo
+      \endverb
+    \endentry
+    \entry{Tavora2014}{thesis}{}
+      \name{author}{1}{}{%
+        {{hash=40064bddfa854149f78aecb7abf5d500}{%
+           family={Távora},
+           familyi={T\bibinitperiod},
+           given={JOAO\bibnamedelimb MARTINS\bibnamedelimb FERREIRA\bibnamedelimb MIRANDA\bibnamedelima DE},
+           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim F\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \strng{namehash}{40064bddfa854149f78aecb7abf5d500}
+      \strng{fullhash}{40064bddfa854149f78aecb7abf5d500}
+      \strng{bibnamehash}{40064bddfa854149f78aecb7abf5d500}
+      \strng{authorbibnamehash}{40064bddfa854149f78aecb7abf5d500}
+      \strng{authornamehash}{40064bddfa854149f78aecb7abf5d500}
+      \strng{authorfullhash}{40064bddfa854149f78aecb7abf5d500}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The increased use of cosmetic products, in particular UV filter compounds, results with their introduction in significant amounts into aquatic ecosystems. Thus, the study and understanding of these substances in the environment is of major importance because of their potential to bioaccumulate and consequent toxicity, which may have a negative impact on the receiving environment, especially for biota, or even humans. Moreover, the contamination of these compounds is further aggravated in urban ecosystems, as fallout of population pressure and human activities. This master project seeks to analyze the impact of these substances in urban environments by having the city of Barcelona and its surroundings as a case study. To accomplish this, first an extensive literature review on characteristics, environmental and toxicity levels of UV filter compounds was performed. Secondly, water samples from rivers and WWTPs from the urban surroundings of Barcelona were analyzed so as to check the levels of mentioned substances, as well as to calculate the removal efficiency of the treatment stations and the potential risk posed by levels audited.}
+      \field{title}{{Tesis de máster}}
+      \field{type}{phdthesis}
+      \field{year}{2014}
+      \field{pages}{88}
+      \range{pages}{1}
+      \verb{file}
+      \verb :D$\backslash$:/ARPEGOS{\_}Project/Documentation/Docs/T{\'{a}}vora - 2014 - Tesis de m{\'{a}}ster.pdf:pdf
+      \endverb
+    \endentry
+    \entry{Wiegers2013}{article}{}
+      \name{author}{2}{}{%
+        {{hash=68405c2a3daef0e53ccf9b027981562f}{%
+           family={Wiegers},
+           familyi={W\bibinitperiod},
+           given={K},
+           giveni={K\bibinitperiod}}}%
+        {{hash=ef5e363e94151c169ec333a25197c00e}{%
+           family={Beatty},
+           familyi={B\bibinitperiod},
+           given={J},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{d5265c77ac0ab07bc4ca4ddc2b7bfd5a}
+      \strng{fullhash}{d5265c77ac0ab07bc4ca4ddc2b7bfd5a}
+      \strng{bibnamehash}{d5265c77ac0ab07bc4ca4ddc2b7bfd5a}
+      \strng{authorbibnamehash}{d5265c77ac0ab07bc4ca4ddc2b7bfd5a}
+      \strng{authornamehash}{d5265c77ac0ab07bc4ca4ddc2b7bfd5a}
+      \strng{authorfullhash}{d5265c77ac0ab07bc4ca4ddc2b7bfd5a}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Software requirements}}
+      \field{year}{2013}
+      \verb{urlraw}
+      \verb https://tinyurl.com/y33rlnq9
+      \endverb
+      \verb{url}
+      \verb https://tinyurl.com/y33rlnq9
+      \endverb
+    \endentry
+    \entry{Stellman2005}{article}{}
+      \name{author}{2}{}{%
+        {{hash=7ec7b25a6c7686ce7a71fbfdc0fef9ea}{%
+           family={Stellman},
+           familyi={S\bibinitperiod},
+           given={A},
+           giveni={A\bibinitperiod}}}%
+        {{hash=99a34948cbad5191e9f18d5fef2f8233}{%
+           family={Greene},
+           familyi={G\bibinitperiod},
+           given={J},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{817fdeba5415390628a1e3571e616bde}
+      \strng{fullhash}{817fdeba5415390628a1e3571e616bde}
+      \strng{bibnamehash}{817fdeba5415390628a1e3571e616bde}
+      \strng{authorbibnamehash}{817fdeba5415390628a1e3571e616bde}
+      \strng{authornamehash}{817fdeba5415390628a1e3571e616bde}
+      \strng{authorfullhash}{817fdeba5415390628a1e3571e616bde}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Applied software project management}}
+      \field{year}{2005}
+      \verb{urlraw}
+      \verb https://tinyurl.com/y5qkmnjt
+      \endverb
+      \verb{url}
+      \verb https://tinyurl.com/y5qkmnjt
+      \endverb
+    \endentry
+    \entry{Fuentes}{article}{}
+      \name{author}{2}{}{%
+        {{hash=da121eed204ae3868af9678374cedc33}{%
+           family={Fuentes},
+           familyi={F\bibinitperiod},
+           given={Lidia},
+           giveni={L\bibinitperiod}}}%
+        {{hash=89bbb33f3cda46fbb1935465aa739921}{%
+           family={Troya},
+           familyi={T\bibinitperiod},
+           given={M},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{dfa982ae7bd870b7cc38762bc2d091c9}
+      \strng{fullhash}{dfa982ae7bd870b7cc38762bc2d091c9}
+      \strng{bibnamehash}{dfa982ae7bd870b7cc38762bc2d091c9}
+      \strng{authorbibnamehash}{dfa982ae7bd870b7cc38762bc2d091c9}
+      \strng{authornamehash}{dfa982ae7bd870b7cc38762bc2d091c9}
+      \strng{authorfullhash}{dfa982ae7bd870b7cc38762bc2d091c9}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Resumen Esta lección presenta los modelos, conceptos y mecanismos fundamentales sobre los que se apoya actualmente el desarrollo de aplicaciones software basado en componentes reutilizables. En primer lugar, las arquitecturas software y los marcos de trabajo intentan ofrecer soluciones de diseño desde el punto de vista estructural de las aplicaciones, y de las relaciones entre sus componentes. A otro nivel se encuentra la programación orientada a componentes, un paradigma que propugna la construcción de componentes reutilizables en entornos abiertos y distribuidos, con el objetivo de lograr un mercado global de software. Basados en ellos, los modelos y plataformas de componentes proporcionan los mecanismos adecuados para tratar la complejidad de los problemas que aparecen en los sistemas abiertos y distribuidos. Finalmente, se describen las dificultades que encuentran las metodologías tradicionales para construir aplicaciones en estos nuevos ambientes, y los retos a los que se enfrenta la Ingeniería del Software para poder hablar realmente de "Ingeniería del Software Basada en Componentes". 1 Introducción Los continuos avances en la Informática y las Telecomunicaciones están haciendo cambiar la forma en la que se desarrollan actualmente las aplicaciones software. En particular, el incesante aumento de la potencia de los ordenadores personales, el abaratamiento de los costes del hardware y las comunicaciones, y la aparición de redes de datos de cobertura global han disparado el uso de los sistemas abiertos y distribuidos. Esto ha provocado, entre otras cosas, que los modelos de programación existentes se vean desbordados, siendo incapaces de manejar de forma natural la complejidad de los requisitos que se les exigen para ese tipo de sistemas. Comienzan a aparecer por tanto nuevos paradigmas de programación, como pueden ser la coordinación, la programación orientada a componentes, o la movilidad, que persiguen una mejora en los procesos de construcción de aplicaciones software. En ellos se trabaja tanto en extensiones de los modelos existentes como en nuevos modelos, en la estandarización de sus interfaces y servicios, y la pertinaz búsqueda del cada vez más necesario mercado global de componentes software. Estos son parte de los nuevos retos con los que se enfrenta actualmente la ingeniería del software. Uno de los enfoques en los que actualmente se trabaja constituye lo que se conoce como Desarrollo de Software Basado en Componentes (DSBC), que trata de sentar las bases para el diseño y desarrollo de aplicaciones distribuidas basadas en componentes software reutilizables. Dicha disciplina cuenta actualmente con un creciente interés, tanto desde el punto de vista académico como desde el industrial, en donde la demanda de estos temas es cada día mayor. La presente lección pretende servir como una breve introducción a algunos de los conceptos y métodos fundamentales sobre los que se apoya el DSBC. En particular, nos centraremos en las arquitecturas software y los marcos de trabajo, la programación orientada a componentes, y en las plataformas de componentes distribuidas. Asimismo, discutiremos sobre lo que debería constituir una metodología para el DSBC. Por supuesto, aún queda mucho trabajo por hacer para poder hablar realmente de una Ingeniería del Software Basada en Componentes, pero sin duda las bases se están sentando para hacer de esta disciplina una realidad en un futuro cercano.}
+      \field{title}{{Lección 1 Desarrollo de Software Basado en Componentes}}
+      \field{pages}{1\bibrangedash 22}
+      \range{pages}{22}
+      \verb{file}
+      \verb :D$\backslash$:/ARPEGOS{\_}Project/Documentation/Docs/Fuentes, Troya - Unknown - Lecci{\'{o}}n 1 Desarrollo de Software Basado en Componentes.pdf:pdf
+      \endverb
+    \endentry
+    \entry{AndroidStudio2019}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=7b337bf1db920d45fc5ef1828355a3c0}{%
+           family={{Android Studio}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{7b337bf1db920d45fc5ef1828355a3c0}
+      \strng{fullhash}{7b337bf1db920d45fc5ef1828355a3c0}
+      \strng{bibnamehash}{7b337bf1db920d45fc5ef1828355a3c0}
+      \strng{authorbibnamehash}{7b337bf1db920d45fc5ef1828355a3c0}
+      \strng{authornamehash}{7b337bf1db920d45fc5ef1828355a3c0}
+      \strng{authorfullhash}{7b337bf1db920d45fc5ef1828355a3c0}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Introducción a Android Studio | Desarrolladores de Android}}
+      \field{urlday}{15}
+      \field{urlmonth}{7}
+      \field{urlyear}{2020}
+      \field{year}{2019}
+      \field{urldateera}{ce}
+      \field{pages}{developers}
+      \range{pages}{-1}
+      \verb{urlraw}
+      \verb https://tinyurl.com/y4cktxpm
+      \endverb
+      \verb{url}
+      \verb https://tinyurl.com/y4cktxpm
+      \endverb
+    \endentry
+    \entry{ReactNative}{misc}{}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labeltitlesource}{title}
+      \field{title}{{React Native - Wikipedia}}
+      \field{urlday}{15}
+      \field{urlmonth}{7}
+      \field{urlyear}{2020}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://en.wikipedia.org/wiki/React{\_}Native
+      \endverb
+      \verb{url}
+      \verb https://en.wikipedia.org/wiki/React%7B%5C_%7DNative
+      \endverb
+    \endentry
+    \entry{Robinson2016}{inproceedings}{}
+      \name{author}{5}{}{%
+        {{hash=90fa1029c52f5ea6bd1a8937ac5a4175}{%
+           family={Robinson},
+           familyi={R\bibinitperiod},
+           given={Stewart},
+           giveni={S\bibinitperiod}}}%
+        {{hash=79c34617053a87806c45f7f9c8d7f128}{%
+           family={Arbez},
+           familyi={A\bibinitperiod},
+           given={Gilbert},
+           giveni={G\bibinitperiod}}}%
+        {{hash=4a772664a6fed04b99af0153d8535002}{%
+           family={Birta},
+           familyi={B\bibinitperiod},
+           given={Louis\bibnamedelima G.},
+           giveni={L\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+        {{hash=de9873324accce03acd0b7a7b72699a8}{%
+           family={Tolk},
+           familyi={T\bibinitperiod},
+           given={Andreas},
+           giveni={A\bibinitperiod}}}%
+        {{hash=e562b7526d5248c7db1ddab6caaa75a1}{%
+           family={Wagner},
+           familyi={W\bibinitperiod},
+           given={Gerd},
+           giveni={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{407489089ba8bfd38833524452aae338}
+      \strng{fullhash}{675284752c78e62b700b8011cf8272ac}
+      \strng{bibnamehash}{407489089ba8bfd38833524452aae338}
+      \strng{authorbibnamehash}{407489089ba8bfd38833524452aae338}
+      \strng{authornamehash}{407489089ba8bfd38833524452aae338}
+      \strng{authorfullhash}{675284752c78e62b700b8011cf8272ac}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Over the last decade there has been a growing interest in 'conceptual modeling' for simulation. This is signified by a greater intensity of research and volume of papers on the topic. What is becoming apparent, however, is that when it comes to conceptual modeling there are quite different views and opinions. These differences may be beneficial for creating a debate that takes the field forward, but they can also lead to confusion. The purpose of this panel is for leading researchers to identify and discuss their views on conceptual modeling. In particular we will debate the definition, purpose and benefits of conceptual modeling for the field of simulation. Through the discussion we hope to highlight common ground and key areas of difference.}
+      \field{booktitle}{Proc. - Winter Simul. Conf.}
+      \field{isbn}{9781467397438}
+      \field{issn}{08917736}
+      \field{title}{{Conceptual modeling: Definition, purpose and benefits}}
+      \field{volume}{2016-Febru}
+      \field{year}{2016}
+      \field{pages}{2812\bibrangedash 2826}
+      \range{pages}{15}
+      \verb{doi}
+      \verb 10.1109/WSC.2015.7408386
+      \endverb
+      \verb{file}
+      \verb :D$\backslash$:/ARPEGOS{\_}Project/Documentation/Docs/Robinson et al. - 2016 - Conceptual modeling Definition, purpose and benefits.pdf:pdf
+      \endverb
+    \endentry
+    \entry{Kaur2015}{article}{}
+      \name{author}{2}{}{%
+        {{hash=95eb4d13f60c6dc8547d13571ed20534}{%
+           family={Kaur},
+           familyi={K\bibinitperiod},
+           given={Harpreet},
+           giveni={H\bibinitperiod}}}%
+        {{hash=cd357b9f27fa878065be4739efd5eacf}{%
+           family={Singh},
+           familyi={S\bibinitperiod},
+           given={Pardeep},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{9e9f00a1161c75f52074a705b15c83ba}
+      \strng{fullhash}{9e9f00a1161c75f52074a705b15c83ba}
+      \strng{bibnamehash}{9e9f00a1161c75f52074a705b15c83ba}
+      \strng{authorbibnamehash}{9e9f00a1161c75f52074a705b15c83ba}
+      \strng{authornamehash}{9e9f00a1161c75f52074a705b15c83ba}
+      \strng{authorfullhash}{9e9f00a1161c75f52074a705b15c83ba}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{A solid architectural vision is a key discriminator in the success or failure of a software project. This paper discusses how to describe architecture through a set of design viewpoints and how to express these views in the UML. In this paper we mainly focused on the standardization of UML for software development process with the discussion of benefits of UML. Object-oriented analysis (OOA) is concerned with developing software engineering requirements and specifications that expressed as a system's object model (which is composed of a population of interacting objects), as opposed to the traditional data or functional views of systems. The goal of this paper is to combine the respective strengths of powerful, specialized (architectural-based) modeling approach (UML) with a widely used general (design-based) approach. Also some weaknesses have been discussed so that existing modeling can be optimized for better architecture development.}
+      \field{journaltitle}{Syst. Archit. Creat. Build. complex Syst.}
+      \field{title}{{Unified Modeling Language: Standard language for foftware architecture development}}
+      \field{volume}{15}
+      \field{year}{2015}
+      \field{pages}{3\bibrangedash 9}
+      \range{pages}{7}
+      \verb{file}
+      \verb :D$\backslash$:/ARPEGOS{\_}Project/Documentation/Docs/Kaur, Singh - 2015 - Unified Modeling Language Standard language for foftware architecture development.pdf:pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.researchgate.net/publication/266869058
+      \endverb
+      \verb{url}
+      \verb https://www.researchgate.net/publication/266869058
+      \endverb
+    \endentry
+    \entry{Ortega2015}{article}{}
+      \name{author}{1}{}{%
+        {{hash=60226851363924f0417aba1d44d16762}{%
+           family={Ortega},
+           familyi={O\bibinitperiod},
+           given={Javier},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{60226851363924f0417aba1d44d16762}
+      \strng{fullhash}{60226851363924f0417aba1d44d16762}
+      \strng{bibnamehash}{60226851363924f0417aba1d44d16762}
+      \strng{authorbibnamehash}{60226851363924f0417aba1d44d16762}
+      \strng{authornamehash}{60226851363924f0417aba1d44d16762}
+      \strng{authorfullhash}{60226851363924f0417aba1d44d16762}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Univ. Carlos III Madrid.}
+      \field{title}{{Transformación de ontologías OWL a UML para la indexación y recuperación mediante esquema basado en grafos.}}
+      \field{year}{2015}
+      \verb{file}
+      \verb :D$\backslash$:/ARPEGOS{\_}Project/Documentation/Docs/Ortega S{\'{a}}nchez, Fraga V{\'{a}}zquez - Unknown - Transformaci{\'{o}}n de ontolog{\'{i}}as OWL a UML para la indexaci{\'{o}}n y recuperaci{\'{o}}n mediante esquema basa.pdf:pdf
+      \endverb
+    \endentry
+    \entry{Bock2012}{article}{}
+      \name{author}{8}{}{%
+        {{hash=45cd3c48ce4da2bd32c777a2e4c85f69}{%
+           family={Bock},
+           familyi={B\bibinitperiod},
+           given={Conrad},
+           giveni={C\bibinitperiod}}}%
+        {{hash=9a26b52e478d6baff0da0f3f34302804}{%
+           family={Fokoue},
+           familyi={F\bibinitperiod},
+           given={Achille},
+           giveni={A\bibinitperiod}}}%
+        {{hash=c473afc32040dac4457a143ece875c44}{%
+           family={Haase},
+           familyi={H\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod}}}%
+        {{hash=c322c048f090ff4f07130fd85d1114c2}{%
+           family={Hoekstra},
+           familyi={H\bibinitperiod},
+           given={Rinke},
+           giveni={R\bibinitperiod}}}%
+        {{hash=fb33c2b55c178be2daf66ac89cdac9cc}{%
+           family={Horrocks},
+           familyi={H\bibinitperiod},
+           given={Ian},
+           giveni={I\bibinitperiod}}}%
+        {{hash=90b52f25b602751cf6a85730ccc5ae3d}{%
+           family={Ruttenberg},
+           familyi={R\bibinitperiod},
+           given={Alan},
+           giveni={A\bibinitperiod}}}%
+        {{hash=4acfec0ba909012fe393c56da85b4fa9}{%
+           family={Sattler},
+           familyi={S\bibinitperiod},
+           given={Uli},
+           giveni={U\bibinitperiod}}}%
+        {{hash=d01760295ade9079a627d15c7644cda0}{%
+           family={Smith},
+           familyi={S\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{35dcf8cc81a8e5cfa3e8709adef9fe05}
+      \strng{fullhash}{46a1553db33ad240c75282f892886e35}
+      \strng{bibnamehash}{35dcf8cc81a8e5cfa3e8709adef9fe05}
+      \strng{authorbibnamehash}{35dcf8cc81a8e5cfa3e8709adef9fe05}
+      \strng{authornamehash}{35dcf8cc81a8e5cfa3e8709adef9fe05}
+      \strng{authorfullhash}{46a1553db33ad240c75282f892886e35}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The OWL 2 Web Ontology Language, informally OWL 2, is an ontology language for the Semantic Web with formally defined meaning. OWL 2 ontologies provide classes, properties, individuals, and data values and are stored as Semantic Web documents. OWL 2 ontologies can be used along with information written in RDF, and OWL 2 ontologies themselves are primarily exchanged as RDF documents.}
+      \field{journaltitle}{Online}
+      \field{title}{{OWL 2 Web Ontology Language - Structural Specification and Functional-Style Syntax (Second Edition)}}
+      \field{year}{2012}
+      \field{pages}{1\bibrangedash 133}
+      \range{pages}{133}
+      \verb{urlraw}
+      \verb https://www.w3.org/TR/owl2-syntax/{\#}Individuals
+      \endverb
+      \verb{url}
+      \verb https://www.w3.org/TR/owl2-syntax/%7B%5C#%7DIndividuals
+      \endverb
+    \endentry
+    \entry{Cockburn2000}{article}{}
+      \name{author}{1}{}{%
+        {{hash=c1e5acec4259bb4c17ca1a00866f32e1}{%
+           family={Cockburn},
+           familyi={C\bibinitperiod},
+           given={Alistair},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{c1e5acec4259bb4c17ca1a00866f32e1}
+      \strng{fullhash}{c1e5acec4259bb4c17ca1a00866f32e1}
+      \strng{bibnamehash}{c1e5acec4259bb4c17ca1a00866f32e1}
+      \strng{authorbibnamehash}{c1e5acec4259bb4c17ca1a00866f32e1}
+      \strng{authornamehash}{c1e5acec4259bb4c17ca1a00866f32e1}
+      \strng{authorfullhash}{c1e5acec4259bb4c17ca1a00866f32e1}
+      \field{extraname}{2}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Humans and Technology in preparation for Addison-Wesley Longman}}
+      \field{volume}{3}
+      \field{year}{2000}
+      \field{pages}{204}
+      \range{pages}{1}
+      \verb{file}
+      \verb :D$\backslash$:/ARPEGOS{\_}Project/Documentation/Docs/Cockburn - 2000 - Humans and Technology in preparation for Addison-Wesley Longman.pdf:pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://tinyurl.com/yxvrd3y5
+      \endverb
+      \verb{url}
+      \verb https://tinyurl.com/yxvrd3y5
+      \endverb
+    \endentry
+    \entry{MvvmFlowDiagram}{misc}{}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labeltitlesource}{title}
+      \field{title}{{Building Cross-Platform Reactive .NET Apps | by Artyom V. Gorchakov | Medium}}
+      \field{urlday}{24}
+      \field{urlmonth}{7}
+      \field{urlyear}{2020}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://tinyurl.com/y5w27nbw
+      \endverb
+      \verb{url}
+      \verb https://tinyurl.com/y5w27nbw
+      \endverb
+    \endentry
+    \entry{Lou2016}{article}{}
+      \name{author}{1}{}{%
+        {{hash=01450151ccae42465fbb4320b80e5fbe}{%
+           family={Lou},
+           familyi={L\bibinitperiod},
+           given={Tian},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{01450151ccae42465fbb4320b80e5fbe}
+      \strng{fullhash}{01450151ccae42465fbb4320b80e5fbe}
+      \strng{bibnamehash}{01450151ccae42465fbb4320b80e5fbe}
+      \strng{authorbibnamehash}{01450151ccae42465fbb4320b80e5fbe}
+      \strng{authornamehash}{01450151ccae42465fbb4320b80e5fbe}
+      \strng{authorfullhash}{01450151ccae42465fbb4320b80e5fbe}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Disclaimer This document contains a student thesis (bachelor's or master's), as authored by a student at Eindhoven University of Technology. Student theses are made available in the TU/e repository upon obtaining the required degree. The grade received is not published on the document as presented in the repository. The required complexity or quality of research of student theses may vary by program, and the required minimum study period may vary in duration.}
+      \field{journaltitle}{Research.Tue.Nl}
+      \field{title}{{A comparison of Android Native App Architecture MVC, MVP and MVVM}}
+      \field{year}{2016}
+      \field{pages}{45}
+      \range{pages}{1}
+      \verb{file}
+      \verb :D$\backslash$:/ARPEGOS{\_}Project/Documentation/Docs/Lou{\_}2016.pdf:pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://research.tue.nl/files/48628529/Lou{\_}2016.pdf
+      \endverb
+      \verb{url}
+      \verb https://research.tue.nl/files/48628529/Lou%7B%5C_%7D2016.pdf
+      \endverb
+    \endentry
+    \entry{propiedadRAE}{misc}{}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labeltitlesource}{title}
+      \field{title}{{propiedad | Definición | Diccionario de la lengua española | RAE - ASALE}}
+      \field{urlday}{28}
+      \field{urlmonth}{7}
+      \field{urlyear}{2020}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://dle.rae.es/propiedad
+      \endverb
+      \verb{url}
+      \verb https://dle.rae.es/propiedad
+      \endverb
+    \endentry
+    \entry{Bechhofer2004a}{misc}{}
+      \name{author}{7}{}{%
+        {{hash=7009e710409f7099282afd8c387a98e4}{%
+           family={Bechhofer},
+           familyi={B\bibinitperiod},
+           given={S},
+           giveni={S\bibinitperiod}}}%
+        {{hash=ee480b6d2fd2c627ffb033d94c9691af}{%
+           family={Harmelen},
+           familyi={H\bibinitperiod},
+           given={Frank},
+           giveni={F\bibinitperiod},
+           prefix={van},
+           prefixi={v\bibinitperiod}}}%
+        {{hash=bc4f6004ab1c0d06e9b1bef4ead5b4fe}{%
+           family={Hendler},
+           familyi={H\bibinitperiod},
+           given={Jim},
+           giveni={J\bibinitperiod}}}%
+        {{hash=fb33c2b55c178be2daf66ac89cdac9cc}{%
+           family={Horrocks},
+           familyi={H\bibinitperiod},
+           given={Ian},
+           giveni={I\bibinitperiod}}}%
+        {{hash=1c75e12800e4181c2aae0a6753d2d812}{%
+           family={McGuinness},
+           familyi={M\bibinitperiod},
+           given={Deborah\bibnamedelima L},
+           giveni={D\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=0bab5b5cf2ed1e36120554671ebefb65}{%
+           family={Patel-Schneider},
+           familyi={P\bibinithyphendelim S\bibinitperiod},
+           given={Peter\bibnamedelima F},
+           giveni={P\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+        {{hash=e268c2db0fd13ff1191a2b39def9be3e}{%
+           family={Stein},
+           familyi={S\bibinitperiod},
+           given={Lynn\bibnamedelima Andrea},
+           giveni={L\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \strng{namehash}{7791dd9bc7f0f989e95d4f961a60e2b7}
+      \strng{fullhash}{2b2123ed5ace657b339b045ffd6b692e}
+      \strng{bibnamehash}{7791dd9bc7f0f989e95d4f961a60e2b7}
+      \strng{authorbibnamehash}{7791dd9bc7f0f989e95d4f961a60e2b7}
+      \strng{authornamehash}{7791dd9bc7f0f989e95d4f961a60e2b7}
+      \strng{authorfullhash}{2b2123ed5ace657b339b045ffd6b692e}
+      \field{extraname}{2}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{OWL is a semantic markup language for publishing and sharing ontologies on the World Wide Web. OWL is derived from the DAML+OIL Web Ontology Language DAML+OIL and builds upon the Resource Description Framework RDF/XML Syntax.}
+      \field{booktitle}{W3C Recomm.}
+      \field{number}{February}
+      \field{title}{{OWL Web Ontology Language Reference}}
+      \field{volume}{2008}
+      \field{year}{2004}
+      \field{pages}{1\bibrangedash 62}
+      \range{pages}{62}
+      \verb{urlraw}
+      \verb http://www.w3.org/TR/owl-ref/
+      \endverb
+      \verb{url}
+      \verb http://www.w3.org/TR/owl-ref/
+      \endverb
+    \endentry
+    \entry{Parsia2004}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=d3a5757e7ae6ee7b209f2b76e6997a42}{%
+           family={Parsia},
+           familyi={P\bibinitperiod},
+           given={Bijan},
+           giveni={B\bibinitperiod}}}%
+        {{hash=e0d31f5d176c659833a81c1fe3de7302}{%
+           family={Kalyanpur},
+           familyi={K\bibinitperiod},
+           given={Aditya},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{4f98e5f53933b16d2af5093cb864801f}
+      \strng{fullhash}{4f98e5f53933b16d2af5093cb864801f}
+      \strng{bibnamehash}{4f98e5f53933b16d2af5093cb864801f}
+      \strng{authorbibnamehash}{4f98e5f53933b16d2af5093cb864801f}
+      \strng{authornamehash}{4f98e5f53933b16d2af5093cb864801f}
+      \strng{authorfullhash}{4f98e5f53933b16d2af5093cb864801f}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{CEUR Workshop Proc.}
+      \field{issn}{16130073}
+      \field{title}{{Annotating OWL ontologies}}
+      \field{volume}{184}
+      \field{year}{2004}
+      \field{pages}{125\bibrangedash 126}
+      \range{pages}{2}
+      \verb{file}
+      \verb ::
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

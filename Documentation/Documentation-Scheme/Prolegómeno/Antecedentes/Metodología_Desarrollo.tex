@@ -27,7 +27,7 @@ de software:
     método que ordena las etapas de desarrollo de forma directa, de manera que cada etapa se inicia tras la finalización 
     de la anterior.
     
-    Como expresa Prieto \autocite*{PrietoAlvarez2013}, aplicar esta metodología muestra beneficios cuando cada fase de desarrollo 
+    Como expresa Prieto \autocite*{PrietoAlvarez2013}, aplicar esta metodología (Figura \ref*{waterfall}) muestra beneficios cuando cada fase de desarrollo 
     dispone del tiempo necesario para llevarse a cabo. Prieto también comenta que para reducir los riesgos, es necesario tener 
     establecidos los requisitos del proyecto claramente desde el principio del proyecto.
 
@@ -35,25 +35,25 @@ de software:
         \centering
         \includegraphics[width=5cm]{Figures/modelo_cascada.jpg}
         \caption{Modelo de desarrollo en cascada. Extraido de \textit{(IONOS)}\autocite*{DigitalGuideIONOS2019}}
+        \label{waterfall}
     \end{figure}
-    \newpage
-
 
     \item \textbf{Desarrollo en espiral}: Este modelo permite un análisis más profundo de las etapas del desarrollo del 
     producto, de acuerdo con Prieto \autocite*{PrietoAlvarez2013}. Las actividades del modelo están dispuestas en espiral, en la que cada iteración o vuelta representa 
     un conjunto de actividades acorde a una etapa del desarrollo. El orden de las actividades queda determinado por el 
-    análisis del riesgo, comenzando por el bucle interior, \medskip 
+    análisis del riesgo, comenzando por el bucle interior, como se puede observar en la figura \ref*{spiral} \newpage 
 
 
     \begin{figure}[H]
         \centering
         \includegraphics[width=5cm]{Figures/SVG/espiral.png}
         \caption{Modelo de desarrollo en espiral. Extraído de \textit{freepng.es} \autocite*{Espiral}}
+        \label{spiral}
     \end{figure}
 
     \item \textbf{Desarrollo con prototipos}: Desde el punto de vista de Roque y col. \autocite*{RoqueHernandez2015}, el desarrollo con 
     prototipos mejora la comunicación entre el equipo de desarrollo y el cliente. Esto permite que se puedan introducir cambios con 
-    facilidad y disminuya el tiempo de desarrollo. Consiste en un proceso iterativo que tiene cinco fases:
+    facilidad y disminuya el tiempo de desarrollo. Consiste en un proceso iterativo que tiene cinco fases (Figura \ref*{iterative}):
 
     % RAMÓN VENTURA ROQUE HERNÁNDEZ, JUAN MANUEL SALINAS ESCANDÓN, CALEB ALFREDO ÁLAMOS ACOSTA, ROBERTO ARREOLA RIVERA
     %Comparación empírica entre el proceso unificado y el desarrollo de software por prototipos. 
@@ -71,17 +71,19 @@ de software:
         \centering
         \includegraphics[width=5cm]{Figures/modelo_prototipos.jpeg}
         \caption{Modelo de desarrollo con prototipos. Extraído de \textit{sites.google.com} \autocite*{Prototipos}}
+        \label{iterative}
     \end{figure}
-
+    \newpage
     \item \textbf{Desarrollo incremental}: Zumba \autocite*{Zumba2018} postula que el desarrollo incremental 
     está basado en la introducción por etapas (o iteraciones) de funcionalidades de la aplicación. La primera 
     iteración suele ser básica, con los elementos mínimos requeridos, y cada iteración posterior es una versión 
-    entregable del proyecto, que introduce alguna funcionalidad nueva. \medskip
+    entregable del proyecto, que introduce alguna funcionalidad nueva. Este modelo es visible en la figura \ref*{incremental}. \medskip
 
     \begin{figure}[H]
         \centering
         \includegraphics[width=8cm]{Figures/modelo_incremental.png}
         \caption{Modelo de desarrollo incremental. Extraído de \textit{researchgate.net} \autocite*{Alarcon2016}}
+        \label{incremental}
     \end{figure}
 \end{itemize}
 
@@ -134,7 +136,7 @@ particularmente al desarrollo de software de productos complejos.”} \autocite*
     \includegraphics[width=5cm]{Images/Logo_Scrum.jpeg}
     \caption{Logo de \textit{Scrum}. Extraído de \textit{worldvectorlogo.com} \autocite*{ScrumLogo}}
 \end{figure}
-
+\newpage
 \subsubsection{Características}
 A continuación se muestra una serie de características que deben tener todos los procesos que se introducen al marco 
 de la metodología \textit{Scrum}:
@@ -144,14 +146,13 @@ de la metodología \textit{Scrum}:
     \item El equipo se sincroniza diariamente y se realizan las adaptaciones necesarias.
     \item Tras cada iteración se muestra el resultado real al cliente, para que tome las decisiones 
     necesarias en relación al resultado observado.
-    \newpage
     \item Se le da al equipo la autoridad necesaria para poder cumplir los requisitos.
     \item Fijar tiempos máximos para lograr objetivos.
     \item Equipos de trabajo pequeños (de 5 a 9 personas).
 \end{itemize}
 
 \subsubsection{Ciclo de desarrollo}
-Para entender el ciclo de desarrollo de \textit{Scrum} es necesario conocer las fases que lo definen:
+Para entender el ciclo de desarrollo de \textit{Scrum} (Figura \ref*{cicloScrum}) es necesario conocer las fases que lo definen:
 \begin{enumerate}
     
     \item \textbf{Planificación}: Reunión de los involucrados en la que se definen los requisitos prioritarios para 
@@ -173,10 +174,18 @@ Para entender el ciclo de desarrollo de \textit{Scrum} es necesario conocer las 
     \centering
     \includegraphics[width=14cm]{Images/Ciclo_Scrum.jpg}
     \caption{Ciclo de desarrollo de \textit{Scrum}. Extraído de \textit{Metodología Scrum} \autocite*{TrigasGallego2012}}
+    \label{cicloScrum}
 \end{figure}
 
 \subsubsection{Roles}
-Los roles presentes en \textit{Scrum} son los siguientes:
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=10cm]{Images/roles.png}
+    \caption{Roles en \textit{Scrum}. Extraido de \textit{herizont.com} \autocite*{ScrumRoles}}
+\label{rolScrum}
+\end{figure}
+
+Los roles presentes en \textit{Scrum} (figura \ref*{rolScrum}) son los siguientes:
 \begin{itemize}
     \item \textbf{Product Owner}: Tiene la responsabilidad de decidir qué trabajo necesita hacerse, y maximizar el valor 
     del proyecto o producto que se esté llevando a cabo. Para ello debe tener las siguientes cualidades:
@@ -195,10 +204,3 @@ Los roles presentes en \textit{Scrum} son los siguientes:
     \item \textbf{Development Team}: Grupo de profesionales con los conocimientos técnicos necesarios y que desarrollan el proyecto de manera
     conjunta llevando a cabo los requisitos a los que se comprometen al inicio de cada \textit{sprint}.
 \end{itemize}
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=10cm]{Images/roles.png}
-    \caption{Roles en \textit{Scrum}. Extraido de \textit{herizont.com} \autocite*{ScrumRoles}}
-\end{figure}
-\newpage
