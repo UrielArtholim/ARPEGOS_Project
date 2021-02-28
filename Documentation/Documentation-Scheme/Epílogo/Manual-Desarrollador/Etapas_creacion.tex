@@ -14,7 +14,7 @@ En este apartado se indica cómo crear los diferentes tipos de etapas de creaci�
 Algunas etapas del proceso realizan un gasto de los puntos disponibles del personaje. Para facilitar al usuario el control 
 de gasto de dichos puntos, se han creado dos elmentos gráficos llamados \textit{Límite general} y \textit{Límite de etapa}, 
 que muestran los puntos que aún están disponibles para gastar para el personaje. Para hacer uso de éstas, 
-hay que indicar mediante las anotaciones \textit{\underline{EditGeneralLimit}} y \textit{\underline{EditStageLimit}} respectivamente
+hay que indicar mediante las anotaciónes \textit{\underline{EditGeneralLimit}} y \textit{\underline{EditStageLimit}} respectivamente
 para mostrar el límite de puntos restantes en todo el proceso de creación, y el límite de puntos de los que se dispone para la 
 etapa en cuestión.
 
@@ -25,11 +25,11 @@ Un buen ejemplo de este caso es la selección de \textit{Raza}, ya que un person
 \begin{enumerate}
     \item Acceder a la opción \textit{Entities} y dentro de ésta al apartado \textit{Classes}.
     \item Seleccionar la clase que se desea declarar como etapa de selección única.
-    \item Pulsar el botón “+” en el campo de anotaciones (Figura \ref*{UniqueSelection_1}).
+    \item Pulsar el botón “+” en el campo de anotaciónes (Figura \ref*{UniqueSelection_1}).
     \begin{figure}[ht]
         \centering
         \includegraphics[scale=0.6]{Figures/Protege/UniqueSelection_1.png}
-        \caption{Pulsar el botón “+” en el campo de anotaciones}.
+        \caption{Pulsar el botón “+” en el campo de anotaciónes}.
         \label{UniqueSelection_1}
     \end{figure}
 
@@ -82,7 +82,7 @@ configurar la clase \textit{Desventaja} para ser una etapa de selección múltip
 \subsubsection{Etapa de selección múltiple con coste uniforme y coste de grupo}\label{MultipleChoiceUniformCostGroup}
 Esta versión es muy parecida a la anterior. La única diferencia es que para poder seleccionar un elemento de un grupo, hay que pagar 
 un coste. Un caso de este tipo sucede en los poderes psíquicos de \anima, ya que para poder optar a una disciplina psíquica, es 
-necesario pagar un consumo de voluntad (CV), y hay que pagar otro por cada poder elegido de dicha disciplina.\medskip
+necesario pagar un consumo de voluntad (CV), y hay que pagar otro por cada poder elegido de dicha disciplina.\newpage
 
 En este caso, antes de empezar a explicar el proceso, es importante aclarar cómo se conforman los grupos. La clase \textit{Poder Psíquico}
 no tiene individuo alguno, sino que está formada por subclases, donde cada una de ellas representa un grupo, que aplicado al ejemplo, 
@@ -107,7 +107,7 @@ y los grupos tienen como clase padre aquella que representa la etapa (Figura \re
 \subsubsection{Etapa de selección múltiple con coste heterogéneo}
 En esta variante, cada elemento disponible en la selección tiene un valor característico. Un ejemplo de este caso puede ser la 
 selección de \textit{Habilidades del Ki}. Cada habilidad de Ki tiene asociado su propio coste, de manera que este puede coincidir 
-o no con el coste de otras habilidades. Esta etapa se construye utilizando el mismo método que en el apartado \ref*{MultipleChoiceUniformCostGroup}
+o no con el coste de otras habilidades. \newpage Esta etapa se construye utilizando el mismo método que en el apartado \ref*{MultipleChoiceUniformCostGroup}
 , pero en la anotación \textit{ViewType} hay que introducir el texto \underline{MultipleChoiceDynamicLimitView}. Además, cada individuo 
 debe tener indicado su coste con una propiedad de datos cuyo nombre siga la estructura \textit{Etapa\_Coste} (Figura ).
 
@@ -130,7 +130,7 @@ que son las habilidades físicas de ataque y defensa de un personaje:
     \item Añadir una anotación de tipo \textit{ViewType} con el texto \underline{ValuedViewList}.
     \item Añadir una anotación de tipo \textit{ValuedListInfo}. Para saber como crear esta anotación, 
     leer el apartado \nameref{ValuedListInfo} (Figura \ref*{ValuedListInfo_End}).
-
+\newpage
     \begin{figure}[H]
         \centering
         \includegraphics[scale=0.6]{Figures/Protege/ValuedListInfo_End.png}
@@ -149,10 +149,9 @@ tienen que recorrer todas las etapas de creación. \medskip
     \item Seleccionar la clase que será reconocida como etapa raíz en la vista \textit{Classes} de la opción \textit{Entities}.
     \item Añadir una anotación de tipo \textit{CreationSchemeRoot} con valor \textit{true} y tipo de datos 
     \textit{xsd:boolean} (Figura \ref*{CreationSchemeRoot}).
-
     \begin{figure}[H]
         \centering
-        \includegraphics[scale=0.6]{Figures/Protege/CreationSchemeRoot.png}
+        \includegraphics[scale=0.5]{Figures/Protege/CreationSchemeRoot.png}
         \caption{Crear una anotación de tipo \textit{CreationSchemeRoot}}.
         \label{CreationSchemeRoot}
     \end{figure}
@@ -176,7 +175,7 @@ de su proceso de creación de personaje.
 
 \subsubsection{Crear una anotación de tipo \textit{ValuedListInfo}}\label{ValuedListInfo}
 Esta anotación es muy especial, pues no sólo indica los diferentes valores y modificadores que debe tener cada individuo de la etapa, 
-sino que además indica cómo deben calcularse, de manera que se pueda obtener el valor final de cada individuo. Un ejemplo de 
+sino que además indica cómo deben calcularse, de manera que se pueda obtener el valor final de cada individuo. \newpage Un ejemplo de 
 esta anotación puede apreciarse en la figura \ref*{ValuedListInfo_Begin}\medskip
 
 \begin{figure}[H]
@@ -202,7 +201,7 @@ A su vez, cada fila está separada en cuatro campos, ordenados de izquierda a de
     la opción \textit{false} indicará que el valor debe ser calculado por el sistema.
     \item \textit{Formula}: Este campo indica la fórmula de cálculo del valor de la propiedad de datos, en caso de que no 
     no sea el usuario quien introduzca el valor manualmente.
-\end{enumerate}
+\end{enumerate}\newpage
 
 Una de las características que deben ser resaltadas, es que los nombres de las propiedades contienen la palabra \textit{Item}.
 Cuando el sistema procesa una anotación de este tipo, sustituye la palabra \underline{Item} por el nombre del individuo cuyo valor se 
@@ -237,6 +236,7 @@ para que ésta funcione correctamente:
     \textit{tieneCategoría:Cat\_Item\_Coste}, siendo \textit{Per\_Item\_Base} el resultado de dividir el valor de la propiedad 
     \textit{Per\_Item\_PD} entre el valor de la propiedad \textit{tieneCategoría:Cat\_Item\_Coste}.
 
+    \newpage
     \item En caso de que el valor de una propiedad de datos forme parte del nombre de una propiedad de la fórmula, hay que 
     buscar el valor de la primera mediante la formula y a continuación llamar a la segunda sustituyendo la posición donde 
     iría el valor numérico por la cadena de texto \underline{Ref}. Un ejemplo de este uso se muestra en la figura \ref*{Ref_example}.
@@ -262,11 +262,11 @@ se muestra el método para introducir un límite en una etapa de creación:
 
 \begin{enumerate}
     \item Acceder a la vista \textit{Data Properties}
-    \item Crear anotacion \textit{EditGeneralLimit} con valor booleano \textit{true}.
+    \item Crear anotación \textit{EditGeneralLimit} con valor booleano \textit{true}.
     \begin{figure}[H]
         \centering
         \includegraphics[scale=0.6]{Figures/Protege/MultipleChoice_3.png}
-        \caption{Crear anotacion \textit{EditGeneralLimit}.}
+        \caption{Crear anotación \textit{EditGeneralLimit}.}
         \label{MultipleChoice_3}
     \end{figure}
 
@@ -288,7 +288,7 @@ se muestra el método para introducir un límite en una etapa de creación:
         \caption{Crear anotación \textit{IsDefinedBy} con valor numérico.}
         \label{MultipleChoice_4}
     \end{figure}
-    \item Crear anotacion \textit{GeneralCost} con el nombre de la propiedad de datos creada previamente.
+    \item Crear anotación \textit{GeneralCost} con el nombre de la propiedad de datos creada previamente.
     \begin{figure}[H]
         \centering
         \includegraphics[scale=0.6]{Figures/Protege/MultipleChoice_5.png}
@@ -336,7 +336,7 @@ puesto que no gastan \textit{puntos de desarrollo} como el resto de habilidades,
 por lo que el límite de puntos de desarrollo no resulta útil en este caso.\medskip
 
 A continuación se indican los pasos a seguir para introducir un límite de etapa:
-\begin{enumerate}
+\begin{enumerate}\newpage
     \item Añadir una anotación \textit{EditStageLimit} con valor booleano \textit{true}
     \item Añadir una anotación \textit{StageLimit} indicando el valor 
     o la propiedad que indica el límite de puntos a gastar en la etapa (Figura \ref*{MultipleChoiceGroupCost_1}).
@@ -359,7 +359,7 @@ En estos casos, hay que llevar a cabo los siguientes pasos:
     \item Seleccionar la clase que representa la etapa que utiliza el elemento que se desea introducir 
     (en la vista \textit{Classes} de la opción \textit{Entities}).
     \item Crear una subclase de la clase seleccionada para introducir el elemento específico de la etapa 
-    (Figura \ref*{ElementoComun_1}).
+    (Figura \ref*{ElementoComun_1}).\newpage
     \begin{figure}[H]
         \centering
         \includegraphics[scale=0.6]{Figures/Protege/ElementoComun_1.png}
