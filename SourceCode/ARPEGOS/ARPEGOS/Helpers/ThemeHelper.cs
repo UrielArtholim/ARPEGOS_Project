@@ -34,7 +34,7 @@ namespace ARPEGOS.Helpers
             set => SetProperty(ref this.currentTheme, value);
         }
 
-        Dictionary<string, string> BackgroundThemes;
+        public Dictionary<string, string> BackgroundThemes;
 
         Dictionary<string, string> AddButtonThemes;
 

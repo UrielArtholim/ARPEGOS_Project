@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Archive>
+  <Name>ARPEGOS.Android</Name>
+  <PackageName>com.arpegos</PackageName>
+  <PackageVersionCode>1</PackageVersionCode>
+  <PackageVersionName>1.0</PackageVersionName>
+  <PackageFormat>apk</PackageFormat>
+  <CreationDate>637503865031685409</CreationDate>
+  <SolutionName>ARPEGOS</SolutionName>
+  <SolutionPath>C:\ARPEGOS_Project\SourceCode\ARPEGOS\ARPEGOS.sln</SolutionPath>
+  <Status></Status>
+  <Configuration>
+    <DebugMode>false</DebugMode>
+  </Configuration>
+</Archive>
