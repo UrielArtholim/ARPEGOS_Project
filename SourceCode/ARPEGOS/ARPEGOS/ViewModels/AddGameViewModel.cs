@@ -2,6 +2,7 @@
 using ARPEGOS.Models;
 using ARPEGOS.Services;
 using ARPEGOS.ViewModels.Base;
+using ARPEGOS.Views;
 using FFImageLoading.Helpers.Exif;
 using Plugin.FilePicker;
 using System;
@@ -55,12 +56,16 @@ namespace ARPEGOS.ViewModels
             this.AddCommand = new Command(async() =>
             {
                 var filename = $"{FileService.EscapedName(file.FileName.Split('.').First())}{'.'}{file.FileName.Split('.').Last()}";
-                var oldPath = file.FilePath;
+                var filedata = file.DataArray;
                 var newPath = Path.Combine(FileService.GetGameBasePath(Game), FileService.GamesPath, filename);
+                await File.WriteAllBytesAsync(newPath, filedata);
                 if (!File.Exists(newPath))
                     await dialog.DisplayAlert(string.Empty , $"El fichero {filename} no se ha podido añadir");
                 else
                     await dialog.DisplayAlert(string.Empty , $"El fichero {filename} se ha añadido correctamente");
+                var mainView = App.Navigation.NavigationStack.First() as MainViewDetail;
+                var mainViewModel = mainView.BindingContext as MainViewModel;
+                mainViewModel.Load(mainViewModel.CurrentStatus);
                 await App.Navigation.PopAsync();
             });
 

@@ -135,7 +135,7 @@ namespace ARPEGOS.ViewModels
                     await dialogService.DisplayAlert("Nota informativa", "Proceso de creación finalizado correctamente");
                     await Device.InvokeOnMainThreadAsync(() =>
                     {
-                        App.Navigation = DependencyHelper.CurrentContext.AppMainView.Navigation;
+                        App.Navigation = DependencyHelper.CurrentContext.AppMainView?.Detail?.Navigation;
                         App.Current.MainPage = DependencyHelper.CurrentContext.AppMainView;
                     });
                 }

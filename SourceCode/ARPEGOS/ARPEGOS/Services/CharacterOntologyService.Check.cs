@@ -8,6 +8,7 @@ namespace ARPEGOS.Services
     using System.Linq;
     using System.Threading.Tasks;
     using ARPEGOS.Helpers;
+    using ARPEGOS.ViewModels;
     using RDFSharp.Model;
     using RDFSharp.Semantics.OWL;
 
@@ -279,8 +280,11 @@ namespace ARPEGOS.Services
             // Check if stage has subclasses
             var stageClass = GameOntology.Model.ClassModel.SelectClass(stageString);
             var stageSubclassesEntries = GameOntology.Model.ClassModel.Relations.SubClassOf.SelectEntriesByObject(stageClass);
-            bool stageHasGroups = false;
-            var stageGroups = this.GetIndividualsGrouped(stageString);
+            var currentStage = StageViewModel.CreationScheme.ElementAt(StageViewModel.CurrentStep);
+            var stageHasGroups = currentStage.IsGrouped;
+            IEnumerable<Group> stageGroups = null;
+            if(stageHasGroups)
+                stageGroups = this.GetIndividualsGrouped(stageString);
 
             if(groupName != null)
             {
